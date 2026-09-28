@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Understand intent-driven development, spec-driven development, context engineering, harness engineering, loop engineering, graph engineering and software factories: seven practices for AI-assisted development, each explained with a diagram, an example and a next step.">
+  <title>Concepts · AI-PDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI-PDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-PDLC</span></a>
+      <span class="organisation">EDS <span aria-hidden="true">/</span> DSTA</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="product-ideation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
+          <a href="product-implementation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
+          <a href="training.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><span aria-current="page">Concepts</span></nav>
+        <header class="article-header">
+          <h1>Concepts</h1>
+          <p class="lead">These seven concepts help you define a change, give an AI agent useful information and decide how its work will be checked. Each section includes an explanation, a diagram, a fictional example and a practical next step. Start with the problem closest to your work.</p>
+          <p>AI-assisted development means work supported by AI tools, whether or not the product contains AI. An AI agent is software that uses an AI model and tools to carry out a task.</p>
+          <p>The definitions below are a working synthesis of the cited sources. The concepts overlap; they are not lifecycle stages or a required progression towards greater autonomy. Recommendations and examples are guidance for discussion, not DSTA policy.</p>
+          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-28">28 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+        </header>
+        <details class="mobile-contents">
+          <summary>On this page</summary>
+          <nav aria-label="On this page">
+            <a href="#intent-driven-development">Intent-driven development</a>
+            <a href="#spec-driven-development">Spec-driven development</a>
+            <a href="#context-engineering">Context engineering</a>
+            <a href="#harness-engineering">Harness engineering</a>
+            <a href="#loop-engineering">Loop engineering</a>
+            <a href="#graph-engineering">Graph engineering</a>
+            <a href="#software-factory">Software factory: light and dark</a>
+          </nav>
+        </details>
+        <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
+            <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+          </defs>
+        </svg>
+        <section id="intent-driven-development">
+          <h2>Intent-driven development</h2>
+          <p>Intent-driven development makes the purpose of a change explicit before anyone chooses how to build it. The team records the problem, the outcome it wants and the constraints it must respect, then uses that record to judge the finished work.</p>
+          <p class="concept-question"><strong>Question it answers:</strong> what are we changing, for whom, and how will we know it worked?</p>
+          <p>A request such as “improve the search page” leaves the important choices unstated. An agent might redesign the layout when the real problem is that users cannot recover from an empty result. The change can pass review and still miss the need.</p>
+          <p class="source-note">Concept reference: <a href="https://intent-driven.dev/knowledge/intent-driven-development/">Intent-Driven Development, intent-driven.dev</a>.</p>
+          <h3>Write the intent before the solution</h3>
+          <p>A useful intent statement is short. It answers four questions:</p>
+          <ul>
+            <li><strong>Problem:</strong> what is going wrong or missing, and who does it affect?</li>
+            <li><strong>Outcome:</strong> what should be true for those people after the change?</li>
+            <li><strong>Constraints:</strong> what must not change, such as access rules, data handling or existing behaviour?</li>
+            <li><strong>Open questions:</strong> what is still unknown, and who will resolve it?</li>
+          </ul>
+          <p>Record an owner and a decision point for each open question. Resolve questions that affect scope, access or acceptance before the agent implements the affected behaviour.</p>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 280" role="img" aria-labelledby="fig-intent-title">
+                <title id="fig-intent-title">A PRD, a production bug or a UI redesign leads to one intent statement, which guides implementation and verification. Evidence from verification refines the intent.</title>
+                <rect class="d-node" x="1" y="20" width="150" height="48" rx="8"/><text class="d-title" x="76" y="50" text-anchor="middle">PRD</text>
+                <rect class="d-node" x="1" y="86" width="150" height="48" rx="8"/><text class="d-title" x="76" y="116" text-anchor="middle">Production bug</text>
+                <rect class="d-node" x="1" y="152" width="150" height="48" rx="8"/><text class="d-title" x="76" y="182" text-anchor="middle">UI redesign</text>
+                <path class="d-line" d="M151 44H174V110H196" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M151 110H196"/>
+                <path class="d-line" d="M151 176H174V110"/>
+                <rect class="d-node d-node-accent" x="200" y="30" width="226" height="170" rx="8"/>
+                <text class="d-title" x="218" y="60">Intent statement</text>
+                <text class="d-sub" x="218" y="90">Problem and who it affects</text>
+                <text class="d-sub" x="218" y="116">Desired outcome</text>
+                <text class="d-sub" x="218" y="142">What must not change</text>
+                <text class="d-sub" x="218" y="168">Open questions and owners</text>
+                <path class="d-line d-line-accent" d="M426 68H472" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node" x="478" y="40" width="200" height="56" rx="8"/><text class="d-title" x="578" y="66" text-anchor="middle">Implement</text><text class="d-sub" x="578" y="86" text-anchor="middle">guided by the intent</text>
+                <path class="d-line" d="M578 96V134" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="478" y="140" width="200" height="56" rx="8"/><text class="d-title" x="578" y="166" text-anchor="middle">Verify</text><text class="d-sub" x="578" y="186" text-anchor="middle">against the intent</text>
+                <path class="d-line d-dash" d="M578 196V236H313V206" marker-end="url(#arrow)"/>
+                <text class="d-label" x="446" y="262" text-anchor="middle">Evidence refines the intent</text>
+              </svg>
+            </div>
+            <figcaption>Figure 1. Different starting points lead to one intent statement. The finished work is checked against it, and what the team learns refines it.</figcaption>
+          </figure>
+          <p>Read the figure from left to right. A product requirements document (PRD), a production bug or a user interface (UI) redesign brief feeds an intent statement. The team implements against that statement and verifies the result against it. What verification reveals flows back to refine the intent.</p>
+          <h3>Start from the need, in whichever form it arrives</h3>
+          <p>Intent can begin with a product requirements document (PRD), an issue raised after a production bug, a user interface (UI) redesign brief or another change request. Not every change needs a PRD. Whatever the starting point, clarify the desired outcome before choosing an implementation.</p>
+          <ul>
+            <li><strong>PRD:</strong> identify the user problem, expected value, scope and the evidence that would support proceeding.</li>
+            <li><strong>Production bug:</strong> record observed and expected behaviour, user impact, reproduction evidence and the behaviour to preserve.</li>
+            <li><strong>UI redesign:</strong> identify the user task to improve, the evidence behind the change and the interaction constraints to retain.</li>
+          </ul>
+          <aside class="example" aria-label="Example of intent from a production bug">
+            <p class="example-label">Example · Production bug</p>
+            <p>Users who change a search filter while viewing a later page of results see an empty list, even when matches exist. The team writes this intent statement:</p>
+            <ul>
+              <li><strong>Problem:</strong> users on page two or later lose sight of matching results when they change a filter.</li>
+              <li><strong>Outcome:</strong> after changing a filter, users see the first page of matching results.</li>
+              <li><strong>Constraints:</strong> keep the selected filters and the existing access restrictions.</li>
+              <li><strong>Open question:</strong> should changing the sort order also return users to the first page? The product owner will decide.</li>
+            </ul>
+          </aside>
+          <h3>Keep intent in proportion to the change</h3>
+          <p>Writing down an outcome does not prove it is valuable. Test important assumptions with users or operational evidence before investing heavily. A two-line issue may be enough for a contained fix; a new capability needs more discussion, evidence and detail.</p>
+          <p class="next-step"><strong>Next step:</strong> take one change request your team is discussing and write its problem, outcome, constraints and open questions. Name an owner for each open question.</p>
+        </section>
+        <section id="spec-driven-development">
+          <h2>Spec-driven development</h2>
+          <p>Spec-driven development uses a written specification to guide planning, implementation and verification. The specification describes what the product should do, including important exceptions and constraints, in enough detail for people to review and for an AI agent to work against.</p>
+          <p class="concept-question"><strong>Question it answers:</strong> how exactly should the product behave, and how will we check it?</p>
+          <p>A broad request leaves edge cases open. Without a shared description of the expected behaviour, each person or agent fills the gaps differently, and reviewers have nothing firm to compare the result with.</p>
+          <p class="source-note">Concept reference: <a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit’s specification-driven development methodology</a>.</p>
+          <h3>One specification, two jobs</h3>
+          <p>Before implementation, the specification instructs the work: the technical plan and tasks are derived from it. After implementation, it defines the check: tests and reviewers compare the result with its acceptance criteria, the conditions used to judge whether the change is satisfactory.</p>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 316" role="img" aria-labelledby="fig-spec-title">
+                <title id="fig-spec-title">The specification guides a technical plan, tasks and implementation. Its acceptance criteria also go directly to verification. If intended behaviour changes, the specification is revised.</title>
+                <rect class="d-node d-node-accent" x="1" y="96" width="190" height="96" rx="8"/>
+                <text class="d-title" x="96" y="130" text-anchor="middle">Specification</text>
+                <text class="d-sub" x="96" y="154" text-anchor="middle">behaviour and</text>
+                <text class="d-sub" x="96" y="174" text-anchor="middle">acceptance criteria</text>
+                <path class="d-line d-line-accent" d="M191 120H222V48H244" marker-end="url(#arrow-accent)"/>
+                <text class="d-label" x="232" y="100">instructs the work</text>
+                <rect class="d-node" x="250" y="20" width="124" height="56" rx="8"/><text class="d-title" x="312" y="46" text-anchor="middle">Plan</text><text class="d-sub" x="312" y="66" text-anchor="middle">how to build it</text>
+                <path class="d-line" d="M374 48H396" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="402" y="20" width="124" height="56" rx="8"/><text class="d-title" x="464" y="46" text-anchor="middle">Tasks</text><text class="d-sub" x="464" y="66" text-anchor="middle">small, checkable</text>
+                <path class="d-line" d="M526 48H548" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="554" y="20" width="124" height="56" rx="8"/><text class="d-title" x="616" y="46" text-anchor="middle">Implement</text><text class="d-sub" x="616" y="66" text-anchor="middle">code and tests</text>
+                <path class="d-line" d="M616 76V196" marker-end="url(#arrow)"/>
+                <path class="d-line d-line-accent" d="M191 168H222V230H548" marker-end="url(#arrow-accent)"/>
+                <text class="d-label" x="385" y="220" text-anchor="middle">defines how the result is checked</text>
+                <rect class="d-node" x="554" y="202" width="124" height="56" rx="8"/><text class="d-title" x="616" y="228" text-anchor="middle">Verify</text><text class="d-sub" x="616" y="248" text-anchor="middle">tests and review</text>
+                <path class="d-line d-dash" d="M616 258V282H96V198" marker-end="url(#arrow)"/>
+                <text class="d-label" x="356" y="306" text-anchor="middle">Revise the specification when intended behaviour changes</text>
+              </svg>
+            </div>
+            <figcaption>Figure 2. The specification guides the plan, tasks and implementation, and supplies the criteria used in verification.</figcaption>
+          </figure>
+          <p>The specification feeds a technical plan, which is broken into tasks and implemented; GitHub Spec Kit describes a similar sequence. Separately, the acceptance criteria go straight to verification. If verification shows that the intended behaviour needs to change, the team revises the specification first, then the plan and code.</p>
+          <p>Keep the specification about behaviour and put implementation choices in the technical plan. A specification that dictates internal design removes legitimate engineering choices. One that omits acceptance criteria forces the implementer to invent product rules.</p>
+          <aside class="example" aria-label="Example acceptance criteria for a report export">
+            <p class="example-label">Example · Specify a report export</p>
+            <p>A fictional team is asked to let users export a filtered case list. It agrees the following criteria; the three-second threshold is illustrative:</p>
+            <ul>
+              <li>When a user exports a filtered list, include only records that match the active filters and the user’s access permissions.</li>
+              <li>If the export is still running after three seconds, show progress and a cancel control. Cancelling stops file generation and leaves the case list unchanged.</li>
+              <li>If no records match, do not produce an empty file; tell the user and let them adjust the filters.</li>
+              <li>Out of scope: scheduled or emailed exports.</li>
+            </ul>
+          </aside>
+          <h3>Match precision to what you know</h3>
+          <p>Too little detail forces an agent to guess at important choices. Too much detail too early creates false certainty about decisions nobody has tested. Add precision as questions are answered, and review the assumptions before implementation starts.</p>
+          <h3>Change the specification with the work</h3>
+          <p>A specification can be incomplete or wrong. When the intended behaviour changes, update the specification, code and checks together so they continue to agree. Use automated tests where behaviour is observable; keep human review for judgements the tests do not cover.</p>
+          <p class="next-step"><strong>Next step:</strong> choose one requested change and write three acceptance criteria for it: the expected result, an edge case and something that must not change.</p>
+        </section>
+        <section id="context-engineering">
+          <h2>Context engineering</h2>
+          <p>Context engineering chooses and maintains the information available to an AI model while it works: instructions, relevant code, specifications, tool results and earlier decisions. Writing a prompt is one part of this wider task.</p>
+          <p class="concept-question"><strong>Question it answers:</strong> what does the agent need to know for this task, and which sources can it trust?</p>
+          <p>An agent given a correct specification can still call an obsolete interface or miss a team convention, because the information it needed was missing, out of date or buried. Supplying every document is not a reliable remedy. A model can consider only a limited amount of text at once, and irrelevant material makes the useful evidence harder to find.</p>
+          <p>Think of briefing a capable contractor who has never seen your building. You give them the drawings for the rooms they will work on, point out which drawings are out of date and tell them where the full archive is kept. You do not hand over the whole archive and hope they find the right page.</p>
+          <p class="source-note">Concept reference: <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic’s effective context engineering for AI agents</a>.</p>
+          <h3>Select a working set, then retrieve on demand</h3>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 300" role="img" aria-labelledby="fig-context-title">
+                <title id="fig-context-title">From all available information, a selection step keeps what is relevant, current and authoritative. The resulting working context goes to the agent, which retrieves more detail only when needed. An outdated guide is excluded.</title>
+                <rect class="d-node" x="1" y="20" width="200" height="226" rx="8"/>
+                <text class="d-title" x="18" y="48">Available information</text>
+                <text class="d-sub" x="18" y="78">Instructions</text>
+                <text class="d-sub" x="18" y="102">Specification</text>
+                <text class="d-sub" x="18" y="126">Repository code</text>
+                <text class="d-sub" x="18" y="150">Team conventions</text>
+                <text class="d-sub" x="18" y="174">Tool results</text>
+                <text class="d-sub" x="18" y="198">Earlier decisions</text>
+                <text class="d-sub d-excluded" x="18" y="222">Outdated guide: excluded</text>
+                <path class="d-line" d="M201 128H242" marker-end="url(#arrow)"/>
+                <rect class="d-node d-node-accent" x="248" y="58" width="190" height="140" rx="8"/>
+                <text class="d-title" x="264" y="86">Select</text>
+                <text class="d-sub" x="264" y="116">Relevant to this task?</text>
+                <text class="d-sub" x="264" y="142">Current?</text>
+                <text class="d-sub" x="264" y="168">Authoritative?</text>
+                <path class="d-line d-line-accent" d="M438 94H472" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node" x="478" y="30" width="200" height="120" rx="8"/>
+                <text class="d-title" x="494" y="58">Working context</text>
+                <text class="d-sub" x="494" y="86">Objective and constraints</text>
+                <text class="d-sub" x="494" y="110">Code and records needed</text>
+                <text class="d-sub" x="494" y="134">Map to other sources</text>
+                <path class="d-line" d="M578 150V184" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="478" y="190" width="200" height="56" rx="8"/><text class="d-title" x="578" y="216" text-anchor="middle">Agent</text><text class="d-sub" x="578" y="236" text-anchor="middle">works on the task</text>
+                <path class="d-line d-dash" d="M578 246V270H101V252" marker-end="url(#arrow)"/>
+                <text class="d-label" x="340" y="292" text-anchor="middle">Retrieves more detail only when the task needs it</text>
+              </svg>
+            </div>
+            <figcaption>Figure 3. Context engineering selects a small, current and authoritative working set, and retrieves further detail only when the task needs it.</figcaption>
+          </figure>
+          <p>From everything available, select what is relevant to the task, current and authoritative. Give the agent that working set: the objective and constraints, the code and records it needs, and a short map to other sources. When the agent needs more detail, it retrieves it from the wider set instead of receiving everything at the start. Outdated material is left out.</p>
+          <p>Anthropic describes the aim as the smallest set of high-signal information that makes the desired outcome likely, with detail loaded “just in time” rather than all at once.</p>
+          <aside class="example" aria-label="Example context for an API change">
+            <p class="example-label">Example · Assemble context for an API change</p>
+            <p>An agent is asked to add a field to a reporting endpoint. Provide the endpoint code, the data schema, the authentication module it must reuse and the team’s API conventions. Include the failing request that prompted the change. Flag the deprecated helper that an older guide still recommends, so the agent does not treat it as current practice.</p>
+          </aside>
+          <h3>Keep decisions where the next session can find them</h3>
+          <p>Record important decisions, unresolved questions and progress in a durable file or issue, not only in a long conversation. Later work, by a person or an agent, can then start from the record instead of reconstructing it. A note of which sources informed a result also helps a reviewer check it.</p>
+          <h3>Check relevance and authority</h3>
+          <p>Stale or conflicting sources can misdirect the work. Identify the current source and resolve contradictions before the agent starts. Treat retrieved documents and logs as evidence to assess, not as instructions that override the task. Follow applicable data-handling rules when selecting material for an agent.</p>
+          <p class="next-step"><strong>Next step:</strong> for the next task you give an agent, list the few sources it most needs and check that each one describes the current state of the code or decision.</p>
+        </section>
+        <section id="harness-engineering">
+          <h2>Harness engineering</h2>
+          <p>Harness engineering designs the environment around an AI agent so it can carry out a task, see the results and respond to feedback within agreed limits. A harness can include tool access, repository guidance, test runners, permission controls and records of progress.</p>
+          <p class="concept-question"><strong>Question it answers:</strong> can the agent run the work, check it, and stop safely when it should?</p>
+          <p>Clear instructions alone do not give an agent a way to start the application, run the tests or inspect a failure. Without these, it can only report that the work looks finished. Without limits, a struggling agent may retry indefinitely or reach for access it should not have.</p>
+          <p>A harness is to an agent what a workshop is to a technician: the tools, the test bench and the safety rules they work within.</p>
+          <p class="source-note">Concept reference: <a href="https://openai.com/index/harness-engineering/">OpenAI’s harness engineering account</a>. This is one team’s experience, not a required operating model.</p>
+          <h3>Check five parts of the harness</h3>
+          <p>The Walking Labs course organises a harness into five parts. Use this teaching model to identify what a task needs; the components can be supplied by an existing agent tool.</p>
+          <ul>
+            <li><strong>Instructions:</strong> record the goal, constraints and links to current project guidance.</li>
+            <li><strong>Tools:</strong> provide the actions needed to inspect, change and test the work, with scoped permissions.</li>
+            <li><strong>Environment:</strong> make setup repeatable, with known dependencies and suitable test data.</li>
+            <li><strong>State:</strong> save completed work, remaining tasks and blockers so another session can resume.</li>
+            <li><strong>Feedback:</strong> return test results, application behaviour and diagnostic logs the agent can act on.</li>
+          </ul>
+          <p class="source-note">Learning reference: <a href="https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/">Walking Labs: What a harness actually is</a>. Its five-part model is a teaching framework, not an industry standard.</p>
+          <h3>Build a bounded feedback loop</h3>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 4, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 290" role="img" aria-labelledby="fig-harness-title">
+                <title id="fig-harness-title">Inside its permitted environment, the agent acts and runs checks. Failed checks lead it to observe the results and fix the problem. Passing work goes to a person for review. If the agent cannot proceed, it stops and escalates.</title>
+                <rect class="d-boundary" x="1" y="1" width="418" height="286" rx="8"/>
+                <text class="d-label" x="18" y="28">Permitted tools and environment</text>
+                <rect class="d-node" x="24" y="56" width="170" height="56" rx="8"/><text class="d-title" x="109" y="82" text-anchor="middle">Act</text><text class="d-sub" x="109" y="102" text-anchor="middle">change code or config</text>
+                <path class="d-line" d="M194 84H232" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="238" y="56" width="170" height="56" rx="8"/><text class="d-title" x="323" y="82" text-anchor="middle">Run checks</text><text class="d-sub" x="323" y="102" text-anchor="middle">tests and linters</text>
+                <path class="d-line" d="M323 112V180" marker-end="url(#arrow)"/>
+                <text class="d-label" x="333" y="152">fail</text>
+                <rect class="d-node" x="238" y="186" width="170" height="56" rx="8"/><text class="d-title" x="323" y="212" text-anchor="middle">Observe</text><text class="d-sub" x="323" y="232" text-anchor="middle">results and logs</text>
+                <path class="d-line" d="M238 214H109V118" marker-end="url(#arrow)"/>
+                <text class="d-label" x="174" y="206" text-anchor="middle">fix and retry</text>
+                <path class="d-line d-line-accent" d="M408 84H472" marker-end="url(#arrow-accent)"/>
+                <text class="d-label" x="448" y="74" text-anchor="middle">pass</text>
+                <rect class="d-node d-node-accent" x="478" y="56" width="200" height="56" rx="8"/><text class="d-title" x="578" y="82" text-anchor="middle">Person reviews</text><text class="d-sub" x="578" y="102" text-anchor="middle">result and evidence</text>
+                <path class="d-line d-dash" d="M408 214H472" marker-end="url(#arrow)"/>
+                <text class="d-label" x="448" y="204" text-anchor="middle">stuck</text>
+                <rect class="d-node" x="478" y="186" width="200" height="56" rx="8"/><text class="d-title" x="578" y="212" text-anchor="middle">Stop and escalate</text><text class="d-sub" x="578" y="232" text-anchor="middle">limit reached or blocked</text>
+              </svg>
+            </div>
+            <figcaption>Figure 4. Example of a bounded harness. Within its permitted environment, the agent acts, checks and fixes. It hands passing work to a person, and stops and escalates when it cannot proceed.</figcaption>
+          </figure>
+          <p>The agent makes a change and runs the checks. If they fail, it reads the results and logs, fixes the problem and runs them again. When the checks pass, it hands the result and its evidence to a person for review. If it reaches its retry limit, needs access it does not have or faces a decision outside its task, it stops and escalates. The team defines the tools and permissions that bound this loop.</p>
+          <p>Provide a repeatable way to start the application, run checks and inspect failures. Define what the agent may do, when it stops and when a decision returns to a person. Enforce consequential boundaries through tool permissions and the execution environment, not through instructions alone.</p>
+          <p>OpenAI’s team reports that when an agent struggled, the useful response was rarely to ask it to try harder. They asked which capability was missing, such as a tool, a check or a piece of documentation, and added it to the environment.</p>
+          <aside class="example" aria-label="Example harness for a data-import change">
+            <p class="example-label">Example · Bound a data-import change</p>
+            <p>Give the agent a development environment with fixture files and the import test suite. Let it edit the code, rerun the tests and read the application logs. Restrict credentials and network access to the test environment.</p>
+            <p>If the fixtures cannot reproduce the reported failure, the agent stops and returns the evidence and the unresolved question to the engineer rather than widening its own access.</p>
+          </aside>
+          <h3>Keep checks meaningful and review independent</h3>
+          <p>Passing checks provides evidence about the cases they cover. Check that those cases represent the intended behaviour, including failures and important user journeys. Keep consequential acceptance decisions with the responsible reviewer; an agent’s self-assessment is not independent evidence.</p>
+          <p>Investigate repeated failures before adding retries or permissions. Maintain the harness as the application and tools change. Anthropic’s long-running agent experiments used progress records, small increments and end-to-end checks to help later sessions resume work; these results describe a particular application-development setup.</p>
+          <p class="source-note">Further reading: <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Anthropic’s effective harnesses for long-running agents</a>.</p>
+          <p class="next-step"><strong>Next step:</strong> try the <a href="https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/#exercises">Walking Labs harness audit exercise</a> on one small task. Record a gap in the five parts, improve it, and compare completion evidence, retries and review effort on similar runs.</p>
+        </section>
+        <section id="loop-engineering">
+          <h2>Loop engineering</h2>
+          <p>Loop engineering designs how an agent repeatedly acts, observes results and adjusts its approach towards a goal. It includes the checks that guide another attempt and the conditions that end the run. This overlaps with harness engineering: many harnesses already supply an execution loop.</p>
+          <p class="concept-question"><strong>Question it answers:</strong> what goal, checks and stopping condition let an agent iterate on its own, and when does it stop?</p>
+          <p>Prompting an agent by hand, one turn at a time, does not scale to work that needs many attempts, such as fixing a failing test suite or clearing a backlog of small changes. Left to run without a goal or a limit, the same agent can iterate indefinitely, repeat a failed approach or spend far more than the task is worth.</p>
+          <p class="source-note">Concept reference: <a href="https://www.ibm.com/think/topics/loop-engineering">IBM’s explanation of loop engineering</a>.</p>
+          <h3>Design the cycle, the check and the stop</h3>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 5, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 288" role="img" aria-labelledby="fig-loop-title">
+                <title id="fig-loop-title">A goal with a stopping condition starts the loop. The agent acts, then a check observes the result. A passing check ends the loop as done; a failing check adjusts and repeats the cycle. A trigger such as a schedule or repository event starts a run, and a budget or iteration cap stops a loop that cannot finish.</title>
+                <rect class="d-node" x="1" y="24" width="150" height="56" rx="8"/><text class="d-title" x="76" y="48" text-anchor="middle">Trigger</text><text class="d-sub" x="76" y="68" text-anchor="middle">schedule or event</text>
+                <path class="d-line" d="M151 52H186" marker-end="url(#arrow)"/>
+                <rect class="d-node d-node-accent" x="192" y="14" width="176" height="76" rx="8"/><text class="d-title" x="280" y="42" text-anchor="middle">Goal</text><text class="d-sub" x="280" y="64" text-anchor="middle">with a verifiable</text><text class="d-sub" x="280" y="82" text-anchor="middle">stopping condition</text>
+                <path class="d-line d-line-accent" d="M280 90V126" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node" x="192" y="132" width="176" height="56" rx="8"/><text class="d-title" x="280" y="158" text-anchor="middle">Act</text><text class="d-sub" x="280" y="178" text-anchor="middle">change code or config</text>
+                <path class="d-line" d="M368 160H404" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="410" y="132" width="176" height="56" rx="8"/><text class="d-title" x="498" y="158" text-anchor="middle">Check</text><text class="d-sub" x="498" y="178" text-anchor="middle">tests and observe result</text>
+                <path class="d-line" d="M498 132V110H280V132" marker-end="url(#arrow)"/>
+                <text class="d-label" x="392" y="124" text-anchor="middle">fail: adjust and repeat</text>
+                <path class="d-line d-line-accent" d="M586 160H628" marker-end="url(#arrow-accent)"/>
+                <text class="d-label" x="607" y="150" text-anchor="middle">pass</text>
+                <rect class="d-node d-node-accent" x="522" y="204" width="156" height="56" rx="8"/><text class="d-title" x="600" y="230" text-anchor="middle">Checks pass</text><text class="d-sub" x="600" y="250" text-anchor="middle">hand to a person</text>
+                <path class="d-line d-line-accent" d="M628 160V204" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node" x="1" y="204" width="200" height="56" rx="8"/><text class="d-title" x="101" y="230" text-anchor="middle">Budget or cap</text><text class="d-sub" x="101" y="250" text-anchor="middle">stop if not finished</text>
+                <path class="d-line d-dash" d="M280 188V232H201" marker-end="url(#arrow)"/>
+              </svg>
+            </div>
+            <figcaption>Figure 5. A goal with a stopping condition drives the act–check cycle. A passing check ends the loop; a failing check adjusts and repeats; a budget or iteration cap stops a loop that cannot finish.</figcaption>
+          </figure>
+          <p>A trigger, such as a schedule or a repository event, starts a run. The agent acts, then a check observes the result. When the check passes, the loop ends and the work goes to a person. When it fails, the agent adjusts and repeats. A budget or an iteration cap stops a loop that cannot reach its goal, so a stuck run ends instead of spending without limit. IBM describes the same cycle as goal, action, observation and adjustment.</p>
+          <p>Define separate outcomes for success, a blocked task and an exhausted budget. Use observable checks for completion, such as unchanged acceptance tests passing, and keep the agent’s claim of success separate from that evidence. A second agent can offer another review, but may share the first agent’s blind spots.</p>
+          <aside class="example" aria-label="Example loop for a failing test suite">
+            <p class="example-label">Example · Clear a failing test suite</p>
+            <p>A nightly loop is given one goal: make the unit tests pass without changing what they assert. Each cycle, the agent runs the tests, reads the first failure, edits the code and runs the tests again.</p>
+            <ul>
+              <li><strong>Stopping condition:</strong> all tests pass, or ten cycles are used, whichever comes first.</li>
+              <li><strong>On success:</strong> open one pull request with the change and the test output for a person to review.</li>
+              <li><strong>On the cap:</strong> stop, and report the remaining failures rather than weakening the tests to make them pass.</li>
+            </ul>
+          </aside>
+          <h3>Keep the loop bounded and legible</h3>
+          <p>A loop is only as trustworthy as its check. A passing check confirms what it measures, not that the work is right, so keep a person accountable for the result. Watch for a widening gap between the code the loop produces and what people still understand; IBM calls this comprehension debt. Record each cycle’s outcome in a durable place so a later run, or a reviewer, can see what the loop tried.</p>
+          <p class="next-step"><strong>Next step:</strong> take one repetitive task and write its goal, its machine-checkable stopping condition and its iteration or budget cap before you let an agent run it unattended.</p>
+        </section>
+        <section id="graph-engineering">
+          <h2>Graph engineering</h2>
+          <p>Here, graph engineering means designing an execution graph: named steps connected by rules that determine what runs next. Steps can call a model, run a function, verify a result or wait for a person. A graph can contain loops and does not require several agents.</p>
+          <p class="concept-question"><strong>Question it answers:</strong> which specialised steps should exist, how does work move between them, and where does a person decide?</p>
+          <p>A task may need different handling for different inputs, or checks before later actions can run. Explicit steps and routes make these decisions inspectable. Add this structure when it solves a coordination problem; a single agent can already use tools, save progress and receive external checks.</p>
+          <p>In this section, a graph means a planned map of how the work should flow, with explicit steps and conditions. It does not mean a knowledge graph of facts and relationships.</p>
+          <p class="source-note">Terminology reference: <a href="https://www.puppygraph.com/learn/graph-engineering">PuppyGraph’s explanation of graph engineering</a>. For routing and workflow design, see <a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic’s Building effective agents</a>. The label is emerging; workflow graphs are an established design technique.</p>
+          <h3>Decide the nodes, the routes and the shared state</h3>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 6, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 300" role="img" aria-labelledby="fig-graph-title">
+                <title id="fig-graph-title">A plan node routes work. A router sends each item to a research loop node or a lookup function. Both feed a verify node. A passing result reaches a human approval node, then done. A failing result routes back to the router along the foot of the diagram. Steps read and update defined state.</title>
+                <rect class="d-node d-node-accent" x="1" y="120" width="130" height="56" rx="8"/><text class="d-title" x="66" y="146" text-anchor="middle">Plan</text><text class="d-sub" x="66" y="166" text-anchor="middle">decompose task</text>
+                <path class="d-line d-line-accent" d="M131 148H166" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node" x="172" y="120" width="120" height="56" rx="8"/><text class="d-title" x="232" y="146" text-anchor="middle">Router</text><text class="d-sub" x="232" y="166" text-anchor="middle">pick a branch</text>
+                <path class="d-line d-dash" d="M292 138H332V60H366" marker-end="url(#arrow)"/>
+                <path class="d-line d-dash" d="M292 158H332V228H366" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="372" y="32" width="150" height="56" rx="8"/><text class="d-title" x="447" y="58" text-anchor="middle">Research (loop)</text><text class="d-sub" x="447" y="78" text-anchor="middle">act, observe, verify</text>
+                <rect class="d-node" x="372" y="200" width="150" height="56" rx="8"/><text class="d-title" x="447" y="226" text-anchor="middle">Lookup</text><text class="d-sub" x="447" y="246" text-anchor="middle">deterministic function</text>
+                <rect class="d-node d-node-accent" x="540" y="120" width="138" height="56" rx="8"/><text class="d-title" x="609" y="146" text-anchor="middle">Verify</text><text class="d-sub" x="609" y="166" text-anchor="middle">check evidence</text>
+                <path class="d-line" d="M522 60H609V120" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M522 228H609V176" marker-end="url(#arrow)"/>
+                <path class="d-line d-line-accent" d="M609 176V196" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node" x="540" y="200" width="138" height="56" rx="8"/><text class="d-title" x="609" y="226" text-anchor="middle">Approve</text><text class="d-sub" x="609" y="246" text-anchor="middle">person decides · done</text>
+                <path class="d-line d-dash" d="M540 148H500V284H232V176" marker-end="url(#arrow)"/>
+                <text class="d-label" x="360" y="278">fail: route back to the router</text>
+                <text class="d-label" x="1" y="20">Steps read and update defined state</text>
+              </svg>
+            </div>
+            <figcaption>Figure 6. A plan node routes work to specialised nodes, including a loop from the previous section. A verification step precedes a human approval decision, and a failing result routes back. Steps read and update defined state.</figcaption>
+          </figure>
+          <p>In this example, a planning step identifies the work. A router chooses a research loop or a lookup function, then a verification step checks the result. Passing work reaches a person for an approval decision; failed work returns for another attempt within a defined retry limit.</p>
+          <p>Enforce required routes in the workflow runtime and restrict tools that could bypass them. A box labelled “approval” does not enforce a decision by itself. Define what each step reads and writes, how simultaneous updates combine, and how a stopped run resumes without repeating an external action.</p>
+          <aside class="example" aria-label="Example graph for a documentation update">
+            <p class="example-label">Example · Update documentation across many pages</p>
+            <p>A team needs to reflect a renamed feature across dozens of help pages. A plan node lists the affected pages. A router sends straightforward renames to a function that applies the exact substitution, and sends pages needing rewritten explanations to an agent loop. A check confirms that no page still uses the old name and that links resolve. Only then does an editor approve the batch. If a page fails the check, it returns to the agent rather than shipping.</p>
+          </aside>
+          <h3>Add nodes only when a single loop cannot cope</h3>
+          <p>More nodes mean more coordination, more cost and more ways to fail: branches can duplicate work, overwrite shared state or pass a wrong result downstream. Start with the simplest shape that works and add a node only when a single loop hits a real limit. Record which path each run took, because a graph no longer produces one linear transcript to read.</p>
+          <p class="next-step"><strong>Next step:</strong> take a task you are tempted to split across agents and sketch its nodes, the routes between them and the one point where a person approves the result. Confirm a single loop could not do it more simply.</p>
+        </section>
+        <section id="software-factory">
+          <h2>Software factory: light and dark</h2>
+          <p>In this guide, a software factory is a delivery system that coordinates agent work, checks, release decisions and feedback from use. Addy Osmani describes two operating choices: a <strong>light factory</strong> retains human reading of changes, while a <strong>dark factory</strong> ships changes without that reading step. These labels describe review arrangements, not maturity levels.</p>
+          <p class="concept-question"><strong>Question it answers:</strong> how much autonomy can we give the loops, and where must a person still read and decide?</p>
+          <p>When agents produce changes faster than a team can assess them, work can accumulate in review. Removing review changes the risk as well as the queue. Measure review time, defects, recovery effort and running costs before deciding which part of delivery needs improvement.</p>
+          <p class="source-note">Concept reference: <a href="https://addyosmani.com/blog/software-factories/">Addy Osmani’s “Software Factories, Light and Dark”</a>, also published on <a href="https://www.oreilly.com/radar/software-factories-light-and-dark/">O’Reilly Radar</a>. This is one practitioner’s account, not a required operating model.</p>
+          <h3>Put the human judgement where a wrong call is expensive</h3>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 7, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 300" role="img" aria-labelledby="fig-factory-title">
+                <title id="fig-factory-title">Example delivery flow: a queue feeds agent work and automated checks. After checks pass, a light path includes human review; a dark path uses an automated release decision. Monitoring feeds new work back to the queue. Failed checks stop or return work for correction.</title>
+                <rect class="d-node" x="1" y="112" width="128" height="72" rx="8"/><text class="d-title" x="65" y="140" text-anchor="middle">Queue</text><text class="d-sub" x="65" y="162" text-anchor="middle">intent and</text><text class="d-sub" x="65" y="180" text-anchor="middle">signals</text>
+                <path class="d-line" d="M129 148H164" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="170" y="112" width="128" height="72" rx="8"/><text class="d-title" x="234" y="140" text-anchor="middle">Harnessed</text><text class="d-title" x="234" y="160" text-anchor="middle">loops</text><text class="d-sub" x="234" y="180" text-anchor="middle">build changes</text>
+                <path class="d-line" d="M298 148H333" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="339" y="112" width="128" height="72" rx="8"/><text class="d-title" x="403" y="140" text-anchor="middle">Automated</text><text class="d-title" x="403" y="160" text-anchor="middle">checks</text><text class="d-sub" x="403" y="180" text-anchor="middle">release criteria</text>
+                <path class="d-line" d="M467 148H502" marker-end="url(#arrow)"/>
+                <rect class="d-node d-node-accent" x="508" y="104" width="128" height="88" rx="8"/><text class="d-title" x="572" y="134" text-anchor="middle">Review gate</text><text class="d-sub" x="572" y="156" text-anchor="middle">human</text><text class="d-sub" x="572" y="174" text-anchor="middle">judgement</text>
+                <path class="d-line d-line-accent" d="M572 42V104" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node d-node-accent" x="476" y="12" width="196" height="30" rx="6"/><text class="d-sub d-label-accent" x="574" y="32" text-anchor="middle">Light: human review</text>
+                <path class="d-line d-dash" d="M403 184V236" marker-end="url(#arrow)"/>
+                <text class="d-label" x="393" y="214" text-anchor="end">Dark: automated release decision</text>
+                <rect class="d-node" x="339" y="240" width="128" height="52" rx="8"/><text class="d-title" x="403" y="264" text-anchor="middle">Deploy</text><text class="d-sub" x="403" y="284" text-anchor="middle">ship to production</text>
+                <path class="d-line d-line-accent" d="M572 192V266H467" marker-end="url(#arrow-accent)"/>
+                <path class="d-line d-dash" d="M339 266H65V184" marker-end="url(#arrow)"/>
+                <text class="d-label" x="196" y="256" text-anchor="middle">monitoring feeds signals back</text>
+              </svg>
+            </div>
+            <figcaption>Figure 7. Example delivery paths after checks pass. The light path includes human review; the dark path uses an automated release decision. Failed checks stop or return work for correction. Monitoring informs the next task.</figcaption>
+          </figure>
+          <p>The queue supplies work to agents, followed by automated checks. Passing changes follow the chosen review and release path. Failed checks return work for correction or stop the run; they do not permit deployment. Monitoring can reveal defects and new needs, which return to the queue.</p>
+          <p>For a proposed unattended path, define the permitted changes, release criteria, monitoring and recovery procedure. Test that the controls reject unsuitable changes and that a person can pause the system. Cheap checks alone do not establish that deployment is acceptable.</p>
+          <aside class="example" aria-label="Example of choosing light and dark loops">
+            <p class="example-label">Example · Choose where the lights stay on</p>
+            <p>A fictional team pilots automatic formatting changes in a test service. It permits only formatting edits, checks for behaviour changes, records the results and rehearses rollback before considering unattended release. Changes to authentication or billing continue to receive human review. A lint result alone does not move a change onto the unattended path.</p>
+          </aside>
+          <h3>Watch what a dark factory hides</h3>
+          <p>Unattended changes can leave people with less understanding of the system they maintain, a risk Osmani calls comprehension debt. Preserve design decisions, review representative changes and rehearse diagnosis and recovery. Passing tests do not establish that the team can explain or repair the resulting system.</p>
+          <p class="source-note">The light and dark distinction comes from Osmani’s account. The pilot and release checks above are recommendations for evaluating a proposed workflow.</p>
+          <p class="next-step"><strong>Next step:</strong> choose one candidate workflow and document its permitted changes, completion evidence, review decision and recovery procedure. Evaluate it in a test environment before proposing unattended release.</p>
+        </section>
+        <footer class="article-footer"><a href="index.html">Back to the introduction</a><span>Sources reviewed 28 September 2026</span></footer>
+      </article>
+    </main>
+    <aside class="page-contents">
+      <nav aria-label="On this page">
+        <p>On this page</p>
+        <a href="#intent-driven-development">Intent-driven development</a>
+        <a href="#spec-driven-development">Spec-driven development</a>
+        <a href="#context-engineering">Context engineering</a>
+        <a href="#harness-engineering">Harness engineering</a>
+        <a href="#loop-engineering">Loop engineering</a>
+        <a href="#graph-engineering">Graph engineering</a>
+        <a href="#software-factory">Software factory: light and dark</a>
+      </nav>
+    </aside>
+  </div>
+</body>
+</html>

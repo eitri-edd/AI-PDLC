@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practical guidance for organisational change in AI-assisted development: skills, workflows, culture, technology and a measurable pilot.">
+  <title>Organisation transformation · AI-PDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI-PDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-PDLC</span></a>
+      <span class="organisation">EDS <span aria-hidden="true">/</span> DSTA</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="product-ideation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
+          <a href="product-implementation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
+          <a href="training.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><span aria-current="page">Organisation transformation</span></nav>
+        <header class="article-header">
+          <h1>Organisation transformation</h1>
+          <p class="lead">Organisation transformation means changing how people learn, share work and make decisions as they adopt AI-assisted development. This chapter helps product owners, engineers, designers and reviewers choose a practical starting point across people, process, culture and technology.</p>
+          <p>The AI-Product Development Lifecycle (AI-PDLC) concerns development supported by AI tools; the resulting product need not contain AI. The actions below are recommendations, and the examples are illustrative. Confirm responsibilities and decision authority against existing organisational arrangements.</p>
+          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-28">28 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+        </header>
+        <details class="mobile-contents">
+          <summary>On this page</summary>
+          <nav aria-label="On this page">
+            <a href="#why-transformation">Why tools alone are not enough</a>
+            <a href="#four-areas">Four areas that change together</a>
+<a href="#people">People</a>
+            <a href="#team-composition">Team composition</a>
+            <a href="#process">Process</a>
+            <a href="#culture">Culture</a>
+            <a href="#technology">Technology</a>
+            <a href="#progress-by-evidence">Run a pilot and decide from evidence</a>
+            <a href="#sources">Sources</a>
+          </nav>
+        </details>
+        <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
+            <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+          </defs>
+        </svg>
+
+        <section id="why-transformation">
+<h2>Why tools alone are not enough</h2>
+          <p>A team may draft code faster while completed changes still wait for clarification, review or release. Improving that workflow requires attention to the whole path from a user need to a working result. DORA’s 2025 report describes AI as amplifying existing organisational strengths and weaknesses (<a href="https://dora.dev/research/2025/dora-report/">DORA, State of AI-assisted Software Development 2025</a>).</p>
+          <p>McKinsey’s 2025 survey found that most organisations in its AI high-performer group were redesigning workflows. This is an association in self-reported survey data, not proof that redesign causes higher returns (<a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2025">McKinsey, The state of AI in 2025</a>).</p>
+          <p>Measure the effect in your own setting. METR’s early-2025 randomised study of 16 experienced open-source developers, completing 246 tasks in familiar repositories, found that AI use increased completion time by 19%. Participants nevertheless estimated that AI had saved them time (<a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">METR, July 2025 study</a>).</p>
+          <p>That result is specific to those tools, tasks and developers. In February 2026, METR reported that selection effects and time-measurement problems made its follow-up data unreliable for estimating current productivity gains (<a href="https://metr.org/blog/2026-02-24-uplift-update/">METR, February 2026 update</a>). Neither study supplies a forecast for your squad.</p>
+          <p>Start with one recurring delay or quality problem. Trial an AI-assisted workflow alongside the skills and controls it needs, then compare the results before expanding it.</p>
+        </section>
+
+        <section id="four-areas">
+<h2>Four areas that change together</h2>
+          <p>Use these four areas to plan a change. They are a working model for this chapter, not a maturity scale or an approved organisational structure.</p>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 280" role="img" aria-labelledby="fig-areas-title">
+                <title id="fig-areas-title">People, process, culture and technology each connect to the AI-PDLC way of working at the centre. People build skills; process makes checks and decisions explicit; culture supports learning and accountability; technology provides controlled access and recovery.</title>
+                <rect class="d-node" x="1" y="20" width="240" height="64" rx="8"/><text class="d-title" x="121" y="46" text-anchor="middle">People</text><text class="d-sub" x="121" y="70" text-anchor="middle">Skills and shared judgement</text>
+                <rect class="d-node" x="439" y="20" width="240" height="64" rx="8"/><text class="d-title" x="559" y="46" text-anchor="middle">Process</text><text class="d-sub" x="559" y="70" text-anchor="middle">Checks and decisions</text>
+                <rect class="d-node" x="1" y="196" width="240" height="64" rx="8"/><text class="d-title" x="121" y="222" text-anchor="middle">Culture</text><text class="d-sub" x="121" y="246" text-anchor="middle">Learning and accountability</text>
+                <rect class="d-node" x="439" y="196" width="240" height="64" rx="8"/><text class="d-title" x="559" y="222" text-anchor="middle">Technology</text><text class="d-sub" x="559" y="246" text-anchor="middle">Controlled access and recovery</text>
+                <path class="d-line d-line-accent" d="M241 52H300V100"/>
+                <path class="d-line d-line-accent" d="M439 52H380V100"/>
+                <path class="d-line d-line-accent" d="M241 228H300V180"/>
+                <path class="d-line d-line-accent" d="M439 228H380V180"/>
+                <rect class="d-node d-node-accent" x="260" y="100" width="160" height="80" rx="8"/>
+                <text class="d-title" x="340" y="134" text-anchor="middle">AI-PDLC</text>
+                <text class="d-sub" x="340" y="158" text-anchor="middle">way of working</text>
+              </svg>
+            </div>
+            <figcaption>Figure 1. The four areas are interdependent. Check the implications for all four when changing a workflow.</figcaption>
+          </figure>
+          <p>The diagram connects each area to the same way of working. People need skills to assess results; process defines checks and decisions; culture supports reporting problems; technology limits access and supports recovery. A pilot can start small while addressing all four.</p>
+          <div class="table-scroll"><table><caption>Questions to answer before a pilot</caption><thead><tr><th scope="col">Area</th><th scope="col">Planning question</th><th scope="col">Useful output</th></tr></thead><tbody><tr><th scope="row">People</th><td>Who can specify, perform and review the task?</td><td>Named participants, skill gaps and coaching time</td></tr>
+<tr><th scope="row">Process</th><td>What evidence supports progress, and who decides?</td><td>A task flow with checks and decision authority</td></tr>
+<tr><th scope="row">Culture</th><td>How will people raise concerns and learn from failures?</td><td>A feedback route and a review date</td></tr>
+<tr><th scope="row">Technology</th><td>What can the tool access, change and recover?</td><td>Access limits, action records and a recovery method</td></tr></tbody></table></div>
+          <p>An AI agent is software that uses an AI model and tools to carry out a task. Agent-specific guidance below applies when tools act on systems, rather than only suggest text to a person.</p>
+        </section>
+
+        <section id="people">
+<h2>People: broaden skills and retain specialist judgement</h2>
+          <p>AI-assisted work still needs people who understand the user’s problem and can recognise an incorrect result. Build enough shared knowledge for colleagues to work across tasks, while preserving access to specialist review.</p>
+          <h3>Develop breadth alongside depth</h3>
+          <p>A T-shaped practitioner combines deep expertise in one field with enough breadth to collaborate across the lifecycle. Use this as a development goal, not an expectation that one person can replace a multidisciplinary team.</p>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 260" role="img" aria-labelledby="fig-t-shape-title">
+                <title id="fig-t-shape-title">A T shape. The horizontal bar is broad competence across user needs, specification, design, testing, AI supervision, risk awareness and operations. The vertical stem is deep expertise in one domain, such as architecture, security, data, user experience or domain logic.</title>
+                <rect class="d-node" x="40" y="20" width="600" height="80" rx="8"/>
+                <text class="d-title" x="340" y="46" text-anchor="middle">Broad competence</text>
+                <text class="d-sub" x="340" y="70" text-anchor="middle">User needs, specification, design, testing,</text>
+                <text class="d-sub" x="340" y="90" text-anchor="middle">AI supervision, risk awareness and operations</text>
+                <rect class="d-node d-node-accent" x="240" y="100" width="200" height="140" rx="8"/>
+                <text class="d-title" x="340" y="132" text-anchor="middle">Deep expertise</text>
+                <text class="d-sub" x="340" y="160" text-anchor="middle">Architecture, security,</text>
+                <text class="d-sub" x="340" y="182" text-anchor="middle">data, user experience</text>
+                <text class="d-sub" x="340" y="204" text-anchor="middle">or domain logic</text>
+                <text class="d-label" x="224" y="150" text-anchor="end">Works across the</text>
+                <text class="d-label" x="224" y="172" text-anchor="end">product lifecycle</text>
+                <text class="d-label" x="456" y="150">Applies specialist</text>
+                <text class="d-label" x="456" y="172">judgement to results</text>
+              </svg>
+            </div>
+            <figcaption>Figure 2. A T-shaped practitioner combines broad competence across the lifecycle with deep expertise in one domain.</figcaption>
+          </figure>
+          <p>The horizontal bar represents skills shared across the team, such as specifying work, testing results and supervising AI tools. The vertical stem represents depth in a field such as security, design or data. Both are needed to judge when specialist help is necessary.</p>
+          <h3>Make review responsibilities explicit</h3>
+          <p>The examples below describe contributions to agree within a team. They do not replace existing responsibilities or confer approval authority.</p>
+          <div class="table-scroll"><table><caption>Example contributions to an AI-assisted change</caption><thead><tr><th scope="col">Role</th><th scope="col">Contribution and recorded output</th></tr></thead><tbody><tr><th scope="row">Product owner</th><td>Define the user need, scope and acceptance criteria; record whether the result meets them.</td></tr>
+<tr><th scope="row">Designer</th><td>Test the experience with users; record usability and accessibility findings.</td></tr>
+<tr><th scope="row">Technical lead</th><td>Review architectural trade-offs and task boundaries; record decisions that affect other systems.</td></tr>
+<tr><th scope="row">Developer</th><td>Give the tool a bounded task; check the change and record test results and unresolved issues.</td></tr>
+<tr><th scope="row">Quality or security specialist</th><td>Design relevant checks and investigate failures; retain exploratory testing and specialist analysis where needed.</td></tr></tbody></table></div>
+          <h3>Learn through supported practice</h3>
+          <p>Reserve time for coached work on a low-risk task. Pair a learner with someone able to review the result, and include a flawed output so the learner can practise detecting errors. Assess the specification, verification and explanation of limits, as well as the completed work.</p>
+          <p>Team leads can collect recurring skill gaps; whoever coordinates training can use that evidence to arrange coaching and share worked examples. Confirm these responsibilities locally. Avoid treating tool usage or course completion alone as proof of competence.</p>
+          <p class="next-step"><strong>Next step:</strong> choose one repeated task. Name who will specify it, who will review it and which skill each person needs to practise.</p>
+        </section>
+
+        <section id="team-composition">
+<h2>Team composition: towards human–agent teams</h2>
+          <p>As agents take on more bounded tasks, a squad can become a human–agent team. People set intent, define boundaries, verify results and make decisions. Agents carry out delegated work such as research, prototyping, coding and test generation.</p>
+          <p>Agents hold no organisational accountability. Every agent task has a person who delegated it and a person who decides on the result. This section illustrates where such teams may be heading; it is a direction of travel, not a required structure, headcount or approved competency framework.</p>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-team-title">
+                <title id="fig-team-title">A human–agent team. On the left, people in five roles: product manager, UI/UX designer, tech lead, developers, and QA and security. They delegate bounded tasks to agents working inside an agent harness on the right: research agents, prototyping agents, coding subagents, and test and security agents. The agents return evidence, such as diffs and test results, for people to review. Both sides share context, a design system and curated agent skills.</title>
+                <rect class="d-boundary" x="1" y="20" width="240" height="260" rx="8"/>
+                <text class="d-title" x="121" y="46" text-anchor="middle">People</text>
+                <rect class="d-node" x="21" y="60" width="200" height="36" rx="8"/><text class="d-sub" x="121" y="83" text-anchor="middle">Product manager</text>
+                <rect class="d-node" x="21" y="104" width="200" height="36" rx="8"/><text class="d-sub" x="121" y="127" text-anchor="middle">UI/UX designer</text>
+                <rect class="d-node" x="21" y="148" width="200" height="36" rx="8"/><text class="d-sub" x="121" y="171" text-anchor="middle">Tech lead</text>
+                <rect class="d-node" x="21" y="192" width="200" height="36" rx="8"/><text class="d-sub" x="121" y="215" text-anchor="middle">Developers</text>
+                <rect class="d-node" x="21" y="236" width="200" height="36" rx="8"/><text class="d-sub" x="121" y="259" text-anchor="middle">QA and security</text>
+                <path class="d-line d-line-accent" d="M241 110H435" marker-end="url(#arrow-accent)"/>
+                <text class="d-label d-label-accent" x="340" y="100" text-anchor="middle">Delegate bounded tasks</text>
+                <text class="d-label" x="340" y="132" text-anchor="middle">with clear boundaries</text>
+                <path class="d-line" d="M439 190H245" marker-end="url(#arrow)"/>
+                <text class="d-label" x="340" y="180" text-anchor="middle">Evidence for review</text>
+                <text class="d-label" x="340" y="212" text-anchor="middle">diffs and test results</text>
+                <rect class="d-boundary" x="439" y="20" width="240" height="260" rx="8"/>
+                <text class="d-title" x="559" y="46" text-anchor="middle">Agents in a harness</text>
+                <rect class="d-node" x="459" y="64" width="200" height="44" rx="8"/><text class="d-sub" x="559" y="91" text-anchor="middle">Research agents</text>
+                <rect class="d-node" x="459" y="118" width="200" height="44" rx="8"/><text class="d-sub" x="559" y="145" text-anchor="middle">Prototyping agents</text>
+                <rect class="d-node" x="459" y="172" width="200" height="44" rx="8"/><text class="d-sub" x="559" y="199" text-anchor="middle">Coding subagents</text>
+                <rect class="d-node" x="459" y="226" width="200" height="44" rx="8"/><text class="d-sub" x="559" y="253" text-anchor="middle">Test and security agents</text>
+                <rect class="d-node" x="1" y="296" width="678" height="40" rx="8"/>
+                <text class="d-sub" x="340" y="321" text-anchor="middle">Shared context, design system and curated agent skills</text>
+              </svg>
+            </div>
+            <figcaption>Figure 3. In a human–agent team, people delegate bounded tasks and review the evidence agents return. Accountability stays with people.</figcaption>
+          </figure>
+          <p>Read the diagram from left to right. People in five core roles delegate bounded tasks, highlighted in blue, to agents working inside an agent harness: research, prototyping, coding, and test and security agents. The agents return evidence, such as diffs and test results, for people to review. Both sides work from the same context, design system and curated agent skills.</p>
+
+          <h3>How role skills may evolve</h3>
+          <p>Existing skills remain the foundation. The table shows, for each core role, the skill it has traditionally centred on, the emerging skill a human–agent team relies on, and an indicative proficiency level.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Role competencies table, scrolls sideways on narrow screens">
+            <table class="competency-table">
+              <caption>Illustrative role competencies for a human–agent team. Proficiency levels are indicative targets, not an approved competency framework.</caption>
+              <thead><tr><th scope="col">Role</th><th scope="col">Legacy core skill</th><th scope="col">AI-native emergent skill</th><th scope="col">Proficiency requirement</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Product Manager</th><td>User-story writing and backlog prioritisation</td><td>Intent architecture; prompt engineering for PRDs; evaluation-criteria definition</td><td>Advanced in prompt engineering and domain modelling</td></tr>
+                <tr><th scope="row">UI/UX Designer</th><td>Wireframing and static mock-ups</td><td>Design-token systems; system prototyping; rapid UX feedback loops</td><td>Advanced in design tokens and high-fidelity prototyping</td></tr>
+                <tr><th scope="row">Tech Lead</th><td>Code review and technical architecture</td><td>TRD review and approval; agent-harness engineering; Tier-2 code review; architecture governance</td><td>Mastery in system architecture, code review and harnesses</td></tr>
+                <tr><th scope="row">Developers</th><td>Manual feature implementation and debugging</td><td>TRD authoring and blueprinting; subagent orchestration; trajectory debugging; pull-request verification</td><td>Mastery in TRD authoring, code review and multi-agent management</td></tr>
+                <tr><th scope="row">QA / Security</th><td>Manual test-case execution and penetration testing</td><td>Evaluation-suite development; automated red-teaming; sandbox safety</td><td>Advanced in evaluation harnesses and LLM security</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Terms used in the table</h3>
+          <ul>
+            <li><strong>PRD (product requirements document):</strong> the problem, users, scope and acceptance criteria for a product change. <strong>Intent architecture</strong> and <strong>prompt engineering for PRDs</strong> mean writing it precisely enough that people and agents interpret it the same way.</li>
+            <li><strong>TRD (technical requirements document):</strong> how the change will be built, including architecture, interfaces, data and constraints. A developer writes it as the blueprint for agent tasks, and the tech lead reviews it before agents start.</li>
+            <li><strong>Design-token system:</strong> named values for colour, type and spacing, so that interfaces produced by agents stay consistent with the approved design.</li>
+            <li><strong>Agent harness:</strong> the instructions, tools, permissions and checks that bound an agent’s work. <a href="concept.html#harness-engineering">Read about harness engineering</a>.</li>
+            <li><strong>Subagent orchestration:</strong> splitting work into bounded tasks for several agents, running them in parallel and integrating their results.</li>
+            <li><strong>Trajectory debugging:</strong> examining the sequence of steps, tool calls and decisions an agent took, to find where it went wrong.</li>
+            <li><strong>Tier-1 and Tier-2 review:</strong> two layers of review. The developer reviews and verifies agent output first (Tier 1); the tech lead then reviews the developer’s submission (Tier 2).</li>
+            <li><strong>Automated red-teaming and sandbox safety:</strong> probing a system automatically with adversarial inputs such as prompt injection, and running agent work in isolated environments with limited access.</li>
+            <li><strong>LLM security:</strong> protecting systems that use a large language model (LLM) against risks such as prompt injection, data leakage and excessive permissions.</li>
+          </ul>
+
+          <h3>Make the transition in steps</h3>
+          <p>A squad does not become a human–agent team in one move. Change team composition one task at a time, alongside the task permissions in the <a href="#process">process section</a> and the evidence from a <a href="#progress-by-evidence">pilot</a>.</p>
+          <ol class="practice-steps">
+            <li>Discuss the table with each squad member, and agree one emergent skill for them to develop.</li>
+            <li>Start with advice-only or isolated tasks, where a person reviews every result.</li>
+            <li>Pair each learner with someone who can review their work; for example, a tech lead reviewing a developer’s first TRD.</li>
+            <li>Widen an agent’s scope only when the evidence supports it and the person with authority agrees.</li>
+          </ol>
+          <aside class="example" aria-label="Fictional example of a human–agent team at work">
+            <p class="example-label">Example · fictional team</p>
+            <p>A developer who previously implemented features by hand writes a TRD for a search filter change, and the tech lead reviews it before any agent starts. The developer dispatches three bounded tasks to coding subagents on isolated branches: the filter logic, its tests and the documentation update.</p>
+            <p>The developer reviews each diff and test result (Tier 1), integrates them and opens a merge request, which the tech lead reviews (Tier 2). No agent can merge or deploy.</p>
+          </aside>
+          <p>Parallel agents increase the volume of work to review. Delegate only as many tasks as the team can verify properly; unreviewed output is not progress.</p>
+          <p class="next-step"><strong>Next step:</strong> with each squad member, pick the table row closest to their role. Agree one emergent skill to practise on the next low-risk task, and who will review the result.</p>
+        </section>
+
+        <section id="process">
+<h2>Process: connect checks to decisions</h2>
+          <p>Map the existing workflow before changing it. Separate time spent doing work from time waiting for information, review or approval. A slow checkpoint may need clearer inputs or more review capacity, rather than automation.</p>
+          <h3>Keep the purpose of each control visible</h3>
+          <ol class="practice-steps">
+            <li>Ask the person responsible for the control what outcome it protects.</li>
+            <li>Record the evidence needed and which checks can assess it reliably.</li>
+            <li>Confirm who can authorise progress and when a person needs to intervene.</li>
+          </ol>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 4, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 260" role="img" aria-labelledby="fig-control-title">
+                <title id="fig-control-title">A control objective defines evidence for automated checks. Passing checks makes work ready for a decision, not automatically approved. Exceptions, failures and high-risk changes go to an authorised reviewer. Reviewed lessons improve the checks.</title>
+                <rect class="d-node" x="1" y="20" width="150" height="56" rx="8"/><text class="d-title" x="76" y="44" text-anchor="middle">Control</text><text class="d-sub" x="76" y="64" text-anchor="middle">objective</text>
+                <path class="d-line" d="M151 48H177" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="181" y="20" width="150" height="56" rx="8"/><text class="d-title" x="256" y="44" text-anchor="middle">Required</text><text class="d-sub" x="256" y="64" text-anchor="middle">evidence</text>
+                <path class="d-line" d="M331 48H357" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="361" y="20" width="150" height="56" rx="8"/><text class="d-title" x="436" y="44" text-anchor="middle">Automated</text><text class="d-sub" x="436" y="64" text-anchor="middle">checks</text>
+                <path class="d-line" d="M511 48H553" marker-end="url(#arrow)"/><text class="d-label" x="532" y="38" text-anchor="middle">pass</text>
+                <rect class="d-node" x="557" y="20" width="122" height="56" rx="8"/><text class="d-title" x="618" y="44" text-anchor="middle">Ready for</text><text class="d-sub" x="618" y="64" text-anchor="middle">decision</text>
+                <path class="d-line d-line-accent" d="M436 76V146" marker-end="url(#arrow-accent)"/>
+                <text class="d-label d-label-accent" x="448" y="104">exception, failure</text>
+                <text class="d-label d-label-accent" x="448" y="124">or high risk</text>
+                <rect class="d-node d-node-accent" x="361" y="150" width="150" height="64" rx="8"/><text class="d-title" x="436" y="176" text-anchor="middle">Authorised</text><text class="d-sub" x="436" y="198" text-anchor="middle">reviewer</text>
+                <path class="d-line d-dash" d="M361 182H335" marker-end="url(#arrow)"/>
+                <rect class="d-boundary" x="181" y="150" width="150" height="64" rx="8"/><text class="d-sub" x="256" y="176" text-anchor="middle">Improve rules</text><text class="d-sub" x="256" y="198" text-anchor="middle">and thresholds</text>
+                <path class="d-line d-dash" d="M256 150V80" marker-end="url(#arrow)"/>
+                <text class="d-label" x="246" y="240" text-anchor="middle">Reviewed lessons improve the checks</text>
+              </svg>
+            </div>
+            <figcaption>Figure 4. Checks supply evidence for a decision. Progress still depends on the authority agreed for the task; a passing check is not an approval.</figcaption>
+          </figure>
+          <p>Read the diagram from left to right: the control objective defines evidence, and checks assess that evidence. A pass makes the work ready for a decision. An authorised reviewer handles failed checks, exceptions and high-risk changes. The feedback path represents reviewed improvements to checks; it does not let an agent relax a rule to pass.</p>
+          <h3>Set authority for the specific task</h3>
+          <p>Choose agent permissions according to impact, reversibility and the evidence available. IMDA’s <a href="https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf">Model AI Governance Framework for Agentic AI (PDF)</a> discusses bounding risk and keeping agents traceable and controllable. Its <a href="https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2026/updated-model-ai-governance-framework-for-agentic-ai">May 2026 update</a> adds deployment case studies. This external guidance does not establish DSTA approval rules.</p>
+          <div class="table-scroll"><table><caption>Example task permissions; these are options, not a progression to full autonomy</caption><thead><tr><th scope="col">Task boundary</th><th scope="col">Agent action</th><th scope="col">Human decision</th></tr></thead><tbody><tr><th scope="row">Advice only</th><td>Draft a recommendation without changing a system.</td><td>A person checks the advice and decides whether to act.</td></tr>
+<tr><th scope="row">Isolated change</th><td>Edit a branch and run tests using limited permissions.</td><td>A reviewer assesses the change before it enters a shared system.</td></tr>
+<tr><th scope="row">Pre-authorised routine action</th><td>Perform an explicitly permitted action after defined checks pass.</td><td>An authorised person sets the scope and stop conditions; the team monitors results.</td></tr>
+<tr><th scope="row">High-impact or uncertain action</th><td>Prepare evidence within its permitted scope.</td><td>An authorised person decides before execution; the agent stops if authority is missing.</td></tr></tbody></table></div>
+          <p>Record who delegated the task, its scope, the evidence and the outcome. Protect these records under the applicable data-handling rules. Escalate failed checks, unexpected access requests and changes outside scope.</p>
+          <p class="next-step"><strong>Next step:</strong> document one checkpoint’s purpose, required evidence and decision authority. Review the proposed change with the person responsible for that control.</p>
+        </section>
+
+        <section id="culture">
+<h2>Culture: make learning and accountability visible</h2>
+          <p>People need to be able to question AI output, report failures and ask for help without pressure to demonstrate speed gains. DORA links high trust and effective information flow with stronger software delivery and organisational performance (<a href="https://dora.dev/capabilities/generative-organizational-culture/">DORA, generative organisational culture</a>).</p>
+          <h3>Explain the change and listen to concerns</h3>
+          <p>Before a pilot, the team lead can explain its purpose, how responsibilities may change and how results will be assessed. Invite concerns about workload, skills and review effort. Record unanswered questions and assign someone to follow them up.</p>
+          <p>DORA’s AI Capabilities Model identifies a clearly communicated position on AI use as a supporting capability (<a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model">DORA, AI Capabilities Model</a>). Make permitted tools, data boundaries and the route for questions easy to find. Agree these with the relevant organisational owners.</p>
+          <h3>Agree what acceptable work looks like</h3>
+          <p>Set acceptance criteria before the task starts. Use tests for behaviour that can be checked automatically and human review for contextual judgement. An AI-generated assessment can help a reviewer, but it can also be wrong.</p>
+          <p>For each change, record whether the criteria were met, which risks remain and who can decide on them. Where recovery matters, check the recovery method. Passing tests alone does not demonstrate that a change is useful, secure or ready to release.</p>
+          <h3>Turn failures into improvements</h3>
+          <p>At a retrospective, examine the task instructions, available context, tool permissions and review evidence. Agree a specific improvement, an owner and a completion date. Recognise useful escalation and defects caught during review, as well as successful delivery.</p>
+          <p class="next-step"><strong>Next step:</strong> discuss one failed AI-assisted task with the people involved. Choose one improvement to a test, instruction or control, and record who will make it.</p>
+        </section>
+
+        <section id="technology">
+<h2>Technology: provide bounded access and recovery</h2>
+          <p>Build on existing repositories, delivery pipelines and access controls. Start with the capabilities needed for the pilot; a new platform is not a prerequisite. When an agent can act, make its permissions and actions attributable to the task and the person who authorised it.</p>
+          <p>OWASP recommends limiting tool functionality, permissions and autonomy, with authorisation enforced by the connected systems rather than the model (<a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/">OWASP, Excessive Agency</a>). Prompts alone are not an access-control boundary.</p>
+          <h3>Check the platform’s support for the task</h3>
+          <div class="table-scroll"><table><caption>Suggested capabilities and how to check them</caption><thead><tr><th scope="col">Capability</th><th scope="col">Practical check</th></tr></thead><tbody><tr><th scope="row">Relevant context</th><td>Give the tool current requirements and approved reference material; record their versions and restrict access to what the task needs.</td></tr>
+<tr><th scope="row">Identity and permissions</th><td>Use scoped credentials or delegated access that preserves the user’s authority limits. Check that unauthorised actions are denied.</td></tr>
+<tr><th scope="row">Isolated execution</th><td>Separate experimental work from shared systems. Limit tool access, execution time and spending.</td></tr>
+<tr><th scope="row">Verification</th><td>Run tests against acceptance criteria. Compare a sample of AI assessments with qualified reviewers and investigate disagreement.</td></tr>
+<tr><th scope="row">Action records</th><td>Record changes, tool calls, versions and outcomes with appropriate access and retention controls; avoid unnecessary sensitive content.</td></tr>
+<tr><th scope="row">Recovery</th><td>Test stopping a run, revoking access and restoring affected state. Identify actions that cannot be undone.</td></tr></tbody></table></div>
+          <p>DORA’s capabilities research associates useful internal platforms and access to relevant internal data with stronger AI benefits (<a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model">DORA, AI Capabilities Model</a>). This supports improving context and platform quality; it does not justify unrestricted data access.</p>
+          <h3>Keep verification independent of generation</h3>
+          <p>Combine automated tests with specialist review according to the task’s risk. An agent’s explanation that its own work is correct is not independent evidence. Review the test cases too: tests generated from a misunderstood requirement may repeat the same error.</p>
+          <p>A merge request can collect code-change evidence, but other actions need controls at their own point of execution. Data access, deployment and external communications may happen outside a code review. Enforce permissions where those actions occur.</p>
+          <p class="next-step"><strong>Next step:</strong> list one agent’s tools, data access and permissions. With the system owner, remove unnecessary access and test the stop and recovery procedures.</p>
+        </section>
+
+        <section id="progress-by-evidence">
+<h2>Run a pilot and decide from evidence</h2>
+          <p>Choose one recurring task with a clear outcome and manageable consequences if it fails. Name a pilot lead to collect evidence and confirm who can decide whether the workflow continues. These are responsibilities to assign, not new organisational posts.</p>
+          <ol class="practice-steps">
+            <li><strong>Establish a baseline.</strong> Record completion time, review effort, rework and quality for comparable recent tasks. Define where timing starts and ends.</li>
+            <li><strong>Define the trial.</strong> Record the tool and version, task boundaries, permitted data, reviewers, acceptance criteria and stop conditions.</li>
+            <li><strong>Run a small batch.</strong> Include unsuccessful attempts and recovery effort in the record. Ask participants what helped and what added work.</li>
+            <li><strong>Review the evidence.</strong> Compare results with the baseline, noting differences in task difficulty and team experience. A small before-and-after comparison can guide a decision but does not establish causation.</li>
+            <li><strong>Decide and record why.</strong> Continue, revise or stop. Expand only to tasks supported by the evidence and existing authority; revisit the decision after material tool or workflow changes.</li>
+          </ol>
+          <div class="table-scroll"><table><caption>A suggested pilot scorecard; set local thresholds before the trial</caption><thead><tr><th scope="col">Measure</th><th scope="col">Record and interpret</th></tr></thead><tbody><tr><th scope="row">User outcome</th><td>Whether the result met acceptance criteria and helped the intended user. Faster output without a useful result is not a success.</td></tr>
+<tr><th scope="row">Delivery time and effort</th><td>Elapsed time to an accepted result, waiting time and human work spent specifying, reviewing and correcting it.</td></tr>
+<tr><th scope="row">Quality and risk</th><td>Defects, failed checks, incidents and recovery outcomes. Review serious failures individually, even when averages improve.</td></tr>
+<tr><th scope="row">Total cost</th><td>Tool charges, setup, training, review and rework for accepted results; include the cost of failed attempts.</td></tr>
+<tr><th scope="row">People and oversight</th><td>Participant feedback, demonstrated skills and reasons for escalation. Fewer escalations may reflect missed problems rather than better performance.</td></tr></tbody></table></div>
+          <aside class="example" aria-label="Fictional pilot example">
+            <p class="example-label">Example · fictional pilot</p>
+            <p>A squad trials an agent that drafts regression tests on an isolated branch. The developer checks the tests against acceptance criteria; a reviewer decides whether to merge them. The agent has no merge or deployment permission.</p>
+            <p>The pilot lead records drafting time, review effort, missed defects and tool cost. If review effort outweighs the time saved, the squad revises the task or stops the trial. Any expansion requires evidence that the revised approach works.</p>
+          </aside>
+          <p>Allow for setup and learning costs, and set a review date so a pilot does not continue indefinitely. Higher autonomy is an option, not a success measure; a useful advisory workflow may remain advisory.</p>
+          <div class="next-step"><p><strong>Next step:</strong> write a short pilot brief covering the task, participants, baseline, boundaries, success criteria and review date. Use the <a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model">DORA capability guidance</a> to identify supporting improvements, and <a href="concept.html">read the Concepts guide</a> for ways to specify and supervise AI-assisted work.</p></div>
+        </section>
+
+        <section id="sources">
+<h2>Sources</h2>
+          <p>Source review: 28 September 2026. Research findings are cited beside the relevant claims. The planning model, role examples and pilot procedure are editorial recommendations, not DSTA policy.</p>
+          <ul>
+            <li><a href="https://dora.dev/research/2025/dora-report/">DORA, State of AI-assisted Software Development 2025</a> — organisational conditions.</li>
+            <li><a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model">DORA, AI Capabilities Model, September 2025</a> — supporting practices; survey associations rather than guaranteed results.</li>
+            <li><a href="https://dora.dev/capabilities/generative-organizational-culture/">DORA, Generative organisational culture</a> — trust, information flow and learning.</li>
+            <li><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2025">McKinsey, The state of AI in 2025</a> — historical survey evidence on workflow redesign.</li>
+            <li><a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">METR, July 2025 developer productivity study</a> and <a href="https://metr.org/blog/2026-02-24-uplift-update/">February 2026 follow-up</a> — task-specific evidence and measurement limitations.</li>
+            <li><a href="https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf">IMDA, Model AI Governance Framework for Agentic AI (PDF)</a> and <a href="https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2026/updated-model-ai-governance-framework-for-agentic-ai">May 2026 update</a> — external guidance and deployment examples.</li>
+            <li><a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/">OWASP, LLM06:2025 Excessive Agency</a> — tool permissions and authorisation controls.</li>
+          </ul>
+        </section>
+        <footer class="article-footer"><span>AI-Product Development Lifecycle</span><span>EDS · DSTA</span></footer>
+      </article>
+    </main>
+    <aside class="page-contents">
+      <nav aria-label="On this page">
+        <p>On this page</p>
+        <a href="#why-transformation">Why tools alone are not enough</a>
+        <a href="#four-areas">Four areas that change together</a>
+        <a href="#people">People</a>
+        <a href="#team-composition">Team composition</a>
+        <a href="#process">Process</a>
+        <a href="#culture">Culture</a>
+        <a href="#technology">Technology</a>
+        <a href="#progress-by-evidence">Run a pilot and decide from evidence</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </aside>
+  </div>
+</body>
+</html>

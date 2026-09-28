@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A study guide to the self-paced training on the Eitri Agentic Dev Workflow: how the course is organised, the key concepts it teaches, and how to work through it.">
+  <title>Product ideation · AI-PDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI-PDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-PDLC</span></a>
+      <span class="organisation">EDS <span aria-hidden="true">/</span> DSTA</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="product-ideation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
+          <a href="product-implementation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
+          <a href="training.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><span aria-current="page">Training</span></nav>
+        <header class="article-header">
+          <h1>Training</h1>
+          <p class="lead">This page is a study guide to the self-paced training on the Eitri Agentic Dev Workflow. It explains how the course is organised, draws out the key concepts it teaches, and suggests how to work through it so you can run the workflow on your own repository.</p>
+          <p>It is written for developers, Tech Leads and product owners who will use the workflow. The training itself is the source; this page summarises it and does not replace the hands-on exercises. Skill names, gates and thresholds are reported as the training states them; check the current course before relying on them.</p>
+          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-28">28 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+        </header>
+        <details class="mobile-contents">
+          <summary>On this page</summary>
+          <nav aria-label="On this page">
+            <a href="#about-training">About the training</a>
+            <a href="#course-map">Course map</a>
+            <a href="#how-models-behave">How models behave</a>
+            <a href="#context-and-loops">Context and loops</a>
+            <a href="#development-principles">Development principles</a>
+            <a href="#multi-agent">Multi-agent patterns</a>
+            <a href="#po-workflow">Lesson 0: PO workflow</a>
+            <a href="#workflow-skills">Lesson 1: workflow skills</a>
+            <a href="#team-context">Lesson 2: team context</a>
+            <a href="#study-plan">Study plan</a>
+            <a href="#sources">Sources</a>
+          </nav>
+        </details>
+        <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
+            <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+          </defs>
+        </svg>
+
+        <section id="about-training">
+          <h2>What the training teaches</h2>
+          <p>The Eitri Agentic Dev Workflow is a set of agent skills for turning user stories into tested, reviewed code with AI coding agents. It builds on Matt Pocock’s agentic engineering skills, which cover specification, ticket breakdown, implementation, code review and bug diagnosis (<a href="https://github.com/mattpocock/skills">Matt Pocock, skills</a>). Eitri adds story sequencing, compliance review, architecture boundary tests, ticket quality checks, a self-correcting implementation loop and browser-based acceptance evidence (<a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">SGTechStack, Eitri self-paced training</a>).</p>
+          <p>The workflow uses the same skills and the same two human sign-offs as the EDS workflow summarised on the product implementation page. <a href="product-implementation.html#eds-workflow">Read the EDS workflow summary</a> for the governed sequence; use this page to learn the concepts behind it.</p>
+          <aside class="callout" aria-label="Note on prerequisites">
+            <p class="example-label">Note</p>
+            <p>The training expects a software development background. Without experience of writing, testing and shipping code, you cannot critically review what the agent produces, and the workflow depends on that review.</p>
+          </aside>
+        </section>
+
+        <section id="course-map">
+          <h2>How the course is organised</h2>
+          <p>The course has four modules, taken in order. Each builds on the one before, and each lesson includes hands-on practice and self-check questions.</p>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 130" role="img" aria-labelledby="fig-course-title">
+                <title id="fig-course-title">The course path. Prerequisites cover why the workflow works. Lesson 0 covers planning the delivery from user stories. Lesson 1 covers running each workflow skill. Lesson 2 covers fitting the workflow to your team's context. Prerequisites is highlighted as the place to start.</title>
+                <rect class="d-node d-node-accent" x="1" y="16" width="150" height="64" rx="8"/><text class="d-title" x="76" y="42" text-anchor="middle">Prerequisites</text><text class="d-sub" x="76" y="66" text-anchor="middle">Foundations</text>
+                <path class="d-line" d="M151 48H173" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="177" y="16" width="150" height="64" rx="8"/><text class="d-title" x="252" y="42" text-anchor="middle">Lesson 0</text><text class="d-sub" x="252" y="66" text-anchor="middle">PO workflow</text>
+                <path class="d-line" d="M327 48H349" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="353" y="16" width="150" height="64" rx="8"/><text class="d-title" x="428" y="42" text-anchor="middle">Lesson 1</text><text class="d-sub" x="428" y="66" text-anchor="middle">Workflow skills</text>
+                <path class="d-line" d="M503 48H525" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="529" y="16" width="150" height="64" rx="8"/><text class="d-title" x="604" y="42" text-anchor="middle">Lesson 2</text><text class="d-sub" x="604" y="66" text-anchor="middle">Team context</text>
+                <text class="d-label" x="76" y="108" text-anchor="middle">why it works</text>
+                <text class="d-label" x="252" y="108" text-anchor="middle">plan the delivery</text>
+                <text class="d-label" x="428" y="108" text-anchor="middle">run each skill</text>
+                <text class="d-label" x="604" y="108" text-anchor="middle">fit it to your team</text>
+              </svg>
+            </div>
+            <figcaption>Figure 1. The four modules, taken in sequence. Start with the prerequisites.</figcaption>
+          </figure>
+          <div class="table-scroll"><table class="wide-table"><caption>The four modules of the training</caption><thead><tr><th scope="col">Module</th><th scope="col">Main audience</th><th scope="col">What you learn</th></tr></thead><tbody>
+            <tr><th scope="row">Prerequisites: foundations of agentic engineering</th><td>Everyone</td><td>Matt Pocock’s baseline workflow, practised hands-on, and four foundation topics: how models behave, agentic engineering, development principles and multi-agent patterns</td></tr>
+            <tr><th scope="row">Lesson 0: PO workflow</th><td>Product owners, with the Tech Lead</td><td>Writing fine-grained stories, producing a dependency-sequenced delivery plan, creating issues, tracking progress and accepting the result</td></tr>
+            <tr><th scope="row">Lesson 1: workflow skills</th><td>Developers and Tech Leads</td><td>What each Eitri skill adds, where it runs in the five-phase workflow and what it produces</td></tr>
+            <tr><th scope="row">Lesson 2: team context</th><td>Tech Leads and developers</td><td>Which context to inject before each phase, where it lives in the repository and which skill reads it</td></tr>
+          </tbody></table></div>
+          <p>The key concepts below follow the same order. The first four come from the prerequisites; the rest summarise one lesson each.</p>
+        </section>
+
+        <section id="how-models-behave">
+          <h2>Key concept: how language models behave</h2>
+          <p>The workflow’s design follows from a few properties of large language models (LLMs). Understanding them explains why the workflow writes everything down, keeps context small and trusts tests over appearances.</p>
+          <h3>Context has limits, and quality drops before them</h3>
+          <p>The context window is all the text a model can see in one call: instructions, code and conversation. The training uses a rule of thumb that models reason most reliably in roughly the first 40% of their context limit, the “smart zone”, and degrade beyond it. Separately, research has found that models recall information in the middle of a long context less accurately than information at the start or end (<a href="https://arxiv.org/abs/2307.03172">Liu et al., Lost in the Middle</a>). Put critical instructions first, and do not bury key reference material mid-context.</p>
+          <h3>Models remember nothing between calls</h3>
+          <div class="table-scroll"><table><caption>The three memory stores described in the training</caption><thead><tr><th scope="col">Store</th><th scope="col">What it is</th><th scope="col">Lasts</th></tr></thead><tbody>
+            <tr><th scope="row">In-context</th><td>The current prompt and conversation</td><td>Only for the current call or session</td></tr>
+            <tr><th scope="row">External</th><td>Files, version control and issue trackers</td><td>Across sessions</td></tr>
+            <tr><th scope="row">Parametric</th><td>The model’s trained weights</td><td>Fixed; cannot be updated by the team</td></tr>
+          </tbody></table></div>
+          <p>The workflow relies on external memory. Specifications, decisions and progress are written to the repository and tracker, so the next session can pick them up.</p>
+          <h3>Plausible is not the same as correct</h3>
+          <ul>
+            <li><strong>Hallucination</strong> is a generation problem: a model predicts likely text rather than checking facts, so it can be confidently wrong even with the right reference material in front of it.</li>
+            <li><strong>Non-determinism</strong> means the same input can produce different output on each run, so output that looked right once may not the next time.</li>
+          </ul>
+          <p>Both lead to the same safeguard: human review for judgement, and machine-verifiable tests as the signal that work is finished.</p>
+        </section>
+
+        <section id="context-and-loops">
+          <h2>Key concept: engineer the context and the loop</h2>
+          <p>Prompt engineering is about how you phrase an instruction. The training recommends role framing, describing the behaviour you want rather than what to avoid, asking for step-by-step reasoning and stating explicit completion criteria. Context engineering is about what information is in the window at each step. As the window fills, recall degrades silently, which the training calls context rot. The design rule is to pre-load only what is always needed and retrieve everything else just in time (<a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a>). <a href="concept.html#context-engineering">Read about context engineering</a>.</p>
+          <h3>Choose how the agent gets information</h3>
+          <div class="table-scroll"><table class="wide-table"><caption>Three ways to supply knowledge, as the training describes them</caption><thead><tr><th scope="col">Mechanism</th><th scope="col">How it works</th><th scope="col">Best for</th></tr></thead><tbody>
+            <tr><th scope="row">Retrieval-augmented generation (RAG)</th><td>Documents are split into chunks, indexed and searched on each request; the most relevant chunks are added to the context</td><td>Stable reference knowledge, such as framework guides</td></tr>
+            <tr><th scope="row">Open Knowledge Format (OKF)</th><td>Knowledge is organised as small, typed concept files with index catalogues, so the agent retrieves a specific rule rather than a noisy block of text</td><td>Team standards that agents load selectively</td></tr>
+            <tr><th scope="row">Model Context Protocol (MCP)</th><td>An open protocol that connects the agent to tools and systems so it can query their current state</td><td>Live data, such as the issue tracker, a database or a running application</td></tr>
+          </tbody></table></div>
+          <h3>Give every loop a way to stop</h3>
+          <p>An agent works in a reason, act and observe cycle, often called the ReAct pattern. Observing real results is what lets it correct itself. Each loop also needs a convergence condition: an objective signal that the work is done.</p>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 280" role="img" aria-labelledby="fig-react-title">
+                <title id="fig-react-title">The agent loop. The agent reasons about what to do, acts by calling a tool or writing code, and observes the result. A convergence check asks whether a machine-verifiable condition is met, such as all tests passing and no must-fix findings. If it is met, the loop exits. If not, the agent reasons again.</title>
+                <rect class="d-node" x="1" y="40" width="190" height="64" rx="8"/><text class="d-title" x="96" y="66" text-anchor="middle">Reason</text><text class="d-sub" x="96" y="90" text-anchor="middle">Decide the next step</text>
+                <path class="d-line" d="M191 72H241" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="245" y="40" width="190" height="64" rx="8"/><text class="d-title" x="340" y="66" text-anchor="middle">Act</text><text class="d-sub" x="340" y="90" text-anchor="middle">Tool, code or command</text>
+                <path class="d-line" d="M435 72H485" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="489" y="40" width="190" height="64" rx="8"/><text class="d-title" x="584" y="66" text-anchor="middle">Observe</text><text class="d-sub" x="584" y="90" text-anchor="middle">Read the result</text>
+                <path class="d-line" d="M584 104V166" marker-end="url(#arrow)"/>
+                <rect class="d-node d-node-accent" x="489" y="170" width="190" height="64" rx="8"/><text class="d-title" x="584" y="196" text-anchor="middle">Convergence check</text><text class="d-sub" x="584" y="220" text-anchor="middle">Machine-verifiable</text>
+                <path class="d-line d-line-accent" d="M489 202H439" marker-end="url(#arrow-accent)"/>
+                <text class="d-label d-label-accent" x="464" y="192" text-anchor="middle">met</text>
+                <rect class="d-node" x="245" y="170" width="190" height="64" rx="8"/><text class="d-title" x="340" y="196" text-anchor="middle">Exit</text><text class="d-sub" x="340" y="220" text-anchor="middle">Tests pass, no must-fix</text>
+                <path class="d-line d-dash" d="M584 234V262H96V108" marker-end="url(#arrow)"/>
+                <text class="d-label" x="108" y="254">not met: reason again</text>
+              </svg>
+            </div>
+            <figcaption>Figure 2. An agent loop needs an objective convergence check, highlighted, or it has no reason to stop.</figcaption>
+          </figure>
+          <p>The top row runs left to right: reason, act, observe. The convergence check, highlighted in blue, then asks whether a machine-verifiable condition holds, such as all tests passing with no must-fix findings. If it does, the loop exits; if not, the agent reasons again. Without the check, the loop can run indefinitely, and each pass adds observations to the context until quality drops. <a href="concept.html#loop-engineering">Read about loop engineering</a>.</p>
+          <h3>Plan before you build</h3>
+          <p>Finish research, questions and planning before writing code. Interleaving them causes three failures: research uses up context needed for coding, the agent describes what it would do instead of doing it, and ambiguities surface mid-implementation. The training describes this separation as Questions, Research, Structure, Plan, Implement (QRSPI).</p>
+          <h3>Package procedures as skills</h3>
+          <p>A skill is a reusable capability in a <code>SKILL.md</code> file, with instructions, scripts and resources, invoked as a slash command. Only each skill’s name and one-line description load at start-up; the full instructions load when the skill is used. This progressive disclosure is how Eitri adds skills without filling every session’s context.</p>
+        </section>
+
+        <section id="development-principles">
+          <h2>Key concept: principles that make agent work verifiable</h2>
+          <p>Agents guess rather than pause when something is ambiguous. The training’s development principles each remove a place where guessing would go unnoticed.</p>
+          <div class="table-scroll"><table class="wide-table"><caption>Development principles and why agents need them</caption><thead><tr><th scope="col">Principle</th><th scope="col">What it means</th><th scope="col">Why it matters with agents</th></tr></thead><tbody>
+            <tr><th scope="row">Human-in-the-loop design</th><td>People review at defined checkpoints for judgement; the system corrects itself only where the result is machine-verifiable</td><td>Scope changes and compliance sign-off cannot be verified automatically. A gate that can be bypassed, even by accident, is not a gate.</td></tr>
+            <tr><th scope="row">Specification first</th><td>A complete specification exists before implementation, and wins when code and specification disagree</td><td>The agent implements intent instead of inventing it mid-loop, which prevents intent drift</td></tr>
+            <tr><th scope="row">Test-driven development (TDD)</th><td>Write a failing test, make it pass with minimal code, then refactor</td><td>Passing tests are the objective signal that the loop has converged</td></tr>
+            <tr><th scope="row">Architecture decision records (ADRs)</th><td>Short records of context, decision and consequences, kept in version control</td><td>A later session can see that a choice was deliberate instead of silently reversing it (<a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Nygard, Documenting architecture decisions</a>)</td></tr>
+            <tr><th scope="row">Tracer bullets</th><td>Thin vertical slices that cut through data, logic, interface and tests</td><td>A horizontal slice cannot be tested end to end, so the agent cannot verify its own output</td></tr>
+            <tr><th scope="row">Living documentation</th><td>Documented standards are kept in step with reality</td><td>Agents treat repository documentation as instructions and follow stale rules faithfully</td></tr>
+          </tbody></table></div>
+          <p><a href="concept.html#spec-driven-development">Read about spec-driven development</a>.</p>
+        </section>
+
+        <section id="multi-agent">
+          <h2>Key concept: multi-agent patterns</h2>
+          <p>Several Eitri skills split work across agents. Four patterns explain how they do it without losing accuracy (<a href="https://www.anthropic.com/research/building-effective-agents">Anthropic, Building effective agents</a>):</p>
+          <ul>
+            <li><strong>Orchestrator and workers:</strong> the orchestrator sequences work and routes blockers but does not read files or make implementation decisions, which would fill its context and weaken coordination.</li>
+            <li><strong>Subagents with isolated context:</strong> each subagent starts with a clean context, a restricted tool set and one bounded task, so work on one ticket cannot pollute another.</li>
+            <li><strong>Independent review:</strong> a reviewing agent receives only the final output and the original specification. If it inherits the implementer’s conversation, it tends to judge the reasoning rather than whether the code meets the specification.</li>
+            <li><strong>Parallel, specialised work:</strong> independent tasks, such as several compliance checks, can run at the same time, and simpler tasks can go to cheaper models.</li>
+          </ul>
+        </section>
+
+        <section id="po-workflow">
+          <h2>Lesson 0: from user stories to a delivery plan</h2>
+          <p>Lesson 0 follows the product owner (PO). The PO supplies requirements, reviews plans and accepts the result; the Tech Lead runs the agent skills; developers implement. The whole plan is derived from the user stories, so their quality sets the quality of everything that follows.</p>
+          <h3>Write stories the plan can use</h3>
+          <ul>
+            <li><strong>Testable:</strong> every acceptance criterion can be checked by an automated test or a person walking through the behaviour.</li>
+            <li><strong>Vertically sliced:</strong> each story cuts through data, logic and interface and can be demonstrated on its own.</li>
+            <li><strong>Fine-grained:</strong> one story describes one user capability. If two halves can be tested separately, split the story.</li>
+          </ul>
+          <aside class="example" aria-label="Example of a good and a problematic user story, from the training">
+            <p class="example-label">Example · from the training</p>
+            <p>Good: “As a nurse, I can register a new patient with their name and date of birth so that the patient has a record before clinical assessment begins”, with criteria for a valid submission, a duplicate record and missing fields. Problematic: “As a developer, I want to build the patient database schema.” It is an implementation task, not a user capability, and cannot be demonstrated.</p>
+          </aside>
+          <h3>Follow the PO journey</h3>
+          <ol class="practice-steps">
+            <li><strong>Elicit stories</strong> with stakeholders, and sharpen them with <code>/grill-with-docs</code> or <code>/wayfinder</code>.</li>
+            <li><strong>Generate the delivery report.</strong> The Tech Lead runs <code>/dependency-orchestrator</code> while the PO answers its questions. The skill maps each story backwards from its end state to the tasks it needs, finds the critical path and simulates delivery for different team sizes.</li>
+            <li><strong>Agree team size and date</strong> with stakeholders, using the report’s duration estimates, maximum useful team size and risk concentration.</li>
+            <li><strong>Create issues.</strong> The Tech Lead runs <code>/stories-to-issues</code>, which creates one issue per story in schedule order, with the acceptance criteria copied word for word.</li>
+            <li><strong>Implement in waves.</strong> Stories in a wave have no blocking dependencies on each other. The PO protects the critical path and defers new requirements to a later cycle.</li>
+            <li><strong>Reconcile progress.</strong> The Tech Lead runs <code>/reconcile-stories</code> to mark closed issues done and recalculate the projected finish.</li>
+            <li><strong>Accept each story.</strong> End-to-end (E2E) tests check that the layers work together; the PO then walks through each story’s acceptance criteria in the running application.</li>
+          </ol>
+          <p>During acceptance, separate defects from new requirements. If an agreed criterion is not met, it is a defect to fix before the story closes. If every criterion is met but you want something different, it is a new story for the next cycle.</p>
+          <p>The training notes that the delivery report assumes full availability and excludes leave, holidays, review turnaround and release overhead. Treat its dates as a planning baseline, not a commitment.</p>
+        </section>
+
+        <section id="workflow-skills">
+          <h2>Lesson 1: what the workflow adds</h2>
+          <p>The baseline workflow runs in five phases: architecture, specification, decomposition, implementation and closeout. Lesson 1 shows where Eitri adds a check to close a gap that appears in government enterprise work, and where people sign off.</p>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 250" role="img" aria-labelledby="fig-phases-title">
+                <title id="fig-phases-title">The five-phase workflow with two human sign-offs. Architecture sequences the stories. Specification produces the TRD and checks its compliance. HITL gate 1 signs off the TRD. Decomposition produces verified tickets. HITL gate 2 signs off the tickets. Implementation runs the self-correcting do-work loop. Closeout adds feature boundary tests and E2E evidence. The story is accepted and the loop moves to the next story.</title>
+                <rect class="d-node" x="1" y="40" width="150" height="64" rx="8"/><text class="d-title" x="76" y="66" text-anchor="middle">Architecture</text><text class="d-sub" x="76" y="90" text-anchor="middle">Sequence stories</text>
+                <path class="d-line" d="M151 72H173" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="177" y="40" width="150" height="64" rx="8"/><text class="d-title" x="252" y="66" text-anchor="middle">Specification</text><text class="d-sub" x="252" y="90" text-anchor="middle">TRD, compliance</text>
+                <path class="d-line" d="M327 72H349" marker-end="url(#arrow)"/>
+                <rect class="d-node d-node-accent" x="353" y="40" width="150" height="64" rx="8"/><text class="d-title" x="428" y="66" text-anchor="middle">HITL 1</text><text class="d-sub" x="428" y="90" text-anchor="middle">TRD sign-off</text>
+                <path class="d-line" d="M503 72H525" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="529" y="40" width="150" height="64" rx="8"/><text class="d-title" x="604" y="66" text-anchor="middle">Decomposition</text><text class="d-sub" x="604" y="90" text-anchor="middle">Verified tickets</text>
+                <path class="d-line" d="M604 104V166" marker-end="url(#arrow)"/>
+                <rect class="d-node d-node-accent" x="529" y="170" width="150" height="64" rx="8"/><text class="d-title" x="604" y="196" text-anchor="middle">HITL 2</text><text class="d-sub" x="604" y="220" text-anchor="middle">Ticket sign-off</text>
+                <path class="d-line" d="M529 202H507" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="353" y="170" width="150" height="64" rx="8"/><text class="d-title" x="428" y="196" text-anchor="middle">Implementation</text><text class="d-sub" x="428" y="220" text-anchor="middle">/do-work loop</text>
+                <path class="d-line" d="M353 202H331" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="177" y="170" width="150" height="64" rx="8"/><text class="d-title" x="252" y="196" text-anchor="middle">Closeout</text><text class="d-sub" x="252" y="220" text-anchor="middle">Boundaries, E2E</text>
+                <path class="d-line" d="M177 202H155" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="1" y="170" width="150" height="64" rx="8"/><text class="d-title" x="76" y="196" text-anchor="middle">Accept</text><text class="d-sub" x="76" y="220" text-anchor="middle">Then next story</text>
+              </svg>
+            </div>
+            <figcaption>Figure 3. The five phases, with the two human sign-offs highlighted.</figcaption>
+          </figure>
+          <p>Read the top row from left to right and the bottom row from right to left. Architecture sequences the stories; specification produces the technical requirements document (TRD) and audits it. Human-in-the-loop gate 1 (HITL 1), highlighted, signs off the TRD. Decomposition produces checked tickets, and HITL 2 signs them off as ready. Implementation runs the self-correcting loop, closeout adds boundary tests and acceptance evidence, and the accepted story makes way for the next.</p>
+          <div class="table-scroll"><table class="wide-table"><caption>Gaps in the baseline workflow and the Eitri skill that closes each, as the training describes them</caption><thead><tr><th scope="col">Gap</th><th scope="col">Skill</th><th scope="col">Phase</th><th scope="col">What it adds</th></tr></thead><tbody>
+            <tr><th scope="row">No build sequencing</th><td><code>/dependency-orchestrator</code></td><td>Architecture</td><td>A delivery report with estimates and critical path, and a developer wave plan</td></tr>
+            <tr><th scope="row">Architectural drift</th><td><code>/arch-tests-plan</code>, <code>/arch-tests-gen</code></td><td>Architecture</td><td>Architecture rules turned into tests that fail the build when a boundary is crossed</td></tr>
+            <tr><th scope="row">Missing compliance checks</th><td><code>/spec-compliance</code></td><td>Specification</td><td>An audit of the TRD against IM8 security controls and ARC agentic AI controls before sign-off</td></tr>
+            <tr><th scope="row">Vague tickets</th><td><code>/issue-verification</code></td><td>Decomposition</td><td>Checks that every ticket is vertical, demonstrable and precisely specified</td></tr>
+            <tr><th scope="row">Single-pass implementation</th><td><code>/do-work</code></td><td>Implementation</td><td>A loop of implement, review, validate and mutation testing that repeats until every gate passes</td></tr>
+            <tr><th scope="row">Placeholder boundaries</th><td><code>/arch-tests-gen-feature</code></td><td>Closeout</td><td>Boundary tests filled in with the real packages of the feature just built</td></tr>
+            <tr><th scope="row">No proof for the user</th><td><code>/e2e</code></td><td>Closeout</td><td>Browser tests per acceptance criterion, with video and trace evidence</td></tr>
+          </tbody></table></div>
+          <h3>Details worth remembering</h3>
+          <ul>
+            <li><strong>Compliance verdicts:</strong> <code>/spec-compliance</code> gives each control one of five verdicts: PASS, FAIL, AUTO-FIX (vague wording tightened in place), DEFERRED (applies, but cannot be verified from the TRD alone) or N/A. Deferred is not a failure; it records that another layer owns the control. Catching a flaw here costs one document edit rather than a rework sprint.</li>
+            <li><strong>Ticket review to a fixpoint:</strong> <code>/issue-verification</code> reviews tickets in dependency order using <code>/fry-me</code>, a one-question-at-a-time challenge. Each ticket is either GRILLED or NEEDS RESLICE. Reshaping one resets the tickets that depend on it, and the batch is published only when every ticket passes together.</li>
+            <li><strong>Implementation exit condition:</strong> <code>/do-work</code> stops only when must-fix findings reach zero and the compile, test, coverage and compliance gates pass. It loops failures back to implementation and asks a person for help if it fails to fix the same issue twice. Mutation testing runs on changed files, to keep each pass fast.</li>
+            <li><strong>Honest acceptance evidence:</strong> <code>/e2e</code> uses fresh subagents to discover the real interface, write the tests and run them, and reports each criterion as PASS, FAIL or SKIPPED with a reason.</li>
+            <li><strong>Challenge before each gate:</strong> run <code>/grill-me</code> after any skill that produces an artefact, to surface hidden assumptions before HITL 1 or HITL 2.</li>
+          </ul>
+        </section>
+
+        <section id="team-context">
+          <h2>Lesson 2: inject your team’s context</h2>
+          <p>Without your team’s context, the skills fall back on generic training data. Stories miss your domain vocabulary, plans ignore your architecture, specifications bypass your policies, code uses outdated APIs and reviews miss local conventions. Lesson 2 maps each kind of context to the phase and skill that reads it.</p>
+          <div class="table-scroll"><table class="wide-table"><caption>The five-phase context injection model, as the training describes it</caption><thead><tr><th scope="col">Phase</th><th scope="col">What to inject</th><th scope="col">Where it lives</th><th scope="col">Cost of skipping it</th></tr></thead><tbody>
+            <tr><th scope="row">1. Business domain and requirements</th><td>Domain vocabulary, personas, systems, data model and scope</td><td><code>CONTEXT.md</code> or a Spec Kit <code>constitution.md</code></td><td>The agent designs the wrong features in generic language</td></tr>
+            <tr><th scope="row">2. Architecture standards</th><td>Shared standards, integration recipes and ADR templates</td><td>The AppStandards library and any team standards in OKF, registered with the orchestrator</td><td>Architectural flaws spread into every ticket</td></tr>
+            <tr><th scope="row">3. Security and governance</th><td>IM8 and ARC (built in) plus any agency policies</td><td>Markdown checklists in the policies skill, registered in its <code>SKILL.md</code></td><td>Policy gaps survive into code and need a rework sprint</td></tr>
+            <tr><th scope="row">4. Coding practices</th><td>Framework versions, design system and internal SDK documentation</td><td>A knowledge base, retrieved through a router that maps code signals to documents</td><td>Code is written against outdated APIs and fails to build</td></tr>
+            <tr><th scope="row">5. Code review standards</th><td>Naming, architecture and security conventions, and the checks to run</td><td><code>CODING_STANDARDS.md</code> at the repository root, and the code reviewer’s check list</td><td>Convention violations pass review unnoticed</td></tr>
+          </tbody></table></div>
+          <p>One rule covers every phase: context has to be ready before the skill that reads it runs. A policy written after the compliance audit is not audited. Treat the table as a preparation checklist, not a list of fixes.</p>
+          <h3>Start with a CONTEXT.md file</h3>
+          <p>For the first phase, the training suggests five parts:</p>
+          <ul>
+            <li><strong>Glossary:</strong> exact terms, with a “not” column for generic words to avoid, such as “Attendance, not visit”.</li>
+            <li><strong>Systems:</strong> external integrations, showing where your application’s responsibility ends.</li>
+            <li><strong>Data model:</strong> key entities and how they relate.</li>
+            <li><strong>Personas:</strong> the real users and their goals.</li>
+            <li><strong>Scope:</strong> what is in and out of the release, so the agent does not invent out-of-scope workflows.</li>
+          </ul>
+        </section>
+
+        <section id="study-plan">
+          <h2>Work through the course</h2>
+          <p>The training is hands-on. Use a small feature or bug fix in a repository you can change freely, so you feel the full loop without delivery pressure.</p>
+          <ol class="practice-steps">
+            <li><strong>Complete the prerequisites.</strong> Watch the baseline workflow videos and run each baseline skill on your practice repository. You are done when you can explain what each skill produces and what the next one consumes.</li>
+            <li><strong>Study the four foundation topics.</strong> Answer the self-check questions without looking back before moving on.</li>
+            <li><strong>Plan a small delivery (Lesson 0).</strong> Write three to five fine-grained stories with acceptance criteria, and generate the delivery report with a Tech Lead.</li>
+            <li><strong>Run each skill (Lesson 1).</strong> Take one story through all five phases, including both sign-offs, and keep the artefacts each step produces.</li>
+            <li><strong>Add your team’s context (Lesson 2).</strong> Write a <code>CONTEXT.md</code> and a <code>CODING_STANDARDS.md</code>, then rerun one story and compare the output.</li>
+          </ol>
+          <details class="self-check">
+            <summary>Check your understanding</summary>
+            <ol class="practice-steps">
+              <li>Why can placing reference material early in the context not prevent hallucination?</li>
+              <li>Why is “it looks right” an unreliable sign that an agent has finished?</li>
+              <li>Why should a reviewing agent see only the output and the specification?</li>
+              <li>Why must a ticket cut through every layer it touches?</li>
+              <li>A stakeholder asks for a new story during a wave. What should the product owner do?</li>
+              <li>When does a finding during acceptance count as a defect rather than a new requirement?</li>
+              <li>Why does a compliance policy need to be registered before <code>/spec-compliance</code> runs?</li>
+            </ol>
+            <p>Answers to these and more are in each lesson’s “Food for thought” sections and knowledge checks.</p>
+          </details>
+          <p class="next-step"><strong>Next step:</strong> <a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">open the Eitri self-paced training</a> and start with the prerequisites. Then <a href="product-implementation.html#eds-workflow">read the EDS workflow summary</a> to see the same skills in the governed sequence.</p>
+        </section>
+
+        <section id="sources">
+          <h2>Sources</h2>
+          <p>Source review: 28 September 2026. This page summarises the training; its course structure, skills, verdicts, gates and context model are reported as the training states them, not as DSTA policy. The study plan and check questions are editorial suggestions for this guide.</p>
+          <ul>
+            <li><a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">SGTechStack, Eitri Agentic Dev Workflow self-paced training</a> — course structure, foundations, PO workflow, skills and context injection.</li>
+            <li><a href="https://github.com/mattpocock/skills">Matt Pocock, skills</a> — the baseline agentic engineering skills.</li>
+            <li><a href="https://arxiv.org/abs/2307.03172">Liu et al., Lost in the Middle: How Language Models Use Long Contexts</a> — recall of information by position in the context.</li>
+            <li><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a> — pre-loading and just-in-time retrieval.</li>
+            <li><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic, Building effective agents</a> — orchestrator and worker patterns.</li>
+            <li><a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Michael Nygard, Documenting architecture decisions</a> — architecture decision records.</li>
+          </ul>
+        </section>
+        <footer class="article-footer"><span>AI-Product Development Lifecycle</span><span>EDS · DSTA</span></footer>
+      </article>
+    </main>
+    <aside class="page-contents">
+      <nav aria-label="On this page">
+        <p>On this page</p>
+        <a href="#about-training">About the training</a>
+        <a href="#course-map">Course map</a>
+        <a href="#how-models-behave">How models behave</a>
+        <a href="#context-and-loops">Context and loops</a>
+        <a href="#development-principles">Development principles</a>
+        <a href="#multi-agent">Multi-agent patterns</a>
+        <a href="#po-workflow">Lesson 0: PO workflow</a>
+        <a href="#workflow-skills">Lesson 1: workflow skills</a>
+        <a href="#team-context">Lesson 2: team context</a>
+        <a href="#study-plan">Study plan</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </aside>
+  </div>
+</body>
+</html>
