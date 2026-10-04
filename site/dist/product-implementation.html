@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Turn agreed product intent into tested software through planning, small changes, independent verification, controlled release and learning. Includes AI evaluation and the EDS workflow.">
+  <meta name="description" content="The strategy for turning agreed product intent into tested software: readiness, six stages, independent assurance, autonomy and measures, run with the EDS AI Workflow.">
   <title>Product implementation · AI-PDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
@@ -26,25 +26,26 @@
           <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-PDLC</a>
           <a href="product-ideation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
           <a href="product-implementation.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow</a>
           <a href="training.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
     </aside>
     <main id="main" tabindex="-1">
-      <article class="concept-article">
-        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><span aria-current="page">Product implementation</span></nav>
+      <article class="concept-article label-first-column">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="ai-pdlc.html">AI-PDLC</a><span aria-hidden="true">/</span><span aria-current="page">Product implementation</span></nav>
         <header class="article-header">
           <h1>Product implementation</h1>
-          <p class="lead">Product implementation turns agreed product intent into software that can be tested, released and operated. Start with the product requirements document (PRD), relevant user interface (UI) artefacts and known constraints. Build a small change, verify it against the acceptance criteria, observe its behaviour and use the evidence to choose the next change.</p>
-          <p>It is written for product owners, architects, engineers and reviewers working in the same squad. The stages, gates and practices below are a working model for this guide, and the examples are fictional. Confirm stage names and decision authority against the agreed lifecycle before relying on them.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-28">28 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+          <p class="lead">Product implementation turns agreed product intent into software that can be tested, released and operated. This page sets out the strategy: what implementation needs before it starts, how work moves through six stages, how quality is assured, how much autonomy to allow and how to measure the result.</p>
+          <p>It is written for product owners, architects, engineers and reviewers. It is based on the <cite>AI-PDLC Playbook, Chapter 3: Product Implementation</cite>, and the source reference at the end of each section names the playbook section it draws on. The final section explains how to run the strategy with the <a href="eds-ai-workflow.html">EDS AI Workflow</a>. The stages and gates are a working model and the examples are fictional; confirm stage names and decision authority against the agreed lifecycle before relying on them.</p>
+          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-29">29 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page">
-            <a href="#two-loops">Where it starts</a>
             <a href="#implementation-loop">Implementation loop</a>
             <a href="#implementable-definition">PRD and UI artefacts</a>
             <a href="#executable-work">Executable work</a>
@@ -53,8 +54,7 @@
             <a href="#factory-platform">Factory platform</a>
             <a href="#autonomy">Autonomy</a>
             <a href="#measure-loop">Measure the loop</a>
-            <a href="#in-practice">In practice</a>
-            <a href="#eds-workflow">EDS workflow</a>
+            <a href="#eds-workflow">Use the EDS AI Workflow</a>
             <a href="#sources">Sources</a>
           </nav>
         </details>
@@ -65,41 +65,11 @@
           </defs>
         </svg>
 
-        <section id="two-loops">
-          <h2>Where implementation starts</h2>
-          <p>Product implementation is the second of two separate loops. Product ideation tests whether the proposed product addresses a worthwhile problem. Product implementation checks whether the software behaves as intended in the conditions it will encounter. Neither loop removes all uncertainty.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 250" role="img" aria-labelledby="fig-loops-title">
-                <title id="fig-loops-title">Two separate loops joined by a handoff. The product ideation loop learns and decides until it has made the right product. After a commitment decision, it hands off a PRD and UI artefacts. The product implementation loop verifies, releases and learns to make the product right, and releases the product into use. Learning from use returns to ideation and updates the product intent. Product implementation is highlighted as the subject of this page.</title>
-                <path class="d-line" d="M160 60V36H40V56" marker-end="url(#arrow)"/>
-                <text class="d-label" x="100" y="26" text-anchor="middle">learn, then decide</text>
-                <rect class="d-node" x="1" y="60" width="210" height="72" rx="8"/><text class="d-title" x="106" y="91" text-anchor="middle">Product ideation</text><text class="d-sub" x="106" y="115" text-anchor="middle">Make the right product</text>
-                <path class="d-line" d="M211 96H251" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="255" y="60" width="170" height="72" rx="8"/><text class="d-title" x="340" y="91" text-anchor="middle">Handoff</text><text class="d-sub" x="340" y="115" text-anchor="middle">PRD and UI artefacts</text>
-                <text class="d-label" x="340" y="154" text-anchor="middle">after a commitment decision</text>
-                <path class="d-line" d="M425 96H465" marker-end="url(#arrow)"/>
-                <path class="d-line" d="M640 60V36H520V56" marker-end="url(#arrow)"/>
-                <text class="d-label" x="580" y="26" text-anchor="middle">verify, release, learn</text>
-                <rect class="d-node d-node-accent" x="469" y="60" width="210" height="72" rx="8"/><text class="d-title" x="574" y="91" text-anchor="middle">Product implementation</text><text class="d-sub" x="574" y="115" text-anchor="middle">Make the product right</text>
-                <path class="d-line" d="M574 132V172" marker-end="url(#arrow)"/>
-                <text class="d-label" x="586" y="157">release</text>
-                <rect class="d-node" x="469" y="176" width="210" height="64" rx="8"/><text class="d-title" x="574" y="202" text-anchor="middle">Product in use</text><text class="d-sub" x="574" y="226" text-anchor="middle">Feedback and telemetry</text>
-                <path class="d-line d-dash" d="M469 208H106V136" marker-end="url(#arrow)"/>
-                <text class="d-label" x="290" y="198" text-anchor="middle">Learning from use updates the product intent</text>
-              </svg>
-            </div>
-            <figcaption>Figure 1. Product ideation and product implementation are separate loops. The PRD and UI artefacts are the handoff between them.</figcaption>
-          </figure>
-          <p>Read the diagram from left to right. Ideation ends with a commitment decision and hands off a PRD and UI artefacts. The implementation loop, highlighted in blue, builds from that handoff, releases the product and keeps refining it. Learning from use returns to ideation when it changes the product intent rather than only its delivery.</p>
-          <p>Enter implementation when the next change has agreed behaviour and testable acceptance criteria. For a bounded defect or maintenance change, a reviewed issue may be enough. Return to <a href="product-ideation.html#handover">ideation and its handoff checks</a> when delivery evidence challenges user value or intended behaviour; resolve technical unknowns through focused investigation.</p>
-        </section>
-
         <section id="implementation-loop">
           <h2>How the implementation loop works</h2>
-          <p>Implementation is not a one-way handoff from requirements to code. It is a governed loop: it converts intent into production behaviour, observes what happens, and uses that evidence to choose the next change. Each increment is both a product change and a test of how the team delivers.</p>
+          <p>Implementation is not a one-way handoff from requirements to code. It is a governed loop: it converts intent into production behaviour, observes what happens, and uses that evidence to choose the next change. Each increment is both a product change and a test of how the team delivers. For how this loop connects to ideation, <a href="ai-pdlc.html#two-loops">read the AI-PDLC overview</a>.</p>
           <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 250" role="img" aria-labelledby="fig-impl-loop-title">
                 <title id="fig-impl-loop-title">The product implementation loop. A readiness package of PRD, UI artefacts and organisational context feeds Plan, which writes the TRD. Slice breaks it into verifiable tasks. Implement produces the change and its evidence. Verify reviews it independently; findings send it back to Implement for rework. Release and observe limits the blast radius and collects evidence. Learn improves the product and the factory, and the next refinement returns to Plan.</title>
                 <rect class="d-node" x="1" y="40" width="140" height="64" rx="8"/><text class="d-title" x="71" y="66" text-anchor="middle">Readiness</text><text class="d-sub" x="71" y="90" text-anchor="middle">PRD, UI, context</text>
@@ -121,7 +91,7 @@
                 <text class="d-label" x="244" y="144" text-anchor="end">next refinement</text>
               </svg>
             </div>
-            <figcaption>Figure 2. The implementation loop has six stages. Verification is independent of the work it checks, and each pass feeds the next refinement.</figcaption>
+            <figcaption>Figure 1. The implementation loop has six stages. Verification is independent of the work it checks, and each pass feeds the next refinement.</figcaption>
           </figure>
           <p>Read the top row from left to right and the bottom row from right to left. The readiness package feeds Plan, which produces the technical requirements document (TRD). Slice breaks the TRD into small tasks, and Implement produces each change with its evidence. Verify, highlighted in blue, is done by someone or something other than the implementer; findings send the change back for rework. Release and observe moves it into real conditions, and Learn chooses the next refinement. Evidence can return work to any earlier stage, not only the one before.</p>
           <h3>Improve two things at once</h3>
@@ -131,7 +101,7 @@
             <li><strong>The software factory:</strong> the context, task breakdown, agent instructions, tools, tests, reviews, release controls, monitoring and recovery that produce the product.</li>
           </ul>
           <p>The same failure often needs both responses. A local fix restores the current increment; a change to the delivery process aims to prevent recurrence and is checked on later increments. <a href="concept.html#software-factory">Read about software factories</a>.</p>
-          <h3>Record the evidence and next decision</h3>
+          <h3>Make each transition governable</h3>
           <ul>
             <li><strong>Defined inputs and outputs</strong> make each transition inspectable and reusable.</li>
             <li><strong>Evidence requirements</strong> separate demonstrated behaviour from assertion.</li>
@@ -139,6 +109,7 @@
             <li><strong>Traceability</strong> links product intent to decisions, tasks, tests, releases and outcomes.</li>
             <li><strong>Feedback paths</strong> let evidence revise the PRD, TRD, context, tasks, tests, tools or policies.</li>
           </ul>
+          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 1.</p>
         </section>
 
         <section id="implementable-definition">
@@ -162,11 +133,12 @@
           <p>Architecture standards, domain rules, policies, security controls, operating constraints and business priorities define what a valid implementation is. Without them, an agent can produce work that is correct locally but incompatible with the wider system.</p>
           <p>Before planning, an accountable owner should confirm that the package is coherent enough to plan from. Material unknowns should be either resolved or carried as bounded assumptions, each with an owner and a review date.</p>
           <p class="next-step"><strong>Next step:</strong> walk one critical journey through your UI artefacts, including its error and permission states. Check that each state has a matching acceptance criterion in the PRD.</p>
+          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 2.</p>
         </section>
 
         <section id="executable-work">
           <h2>Translate intent into executable work</h2>
-          <p>Specification-driven development makes expected behaviour and design decisions explicit before implementation. <a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit</a> describes a specification, planning and task workflow; this guide uses PRD and TRD as its local document names. The PRD defines required outcomes, the TRD records how the system will deliver them, and tasks turn those commitments into small units that can be verified. <a href="concept.html#spec-driven-development">Read about spec-driven development</a>.</p>
+          <p>Specification-driven development makes expected behaviour and design decisions explicit before implementation. GitHub Spec Kit describes a specification, planning and task workflow; this guide uses PRD and TRD as its local document names. The PRD defines required outcomes, the TRD records how the system will deliver them, and tasks turn those commitments into small units that can be verified. <a href="concept.html#spec-driven-development">Read about spec-driven development</a>.</p>
           <div class="table-scroll"><table class="wide-table"><caption>From product intent to executable work</caption><thead><tr><th scope="col">Layer</th><th scope="col">Question it answers</th><th scope="col">Main contents</th><th scope="col">Quality test</th></tr></thead><tbody>
             <tr><th scope="row">PRD</th><td>What outcome and behaviour are required?</td><td>Problem, users, scope, stories, acceptance criteria, non-functional requirements, dependencies, exclusions</td><td>Does the team agree what success means?</td></tr>
             <tr><th scope="row">TRD</th><td>How will the system deliver that behaviour?</td><td>Architecture, interfaces, data, identity, security, operations, rollout, monitoring, trade-offs</td><td>Are key decisions explicit, feasible and reviewable?</td></tr>
@@ -175,18 +147,11 @@
           <h3>Use the TRD as a decision record</h3>
           <p>A strong TRD explains the affected components, integration boundaries, data flows, API or event contracts, storage, identity and authorisation, failure handling, monitoring, performance, migration, rollout, rollback and unresolved risks. Each major decision traces to the PRD requirement it serves. Recording non-goals, alternatives considered and rejected trade-offs stops later tasks from silently redesigning the system.</p>
           <h3>Write tasks as units of verification</h3>
-          <p>A task is ready when it describes a bounded change in behaviour and makes completion independently decidable. Each task should carry:</p>
-          <ul>
-            <li>links to the PRD acceptance criteria and TRD decisions it implements;</li>
-            <li>a precise change boundary, such as the affected component, interface or user journey;</li>
-            <li>dependencies, sequencing constraints and the approved execution environment;</li>
-            <li>the unit, integration, end-to-end and non-functional checks its risk requires;</li>
-            <li>the expected evidence, such as test results, screenshots, evaluations or performance measurements; and</li>
-            <li>its independent review route and the person who accepts it.</li>
-          </ul>
+          <p>A task is ready when it describes a bounded change in behaviour and makes completion independently decidable. It links to the PRD acceptance criteria and TRD decisions it implements. It also names its change boundary, dependencies and execution environment, the checks its risk requires, the evidence expected and its independent review route. The EDS AI Workflow turns this into an <a href="eds-ai-workflow.html#planning">execution-ready checklist and feature contract</a>.</p>
           <h3>Give each agent enough context, and no more</h3>
-          <p>Relevant context helps an agent work within the intended scope, but does not guarantee correct output. Manage context like a product: versioned, attributable, scoped to a domain or repository, discoverable and checked for freshness. Give an agent enough to make the current decision, then disclose deeper guidance only when the task, risk or uncertainty justifies it. Log what context and tools were used, so reviewers can reconstruct what informed an outcome. <a href="concept.html#context-engineering">Read about context engineering</a>.</p>
+          <p>Relevant context helps an agent work within the intended scope, but does not guarantee correct output. Manage context like a product: versioned, attributable, scoped to a domain or repository, discoverable and checked for freshness. Give an agent enough to make the current decision, and disclose deeper guidance only when the task, risk or uncertainty justifies it. Log the context and tools used, so reviewers can reconstruct what informed an outcome. <a href="eds-ai-workflow.html#context">See which context the EDS AI Workflow loads at each stage</a>, or <a href="concept.html#context-engineering">read about context engineering</a>.</p>
           <p class="next-step"><strong>Next step:</strong> pick one task in your backlog. Check that it links to an acceptance criterion and a TRD decision, and that someone other than its implementer could decide whether it is done.</p>
+          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 3; <a href="#source-3" aria-label="Source 3: GitHub Spec Kit, Specification-Driven Development">[3]</a>.</p>
         </section>
 
         <section id="six-stages">
@@ -201,7 +166,11 @@
             <tr><th scope="row">6. Learn</th><td>Turn outcomes into controlled changes to the product and the factory</td><td>Decision log, revised PRD or TRD, new tasks, updated context and skills, preventive controls</td><td>An accountable owner chooses the next refinement and provides an updated definition</td></tr>
           </tbody></table></div>
           <p>In Learn, compare what happened with the PRD’s outcomes and the TRD’s assumptions, and separate product causes from factory causes. If the evidence shows the product intent was wrong, not just its delivery, return it to <a href="product-ideation.html#ideation-loop">the ideation loop</a>.</p>
+          <h3>Plan rollout and recovery before release</h3>
+          <p>Release and observe limits how many people a faulty change can affect. A canary release exposes a change to a limited portion of traffic first; Google’s SRE Workbook explains how comparing it with the existing version can reveal failures that pre-release tests miss. It limits exposure; it does not guarantee a safe release.</p>
+          <p>Before release, record the initial audience, observation period, stop thresholds and who can halt the rollout, and rehearse recovery. Check whether recovery must also restore data or reverse external actions: rolling back code may not undo a migration, a sent message or an automated decision. For an AI capability, record the model, prompt and retrieval configuration with the release.</p>
           <p class="next-step"><strong>Next step:</strong> for the change your team is working on now, name its current stage and write down the exit decision it needs next, including who makes it.</p>
+          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 4; <a href="#source-4" aria-label="Source 4: Google SRE Workbook, Canarying Releases">[4]</a>.</p>
         </section>
 
         <section id="gates-and-assurance">
@@ -211,7 +180,7 @@
           <h3>Separate correction from assurance</h3>
           <p>Use two complementary checks. In the inner loop, sensors and scanners give the implementer fast feedback on their own work. In the outer loop, independent reviewers decide whether the work is acceptable. Self-review provides useful feedback, but does not replace the agreed acceptance decision.</p>
           <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 270" role="img" aria-labelledby="fig-assure-title">
                 <title id="fig-assure-title">Inner correction and outer assurance. In the inner loop, the implementation agent or developer runs sensors and scanners and fixes their findings. The implementer then passes evidence to specialist reviewers. A review orchestrator consolidates their findings; blocking findings go back to the implementer for rework. An accountable person accepts the quality report and authorises a defined release scope.</title>
                 <path class="d-line d-dash" d="M584 56V32H86V52" marker-end="url(#arrow)"/>
@@ -233,7 +202,7 @@
                 <rect class="d-node" x="245" y="196" width="190" height="64" rx="8"/><text class="d-title" x="340" y="222" text-anchor="middle">Release scope</text><text class="d-sub" x="340" y="246" text-anchor="middle">Authorised increment</text>
               </svg>
             </div>
-            <figcaption>Figure 3. The implementer corrects its own work in the inner loop. Independent reviewers and an accountable person decide whether it is acceptable.</figcaption>
+            <figcaption>Figure 2. The implementer corrects its own work in the inner loop. Independent reviewers and an accountable person decide whether it is acceptable.</figcaption>
           </figure>
           <p>On the left, the implementer runs sensors and scanners and fixes what they find. Sensors include compilers, type checks, linters, static analysis, secret detection, dependency scanning, policy checks, contract tests, accessibility checks, model evaluations and performance smoke tests. The implementer then passes its evidence to specialist reviewers, chosen by the change’s risk, such as security, privacy, performance, architecture, UI fidelity, accessibility and test quality. A review orchestrator consolidates their findings and sends blocking ones back for rework. The accountable person, highlighted in blue, accepts the quality report and authorises the release scope.</p>
           <div class="table-scroll"><table class="wide-table"><caption>Separation of duties; confirm roles and authority locally</caption><thead><tr><th scope="col">Role</th><th scope="col">Can</th><th scope="col">Should not do alone</th></tr></thead><tbody>
@@ -243,22 +212,22 @@
             <tr><th scope="row">Accountable person</th><td>Weigh trade-offs, accept the quality report and approve exceptions and remaining risk</td><td>Delegate accountability without a policy and an audit trail</td></tr>
           </tbody></table></div>
           <h3>Make verification independent in practice</h3>
-          <p>A second agent can repeat the first agent’s assumptions. Have a reviewer check acceptance criteria against the original user need, reproduce results, and inspect changes to tests as well as code. Keep release permissions outside the implementer’s control. Independence depends on evidence and permissions, not the number of agents.</p>
+          <p>A second agent can repeat the first agent’s assumptions. Independence depends on evidence and permissions, not the number of agents: reviewers check acceptance criteria against the original user need, reproduce results and inspect changes to tests as well as code, and release permissions stay outside the implementer’s control.</p>
           <h3>Build testing into implementation</h3>
           <p>Unit tests give fast feedback on local behaviour, integration tests check contracts with dependencies, and end-to-end tests protect critical user journeys. Choose the mix by the change’s risk and architecture; no single layer is enough.</p>
           <ul>
-            <li>Use test-driven development to define the expected behaviour before implementing it.</li>
-            <li>Use characterisation tests to capture existing behaviour in legacy or high-risk areas before changing it.</li>
-            <li>Use mutation testing, where it is worthwhile, to check whether the tests would catch meaningful faults. Line coverage alone is weak assurance.</li>
-            <li>Treat failing tests as diagnostic evidence, and flaky tests as defects with an owner and a plan to remove them.</li>
-            <li>Make test data, dependencies, models, prompts and environment settings reproducible enough for an independent reviewer.</li>
+            <li>Define expected behaviour before implementing it, using test-driven development.</li>
+            <li>Capture existing behaviour with characterisation tests before changing legacy or high-risk areas.</li>
+            <li>Use mutation testing, where worthwhile, to check whether tests would catch meaningful faults; line coverage alone is weak assurance.</li>
+            <li>Treat flaky tests as defects with an owner, and make test data, dependencies, models, prompts and environments reproducible.</li>
           </ul>
+          <p>The EDS AI Workflow sets <a href="eds-ai-workflow.html#implementation">default gates and thresholds</a> for these checks, and names the <a href="eds-ai-workflow.html#verification">independent judge and closeout steps</a>.</p>
           <h3>Evaluate AI behaviour across repeated trials</h3>
-          <p>This applies when evaluating a development agent or a product that contains AI. <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Anthropic’s agent evaluation guidance</a> distinguishes a task, repeated trials, grading and the actual outcome. It recommends combining executable checks, model-based assessment and human judgement where each fits.</p>
-          <p>Record the dataset, model, instructions, tools and environment used. Repeat representative tasks because outputs can vary. Check final state and side effects, not only the agent’s response. Calibrate model-based graders against human judgements, and keep regression cases for failures already fixed.</p>
-          <p>For the service desk assistant, include unsupported questions, restricted information and escalation cases. Report failures by case type, alongside completion, latency and cost; an overall pass rate can hide a serious failure. Agree the acceptance rule before running the evaluation.</p>
+          <p>This applies when evaluating a development agent or a product that contains AI. Anthropic’s agent evaluation guidance distinguishes a task, repeated trials, grading and the actual outcome, and combines executable checks, model-based assessment and human judgement where each fits.</p>
+          <p>Record the dataset, model, instructions, tools and environment. Repeat representative tasks because outputs vary, and check final state and side effects, not only the response. Calibrate model-based graders against human judgement and keep regression cases for fixed failures. Agree the acceptance rule before running the evaluation, and report failures by case type; for the service desk assistant, an overall pass rate could hide failures on restricted-information cases.</p>
           <p>A minimum quality report brings together the linked PRD acceptance criteria, test and evaluation results, scanner and policy findings, open exceptions or remaining risk, and the accountable person’s decision for the defined release scope.</p>
           <p class="next-step"><strong>Next step:</strong> look at the last change your team merged. Identify who, other than its author, decided it was acceptable, and where that decision is recorded.</p>
+          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 5; <a href="#source-5" aria-label="Source 5: Anthropic, Demystifying evals for AI agents">[5]</a>.</p>
         </section>
 
         <section id="factory-platform">
@@ -281,6 +250,7 @@
             <li><strong>Readable evidence:</strong> produce quality reports that accountable people can understand and challenge.</li>
             <li><strong>Replaceable parts:</strong> put context, skills, models, scanners and tool providers behind stable contracts.</li>
           </ul>
+          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 6.</p>
         </section>
 
         <section id="autonomy">
@@ -297,6 +267,7 @@
             <p class="example-label">Note</p>
             <p>Running without people is not the same as maturity. A dark factory without independent assurance, containment, monitoring and proven recovery is an unattended risk. <a href="concept.html#software-factory">Read about light and dark software factories</a>.</p>
           </aside>
+          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 7.</p>
         </section>
 
         <section id="measure-loop">
@@ -312,7 +283,7 @@
           </tbody></table></div>
           <p>Lines of code, prompts issued and tasks attempted are weak measures of productivity. Measure the flow of accepted product behaviour instead: how quickly well-defined intent becomes a safe increment, how often it is rejected or fails, whether users benefit and whether the factory improves after learning. Split measures by risk, product area, type of change and factory mode.</p>
           <h3>Use consistent delivery measures</h3>
-          <p><a href="https://dora.dev/guides/dora-metrics/">DORA’s current delivery guidance</a> uses five measures: change lead time, deployment frequency, failed deployment recovery time, change fail rate and deployment rework rate. Lead time runs from commit to production; recovery time concerns a failed deployment requiring intervention. Rework rate tracks unplanned deployments caused by production incidents.</p>
+          <p>DORA’s current delivery guidance uses five measures: change lead time, deployment frequency, failed deployment recovery time, change fail rate and deployment rework rate. Lead time runs from commit to production; recovery time concerns a failed deployment requiring intervention. Rework rate tracks unplanned deployments caused by production incidents.</p>
           <p>Follow one application or service over time using consistent definitions. Pair delivery measures with user outcomes and operating cost. Do not rank individuals by these measures or attribute a change to AI without checking other changes in scope, staffing and process.</p>
           <h3>Agree the response before the signal arrives</h3>
           <p>The following are suggested responses to investigate and adapt locally:</p>
@@ -324,28 +295,26 @@
             <li>Worsening product outcomes with stable system health lead to refining the PRD or experience, not infrastructure work.</li>
             <li>Recovery outside tolerance leads to stronger containment before deployment frequency increases.</li>
           </ul>
+          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 8; <a href="#source-6" aria-label="Source 6: DORA, Software delivery performance metrics">[6]</a>.</p>
         </section>
 
-        <section id="in-practice">
-          <h2>Put the loop into practice</h2>
-          <p>The loop becomes real when its controls are part of daily work. The sequence below is a suggested starting point; automate it step by step while keeping decision authority visible.</p>
-          <ol class="practice-steps">
-            <li><strong>Classify the change.</strong> Record its product area, risk, factory mode, required evidence, reviewers and decision authority.</li>
-            <li><strong>Confirm readiness.</strong> Check the PRD, UI artefacts and organisational context, and record bounded assumptions with owners.</li>
-            <li><strong>Approve the TRD.</strong> Trace decisions to requirements and complete the architecture, security, policy, data and operations reviews that apply.</li>
-            <li><strong>Slice the work vertically.</strong> Create small tasks with test obligations, expected evidence, dependencies and independent review routes.</li>
-            <li><strong>Implement test-first.</strong> Run sensors and scanners continuously, keep provenance, and keep the specification in step with the change.</li>
-            <li><strong>Run independent assurance.</strong> Carry out specialist reviews and the full test strategy; do not let the creator validate its own work.</li>
-            <li><strong>Accept the quality report.</strong> An accountable person accepts the remaining risk and authorises the release scope.</li>
-            <li><strong>Release progressively.</strong> Limit the blast radius, check health, keep a way to contain or roll back, and collect evidence.</li>
-            <li><strong>Close the learning loop.</strong> Update the product intent and factory controls, then check whether the change improved outcomes or prevented recurrence.</li>
-          </ol>
-          <h3>Define rollout and recovery before release</h3>
-          <p>A canary release exposes a change to a limited portion of traffic before wider deployment. <a href="https://sre.google/workbook/canarying-releases/">Google’s SRE Workbook</a> explains how comparing a canary with the existing version can reveal failures that pre-release tests miss. It limits exposure; it does not guarantee a safe release.</p>
-          <p>Record the initial audience, observation period, health and user-outcome measures, stop thresholds, and the person or automation that can halt rollout. Rehearse recovery before expanding exposure. Where traffic is too low for a useful comparison, use a bounded pilot and direct observation.</p>
-          <p>Check whether recovery also needs to restore data or reverse external actions. Rolling back application code may not undo a migration, a sent message or an automated decision. For an AI capability, record the model, prompt and retrieval configuration with the release so the team can restore the intended combination.</p>
+        <section id="eds-workflow">
+          <h2>Put the strategy into practice with the EDS AI Workflow</h2>
+          <p>The playbook describes a minimum operating pattern: classify the change, confirm readiness, approve the TRD, slice the work, implement test-first, run independent assurance, accept the quality report, release progressively and close the learning loop. Use the EDS AI Workflow to run this pattern. It supplies the roles, skills, human gates, default thresholds and evidence that this strategy leaves open. The mapping below is this guide’s interpretation; neither document states it.</p>
+          <div class="table-scroll"><table class="wide-table"><caption>How the EDS AI Workflow implements the strategy on this page</caption><thead><tr><th scope="col">Strategy, with playbook section</th><th scope="col">How the EDS AI Workflow implements it</th></tr></thead><tbody>
+            <tr><th scope="row">Readiness package (2)</th><td>The PO or BA hands over the PRD; one-time setup connects the tracker, standards and architecture tests. <a href="eds-ai-workflow.html#setup">Prepare the team</a>.</td></tr>
+            <tr><th scope="row">Plan (4.1)</th><td><code>/wayfinder</code>, <code>/to-spec</code> and <code>/grill-me</code> produce a challenged TRD; <code>/spec-compliance</code> and human gate HITL 1 approve it. <a href="eds-ai-workflow.html#planning">Plan the work</a>.</td></tr>
+            <tr><th scope="row">Slice (4.2)</th><td><code>/to-tickets</code> and <code>/issue-verification</code> create tracer-bullet issues; HITL 2 marks them ready to build.</td></tr>
+            <tr><th scope="row">Implement, with inner correction (4.3, 5.2)</th><td><code>/do-work</code> runs the convergence loop under a sprint contract and configured gates. <a href="eds-ai-workflow.html#implementation">Run the loop</a>.</td></tr>
+            <tr><th scope="row">Verify, with outer assurance (4.4, 5)</th><td>An independent judge assesses three layers of evidence; closeout ends with human lead review. <a href="eds-ai-workflow.html#verification">Prove completion</a>.</td></tr>
+            <tr><th scope="row">Release and observe (4.5)</th><td>A production sign-off checklist and the Tech Lead’s recorded release decision. The handbook stops at release readiness, so plan rollout and recovery as described above. <a href="eds-ai-workflow.html#release">Check readiness</a>.</td></tr>
+            <tr><th scope="row">Learn (4.6)</th><td>Harness diagnosis turns execution failures into factory corrections. Product learning follows the Learn stage above. <a href="eds-ai-workflow.html#harness">Diagnose failures</a>.</td></tr>
+            <tr><th scope="row">Context (3.3)</th><td>Standards in indexed files, with different sources loaded at each stage. <a href="eds-ai-workflow.html#context">Manage context</a>.</td></tr>
+            <tr><th scope="row">Autonomy (7)</th><td>Three execution modes: local interactive, local autonomous, and cloud or CI autonomous. <a href="eds-ai-workflow.html#implementation">Choose a mode</a>.</td></tr>
+            <tr><th scope="row">Measures (8)</th><td>Harness health measures, such as verified completion rate, complement the delivery and product measures above. <a href="eds-ai-workflow.html#workflow-health">Measure workflow health</a>.</td></tr>
+          </tbody></table></div>
           <h3>Check pilot readiness</h3>
-          <p>A team is ready to pilot the loop when:</p>
+          <p>The playbook lists what a team needs before piloting the operating model. A team is ready when:</p>
           <ul>
             <li>the PRD contains testable user stories, acceptance criteria, non-functional requirements and exclusions;</li>
             <li>the <code>design.md</code> file and HTML screens cover core journeys and their loading, empty, error, permission, accessibility and responsive states;</li>
@@ -354,279 +323,21 @@
             <li>build agents run in constrained environments and cannot silently bypass repository, review or pipeline protections; and</li>
             <li>end-to-end tests are derived from user stories and keep reproducible evidence for critical journeys.</li>
           </ul>
-          <p class="next-step"><strong>Next step:</strong> go through the pilot readiness list with your squad and note each item you cannot yet confirm. <a href="#eds-workflow">Read how the EDS workflow runs the loop</a>.</p>
-        </section>
-
-        <section id="eds-workflow">
-          <h2>Run the loop with the EDS workflow</h2>
-          <p>The <cite>EDS AI Development Workflow: Simplified Operating Handbook</cite> describes how EDS turns a validated PRD into released software: a governed workflow in which each stage produces a recorded artefact, and people approve the decisions that carry risk. This section summarises that handbook for developers and reviewers.</p>
-          <p>In this page’s terms, the handbook’s planning sequence covers Plan and Slice, its convergence loop covers Implement, and its independent verification and closeout cover Verify. Its release-readiness checks prepare the release decision. This mapping is an editorial reading, not the handbook’s own structure.</p>
-          <p>The skills, gates and default thresholds below are as stated in the handbook. Some skills are marked there as planned rather than available. Check the current handbook version and your team’s configuration before relying on a specific gate or command.</p>
-
-          <h3>Seven operating principles</h3>
-          <p>The handbook summarises the workflow in seven principles:</p>
-          <ol class="practice-steps">
-            <li><strong>Provide context before important decisions.</strong> Make business goals, architecture, policy and coding constraints available early.</li>
-            <li><strong>Load only what is relevant.</strong> Reveal standards progressively instead of placing the whole knowledge base in every prompt.</li>
-            <li><strong>Use AI as the first reviewer.</strong> Challenge generated plans, specifications and tickets before accepting them.</li>
-            <li><strong>Secure the design before coding.</strong> Treat architecture and compliance as early checks, not late clean-up.</li>
-            <li><strong>Slice work vertically.</strong> Each task delivers a demonstrable outcome across the layers it needs, rather than a separate batch of schema, API or interface work.</li>
-            <li><strong>Build self-correction into implementation.</strong> Implement, review, validate and correct repeatedly until the work converges.</li>
-            <li><strong>Keep people accountable for intent and risk.</strong> Automation can do the work; people approve compliance, execution readiness and release.</li>
-          </ol>
-
-          <h3>Follow the workflow from PRD to release</h3>
-          <p>The workflow moves from business intent to a compliance-approved technical contract, then to execution-ready slices of work, implementation, independent verification and a human release decision.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 4, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 290" role="img" aria-labelledby="fig-eds-title">
-                <title id="fig-eds-title">The EDS workflow. A validated PRD from the product owner or business analyst becomes a challenged technical design, the TRD. Human gate 1 approves compliance; findings send the TRD back for revision. The work is sliced into vertical issues. Human gate 2 approves execution readiness; questions send issues back for rework. The convergence loop builds one slice at a time. Independent verification checks it; a failed check returns the slice to the loop. The Tech Lead makes the release decision and the product is released to users.</title>
-                <path class="d-line d-dash" d="M428 44V22H252V40" marker-end="url(#arrow)"/>
-                <text class="d-label" x="340" y="16" text-anchor="middle">findings: revise the TRD</text>
-                <rect class="d-node" x="1" y="44" width="150" height="64" rx="8"/><text class="d-title" x="76" y="70" text-anchor="middle">Validated PRD</text><text class="d-sub" x="76" y="94" text-anchor="middle">PO / BA</text>
-                <path class="d-line" d="M151 76H173" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="177" y="44" width="150" height="64" rx="8"/><text class="d-title" x="252" y="70" text-anchor="middle">Technical design</text><text class="d-sub" x="252" y="94" text-anchor="middle">TRD, challenged</text>
-                <path class="d-line" d="M327 76H349" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="353" y="44" width="150" height="64" rx="8"/><text class="d-title" x="428" y="70" text-anchor="middle">HITL 1</text><text class="d-sub" x="428" y="94" text-anchor="middle">Compliance sign-off</text>
-                <path class="d-line" d="M503 76H525" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="529" y="44" width="150" height="64" rx="8"/><text class="d-title" x="604" y="70" text-anchor="middle">Slice the work</text><text class="d-sub" x="604" y="94" text-anchor="middle">Vertical issues</text>
-                <path class="d-line" d="M564 108V160" marker-end="url(#arrow)"/>
-                <path class="d-line d-dash" d="M644 164V112" marker-end="url(#arrow)"/>
-                <text class="d-label" x="604" y="141" text-anchor="middle">rework</text>
-                <rect class="d-node d-node-accent" x="529" y="164" width="150" height="64" rx="8"/><text class="d-title" x="604" y="190" text-anchor="middle">HITL 2</text><text class="d-sub" x="604" y="214" text-anchor="middle">Execution readiness</text>
-                <path class="d-line" d="M529 196H507" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="353" y="164" width="150" height="64" rx="8"/><text class="d-title" x="428" y="190" text-anchor="middle">Convergence loop</text><text class="d-sub" x="428" y="214" text-anchor="middle">Build one slice</text>
-                <path class="d-line" d="M353 196H331" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="177" y="164" width="150" height="64" rx="8"/><text class="d-title" x="252" y="190" text-anchor="middle">Verify</text><text class="d-sub" x="252" y="214" text-anchor="middle">Independent judge</text>
-                <path class="d-line" d="M177 196H155" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="1" y="164" width="150" height="64" rx="8"/><text class="d-title" x="76" y="190" text-anchor="middle">Release decision</text><text class="d-sub" x="76" y="214" text-anchor="middle">Tech Lead</text>
-                <path class="d-line d-dash" d="M252 228V252H428V232" marker-end="url(#arrow)"/>
-                <text class="d-label" x="340" y="272" text-anchor="middle">a check fails: correct</text>
-                <path class="d-line" d="M76 228V254" marker-end="url(#arrow)"/>
-                <text class="d-label" x="76" y="274" text-anchor="middle">release to users</text>
-              </svg>
-            </div>
-            <figcaption>Figure 4. The EDS workflow from a validated PRD to a release decision. The three human decisions are highlighted; dashed arrows show rework.</figcaption>
-          </figure>
-          <p>Read the top row from left to right and the bottom row from right to left. The product owner (PO) or business analyst (BA) hands over the PRD. The architect or Tech Lead turns it into a technical requirements document (TRD) and has it challenged. Human-in-the-loop gate 1 (HITL 1) approves its compliance; unresolved findings send the TRD back for revision. The work is then sliced into vertical issues, and HITL 2 approves them as ready to build or returns them for rework. A developer or agent builds one slice at a time in the convergence loop. Independent verification either passes the slice or returns it for correction, and the Tech Lead decides whether to release.</p>
-          <aside class="callout" aria-label="Note on the two human gates">
-            <p class="example-label">Note</p>
-            <p>The handbook treats HITL 1 and HITL 2 as decisions that cannot be delegated to an agent. HITL 1 approves compliance before the TRD is broken into issues. HITL 2 approves issue quality and execution readiness before implementation begins.</p>
-          </aside>
-          <p>The handbook labels each step and skill with a status:</p>
-          <div class="table-scroll"><table><caption>Status labels used in the EDS handbook and in the tables below</caption><thead><tr><th scope="col">Label</th><th scope="col">Meaning</th></tr></thead><tbody>
-            <tr><th scope="row">Core</th><td>Expected in the normal sequence.</td></tr>
-            <tr><th scope="row">Recommended</th><td>Optional, but skipping it reduces confidence or quality.</td></tr>
-            <tr><th scope="row">Optional</th><td>Can be skipped when the cost and risk are understood.</td></tr>
-            <tr><th scope="row">Planned</th><td>Described but not yet implemented. Do not use it as a live gate until it has been verified.</td></tr>
-            <tr><th scope="row">HITL</th><td>A person approves before the workflow advances.</td></tr>
-          </tbody></table></div>
-
-          <h3>Know who owns each contract</h3>
-          <p>The PRD and the TRD are different agreements with different owners. The PRD states what the product needs to do and why. The TRD adds how it fits the architecture, the codebase and the applicable policies. The handbook treats the visual reference as optional, whereas this guide’s handoff includes UI artefacts; confirm locally which applies.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>PRD and TRD compared, as described in the EDS handbook</caption><thead><tr><th scope="col">Artefact</th><th scope="col">Accountable role</th><th scope="col">Contains</th><th scope="col">Complete when</th></tr></thead><tbody>
-            <tr><th scope="row">PRD</th><td>PO / BA</td><td>Business intent, user stories, acceptance criteria, scope and an optional visual reference</td><td>Committed and handed to the development team</td></tr>
-            <tr><th scope="row">TRD</th><td>Architect / Tech Lead</td><td>Technical constraints, architecture decision records (ADRs), codebase context, domain-model alignment and implementation implications</td><td>Compliance-approved and ready to break into issues</td></tr>
-          </tbody></table></div>
-          <div class="table-scroll"><table class="wide-table"><caption>Role boundaries and handoffs in the EDS handbook</caption><thead><tr><th scope="col">Role</th><th scope="col">Starts with</th><th scope="col">Owns</th><th scope="col">Hands off</th></tr></thead><tbody>
-            <tr><th scope="row">PO / BA</th><td>A business problem or opportunity</td><td>Discovery, requirements, acceptance criteria and visual reference</td><td>PRD and specification files, with an optional prototype</td></tr>
-            <tr><th scope="row">Architect / Tech Lead</th><td>The PO / BA handoff</td><td>Dependencies, TRD, ADRs, policies, architecture tests and vertical decomposition</td><td>Approved, execution-ready issues</td></tr>
-            <tr><th scope="row">Developer</th><td>The highest-priority ready issue</td><td>The implementation loop, tests, review evidence and closeout</td><td>A merge-ready merge request (MR) with acceptance evidence</td></tr>
-            <tr><th scope="row">Tech Lead / reviewers</th><td>The MR and release candidate</td><td>Specification and standards review, risk acceptance and production sign-off</td><td>An approved merge or release decision</td></tr>
-          </tbody></table></div>
-          <p>Architects and Tech Leads hand over an approved queue, not only a decomposed backlog. Each issue has been challenged, checked against policy, sliced vertically and labelled ready for execution.</p>
-
-          <h3>Plan and break down the work</h3>
-          <p>Planning turns the PRD into a challenged, compliance-checked design and then into small issues. The handbook calls each issue a tracer bullet: a thin vertical slice that reaches an observable outcome through every technical layer it needs.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Planning and detailing sequence in the EDS handbook</caption><thead><tr><th scope="col">Step</th><th scope="col">Skill or action</th><th scope="col">What it produces</th></tr></thead><tbody>
-            <tr><th scope="row">Optional</th><td><code>/backwards-mapping</code></td><td>A map from value to entry points, boundaries and vertical slices; use it when uncertainty is high.</td></tr>
-            <tr><th scope="row">1</th><td><code>/setup-matt-pocock-skills</code></td><td>Tracker, triage labels and domain layout, configured once per repository.</td></tr>
-            <tr><th scope="row">2</th><td><code>/dependency-orchestrator</code></td><td>A story dependency graph, delivery schedule, PM Report and Dev Delivery Plan.</td></tr>
-            <tr><th scope="row">3 · Planned</th><td>Context7 MCP</td><td>Current, version-specific library documentation when a specific API claim arises.</td></tr>
-            <tr><th scope="row">4</th><td><code>/arch-tests-plan</code>, then <code>/arch-tests-gen</code></td><td>Architecture rules turned into executable boundary tests.</td></tr>
-            <tr><th scope="row">5</th><td><code>/wayfinder</code> with the relevant standards</td><td>Resolved domain, codebase, dependency and design constraints.</td></tr>
-            <tr><th scope="row">6</th><td><code>/to-spec</code>, then <code>/grill-me</code></td><td>A published TRD whose assumptions and gaps have been challenged.</td></tr>
-            <tr><th scope="row">7</th><td><code>/spec-compliance</code></td><td>Evidence of the TRD’s compliance with IM8, ARC and other registered policies.</td></tr>
-            <tr><th scope="row">HITL 1</th><td>Human compliance sign-off</td><td>Findings resolved and the TRD approved; required before ticket decomposition.</td></tr>
-            <tr><th scope="row">8</th><td><code>/to-tickets</code>, then <code>/grill-me</code></td><td>Dependency-ordered tracer-bullet issues.</td></tr>
-            <tr><th scope="row">9</th><td><code>/issue-verification</code> and <code>/fry-me</code></td><td>Issues checked for verticality, demonstrability, size and specification quality.</td></tr>
-            <tr><th scope="row">HITL 2</th><td>Human execution-readiness sign-off</td><td>Questions resolved and issues marked ready; the queue can enter implementation.</td></tr>
-          </tbody></table></div>
-          <p>In the handbook’s glossary, IM8 refers to application technical security controls and ARC to agentic AI governance controls, both from the supplied policy set. Model Context Protocol (MCP) is a way of connecting an agent to external tools and knowledge.</p>
-          <p>An issue is execution-ready when:</p>
-          <ul>
-            <li>it delivers an observable increment of user or system value;</li>
-            <li>it covers the technical layers it needs, instead of splitting schema, API or interface work into unrelated batches;</li>
-            <li>its dependencies and blocking relationships are explicit;</li>
-            <li>its acceptance criteria are specific enough for automated or browser verification;</li>
-            <li>it is small enough for a manageable implementation loop, without hidden follow-up work; and</li>
-            <li>the applicable standards and policy implications are linked to it.</li>
-          </ul>
-          <p>Two practices support this planning. Standards are stored as small, indexed concept files, so each story loads only the few standards it needs. Architecture rules become build-time tests, such as ArchUnit or dependency-cruiser rules, so generated code that breaks a layer or dependency rule fails the build instead of drifting silently.</p>
-
-          <h3>Run the convergence loop</h3>
-          <p>A developer, or an agent working for one, builds each ready issue with the <code>/do-work</code> skill. The handbook describes three ways to run it:</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Execution modes in the EDS handbook</caption><thead><tr><th scope="col">Mode</th><th scope="col">Who operates it</th><th scope="col">How it works</th><th scope="col">Best fit</th></tr></thead><tbody>
-            <tr><th scope="row">1. Local interactive</th><td>Developer</td><td>The developer pair-programs with <code>/do-work</code> and owns branches and decisions.</td><td>Complex or ambiguous work that needs frequent judgement</td></tr>
-            <tr><th scope="row">2. Local autonomous</th><td>Local agent</td><td>An isolated sandbox checks out, implements and commits locally.</td><td>Well-specified slices with controlled local autonomy</td></tr>
-            <tr><th scope="row">3. Cloud or CI autonomous</th><td>Managed runner</td><td>A pipeline picks a ready issue, runs <code>/do-work</code>, pushes code, opens an MR and triggers review.</td><td>Repeatable, unattended execution at scale</td></tr>
-          </tbody></table></div>
-          <p>Before the first code change, <code>/do-work</code> agrees a sprint contract for the session. The contract records the feature and its intended behaviour; the files or modules in scope and those out of scope; dependencies and governing standards; validation commands and the runtime evidence required; and time or token limits, escalation triggers and stop criteria.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 5, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 380" role="img" aria-labelledby="fig-converge-title">
-                <title id="fig-converge-title">The convergence loop. A sprint contract sets the scope. Implement the smallest slice, then review the code and its mutation results. Validate against all gates. If a gate fails or must-fix findings remain, correct the root cause and re-enter implementation. When must-fix findings reach zero and all gates pass, the slice converges and is ready to commit.</title>
-                <rect class="d-node" x="1" y="40" width="150" height="64" rx="8"/><text class="d-title" x="76" y="66" text-anchor="middle">Sprint contract</text><text class="d-sub" x="76" y="90" text-anchor="middle">Scope and stops</text>
-                <path class="d-line" d="M151 72H197" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="201" y="40" width="140" height="64" rx="8"/><text class="d-title" x="271" y="66" text-anchor="middle">Implement</text><text class="d-sub" x="271" y="90" text-anchor="middle">Smallest slice</text>
-                <path class="d-line" d="M341 72H517" marker-end="url(#arrow)"/>
-                <text class="d-label" x="431" y="62" text-anchor="middle">code and tests</text>
-                <rect class="d-node" x="521" y="40" width="140" height="64" rx="8"/><text class="d-title" x="591" y="66" text-anchor="middle">Review</text><text class="d-sub" x="591" y="90" text-anchor="middle">Code, mutation</text>
-                <path class="d-line" d="M591 104V176" marker-end="url(#arrow)"/>
-                <text class="d-label" x="583" y="145" text-anchor="end">findings</text>
-                <rect class="d-node" x="521" y="180" width="140" height="64" rx="8"/><text class="d-title" x="591" y="206" text-anchor="middle">Validate</text><text class="d-sub" x="591" y="230" text-anchor="middle">All gates</text>
-                <path class="d-line d-dash" d="M521 212H345" marker-end="url(#arrow)"/>
-                <text class="d-label" x="431" y="202" text-anchor="middle">a gate fails</text>
-                <text class="d-label" x="431" y="234" text-anchor="middle">or Must-fix &gt; 0</text>
-                <rect class="d-node" x="201" y="180" width="140" height="64" rx="8"/><text class="d-title" x="271" y="206" text-anchor="middle">Correct</text><text class="d-sub" x="271" y="230" text-anchor="middle">Root cause</text>
-                <path class="d-line d-dash" d="M271 180V108" marker-end="url(#arrow)"/>
-                <text class="d-label" x="263" y="148" text-anchor="end">re-enter</text>
-                <path class="d-line d-line-accent" d="M591 244V296" marker-end="url(#arrow-accent)"/>
-                <text class="d-label d-label-accent" x="583" y="274" text-anchor="end">Must-fix = 0, gates pass</text>
-                <rect class="d-node d-node-accent" x="521" y="300" width="140" height="64" rx="8"/><text class="d-title" x="591" y="326" text-anchor="middle">Converge</text><text class="d-sub" x="591" y="350" text-anchor="middle">Commit-ready</text>
-              </svg>
-            </div>
-            <figcaption>Figure 5. The convergence loop repeats implement, review, validate and correct. It stops only when the exit condition, highlighted, is met.</figcaption>
-          </figure>
-          <p>The sprint contract feeds the loop. Implement the smallest end-to-end slice using test-driven development (TDD) and the applicable standards. Review with <code>/code-reviewer</code> and, where configured, mutation testing: deliberately introduce faults to check whether the tests detect them.</p>
-          <p>Run the configured gates. If a gate fails or a blocking finding remains, diagnose the cause and correct the change. A passing exit condition completes the loop. Reaching the session’s time or token limit, encountering a blocker, or needing additional authority instead stops work for escalation; none of these means the slice has passed.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Gates inside the loop, with the handbook’s default thresholds; teams can set their own</caption><thead><tr><th scope="col">Gate</th><th scope="col">Checks</th><th scope="col">Default rule</th></tr></thead><tbody>
-            <tr><th scope="row">Build and test</th><td>Formatting, type checking or compilation, unit and integration tests, production build, coverage</td><td>Tests and build pass; coverage at least 80% unless team policy differs</td></tr>
-            <tr><th scope="row">Quality and compliance</th><td>Semgrep, IM8, maintainability, framework and standards checks as applicable</td><td>Critical or High findings block the commit; must-fix findings reach zero</td></tr>
-            <tr><th scope="row">Mutation</th><td>Mutation testing on changed files</td><td>Kill rate at least 70%, tuned to the team’s risk</td></tr>
-            <tr><th scope="row">Architecture</th><td>Project and feature boundary tests</td><td>No prohibited dependency or layer violations</td></tr>
-          </tbody></table></div>
-          <p>Verify functional behaviour first, then resilience and performance, and only then style or refactoring. Do not widen the scope of the change while its core behaviour is still failing.</p>
-
-          <h3>Prove completion independently</h3>
-          <p>An agent that reports “done” has not shown that the work is done. The handbook requires a deterministic command, an independent reviewer or a separate evaluator to decide whether the stop condition is met; the developer agent is never the only judge.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 6, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-proof-title">
-                <title id="fig-proof-title">Three layers of exit evidence feed an independent judge. Syntax and structure: the change compiles, type-checks, lints and respects boundaries. Behaviour: the feature works, including negative and edge cases. System: the full journey works in a representative environment. The judge is a command or a reviewer. If the stop condition is met, the slice is closed out through a merge request and review. If not, it returns to the convergence loop.</title>
-                <rect class="d-node" x="1" y="20" width="440" height="64" rx="8"/><text class="d-title" x="17" y="46">Syntax and structure</text><text class="d-sub" x="17" y="70">Compiles, type-checks, lints, respects boundaries</text>
-                <rect class="d-node" x="1" y="96" width="440" height="64" rx="8"/><text class="d-title" x="17" y="122">Behaviour</text><text class="d-sub" x="17" y="146">Feature works, including negative and edge cases</text>
-                <rect class="d-node" x="1" y="172" width="440" height="64" rx="8"/><text class="d-title" x="17" y="198">System</text><text class="d-sub" x="17" y="222">Full journey works in a representative environment</text>
-                <path class="d-line" d="M441 52L496 114" marker-end="url(#arrow)"/>
-                <path class="d-line" d="M441 128H496" marker-end="url(#arrow)"/>
-                <path class="d-line" d="M441 204L496 142" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="500" y="96" width="179" height="64" rx="8"/><text class="d-title" x="589" y="122" text-anchor="middle">Independent judge</text><text class="d-sub" x="589" y="146" text-anchor="middle">Command or reviewer</text>
-                <path class="d-line d-line-accent" d="M640 160V252" marker-end="url(#arrow-accent)"/>
-                <text class="d-label d-label-accent" x="648" y="212">met</text>
-                <rect class="d-node" x="560" y="256" width="119" height="64" rx="8"/><text class="d-title" x="619" y="282" text-anchor="middle">Close out</text><text class="d-sub" x="619" y="306" text-anchor="middle">MR and review</text>
-                <path class="d-line d-dash" d="M530 160V288H452" marker-end="url(#arrow)"/>
-                <text class="d-label" x="444" y="293" text-anchor="end">not met: return to the loop</text>
-              </svg>
-            </div>
-            <figcaption>Figure 6. Evidence from three layers goes to an independent judge, not to the agent that did the work.</figcaption>
-          </figure>
-          <p>The three layers answer different questions. Syntax and structure uses build, static analysis and boundary-test output. Behaviour uses unit, integration and feature verification tests, including negative and boundary cases. System uses browser or API end-to-end (E2E) tests, health checks, logs, traces and screenshots. The independent judge, highlighted in blue, decides: the slice either moves to closeout or returns to the loop.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Closeout sequence in the EDS handbook</caption><thead><tr><th scope="col">Action</th><th scope="col">Status</th><th scope="col">Purpose</th></tr></thead><tbody>
-            <tr><th scope="row"><code>/improve-codebase-architecture</code></th><td>Recommended</td><td>Find shallow modules and deepen them where worthwhile.</td></tr>
-            <tr><th scope="row"><code>/arch-tests-gen-feature</code></th><td>Core</td><td>Create boundary tests for the slice’s real packages or folders.</td></tr>
-            <tr><th scope="row">Push, open MR, <code>/code-review</code></th><td>Core</td><td>Review the change against both standards and the specification.</td></tr>
-            <tr><th scope="row"><code>/diagnosing-bugs</code></th><td>Recommended</td><td>Diagnose failures or regressions from evidence.</td></tr>
-            <tr><th scope="row"><code>/browser-test</code></th><td>Recommended</td><td>Run live acceptance scenarios and keep screenshot evidence.</td></tr>
-            <tr><th scope="row"><code>/flaky-test-detector</code></th><td>Planned</td><td>Repeat E2E scenarios three to five times and block inconsistent results.</td></tr>
-            <tr><th scope="row"><code>/git-commit-skill</code></th><td>Recommended</td><td>Group remaining changes into logical Conventional Commits.</td></tr>
-            <tr><th scope="row"><code>/gen-uat-scripts</code></th><td>Planned</td><td>Generate user acceptance testing (UAT) scripts from PRD acceptance criteria.</td></tr>
-            <tr><th scope="row">Human lead review</th><td>HITL</td><td>Approve and merge to the release branch.</td></tr>
-          </tbody></table></div>
-          <p>Under the handbook’s closeout criteria, the slice satisfies its approved issue without unrelated changes. Applicable gates pass, blocking findings are resolved, and standards are followed or exceptions recorded. The merge request links acceptance evidence and boundary tests, explains remaining risks, and records the next action. For interface work, also check visual fidelity, end-to-end interaction, loading, empty and error states, accessibility, and behaviour across supported viewports and zoom levels.</p>
-
-          <h3>Load the right context at each stage</h3>
-          <p>AI output depends on the context it receives. The handbook asks for context that is explicit, versioned, selective and traceable to the decision it influenced, and loads different sources at different stages.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Context loaded at each stage, as described in the EDS handbook</caption><thead><tr><th scope="col">Stage</th><th scope="col">Context loaded</th><th scope="col">Loaded by</th><th scope="col">Why</th></tr></thead><tbody>
-            <tr><th scope="row">Architecture and design</th><td>Shared standards, recipes, ADR templates, legacy constraints</td><td><code>/dependency-orchestrator</code>, <code>/wayfinder</code></td><td>Stops a flawed design from spreading into tickets</td></tr>
-            <tr><th scope="row">Compliance and governance</th><td>Regulatory, security and AI governance policies</td><td><code>/spec-compliance</code></td><td>Makes controls explicit before coding</td></tr>
-            <tr><th scope="row">Implementation</th><td>Framework guides, API documentation, coding practices</td><td><code>/do-work</code> through <code>/query-kb</code></td><td>Improves syntax, patterns, buildability and tests</td></tr>
-            <tr><th scope="row">Merge review</th><td>Repository style, naming, architecture and lint expectations</td><td><code>/code-review</code> with <code>CODING_STANDARDS.md</code></td><td>Keeps changes consistent with the codebase</td></tr>
-          </tbody></table></div>
-          <p>Search in order of precision: repository and text search for exact names, a code graph for call paths and dependencies, a knowledge base for meaning across standards and past decisions, and live documentation through MCP when a version-specific claim arises. Record decisions and progress in the repository before a long session is compacted; a larger context window does not replace durable state.</p>
-          <aside class="callout" aria-label="Note on authority order">
-            <p class="example-label">Note</p>
-            <p>Use the repository and executable checks to establish current behaviour. They do not override an applicable policy or approved requirement. When sources conflict, record the conflict and ask the responsible owner to resolve it before proceeding with the affected work.</p>
-          </aside>
-
-          <h3>Diagnose the harness when work fails</h3>
-          <p>The harness is everything around the model: instructions, tools, environment, state and feedback. A capable model can still fail because one of these is weak. The handbook advises strengthening the weak layer rather than assuming the model is the only problem.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 7, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-harness-title">
-                <title id="fig-harness-title">Diagnosing a failure. A failure is traced to one of five harness layers: task specification, context provision, execution environment, verification feedback or state management. In this example verification feedback is the weak layer. The team strengthens that layer, then records the failure so it is less likely to recur.</title>
-                <text class="d-label" x="321" y="20" text-anchor="middle">Which harness layer is weak?</text>
-                <rect class="d-boundary" x="171" y="28" width="300" height="256" rx="8"/>
-                <rect class="d-node" x="1" y="124" width="130" height="64" rx="8"/><text class="d-title" x="66" y="150" text-anchor="middle">Failure</text><text class="d-sub" x="66" y="174" text-anchor="middle">Symptom seen</text>
-                <path class="d-line" d="M131 156H167" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="181" y="36" width="280" height="40" rx="8"/><text class="d-title" x="197" y="61">Task specification</text>
-                <rect class="d-node" x="181" y="86" width="280" height="40" rx="8"/><text class="d-title" x="197" y="111">Context provision</text>
-                <rect class="d-node" x="181" y="136" width="280" height="40" rx="8"/><text class="d-title" x="197" y="161">Execution environment</text>
-                <rect class="d-node d-node-accent" x="181" y="186" width="280" height="40" rx="8"/><text class="d-title" x="197" y="211">Verification feedback</text>
-                <rect class="d-node" x="181" y="236" width="280" height="40" rx="8"/><text class="d-title" x="197" y="261">State management</text>
-                <path class="d-line d-line-accent" d="M461 206H507" marker-end="url(#arrow-accent)"/>
-                <rect class="d-node d-node-accent" x="511" y="174" width="168" height="64" rx="8"/><text class="d-title" x="595" y="200" text-anchor="middle">Strengthen it</text><text class="d-sub" x="595" y="224" text-anchor="middle">Fix that layer</text>
-                <path class="d-line" d="M595 238V264" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="511" y="268" width="168" height="64" rx="8"/><text class="d-title" x="595" y="294" text-anchor="middle">Record it</text><text class="d-sub" x="595" y="318" text-anchor="middle">Stop it recurring</text>
-              </svg>
-            </div>
-            <figcaption>Figure 7. Trace a failure to one harness layer, strengthen that layer and record the failure. The highlighted layer is an example.</figcaption>
-          </figure>
-          <p>Start from the symptom and ask which of the five layers let it through. In the figure, verification feedback is the weak layer, so the team improves its checks rather than retrying the same prompt. Recording the failure helps the next session avoid it. The table pairs each layer with its typical symptom.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Harness layers, typical symptoms and responses, from the EDS handbook</caption><thead><tr><th scope="col">Layer</th><th scope="col">Typical symptom</th><th scope="col">Response</th></tr></thead><tbody>
-            <tr><th scope="row">Task specification</th><td>Plausible implementation, wrong behaviour</td><td>Tighten the PRD or TRD, acceptance criteria, exclusions and slice scope.</td></tr>
-            <tr><th scope="row">Context provision</th><td>Breaks a domain, security, architecture or interface rule the agent could not see</td><td>Put the rule in the repository and route it through the right context source.</td></tr>
-            <tr><th scope="row">Execution environment</th><td>Time lost on dependencies, connectivity or setup</td><td>Standardise initialisation and keep a reproducible sandbox.</td></tr>
-            <tr><th scope="row">Verification feedback</th><td>The agent reports “done”, but the behaviour is still broken</td><td>Use executable stop conditions, full-pipeline checks and actionable failure messages.</td></tr>
-            <tr><th scope="row">State management</th><td>A new session repeats work or reverses an earlier decision</td><td>Record feature state, decisions, evidence, blockers and the next action.</td></tr>
-          </tbody></table></div>
-
-          <h3>Check release readiness</h3>
-          <p>In the handbook, the Tech Lead reviews consolidated evidence and records the release decision before production. Confirm the applicable authority locally. The handbook describes a single <code>/pre-prod-check</code> orchestrator as planned; until it exists, run the component checks separately after confirming each one is installed. Its production sign-off checklist asks for:</p>
-          <ol class="practice-steps">
-            <li>generated, reviewable API documentation;</li>
-            <li>a reviewed authorisation matrix, with any unprotected endpoints intentional and approved;</li>
-            <li>no unmitigated Critical or High vulnerabilities (CVEs) in dependencies;</li>
-            <li>threat-model findings triaged and signed off;</li>
-            <li>a current technical architecture document and dependency inventory;</li>
-            <li>a passing full-codebase IM8 and ARC assessment, or documented risk acceptance;</li>
-            <li>confirmed observability, secrets and configuration readiness; and</li>
-            <li>the Tech Lead’s review of the evidence and recorded release decision.</li>
-          </ol>
-          <p>To see whether the workflow itself is healthy, the handbook suggests watching measures such as:</p>
-          <ul>
-            <li><strong>Verified completion rate:</strong> how many started slices reach a passing state with independent evidence.</li>
-            <li><strong>Verification gap:</strong> how often an agent’s claim of completion fails independent validation.</li>
-            <li><strong>Rebuild cost:</strong> the time or tokens a fresh session needs to regain a working, informed state.</li>
-            <li><strong>Tokens per verified slice:</strong> the cost of each independently passing feature, split by planning, implementation, verification and recovery.</li>
-            <li><strong>Harness debt:</strong> stale, duplicated, contradictory or unenforced instructions and controls.</li>
-          </ul>
-          <aside class="example" aria-label="Fictional example of the EDS workflow">
-            <p class="example-label">Example · fictional workflow run</p>
-            <p>The service desk squad’s access-request PRD reaches the Tech Lead, who drafts the TRD. <code>/spec-compliance</code> finds that the design logs full request text, so the TRD is revised to log request identifiers before HITL 1. The first tracer-bullet issue covers one journey: a staff member submits an access request and receives a drafted response. In the convergence loop, the mutation gate shows that no test checks the unauthorised-request case; the developer adds one. A browser test then provides the evidence the reviewer needs to approve the MR.</p>
-          </aside>
-          <p class="next-step"><strong>Next step:</strong> before your team uses the workflow on a live feature, confirm the one-time setup in the handbook: the tracker and its ready states are configured, the shared standards are available locally, <code>CODING_STANDARDS.md</code> reflects current conventions, and the generated architecture tests pass on the baseline branch.</p>
+          <p>The EDS team-readiness checklist covers the tooling side of these checks: tracker, standards, repository conventions, context sources and architecture tests.</p>
+          <p class="next-step"><strong>Next step:</strong> go through the pilot readiness list with your squad and note each item you cannot yet confirm. Then <a href="eds-ai-workflow.html">read the EDS AI Workflow guide</a> and complete its team setup.</p>
+          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> sections 9 and 9.1; <a href="#source-2" aria-label="Source 2: EDS AI Development Workflow: Simplified Operating Handbook">[2]</a>.</p>
         </section>
 
         <section id="sources">
           <h2>Sources</h2>
-          <p>Source review: 28 September 2026. The implementation loop, stages, gates, platform capabilities, factory modes, measures and examples are editorial recommendations for this guide, not DSTA policy. The EDS workflow section summarises the EDS handbook; its gates, skills, statuses and default thresholds are reported as the handbook states them. Confirm the current handbook version before relying on them.</p>
-          <ul>
-            <li><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a> — specifications, plans and tasks.</li>
-            <li><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Anthropic, Demystifying evals for AI agents</a> — repeated trials, graders, outcomes and regression evaluation.</li>
-            <li><a href="https://dora.dev/guides/dora-metrics/">DORA’s software delivery performance metrics</a> — five measures and application-level context.</li>
-            <li><a href="https://sre.google/workbook/canarying-releases/">Google SRE Workbook, Canarying Releases</a> — limited exposure and comparison before broader rollout.</li>
-            <li><cite>EDS AI Development Workflow: Simplified Operating Handbook</cite> — workflow, human gates, skills and default thresholds in the EDS workflow section.</li>
-          </ul>
+          <ol class="source-list">
+            <li id="source-1"><cite>AI-PDLC Playbook, Chapter 3: Product Implementation</cite></li>
+            <li id="source-2"><cite>EDS AI Development Workflow: Simplified Operating Handbook</cite></li>
+            <li id="source-3"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
+            <li id="source-4"><a href="https://sre.google/workbook/canarying-releases/">Google SRE Workbook, Canarying Releases</a></li>
+            <li id="source-5"><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Anthropic, Demystifying evals for AI agents</a></li>
+            <li id="source-6"><a href="https://dora.dev/guides/dora-metrics/">DORA, Software delivery performance metrics</a></li>
+          </ol>
         </section>
         <footer class="article-footer"><span>AI-Product Development Lifecycle</span><span>EDS · DSTA</span></footer>
       </article>
@@ -634,7 +345,6 @@
     <aside class="page-contents">
       <nav aria-label="On this page">
         <p>On this page</p>
-        <a href="#two-loops">Where it starts</a>
         <a href="#implementation-loop">Implementation loop</a>
         <a href="#implementable-definition">PRD and UI artefacts</a>
         <a href="#executable-work">Executable work</a>
@@ -643,8 +353,7 @@
         <a href="#factory-platform">Factory platform</a>
         <a href="#autonomy">Autonomy</a>
         <a href="#measure-loop">Measure the loop</a>
-        <a href="#in-practice">In practice</a>
-        <a href="#eds-workflow">EDS workflow</a>
+        <a href="#eds-workflow">Use the EDS AI Workflow</a>
         <a href="#sources">Sources</a>
       </nav>
     </aside>

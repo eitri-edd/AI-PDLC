@@ -26,8 +26,10 @@
           <a href="index.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-PDLC</a>
           <a href="product-ideation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
           <a href="product-implementation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow</a>
           <a href="training.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -42,7 +44,7 @@
         </header>
         <details class="mobile-contents">
           <summary>On this page</summary>
-          <nav aria-label="On this page"><a href="#target-audience">Target audience</a><a href="#why-ai-pdlc">Why AI-PDLC?</a><a href="#evergreen-guide">An evergreen development guide</a></nav>
+          <nav aria-label="On this page"><a href="#target-audience">Target audience</a><a href="#why-ai-pdlc">Why AI-PDLC?</a><a href="#evergreen-guide">An evergreen development guide</a><a href="#sources">Sources</a></nav>
         </details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -83,7 +85,7 @@
             </div>
             <figcaption>Figure 1. In a sequential lifecycle, each handoff can add waiting and lose context, and the team learns from users only at the end.</figcaption>
           </figure>
-          <p>Read the figure from left to right, then along the second row. Work passes from opportunity to requirements, design, build, test, approval and launch before the team learns from users. Each arrow is a handoff where work can wait, lose context or be reinterpreted. The dashed path shows that evidence from users returns only after most of the effort has been spent.</p>
+          <p>Work passes from opportunity to requirements, design, build, test, approval and launch before the team learns from users. Each arrow is a handoff where work can wait, lose context or be reinterpreted. The dashed path shows that evidence from users returns only after most of the effort has been spent.</p>
           <p>Agile, DevOps, continuous delivery and design thinking improved this model through smaller batches and faster feedback. Much of the work is still limited by specialist capacity, handoffs and the cost of changing direction.</p>
           <p>AI changes that balance. Research, prototyping, testing and parts of implementation can be produced faster and at lower cost, giving people more capacity to frame problems, assess evidence and make decisions. AI-PDLC uses this shift to pursue <strong>faster validated learning</strong>: testing assumptions early and using the results to solve user problems sooner.</p>
           <ol class="key-pointers">
@@ -156,7 +158,7 @@
                 </div>
                 <figcaption>Figure 2. Cheaper generation produces more options, so the capacity to assess them sets the pace.</figcaption>
               </figure>
-              <p>Read the figure from left to right. Several generated options are assessed against agreed criteria. The team discards weaker options, combines the best parts, tests the result and only then chooses what to build. Assessment is highlighted because it now limits how quickly the team can move.</p>
+              <p>Several generated options are assessed against agreed criteria. The team discards weaker options, combines the best parts, tests the result and only then chooses what to build. Assessment is highlighted because it now limits how quickly the team can move.</p>
               <p>Evaluate usefulness and quality as work is created, rather than only at final testing. People frame the problem, weigh the evidence and remain accountable for decisions while AI carries out more of the execution.</p>
             </div></li>
             <li><div>
@@ -191,9 +193,17 @@
           <p>The guidance is expected to change as tools develop and squads gain experience. Each practice records its reasons, so the advice can be revisited when the evidence changes.</p>
           <div class="next-step">
             <p>To begin, pick one assumption in your current work that would be costly to get wrong. Agree what evidence would help the squad decide, then choose a small experiment to obtain it.</p>
+            <p><a href="ai-pdlc.html">Explore AI-PDLC</a> for the two loops, handoff and feedback from use.</p>
             <p><a href="transformation.html">Read Organisation transformation</a> for what changes across people, process, culture and technology.</p>
             <p><a href="concept.html">Read the Concepts guide</a> for practices that help direct AI-assisted work.</p>
           </div>
+        </section>
+
+        <section id="sources">
+          <h2>Sources</h2>
+          <ol class="source-list">
+            <li id="source-1"><cite>AI-PDLC Playbook, Chapter 0: Why Product Development Must Change</cite></li>
+          </ol>
         </section>
         <footer class="article-footer"><span>AI-Product Development Lifecycle</span><span>EDS · DSTA</span></footer>
       </article>
@@ -204,6 +214,7 @@
         <a href="#target-audience">Target audience</a>
         <a href="#why-ai-pdlc">Why AI-PDLC?</a>
         <a href="#evergreen-guide">An evergreen development guide</a>
+        <a href="#sources">Sources</a>
       </nav>
     </aside>
   </div>

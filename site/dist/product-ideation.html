@@ -26,25 +26,27 @@
           <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-PDLC</a>
           <a href="product-ideation.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
           <a href="product-implementation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow</a>
           <a href="training.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
     </aside>
     <main id="main" tabindex="-1">
       <article class="concept-article">
-        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><span aria-current="page">Product ideation</span></nav>
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="ai-pdlc.html">AI-PDLC</a><span aria-hidden="true">/</span><span aria-current="page">Product ideation</span></nav>
         <header class="article-header">
           <h1>Product ideation</h1>
           <p class="lead">Product ideation helps a team decide which problem to solve and whether a proposed solution deserves investment. Test the riskiest assumptions, record what the evidence supports, and agree a bounded scope for implementation. The handoff contains a product requirements document (PRD), user interface (UI) artefacts where relevant, and the remaining uncertainties.</p>
           <p>It is written for product owners, designers, engineers and reviewers working in the same squad. The stages and practices below are a working model for this guide, and the examples are fictional. Confirm stage names and decision authority against the agreed lifecycle before relying on them.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-28">28 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-04">4 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page">
-            <a href="#two-loops">Two loops</a>
+            <a href="#two-loops">Loop purpose</a>
             <a href="#ideation-loop">Ideation loop</a>
             <a href="#product-thesis">Product thesis</a>
             <a href="#explore-and-challenge">Explore and challenge</a>
@@ -64,53 +66,17 @@
           </defs>
         </svg>
 
-        <section id="two-loops">
-          <h2>Two loops joined by a handoff</h2>
-          <p>This guide treats product development as two separate loops. Product ideation is about making the right product: it asks whether the problem is worth solving and whether the proposed solution solves it. Product implementation is about making the product right: it turns validated intent into reliable production behaviour. Each loop has its own work, evidence and decisions.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 250" role="img" aria-labelledby="fig-loops-title">
-                <title id="fig-loops-title">Two separate loops joined by a handoff. The product ideation loop learns and decides until it has made the right product. After a commitment decision, it hands off a PRD and UI artefacts. The product implementation loop verifies, releases and learns to make the product right, and releases the product into use. Learning from use returns to ideation and updates the product intent. Product ideation is highlighted as the subject of this page.</title>
-                <path class="d-line" d="M160 60V36H40V56" marker-end="url(#arrow)"/>
-                <text class="d-label" x="100" y="26" text-anchor="middle">learn, then decide</text>
-                <rect class="d-node d-node-accent" x="1" y="60" width="210" height="72" rx="8"/><text class="d-title" x="106" y="91" text-anchor="middle">Product ideation</text><text class="d-sub" x="106" y="115" text-anchor="middle">Make the right product</text>
-                <path class="d-line" d="M211 96H251" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="255" y="60" width="170" height="72" rx="8"/><text class="d-title" x="340" y="91" text-anchor="middle">Handoff</text><text class="d-sub" x="340" y="115" text-anchor="middle">PRD and UI artefacts</text>
-                <text class="d-label" x="340" y="154" text-anchor="middle">after a commitment decision</text>
-                <path class="d-line" d="M425 96H465" marker-end="url(#arrow)"/>
-                <path class="d-line" d="M640 60V36H520V56" marker-end="url(#arrow)"/>
-                <text class="d-label" x="580" y="26" text-anchor="middle">verify, release, learn</text>
-                <rect class="d-node" x="469" y="60" width="210" height="72" rx="8"/><text class="d-title" x="574" y="91" text-anchor="middle">Product implementation</text><text class="d-sub" x="574" y="115" text-anchor="middle">Make the product right</text>
-                <path class="d-line" d="M574 132V172" marker-end="url(#arrow)"/>
-                <text class="d-label" x="586" y="157">release</text>
-                <rect class="d-node" x="469" y="176" width="210" height="64" rx="8"/><text class="d-title" x="574" y="202" text-anchor="middle">Product in use</text><text class="d-sub" x="574" y="226" text-anchor="middle">Feedback and telemetry</text>
-                <path class="d-line d-dash" d="M469 208H106V136" marker-end="url(#arrow)"/>
-                <text class="d-label" x="290" y="198" text-anchor="middle">Learning from use updates the product intent</text>
-              </svg>
-            </div>
-            <figcaption>Figure 1. Product ideation and product implementation are separate loops. The PRD and UI artefacts are the handoff between them.</figcaption>
-          </figure>
-          <p>The blue ideation loop repeats until the team can decide on a bounded scope. The PRD records the agreed behaviour; relevant UI artefacts illustrate the experience. Implementation builds and checks that scope. Evidence from delivery and use can reopen an ideation decision, so the handoff does not end collaboration.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>The two loops compared</caption><thead><tr><th scope="col">Aspect</th><th scope="col">Product ideation</th><th scope="col">Product implementation</th></tr></thead><tbody>
-            <tr><th scope="row">Question it answers</th><td>Are we making the right product?</td><td>Are we making the product right?</td></tr>
-            <tr><th scope="row">Starts from</th><td>A problem, user need, strategic priority or new capability</td><td>A validated PRD, UI artefacts and organisational context</td></tr>
-            <tr><th scope="row">Loop</th><td>Thesis, explore, challenge, specify, prototype, measure, learn, decide</td><td>Plan, slice, implement, verify, release and observe, learn</td></tr>
-            <tr><th scope="row">Main evidence</th><td>User, behavioural and cost evidence from prototypes and tests</td><td>Tests, independent reviews, quality reports and production telemetry</td></tr>
-            <tr><th scope="row">Each pass ends with</th><td>Improve, redesign, pivot or stop; or hand off when ready</td><td>A verified, released increment and the next refinement</td></tr>
-            <tr><th scope="row">What it improves</th><td>The product intent</td><td>The product and the way the team builds it</td></tr>
-          </tbody></table></div>
-          <p>This page covers the first loop. <a href="product-implementation.html">Read about product implementation</a> for the second. Whoever holds decision authority for commitment should be named locally; this guide does not assign it.</p>
-        </section>
+        <section id="two-loops"><h2>Start with the loop’s purpose</h2><p>Use the steps below to frame a thesis, test assumptions and record a decision. For the shared model and the relationship between the loops, <a href="ai-pdlc.html#two-loops">read the AI-PDLC overview</a>.</p></section>
 
         <section id="ideation-loop">
           <h2>How product ideation works</h2>
           <p>Ideation starts with incomplete information. Its job is to reduce the uncertainties that could invalidate the opportunity, the user experience, the delivery approach or the expected value. AI can speed up research, drafting and prototyping; people decide which outcomes matter and which trade-offs are acceptable.</p>
-          <p><a href="https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works">GOV.UK’s discovery guidance</a> starts with users, their wider journey and delivery constraints. It also asks whether the problem can be solved without building a new service. Use those questions here as discovery prompts; the UK government’s delivery stages and approval rules do not establish DSTA requirements.</p>
+          <p>The Defence Product Playbook, jointly developed by MINDEF and DSTA, makes a similar case. It treats a requirement as a hypothesis until an operator has used it, and recommends a product approach where the problem keeps changing. Its three principles align with this loop: define real problems, structure the team right and test early. This guide draws on the playbook as a reference; confirm how its roles and forums apply locally.</p>
           <h3>Know when to enter or revisit ideation</h3>
-          <p>Start when the user problem, expected value or proposed behaviour is uncertain. Return when research, incidents or delivery work challenge those assumptions. A well-understood defect can go directly to implementation with a clear issue and acceptance criteria; it need not restart discovery.</p>
+          <p>Start when the user problem, expected value or proposed behaviour is uncertain. The playbook names three signals: the need keeps changing, the root cause is unclear, or nobody can yet show that the solution will have the intended effect. Return when research, incidents or delivery work challenge those assumptions. A well-understood defect can go directly to implementation with a clear issue and acceptance criteria; it need not restart discovery.</p>
           <p>Bring observations of the current task, support or operational evidence, existing alternatives and known constraints. Nominate a person to gather evidence and identify who can authorise the next investment. The output is a decision with its evidence, scope and unresolved questions.</p>
           <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 280" role="img" aria-labelledby="fig-loop-title">
                 <title id="fig-loop-title">The product ideation loop. Thesis, explore, challenge, specify and prototype run left to right, then measure, learn and decide run right to left. From decide, the team either improves, redesigns or pivots and returns to the thesis, hands over a validated PRD and UI artefacts when ready, or stops and keeps the learning.</title>
                 <rect class="d-node" x="1" y="40" width="114" height="64" rx="8"/><text class="d-title" x="58" y="66" text-anchor="middle">Thesis</text><text class="d-sub" x="58" y="90" text-anchor="middle">Testable claim</text>
@@ -137,7 +103,7 @@
                 <text class="d-label" x="340" y="270" text-anchor="middle">or stop, and keep what was learned</text>
               </svg>
             </div>
-            <figcaption>Figure 2. Product ideation is a loop. Each pass ends with an explicit decision to continue, change direction, hand over or stop.</figcaption>
+            <figcaption>Figure 1. Product ideation is a loop. Each pass ends with an explicit decision to continue, change direction, hand over or stop.</figcaption>
           </figure>
           <p>The loop runs from a thesis, through exploration, challenge, a draft specification and a prototype, to a measured result. The team learns from that result and makes a decision, highlighted in blue. It can return to the thesis with an improvement, a redesign or a pivot; hand over a validated PRD and UI artefacts to implementation; or stop.</p>
           <p>Think of the loop in three parts:</p>
@@ -150,6 +116,7 @@
             <p class="example-label">Note</p>
             <p>Agents can research and draft proposals. The product owner brings the evidence and a recommendation to the people authorised to decide on scope, investment and risk. Confirm those decision rights locally. Form the product and engineering team early, so that user value, feasibility, security and operational constraints shape the product before commitment.</p>
           </aside>
+          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: MINDEF and DSTA, The Defence Product Playbook">[2]</a> “Why product ways of working” and “The three principles”.</p>
         </section>
 
         <section id="product-thesis">
@@ -173,14 +140,25 @@
             <p class="example-label">Example · fictional thesis</p>
             <p>A squad believes that service desk staff will resolve routine access requests faster with an assistant that drafts responses from the knowledge base. The thesis is weakened if staff cannot complete the task correctly, or if checking and correcting drafts removes the expected time saving. The experiment below turns those concerns into a test and a decision rule.</p>
           </aside>
-          <p class="next-step"><strong>Next step:</strong> for your current idea, write one sentence each for the user, the outcome and the assumption that would most damage the case if it were false. Then agree the evidence that would show it is false.</p>
+          <h3>Test the problem statement before the solution</h3>
+          <p>The Defence Product Playbook traces most weak products to a weak problem statement. It suggests building the statement from six questions, the 6W: what goes wrong, where, when and how often, who feels it, why it happens and why it matters. Then check what you have written against four criteria, the 4C.</p>
+          <div class="table-scroll"><table><caption>The 4C problem-statement check, adapted from the Defence Product Playbook</caption><thead><tr><th scope="col">Criterion</th><th scope="col">What the statement shows</th></tr></thead><tbody>
+            <tr><th scope="row">Clarity</th><td>One user group, the task they attempt, the friction, and how severe and frequent it is</td></tr>
+            <tr><th scope="row">Consequence</th><td>The quantified cost if the problem stays unsolved</td></tr>
+            <tr><th scope="row">Cause</th><td>A theory of change: the causal chain and the step worth intervening at</td></tr>
+            <tr><th scope="row">Confirmation</th><td>Evidence that supports the identified cause</td></tr>
+          </tbody></table></div>
+          <p>The playbook names four traps: an aspiration, a solution in disguise, an end-of-life notice and a vague pain. “Our system is reaching end of life and needs to be replaced” describes an age, not a problem. Rewrite it around the users and the task that the ageing system now fails.</p>
+          <p>When there are more problem statements than teams, score each one low, medium or high for severity, frequency and reach (SFR). Start with problems that score high on all three. A severe problem that affects a few users once a year is a weaker first investment than one that is severe, frequent and widespread.</p>
+          <p class="next-step"><strong>Next step:</strong> for your current idea, write one sentence each for the user, the outcome and the assumption that would most damage the case if it were false. Then agree the evidence that would show it is false, and check the problem statement against the 4C.</p>
+          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: MINDEF and DSTA, The Defence Product Playbook">[2]</a> “Define the problem, measure the value”.</p>
         </section>
 
         <section id="explore-and-challenge">
           <h2>Widen the options, then narrow with evidence</h2>
-          <p>The Design Council’s Double Diamond separates widening the options from narrowing them. The first diamond explores and then defines the problem; the second develops possible solutions and then tests them at small scale, rejecting those that do not work (<a href="https://www.designcouncil.org.uk/our-resources/the-double-diamond/">Design Council, The Double Diamond</a>).</p>
+          <p>The Design Council’s Double Diamond separates widening the options from narrowing them. The first diamond explores and then defines the problem; the second develops possible solutions and then tests them at small scale, rejecting those that do not work.</p>
           <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 310" role="img" aria-labelledby="fig-diamond-title">
                 <title id="fig-diamond-title">Two diamonds. The first covers the problem space: discover widens, define narrows. The second covers the solution space: develop widens, deliver narrows. Where each diamond closes, the product owner makes a decision: first about the problem, then about the solution.</title>
                 <text class="d-label" x="180" y="24" text-anchor="middle">Problem space</text>
@@ -198,9 +176,10 @@
                 <rect class="d-node d-node-accent" x="490" y="244" width="180" height="56" rx="8"/><text class="d-title" x="580" y="267" text-anchor="middle">Decide the solution</text><text class="d-sub" x="580" y="289" text-anchor="middle">Product owner decides</text>
               </svg>
             </div>
-            <figcaption>Figure 3. Each diamond widens, then narrows. A person makes the decision where each diamond closes.</figcaption>
+            <figcaption>Figure 2. Each diamond widens, then narrows. A person makes the decision where each diamond closes.</figcaption>
           </figure>
           <p>The first diamond covers the problem space: discover widens understanding, define narrows it to a chosen problem. The second covers the solution space: develop widens the options, deliver narrows them through testing. The blue points mark decisions in this guide’s adaptation. The Design Council describes the four activities; it does not assign these decisions to a DSTA role.</p>
+          <p>The Defence Product Playbook uses the same lens. It places problem definition in the first diamond and testing in the second, where testing has the greatest effect.</p>
           <h3>Use AI differently when widening and narrowing</h3>
           <ul>
             <li><strong>When widening,</strong> use AI to research broadly, summarise evidence, generate different concepts, surface hidden assumptions and explore alternative journeys or technical approaches.</li>
@@ -220,12 +199,13 @@
           </ol>
           <p>This challenge complements user research and domain expertise; it does not replace them. Regulated, safety-critical, legally consequential and highly specialised questions still need qualified human reviewers.</p>
           <p class="next-step"><strong>Next step:</strong> before the next refinement session, put the seven questions to someone who was not involved in shaping the idea. Record the answers the team cannot yet support with evidence.</p>
+          <p class="source-ref">Sources: <a href="#source-3" aria-label="Source 3: Design Council, The Double Diamond">[3]</a>; <a href="#source-2" aria-label="Source 2: MINDEF and DSTA, The Defence Product Playbook">[2]</a> “Test early, iterate fast”.</p>
         </section>
 
         <section id="prototype">
           <h2>Prototype the riskiest uncertainty</h2>
           <p>Choose a prototype by the uncertainty it needs to resolve. A sketch may be enough to test a journey; a working integration may be needed to test feasibility. AI can help produce either, but speed and visual polish do not establish useful evidence.</p>
-          <p><a href="https://www.svpg.com/four-big-risks/">SVPG distinguishes four product risks</a>: value, usability, feasibility and business viability. Use these as prompts to check what remains untested. A usable interface does not show that people need it, or that the organisation can afford and operate it.</p>
+          <p>SVPG distinguishes four product risks: value, usability, feasibility and business viability. Use these as prompts to check what remains untested. A usable interface does not show that people need it, or that the organisation can afford and operate it.</p>
           <div class="table-scroll"><table><caption>Choose the prototype by the question it needs to answer</caption><thead><tr><th scope="col">Uncertainty</th><th scope="col">Question</th><th scope="col">Suitable prototypes</th></tr></thead><tbody>
             <tr><th scope="row">Opportunity and value</th><td>Is this worth solving?</td><td>Concept prototype; business value prototype</td></tr>
             <tr><th scope="row">Experience and adoption</th><td>Can people understand, access and use it?</td><td>User experience, interface and content, or device and access prototypes</td></tr>
@@ -235,6 +215,7 @@
           <p>Prototype the riskiest assumption first. Give every prototype success criteria, an owner, and an expiry date or a decision on whether to promote it.</p>
           <p>A prototype is not production code. Before any part of it reaches production, complete the architecture, security, testing, maintainability and operational reviews that apply, and version the validated artefacts against the user stories and criteria they support.</p>
           <p class="next-step"><strong>Next step:</strong> name the uncertainty you most need to resolve. Pick the row it belongs to and the simplest prototype in that row that could change the team’s mind.</p>
+          <p class="source-ref">Source: <a href="#source-4" aria-label="Source 4: SVPG, The Four Big Risks">[4]</a>.</p>
         </section>
 
         <section id="validate-and-decide">
@@ -262,6 +243,16 @@
             <tr><th scope="row">A/B testing</th><td>Does a change to an existing product outperform a reliable baseline?</td><td>Behaviour, conversion, performance</td></tr>
           </tbody></table></div>
           <p>Ask participants to show how they complete the task, then use follow-up questions to understand difficulties. Report observed success separately from stated preference. For an A/B test, agree random allocation, a primary measure, sufficient sample size and a stopping rule before running it; a small convenience sample is not a reliable effect estimate.</p>
+          <h3>Test with the people who will use it</h3>
+          <p>The Defence Product Playbook groups fast learning into four habits, which it calls TEST:</p>
+          <ul>
+            <li><strong>Trial with real operators:</strong> test with the people who will use the product, not project team members standing in for them.</li>
+            <li><strong>Expose the riskiest assumption:</strong> build the least you can to test the assumption most likely to sink the product, then discard it.</li>
+            <li><strong>Shorten the loop:</strong> measure the time from user feedback to a changed prototype in days. If the loop is slow, fix that first.</li>
+            <li><strong>Turn tests into decisions:</strong> end each test by keeping, changing or dropping the idea.</li>
+          </ul>
+          <p>The playbook also gives reference points for pace: a proof of concept in front of real users within three to six months, and a proof of value with real users within a year. It presents these as prompts, not targets. If a team cannot reach them, ask what blocks it: access to users, procurement, funding or the team’s structure.</p>
+          <p>Fast iteration does not loosen assurance. Track resilience and security as guardrail measures alongside the value measure, and escalate any trade-off that carries real risk to the people authorised to accept it.</p>
           <h3>End every loop with an explicit decision</h3>
           <p>Review the evidence against the decision rule. When it supports implementation of a bounded scope, record a commitment decision and prepare the handoff. Otherwise choose one of the four responses below. If evidence is inconclusive, record that explicitly and identify the next test within the agreed budget.</p>
           <div class="table-scroll"><table class="wide-table"><caption>Four responses when the team is not ready to commit</caption><colgroup><col style="width: 18%"><col style="width: 37%"><col style="width: 45%"></colgroup><thead><tr><th scope="col">Decision</th><th scope="col">Use when</th><th scope="col">Typical next move</th></tr></thead><tbody>
@@ -281,6 +272,7 @@
           </ol>
           <p>Keep human approval where the consequences exceed the organisation’s risk tolerance. Examples include material regulatory interpretation, irreversible commitments to users, security exceptions, high-impact automated actions, costly architecture decisions and deployment into sensitive domains. Widen agent autonomy only when permissions, evaluation coverage, monitoring, known failure modes and rollback make the remaining risk acceptable.</p>
           <p class="next-step"><strong>Next step:</strong> at the end of your next prototype test, record whether to commit to a bounded scope, improve, redesign, pivot or stop. Link the evidence and any remaining uncertainty to that decision.</p>
+          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: MINDEF and DSTA, The Defence Product Playbook">[2]</a> “Test early, iterate fast”.</p>
         </section>
 
         <section id="product-team">
@@ -305,13 +297,14 @@
           </ul>
           <p>Delegating work does not delegate accountability. The exchange also runs both ways: technical feasibility should shape ideas early, and user and business intent should shape architecture early. Doing both reduces late surprises about security, data location, performance, model limitations and operations.</p>
           <p class="next-step"><strong>Next step:</strong> invite an engineer and, where relevant, a security or data specialist to your next ideation review. <a href="transformation.html#team-composition">Read about human–agent team composition</a>.</p>
+          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: MINDEF and DSTA, The Defence Product Playbook">[2]</a> “Structure the team right”.</p>
         </section>
 
         <section id="product-intent">
           <h2>Keep product intent connected</h2>
           <p>Product intent is the reasoning behind a product: why it exists, what it does, and the limits it works within. In many teams that reasoning is scattered across separate tools for evidence, requirements, design, architecture, policies and success measures. Missing or contradictory context can lead agents to make unsupported assumptions. Keep the sources, decisions and unresolved questions accessible together.</p>
           <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 4, scrolls sideways on narrow screens">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-stack-title">
                 <title id="fig-stack-title">Six layers of product intent, from top to bottom: business intent, why the product matters; customer experience, what users achieve; product behaviour, what the product does; technical architecture, how behaviour is enabled; policies and constraints, which risks are controlled; evaluation criteria, how we know it works. Each layer traces to the layer above it.</title>
                 <rect class="d-node" x="1" y="20" width="500" height="40" rx="8"/><text class="d-title" x="17" y="45">Business intent</text><text class="d-sub" x="485" y="45" text-anchor="end">Why the product matters</text>
@@ -326,7 +319,7 @@
                 <text class="d-label d-label-accent" x="556" y="200">layer above</text>
               </svg>
             </div>
-            <figcaption>Figure 4. Product intent as six connected layers. Each layer should be traceable to the one above it.</figcaption>
+            <figcaption>Figure 3. Product intent as six connected layers. Each layer should be traceable to the one above it.</figcaption>
           </figure>
           <p>Read the stack from top to bottom: business intent, customer experience, product behaviour, technical architecture, policies and constraints, and evaluation criteria. The blue arrow shows traceability upwards:</p>
           <ul>
@@ -337,7 +330,7 @@
           </ul>
           <p>Keep product intent versioned, owned, accessible and auditable. Where practical, make the most valuable parts machine-readable: API descriptions, schemas, policy rules, acceptance tests and evaluation datasets can be checked automatically, not only read.</p>
           <h3>Treat the specification as a living document</h3>
-          <p>In AI-assisted development, the specification is both an instruction for generating work and a basis for checking it. GitHub’s Spec Kit describes a common pattern that moves from a specification to a technical plan, then to tasks and implementation (<a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub, Spec-driven development</a>). During ideation, the specification develops alongside the evidence:</p>
+          <p>In AI-assisted development, the specification is both an instruction for generating work and a basis for checking it. GitHub’s Spec Kit describes a common pattern that moves from a specification to a technical plan, then to tasks and implementation. During ideation, the specification develops alongside the evidence:</p>
           <ol class="practice-steps">
             <li>Product intent is drafted as a PRD.</li>
             <li>A prototype tests the riskiest part of it.</li>
@@ -347,6 +340,7 @@
           <p>A useful specification is explicit enough to expose ambiguity, testable through examples, acceptance tests or evaluations, versioned and linked to outcomes, clear about constraints, permissions, non-functional requirements, edge cases and exclusions, and open to revision when evidence changes the intent.</p>
           <p>Balance the level of detail. Too little forces agents to guess critical intent; too much creates false certainty. Increase precision as uncertainty is retired. <a href="concept.html#spec-driven-development">Read about spec-driven development</a>.</p>
           <p class="next-step"><strong>Next step:</strong> pick one planned behaviour in your PRD. Trace it up to the user outcome it serves and down to the test or evaluation that will show it works; fill any missing link.</p>
+          <p class="source-ref">Source: <a href="#source-5" aria-label="Source 5: GitHub Spec Kit, Specification-Driven Development">[5]</a>.</p>
         </section>
 
         <section id="measure-learning">
@@ -372,6 +366,17 @@
             <tr><th scope="row">Learning speed and cost</th><td>How quickly and affordably did a hypothesis become credible evidence and a decision?</td></tr>
             <tr><th scope="row">Guardrails</th><td>Did quality, safety, reliability, cost, privacy and fairness stay within tolerance?</td></tr>
           </tbody></table></div>
+          <h3>Choose a value measure to steer by</h3>
+          <p>The Defence Product Playbook describes a ladder of four kinds of measure. Teams tend to count what is easy, such as logins, uptime or features shipped, but those inputs do not show whether the problem is shrinking. Aim for the third rung, the value measure.</p>
+          <div class="table-scroll"><table><caption>The metric ladder, adapted from the Defence Product Playbook</caption><thead><tr><th scope="col">Rung</th><th scope="col">What it shows</th></tr></thead><tbody>
+            <tr><th scope="row">1. Input measure</th><td>Activity or system operation, such as usage or uptime</td></tr>
+            <tr><th scope="row">2. Leading indicator</th><td>An early behaviour change that supports part of the theory of change</td></tr>
+            <tr><th scope="row">3. Value measure</th><td>The intended outcome of solving the problem; the measure the team steers by</td></tr>
+            <tr><th scope="row">4. Outcome measure</th><td>The effect the organisation ultimately seeks; too slow to guide weekly work</td></tr>
+          </tbody></table></div>
+          <p>Confidence that the problem is being solved rises up the ladder, but so does the time it takes to see a change. The playbook recommends one value measure per problem that can move at least twice a year. You should be able to explain how improving it improves the outcome measure above it.</p>
+          <p>Reject a candidate measure if it can be gamed without improving the outcome, or if its link to the outcome rests on assumption. Also reject it if it measures what the system does rather than what changes for the user, or relies on self-reporting. Check the remaining candidates against SMART: specific, measurable, achievable, relevant and time-bound.</p>
+          <p>Weigh value against cost. The playbook’s value-cost ratio divides the outcome delivered by the annual cost, and its year-on-year change is the signal to track. When value plateaus, consider moving the product to maintenance and investing in a problem that can still move.</p>
           <p>Measures worth considering include:</p>
           <ul>
             <li><strong>Time to validated learning:</strong> elapsed time from an explicit hypothesis to credible evidence and a decision.</li>
@@ -380,49 +385,20 @@
             <li><strong>Product guardrails:</strong> task success, correction and escalation rates, model errors, latency, reliability, cost, privacy and safety incidents, fairness where material, and user trust.</li>
           </ul>
           <p class="next-step"><strong>Next step:</strong> for your next experiment, write the hypothesis, its start date and the success threshold. Record the date of the resulting decision to measure time to validated learning.</p>
+          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: MINDEF and DSTA, The Defence Product Playbook">[2]</a> “Define the problem, measure the value”.</p>
         </section>
 
-        <section id="handover">
-          <h2>Hand over the PRD and UI artefacts</h2>
-          <p>A scope is ready for handoff when the evidence supports the next investment and implementation can work from testable requirements. “Validated” here means supported under the recorded test conditions, not proven for every user or production setting. Discovery continues when new evidence changes the intent.</p>
-          <p>The PRD records the agreed outcomes, behaviour and constraints. The UI artefacts show how the validated experience should behave and feel. The implementation team decides how to build it within the approved technical and policy constraints.</p>
-          <p>For a product without a user interface, substitute interface contracts and representative interactions for screens. Keep the evidence and acceptance criteria proportionate to the change.</p>
-          <h3>Assemble the handover package</h3>
-          <ul>
-            <li><strong>Product context and outcomes:</strong> the target users, problem, intended user outcome, business value and strategic fit.</li>
-            <li><strong>Prioritised user stories:</strong> the user, required behaviour and intended value for the scope to be built.</li>
-            <li><strong>Testable acceptance criteria:</strong> positive, negative, edge, permission and failure scenarios that can become tests or evaluations.</li>
-            <li><strong>UI artefacts:</strong> approved representative HTML screens and flows covering the core journeys, with a <code>design.md</code> file that records interaction rules, loading, empty, error and permission states, responsive behaviour, accessibility and any intentional deviations.</li>
-            <li><strong>Constraints and dependencies:</strong> business rules, non-functional requirements, architecture and data dependencies, and security, privacy, AI and compliance guardrails.</li>
-            <li><strong>Measurement requirements:</strong> success metrics, telemetry, evaluation coverage and guardrail thresholds that implementation needs to instrument.</li>
-            <li><strong>Evidence and decision record:</strong> tested assumptions, methods, results, limitations, source links and the authorised commitment decision.</li>
-            <li><strong>Owned ambiguity:</strong> open decisions, assumptions, exclusions and deliberate implementation freedoms, each with an owner rather than left silently unclear.</li>
-          </ul>
-          <h3>Check readiness</h3>
-          <p>Hand over when:</p>
-          <ol class="practice-steps">
-            <li>the highest-risk product assumptions have been tested;</li>
-            <li>the UI artefacts represent the core user journeys and important states;</li>
-            <li>acceptance criteria are precise enough to evaluate the implementation;</li>
-            <li>constraints, guardrails and measurement obligations are explicit; and</li>
-            <li>remaining ambiguity has a named owner and a plan to resolve it.</li>
-          </ol>
-          <aside class="example" aria-label="Fictional handover example">
-            <p class="example-label">Example · fictional handover</p>
-            <p>After three prototype rounds, the service desk squad’s assistant passes its task-success threshold for password and access requests but not for software requests. The product owner narrows the scope to access requests, records software requests as an exclusion with an owner, and hands over a PRD with acceptance criteria for correct, incomplete and unauthorised requests.</p>
-          </aside>
-          <div class="next-step"><p><strong>Next step:</strong> compare your current PRD with the handover package and readiness checks above, and list the gaps. <a href="product-implementation.html#implementable-definition">Read how implementation starts from the PRD and UI artefacts</a>, or <a href="concept.html#intent-driven-development">read about intent-driven development</a> for ways to record intent and open questions.</p></div>
-        </section>
+        <section id="handover"><h2>Prepare the handoff</h2><p>Record the experiment results, decision, bounded scope and remaining uncertainties in the product intent. Link each acceptance criterion to the evidence and relevant prototype state.</p><p>Then use the shared <a href="ai-pdlc.html#handoff">handoff package and readiness checks</a> with the people planning implementation. Resolve contradictions or give remaining questions an owner before commitment.</p><div class="next-step"><p><a href="product-implementation.html#implementable-definition">Continue to implementation readiness</a>.</p></div></section>
 
         <section id="sources">
           <h2>Sources</h2>
-          <p>Source review: 28 September 2026. External descriptions are cited beside the relevant claims. The two-loop model, ideation loop, decision options, measures and examples are editorial recommendations for this guide, not DSTA policy.</p>
-          <ul>
-            <li><a href="https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works">GOV.UK, How the discovery phase works</a> — user context, constraints, alternatives and the decision to continue.</li>
-            <li><a href="https://www.svpg.com/four-big-risks/">SVPG, The Four Big Risks</a> — value, usability, feasibility and business viability.</li>
-            <li><a href="https://www.designcouncil.org.uk/our-resources/the-double-diamond/">Design Council, The Double Diamond</a> — discover, define, develop and deliver.</li>
-            <li><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a> — specification, plan, tasks and implementation.</li>
-          </ul>
+          <ol class="source-list">
+            <li id="source-1"><cite>AI-PDLC Playbook, Chapter 2: Product Ideation</cite></li>
+            <li id="source-2"><a href="https://defence-pp.vercel.app/#/home">MINDEF and DSTA, The Defence Product Playbook, version 1.0</a></li>
+            <li id="source-3"><a href="https://www.designcouncil.org.uk/our-resources/the-double-diamond/">Design Council, The Double Diamond</a></li>
+            <li id="source-4"><a href="https://www.svpg.com/four-big-risks/">SVPG, The Four Big Risks</a></li>
+            <li id="source-5"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
+          </ol>
         </section>
         <footer class="article-footer"><span>AI-Product Development Lifecycle</span><span>EDS · DSTA</span></footer>
       </article>
@@ -430,7 +406,7 @@
     <aside class="page-contents">
       <nav aria-label="On this page">
         <p>On this page</p>
-        <a href="#two-loops">Two loops</a>
+        <a href="#two-loops">Loop purpose</a>
         <a href="#ideation-loop">Ideation loop</a>
         <a href="#product-thesis">Product thesis</a>
         <a href="#explore-and-challenge">Explore and challenge</a>

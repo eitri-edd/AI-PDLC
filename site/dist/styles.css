@@ -83,6 +83,10 @@ th { font-weight: 600; }
 thead { background: var(--surface-subtle); }
 .competency-table { min-width: 44rem; }
 .wide-table { min-width: 40rem; }
+/* Product implementation and EDS AI Workflow: keep short row labels on one line where possible. */
+.label-first-column th:first-child { width: 12rem; min-width: 12rem; overflow-wrap: normal; }
+.label-first-column th:first-child code { overflow-wrap: normal; white-space: nowrap; }
+.label-first-column th, .label-first-column td { overflow-wrap: break-word; }
 code { font-family: Consolas, "SFMono-Regular", monospace; font-size: .875rem; line-height: 1.57; background: var(--surface-subtle); border: 1px solid var(--border-subtle); border-radius: .25rem; padding: 0 .25rem; overflow-wrap: anywhere; }
 .competency-table th[scope="row"] { overflow-wrap: normal; white-space: nowrap; }
 .concept-article a { overflow-wrap: anywhere; }
@@ -100,7 +104,20 @@ section { margin-top: 3rem; scroll-margin-top: 2rem; }
 .callout > :last-child { margin-bottom: 0; }
 .callout p { color: var(--text-primary); }
 .d-label-accent { fill: var(--accent); font-weight: 600; }
-.source-note { margin: 1rem 0 0; color: var(--text-secondary); font-size: .875rem; line-height: 1.57; }
+.source-ref { margin: 1.5rem 0 0; color: var(--text-secondary); font-size: .875rem; line-height: 1.57; }
+.source-list { padding-left: 1.5rem; font-size: 1rem; line-height: 1.5; }
+.source-list li { scroll-margin-top: 2rem; }
+.source-list li:target { background: var(--surface-selected); }
+.mobile-lifecycle { display: none; }
+@media (max-width: 600px) {
+  .lifecycle-figure .figure-scroll { display: none; }
+  .concept-article .mobile-lifecycle { display: block; list-style: none; padding: 0; margin: 0; }
+  .mobile-lifecycle li { position: relative; padding: 1rem; border: 1px solid var(--border-control); border-radius: .5rem; background: var(--surface-subtle); }
+  .concept-article .mobile-lifecycle li + li { margin-top: 2rem; }
+  .mobile-lifecycle li + li::before { content: '↓'; position: absolute; top: -1.8rem; left: 50%; color: var(--accent); }
+  .mobile-lifecycle strong, .mobile-lifecycle span { display: block; }
+  .mobile-lifecycle span { margin-top: .5rem; font-size: 1rem; line-height: 1.75; }
+}
 cite { font-style: normal; }
 .article-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; color: var(--text-secondary); font-size: .875rem; line-height: 1.57; }
 .page-contents { padding-top: 3rem; }

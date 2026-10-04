@@ -43,3 +43,35 @@ The existing product browser checks passed after the final edit. They cover head
 Visually inspected the desktop validation content and fictional experiment, and the mobile AI evaluation content. Corrected narrow wrapping in the decision table with explicit column proportions and local scrolling, then inspected the result and reran the checks successfully. Shared styles and navigation code were unchanged.
 
 Draft status, unassigned content ownership and unconfirmed lifecycle applicability remain visible. Publication was not part of this review.
+
+
+## Ideation update, 30 September 2026
+
+Reviewed `dist/product-ideation.html` against [The Defence Product Playbook](https://defence-pp.vercel.app/) (MINDEF and DSTA, accessed 30 September 2026), `../writing.md` and `../design.md`.
+
+### Content changes
+
+- Added three conditions that suit a product approach to "Know when to enter or revisit ideation", and noted that stable requirements may suit conventional planning.
+- Added a section, "Write a problem statement worth solving": 6W questions, a 4C check table, four traps with fictional wording, a fictional before-and-after statement, and SFR prioritisation. The thesis now builds on this statement.
+- Added "Make the theory of change visible" to the thesis section.
+- Aligned the Double Diamond explanation with the playbook's framing: the first diamond closes on a problem statement, the second on a bounded scope.
+- Added the TEST habits and the playbook's proof-of-concept and proof-of-value reference points, presented as reference points rather than targets.
+- Added single-line accountability and three enabling conditions to the product team section. The playbook's role names (Ops Manager, two-in-a-box) and committees are not adopted; readers are asked to map the principle to local roles.
+- Added the metric ladder, metric rejection criteria, SMART, the value-cost ratio and a stalled-metric diagnosis table to the measurement section. The layer table now shows each layer's rung. "Escalate to the Steering Committee" became "Escalate to whoever can clear it" to avoid assigning an unconfirmed body.
+- Added the problem statement, value metric and baseline to the handover package and readiness checks.
+- Added the playbook to the source list and updated the review date.
+
+### Figures
+
+- New Figure 3: theory of change, four linked steps with the three assumptions between them.
+- Figure 4 (Double Diamond, formerly Figure 3): decision nodes now read "Passes the 4C check" and "Commit or change" instead of "Product owner decides", so the figure no longer assigns a role.
+- New Figure 6: metric ladder, with the value metric as the single blue emphasis.
+- Renumbered Figure 5 (product intent). All figures keep a caption, a text alternative and an adjacent prose explanation, and use the existing diagram tokens.
+
+### Limits
+
+The playbook describes itself as a joint MINDEF and DSTA guide. This review did not confirm its organisational status, so the page cites it as a source and does not present its guidance as policy. The playbook's interactive tools (4C scorer, VCR calculator, team explorer) were not reproduced; the site's design standard prefers static, predictable content.
+
+### Validation
+
+A headless Chromium check at 1440, 1100, 768 and 320 px passed: no page overflow, no broken anchors or duplicate IDs, sequential headings, figure and region labels numbered 1–6, every SVG linked to its title, no SVG text outside its viewBox, crowding its box or overlapping other text, all tables captioned, no console errors, and the first Tab reaches the skip link. Figures 3, 4 and 6 were inspected visually.

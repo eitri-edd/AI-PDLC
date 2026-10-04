@@ -26,8 +26,10 @@
           <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-PDLC</a>
           <a href="product-ideation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
           <a href="product-implementation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow</a>
           <a href="training.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -52,6 +54,7 @@
             <a href="#loop-engineering">Loop engineering</a>
             <a href="#graph-engineering">Graph engineering</a>
             <a href="#software-factory">Software factory: light and dark</a>
+            <a href="#sources">Sources</a>
           </nav>
         </details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
@@ -65,7 +68,6 @@
           <p>Intent-driven development makes the purpose of a change explicit before anyone chooses how to build it. The team records the problem, the outcome it wants and the constraints it must respect, then uses that record to judge the finished work.</p>
           <p class="concept-question"><strong>Question it answers:</strong> what are we changing, for whom, and how will we know it worked?</p>
           <p>A request such as “improve the search page” leaves the important choices unstated. An agent might redesign the layout when the real problem is that users cannot recover from an empty result. The change can pass review and still miss the need.</p>
-          <p class="source-note">Concept reference: <a href="https://intent-driven.dev/knowledge/intent-driven-development/">Intent-Driven Development, intent-driven.dev</a>.</p>
           <h3>Write the intent before the solution</h3>
           <p>A useful intent statement is short. It answers four questions:</p>
           <ul>
@@ -122,13 +124,13 @@
           <h3>Keep intent in proportion to the change</h3>
           <p>Writing down an outcome does not prove it is valuable. Test important assumptions with users or operational evidence before investing heavily. A two-line issue may be enough for a contained fix; a new capability needs more discussion, evidence and detail.</p>
           <p class="next-step"><strong>Next step:</strong> take one change request your team is discussing and write its problem, outcome, constraints and open questions. Name an owner for each open question.</p>
+          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Intent-Driven Development, intent-driven.dev">[1]</a>.</p>
         </section>
         <section id="spec-driven-development">
           <h2>Spec-driven development</h2>
           <p>Spec-driven development uses a written specification to guide planning, implementation and verification. The specification describes what the product should do, including important exceptions and constraints, in enough detail for people to review and for an AI agent to work against.</p>
           <p class="concept-question"><strong>Question it answers:</strong> how exactly should the product behave, and how will we check it?</p>
           <p>A broad request leaves edge cases open. Without a shared description of the expected behaviour, each person or agent fills the gaps differently, and reviewers have nothing firm to compare the result with.</p>
-          <p class="source-note">Concept reference: <a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit’s specification-driven development methodology</a>.</p>
           <h3>One specification, two jobs</h3>
           <p>Before implementation, the specification instructs the work: the technical plan and tasks are derived from it. After implementation, it defines the check: tests and reviewers compare the result with its acceptance criteria, the conditions used to judge whether the change is satisfactory.</p>
           <figure class="concept-figure">
@@ -173,6 +175,7 @@
           <h3>Change the specification with the work</h3>
           <p>A specification can be incomplete or wrong. When the intended behaviour changes, update the specification, code and checks together so they continue to agree. Use automated tests where behaviour is observable; keep human review for judgements the tests do not cover.</p>
           <p class="next-step"><strong>Next step:</strong> choose one requested change and write three acceptance criteria for it: the expected result, an edge case and something that must not change.</p>
+          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: GitHub Spec Kit, Specification-Driven Development">[2]</a>.</p>
         </section>
         <section id="context-engineering">
           <h2>Context engineering</h2>
@@ -180,7 +183,6 @@
           <p class="concept-question"><strong>Question it answers:</strong> what does the agent need to know for this task, and which sources can it trust?</p>
           <p>An agent given a correct specification can still call an obsolete interface or miss a team convention, because the information it needed was missing, out of date or buried. Supplying every document is not a reliable remedy. A model can consider only a limited amount of text at once, and irrelevant material makes the useful evidence harder to find.</p>
           <p>Think of briefing a capable contractor who has never seen your building. You give them the drawings for the rooms they will work on, point out which drawings are out of date and tell them where the full archive is kept. You do not hand over the whole archive and hope they find the right page.</p>
-          <p class="source-note">Concept reference: <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic’s effective context engineering for AI agents</a>.</p>
           <h3>Select a working set, then retrieve on demand</h3>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
@@ -226,6 +228,7 @@
           <h3>Check relevance and authority</h3>
           <p>Stale or conflicting sources can misdirect the work. Identify the current source and resolve contradictions before the agent starts. Treat retrieved documents and logs as evidence to assess, not as instructions that override the task. Follow applicable data-handling rules when selecting material for an agent.</p>
           <p class="next-step"><strong>Next step:</strong> for the next task you give an agent, list the few sources it most needs and check that each one describes the current state of the code or decision.</p>
+          <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: Anthropic, Effective context engineering for AI agents">[3]</a>.</p>
         </section>
         <section id="harness-engineering">
           <h2>Harness engineering</h2>
@@ -233,7 +236,7 @@
           <p class="concept-question"><strong>Question it answers:</strong> can the agent run the work, check it, and stop safely when it should?</p>
           <p>Clear instructions alone do not give an agent a way to start the application, run the tests or inspect a failure. Without these, it can only report that the work looks finished. Without limits, a struggling agent may retry indefinitely or reach for access it should not have.</p>
           <p>A harness is to an agent what a workshop is to a technician: the tools, the test bench and the safety rules they work within.</p>
-          <p class="source-note">Concept reference: <a href="https://openai.com/index/harness-engineering/">OpenAI’s harness engineering account</a>. This is one team’s experience, not a required operating model.</p>
+          <p>OpenAI’s account of harness engineering describes one team’s experience, not a required operating model.</p>
           <h3>Check five parts of the harness</h3>
           <p>The Walking Labs course organises a harness into five parts. Use this teaching model to identify what a task needs; the components can be supplied by an existing agent tool.</p>
           <ul>
@@ -243,7 +246,7 @@
             <li><strong>State:</strong> save completed work, remaining tasks and blockers so another session can resume.</li>
             <li><strong>Feedback:</strong> return test results, application behaviour and diagnostic logs the agent can act on.</li>
           </ul>
-          <p class="source-note">Learning reference: <a href="https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/">Walking Labs: What a harness actually is</a>. Its five-part model is a teaching framework, not an industry standard.</p>
+          <p>This five-part model comes from Walking Labs’ teaching material. It is a teaching framework, not an industry standard.</p>
           <h3>Build a bounded feedback loop</h3>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 4, scrolls sideways on narrow screens">
@@ -280,15 +283,14 @@
           <h3>Keep checks meaningful and review independent</h3>
           <p>Passing checks provides evidence about the cases they cover. Check that those cases represent the intended behaviour, including failures and important user journeys. Keep consequential acceptance decisions with the responsible reviewer; an agent’s self-assessment is not independent evidence.</p>
           <p>Investigate repeated failures before adding retries or permissions. Maintain the harness as the application and tools change. Anthropic’s long-running agent experiments used progress records, small increments and end-to-end checks to help later sessions resume work; these results describe a particular application-development setup.</p>
-          <p class="source-note">Further reading: <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Anthropic’s effective harnesses for long-running agents</a>.</p>
           <p class="next-step"><strong>Next step:</strong> try the <a href="https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/#exercises">Walking Labs harness audit exercise</a> on one small task. Record a gap in the five parts, improve it, and compare completion evidence, retries and review effort on similar runs.</p>
+          <p class="source-ref">Sources: <a href="#source-4" aria-label="Source 4: OpenAI, Harness engineering">[4]</a>; <a href="#source-5" aria-label="Source 5: Walking Labs, What a harness actually is">[5]</a>; <a href="#source-6" aria-label="Source 6: Anthropic, Effective harnesses for long-running agents">[6]</a>.</p>
         </section>
         <section id="loop-engineering">
           <h2>Loop engineering</h2>
           <p>Loop engineering designs how an agent repeatedly acts, observes results and adjusts its approach towards a goal. It includes the checks that guide another attempt and the conditions that end the run. This overlaps with harness engineering: many harnesses already supply an execution loop.</p>
           <p class="concept-question"><strong>Question it answers:</strong> what goal, checks and stopping condition let an agent iterate on its own, and when does it stop?</p>
           <p>Prompting an agent by hand, one turn at a time, does not scale to work that needs many attempts, such as fixing a failing test suite or clearing a backlog of small changes. Left to run without a goal or a limit, the same agent can iterate indefinitely, repeat a failed approach or spend far more than the task is worth.</p>
-          <p class="source-note">Concept reference: <a href="https://www.ibm.com/think/topics/loop-engineering">IBM’s explanation of loop engineering</a>.</p>
           <h3>Design the cycle, the check and the stop</h3>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 5, scrolls sideways on narrow screens">
@@ -327,6 +329,7 @@
           <h3>Keep the loop bounded and legible</h3>
           <p>A loop is only as trustworthy as its check. A passing check confirms what it measures, not that the work is right, so keep a person accountable for the result. Watch for a widening gap between the code the loop produces and what people still understand; IBM calls this comprehension debt. Record each cycle’s outcome in a durable place so a later run, or a reviewer, can see what the loop tried.</p>
           <p class="next-step"><strong>Next step:</strong> take one repetitive task and write its goal, its machine-checkable stopping condition and its iteration or budget cap before you let an agent run it unattended.</p>
+          <p class="source-ref">Source: <a href="#source-7" aria-label="Source 7: IBM, Loop engineering">[7]</a>.</p>
         </section>
         <section id="graph-engineering">
           <h2>Graph engineering</h2>
@@ -334,7 +337,7 @@
           <p class="concept-question"><strong>Question it answers:</strong> which specialised steps should exist, how does work move between them, and where does a person decide?</p>
           <p>A task may need different handling for different inputs, or checks before later actions can run. Explicit steps and routes make these decisions inspectable. Add this structure when it solves a coordination problem; a single agent can already use tools, save progress and receive external checks.</p>
           <p>In this section, a graph means a planned map of how the work should flow, with explicit steps and conditions. It does not mean a knowledge graph of facts and relationships.</p>
-          <p class="source-note">Terminology reference: <a href="https://www.puppygraph.com/learn/graph-engineering">PuppyGraph’s explanation of graph engineering</a>. For routing and workflow design, see <a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic’s Building effective agents</a>. The label is emerging; workflow graphs are an established design technique.</p>
+          <p>The label “graph engineering” is emerging; workflow graphs are an established design technique.</p>
           <h3>Decide the nodes, the routes and the shared state</h3>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 6, scrolls sideways on narrow screens">
@@ -368,13 +371,14 @@
           <h3>Add nodes only when a single loop cannot cope</h3>
           <p>More nodes mean more coordination, more cost and more ways to fail: branches can duplicate work, overwrite shared state or pass a wrong result downstream. Start with the simplest shape that works and add a node only when a single loop hits a real limit. Record which path each run took, because a graph no longer produces one linear transcript to read.</p>
           <p class="next-step"><strong>Next step:</strong> take a task you are tempted to split across agents and sketch its nodes, the routes between them and the one point where a person approves the result. Confirm a single loop could not do it more simply.</p>
+          <p class="source-ref">Sources: <a href="#source-8" aria-label="Source 8: PuppyGraph, Graph engineering">[8]</a>; <a href="#source-9" aria-label="Source 9: Anthropic, Building effective agents">[9]</a>.</p>
         </section>
         <section id="software-factory">
           <h2>Software factory: light and dark</h2>
           <p>In this guide, a software factory is a delivery system that coordinates agent work, checks, release decisions and feedback from use. Addy Osmani describes two operating choices: a <strong>light factory</strong> retains human reading of changes, while a <strong>dark factory</strong> ships changes without that reading step. These labels describe review arrangements, not maturity levels.</p>
           <p class="concept-question"><strong>Question it answers:</strong> how much autonomy can we give the loops, and where must a person still read and decide?</p>
           <p>When agents produce changes faster than a team can assess them, work can accumulate in review. Removing review changes the risk as well as the queue. Measure review time, defects, recovery effort and running costs before deciding which part of delivery needs improvement.</p>
-          <p class="source-note">Concept reference: <a href="https://addyosmani.com/blog/software-factories/">Addy Osmani’s “Software Factories, Light and Dark”</a>, also published on <a href="https://www.oreilly.com/radar/software-factories-light-and-dark/">O’Reilly Radar</a>. This is one practitioner’s account, not a required operating model.</p>
+          <p>The light and dark distinction comes from Addy Osmani’s account, which describes one practitioner’s experience rather than a required operating model.</p>
           <h3>Put the human judgement where a wrong call is expensive</h3>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 7, scrolls sideways on narrow screens">
@@ -407,8 +411,26 @@
           </aside>
           <h3>Watch what a dark factory hides</h3>
           <p>Unattended changes can leave people with less understanding of the system they maintain, a risk Osmani calls comprehension debt. Preserve design decisions, review representative changes and rehearse diagnosis and recovery. Passing tests do not establish that the team can explain or repair the resulting system.</p>
-          <p class="source-note">The light and dark distinction comes from Osmani’s account. The pilot and release checks above are recommendations for evaluating a proposed workflow.</p>
+          <p>The pilot and release checks above are recommendations for evaluating a proposed workflow.</p>
           <p class="next-step"><strong>Next step:</strong> choose one candidate workflow and document its permitted changes, completion evidence, review decision and recovery procedure. Evaluate it in a test environment before proposing unattended release.</p>
+          <p class="source-ref">Sources: <a href="#source-10" aria-label="Source 10: Addy Osmani, Software Factories, Light and Dark">[10]</a>; <a href="#source-11" aria-label="Source 11: O’Reilly Radar, Software Factories, Light and Dark">[11]</a>.</p>
+        </section>
+
+        <section id="sources">
+          <h2>Sources</h2>
+          <ol class="source-list">
+            <li id="source-1"><a href="https://intent-driven.dev/knowledge/intent-driven-development/">Intent-Driven Development, intent-driven.dev</a></li>
+            <li id="source-2"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
+            <li id="source-3"><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a></li>
+            <li id="source-4"><a href="https://openai.com/index/harness-engineering/">OpenAI, Harness engineering</a></li>
+            <li id="source-5"><a href="https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/">Walking Labs, What a harness actually is</a></li>
+            <li id="source-6"><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Anthropic, Effective harnesses for long-running agents</a></li>
+            <li id="source-7"><a href="https://www.ibm.com/think/topics/loop-engineering">IBM, Loop engineering</a></li>
+            <li id="source-8"><a href="https://www.puppygraph.com/learn/graph-engineering">PuppyGraph, Graph engineering</a></li>
+            <li id="source-9"><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic, Building effective agents</a></li>
+            <li id="source-10"><a href="https://addyosmani.com/blog/software-factories/">Addy Osmani, Software Factories, Light and Dark</a></li>
+            <li id="source-11"><a href="https://www.oreilly.com/radar/software-factories-light-and-dark/">O’Reilly Radar, Software Factories, Light and Dark</a></li>
+          </ol>
         </section>
         <footer class="article-footer"><a href="index.html">Back to the introduction</a><span>Sources reviewed 28 September 2026</span></footer>
       </article>
@@ -423,6 +445,7 @@
         <a href="#loop-engineering">Loop engineering</a>
         <a href="#graph-engineering">Graph engineering</a>
         <a href="#software-factory">Software factory: light and dark</a>
+        <a href="#sources">Sources</a>
       </nav>
     </aside>
   </div>

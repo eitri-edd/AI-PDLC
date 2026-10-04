@@ -26,8 +26,10 @@
           <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-PDLC</a>
           <a href="product-ideation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
           <a href="product-implementation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow</a>
           <a href="training.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -66,12 +68,13 @@
 
         <section id="about-training">
           <h2>What the training teaches</h2>
-          <p>The Eitri Agentic Dev Workflow is a set of agent skills for turning user stories into tested, reviewed code with AI coding agents. It builds on Matt Pocock’s agentic engineering skills, which cover specification, ticket breakdown, implementation, code review and bug diagnosis (<a href="https://github.com/mattpocock/skills">Matt Pocock, skills</a>). Eitri adds story sequencing, compliance review, architecture boundary tests, ticket quality checks, a self-correcting implementation loop and browser-based acceptance evidence (<a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">SGTechStack, Eitri self-paced training</a>).</p>
-          <p>The workflow uses the same skills and the same two human sign-offs as the EDS workflow summarised on the product implementation page. <a href="product-implementation.html#eds-workflow">Read the EDS workflow summary</a> for the governed sequence; use this page to learn the concepts behind it.</p>
+          <p>The Eitri Agentic Dev Workflow is a set of agent skills for turning user stories into tested, reviewed code with AI coding agents. It builds on Matt Pocock’s agentic engineering skills, which cover specification, ticket breakdown, implementation, code review and bug diagnosis. Eitri adds story sequencing, compliance review, architecture boundary tests, ticket quality checks, a self-correcting implementation loop and browser-based acceptance evidence.</p>
+          <p>The workflow uses the same skills and the same two human sign-offs as the EDS workflow described in the EDS AI Workflow guide. <a href="eds-ai-workflow.html">Read the EDS workflow summary</a> for the governed sequence; use this page to learn the concepts behind it.</p>
           <aside class="callout" aria-label="Note on prerequisites">
             <p class="example-label">Note</p>
             <p>The training expects a software development background. Without experience of writing, testing and shipping code, you cannot critically review what the agent produces, and the workflow depends on that review.</p>
           </aside>
+          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Matt Pocock, skills">[1]</a>; <a href="#source-2" aria-label="Source 2: SGTechStack, Eitri Agentic Dev Workflow self-paced training">[2]</a>.</p>
         </section>
 
         <section id="course-map">
@@ -109,7 +112,7 @@
           <h2>Key concept: how language models behave</h2>
           <p>The workflow’s design follows from a few properties of large language models (LLMs). Understanding them explains why the workflow writes everything down, keeps context small and trusts tests over appearances.</p>
           <h3>Context has limits, and quality drops before them</h3>
-          <p>The context window is all the text a model can see in one call: instructions, code and conversation. The training uses a rule of thumb that models reason most reliably in roughly the first 40% of their context limit, the “smart zone”, and degrade beyond it. Separately, research has found that models recall information in the middle of a long context less accurately than information at the start or end (<a href="https://arxiv.org/abs/2307.03172">Liu et al., Lost in the Middle</a>). Put critical instructions first, and do not bury key reference material mid-context.</p>
+          <p>The context window is all the text a model can see in one call: instructions, code and conversation. The training uses a rule of thumb that models reason most reliably in roughly the first 40% of their context limit, the “smart zone”, and degrade beyond it. Separately, research by Liu et al. has found that models recall information in the middle of a long context less accurately than information at the start or end. Put critical instructions first, and do not bury key reference material mid-context.</p>
           <h3>Models remember nothing between calls</h3>
           <div class="table-scroll"><table><caption>The three memory stores described in the training</caption><thead><tr><th scope="col">Store</th><th scope="col">What it is</th><th scope="col">Lasts</th></tr></thead><tbody>
             <tr><th scope="row">In-context</th><td>The current prompt and conversation</td><td>Only for the current call or session</td></tr>
@@ -123,11 +126,12 @@
             <li><strong>Non-determinism</strong> means the same input can produce different output on each run, so output that looked right once may not the next time.</li>
           </ul>
           <p>Both lead to the same safeguard: human review for judgement, and machine-verifiable tests as the signal that work is finished.</p>
+          <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: Liu et al., Lost in the Middle: How Language Models Use Long Contexts">[3]</a>.</p>
         </section>
 
         <section id="context-and-loops">
           <h2>Key concept: engineer the context and the loop</h2>
-          <p>Prompt engineering is about how you phrase an instruction. The training recommends role framing, describing the behaviour you want rather than what to avoid, asking for step-by-step reasoning and stating explicit completion criteria. Context engineering is about what information is in the window at each step. As the window fills, recall degrades silently, which the training calls context rot. The design rule is to pre-load only what is always needed and retrieve everything else just in time (<a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a>). <a href="concept.html#context-engineering">Read about context engineering</a>.</p>
+          <p>Prompt engineering is about how you phrase an instruction. The training recommends role framing, describing the behaviour you want rather than what to avoid, asking for step-by-step reasoning and stating explicit completion criteria. Context engineering is about what information is in the window at each step. As the window fills, recall degrades silently, which the training calls context rot. The design rule is to pre-load only what is always needed and retrieve everything else just in time. <a href="concept.html#context-engineering">Read about context engineering</a>.</p>
           <h3>Choose how the agent gets information</h3>
           <div class="table-scroll"><table class="wide-table"><caption>Three ways to supply knowledge, as the training describes them</caption><thead><tr><th scope="col">Mechanism</th><th scope="col">How it works</th><th scope="col">Best for</th></tr></thead><tbody>
             <tr><th scope="row">Retrieval-augmented generation (RAG)</th><td>Documents are split into chunks, indexed and searched on each request; the most relevant chunks are added to the context</td><td>Stable reference knowledge, such as framework guides</td></tr>
@@ -161,6 +165,7 @@
           <p>Finish research, questions and planning before writing code. Interleaving them causes three failures: research uses up context needed for coding, the agent describes what it would do instead of doing it, and ambiguities surface mid-implementation. The training describes this separation as Questions, Research, Structure, Plan, Implement (QRSPI).</p>
           <h3>Package procedures as skills</h3>
           <p>A skill is a reusable capability in a <code>SKILL.md</code> file, with instructions, scripts and resources, invoked as a slash command. Only each skill’s name and one-line description load at start-up; the full instructions load when the skill is used. This progressive disclosure is how Eitri adds skills without filling every session’s context.</p>
+          <p class="source-ref">Source: <a href="#source-4" aria-label="Source 4: Anthropic, Effective context engineering for AI agents">[4]</a>.</p>
         </section>
 
         <section id="development-principles">
@@ -170,22 +175,24 @@
             <tr><th scope="row">Human-in-the-loop design</th><td>People review at defined checkpoints for judgement; the system corrects itself only where the result is machine-verifiable</td><td>Scope changes and compliance sign-off cannot be verified automatically. A gate that can be bypassed, even by accident, is not a gate.</td></tr>
             <tr><th scope="row">Specification first</th><td>A complete specification exists before implementation, and wins when code and specification disagree</td><td>The agent implements intent instead of inventing it mid-loop, which prevents intent drift</td></tr>
             <tr><th scope="row">Test-driven development (TDD)</th><td>Write a failing test, make it pass with minimal code, then refactor</td><td>Passing tests are the objective signal that the loop has converged</td></tr>
-            <tr><th scope="row">Architecture decision records (ADRs)</th><td>Short records of context, decision and consequences, kept in version control</td><td>A later session can see that a choice was deliberate instead of silently reversing it (<a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Nygard, Documenting architecture decisions</a>)</td></tr>
+            <tr><th scope="row">Architecture decision records (ADRs)</th><td>Short records of context, decision and consequences, kept in version control</td><td>A later session can see that a choice was deliberate instead of silently reversing it</td></tr>
             <tr><th scope="row">Tracer bullets</th><td>Thin vertical slices that cut through data, logic, interface and tests</td><td>A horizontal slice cannot be tested end to end, so the agent cannot verify its own output</td></tr>
             <tr><th scope="row">Living documentation</th><td>Documented standards are kept in step with reality</td><td>Agents treat repository documentation as instructions and follow stale rules faithfully</td></tr>
           </tbody></table></div>
           <p><a href="concept.html#spec-driven-development">Read about spec-driven development</a>.</p>
+          <p class="source-ref">Source: <a href="#source-5" aria-label="Source 5: Michael Nygard, Documenting architecture decisions">[5]</a>.</p>
         </section>
 
         <section id="multi-agent">
           <h2>Key concept: multi-agent patterns</h2>
-          <p>Several Eitri skills split work across agents. Four patterns explain how they do it without losing accuracy (<a href="https://www.anthropic.com/research/building-effective-agents">Anthropic, Building effective agents</a>):</p>
+          <p>Several Eitri skills split work across agents. Four patterns, described by Anthropic, explain how they do it without losing accuracy:</p>
           <ul>
             <li><strong>Orchestrator and workers:</strong> the orchestrator sequences work and routes blockers but does not read files or make implementation decisions, which would fill its context and weaken coordination.</li>
             <li><strong>Subagents with isolated context:</strong> each subagent starts with a clean context, a restricted tool set and one bounded task, so work on one ticket cannot pollute another.</li>
             <li><strong>Independent review:</strong> a reviewing agent receives only the final output and the original specification. If it inherits the implementer’s conversation, it tends to judge the reasoning rather than whether the code meets the specification.</li>
             <li><strong>Parallel, specialised work:</strong> independent tasks, such as several compliance checks, can run at the same time, and simpler tasks can go to cheaper models.</li>
           </ul>
+          <p class="source-ref">Source: <a href="#source-6" aria-label="Source 6: Anthropic, Building effective agents">[6]</a>.</p>
         </section>
 
         <section id="po-workflow">
@@ -306,20 +313,20 @@
             </ol>
             <p>Answers to these and more are in each lesson’s “Food for thought” sections and knowledge checks.</p>
           </details>
-          <p class="next-step"><strong>Next step:</strong> <a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">open the Eitri self-paced training</a> and start with the prerequisites. Then <a href="product-implementation.html#eds-workflow">read the EDS workflow summary</a> to see the same skills in the governed sequence.</p>
+          <p class="next-step"><strong>Next step:</strong> <a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">open the Eitri self-paced training</a> and start with the prerequisites. Then <a href="eds-ai-workflow.html">read the EDS workflow summary</a> to see the same skills in the governed sequence.</p>
+          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: SGTechStack, Eitri Agentic Dev Workflow self-paced training">[2]</a>.</p>
         </section>
 
         <section id="sources">
           <h2>Sources</h2>
-          <p>Source review: 28 September 2026. This page summarises the training; its course structure, skills, verdicts, gates and context model are reported as the training states them, not as DSTA policy. The study plan and check questions are editorial suggestions for this guide.</p>
-          <ul>
-            <li><a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">SGTechStack, Eitri Agentic Dev Workflow self-paced training</a> — course structure, foundations, PO workflow, skills and context injection.</li>
-            <li><a href="https://github.com/mattpocock/skills">Matt Pocock, skills</a> — the baseline agentic engineering skills.</li>
-            <li><a href="https://arxiv.org/abs/2307.03172">Liu et al., Lost in the Middle: How Language Models Use Long Contexts</a> — recall of information by position in the context.</li>
-            <li><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a> — pre-loading and just-in-time retrieval.</li>
-            <li><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic, Building effective agents</a> — orchestrator and worker patterns.</li>
-            <li><a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Michael Nygard, Documenting architecture decisions</a> — architecture decision records.</li>
-          </ul>
+          <ol class="source-list">
+            <li id="source-1"><a href="https://github.com/mattpocock/skills">Matt Pocock, skills</a></li>
+            <li id="source-2"><a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">SGTechStack, Eitri Agentic Dev Workflow self-paced training</a></li>
+            <li id="source-3"><a href="https://arxiv.org/abs/2307.03172">Liu et al., Lost in the Middle: How Language Models Use Long Contexts</a></li>
+            <li id="source-4"><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a></li>
+            <li id="source-5"><a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Michael Nygard, Documenting architecture decisions</a></li>
+            <li id="source-6"><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic, Building effective agents</a></li>
+          </ol>
         </section>
         <footer class="article-footer"><span>AI-Product Development Lifecycle</span><span>EDS · DSTA</span></footer>
       </article>
