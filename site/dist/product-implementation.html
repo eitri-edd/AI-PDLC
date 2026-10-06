@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The strategy for turning agreed product intent into tested software: readiness, six stages, independent assurance, autonomy and measures, run with the EDS AI Workflow.">
+  <meta name="description" content="The strategy for turning agreed product intent into tested software: readiness, six stages, independent assurance, autonomy and measures, run with the EDS AI Workflow (Eitri).">
   <title>Product implementation · AI-PDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
@@ -29,8 +29,15 @@
           <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-PDLC</a>
           <a href="product-ideation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
           <a href="product-implementation.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
-          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow</a>
-          <a href="training.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
     </aside>
@@ -54,7 +61,7 @@
             <a href="#factory-platform">Factory platform</a>
             <a href="#autonomy">Autonomy</a>
             <a href="#measure-loop">Measure the loop</a>
-            <a href="#eds-workflow">Use the EDS AI Workflow</a>
+            <a href="#eds-workflow">Use the EDS AI Workflow (Eitri)</a>
             <a href="#sources">Sources</a>
           </nav>
         </details>
@@ -147,9 +154,9 @@
           <h3>Use the TRD as a decision record</h3>
           <p>A strong TRD explains the affected components, integration boundaries, data flows, API or event contracts, storage, identity and authorisation, failure handling, monitoring, performance, migration, rollout, rollback and unresolved risks. Each major decision traces to the PRD requirement it serves. Recording non-goals, alternatives considered and rejected trade-offs stops later tasks from silently redesigning the system.</p>
           <h3>Write tasks as units of verification</h3>
-          <p>A task is ready when it describes a bounded change in behaviour and makes completion independently decidable. It links to the PRD acceptance criteria and TRD decisions it implements. It also names its change boundary, dependencies and execution environment, the checks its risk requires, the evidence expected and its independent review route. The EDS AI Workflow turns this into an <a href="eds-ai-workflow.html#planning">execution-ready checklist and feature contract</a>.</p>
+          <p>A task is ready when it describes a bounded change in behaviour and makes completion independently decidable. It links to the PRD acceptance criteria and TRD decisions it implements. It also names its change boundary, dependencies and execution environment, the checks its risk requires, the evidence expected and its independent review route. The EDS AI Workflow turns this into <a href="eds-developer-harness.html#check">eight issue-verification criteria and a human readiness gate</a>.</p>
           <h3>Give each agent enough context, and no more</h3>
-          <p>Relevant context helps an agent work within the intended scope, but does not guarantee correct output. Manage context like a product: versioned, attributable, scoped to a domain or repository, discoverable and checked for freshness. Give an agent enough to make the current decision, and disclose deeper guidance only when the task, risk or uncertainty justifies it. Log the context and tools used, so reviewers can reconstruct what informed an outcome. <a href="eds-ai-workflow.html#context">See which context the EDS AI Workflow loads at each stage</a>, or <a href="concept.html#context-engineering">read about context engineering</a>.</p>
+          <p>Relevant context helps an agent work within the intended scope, but does not guarantee correct output. Manage context like a product: versioned, attributable, scoped to a domain or repository, discoverable and checked for freshness. Give an agent enough to make the current decision, and disclose deeper guidance only when the task, risk or uncertainty justifies it. Log the context and tools used, so reviewers can reconstruct what informed an outcome. <a href="eds-team-context.html#matrix">See which context the EDS AI Workflow loads at each stage</a>, or <a href="concept.html#context-engineering">read about context engineering</a>.</p>
           <p class="next-step"><strong>Next step:</strong> pick one task in your backlog. Check that it links to an acceptance criterion and a TRD decision, and that someone other than its implementer could decide whether it is done.</p>
           <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 3; <a href="#source-3" aria-label="Source 3: GitHub Spec Kit, Specification-Driven Development">[3]</a>.</p>
         </section>
@@ -221,7 +228,7 @@
             <li>Use mutation testing, where worthwhile, to check whether tests would catch meaningful faults; line coverage alone is weak assurance.</li>
             <li>Treat flaky tests as defects with an owner, and make test data, dependencies, models, prompts and environments reproducible.</li>
           </ul>
-          <p>The EDS AI Workflow sets <a href="eds-ai-workflow.html#implementation">default gates and thresholds</a> for these checks, and names the <a href="eds-ai-workflow.html#verification">independent judge and closeout steps</a>.</p>
+          <p>The EDS AI Workflow sets <a href="eds-developer-harness.html#do-work">default gates and thresholds</a> for these checks, and defines the <a href="eds-developer-harness.html#closeout">closeout steps</a> and <a href="eds-path-to-production.html">pipeline gates</a> that provide independent evidence.</p>
           <h3>Evaluate AI behaviour across repeated trials</h3>
           <p>This applies when evaluating a development agent or a product that contains AI. Anthropic’s agent evaluation guidance distinguishes a task, repeated trials, grading and the actual outcome, and combines executable checks, model-based assessment and human judgement where each fits.</p>
           <p>Record the dataset, model, instructions, tools and environment. Repeat representative tasks because outputs vary, and check final state and side effects, not only the response. Calibrate model-based graders against human judgement and keep regression cases for fixed failures. Agree the acceptance rule before running the evaluation, and report failures by case type; for the service desk assistant, an overall pass rate could hide failures on restricted-information cases.</p>
@@ -299,18 +306,18 @@
         </section>
 
         <section id="eds-workflow">
-          <h2>Put the strategy into practice with the EDS AI Workflow</h2>
-          <p>The playbook describes a minimum operating pattern: classify the change, confirm readiness, approve the TRD, slice the work, implement test-first, run independent assurance, accept the quality report, release progressively and close the learning loop. Use the EDS AI Workflow to run this pattern. It supplies the roles, skills, human gates, default thresholds and evidence that this strategy leaves open. The mapping below is this guide’s interpretation; neither document states it.</p>
+          <h2>Put the strategy into practice with the EDS AI Workflow (Eitri)</h2>
+          <p>The playbook describes a minimum operating pattern: classify the change, confirm readiness, approve the TRD, slice the work, implement test-first, run independent assurance, accept the quality report, release progressively and close the learning loop. Use the EDS AI Workflow, with Eitri as its developer harness, to run this pattern. It supplies the roles, skills, human gates, default thresholds, pipeline gates and evidence that this strategy leaves open. The mapping below is this guide’s interpretation; neither document states it.</p>
           <div class="table-scroll"><table class="wide-table"><caption>How the EDS AI Workflow implements the strategy on this page</caption><thead><tr><th scope="col">Strategy, with playbook section</th><th scope="col">How the EDS AI Workflow implements it</th></tr></thead><tbody>
-            <tr><th scope="row">Readiness package (2)</th><td>The PO or BA hands over the PRD; one-time setup connects the tracker, standards and architecture tests. <a href="eds-ai-workflow.html#setup">Prepare the team</a>.</td></tr>
-            <tr><th scope="row">Plan (4.1)</th><td><code>/wayfinder</code>, <code>/to-spec</code> and <code>/grill-me</code> produce a challenged TRD; <code>/spec-compliance</code> and human gate HITL 1 approve it. <a href="eds-ai-workflow.html#planning">Plan the work</a>.</td></tr>
-            <tr><th scope="row">Slice (4.2)</th><td><code>/to-tickets</code> and <code>/issue-verification</code> create tracer-bullet issues; HITL 2 marks them ready to build.</td></tr>
-            <tr><th scope="row">Implement, with inner correction (4.3, 5.2)</th><td><code>/do-work</code> runs the convergence loop under a sprint contract and configured gates. <a href="eds-ai-workflow.html#implementation">Run the loop</a>.</td></tr>
-            <tr><th scope="row">Verify, with outer assurance (4.4, 5)</th><td>An independent judge assesses three layers of evidence; closeout ends with human lead review. <a href="eds-ai-workflow.html#verification">Prove completion</a>.</td></tr>
-            <tr><th scope="row">Release and observe (4.5)</th><td>A production sign-off checklist and the Tech Lead’s recorded release decision. The handbook stops at release readiness, so plan rollout and recovery as described above. <a href="eds-ai-workflow.html#release">Check readiness</a>.</td></tr>
+            <tr><th scope="row">Readiness package (2)</th><td>The PO or BA hands over the PRD through one of three paths; installation and one-time setup connect the tracker, standards, context and architecture tests. <a href="eds-po-ba-harness.html">Hand off the PRD</a> and <a href="eds-team-context.html">add team context</a>.</td></tr>
+            <tr><th scope="row">Plan (4.1)</th><td><code>/dependency-orchestrator</code> sequences the stories; <code>/wayfinder</code> or <code>/grill-with-docs</code> and <code>/to-spec</code> produce a user story level TRD; <code>/spec-standards-check</code>, <code>/spec-compliance</code> and human gate HITL 1 approve it. <a href="eds-developer-harness.html#plan">Plan a story</a>.</td></tr>
+            <tr><th scope="row">Slice (4.2)</th><td><code>/to-tickets</code> and <code>/issue-verification</code> create tracer-bullet issues; HITL 2 marks them ready to build. <a href="eds-developer-harness.html#check">Check and slice</a>.</td></tr>
+            <tr><th scope="row">Implement, with inner correction (4.3, 5.2)</th><td><code>/do-work</code> repeats implement, review and fix until no must-fix findings remain, then runs the validation gates. <a href="eds-developer-harness.html#do-work">Run the loop</a>.</td></tr>
+            <tr><th scope="row">Verify, with outer assurance (4.4, 5)</th><td>Closeout adds feature architecture tests, a two-axis review, and browser and end-to-end evidence; pipeline stages repeat the checks at wider scope. <a href="eds-developer-harness.html#closeout">Close out</a>.</td></tr>
+            <tr><th scope="row">Release and observe (4.5)</th><td>Pipeline stages 4.1–4.4 end with <code>/pre-prod-check</code> and the Tech Lead’s sign-off. The harness stops at release readiness, so plan rollout and recovery as described above. <a href="eds-path-to-production.html">Follow the path to production</a>.</td></tr>
             <tr><th scope="row">Learn (4.6)</th><td>Harness diagnosis turns execution failures into factory corrections. Product learning follows the Learn stage above. <a href="eds-ai-workflow.html#harness">Diagnose failures</a>.</td></tr>
-            <tr><th scope="row">Context (3.3)</th><td>Standards in indexed files, with different sources loaded at each stage. <a href="eds-ai-workflow.html#context">Manage context</a>.</td></tr>
-            <tr><th scope="row">Autonomy (7)</th><td>Three execution modes: local interactive, local autonomous, and cloud or CI autonomous. <a href="eds-ai-workflow.html#implementation">Choose a mode</a>.</td></tr>
+            <tr><th scope="row">Context (3.3)</th><td>Standards in indexed files, mapped to each story, with different sources loaded at each stage. <a href="eds-team-context.html">Add team context</a>.</td></tr>
+            <tr><th scope="row">Autonomy (7)</th><td>Three execution modes: local interactive, local autonomous, and cloud or CI autonomous. <a href="eds-developer-harness.html#modes">Choose a mode</a>.</td></tr>
             <tr><th scope="row">Measures (8)</th><td>Harness health measures, such as verified completion rate, complement the delivery and product measures above. <a href="eds-ai-workflow.html#workflow-health">Measure workflow health</a>.</td></tr>
           </tbody></table></div>
           <h3>Check pilot readiness</h3>
@@ -323,16 +330,16 @@
             <li>build agents run in constrained environments and cannot silently bypass repository, review or pipeline protections; and</li>
             <li>end-to-end tests are derived from user stories and keep reproducible evidence for critical journeys.</li>
           </ul>
-          <p>The EDS team-readiness checklist covers the tooling side of these checks: tracker, standards, repository conventions, context sources and architecture tests.</p>
-          <p class="next-step"><strong>Next step:</strong> go through the pilot readiness list with your squad and note each item you cannot yet confirm. Then <a href="eds-ai-workflow.html">read the EDS AI Workflow guide</a> and complete its team setup.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> sections 9 and 9.1; <a href="#source-2" aria-label="Source 2: EDS AI Development Workflow: Simplified Operating Handbook">[2]</a>.</p>
+          <p>The EDS <a href="eds-team-context.html#checklist">team context checklist</a> and <a href="eds-developer-harness.html#install">harness installation</a> cover the tooling side of these checks: tracker, standards, repository conventions, context sources and architecture tests.</p>
+          <p class="next-step"><strong>Next step:</strong> go through the pilot readiness list with your squad and note each item you cannot yet confirm. Then <a href="eds-ai-workflow.html">read the EDS AI Workflow overview</a> and complete its team setup.</p>
+          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: AI-PDLC Playbook, Chapter 3: Product Implementation">[1]</a> sections 9 and 9.1; <a href="#source-2" aria-label="Source 2: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[2]</a>.</p>
         </section>
 
         <section id="sources">
           <h2>Sources</h2>
           <ol class="source-list">
             <li id="source-1"><cite>AI-PDLC Playbook, Chapter 3: Product Implementation</cite></li>
-            <li id="source-2"><cite>EDS AI Development Workflow: Simplified Operating Handbook</cite></li>
+            <li id="source-2"><cite>Product Development Journey &amp; Workflow Harness (EDS harness documentation)</cite></li>
             <li id="source-3"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
             <li id="source-4"><a href="https://sre.google/workbook/canarying-releases/">Google SRE Workbook, Canarying Releases</a></li>
             <li id="source-5"><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Anthropic, Demystifying evals for AI agents</a></li>
@@ -353,7 +360,7 @@
         <a href="#factory-platform">Factory platform</a>
         <a href="#autonomy">Autonomy</a>
         <a href="#measure-loop">Measure the loop</a>
-        <a href="#eds-workflow">Use the EDS AI Workflow</a>
+        <a href="#eds-workflow">Use the EDS AI Workflow (Eitri)</a>
         <a href="#sources">Sources</a>
       </nav>
     </aside>

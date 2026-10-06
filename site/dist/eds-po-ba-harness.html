@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How product owners and business analysts use the EDS PO/BA harness to produce a PRD through the SpecKit, Socratic or CLARA path, and hand it to developers.">
+  <title>PO/BA harness · AI-PDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI-PDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-PDLC</span></a>
+      <span class="organisation">EDS <span aria-hidden="true">/</span> DSTA</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-PDLC</a>
+          <a href="product-ideation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
+          <a href="product-implementation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
+          <a href="eds-ai-workflow.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html" aria-current="page">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article label-first-column">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="ai-pdlc.html">AI-PDLC</a><span aria-hidden="true">/</span><a href="product-implementation.html">Product implementation</a><span aria-hidden="true">/</span><a href="eds-ai-workflow.html">EDS AI Workflow</a><span aria-hidden="true">/</span><span aria-current="page">PO/BA harness</span></nav>
+        <header class="article-header">
+          <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
+          <h1>PO/BA harness: from business need to PRD</h1>
+<p class="lead">The PO/BA harness helps product owners (POs) and business analysts (BAs) turn a business need into a product requirements document (PRD): business-level user stories, acceptance criteria and, where useful, an HTML prototype. Choose one of three paths, then commit the artefacts and hand them to the development team.</p>
+          <p>The harness does not govern how you gather requirements. The three paths are starting points that suit different levels of technical experience and feature complexity. For the strategy behind the handoff, including what makes a PRD ready, <a href="product-ideation.html#handover">read the handover section in Product ideation</a>.</p>
+          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-06">6 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+        </header>
+        <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
+            <a href="#choose-path">Choose a path</a>
+            <a href="#path-speckit">Path 1: SpecKit</a>
+            <a href="#path-socratic">Path 2: Socratic</a>
+            <a href="#path-clara">Path 3: CLARA</a>
+            <a href="#handoff">Hand off</a>
+            <a href="#sources">Sources</a>
+        </nav></details>
+        <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
+            <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+          </defs>
+        </svg>
+<section id="choose-path">
+          <h2>Choose a path</h2>
+          <p>Pick the path that matches who is writing the requirements and how much is still unknown. Each path produces a different set of files, but all three end in the same handoff.</p>
+          <figure class="concept-figure">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
+              <svg viewBox="0 0 680 300" role="img" aria-labelledby="fig-paths-title">
+                <title id="fig-paths-title">Three PO/BA paths join at one handoff. Path 1, SpecKit, is light and business-focused and produces spec.md. Path 2, the Socratic workflow, is deep and technical and produces an early-draft TRD on the tracker. Path 3, CLARA research, uses design thinking and produces files in a specs folder. All three are committed and handed off, with an optional prototype, to the developer harness from Step 2.</title>
+                <rect class="d-node" x="1" y="20" width="300" height="76" rx="8"/><text class="d-title" x="17" y="48">Path 1: SpecKit</text><text class="d-sub" x="17" y="72">Light · produces spec.md</text>
+                <rect class="d-node" x="1" y="112" width="300" height="76" rx="8"/><text class="d-title" x="17" y="140">Path 2: Socratic workflow</text><text class="d-sub" x="17" y="164">Deep · produces an early-draft TRD</text>
+                <rect class="d-node" x="1" y="204" width="300" height="76" rx="8"/><text class="d-title" x="17" y="232">Path 3: CLARA research</text><text class="d-sub" x="17" y="256">Strategic · produces files in specs/</text>
+                <path class="d-line" d="M301 58H380V142"/>
+                <path class="d-line" d="M301 242H380V158"/>
+                <path class="d-line" d="M301 150H456" marker-end="url(#arrow)"/>
+                <rect class="d-node d-node-accent" x="460" y="112" width="219" height="76" rx="8"/><text class="d-title" x="569" y="140" text-anchor="middle">Commit, hand off</text><text class="d-sub" x="569" y="164" text-anchor="middle">PRD, optional prototype</text>
+                <path class="d-line" d="M569 188V216" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="460" y="220" width="219" height="64" rx="8"/><text class="d-title" x="569" y="246" text-anchor="middle">Developer harness</text><text class="d-sub" x="569" y="270" text-anchor="middle">From Step 2</text>
+              </svg>
+            </div>
+            <figcaption>Figure 1. Three PO/BA paths produce different files, but all end in one committed handoff to the developer harness.</figcaption>
+          </figure>
+          <p>Path 1 suits simple or well-defined features and produces a <code>spec.md</code> file. Path 2 suits large or ambiguous features and produces an early-draft TRD on the issue tracker. Path 3 suits user research on new products and produces specification files in a <code>specs/</code> folder. Each path can add a prototype, and each ends with the same commit and handoff.</p>
+          <div class="table-scroll"><table class="wide-table"><caption>The three PO/BA paths compared</caption><thead><tr><th scope="col">Path</th><th scope="col">Best for</th><th scope="col">Main tools</th><th scope="col">Hands off</th></tr></thead><tbody>
+            <tr><th scope="row"><a href="#path-speckit">1. SpecKit</a></th><td>Non-technical POs or BAs with simple or well-defined features</td><td>SpecKit, with optional Google Stitch, Figma Make or an agent-built HTML prototype</td><td><code>spec.md</code> and an optional prototype</td></tr>
+            <tr><th scope="row"><a href="#path-socratic">2. Socratic workflow</a></th><td>Technical POs or BAs with large, ambiguous features whose scope is unclear</td><td><code>/wayfinder</code>, <code>/grilling</code>, <code>/prototype</code>, <code>/to-spec</code></td><td>An early-draft TRD on the tracker and an optional prototype branch</td></tr>
+            <tr><th scope="row"><a href="#path-clara">3. CLARA research</a></th><td>POs or BAs researching users for a new product or complex feature</td><td>CLARA, querying Confluence, with Prizm Design components for prototypes</td><td>Specification files in <code>specs/</code> and an optional prototype</td></tr>
+          </tbody></table></div>
+          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 1.</p>
+        </section>
+
+        <section id="path-speckit">
+          <h2>Path 1: SpecKit, for simple or well-defined features</h2>
+          <p>Use this path when the feature is understood and you need clear user stories quickly. SpecKit is GitHub’s open-source toolkit for spec-driven development; follow its own guide for the full command set.</p>
+          <ol class="practice-steps">
+            <li><strong>Generate the specification.</strong> Run <code>/speckit.constitution</code>, then <code>/speckit.specify</code>. The output is a <code>spec.md</code> file with the functional requirements and core user stories.</li>
+            <li><strong>Optionally, design or prototype the interface.</strong> Validate the requirements visually with stakeholders using one of three approaches:
+              <ul>
+                <li><em>Manual:</em> paste the user stories into Google Stitch or Figma Make to generate a design or functional prototype.</li>
+                <li><em>Agentic:</em> run <code>stitch::generate-design</code> from the Stitch skills inside your coding agent, passing the user stories as input.</li>
+                <li><em>Agent-built HTML:</em> ask your coding agent to generate a standalone HTML prototype from the user stories.</li>
+              </ul>
+            </li>
+            <li><strong>Optionally, hand off the prototype.</strong> Commit it alongside <code>spec.md</code> so developers can extract reusable UI components and keep screens consistent. For a Google Stitch project, developers run <code>stitch::react-components</code> or <code>stitch::shadcn-ui</code>. For a standalone HTML file, they use <code>/html-to-shadcn</code> <span class="status status-planned">Planned</span>.</li>
+          </ol>
+          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 1, Path 1.</p>
+        </section>
+
+        <section id="path-socratic">
+          <h2>Path 2: Socratic workflow, for large or ambiguous features</h2>
+          <p>Use this path when the full scope is unclear and requirements cannot be written until open questions are answered. It uses Matt Pocock’s skills to map the unknowns, resolve them one at a time and record the decisions.</p>
+          <ol class="practice-steps">
+            <li><strong>Map the unknowns.</strong> Run <code>/wayfinder</code>. It creates a shared map of investigation tickets on the issue tracker and labels each by the type of work it needs.</li>
+            <li><strong>Resolve the tickets one at a time,</strong> using the skill that matches each label (see the table below).</li>
+            <li><strong>Write the specification.</strong> Run <code>/to-spec</code> to compile the decisions, codebase constraints and prototype outcomes into an early-draft technical requirements document (TRD). It is published to the issue tracker as the handoff artefact.</li>
+            <li><strong>Optionally, hand off a UI prototype.</strong> If a prototype ticket produced UI variations, retrieve them from the <code>prototype/&lt;name&gt;</code> branch and hand them off with the specification. Developers can then use <code>/html-to-shadcn</code> <span class="status status-planned">Planned</span> to extract reusable components.</li>
+          </ol>
+          <div class="table-scroll"><table class="wide-table"><caption>Wayfinder ticket labels and how each is resolved</caption><thead><tr><th scope="col">Label</th><th scope="col">How it is resolved</th></tr></thead><tbody>
+            <tr><th scope="row"><code>wayfinder:grilling</code></th><td><code>/grilling</code> interviews the PO or BA until there is a shared understanding, building the domain model and updating architecture decision records (ADRs) as it goes.</td></tr>
+            <tr><th scope="row"><code>wayfinder:prototype</code></th><td><code>/prototype</code> builds a throwaway prototype to answer a design question: one shareable HTML file to test a logic or state model, or several HTML UI variations to settle what a screen should look like.</td></tr>
+            <tr><th scope="row"><code>wayfinder:research</code></th><td>A background research agent explores third-party APIs, documentation or codebase constraints.</td></tr>
+            <tr><th scope="row"><code>wayfinder:task</code></th><td>Manual setup work, such as provisioning access or migrating data, that unblocks a decision.</td></tr>
+          </tbody></table></div>
+          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 1, Path 2.</p>
+        </section>
+
+        <section id="path-clara">
+          <h2>Path 3: product research with CLARA</h2>
+          <p>Use this path when the team needs to understand users before it can detail functional requirements, such as for a new product or a complex feature. CLARA is an interactive research harness that queries Confluence to refine product concepts.</p>
+          <ol class="practice-steps">
+            <li><strong>Research and discover.</strong> Follow CLARA’s step-by-step research harness to gather and refine what is already known.</li>
+            <li><strong>Work through the design-thinking stages.</strong> Build user personas and journey maps, define the root-cause problem statement, generate solution ideas and converge on the best user experience.</li>
+            <li><strong>Write the specification.</strong> Generate the research artefacts and consolidated specification files, such as <code>product-specifications.md</code> or <code>specs.md</code> with the user stories, in a <code>specs/</code> folder.</li>
+            <li><strong>Optionally, prototype the interface.</strong> Generate an HTML prototype of the chosen experience using Prizm Design components, and hand it off with the specification files as a visual reference.</li>
+          </ol>
+          <p>CLARA can only ground its research in what it can reach. Make sure the team’s domain documentation is in the Confluence spaces or knowledge bases CLARA queries; <a href="eds-team-context.html#domain">read how to add domain context</a>.</p>
+          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 1, Path 3; <a href="#source-2" aria-label="Source 2: Team Context Ingestion Guide (EDS harness documentation)">[2]</a> section 1.</p>
+        </section>
+
+        <section id="handoff">
+          <h2>Commit the artefacts and hand off</h2>
+          <p>Whichever path you choose, finish by committing the specification artefacts where the architect and developers can reach them. Then hand them over to start technical planning and sequencing.</p>
+          <div class="table-scroll"><table class="wide-table"><caption>What each path commits</caption><thead><tr><th scope="col">Path</th><th scope="col">Specification</th><th scope="col">Prototype, if produced</th></tr></thead><tbody>
+            <tr><th scope="row">1. SpecKit</th><td><code>spec.md</code> in the repository</td><td>Committed alongside the specification</td></tr>
+            <tr><th scope="row">2. Socratic workflow</th><td>Early-draft TRD published to the issue tracker</td><td>Referenced through its <code>prototype/&lt;name&gt;</code> branch</td></tr>
+            <tr><th scope="row">3. CLARA research</th><td>Specification files in <code>specs/</code></td><td>Committed alongside the specification files</td></tr>
+          </tbody></table></div>
+          <p>Together, these files are the PRD: what needs to be built, captured as user stories, acceptance criteria and feature scope. The developer team sequences its user stories with <code>/dependency-orchestrator</code> and then writes a user story level TRD for each one. If you followed Path 2, <code>/to-spec</code> in the developer harness refines your early-draft TRD rather than starting from scratch.</p>
+          <p>Ground each path in your team’s vocabulary. Supply domain context, glossaries and functional requirements when you run <code>/speckit.specify</code>; reference domain models and legacy patterns when you run <code>/wayfinder</code>, with <code>/domain-modeling</code> and <code>/codebase-design</code> to keep the language consistent.</p>
+          <p class="next-step"><strong>Next step:</strong> agree with your architect or Tech Lead where the PRD will live, then <a href="eds-developer-harness.html#plan">see how developers plan from it</a>. If you are unsure which path fits, run <code>/ask-workflow</code>.</p>
+          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 1 and “From PO/BA handoff to developer”; <a href="#source-2" aria-label="Source 2: Team Context Ingestion Guide (EDS harness documentation)">[2]</a> section 1.</p>
+        </section>
+
+        <section id="sources">
+          <h2>Sources</h2>
+          <ol class="source-list">
+            <li id="source-1"><cite>Product Development Journey &amp; Workflow Harness (EDS harness documentation)</cite></li>
+            <li id="source-2"><cite>Team Context Ingestion Guide (EDS harness documentation)</cite></li>
+          </ol>
+        </section>
+        <footer class="article-footer"><span>AI-Product Development Lifecycle</span><span>EDS · DSTA</span></footer>
+      </article>
+    </main>
+    <aside class="page-contents"><nav aria-label="On this page"><p>On this page</p>
+            <a href="#choose-path">Choose a path</a>
+            <a href="#path-speckit">Path 1: SpecKit</a>
+            <a href="#path-socratic">Path 2: Socratic</a>
+            <a href="#path-clara">Path 3: CLARA</a>
+            <a href="#handoff">Hand off</a>
+            <a href="#sources">Sources</a>
+    </nav></aside>
+  </div>
+</body>
+</html>
