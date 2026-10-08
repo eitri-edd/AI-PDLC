@@ -1,4 +1,10 @@
+# Agent folders
 .kiro/
 .preview/
 .claude/
+
+# MACOS DS Store
 .DS_Store
+
+# scratch folder
+.scratch/
