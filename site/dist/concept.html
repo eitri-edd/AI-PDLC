@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Understand intent-driven development, spec-driven development, context engineering, harness engineering, loop engineering, graph engineering and software factories: seven practices for AI-assisted development, each explained with a diagram, an example and a next step.">
-  <title>Concepts · AI-PDLC</title>
+  <meta name="description" content="Understand AI models, including large, domain-specific and small language models and System One, alongside seven practices for AI-assisted development, with explanations, examples and source references.">
+  <title>Concepts · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
   <script src="site.js" defer></script>
@@ -13,8 +13,8 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="identity" href="index.html" aria-label="AI-PDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-PDLC</span></a>
-      <span class="organisation">EDS <span aria-hidden="true">/</span> DSTA</span>
+      <a class="identity" href="index.html" aria-label="AI-SDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-SDLC</span></a>
+      <span class="organisation">EDS</span>
     </div>
   </header>
   <div class="page-layout">
@@ -26,7 +26,7 @@
           <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
-          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-PDLC</a>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
           <a href="product-ideation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 15.5h5M8.5 18h3M10 2.5a5 5 0 0 0-3.1 8.9c.7.6 1.1 1.3 1.1 2.1v.5h4v-.5c0-.8.4-1.5 1.1-2.1A5 5 0 0 0 10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product ideation</a>
           <a href="product-implementation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.5 6 2.5 10l4 4M13.5 6l4 4-4 4M11.5 3.5l-3 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Product implementation</a>
           <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
@@ -46,14 +46,16 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><span aria-current="page">Concepts</span></nav>
         <header class="article-header">
           <h1>Concepts</h1>
-          <p class="lead">These seven concepts help you define a change, give an AI agent useful information and decide how its work will be checked. Each section includes an explanation, a diagram, a fictional example and a practical next step. Start with the problem closest to your work.</p>
+          <p class="lead">The following concepts describe how teams choose an AI model, define a change, give an AI agent the information and tools it needs, and check the result. Each section explains the problem the concept addresses, how it works and where its limits matter.</p>
           <p>AI-assisted development means work supported by AI tools, whether or not the product contains AI. An AI agent is software that uses an AI model and tools to carry out a task.</p>
-          <p>The definitions below are a working synthesis of the cited sources. The concepts overlap; they are not lifecycle stages or a required progression towards greater autonomy. Recommendations and examples are guidance for discussion, not DSTA policy.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-28">28 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+          <p>The definitions below are a working synthesis of the cited sources. The concepts overlap; they are not lifecycle stages or a required progression towards greater autonomy. Recommendations and examples are guidance for discussion and does not represent EDS policy.</p>
+          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-11">11 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page">
+            <a href="#how-the-concepts-fit">How the concepts fit together</a>
+            <a href="#models">Models</a>
             <a href="#intent-driven-development">Intent-driven development</a>
             <a href="#spec-driven-development">Spec-driven development</a>
             <a href="#context-engineering">Context engineering</a>
@@ -61,7 +63,7 @@
             <a href="#loop-engineering">Loop engineering</a>
             <a href="#graph-engineering">Graph engineering</a>
             <a href="#software-factory">Software factory: light and dark</a>
-            <a href="#sources">Sources</a>
+            <a href="#sources">Sources and learning references</a>
           </nav>
         </details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
@@ -70,11 +72,57 @@
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
           </defs>
         </svg>
+        <section id="how-the-concepts-fit">
+          <h2>How the concepts fit together</h2>
+          <p>A model provides the learned language capabilities used by an agent. Model choice affects which tasks it can handle and the resources it needs. Context and harness design determine what information and tools it can use during a task.</p>
+          <p>Intent describes the outcome and constraints. A specification makes the expected behaviour checkable. Context engineering supplies the information needed for the task, while harness engineering provides the tools, state and controls around the agent.</p>
+          <p>Loop engineering defines how work repeats and stops. Graph engineering makes dependencies and routes between steps explicit. A software factory coordinates these practices across a flow of work, from intake to release and feedback.</p>
+          <p>The examples use a fictional service-request web application: users create requests, save drafts, search their records and upload supporting files. Each example highlights a different engineering decision.</p>
+          <p>Use the application ideas below to identify a small improvement in your own workflow. They are suggestions for discussion, not a prescribed sequence. Courses and playbooks are collected in the <a href="#learning-references">learning references</a>.</p>
+        </section>
+        <section id="models">
+          <h2>Models</h2>
+          <p>A language model learns patterns from training data to process or generate language. A generative model produces a response from the supplied context by predicting successive tokens, the units into which text is divided. It can help draft requirements, explain code and propose tests, but fluent output still needs checking.</p>
+          <p class="concept-question"><strong>Question it answers:</strong> which model capabilities suit the task, its response-time needs and its operating constraints?</p>
+          <p>These labels describe different dimensions and can overlap. A small model can specialise in a domain, and a large model can respond in a System One style. The comparison below is a working synthesis of the research, not a formal classification standard.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Model dimensions comparison">
+            <table>
+              <caption>Three dimensions of model choice</caption>
+              <thead><tr><th scope="col">Dimension</th><th scope="col">Labels</th><th scope="col">What to assess</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Scale</th><td>Large or small language model</td><td>Capability, memory and compute needs</td></tr>
+                <tr><th scope="row">Specialisation</th><td>General-purpose or domain-specific</td><td>Performance on the domain’s language and tasks</td></tr>
+                <tr><th scope="row">Response approach</th><td>System One or more deliberative reasoning</td><td>Direct responses versus additional reasoning work</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="large-language-models">Large language models (LLMs)</h3>
+          <p>LLMs have many learned parameters, the numerical values adjusted during training, and are typically trained on extensive datasets. Broad training supports varied tasks through instructions and examples. Brown and colleagues demonstrated this with GPT-3, a 175-billion-parameter model evaluated on tasks without task-specific parameter updates. <a href="#source-12" aria-label="Source 12: Language Models are Few-Shot Learners">[12]</a></p>
+          <p><strong>Use and limits:</strong> consider a general-purpose LLM for varied drafting, explanation and coding work. Larger size alone does not establish quality on your task. Compare correctness, latency and cost using representative examples, including cases where evidence is missing.</p>
+          <h3 id="domain-specific-language-models">Domain-specific language models</h3>
+          <p>A domain-specific language model is trained or adapted for the terminology and tasks of a field, such as finance or biomedicine. Specialisation can use domain-focused training, continued pretraining or task fine-tuning. Gururangan and colleagues found benefits from continued domain and task pretraining across their classification experiments. <a href="#source-13" aria-label="Source 13: Don’t Stop Pretraining">[13]</a></p>
+          <p>BloombergGPT illustrates that specialisation and scale can coexist: its 50 billion parameters were trained using financial and general-purpose data. Its reported gains concern the evaluated financial tasks, not every specialist application. <a href="#source-14" aria-label="Source 14: BloombergGPT">[14]</a></p>
+          <p><strong>Use and limits:</strong> consider specialisation when domain language causes recurring errors and suitable training data exists. Compare it with a general model supplied with relevant reference material. Retrieval supplies context at use time; it does not by itself retrain the model. Here, “domain-specific” refers to a subject area, not a domain-specific programming language (DSL).</p>
+          <h3 id="small-language-models">Small language models (SLMs)</h3>
+          <p>SLMs use fewer parameters than larger alternatives, usually reducing model storage and memory needs. There is no single parameter threshold used consistently across model families. The Phi-3 report describes Phi-3-mini, a 3.8-billion-parameter model small enough for phone deployment, trained with carefully selected and synthetic data. <a href="#source-15" aria-label="Source 15: Phi-3 Technical Report">[15]</a></p>
+          <p><strong>Use and limits:</strong> consider an SLM for bounded tasks such as request classification or field extraction, especially when local operation matters. Measure performance on the intended hardware. Small size does not guarantee fast responses, accurate answers or private operation; deployment and data handling still matter.</p>
+          <h3 id="system-one-model">System One model (System 1)</h3>
+          <p>“System One” is an analogy for fast, direct responses based on learned patterns. It describes an approach to answering rather than a fixed model size or architecture. In this research usage, System 2 spends additional inference computation on intermediate reasoning before answering. A model can support different response approaches.</p>
+          <p>Yu and colleagues studied transferring outputs from System 2 techniques into models that answer without intermediate reasoning token sequences. Several tested techniques retained improvements at lower inference cost. This supports learning some deliberative behaviours into direct responses; it does not establish that every reasoning task can be compressed this way. <a href="#source-16" aria-label="Source 16: Distilling System 2 into System 1">[16]</a></p>
+          <p><strong>Use and limits:</strong> consider direct responses for familiar, bounded tasks. Evaluate additional reasoning for ambiguous requirements or problems involving several dependent steps. Response speed or the absence of a visible explanation alone cannot establish how much internal reasoning occurred.</p>
+          <aside class="example" aria-label="Example: Choose models for service-request work">
+            <p class="example-label">Example · Choose models for service-request work</p>
+            <p>A team could evaluate a small model for assigning request categories and a general-purpose LLM for drafting acceptance criteria. If specialist terminology causes errors, it could compare domain adaptation with supplying a maintained glossary. A direct response may suit routine classification; conflicting access requirements need explicit analysis and review.</p>
+            <p>Compare the candidates on the same held-out examples. Record errors, response times and running costs, and define when uncertain or failed results go to a person.</p>
+          </aside>
+          <p class="next-step"><strong>Next step:</strong> select one bounded task and evaluate candidate models within the <a href="#harness-engineering">harness</a> and <a href="#context-engineering">context</a> they will actually use. </p>
+        </section>
         <section id="intent-driven-development">
           <h2>Intent-driven development</h2>
           <p>Intent-driven development makes the purpose of a change explicit before anyone chooses how to build it. The team records the problem, the outcome it wants and the constraints it must respect, then uses that record to judge the finished work.</p>
           <p class="concept-question"><strong>Question it answers:</strong> what are we changing, for whom, and how will we know it worked?</p>
-          <p>A request such as “improve the search page” leaves the important choices unstated. An agent might redesign the layout when the real problem is that users cannot recover from an empty result. The change can pass review and still miss the need.</p>
+          <p>A request such as “improve the request form” leaves the important choices unstated. An agent might redesign the layout when users actually need to leave an unfinished form and resume it later. The change can look polished and still miss the need.</p>
+          <p>Keep that intent available as plans and implementations change. A specification describes the behaviour in detail; intent carries the desired outcome and the reasons for preserving important constraints. <a href="https://circleci.com/blog/intent-driven-development/">CircleCI: Intent-driven development</a> explains how the two support each other.</p>
           <h3>Write the intent before the solution</h3>
           <p>A useful intent statement is short. It answers four questions:</p>
           <ul>
@@ -118,19 +166,26 @@
             <li><strong>Production bug:</strong> record observed and expected behaviour, user impact, reproduction evidence and the behaviour to preserve.</li>
             <li><strong>UI redesign:</strong> identify the user task to improve, the evidence behind the change and the interaction constraints to retain.</li>
           </ul>
-          <aside class="example" aria-label="Example of intent from a production bug">
-            <p class="example-label">Example · Production bug</p>
-            <p>Users who change a search filter while viewing a later page of results see an empty list, even when matches exist. The team writes this intent statement:</p>
+          <aside class="example" aria-label="Example: Let users resume an unfinished request">
+            <p class="example-label">Example · Let users resume an unfinished request</p>
+            <p>In a fictional service-request web application, users leave a long form to find supporting information. When they return, they have to enter everything again. A request to “add autosave” already assumes a solution. The team first records the intent:</p>
             <ul>
-              <li><strong>Problem:</strong> users on page two or later lose sight of matching results when they change a filter.</li>
-              <li><strong>Outcome:</strong> after changing a filter, users see the first page of matching results.</li>
-              <li><strong>Constraints:</strong> keep the selected filters and the existing access restrictions.</li>
-              <li><strong>Open question:</strong> should changing the sort order also return users to the first page? The product owner will decide.</li>
+              <li><strong>Problem:</strong> users lose unfinished work when they leave the form.</li>
+              <li><strong>Outcome:</strong> users can return to an unfinished request and continue from their last saved version.</li>
+              <li><strong>Constraints:</strong> saving does not submit the request or notify a reviewer. Only the request’s owner can reopen the draft.</li>
+              <li><strong>Open question:</strong> is an explicit “Save draft” action sufficient, or do users need automatic saving? The product owner will decide using evidence from users.</li>
             </ul>
+            <p>This intent lets the team compare solutions without confusing the proposed button or mechanism with the user’s need.</p>
           </aside>
           <h3>Keep intent in proportion to the change</h3>
           <p>Writing down an outcome does not prove it is valuable. Test important assumptions with users or operational evidence before investing heavily. A two-line issue may be enough for a contained fix; a new capability needs more discussion, evidence and detail.</p>
-          <p class="next-step"><strong>Next step:</strong> take one change request your team is discussing and write its problem, outcome, constraints and open questions. Name an owner for each open question.</p>
+          <h3>Make the next change request clearer</h3>
+          <p>Possible applications in your team:</p>
+          <ul>
+            <li><strong>Compare proposed solutions:</strong> compare an explicit “Save draft” action with automatic saving. Assess how each helps users resume work, and what evidence would justify the extra behaviour.</li>
+            <li><strong>Keep a decision visible:</strong> record whether draft saving is explicit or automatic, who made the decision and why. Link that decision to the form change so reviewers can assess it against the intended outcome.</li>
+          </ul>
+          <p class="next-step"><strong>Next step:</strong> see the <a href="#learning-intent">related learning references</a> for worked guidance and further practice.</p>
           <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Intent-Driven Development, intent-driven.dev">[1]</a>.</p>
         </section>
         <section id="spec-driven-development">
@@ -167,21 +222,29 @@
           </figure>
           <p>The specification feeds a technical plan, which is broken into tasks and implemented; GitHub Spec Kit describes a similar sequence. Separately, the acceptance criteria go straight to verification. If verification shows that the intended behaviour needs to change, the team revises the specification first, then the plan and code.</p>
           <p>Keep the specification about behaviour and put implementation choices in the technical plan. A specification that dictates internal design removes legitimate engineering choices. One that omits acceptance criteria forces the implementer to invent product rules.</p>
-          <aside class="example" aria-label="Example acceptance criteria for a report export">
-            <p class="example-label">Example · Specify a report export</p>
-            <p>A fictional team is asked to let users export a filtered case list. It agrees the following criteria; the three-second threshold is illustrative:</p>
+          <aside class="example" aria-label="Example: Define what Save draft does">
+            <p class="example-label">Example · Define what “Save draft” does</p>
+            <p>The team chooses an explicit “Save draft” action for the request form. Its specification describes behaviour that both the browser interface and the server can be checked against:</p>
             <ul>
-              <li>When a user exports a filtered list, include only records that match the active filters and the user’s access permissions.</li>
-              <li>If the export is still running after three seconds, show progress and a cancel control. Cancelling stops file generation and leaves the case list unchanged.</li>
-              <li>If no records match, do not produce an empty file; tell the user and let them adjust the filters.</li>
-              <li>Out of scope: scheduled or emailed exports.</li>
+              <li><strong>Incomplete form:</strong> saving retains the entered values even when fields required for submission are empty. The request remains a draft.</li>
+              <li><strong>Successful save:</strong> show “Draft saved” only after the server confirms the save. Reopening the draft restores the saved values.</li>
+              <li><strong>Failed save:</strong> keep the entered values on screen, show that saving failed and offer a retry.</li>
+              <li><strong>Another user’s draft:</strong> the server rejects a read or update from a user who does not own it, including a request sent directly to the API.</li>
+              <li><strong>Two browser tabs:</strong> if an older version is saved after a newer one, report a conflict and preserve the unsaved values rather than silently overwriting the newer draft.</li>
             </ul>
+            <p>The technical plan then chooses how to store drafts and detect conflicting updates. Automatic saving is outside this change.</p>
           </aside>
           <h3>Match precision to what you know</h3>
           <p>Too little detail forces an agent to guess at important choices. Too much detail too early creates false certainty about decisions nobody has tested. Add precision as questions are answered, and review the assumptions before implementation starts.</p>
           <h3>Change the specification with the work</h3>
           <p>A specification can be incomplete or wrong. When the intended behaviour changes, update the specification, code and checks together so they continue to agree. Use automated tests where behaviour is observable; keep human review for judgements the tests do not cover.</p>
-          <p class="next-step"><strong>Next step:</strong> choose one requested change and write three acceptance criteria for it: the expected result, an edge case and something that must not change.</p>
+          <h3>Make one requirement testable</h3>
+          <p>Possible applications in your team:</p>
+          <ul>
+            <li><strong>Clarify an ambiguous request:</strong> replace “saving works” with expected behaviour for a successful save, a lost connection and a conflicting edit from another browser tab.</li>
+            <li><strong>Trace a changed rule:</strong> if drafts become shareable, identify the ownership criteria, API checks and browser states that change. Update the specification and checks alongside the implementation.</li>
+          </ul>
+          <p class="next-step"><strong>Next step:</strong> see the <a href="#learning-spec">related learning references</a> for worked guidance and further practice.</p>
           <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: GitHub Spec Kit, Specification-Driven Development">[2]</a>.</p>
         </section>
         <section id="context-engineering">
@@ -189,7 +252,7 @@
           <p>Context engineering chooses and maintains the information available to an AI model while it works: instructions, relevant code, specifications, tool results and earlier decisions. Writing a prompt is one part of this wider task.</p>
           <p class="concept-question"><strong>Question it answers:</strong> what does the agent need to know for this task, and which sources can it trust?</p>
           <p>An agent given a correct specification can still call an obsolete interface or miss a team convention, because the information it needed was missing, out of date or buried. Supplying every document is not a reliable remedy. A model can consider only a limited amount of text at once, and irrelevant material makes the useful evidence harder to find.</p>
-          <p>Think of briefing a capable contractor who has never seen your building. You give them the drawings for the rooms they will work on, point out which drawings are out of date and tell them where the full archive is kept. You do not hand over the whole archive and hope they find the right page.</p>
+          <p>A change to a web page often crosses several boundaries: the browser component, the API and the stored data. Give the agent the contracts and conventions that connect those parts, with links to further detail. The task rarely needs the whole repository in its initial context.</p>
           <h3>Select a working set, then retrieve on demand</h3>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
@@ -226,15 +289,23 @@
           </figure>
           <p>From everything available, select what is relevant to the task, current and authoritative. Give the agent that working set: the objective and constraints, the code and records it needs, and a short map to other sources. When the agent needs more detail, it retrieves it from the wider set instead of receiving everything at the start. Outdated material is left out.</p>
           <p>Anthropic describes the aim as the smallest set of high-signal information that makes the desired outcome likely, with detail loaded “just in time” rather than all at once.</p>
-          <aside class="example" aria-label="Example context for an API change">
-            <p class="example-label">Example · Assemble context for an API change</p>
-            <p>An agent is asked to add a field to a reporting endpoint. Provide the endpoint code, the data schema, the authentication module it must reuse and the team’s API conventions. Include the failing request that prompted the change. Flag the deprecated helper that an older guide still recommends, so the agent does not treat it as current practice.</p>
+          <aside class="example" aria-label="Example: Add a status filter to a request list">
+            <p class="example-label">Example · Add a status filter to a request list</p>
+            <p>An agent is asked to add an “Awaiting review” filter to the web app. The visible label alone does not tell it which records belong in that state.</p>
+            <p>Give it the agreed filter behaviour, the current status definitions, the list component, the API’s filter contract and the server’s access rules. Include an existing filter test and a sanitised sample response. Mark an older document’s “Pending” status as superseded.</p>
+            <p>With this context, the agent can map the label to the current status value, preserve the filter in the page URL and send the expected API parameter. It can retrieve deeper database details if needed. Record any new status decision where the next task can find it.</p>
           </aside>
           <h3>Keep decisions where the next session can find them</h3>
           <p>Record important decisions, unresolved questions and progress in a durable file or issue, not only in a long conversation. Later work, by a person or an agent, can then start from the record instead of reconstructing it. A note of which sources informed a result also helps a reviewer check it.</p>
           <h3>Check relevance and authority</h3>
           <p>Stale or conflicting sources can misdirect the work. Identify the current source and resolve contradictions before the agent starts. Treat retrieved documents and logs as evidence to assess, not as instructions that override the task. Follow applicable data-handling rules when selecting material for an agent.</p>
-          <p class="next-step"><strong>Next step:</strong> for the next task you give an agent, list the few sources it most needs and check that each one describes the current state of the code or decision.</p>
+          <h3>Improve the information for one task</h3>
+          <p>Possible applications in your team:</p>
+          <ul>
+            <li><strong>Prepare a focused brief:</strong> for a new list filter, provide its product meaning, URL format, API parameter and current status values. Identify the authoritative source when old names conflict.</li>
+            <li><strong>Review a mistaken assumption:</strong> if a filter appears in the browser but sends the wrong API value, inspect the supplied contract and examples. Correct the source and check the actual request.</li>
+          </ul>
+          <p class="next-step"><strong>Next step:</strong> see the <a href="#learning-context">related learning references</a> for worked guidance and further practice.</p>
           <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: Anthropic, Effective context engineering for AI agents">[3]</a>.</p>
         </section>
         <section id="harness-engineering">
@@ -244,53 +315,54 @@
           <p>Clear instructions alone do not give an agent a way to start the application, run the tests or inspect a failure. Without these, it can only report that the work looks finished. Without limits, a struggling agent may retry indefinitely or reach for access it should not have.</p>
           <p>A harness is to an agent what a workshop is to a technician: the tools, the test bench and the safety rules they work within.</p>
           <p>OpenAI’s account of harness engineering describes one team’s experience, not a required operating model.</p>
-          <h3>Check five parts of the harness</h3>
-          <p>The Walking Labs course organises a harness into five parts. Use this teaching model to identify what a task needs; the components can be supplied by an existing agent tool.</p>
-          <ul>
-            <li><strong>Instructions:</strong> record the goal, constraints and links to current project guidance.</li>
-            <li><strong>Tools:</strong> provide the actions needed to inspect, change and test the work, with scoped permissions.</li>
-            <li><strong>Environment:</strong> make setup repeatable, with known dependencies and suitable test data.</li>
-            <li><strong>State:</strong> save completed work, remaining tasks and blockers so another session can resume.</li>
-            <li><strong>Feedback:</strong> return test results, application behaviour and diagnostic logs the agent can act on.</li>
-          </ul>
-          <p>This five-part model comes from Walking Labs’ teaching material. It is a teaching framework, not an industry standard.</p>
-          <h3>Build a bounded feedback loop</h3>
+          <h3>Understand the six parts around the agent</h3>
+          <p>The diagram groups the harness into six components. Together, they describe the system that supports and constrains the agent. The numbers identify components, not a sequence of execution.</p>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 4, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 290" role="img" aria-labelledby="fig-harness-title">
-                <title id="fig-harness-title">Inside its permitted environment, the agent acts and runs checks. Failed checks lead it to observe the results and fix the problem. Passing work goes to a person for review. If the agent cannot proceed, it stops and escalates.</title>
-                <rect class="d-boundary" x="1" y="1" width="418" height="286" rx="8"/>
-                <text class="d-label" x="18" y="28">Permitted tools and environment</text>
-                <rect class="d-node" x="24" y="56" width="170" height="56" rx="8"/><text class="d-title" x="109" y="82" text-anchor="middle">Act</text><text class="d-sub" x="109" y="102" text-anchor="middle">change code or config</text>
-                <path class="d-line" d="M194 84H232" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="238" y="56" width="170" height="56" rx="8"/><text class="d-title" x="323" y="82" text-anchor="middle">Run checks</text><text class="d-sub" x="323" y="102" text-anchor="middle">tests and linters</text>
-                <path class="d-line" d="M323 112V180" marker-end="url(#arrow)"/>
-                <text class="d-label" x="333" y="152">fail</text>
-                <rect class="d-node" x="238" y="186" width="170" height="56" rx="8"/><text class="d-title" x="323" y="212" text-anchor="middle">Observe</text><text class="d-sub" x="323" y="232" text-anchor="middle">results and logs</text>
-                <path class="d-line" d="M238 214H109V118" marker-end="url(#arrow)"/>
-                <text class="d-label" x="174" y="206" text-anchor="middle">fix and retry</text>
-                <path class="d-line d-line-accent" d="M408 84H472" marker-end="url(#arrow-accent)"/>
-                <text class="d-label" x="448" y="74" text-anchor="middle">pass</text>
-                <rect class="d-node d-node-accent" x="478" y="56" width="200" height="56" rx="8"/><text class="d-title" x="578" y="82" text-anchor="middle">Person reviews</text><text class="d-sub" x="578" y="102" text-anchor="middle">result and evidence</text>
-                <path class="d-line d-dash" d="M408 214H472" marker-end="url(#arrow)"/>
-                <text class="d-label" x="448" y="204" text-anchor="middle">stuck</text>
-                <rect class="d-node" x="478" y="186" width="200" height="56" rx="8"/><text class="d-title" x="578" y="212" text-anchor="middle">Stop and escalate</text><text class="d-sub" x="578" y="232" text-anchor="middle">limit reached or blocked</text>
+              <svg viewBox="0 0 680 326" role="img" aria-labelledby="fig-harness-title">
+                <title id="fig-harness-title">Six harness components within one boundary: agent state, tools, memory, orchestration, safety and observability. Together they support and constrain the agent’s work.</title>
+                <rect class="d-boundary" x="1" y="1" width="678" height="324" rx="8"/>
+                <text class="d-label" x="16" y="28">Harness: the system surrounding the agent’s work</text>
+                <rect class="d-node d-node-accent" x="16" y="48" width="208" height="118" rx="8"/><text class="d-title" x="28" y="76">1. Agent state</text><text class="d-sub" x="28" y="106">Goal, step, observation</text><text class="d-sub" x="28" y="136">What is happening now?</text>
+                <rect class="d-node" x="236" y="48" width="208" height="118" rx="8"/><text class="d-title" x="248" y="76">2. Tools</text><text class="d-sub" x="248" y="106">Terminal, files, browser</text><text class="d-sub" x="248" y="136">How can the agent act?</text>
+                <rect class="d-node" x="456" y="48" width="208" height="118" rx="8"/><text class="d-title" x="468" y="76">3. Memory</text><text class="d-sub" x="468" y="106">Saved notes and retrieval</text><text class="d-sub" x="468" y="136">What survives this run?</text>
+                <rect class="d-node" x="16" y="188" width="208" height="118" rx="8"/><text class="d-title" x="28" y="216">4. Orchestration</text><text class="d-sub" x="28" y="246">Roles and hand-offs</text><text class="d-sub" x="28" y="276">Who works next?</text>
+                <rect class="d-node" x="236" y="188" width="208" height="118" rx="8"/><text class="d-title" x="248" y="216">5. Safety</text><text class="d-sub" x="248" y="246">Permissions and limits</text><text class="d-sub" x="248" y="276">What bounds the work?</text>
+                <rect class="d-node" x="456" y="188" width="208" height="118" rx="8"/><text class="d-title" x="468" y="216">6. Observability</text><text class="d-sub" x="468" y="246">Results, time, tools, model</text><text class="d-sub" x="468" y="276">What happened in the run?</text>
               </svg>
             </div>
-            <figcaption>Figure 4. Example of a bounded harness. Within its permitted environment, the agent acts, checks and fixes. It hands passing work to a person, and stops and escalates when it cannot proceed.</figcaption>
+            <figcaption>Figure 4. Adapted from the supplied harness reference image. The six components support one working system; they are not six successive steps.</figcaption>
           </figure>
-          <p>The agent makes a change and runs the checks. If they fail, it reads the results and logs, fixes the problem and runs them again. When the checks pass, it hands the result and its evidence to a person for review. If it reaches its retry limit, needs access it does not have or faces a decision outside its task, it stops and escalates. The team defines the tools and permissions that bound this loop.</p>
+          <ul>
+            <li><strong>1. Agent state:</strong> Record the goal, current step, last observation and next action. For example, record “pagination check failed; inspect the filter handler next”.</li>
+            <li><strong>2. Tools:</strong> Expose the actions needed to inspect code, edit the task, run checks and inspect the app. Each tool needs a clear interface and appropriately scoped access.</li>
+            <li><strong>3. Memory:</strong> Store decisions and reusable knowledge beyond the current context. A file may be enough; a vector database is one retrieval option. Retrieved information enters working context when needed.</li>
+            <li><strong>4. Orchestration:</strong> Choose one agent or coordinated steps, assign responsibilities and define hand-offs. The search change can use one worker and a separate checking step.</li>
+            <li><strong>5. Safety:</strong> Enforce permissions, tool restrictions and rate or resource limits. A bounded development task can use test data, scoped file access and a fixed attempt budget.</li>
+            <li><strong>6. Observability:</strong> Record outcomes, elapsed time, tools and model used, plus check results and errors. A success claim is useful only when the underlying evidence supports it.</li>
+          </ul>
+          <p>State tracks this task’s position; memory retains information that may help this or later tasks. Neither requires a particular storage product. Information saved outside the current context has to be retrieved before the model can use it.</p>
+          <h3>See the parts working together</h3>
+          <p>For a search-filter bug, state identifies the failing scenario. Memory supplies the agreed access constraint. Orchestration selects the next step, and tools run it within the safety boundary. Observability captures the result; that observation updates state and guides the next attempt or hand-off.</p>
+          <p>The components can be configured in an existing agent environment. Walking Labs describes how the environment, continuity and verification support reliable work; see the <a href="#learning-harness">harness engineering references</a>.</p>
           <p>Provide a repeatable way to start the application, run checks and inspect failures. Define what the agent may do, when it stops and when a decision returns to a person. Enforce consequential boundaries through tool permissions and the execution environment, not through instructions alone.</p>
           <p>OpenAI’s team reports that when an agent struggled, the useful response was rarely to ask it to try harder. They asked which capability was missing, such as a tool, a check or a piece of documentation, and added it to the environment.</p>
-          <aside class="example" aria-label="Example harness for a data-import change">
-            <p class="example-label">Example · Bound a data-import change</p>
-            <p>Give the agent a development environment with fixture files and the import test suite. Let it edit the code, rerun the tests and read the application logs. Restrict credentials and network access to the test environment.</p>
-            <p>If the fixtures cannot reproduce the reported failure, the agent stops and returns the evidence and the unresolved question to the engineer rather than widening its own access.</p>
+          <aside class="example" aria-label="Example: Give an agent a working upload environment">
+            <p class="example-label">Example · Give an agent a working upload environment</p>
+            <p>An agent is adding attachments to the request form. Its harness supplies a local app and API, test accounts, sample files and a test storage service. Browser tools let it select a file; test commands and logs show whether the upload reached storage and the request record.</p>
+            <p>The six components have concrete jobs: state records the failing upload step; tools operate the browser and tests; memory retains the agreed file-size rule; orchestration runs checks after the change; permissions restrict access to test storage; observability retains results and error logs.</p>
+            <p>If the storage service is unavailable, the agent records the blockage. It does not report the upload as verified because the button rendered correctly.</p>
           </aside>
           <h3>Keep checks meaningful and review independent</h3>
           <p>Passing checks provides evidence about the cases they cover. Check that those cases represent the intended behaviour, including failures and important user journeys. Keep consequential acceptance decisions with the responsible reviewer; an agent’s self-assessment is not independent evidence.</p>
           <p>Investigate repeated failures before adding retries or permissions. Maintain the harness as the application and tools change. Anthropic’s long-running agent experiments used progress records, small increments and end-to-end checks to help later sessions resume work; these results describe a particular application-development setup.</p>
-          <p class="next-step"><strong>Next step:</strong> try the <a href="https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/#exercises">Walking Labs harness audit exercise</a> on one small task. Record a gap in the five parts, improve it, and compare completion evidence, retries and review effort on similar runs.</p>
+          <h3>Address a recurring agent failure</h3>
+          <p>Possible applications in your team:</p>
+          <ul>
+            <li><strong>Inspect the six components:</strong> if an agent checks only that an upload button appears, provide test storage and a browser check that opens the saved attachment. Capture the result.</li>
+            <li><strong>Check a boundary and a restart:</strong> confirm that the upload task can reach test storage but cannot access production storage. Resume a paused run from its recorded failing case and next action.</li>
+          </ul>
+          <p class="next-step"><strong>Next step:</strong> see the <a href="#learning-harness">related learning references</a> for worked guidance and further practice.</p>
           <p class="source-ref">Sources: <a href="#source-4" aria-label="Source 4: OpenAI, Harness engineering">[4]</a>; <a href="#source-5" aria-label="Source 5: Walking Labs, What a harness actually is">[5]</a>; <a href="#source-6" aria-label="Source 6: Anthropic, Effective harnesses for long-running agents">[6]</a>.</p>
         </section>
         <section id="loop-engineering">
@@ -298,6 +370,7 @@
           <p>Loop engineering designs how an agent repeatedly acts, observes results and adjusts its approach towards a goal. It includes the checks that guide another attempt and the conditions that end the run. This overlaps with harness engineering: many harnesses already supply an execution loop.</p>
           <p class="concept-question"><strong>Question it answers:</strong> what goal, checks and stopping condition let an agent iterate on its own, and when does it stop?</p>
           <p>Prompting an agent by hand, one turn at a time, does not scale to work that needs many attempts, such as fixing a failing test suite or clearing a backlog of small changes. Left to run without a goal or a limit, the same agent can iterate indefinitely, repeat a failed approach or spend far more than the task is worth.</p>
+          <p>A loop can run once on request or start repeatedly from an event or schedule. Across runs, retain progress and useful failure evidence so the next run can respond to what happened. <a href="https://agentfactory.panaversity.org/docs/loop-engineering-crash-course">AI Agent Factory: Loop engineering crash course</a> develops this distinction between a recurring trigger and the work inside each run.</p>
           <h3>Design the cycle, the check and the stop</h3>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 5, scrolls sideways on narrow screens">
@@ -324,18 +397,25 @@
           </figure>
           <p>A trigger, such as a schedule or a repository event, starts a run. The agent acts, then a check observes the result. When the check passes, the loop ends and the work goes to a person. When it fails, the agent adjusts and repeats. A budget or an iteration cap stops a loop that cannot reach its goal, so a stuck run ends instead of spending without limit. IBM describes the same cycle as goal, action, observation and adjustment.</p>
           <p>Define separate outcomes for success, a blocked task and an exhausted budget. Use observable checks for completion, such as unchanged acceptance tests passing, and keep the agent’s claim of success separate from that evidence. A second agent can offer another review, but may share the first agent’s blind spots.</p>
-          <aside class="example" aria-label="Example loop for a failing test suite">
-            <p class="example-label">Example · Clear a failing test suite</p>
-            <p>A nightly loop is given one goal: make the unit tests pass without changing what they assert. Each cycle, the agent runs the tests, reads the first failure, edits the code and runs the tests again.</p>
+          <aside class="example" aria-label="Example: Fix results that change after rapid typing">
+            <p class="example-label">Example · Fix results that change after rapid typing</p>
+            <p>A user types “printer”, then “printer paper” in the request search box. The first response arrives last and replaces the results for the newer query. The agent receives a reproducible browser test that deliberately reverses the response order.</p>
             <ul>
-              <li><strong>Stopping condition:</strong> all tests pass, or ten cycles are used, whichever comes first.</li>
-              <li><strong>On success:</strong> open one pull request with the change and the test output for a person to review.</li>
-              <li><strong>On the cap:</strong> stop, and report the remaining failures rather than weakening the tests to make them pass.</li>
+              <li><strong>Act:</strong> inspect how the page handles responses and make a small change so an older response cannot replace the current results.</li>
+              <li><strong>Check and adjust:</strong> rerun the delayed-response test and existing search checks. Use any failure to guide the next change.</li>
+              <li><strong>Stop:</strong> return the change and passing evidence for review, or stop after three attempts. If the test environment cannot reproduce the timing, report the blockage.</li>
             </ul>
+            <p>The attempt limit is illustrative. The loop uses observed browser behaviour to guide each retry; changing the test to accept stale results would defeat the goal.</p>
           </aside>
           <h3>Keep the loop bounded and legible</h3>
           <p>A loop is only as trustworthy as its check. A passing check confirms what it measures, not that the work is right, so keep a person accountable for the result. Watch for a widening gap between the code the loop produces and what people still understand; IBM calls this comprehension debt. Record each cycle’s outcome in a durable place so a later run, or a reviewer, can see what the loop tried.</p>
-          <p class="next-step"><strong>Next step:</strong> take one repetitive task and write its goal, its machine-checkable stopping condition and its iteration or budget cap before you let an agent run it unattended.</p>
+          <h3>Bound one repetitive task</h3>
+          <p>Possible applications in your team:</p>
+          <ul>
+            <li><strong>Define the endings:</strong> for the stale search-response bug, record what proves a fix, what makes reproduction impossible and when retries stop. Keep these outcomes distinct in the run log.</li>
+            <li><strong>Use a failure to improve the check:</strong> retain the reversed-response-order test after fixing search. Check that it fails on the original behaviour and passes on the corrected version.</li>
+          </ul>
+          <p class="next-step"><strong>Next step:</strong> see the <a href="#learning-loop">related learning references</a> for worked guidance and further practice.</p>
           <p class="source-ref">Source: <a href="#source-7" aria-label="Source 7: IBM, Loop engineering">[7]</a>.</p>
         </section>
         <section id="graph-engineering">
@@ -345,39 +425,49 @@
           <p>A task may need different handling for different inputs, or checks before later actions can run. Explicit steps and routes make these decisions inspectable. Add this structure when it solves a coordination problem; a single agent can already use tools, save progress and receive external checks.</p>
           <p>In this section, a graph means a planned map of how the work should flow, with explicit steps and conditions. It does not mean a knowledge graph of facts and relationships.</p>
           <p>The label “graph engineering” is emerging; workflow graphs are an established design technique.</p>
+          <p>Graphs also express parallel work. Independent branches can run together, pass their findings to a checking step, and merge accepted results. Remove unnecessary dependencies while preserving those needed for correct results. The <a href="https://agentfactory.panaversity.org/docs/graph-engineering-crash-course">AI Agent Factory graph engineering guide</a> describes this pattern.</p>
           <h3>Decide the nodes, the routes and the shared state</h3>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 6, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 300" role="img" aria-labelledby="fig-graph-title">
-                <title id="fig-graph-title">A plan node routes work. A router sends each item to a research loop node or a lookup function. Both feed a verify node. A passing result reaches a human approval node, then done. A failing result routes back to the router along the foot of the diagram. Steps read and update defined state.</title>
-                <rect class="d-node d-node-accent" x="1" y="120" width="130" height="56" rx="8"/><text class="d-title" x="66" y="146" text-anchor="middle">Plan</text><text class="d-sub" x="66" y="166" text-anchor="middle">decompose task</text>
-                <path class="d-line d-line-accent" d="M131 148H166" marker-end="url(#arrow-accent)"/>
-                <rect class="d-node" x="172" y="120" width="120" height="56" rx="8"/><text class="d-title" x="232" y="146" text-anchor="middle">Router</text><text class="d-sub" x="232" y="166" text-anchor="middle">pick a branch</text>
-                <path class="d-line d-dash" d="M292 138H332V60H366" marker-end="url(#arrow)"/>
-                <path class="d-line d-dash" d="M292 158H332V228H366" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="372" y="32" width="150" height="56" rx="8"/><text class="d-title" x="447" y="58" text-anchor="middle">Research (loop)</text><text class="d-sub" x="447" y="78" text-anchor="middle">act, observe, verify</text>
-                <rect class="d-node" x="372" y="200" width="150" height="56" rx="8"/><text class="d-title" x="447" y="226" text-anchor="middle">Lookup</text><text class="d-sub" x="447" y="246" text-anchor="middle">deterministic function</text>
-                <rect class="d-node d-node-accent" x="540" y="120" width="138" height="56" rx="8"/><text class="d-title" x="609" y="146" text-anchor="middle">Verify</text><text class="d-sub" x="609" y="166" text-anchor="middle">check evidence</text>
-                <path class="d-line" d="M522 60H609V120" marker-end="url(#arrow)"/>
-                <path class="d-line" d="M522 228H609V176" marker-end="url(#arrow)"/>
-                <path class="d-line d-line-accent" d="M609 176V196" marker-end="url(#arrow-accent)"/>
-                <rect class="d-node" x="540" y="200" width="138" height="56" rx="8"/><text class="d-title" x="609" y="226" text-anchor="middle">Approve</text><text class="d-sub" x="609" y="246" text-anchor="middle">person decides · done</text>
-                <path class="d-line d-dash" d="M540 148H500V284H232V176" marker-end="url(#arrow)"/>
-                <text class="d-label" x="360" y="278">fail: route back to the router</text>
-                <text class="d-label" x="1" y="20">Steps read and update defined state</text>
+                <title id="fig-graph-title">An agreed API contract feeds separate frontend and backend branches. A join waits for both, then integration checks run. Passing evidence reaches review. Failures return to the responsible branch.</title>
+                <rect class="d-node d-node-accent" x="1" y="110" width="128" height="76" rx="8"/><text class="d-title" x="65" y="140" text-anchor="middle">API contract</text><text class="d-sub" x="65" y="164" text-anchor="middle">agreed behaviour</text>
+                <path class="d-line" d="M129 148H151V60H174" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M151 148V230H174" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="180" y="24" width="148" height="72" rx="8"/><text class="d-title" x="254" y="54" text-anchor="middle">Frontend</text><text class="d-sub" x="254" y="78" text-anchor="middle">form and UI states</text>
+                <rect class="d-node" x="180" y="194" width="148" height="72" rx="8"/><text class="d-title" x="254" y="224" text-anchor="middle">Backend</text><text class="d-sub" x="254" y="248" text-anchor="middle">save and access rules</text>
+                <path class="d-line" d="M328 60H350V138H376" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M328 230H350V158H376" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="382" y="110" width="122" height="76" rx="8"/><text class="d-title" x="443" y="140" text-anchor="middle">Join</text><text class="d-sub" x="443" y="164" text-anchor="middle">both complete</text>
+                <path class="d-line" d="M504 148H534" marker-end="url(#arrow)"/>
+                <rect class="d-node d-node-accent" x="540" y="110" width="138" height="76" rx="8"/><text class="d-title" x="609" y="136" text-anchor="middle">Integration</text><text class="d-sub" x="609" y="157" text-anchor="middle">browser + API</text><text class="d-sub" x="609" y="177" text-anchor="middle">passing evidence</text>
+                <path class="d-line d-line-accent" d="M609 186V214" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node" x="540" y="220" width="138" height="46" rx="8"/><text class="d-title" x="609" y="249" text-anchor="middle">Review</text>
+                <path class="d-line d-dash" d="M609 110V10H254V24" marker-end="url(#arrow)"/>
+                <path class="d-line d-dash" d="M540 175H520V286H254V266" marker-end="url(#arrow)"/>
+                <text class="d-label" x="367" y="36">fail: return to the relevant branch</text>
+                <text class="d-label" x="350" y="279">fail: correct and recheck</text>
               </svg>
             </div>
-            <figcaption>Figure 6. A plan node routes work to specialised nodes, including a loop from the previous section. A verification step precedes a human approval decision, and a failing result routes back. Steps read and update defined state.</figcaption>
+            <figcaption>Figure 6. An agreed contract supports parallel frontend and backend work. Integration waits for both branches; failures return for correction before review.</figcaption>
           </figure>
-          <p>In this example, a planning step identifies the work. A router chooses a research loop or a lookup function, then a verification step checks the result. Passing work reaches a person for an approval decision; failed work returns for another attempt within a defined retry limit.</p>
+          <p>Read the graph from left to right. The agreed contract supplies both branches; the join waits for their outputs. Integration checks examine the combined candidate before review. A failed check returns to the relevant branch within a defined retry limit.</p>
           <p>Enforce required routes in the workflow runtime and restrict tools that could bypass them. A box labelled “approval” does not enforce a decision by itself. Define what each step reads and writes, how simultaneous updates combine, and how a stopped run resumes without repeating an external action.</p>
-          <aside class="example" aria-label="Example graph for a documentation update">
-            <p class="example-label">Example · Update documentation across many pages</p>
-            <p>A team needs to reflect a renamed feature across dozens of help pages. A plan node lists the affected pages. A router sends straightforward renames to a function that applies the exact substitution, and sends pages needing rewritten explanations to an agent loop. A check confirms that no page still uses the old name and that links resolve. Only then does an editor approve the batch. If a page fails the check, it returns to the agent rather than shipping.</p>
+          <aside class="example" aria-label="Example: Coordinate a draft feature across browser and API">
+            <p class="example-label">Example · Coordinate a draft feature across browser and API</p>
+            <p>The “Save draft” change needs both a form control and a server endpoint. First agree the request fields, response shape and conflict behaviour. This shared API contract lets frontend and backend work proceed separately, with each branch owning its files.</p>
+            <p>The frontend branch builds the save, error and conflict states against a test implementation of the contract. The backend branch implements persistence, ownership checks and version handling. A join waits for both branches, then integration checks run the real browser against the real API.</p>
+            <p>A failed check returns to the responsible branch. Missing results cannot count as a pass, and a revised candidate needs fresh affected checks. Review starts only when the combined change has the required evidence.</p>
           </aside>
           <h3>Add nodes only when a single loop cannot cope</h3>
           <p>More nodes mean more coordination, more cost and more ways to fail: branches can duplicate work, overwrite shared state or pass a wrong result downstream. Start with the simplest shape that works and add a node only when a single loop hits a real limit. Record which path each run took, because a graph no longer produces one linear transcript to read.</p>
-          <p class="next-step"><strong>Next step:</strong> take a task you are tempted to split across agents and sketch its nodes, the routes between them and the one point where a person approves the result. Confirm a single loop could not do it more simply.</p>
+          <h3>Make a workflow’s dependencies visible</h3>
+          <p>Possible applications in your team:</p>
+          <ul>
+            <li><strong>Find work that can run together:</strong> agree the draft API contract before separating browser and server work. Give each branch defined outputs and wait for both before testing the combined application.</li>
+            <li><strong>Trace an incomplete result:</strong> trace a frontend pass with a backend conflict-check failure. Route the failure back, then rerun the affected integration checks on the revised candidate.</li>
+          </ul>
+          <p class="next-step"><strong>Next step:</strong> see the <a href="#learning-graph">related learning references</a> for worked guidance and further practice.</p>
           <p class="source-ref">Sources: <a href="#source-8" aria-label="Source 8: PuppyGraph, Graph engineering">[8]</a>; <a href="#source-9" aria-label="Source 9: Anthropic, Building effective agents">[9]</a>.</p>
         </section>
         <section id="software-factory">
@@ -386,6 +476,7 @@
           <p class="concept-question"><strong>Question it answers:</strong> how much autonomy can we give the loops, and where must a person still read and decide?</p>
           <p>When agents produce changes faster than a team can assess them, work can accumulate in review. Removing review changes the risk as well as the queue. Measure review time, defects, recovery effort and running costs before deciding which part of delivery needs improvement.</p>
           <p>The light and dark distinction comes from Addy Osmani’s account, which describes one practitioner’s experience rather than a required operating model.</p>
+          <p>A factory needs useful outcomes beyond “code produced”. <a href="https://vercel.com/academy/creating-a-software-factory">Vercel Academy: Creating a Software Factory</a> includes work that proceeds, asks for clarification, stops when a premise is unsupported, or waits for human judgement. Durable work orders make these outcomes visible across runs.</p>
           <h3>Put the human judgement where a wrong call is expensive</h3>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 7, scrolls sideways on narrow screens">
@@ -412,19 +503,41 @@
           </figure>
           <p>The queue supplies work to agents, followed by automated checks. Passing changes follow the chosen review and release path. Failed checks return work for correction or stop the run; they do not permit deployment. Monitoring can reveal defects and new needs, which return to the queue.</p>
           <p>For a proposed unattended path, define the permitted changes, release criteria, monitoring and recovery procedure. Test that the controls reject unsuitable changes and that a person can pause the system. Cheap checks alone do not establish that deployment is acceptable.</p>
-          <aside class="example" aria-label="Example of choosing light and dark loops">
-            <p class="example-label">Example · Choose where the lights stay on</p>
-            <p>A fictional team pilots automatic formatting changes in a test service. It permits only formatting edits, checks for behaviour changes, records the results and rehearses rollback before considering unattended release. Changes to authentication or billing continue to receive human review. A lint result alone does not move a change onto the unattended path.</p>
+          <aside class="example" aria-label="Example: Deliver a queue of small web-app fixes">
+            <p class="example-label">Example · Deliver a queue of small web-app fixes</p>
+            <p>A team receives three reports: search results revert after rapid typing; the upload error message is unclear; and managers want access to every draft. Intake turns each into a work record. The first two can become bounded fixes; the access change waits for a product decision.</p>
+            <p>For each accepted fix, an agent works in an isolated environment. Automated checks produce evidence, and a preview lets a reviewer inspect the browser behaviour. Approved changes move through the team’s release process. Error reports and user feedback then create or update work records.</p>
+            <p>This is a light factory because people review changes. A proposed dark path would need its own bounded scope and release checks. Automatically deploying previews does not make production delivery unattended.</p>
           </aside>
           <h3>Watch what a dark factory hides</h3>
           <p>Unattended changes can leave people with less understanding of the system they maintain, a risk Osmani calls comprehension debt. Preserve design decisions, review representative changes and rehearse diagnosis and recovery. Passing tests do not establish that the team can explain or repair the resulting system.</p>
           <p>The pilot and release checks above are recommendations for evaluating a proposed workflow.</p>
-          <p class="next-step"><strong>Next step:</strong> choose one candidate workflow and document its permitted changes, completion evidence, review decision and recovery procedure. Evaluate it in a test environment before proposing unattended release.</p>
+          <h3>Pilot a small flow of work</h3>
+          <p>Possible applications in your team:</p>
+          <ul>
+            <li><strong>Test intake decisions:</strong> compare the reproducible search bug, an unclear upload complaint and a request for wider draft access. Record the evidence or decision needed before each can proceed.</li>
+            <li><strong>Observe the review queue:</strong> pilot small form and search fixes with a limit on changes awaiting review. Track preview waiting time, rework and escaped defects before increasing throughput.</li>
+          </ul>
+          <p class="next-step"><strong>Next step:</strong> see the <a href="#learning-factory">related learning references</a> for worked guidance and further practice.</p>
           <p class="source-ref">Sources: <a href="#source-10" aria-label="Source 10: Addy Osmani, Software Factories, Light and Dark">[10]</a>; <a href="#source-11" aria-label="Source 11: O’Reilly Radar, Software Factories, Light and Dark">[11]</a>.</p>
         </section>
 
         <section id="sources">
-          <h2>Sources</h2>
+          <h2>Sources and learning references</h2>
+          <p>The references support the explanations on this page. Application ideas are editorial suggestions informed by these sources, not organisational requirements.</p>
+          <h3 id="learning-references">Learning references</h3>
+          <p>Use these courses, guides and playbooks for detailed instruction and practice. Check the implementation courses for prerequisites and tool requirements.</p>
+          <ul class="source-list">
+            <li id="learning-models"><strong>Models:</strong> read the <a href="#source-12">GPT-3 study</a> for broad task capability, <a href="#source-13">domain adaptation research</a> and <a href="#source-14">BloombergGPT</a> for specialisation, the <a href="#source-15">Phi-3 report</a> for smaller models, and <a href="#source-16">System 2 distillation research</a> for direct versus deliberative responses.</li>
+            <li id="learning-intent"><strong>Intent-driven development:</strong> <a href="https://circleci.com/blog/intent-driven-development/">CircleCI’s guide</a> explains how to carry outcomes, constraints and success criteria through a change.</li>
+            <li id="learning-spec"><strong>Spec-driven development:</strong> <a href="https://agentfactory.panaversity.org/docs/spec-driven-development-crash-course">AI Agent Factory crash course</a> covers specifications, planning and implementation tasks.</li>
+            <li id="learning-context"><strong>Context engineering:</strong> <a href="https://github.com/mlnjsh/context-engineering">Context engineering resource collection</a> gathers techniques, research and a learning roadmap. Read the <a href="https://intent-driven.dev/knowledge/context-engineering/">intent-driven.dev overview</a> for the concept’s role in defining requirements.</li>
+            <li id="learning-harness"><strong>Harness engineering:</strong> <a href="https://walkinglabs.github.io/learn-harness-engineering/en/">Walking Labs</a> provides explanations, projects and templates. The <a href="https://agentfactory.panaversity.org/docs/harness-engineering-crash-course">AI Agent Factory crash course</a> adds practice with controls and verification.</li>
+            <li id="learning-loop"><strong>Loop engineering:</strong> <a href="https://www.iwoszapar.com/resources/loop-engineering-playbook/access">Iwo Szapar’s playbook</a> provides a design canvas. The <a href="https://agentfactory.panaversity.org/docs/loop-engineering-crash-course">AI Agent Factory crash course</a> covers triggers, saved progress and checks.</li>
+            <li id="learning-graph"><strong>Graph engineering:</strong> <a href="https://agentfactory.panaversity.org/docs/graph-engineering-crash-course">AI Agent Factory crash course</a> develops parallel branches, checking and merging.</li>
+            <li id="learning-factory"><strong>Software factory:</strong> <a href="https://vercel.com/academy/creating-a-software-factory">Vercel Academy</a> provides an implementation course. <a href="https://addyosmani.com/blog/software-factories/">Addy Osmani’s article</a> discusses review arrangements and the limits of autonomy.</li>
+          </ul>
+          <h3>Supporting sources</h3>
           <ol class="source-list">
             <li id="source-1"><a href="https://intent-driven.dev/knowledge/intent-driven-development/">Intent-Driven Development, intent-driven.dev</a></li>
             <li id="source-2"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
@@ -437,22 +550,30 @@
             <li id="source-9"><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic, Building effective agents</a></li>
             <li id="source-10"><a href="https://addyosmani.com/blog/software-factories/">Addy Osmani, Software Factories, Light and Dark</a></li>
             <li id="source-11"><a href="https://www.oreilly.com/radar/software-factories-light-and-dark/">O’Reilly Radar, Software Factories, Light and Dark</a></li>
+            <li id="source-12"><a href="https://arxiv.org/abs/2005.14165">Brown et al. (2020), Language Models are Few-Shot Learners</a>. Supports the LLM explanation and GPT-3 example; reports capabilities and limitations under specific evaluation conditions.</li>
+            <li id="source-13"><a href="https://aclanthology.org/2020.acl-main.740/">Gururangan et al. (ACL 2020), Don’t Stop Pretraining: Adapt Language Models to Domains and Tasks</a>. Supports continued domain and task pretraining; evidence covers four domains and eight classification tasks.</li>
+            <li id="source-14"><a href="https://arxiv.org/abs/2303.17564">Wu et al. (2023), BloombergGPT: A Large Language Model for Finance</a>. Provides the domain-specific example and its combination of financial and general-purpose training data.</li>
+            <li id="source-15"><a href="https://arxiv.org/abs/2404.14219">Abdin et al. (2024), Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone</a>. Supports the SLM example, training-data emphasis and feasibility of local deployment.</li>
+            <li id="source-16"><a href="https://arxiv.org/abs/2407.06023">Yu et al. (2024), Distilling System 2 into System 1</a>. Supports the response-approach distinction and the bounded claim about transferring reasoning improvements into direct responses.</li>
           </ol>
+          <p class="source-ref">Model research reviewed 11 October 2026. The named models are research examples, not a current product ranking or a deployment recommendation.</p>
         </section>
-        <footer class="article-footer"><a href="index.html">Back to the introduction</a><span>Sources reviewed 28 September 2026</span></footer>
+        <footer class="article-footer"><a href="index.html">Back to the introduction</a><span>Learning references reviewed 11 October 2026</span></footer>
       </article>
     </main>
     <aside class="page-contents">
       <nav aria-label="On this page">
         <p>On this page</p>
-        <a href="#intent-driven-development">Intent-driven development</a>
+        <a href="#how-the-concepts-fit">How the concepts fit together</a>
+        <a href="#models">Models</a>
+            <a href="#intent-driven-development">Intent-driven development</a>
         <a href="#spec-driven-development">Spec-driven development</a>
         <a href="#context-engineering">Context engineering</a>
         <a href="#harness-engineering">Harness engineering</a>
         <a href="#loop-engineering">Loop engineering</a>
         <a href="#graph-engineering">Graph engineering</a>
         <a href="#software-factory">Software factory: light and dark</a>
-        <a href="#sources">Sources</a>
+        <a href="#sources">Sources and learning references</a>
       </nav>
     </aside>
   </div>
