@@ -148,7 +148,7 @@
           </ol>
           <p>Most of these gates also ran at earlier stages; here they run again to give a definitive audit at release time. Two are pre-production only:</p>
           <ul>
-            <li><strong>Threat modelling:</strong> models the system as data-flow diagrams and identifies threats with the STRIDE method, adding LINDDUN for privacy-sensitive features. Each threat is recorded as mitigated, not applicable or open, with a mitigation for every open item. The model is kept in version control and updated when the architecture changes.</li>
+            <li><strong>Threat modelling:</strong> models the system as data-flow diagrams and identifies threats with the <a href="https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats">STRIDE</a> method, which groups security threats into six categories, adding <a href="https://linddun.org">LINDDUN</a>, a privacy threat modelling framework, for privacy-sensitive features. Each threat is recorded as mitigated, not applicable or open, with a mitigation for every open item. The model is kept in version control and updated when the architecture changes.</li>
             <li><strong>Observability:</strong> checks that logging is ready for production, including log levels, exception logging, leakage of sensitive or personal data, and correlation identifiers that follow a request across asynchronous work.</li>
           </ul>
           <aside class="callout" aria-label="Note on IM8 and ARC coverage">
