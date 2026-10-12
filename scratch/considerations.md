@@ -53,6 +53,9 @@ OKF: https://okf.md
 - Figure 1 (EDS AI Workflow diagram) explicitly shows “steps x-y”, but content before this diagram did not state what these “steps” are, only reference is “Install Eitri and work through its 19 steps”. There is a link to “Developer harness” that has the diagram showing all 19 steps, but it requires the reader to backtrack to the link. I would recommend summarising the diagram using high-level terms instead of specific steps
 - “Read the top row from left to right…” is not required if the diagram already has arrows.
 
-### Remove "Read the status labels" section.
-- This is not needed if the entire developer harness is not shown in detail.
+### Refine "Read the status labels" section.
+- Putting the entire legend of status labels in a single page will make things diffcult to readers who browse the other pages.
+- The labels "Core", "Optional . Recommended", "Optional", "One-time setup" are not using the same label styles as "Planned", "HITL".
+- The instructions in this section are too technical and should be written from a high-level concept perspective.
+
 

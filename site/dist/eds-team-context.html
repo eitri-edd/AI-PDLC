@@ -47,9 +47,9 @@
         <header class="article-header">
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>Add your team’s context</h1>
-<p class="lead">The harness behaves correctly only if it can see your team’s business domain, standards, policies and conventions at the right moment. This page shows where each kind of context enters the PO/BA and developer harnesses, and how to add your own.</p>
-          <p>This page is for Tech Leads and the people who own a team’s standards and policies. For how to structure instructions so a session loads only what it needs, <a href="eds-ai-workflow.html#context-practice">read Layer instructions and context</a>. Exact file names, registry entries and environment settings are in the harness repository.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-06">6 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+<p class="lead">The harness behaves correctly only if it can see a team’s business domain, standards, policies and conventions at the right moment. This page shows where each kind of context enters the PO/BA and developer harnesses, and how a team adds its own.</p>
+          <p>For how to organise instructions so an agent loads only what it needs, <a href="eds-ai-workflow.html#context-practice">read Give agents the right context</a>. Exact file names, registry entries and environment settings are in the harness repository.</p>
+          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-12">12 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#matrix">Context by stage</a>
@@ -69,69 +69,60 @@
         </svg>
 <section id="matrix">
           <h2>Know what context each stage needs</h2>
-          <p>Feed in each kind of context at the stage where it shapes a decision. Loading it earlier dilutes the agent’s attention; loading it later means the decision has already been made without it.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Context to add at each stage, the skills that use it and why it matters</caption><thead><tr><th scope="col">Stage</th><th scope="col">Context</th><th scope="col">Used by</th><th scope="col">Why it matters</th></tr></thead><tbody>
-            <tr><th scope="row">1. Requirements and scope</th><td>Business domain intent, persona maps, scope boundaries</td><td><code>/speckit.specify</code>, <code>/wayfinder</code>, CLARA</td><td>Grounds the user stories in the business problem, so the team does not build the wrong features.</td></tr>
-            <tr><th scope="row">2. Architecture and design</th><td>Shared architecture standards, integration recipes, ADR templates</td><td><code>/dependency-orchestrator</code>, <code>/wayfinder</code></td><td>Applies structural constraints, such as authentication, logging and database schema, before work is sliced, so design flaws do not spread into every issue.</td></tr>
-            <tr><th scope="row">3. Compliance and governance</th><td>Regulatory and security policies, such as IM8 and ARC</td><td><code>/spec-compliance</code></td><td>Audits the TRD against policy, so security controls are declared and resolved before coding.</td></tr>
-            <tr><th scope="row">4. Implementation</th><td>Coding practices, framework guides, API reference documentation</td><td><code>/do-work</code>, through <code>/query-kb</code></td><td>Gives the agent syntax, language features and library patterns, so code passes type checks, builds and tests.</td></tr>
-            <tr><th scope="row">5. Merge review</th><td>Repository style, conventions and lint expectations</td><td><code>/code-review</code>, with <code>CODING_STANDARDS.md</code></td><td>Keeps changes consistent with the team’s style, naming rules and codebase conventions before merging.</td></tr>
+          <p>Each kind of context is fed in at the stage where it shapes a decision. Loading it earlier dilutes the agent’s attention; loading it later means the decision has already been made without it.</p>
+          <div class="table-scroll"><table class="wide-table"><caption>Context to add at each stage, where it is used and why it matters</caption><thead><tr><th scope="col">Stage</th><th scope="col">Context</th><th scope="col">Where it is used</th><th scope="col">Why it matters</th></tr></thead><tbody>
+            <tr><th scope="row">1. Requirements and scope</th><td>Business domain intent, persona maps, scope boundaries</td><td>The <a href="eds-po-ba-harness.html">PO/BA paths</a>: <a href="https://speckit.org">SpecKit</a>, the Socratic workflow and <a href="https://github.com/dsta-productops/clara">CLARA</a></td><td>Grounds the user stories in the business problem, so the team does not build the wrong features.</td></tr>
+            <tr><th scope="row">2. Architecture and design</th><td>Shared architecture standards, integration recipes, decision templates</td><td>Story sequencing and investigation, before the technical requirements document (TRD) is written</td><td>Applies structural constraints, such as authentication, logging and database schema, before work is sliced, so design flaws do not spread into every issue.</td></tr>
+            <tr><th scope="row">3. Compliance and governance</th><td>Regulatory and security policies, such as <a href="https://info.standards.tech.gov.sg">IM8</a> and <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a></td><td>The compliance audit of the TRD</td><td>Audits the TRD against policy, so security controls are declared and resolved before coding.</td></tr>
+            <tr><th scope="row">4. Implementation</th><td>Coding practices, framework guides, API reference documentation</td><td>The build loop, through a knowledge-base query</td><td>Gives the agent syntax, language features and library patterns, so code passes type checks, builds and tests.</td></tr>
+            <tr><th scope="row">5. Merge review</th><td>Repository style, conventions and lint expectations</td><td>The code review against the repository’s coding standards</td><td>Keeps changes consistent with the team’s style, naming rules and codebase conventions before merging.</td></tr>
           </tbody></table></div>
           <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> context ingestion matrix.</p>
         </section>
 
         <section id="domain">
           <h2>Add business domain context</h2>
-          <p>During requirements, the business domain enters through the specification files that the PO or BA commits. How you supply it depends on the <a href="eds-po-ba-harness.html">PO/BA path</a>:</p>
+          <p>During requirements, the business domain enters through the specification files that the product owner (PO) or business analyst (BA) commits. How it is supplied depends on the <a href="eds-po-ba-harness.html">PO/BA path</a>:</p>
           <ul>
-            <li><strong>Path 1, SpecKit:</strong> supply your domain context, terminology glossaries or functional requirements in the prompt or as reference files when you run <code>/speckit.specify</code>, so <code>spec.md</code> uses your team’s vocabulary.</li>
-            <li><strong>Path 2, Socratic workflow:</strong> reference your domain models, legacy codebase patterns or business-logic guides when you run <code>/wayfinder</code>. Use <code>/domain-modeling</code> and <code>/codebase-design</code> to keep tickets and ADRs in your team’s ubiquitous language.</li>
-            <li><strong>Path 3, CLARA:</strong> upload your domain documentation to the Confluence spaces or knowledge bases that CLARA queries, so personas, journey maps and specifications in <code>specs/</code> reflect your business.</li>
+            <li><strong>Path 1, SpecKit:</strong> the PO or BA supplies domain context, terminology glossaries or functional requirements when generating the specification, so it uses the team’s vocabulary.</li>
+            <li><strong>Path 2, Socratic workflow:</strong> the PO or BA points the agent at domain models, legacy codebase patterns or business-logic guides, so tickets and decision records stay in the team’s shared language.</li>
+            <li><strong>Path 3, CLARA:</strong> the team places its domain documentation in the Confluence spaces or knowledge bases that CLARA queries, so personas, journey maps and specifications reflect the business.</li>
           </ul>
-          <p>Whichever path you use, the committed specification files carry the domain context into the developer harness as the source-of-truth handoff.</p>
+          <p>Whichever path is used, the committed specification files carry the domain context into the developer harness as the source-of-truth handoff.</p>
           <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> section 1.</p>
         </section>
 
         <section id="standards">
           <h2>Add shared standards and recipes</h2>
           <p>During planning, the harness matches each story to implementation standards. The base library is AppStandards, cloned from the shared repository or from a team fork.</p>
-          <p>AppStandards uses the Open Knowledge Format (OKF), which stores documentation as a version-controlled graph of Markdown concepts. This lets the agent load only what a story needs:</p>
-          <ul>
-            <li><strong>Catalogue entry points:</strong> each folder has an <code>index.md</code> listing its concepts, so the agent can find a guideline without scanning the whole tree.</li>
-            <li><strong>Concept files:</strong> each standard is split into focused files with strict rules, code recipes, and questions for challenging or verifying a design.</li>
-            <li><strong>Story-to-standard mapping:</strong> <code>/dependency-orchestrator</code> (Step 2) maps each user story to its specific sub-standards, such as core MFA or single sign-on. <code>/wayfinder</code> (Step 5) and <code>/do-work</code> (Step 12) then read only those few files, instead of the whole catalogue, which would exceed the context window and dilute attention.</li>
-          </ul>
-          <p>To add your own standards:</p>
-          <ol class="practice-steps">
-            <li><strong>Follow the OKF layout.</strong> Structure your standards folder with <code>index.md</code> catalogues, rule documents, code recipes and challenge questions.</li>
-            <li><strong>Register them with the orchestrator.</strong> Add your standards’ locations to the dependency orchestrator’s standards registry, so it can map stories to them.</li>
-            <li><strong>Tag your stories.</strong> Tag task nodes in your stories or foundation templates with your standard’s key. The orchestrator then lists the standard in the Developer Delivery Plan.</li>
-          </ol>
+          <p>AppStandards uses the <a href="https://okf.md">Open Knowledge Format (OKF)</a>, which stores documentation as a version-controlled graph of Markdown concepts. Each folder has a catalogue of its contents, and each standard is split into focused files holding rules, code recipes and questions for challenging a design.</p>
+          <p>The harness maps every user story to the few standards it needs, such as multi-factor authentication or single sign-on, and later steps read only those files. Loading the whole catalogue would exceed the agent’s context window and dilute its attention.</p>
+          <p>To add its own standards, a team structures them in the OKF layout, registers their location with the harness’s story-sequencing skill and tags its stories with the standard’s key. The standard then appears in the delivery plan for each tagged story.</p>
           <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> section 2; <a href="#source-2" aria-label="Source 2: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[2]</a> section 2.1, Step 2.</p>
         </section>
 
         <section id="knowledge-base">
           <h2>Add coding practices to the knowledge base</h2>
-          <p>During implementation, the agent retrieves coding practices and framework patterns from your organisation’s hosted Amazon Bedrock knowledge base. Inside the <code>/do-work</code> loop (Step 12), the implementer calls <code>/query-kb</code>, which routes each file to a query category, such as a TSX file to a React query.</p>
-          <p>To add your own context, upload your design guides, library documentation and coding conventions to the data source synced to your team’s knowledge base, then run a sync. Point <code>/query-kb</code> at your knowledge base by its ID or by a tag; the <a href="eds-skills-catalogue.html#additional">skills catalogue</a> lists the flags.</p>
+          <p>During implementation, the agent retrieves coding practices and framework patterns from the organisation’s hosted Amazon Bedrock knowledge base. Inside the build loop, each file is routed to the relevant category of guidance; a React component file, for example, triggers a React query.</p>
+          <p>To add its own context, a team uploads its design guides, library documentation and coding conventions to the data source behind its knowledge base, runs a sync and points the harness at that knowledge base.</p>
           <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> section 3; <a href="#source-3" aria-label="Source 3: Skills Catalogue (EDS harness documentation)">[3]</a> Additional skills.</p>
         </section>
 
         <section id="policies">
           <h2>Add security and governance policies</h2>
-          <p>Before work is sliced into issues, <code>/spec-compliance</code> (Step 8) audits the TRD against the policy references held by the policies skill and writes a checklist report. Two references ship with the harness:</p>
+          <p>Before work is sliced into issues, the compliance audit checks the TRD against the policy references held in the harness and writes a checklist report. Two references ship with the harness:</p>
           <ul>
-            <li><strong>IM8:</strong> 36 application security controls from Instruction Manual 8.</li>
-            <li><strong>ARC:</strong> 88 agentic AI governance controls from the Agentic Risk &amp; Capability Framework.</li>
+            <li><strong><a href="https://info.standards.tech.gov.sg">IM8</a>:</strong> 36 application security controls from Instruction Manual 8.</li>
+            <li><strong><a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a>:</strong> 88 agentic AI governance controls from the Agentic Risk &amp; Capability Framework.</li>
           </ul>
-          <p>To enforce your own policies, write your compliance checklist or internal security policy as a Markdown file, add it to the policies skill’s references, and register it in that skill. The policy reviewer then applies it alongside IM8 and ARC.</p>
+          <p>To enforce its own policies, a team writes its compliance checklist or internal security policy as a Markdown file and registers it with the harness. The audit then applies it alongside IM8 and ARC.</p>
           <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> section 4; <a href="#source-3" aria-label="Source 3: Skills Catalogue (EDS harness documentation)">[3]</a> Compliance skills.</p>
         </section>
 
         <section id="review-rules">
           <h2>Add review rules</h2>
-          <p>At the end of the development loop, changes are checked against the repository’s own conventions. Put them in <code>CODING_STANDARDS.md</code> at the root of the application repository: formatting rules, naming, design principles and lint-like expectations.</p>
-          <p><code>/code-review</code> (Step 15, and inside Gate 2 of <code>/do-work</code>) checks the diff against this file in a parallel sub-agent. Where the file is silent, it falls back to a baseline of common code smells.</p>
+          <p>At the end of the development loop, changes are checked against the repository’s own conventions: formatting rules, naming, design principles and lint-like expectations. A team keeps them in one coding standards file at the root of the application repository.</p>
+          <p>The code review checks each change against this file, both inside the build loop and at closeout. Where the file is silent, the review falls back to a baseline of common code smells.</p>
           <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> section 5; <a href="#source-2" aria-label="Source 2: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[2]</a> section 2.5.</p>
         </section>
 
@@ -139,13 +130,13 @@
           <h2>Set up your team’s context</h2>
           <p>A new project team can work through this checklist once. When it is complete, every stage in the table above has the context it needs.</p>
           <ol class="practice-steps">
-            <li><strong>Write local coding rules.</strong> Create or edit <code>CODING_STANDARDS.md</code> at the repository root with your naming, architecture patterns and formatting expectations.</li>
-            <li><strong>Configure the knowledge base.</strong> Upload your coding standards, library documentation and technical guidelines to your team’s Bedrock data source, run a sync, and configure your environment so <code>/query-kb</code> targets it.</li>
-            <li><strong>Connect your architecture standards.</strong> Clone your standards repository in the OKF layout, register it with the orchestrator and tag your stories with its keys.</li>
-            <li><strong>Define security policies.</strong> Write any additional corporate security policies as Markdown, add them to the policies skill and register them.</li>
-            <li><strong>Declare architecture boundary tests.</strong> Run <code>/arch-tests-plan</code> (Step 4) to scan the project and produce <code>arch/arch-test-plan.md</code>. Review the rules, customise them if you have your own layering or dependency restrictions, then run <code>/arch-tests-gen</code>.</li>
+            <li><strong>Write local coding rules.</strong> Record naming, architecture patterns and formatting expectations in the repository’s coding standards file.</li>
+            <li><strong>Configure the knowledge base.</strong> Upload coding standards, library documentation and technical guidelines to the team’s knowledge base, and point the harness at it.</li>
+            <li><strong>Connect architecture standards.</strong> Structure the team’s standards in the OKF layout, register them and tag stories with their keys.</li>
+            <li><strong>Define security policies.</strong> Write any additional corporate security policies as Markdown and register them with the harness.</li>
+            <li><strong>Declare architecture boundary tests.</strong> Let the harness scan the project and propose boundary rules, review and customise them, then generate the tests.</li>
           </ol>
-          <p class="next-step"><strong>Next step:</strong> complete items 1 and 5 first, because they need only the repository. Then <a href="eds-developer-harness.html#plan">take your first story through planning</a> and note which context the agent asked for but could not find.</p>
+          <p class="next-step"><strong>Next step:</strong> complete items 1 and 5 first, because they need only the repository. Then <a href="eds-developer-harness.html#plan">take a first story through planning</a> and note which context the agent asked for but could not find.</p>
           <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> quick-start checklist.</p>
         </section>
 

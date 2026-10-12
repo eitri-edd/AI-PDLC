@@ -47,9 +47,9 @@
         <header class="article-header">
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>Path to production</h1>
-<p class="lead">Code changes pass through four pipeline stages on their way to production. Each stage widens the scope of the checks, from the developer’s staged change at commit time to the whole codebase at QA entry and before release. The same skills are reused at each scope, so enforcement stays consistent without duplicate tooling.</p>
-          <p>This page is for Tech Leads, reviewers and the team that maintains the pipeline. It starts where the <a href="eds-developer-harness.html#closeout">developer harness closeout</a> ends and finishes with the consolidated report for the Tech Lead’s release sign-off. Confirm the applicable release authority locally.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-06">6 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+<p class="lead">Code changes pass through four pipeline stages on their way to production. Each stage widens the scope of the checks, from the developer’s staged change at commit time to the whole codebase at QA entry and before release. The same checks are reused at each scope, so enforcement stays consistent without duplicate tooling.</p>
+          <p>The path starts where the <a href="eds-developer-harness.html#closeout">developer harness closeout</a> ends and finishes with the consolidated report for the Tech Lead’s release sign-off. Confirm the applicable release authority locally.</p>
+          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-12">12 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#stages">Four pipeline stages</a>
@@ -72,91 +72,88 @@
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 240" role="img" aria-labelledby="fig-pipeline-title">
-                <title id="fig-pipeline-title">Four pipeline stages from left to right. Stage 4.1, pre-commit: a Husky hook runs /code-reviewer on the staged diff. Stage 4.2, merge to Dev: /gen-code-docs runs on the merge request diff. Stage 4.3, merge to QA: five full-codebase scans and generators. Stage 4.4, pre-production: /pre-prod-check runs all readiness gates on the full codebase for the Tech Lead's sign-off. The scope of the checks widens from the developer's change to the whole codebase.</title>
+                <title id="fig-pipeline-title">Four pipeline stages from left to right. Stage 4.1, pre-commit: an automated review of the staged change on each commit. Stage 4.2, merge to Dev: API documentation for the changed files in the merge request. Stage 4.3, merge to QA: full-codebase scans and generated documents. Stage 4.4, pre-production: all readiness gates on the full codebase for the Tech Lead's sign-off. The scope of the checks widens from the developer's change to the whole codebase.</title>
                 <text class="d-label" x="78" y="18" text-anchor="middle">Stage 4.1</text>
                 <text class="d-label" x="253" y="18" text-anchor="middle">Stage 4.2</text>
                 <text class="d-label" x="428" y="18" text-anchor="middle">Stage 4.3</text>
                 <text class="d-label" x="602" y="18" text-anchor="middle">Stage 4.4</text>
-                <rect class="d-node" x="1" y="28" width="155" height="92" rx="8"/><text class="d-title" x="78" y="56" text-anchor="middle">Pre-commit</text><text class="d-sub" x="78" y="80" text-anchor="middle">Husky hook</text><text class="d-sub" x="78" y="102" text-anchor="middle">/code-reviewer</text>
+                <rect class="d-node" x="1" y="28" width="155" height="92" rx="8"/><text class="d-title" x="78" y="56" text-anchor="middle">Pre-commit</text><text class="d-sub" x="78" y="80" text-anchor="middle">On each commit</text><text class="d-sub" x="78" y="102" text-anchor="middle">Automated review</text>
                 <path class="d-line" d="M156 74H172" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="176" y="28" width="155" height="92" rx="8"/><text class="d-title" x="253" y="56" text-anchor="middle">Merge to Dev</text><text class="d-sub" x="253" y="80" text-anchor="middle">MR to Dev</text><text class="d-sub" x="253" y="102" text-anchor="middle">/gen-code-docs</text>
+                <rect class="d-node" x="176" y="28" width="155" height="92" rx="8"/><text class="d-title" x="253" y="56" text-anchor="middle">Merge to Dev</text><text class="d-sub" x="253" y="80" text-anchor="middle">MR to Dev</text><text class="d-sub" x="253" y="102" text-anchor="middle">API documentation</text>
                 <path class="d-line" d="M331 74H347" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="351" y="28" width="155" height="92" rx="8"/><text class="d-title" x="428" y="56" text-anchor="middle">Merge to QA</text><text class="d-sub" x="428" y="80" text-anchor="middle">MR to QA</text><text class="d-sub" x="428" y="102" text-anchor="middle">Five full scans</text>
+                <rect class="d-node" x="351" y="28" width="155" height="92" rx="8"/><text class="d-title" x="428" y="56" text-anchor="middle">Merge to QA</text><text class="d-sub" x="428" y="80" text-anchor="middle">MR to QA</text><text class="d-sub" x="428" y="102" text-anchor="middle">Scans, documents</text>
                 <path class="d-line" d="M506 74H522" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="526" y="28" width="153" height="92" rx="8"/><text class="d-title" x="602" y="56" text-anchor="middle">Pre-production</text><text class="d-sub" x="602" y="80" text-anchor="middle">/pre-prod-check</text><text class="d-sub" x="602" y="102" text-anchor="middle">Tech Lead sign-off</text>
-                <text class="d-sub" x="78" y="146" text-anchor="middle">Staged diff</text>
-                <text class="d-sub" x="253" y="146" text-anchor="middle">MR diff</text>
+                <rect class="d-node d-node-accent" x="526" y="28" width="153" height="92" rx="8"/><text class="d-title" x="602" y="56" text-anchor="middle">Pre-production</text><text class="d-sub" x="602" y="80" text-anchor="middle">All readiness gates</text><text class="d-sub" x="602" y="102" text-anchor="middle">Tech Lead sign-off</text>
+                <text class="d-sub" x="78" y="146" text-anchor="middle">Staged change</text>
+                <text class="d-sub" x="253" y="146" text-anchor="middle">Changed files</text>
                 <text class="d-sub" x="428" y="146" text-anchor="middle">Full codebase</text>
                 <text class="d-sub" x="602" y="146" text-anchor="middle">Full codebase</text>
                 <path class="d-line d-line-accent" d="M1 186 L679 166 V206 Z" style="fill:#eff6ff"/>
-                <text class="d-label d-label-accent" x="340" y="230" text-anchor="middle">Scope of checks widens from your change to the whole codebase</text>
+                <text class="d-label d-label-accent" x="340" y="230" text-anchor="middle">Scope of checks widens from one change to the whole codebase</text>
               </svg>
             </div>
-            <figcaption>Figure 1. The four pipeline stages. The check scope, shown by the widening band, grows from the staged diff to the full codebase; the final stage is highlighted because it ends in a human sign-off.</figcaption>
+            <figcaption>Figure 1. The four pipeline stages. The check scope, shown by the widening band, grows from the staged change to the full codebase; the final stage is highlighted because it ends in a human sign-off.</figcaption>
           </figure>
-          <p>Read the stages from left to right. A commit triggers checks on the staged diff only. A merge request to Dev generates documentation for the changed files. A merge request to QA runs full-codebase scans and generators. Promoting a release candidate runs every readiness gate again on the full codebase and produces one report for the Tech Lead.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Pipeline stages, triggers, skills, scope and blocking behaviour</caption><thead><tr><th scope="col">Stage</th><th scope="col">Trigger</th><th scope="col">Skills</th><th scope="col">Scope</th><th scope="col">Blocking</th></tr></thead><tbody>
-            <tr><th scope="row"><a href="#pre-commit">4.1 Pre-commit</a></th><td>Husky pre-commit hook</td><td><code>/code-reviewer</code>, which includes <code>/im8-review</code></td><td>Staged diff</td><td>Blocks the commit on Critical or High findings</td></tr>
-            <tr><th scope="row"><a href="#merge-dev">4.2 Merge to Dev</a></th><td>MR targeting the Dev branch</td><td><code>/gen-code-docs</code></td><td>MR diff</td><td>Pass-through</td></tr>
-            <tr><th scope="row"><a href="#merge-qa">4.3 Merge to QA</a></th><td>MR targeting the QA branch</td><td><code>/im8-review</code>, <code>/gen-auth-matrix</code>, <code>/tech-arch-doc</code>, <code>/dependency-vuln-scan</code>, <code>/semgrep</code></td><td>Full codebase</td><td>Scanners block on Critical or High; generators pass through</td></tr>
-            <tr><th scope="row"><a href="#pre-prod">4.4 Pre-production</a></th><td>Release candidate promotion</td><td><code>/pre-prod-check</code>, which runs every readiness gate</td><td>Full codebase</td><td>Blocks the release on any gate failure</td></tr>
+          <p>A commit triggers checks on the staged change only. A merge request (MR) to the Dev branch generates documentation for the changed files. An MR to the QA branch runs full-codebase scans and document generators. Promoting a release candidate runs every readiness gate again on the full codebase and produces one report for the Tech Lead.</p>
+          <p>The harness documentation numbers these stages 4.1 to 4.4, and this page keeps that numbering.</p>
+          <div class="table-scroll"><table class="wide-table"><caption>Pipeline stages, triggers, checks, scope and blocking behaviour</caption><thead><tr><th scope="col">Stage</th><th scope="col">Trigger</th><th scope="col">What runs</th><th scope="col">Scope</th><th scope="col">Blocking</th></tr></thead><tbody>
+            <tr><th scope="row"><a href="#pre-commit">4.1 Pre-commit</a></th><td>Each commit, through an automatic hook</td><td>The quality and compliance reviews from the build loop, including the IM8 review</td><td>Staged change</td><td>Blocks the commit on Critical or High findings</td></tr>
+            <tr><th scope="row"><a href="#merge-dev">4.2 Merge to Dev</a></th><td>MR targeting the Dev branch</td><td>API documentation generation</td><td>Changed files in the MR</td><td>Does not block</td></tr>
+            <tr><th scope="row"><a href="#merge-qa">4.3 Merge to QA</a></th><td>MR targeting the QA branch</td><td>Security scans, the authorisation matrix and the technical architecture document</td><td>Full codebase</td><td>Scans block on Critical or High findings; generated documents do not block</td></tr>
+            <tr><th scope="row"><a href="#pre-prod">4.4 Pre-production</a></th><td>Release candidate promotion</td><td>Every readiness gate, in one run</td><td>Full codebase</td><td>Blocks the release on any gate failure</td></tr>
           </tbody></table></div>
           <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 4.</p>
         </section>
 
         <section id="pre-commit">
           <h2>4.1 Check each commit</h2>
-          <p>A Husky pre-commit hook runs <code>/code-reviewer</code> on the staged diff whenever a developer runs <code>git commit</code>. It is the same validation gate used inside <code>/do-work</code> (Gate 2), scoped to the staged changes for fast feedback. It dispatches the two-axis <code>/code-review</code>, <code>/semgrep</code> static analysis, the <code>/im8-review</code> security audit, <code>/thermo-nuclear-review</code> and the framework reviews in parallel.</p>
-          <ul>
-            <li><strong>Gate behaviour:</strong> blocks the commit on any Critical or High finding. The harness allows <code>--no-verify</code> to bypass the hook in an emergency.</li>
-            <li><strong>Output:</strong> a consolidated report at <code>artifacts/code-reviewer/{slug}-compliance.html</code>.</li>
-          </ul>
-          <p>The IM8 review checks application technical controls such as input validation, authentication, secrets management, Content Security Policy (CSP), session management and audit logging.</p>
+          <p>An automatic hook reviews the staged change whenever a developer commits. It is the same quality and compliance gate used inside the <a href="eds-developer-harness.html#do-work">build loop</a>, scoped to the staged change for fast feedback. It runs in parallel the review against coding standards and the specification, <a href="https://semgrep.dev/">Semgrep</a> static analysis, the <a href="https://info.standards.tech.gov.sg">IM8</a> security review, the <a href="https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md">thermo-nuclear maintainability review</a> and the framework reviews.</p>
+          <p>A Critical or High finding blocks the commit, and the results are written to one consolidated report. The harness allows the hook to be bypassed in an emergency.</p>
+          <p>The IM8 review checks application technical controls such as input validation, authentication, secrets management, session management and audit logging.</p>
           <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 4.1; <a href="#source-2" aria-label="Source 2: Skills Catalogue (EDS harness documentation)">[2]</a> Implementation skills.</p>
         </section>
 
         <section id="merge-dev">
           <h2>4.2 Document changes when merging to Dev</h2>
-          <p>A merge request to the Dev branch triggers <code>/gen-code-docs</code> on the changed files only, giving reviewers quick API documentation diffs. It detects the stack from <code>tsconfig.json</code>, <code>pom.xml</code> or Gradle build files and generates documentation for each stack present: TypeDoc output in <code>docs/tsdoc/</code> and Javadoc output in <code>docs/javadoc/</code>, both from inline comments.</p>
-          <p>This stage is pass-through: documentation generation does not block the merge. Full-codebase documentation is generated at pre-production.</p>
+          <p>An MR to the Dev branch generates API documentation for the changed files only, from comments in the code, so reviewers can see quickly what changed in each interface. This stage does not block the merge. Documentation for the full codebase is generated at pre-production.</p>
           <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 4.2.</p>
         </section>
 
         <section id="merge-qa">
           <h2>4.3 Scan the full codebase when merging to QA</h2>
-          <p>A merge request to the QA branch runs full-codebase security scans and documentation generators. Their outputs support threat and risk analysis and technical documentation sign-off.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Checks at the merge to QA</caption><thead><tr><th scope="col">Skill</th><th scope="col">What it does</th><th scope="col">Output</th><th scope="col">Gate</th></tr></thead><tbody>
-            <tr><th scope="row"><code>/im8-review</code></th><td>Reviews all code against IM8 application technical controls for Spring Boot and React with TypeScript.</td><td>A summary table and a PASS, FAIL, WARN or N/A finding per control, with file paths and line numbers</td><td>Blocks on Critical or High</td></tr>
-            <tr><th scope="row"><code>/gen-auth-matrix</code></th><td>Extracts access rules from the OpenAPI specification and maps each role to the endpoints and resources it can reach. Needs an OpenAPI specification, such as one from springdoc-openapi.</td><td><code>checklists/auth-matrix-{timestamp}.html</code>, security schemes, and endpoints without authorisation flagged as potential gaps</td><td>Pass-through</td></tr>
-            <tr><th scope="row"><code>/tech-arch-doc</code></th><td>Deep-scans every module and the dependency manifests, then runs <code>/dependency-vuln-scan</code>.</td><td><code>docs/tech-architecture.md</code> and <code>.html</code>: system overview, module catalogue, technology decisions linked to ADRs, database design, dependency inventory with licences, and vulnerability findings</td><td>Pass-through</td></tr>
-            <tr><th scope="row"><code>/dependency-vuln-scan</code></th><td>Runs <code>npm audit</code> or <code>yarn audit</code> for Node, and the OWASP Dependency-Check plugin for Maven or Gradle.</td><td>CVE counts by severity, findings per package, upgrade commands for Critical and High findings, and scanner notes</td><td>Blocks on Critical or High CVEs</td></tr>
-            <tr><th scope="row"><code>/semgrep</code></th><td>Runs the <code>p/security-audit</code> and <code>p/default</code> rulesets: injection, insecure deserialisation, weak cryptography, hard-coded secrets, unsafe input handling and dangerous dependency patterns.</td><td>Must-fix findings (P0, P1) in code the current task created, modified or made worse; documented findings (P2) in unrelated existing code</td><td>Blocks on Critical or High</td></tr>
+          <p>An MR to the QA branch runs full-codebase security scans and document generators. Their outputs support threat and risk analysis and technical documentation sign-off.</p>
+          <div class="table-scroll"><table class="wide-table"><caption>Checks at the merge to QA</caption><thead><tr><th scope="col">Check</th><th scope="col">What it provides</th><th scope="col">Blocking</th></tr></thead><tbody>
+            <tr><th scope="row">IM8 review</th><td>A finding for each <a href="https://info.standards.tech.gov.sg">IM8</a> application technical control, with the code location</td><td>Blocks on Critical or High</td></tr>
+            <tr><th scope="row">Authorisation matrix</th><td>A map of each role to the endpoints and resources it can reach, with endpoints that lack authorisation flagged as potential gaps</td><td>Does not block</td></tr>
+            <tr><th scope="row">Technical architecture document</th><td>System overview, module catalogue, technology decisions, database design and a dependency inventory with licences</td><td>Does not block</td></tr>
+            <tr><th scope="row">Dependency vulnerability scan</th><td>Known vulnerabilities (CVEs) by severity for each package, with upgrade guidance for Critical and High findings</td><td>Blocks on Critical or High CVEs</td></tr>
+            <tr><th scope="row"><a href="https://semgrep.dev/">Semgrep</a> static analysis</th><td>Findings such as injection, weak cryptography, hard-coded secrets and unsafe input handling</td><td>Blocks on Critical or High</td></tr>
           </tbody></table></div>
-          <p>All outputs are point-in-time. Re-run the generators after codebase or dependency changes.</p>
+          <p>All outputs are point-in-time and are regenerated after codebase or dependency changes.</p>
           <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 4.3.</p>
         </section>
 
         <section id="pre-prod">
           <h2>4.4 Confirm pre-production readiness</h2>
-          <p>Before promoting a release candidate, run <code>/pre-prod-check</code>. It runs every readiness gate in sequence on the full codebase and writes one sign-off report for the Tech Lead. You can also run any gate on its own to recheck it without the full suite.</p>
+          <p>Before a release candidate is promoted, one skill runs every readiness gate in sequence on the full codebase and writes one sign-off report for the Tech Lead. Any gate can also be rerun on its own.</p>
           <ol class="practice-steps">
-            <li><code>/gen-code-docs</code> generates TypeDoc and Javadoc API documentation.</li>
-            <li><code>/gen-auth-matrix</code> generates the authorisation matrix.</li>
-            <li><code>/owasp-threat-modeling</code> produces the threat model for review.</li>
-            <li><code>/tech-arch-doc</code> generates the technical architecture document, running <code>/dependency-vuln-scan</code> internally.</li>
-            <li><code>/im8-review</code> checks the full codebase against IM8 controls.</li>
-            <li><code>/spring-logging-review</code> checks observability readiness.</li>
-            <li><code>/semgrep</code> audits secrets and configuration.</li>
-            <li>The skill writes a consolidated sign-off report for the Tech Lead’s review.</li>
+            <li>Generate API documentation.</li>
+            <li>Generate the authorisation matrix.</li>
+            <li>Produce the threat model for review, using <a href="https://owasp.org/projects/threat-dragon">OWASP Threat Dragon</a>.</li>
+            <li>Generate the technical architecture document, including the dependency vulnerability scan.</li>
+            <li>Check the full codebase against <a href="https://info.standards.tech.gov.sg">IM8</a> controls.</li>
+            <li>Check observability readiness through a logging review.</li>
+            <li>Audit secrets and configuration with <a href="https://semgrep.dev/">Semgrep</a>.</li>
+            <li>Write the consolidated sign-off report for the Tech Lead’s review.</li>
           </ol>
           <p>Most of these gates also ran at earlier stages; here they run again to give a definitive audit at release time. Two are pre-production only:</p>
           <ul>
-            <li><strong>Threat modelling, <code>/owasp-threat-modeling</code>:</strong> models the system as data-flow diagrams in OWASP Threat Dragon, identifies threats with STRIDE, adding LINDDUN for privacy-sensitive features, and triages each as Mitigated, Not Applicable or Open, with mitigations for every Open item. It produces a PDF and a JSON model kept in version control; update it when the architecture changes. Threat Dragon must be installed, through Docker or the desktop app.</li>
-            <li><strong>Observability, <code>/spring-logging-review</code>:</strong> checks SLF4J usage, log levels, exception logging, sensitive-data and personal-data leakage, log injection, MDC and correlation IDs across asynchronous boundaries, structured output and production logging configuration. It reports findings with file paths and suggests corrected code.</li>
+            <li><strong>Threat modelling:</strong> models the system as data-flow diagrams and identifies threats with the STRIDE method, adding LINDDUN for privacy-sensitive features. Each threat is recorded as mitigated, not applicable or open, with a mitigation for every open item. The model is kept in version control and updated when the architecture changes.</li>
+            <li><strong>Observability:</strong> checks that logging is ready for production, including log levels, exception logging, leakage of sensitive or personal data, and correlation identifiers that follow a request across asynchronous work.</li>
           </ul>
           <aside class="callout" aria-label="Note on IM8 and ARC coverage">
             <p class="example-label">Note</p>
-            <p><code>/im8-review</code> checks IM8 controls in the code. ARC controls are assessed against the TRD by <code>/spec-compliance</code> at <a href="eds-developer-harness.html#check">Step 8</a>; the harness documentation does not describe a code-level ARC check. Do not read the pre-production report as evidence of ARC compliance in the code.</p>
+            <p>The pre-production report covers <a href="https://info.standards.tech.gov.sg">IM8</a> controls in the code. <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a> controls are assessed earlier, against the TRD, at the <a href="eds-developer-harness.html#check">compliance audit in Step 8</a>; the harness documentation does not describe a code-level ARC check. Do not read the pre-production report as evidence of ARC compliance in the code.</p>
           </aside>
           <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 4.4; <a href="#source-2" aria-label="Source 2: Skills Catalogue (EDS harness documentation)">[2]</a> Path to production skills.</p>
         </section>
@@ -171,25 +168,20 @@
           <h2>Definition of done for the pipeline and pre-production</h2>
           <h3>Pipeline gates are done (stages 4.1–4.3) when</h3>
           <ul class="checklist">
-            <li>Pre-commit: <code>/code-reviewer</code>, including <code>/im8-review</code>, reports no Critical or High findings on the staged diff.</li>
-            <li>Merge to Dev: API documentation is generated for the changed files with <code>/gen-code-docs</code>.</li>
-            <li>Merge to QA: <code>/im8-review</code> reports no Critical or High findings on the full codebase.</li>
-            <li>Merge to QA: the authorisation matrix is generated with <code>/gen-auth-matrix</code>.</li>
-            <li>Merge to QA: the technical architecture document is generated with <code>/tech-arch-doc</code>.</li>
-            <li>Merge to QA: <code>/dependency-vuln-scan</code> finds no Critical or High CVEs.</li>
-            <li>Merge to QA: <code>/semgrep</code> reports no Critical or High security findings.</li>
+            <li>Pre-commit: the quality and compliance review, including the IM8 review, reports no Critical or High findings on the staged change.</li>
+            <li>Merge to Dev: API documentation is generated for the changed files.</li>
+            <li>Merge to QA: the IM8 review, the dependency vulnerability scan and Semgrep report no Critical or High findings on the full codebase.</li>
+            <li>Merge to QA: the authorisation matrix and the technical architecture document are generated.</li>
           </ul>
           <h3>Pre-production is done (stage 4.4) when</h3>
           <ul class="checklist">
-            <li>API documentation is generated with <code>/gen-code-docs</code>.</li>
+            <li>API documentation and the technical architecture document are generated.</li>
             <li>The authorisation matrix is generated and reviewed, including any endpoints flagged as unprotected.</li>
-            <li>The threat model is reviewed and all findings are triaged with <code>/owasp-threat-modeling</code>.</li>
-            <li>The technical architecture document is generated with <code>/tech-arch-doc</code>.</li>
+            <li>The threat model is reviewed and all findings are triaged.</li>
             <li>No Critical or High CVEs remain unmitigated.</li>
-            <li>Full-codebase IM8 compliance is confirmed with <code>/im8-review</code>.</li>
-            <li>Observability readiness is confirmed with <code>/spring-logging-review</code>.</li>
-            <li><code>/semgrep</code> reports no critical security findings.</li>
-            <li>The consolidated report from <code>/pre-prod-check</code> is approved by the Tech Lead.</li>
+            <li>Full-codebase IM8 compliance and observability readiness are confirmed.</li>
+            <li>The secrets and configuration audit reports no critical security findings.</li>
+            <li>The consolidated report is approved by the Tech Lead.</li>
           </ul>
           <p class="next-step"><strong>Next step:</strong> check which of these stages your pipeline already enforces, and agree with your platform team how the missing ones will be added. To change what each stage checks against, <a href="eds-team-context.html">add your team’s context</a>.</p>
           <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> sections 3 and 4.4.</p>
