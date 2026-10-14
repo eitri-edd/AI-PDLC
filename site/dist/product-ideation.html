@@ -37,6 +37,7 @@
             <a href="eds-team-context.html">Team context</a>
             <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
+          <a href="glossary.html">Glossary</a>
           <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -48,7 +49,6 @@
           <h1>Product ideation</h1>
           <p class="lead">Product ideation helps a team decide which problem to solve and whether a proposed solution deserves investment. Test the riskiest assumptions, record what the evidence supports, and agree a bounded scope for implementation. The handoff contains a product requirements document (PRD), user interface (UI) artefacts where relevant, and the remaining uncertainties.</p>
           <p>It is written for product owners, designers, engineers and reviewers working in the same squad. The stages and practices below are a working model for this guide, and the examples are fictional. Confirm stage names and decision authority against the agreed lifecycle before relying on them.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-04">4 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents">
           <summary>On this page</summary>
@@ -82,37 +82,15 @@
           <h3>Know when to enter or revisit ideation</h3>
           <p>Start when the user problem, expected value or proposed behaviour is uncertain. The playbook names three signals: the need keeps changing, the root cause is unclear, or nobody can yet show that the solution will have the intended effect. Return when research, incidents or delivery work challenge those assumptions. A well-understood defect can go directly to implementation with a clear issue and acceptance criteria; it need not restart discovery.</p>
           <p>Bring observations of the current task, support or operational evidence, existing alternatives and known constraints. Nominate a person to gather evidence and identify who can authorise the next investment. The output is a decision with its evidence, scope and unresolved questions.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 280" role="img" aria-labelledby="fig-loop-title">
-                <title id="fig-loop-title">The product ideation loop. Thesis, explore, challenge, specify and prototype run left to right, then measure, learn and decide run right to left. From decide, the team either improves, redesigns or pivots and returns to the thesis, hands over a validated PRD and UI artefacts when ready, or stops and keeps the learning.</title>
-                <rect class="d-node" x="1" y="40" width="114" height="64" rx="8"/><text class="d-title" x="58" y="66" text-anchor="middle">Thesis</text><text class="d-sub" x="58" y="90" text-anchor="middle">Testable claim</text>
-                <path class="d-line" d="M115 72H138" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="142" y="40" width="114" height="64" rx="8"/><text class="d-title" x="199" y="66" text-anchor="middle">Explore</text><text class="d-sub" x="199" y="90" text-anchor="middle">Widen options</text>
-                <path class="d-line" d="M256 72H279" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="283" y="40" width="114" height="64" rx="8"/><text class="d-title" x="340" y="66" text-anchor="middle">Challenge</text><text class="d-sub" x="340" y="90" text-anchor="middle">Question it</text>
-                <path class="d-line" d="M397 72H420" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="424" y="40" width="114" height="64" rx="8"/><text class="d-title" x="481" y="66" text-anchor="middle">Specify</text><text class="d-sub" x="481" y="90" text-anchor="middle">Draft the PRD</text>
-                <path class="d-line" d="M538 72H561" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="565" y="40" width="114" height="64" rx="8"/><text class="d-title" x="622" y="66" text-anchor="middle">Prototype</text><text class="d-sub" x="622" y="90" text-anchor="middle">Riskiest first</text>
-                <path class="d-line" d="M622 104V166" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="565" y="170" width="114" height="64" rx="8"/><text class="d-title" x="622" y="196" text-anchor="middle">Measure</text><text class="d-sub" x="622" y="220" text-anchor="middle">Run the test</text>
-                <path class="d-line" d="M565 202H542" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="424" y="170" width="114" height="64" rx="8"/><text class="d-title" x="481" y="196" text-anchor="middle">Learn</text><text class="d-sub" x="481" y="220" text-anchor="middle">Update beliefs</text>
-                <path class="d-line" d="M424 202H401" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="283" y="170" width="114" height="64" rx="8"/><text class="d-title" x="340" y="196" text-anchor="middle">Decide</text><text class="d-sub" x="340" y="220" text-anchor="middle">Choose next</text>
-                <path class="d-line d-line-accent d-dash" d="M340 170V140H58V108" marker-end="url(#arrow-accent)"/>
-                <text class="d-label d-label-accent" x="199" y="132" text-anchor="middle">improve, redesign or pivot</text>
-                <path class="d-line d-line-accent" d="M283 202H119" marker-end="url(#arrow-accent)"/>
-                <text class="d-label d-label-accent" x="201" y="194" text-anchor="middle">ready</text>
-                <rect class="d-node" x="1" y="170" width="114" height="64" rx="8"/><text class="d-title" x="58" y="196" text-anchor="middle">Handover</text><text class="d-sub" x="58" y="220" text-anchor="middle">PRD and UI</text>
-                <path class="d-line" d="M340 234V250" marker-end="url(#arrow)"/>
-                <text class="d-label" x="340" y="270" text-anchor="middle">or stop, and keep what was learned</text>
-              </svg>
-            </div>
-            <figcaption>Figure 1. Product ideation is a loop. Each pass ends with an explicit decision to continue, change direction, hand over or stop.</figcaption>
-          </figure>
-          <p>The loop runs from a thesis, through exploration, challenge, a draft specification and a prototype, to a measured result. The team learns from that result and makes a decision, highlighted in blue. It can return to the thesis with an improvement, a redesign or a pivot; hand over a validated PRD and UI artefacts to implementation; or stop.</p>
+          <figure class="concept-figure" id="fig-loop">
+  <figcaption id="fig-loop-title-caption">Figure 1. Decide from evidence: commit, rework or stop.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Frame: state the thesis, explore alternatives and challenge assumptions.</li><li>Test: specify a draft PRD, prototype the riskiest uncertainty, measure the result and learn.</li><li>Decide: the agreed decision owner weighs the evidence. Rework means improve, redesign or pivot, returning to Frame.</li><li>Commit: version and hand over the PRD and relevant UI artefacts. Stop: record the learning and end the investment.</li></ol></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Frame, test and decide; scroll horizontally if needed"><svg viewBox="0 0 680 500" role="img" aria-labelledby="fig-loop-title" aria-describedby="fig-loop-title-desc"><title id="fig-loop-title">Frame, test and decide</title><desc id="fig-loop-title-desc">Frame: state the thesis, explore alternatives and challenge assumptions. Test: specify a draft PRD, prototype the riskiest uncertainty, measure the result and learn. Decide: the agreed decision owner weighs the evidence. Rework means improve, redesign or pivot, returning to Frame. Commit: version and hand over the PRD and relevant UI artefacts. Stop: record the learning and end the investment.</desc><rect class="d-node" x="200" y="15" width="280" height="80" rx="7"/><text class="d-title" x="340" y="41" text-anchor="middle">Frame</text><text class="d-sub" x="340" y="64" text-anchor="middle">Thesis · Explore · Challenge</text><path class="d-line" d="M340 95V130" marker-end="url(#arrow)"/><rect class="d-node" x="200" y="135" width="280" height="100" rx="7"/><text class="d-title" x="340" y="161" text-anchor="middle">Test</text><text class="d-sub" x="340" y="184" text-anchor="middle">Specify · Prototype</text><text class="d-sub" x="340" y="205" text-anchor="middle">Measure · Learn</text><path class="d-line" d="M340 235V280" marker-end="url(#arrow)"/><polygon class="d-node d-node-accent d-decision" points="210,285 470,285 480,295 480,350 470,360 210,360 200,350 200,295"/><text class="d-title" x="340" y="311" text-anchor="middle">Decide</text><text class="d-sub" x="340" y="334" text-anchor="middle">Agreed decision owner</text><path class="d-line d-dash" d="M200 323H80V55H195" marker-end="url(#arrow)"/><text class="d-label" x="92" y="255" text-anchor="middle">rework</text><rect class="d-node" x="155" y="410" width="240" height="65" rx="7"/><text class="d-title" x="275" y="436" text-anchor="middle">Commit and hand off</text><text class="d-sub" x="275" y="459" text-anchor="middle">PRD; relevant UI artefacts</text><path class="d-line" d="M310 360V405" marker-end="url(#arrow)"/><text class="d-label" x="344" y="390" text-anchor="middle">commit</text><rect class="d-node" x="500" y="290" width="165" height="75" rx="7"/><text class="d-title" x="582.5" y="316" text-anchor="middle">Stop</text><text class="d-sub" x="582.5" y="339" text-anchor="middle">Retain learning</text><path class="d-line" d="M480 323H495" marker-end="url(#arrow)"/></svg></div>
+    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the commitment decision.</p>
+  </details>
+</figure>
+<p>Frame establishes what needs to be learned; Test supplies evidence; Decide records the next investment. Keep the criteria for commitment visible, and retain the learning when the decision is to stop.</p>
           <p>Think of the loop in three parts:</p>
           <ul>
             <li><strong>Inputs:</strong> problems, user needs, strategic priorities, operational evidence, new capabilities and constraints.</li>
@@ -164,27 +142,30 @@
         <section id="explore-and-challenge">
           <h2>Widen the options, then narrow with evidence</h2>
           <p>The Design Council’s Double Diamond separates widening the options from narrowing them. The first diamond explores and then defines the problem; the second develops possible solutions and then tests them at small scale, rejecting those that do not work.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 310" role="img" aria-labelledby="fig-diamond-title">
-                <title id="fig-diamond-title">Two diamonds. The first covers the problem space: discover widens, define narrows. The second covers the solution space: develop widens, deliver narrows. Where each diamond closes, the product owner makes a decision: first about the problem, then about the solution.</title>
+          <figure class="concept-figure" id="fig-diamond">
+  <figcaption id="fig-diamond-title-caption">Figure 2. Explore alternatives before the agreed decision owner narrows the choice.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Problem space: Discover widens understanding; Define narrows it to a problem.</li><li>Decision: the locally agreed decision owner confirms the problem to pursue.</li><li>Solution space: Develop widens the options; Deliver narrows them through testing.</li><li>Decision: the agreed decision owner chooses the supported solution.</li></ol></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Explore and narrow; scroll horizontally if needed"><svg viewBox="0 0 680 310" role="img" aria-labelledby="fig-diamond-title" aria-describedby="fig-diamond-title-desc">
+                <title id="fig-diamond-title">Explore and narrow</title><desc id="fig-diamond-title-desc">Problem space: Discover widens understanding; Define narrows it to a problem. Decision: the locally agreed decision owner confirms the problem to pursue. Solution space: Develop widens the options; Deliver narrows them through testing. Decision: the agreed decision owner chooses the supported solution.</desc>
                 <text class="d-label" x="180" y="24" text-anchor="middle">Problem space</text>
                 <text class="d-label" x="500" y="24" text-anchor="middle">Solution space</text>
                 <polygon class="d-node" points="20,130 180,40 340,130 180,220"/>
                 <polygon class="d-node" points="340,130 500,40 660,130 500,220"/>
-                <path class="d-line d-dash" d="M180 40V220M500 40V220"/>
+                <path class="d-line" d="M180 40V220M500 40V220"/>
                 <text class="d-title" x="110" y="128" text-anchor="middle">Discover</text><text class="d-sub" x="110" y="152" text-anchor="middle">widen</text>
                 <text class="d-title" x="250" y="128" text-anchor="middle">Define</text><text class="d-sub" x="250" y="152" text-anchor="middle">narrow</text>
                 <text class="d-title" x="430" y="128" text-anchor="middle">Develop</text><text class="d-sub" x="430" y="152" text-anchor="middle">widen</text>
                 <text class="d-title" x="570" y="128" text-anchor="middle">Deliver</text><text class="d-sub" x="570" y="152" text-anchor="middle">narrow</text>
-                <path class="d-line d-line-accent d-dash" d="M340 130V240" marker-end="url(#arrow-accent)"/>
-                <path class="d-line d-line-accent d-dash" d="M660 130V240" marker-end="url(#arrow-accent)"/>
-                <rect class="d-node d-node-accent" x="250" y="244" width="180" height="56" rx="8"/><text class="d-title" x="340" y="267" text-anchor="middle">Decide the problem</text><text class="d-sub" x="340" y="289" text-anchor="middle">Product owner decides</text>
-                <rect class="d-node d-node-accent" x="490" y="244" width="180" height="56" rx="8"/><text class="d-title" x="580" y="267" text-anchor="middle">Decide the solution</text><text class="d-sub" x="580" y="289" text-anchor="middle">Product owner decides</text>
-              </svg>
-            </div>
-            <figcaption>Figure 2. Each diamond widens, then narrows. A person makes the decision where each diamond closes.</figcaption>
-          </figure>
+                <path class="d-line d-line-accent" d="M340 130V240" marker-end="url(#arrow-accent)"/>
+                <path class="d-line d-line-accent" d="M660 130V240" marker-end="url(#arrow-accent)"/>
+                <polygon class="d-node d-node-accent d-decision" points="258,244 422,244 430,252 430,292 422,300 258,300 250,292 250,252"/><text class="d-title" x="340" y="267" text-anchor="middle">Decide the problem</text><text class="d-sub" x="340" y="289" text-anchor="middle">Agreed decision owner</text>
+                <polygon class="d-node d-node-accent d-decision" points="498,244 662,244 670,252 670,292 662,300 498,300 490,292 490,252"/><text class="d-title" x="580" y="267" text-anchor="middle">Decide the solution</text><text class="d-sub" x="580" y="289" text-anchor="middle">Agreed decision owner</text>
+              </svg></div>
+    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the two decisions.</p>
+  </details>
+  </figure>
+<p><strong>How this maps to the loop:</strong> Discover and Define expand and narrow the problem during <em>Frame</em>; Develop and Deliver expand and test solution options during <em>Test</em>. The agreed decision owner makes the <em>Decide</em> choices using that evidence. The diamonds are another view of the same learning work, not a second mandatory sequence.</p>
           <p>The first diamond covers the problem space: discover widens understanding, define narrows it to a chosen problem. The second covers the solution space: develop widens the options, deliver narrows them through testing. The blue points mark decisions in this guide’s adaptation. The Design Council describes the four activities; it does not assign these decisions to an EDS role.</p>
           <p>The Defence Product Playbook uses the same lens. It places problem definition in the first diamond and testing in the second, where testing has the greatest effect.</p>
           <h3>Use AI differently when widening and narrowing</h3>
@@ -310,25 +291,15 @@
         <section id="product-intent">
           <h2>Keep product intent connected</h2>
           <p>Product intent is the reasoning behind a product: why it exists, what it does, and the limits it works within. In many teams that reasoning is scattered across separate tools for evidence, requirements, design, architecture, policies and success measures. Missing or contradictory context can lead agents to make unsupported assumptions. Keep the sources, decisions and unresolved questions accessible together.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-stack-title">
-                <title id="fig-stack-title">Six layers of product intent, from top to bottom: business intent, why the product matters; customer experience, what users achieve; product behaviour, what the product does; technical architecture, how behaviour is enabled; policies and constraints, which risks are controlled; evaluation criteria, how we know it works. Each layer traces to the layer above it.</title>
-                <rect class="d-node" x="1" y="20" width="500" height="40" rx="8"/><text class="d-title" x="17" y="45">Business intent</text><text class="d-sub" x="485" y="45" text-anchor="end">Why the product matters</text>
-                <rect class="d-node" x="1" y="72" width="500" height="40" rx="8"/><text class="d-title" x="17" y="97">Customer experience</text><text class="d-sub" x="485" y="97" text-anchor="end">What users achieve</text>
-                <rect class="d-node" x="1" y="124" width="500" height="40" rx="8"/><text class="d-title" x="17" y="149">Product behaviour</text><text class="d-sub" x="485" y="149" text-anchor="end">What the product does</text>
-                <rect class="d-node" x="1" y="176" width="500" height="40" rx="8"/><text class="d-title" x="17" y="201">Technical architecture</text><text class="d-sub" x="485" y="201" text-anchor="end">How behaviour is enabled</text>
-                <rect class="d-node" x="1" y="228" width="500" height="40" rx="8"/><text class="d-title" x="17" y="253">Policies and constraints</text><text class="d-sub" x="485" y="253" text-anchor="end">Which risks are controlled</text>
-                <rect class="d-node d-node-accent" x="1" y="280" width="500" height="40" rx="8"/><text class="d-title" x="17" y="305">Evaluation criteria</text><text class="d-sub" x="485" y="305" text-anchor="end">How we know it works</text>
-                <path class="d-line d-line-accent" d="M540 320V24" marker-end="url(#arrow-accent)"/>
-                <text class="d-label d-label-accent" x="556" y="156">Each layer</text>
-                <text class="d-label d-label-accent" x="556" y="178">traces to the</text>
-                <text class="d-label d-label-accent" x="556" y="200">layer above</text>
-              </svg>
-            </div>
-            <figcaption>Figure 3. Product intent as six connected layers. Each layer should be traceable to the one above it.</figcaption>
-          </figure>
-          <p>Read the stack from top to bottom: business intent, customer experience, product behaviour, technical architecture, policies and constraints, and evaluation criteria. The blue arrow shows traceability upwards:</p>
+          <figure class="concept-figure" id="fig-stack">
+  <figcaption id="fig-stack-title-caption">Figure 3. Policies constrain every level, and evaluation checks each intended result.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Relationships</summary><ul><li>Main trace: business and user outcomes lead to intended product behaviour, which architecture enables.</li><li>Policies and constraints apply alongside outcomes, behaviour and architecture; they are not derived only from architecture.</li><li>Evaluation checks outcome measures, behaviour scenarios and architecture qualities at their respective levels.</li><li>Keep the reasons connecting each level as decisions change.</li></ul></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Trace intent across levels; scroll horizontally if needed"><svg viewBox="0 0 680 365" role="img" aria-labelledby="fig-stack-title" aria-describedby="fig-stack-title-desc"><title id="fig-stack-title">Trace intent across levels</title><desc id="fig-stack-title-desc">Main trace: business and user outcomes lead to intended product behaviour, which architecture enables. Policies and constraints apply alongside outcomes, behaviour and architecture; they are not derived only from architecture. Evaluation checks outcome measures, behaviour scenarios and architecture qualities at their respective levels. Keep the reasons connecting each level as decisions change.</desc><rect class="d-node" x="220" y="15" width="240" height="85" rx="7"/><text class="d-title" x="340" y="41" text-anchor="middle">Outcomes</text><text class="d-sub" x="340" y="64" text-anchor="middle">Business intent</text><text class="d-sub" x="340" y="85" text-anchor="middle">Customer experience</text><path class="d-line" d="M340 100V130" marker-end="url(#arrow)"/><rect class="d-node" x="220" y="135" width="240" height="85" rx="7"/><text class="d-title" x="340" y="161" text-anchor="middle">Behaviour</text><text class="d-sub" x="340" y="184" text-anchor="middle">What the product does</text><path class="d-line" d="M340 220V250" marker-end="url(#arrow)"/><rect class="d-node" x="220" y="255" width="240" height="85" rx="7"/><text class="d-title" x="340" y="281" text-anchor="middle">Architecture</text><text class="d-sub" x="340" y="304" text-anchor="middle">How behaviour is enabled</text><rect class="d-node" x="10" y="15" width="170" height="325" rx="7"/><text class="d-title" x="95" y="41" text-anchor="middle">Policies / constraints</text><text class="d-sub" x="95" y="64" text-anchor="middle">Security and privacy</text><text class="d-sub" x="95" y="85" text-anchor="middle">Domain rules</text><text class="d-sub" x="95" y="106" text-anchor="middle">Operational limits</text><rect class="d-node d-node-accent" x="500" y="15" width="170" height="325" rx="7"/><text class="d-title" x="585" y="41" text-anchor="middle">Evaluation</text><text class="d-sub" x="585" y="64" text-anchor="middle">Outcome measures</text><text class="d-sub" x="585" y="85" text-anchor="middle">Behaviour scenarios</text><text class="d-sub" x="585" y="106" text-anchor="middle">Architecture qualities</text><path class="d-line" d="M180 57H220M180 177H220M180 297H220M460 57H500M460 177H500M460 297H500"/></svg></div>
+    <p class="diagram-key">Arrows trace outcomes to behaviour and architecture. Side connections show constraints and evaluation at every level. Blue highlights evaluation.</p>
+  </details>
+</figure>
+<p>Trace outcomes into required behaviour and enabling architecture. Policies constrain all three, and evaluation checks all three. Keep these reasons explicit:</p>
           <ul>
             <li>a product behaviour exists because it supports a user and business outcome;</li>
             <li>an architecture choice exists because it enables required behaviour under known constraints;</li>
@@ -400,14 +371,14 @@
         <section id="sources">
           <h2>Sources</h2>
           <ol class="source-list">
-            <li id="source-1"><cite>EDS AI-SDLC Playbook, Chapter 2: Product Ideation</cite></li>
+            <li id="source-1"><cite>EDS AI-SDLC Playbook, Chapter 2: Product Ideation</cite> — <strong>Private</strong> (not available online).</li>
             <li id="source-2"><a href="https://defence-pp.vercel.app/#/home">MINDEF and DSTA, The Defence Product Playbook, version 1.0</a></li>
             <li id="source-3"><a href="https://www.designcouncil.org.uk/our-resources/the-double-diamond/">Design Council, The Double Diamond</a></li>
             <li id="source-4"><a href="https://www.svpg.com/four-big-risks/">SVPG, The Four Big Risks</a></li>
             <li id="source-5"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
           </ol>
         </section>
-        <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+
       </article>
     </main>
     <aside class="page-contents">

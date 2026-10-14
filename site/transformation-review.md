@@ -26,7 +26,7 @@ Primary sources used in the revised chapter:
 - [DORA organisational culture guidance](https://dora.dev/capabilities/generative-organizational-culture/): trust and information flow.
 - [McKinsey 2025 survey](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2025): workflow redesign among its high-performer group. Retained as explicitly dated historical evidence, not the latest survey.
 - [METR July 2025 trial](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) and [February 2026 follow-up](https://metr.org/blog/2026-02-24-uplift-update/): historical trial and limits on newer productivity estimates.
-- [IMDA framework](https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf) and [May 2026 update](https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2026/updated-model-ai-governance-framework-for-agentic-ai): bounding risk, traceability and deployment examples. Direct IMDA retrieval encountered a bot-verification page. The retained, narrow claims were checked against search-indexed excerpts from IMDA itself; the full framework was not reviewed. No third-party summary was used as authority for a DSTA requirement.
+- [IMDA framework](https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf) and [May 2026 update](https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2026/updated-model-ai-governance-framework-for-agentic-ai): bounding risk, traceability and deployment examples. Direct IMDA retrieval encountered a bot-verification page. The retained, narrow claims were checked against search-indexed excerpts from IMDA itself; the full framework was not reviewed. No third-party summary was used as authority for a EDS requirement.
 - [OWASP Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/): minimise functionality and authority, enforce permissions in connected systems.
 
 ## Writing and design assessment
@@ -34,7 +34,7 @@ Primary sources used in the revised chapter:
 - The opening defines scope and audience; headings describe useful actions.
 - Recommendations identify inputs, participants, outputs and decisions where needed.
 - British English is retained. AI-PDLC, AI agent and T-shaped practitioner are explained at first use.
-- Examples are labelled; the chapter makes no new claim about DSTA policy or decision authority.
+- Examples are labelled; the chapter makes no new claim about EDS policy or decision authority.
 - Three existing inline diagrams are retained and refined, with captions and adjacent text equivalents. No extra diagram was needed: the pilot is clearer as a numbered procedure and compact scorecard.
 - The existing white and neutral handbook layout, restrained blue accents and shared typography are retained.
 - Draft status, review date and unresolved owner/version metadata remain visible. A real content owner and applicable lifecycle version still need confirmation before publication.

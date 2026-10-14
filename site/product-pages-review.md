@@ -25,7 +25,7 @@ Online sources opened on 28 September 2026. Links appear beside the relevant exp
 
 | Source | Use and limits |
 | --- | --- |
-| [GOV.UK: How the discovery phase works](https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works) | Users, wider journey, constraints, alternatives and continuation decision. UK delivery stages and approval rules are not adopted as DSTA policy. |
+| [GOV.UK: How the discovery phase works](https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works) | Users, wider journey, constraints, alternatives and continuation decision. UK delivery stages and approval rules are not adopted as EDS policy. |
 | [SVPG: The Four Big Risks](https://www.svpg.com/four-big-risks/) | Value, usability, feasibility and business viability as prompts for untested assumptions. Its role assignments are not imported. |
 | [Design Council: The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/) | Existing divergent and convergent activities retained. Human decision points in the diagram are identified as this guide’s adaptation. |
 | [GitHub Spec Kit: Specification-Driven Development](https://github.com/github/spec-kit/blob/main/spec-driven.md) | Specifications, plans and tasks. PRD/TRD naming remains this guide’s usage; speed claims and claims of eliminating ambiguity are not adopted. |
@@ -34,7 +34,7 @@ Online sources opened on 28 September 2026. Links appear beside the relevant exp
 | [Google SRE Workbook: Canarying Releases](https://sre.google/workbook/canarying-releases/) | Limited exposure and comparison with the current version. Recovery details are editorial recommendations adapted to the guide’s scope. |
 | EDS AI Development Workflow: Simplified Operating Handbook, `../docs/EDS_Product_Development_Guide.docx` | Existing workflow, gates, skill statuses and default thresholds. Keep the local reference out of the public output and confirm the applicable handbook version before relying on its authority. |
 
-The experiment fields, fictional thresholds, handoff additions, review checks and release procedure are editorial recommendations. External sources support the cited principles; they do not prescribe these examples or establish DSTA responsibilities.
+The experiment fields, fictional thresholds, handoff additions, review checks and release procedure are editorial recommendations. External sources support the cited principles; they do not prescribe these examples or establish EDS responsibilities.
 
 ## Validation
 
@@ -47,7 +47,7 @@ Draft status, unassigned content ownership and unconfirmed lifecycle applicabili
 
 ## Ideation update, 30 September 2026
 
-Reviewed `dist/product-ideation.html` against [The Defence Product Playbook](https://defence-pp.vercel.app/) (MINDEF and DSTA, accessed 30 September 2026), `../writing.md` and `../design.md`.
+Reviewed `dist/product-ideation.html` against [The Defence Product Playbook](https://defence-pp.vercel.app/), `../writing.md` and `../design.md`.
 
 ### Content changes
 
@@ -70,7 +70,7 @@ Reviewed `dist/product-ideation.html` against [The Defence Product Playbook](htt
 
 ### Limits
 
-The playbook describes itself as a joint MINDEF and DSTA guide. This review did not confirm its organisational status, so the page cites it as a source and does not present its guidance as policy. The playbook's interactive tools (4C scorer, VCR calculator, team explorer) were not reproduced; the site's design standard prefers static, predictable content.
+The playbook describes itself as a EDS guide. This review did not confirm its organisational status, so the page cites it as a source and does not present its guidance as policy. The playbook's interactive tools (4C scorer, VCR calculator, team explorer) were not reproduced; the site's design standard prefers static, predictable content.
 
 ### Validation
 

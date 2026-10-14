@@ -1,13 +1,13 @@
 # Design system proposal
 
-For DSTA’s AI-Product Development Lifecycle knowledge site  
+For EDS’s AI-Product Development Lifecycle knowledge site  
 Status: Proposed visual system · Version: 0.1 · Updated: 27 September 2026
 
 ## Design direction
 
 Build a white-based knowledge site with restrained blue accents, clear typography and generous reading space. The experience should feel like a well-edited enterprise handbook: easy to navigate, comfortable to read and precise about the status of its guidance.
 
-This is a proposed project design system, not an official DSTA brand standard. Confirm approved identity assets and corporate requirements before launch. Use the project title as text until an approved logo is available.
+This is a proposed project design system, not an official EDS brand standard. Confirm approved identity assets and corporate requirements before launch. Use the project title as text until an approved logo is available.
 
 Pair this system with [writing.md](writing.md). Content clarity takes priority over decorative treatment.
 

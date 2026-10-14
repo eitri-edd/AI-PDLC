@@ -37,6 +37,7 @@
             <a href="eds-team-context.html">Team context</a>
             <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
+          <a href="glossary.html">Glossary</a>
           <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -48,7 +49,6 @@
           <h1>Organisation transformation</h1>
           <p class="lead">Organisation transformation means changing how people learn, share work and make decisions as they adopt AI-assisted development. This chapter helps product owners, engineers, designers and reviewers choose a practical starting point across people, process, culture and technology.</p>
           <p>The AI-Software Development Lifecycle (AI-SDLC) concerns development supported by AI tools; the resulting product need not contain AI. The actions below are recommendations, and the examples are illustrative. Confirm responsibilities and decision authority against existing organisational arrangements.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-28">28 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents">
           <summary>On this page</summary>
@@ -84,10 +84,12 @@
         <section id="four-areas">
 <h2>Four areas that change together</h2>
           <p>Use these four areas to plan a change. They are a working model for this chapter, not a maturity scale or an approved organisational structure.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 280" role="img" aria-labelledby="fig-areas-title">
-                <title id="fig-areas-title">People, process, culture and technology each connect to the AI-SDLC way of working at the centre. People build skills; process makes checks and decisions explicit; culture supports learning and accountability; technology provides controlled access and recovery.</title>
+          <figure class="concept-figure" id="fig-areas">
+  <figcaption id="fig-areas-title-caption">Figure 1. A workflow change depends on people, process, culture and technology together.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Relationships</summary><ul><li>People: build skills and shared judgement.</li><li>Process: make checks and decision authority explicit.</li><li>Culture: support learning and accountability.</li><li>Technology: provide controlled access and recovery. These are connected concerns, not sequential steps.</li></ul></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Four areas of change; scroll horizontally if needed"><svg viewBox="0 0 680 280" role="img" aria-labelledby="fig-areas-title" aria-describedby="fig-areas-title-desc">
+                <title id="fig-areas-title">Four areas of change</title><desc id="fig-areas-title-desc">People: build skills and shared judgement. Process: make checks and decision authority explicit. Culture: support learning and accountability. Technology: provide controlled access and recovery. These are connected concerns, not sequential steps.</desc>
                 <rect class="d-node" x="1" y="20" width="240" height="64" rx="8"/><text class="d-title" x="121" y="46" text-anchor="middle">People</text><text class="d-sub" x="121" y="70" text-anchor="middle">Skills and shared judgement</text>
                 <rect class="d-node" x="439" y="20" width="240" height="64" rx="8"/><text class="d-title" x="559" y="46" text-anchor="middle">Process</text><text class="d-sub" x="559" y="70" text-anchor="middle">Checks and decisions</text>
                 <rect class="d-node" x="1" y="196" width="240" height="64" rx="8"/><text class="d-title" x="121" y="222" text-anchor="middle">Culture</text><text class="d-sub" x="121" y="246" text-anchor="middle">Learning and accountability</text>
@@ -99,10 +101,11 @@
                 <rect class="d-node d-node-accent" x="260" y="100" width="160" height="80" rx="8"/>
                 <text class="d-title" x="340" y="134" text-anchor="middle">AI-SDLC</text>
                 <text class="d-sub" x="340" y="158" text-anchor="middle">way of working</text>
-              </svg>
-            </div>
-            <figcaption>Figure 1. The four areas are interdependent. Check the implications for all four when changing a workflow.</figcaption>
-          </figure>
+              </svg></div>
+    <p class="diagram-key">Lines show relationships, not a required sequence. Blue highlights the shared way of working.</p>
+  </details>
+  </figure>
+<aside class="example" aria-label="One pilot across four areas"><p><strong>One upload-flow pilot:</strong> People produces a reviewed task brief and a named reviewer; Process produces acceptance checks and a decision record; Culture produces a short failure review with an owned correction; Technology provides test storage, limited permissions and a tested recovery procedure.</p></aside>
           <p>The diagram connects each area to the same way of working. People need skills to assess results; process defines checks and decisions; culture supports reporting problems; technology limits access and supports recovery. A pilot can start small while addressing all four.</p>
           <div class="table-scroll"><table><caption>Questions to answer before a pilot</caption><thead><tr><th scope="col">Area</th><th scope="col">Planning question</th><th scope="col">Useful output</th></tr></thead><tbody><tr><th scope="row">People</th><td>Who can specify, perform and review the task?</td><td>Named participants, skill gaps and coaching time</td></tr>
 <tr><th scope="row">Process</th><td>What evidence supports progress, and who decides?</td><td>A task flow with checks and decision authority</td></tr>
@@ -116,10 +119,12 @@
           <p>AI-assisted work still needs people who understand the user’s problem and can recognise an incorrect result. Build enough shared knowledge for colleagues to work across tasks, while preserving access to specialist review.</p>
           <h3>Develop breadth alongside depth</h3>
           <p>A T-shaped practitioner combines deep expertise in one field with enough breadth to collaborate across the lifecycle. Use this as a development goal, not an expectation that one person can replace a multidisciplinary team.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 260" role="img" aria-labelledby="fig-t-shape-title">
-                <title id="fig-t-shape-title">A T shape. The horizontal bar is broad competence across user needs, specification, design, testing, AI supervision, risk awareness and operations. The vertical stem is deep expertise in one domain, such as architecture, security, data, user experience or domain logic.</title>
+          <figure class="concept-figure" id="fig-t-shape">
+  <figcaption id="fig-t-shape-title-caption">Figure 2. Broad competence helps a team apply specialist judgement.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Relationships</summary><ul><li>Breadth: understand user needs, specification, design, testing, AI supervision, risk and operations.</li><li>Depth: develop expertise in a domain such as architecture, security, data or user experience.</li><li>Use both to recognise when specialist help is needed.</li></ul></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Breadth and specialist depth; scroll horizontally if needed"><svg viewBox="0 0 680 260" role="img" aria-labelledby="fig-t-shape-title" aria-describedby="fig-t-shape-title-desc">
+                <title id="fig-t-shape-title">Breadth and specialist depth</title><desc id="fig-t-shape-title-desc">Breadth: understand user needs, specification, design, testing, AI supervision, risk and operations. Depth: develop expertise in a domain such as architecture, security, data or user experience. Use both to recognise when specialist help is needed.</desc>
                 <rect class="d-node" x="40" y="20" width="600" height="80" rx="8"/>
                 <text class="d-title" x="340" y="46" text-anchor="middle">Broad competence</text>
                 <text class="d-sub" x="340" y="70" text-anchor="middle">User needs, specification, design, testing,</text>
@@ -133,10 +138,11 @@
                 <text class="d-label" x="224" y="172" text-anchor="end">product lifecycle</text>
                 <text class="d-label" x="456" y="150">Applies specialist</text>
                 <text class="d-label" x="456" y="172">judgement to results</text>
-              </svg>
-            </div>
-            <figcaption>Figure 2. A T-shaped practitioner combines broad competence across the lifecycle with deep expertise in one domain.</figcaption>
-          </figure>
+              </svg></div>
+    <p class="diagram-key">Lines show relationships, not a required sequence. Blue highlights specialist depth.</p>
+  </details>
+  </figure>
+<p><strong>Observe the practice:</strong> breadth means a developer can trace one user requirement through implementation, testing and operational evidence, and recognise when to ask for help. Depth means a security specialist can explain a failed access-control test and verify the correction. The T-shape describes complementary capabilities; it does not set a proficiency threshold.</p>
           <p>The horizontal bar represents skills shared across the team, such as specifying work, testing results and supervising AI tools. The vertical stem represents depth in a field such as security, design or data. Both are needed to judge when specialist help is necessary.</p>
           <h3>Make review responsibilities explicit</h3>
           <p>The examples below describe contributions to agree within a team. They do not replace existing responsibilities or confer approval authority.</p>
@@ -155,36 +161,15 @@
 <h2>Team composition: towards human–agent teams</h2>
           <p>As agents take on more bounded tasks, a squad can become a human–agent team. People set intent, define boundaries, verify results and make decisions. Agents carry out delegated work such as research, prototyping, coding and test generation.</p>
           <p>Agents hold no organisational accountability. Every agent task has a person who delegated it and a person who decides on the result. This section illustrates where such teams may be heading; it is a direction of travel, not a required structure, headcount or approved competency framework.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-team-title">
-                <title id="fig-team-title">A human–agent team. On the left, people in five roles: product manager, UI/UX designer, tech lead, developers, and QA and security. They delegate bounded tasks to agents working inside an agent harness on the right: research agents, prototyping agents, coding subagents, and test and security agents. The agents return evidence, such as diffs and test results, for people to review. Both sides share context, a design system and curated agent skills.</title>
-                <rect class="d-boundary" x="1" y="20" width="240" height="260" rx="8"/>
-                <text class="d-title" x="121" y="46" text-anchor="middle">People</text>
-                <rect class="d-node" x="21" y="60" width="200" height="36" rx="8"/><text class="d-sub" x="121" y="83" text-anchor="middle">Product manager</text>
-                <rect class="d-node" x="21" y="104" width="200" height="36" rx="8"/><text class="d-sub" x="121" y="127" text-anchor="middle">UI/UX designer</text>
-                <rect class="d-node" x="21" y="148" width="200" height="36" rx="8"/><text class="d-sub" x="121" y="171" text-anchor="middle">Tech lead</text>
-                <rect class="d-node" x="21" y="192" width="200" height="36" rx="8"/><text class="d-sub" x="121" y="215" text-anchor="middle">Developers</text>
-                <rect class="d-node" x="21" y="236" width="200" height="36" rx="8"/><text class="d-sub" x="121" y="259" text-anchor="middle">QA and security</text>
-                <path class="d-line d-line-accent" d="M241 110H435" marker-end="url(#arrow-accent)"/>
-                <text class="d-label d-label-accent" x="340" y="100" text-anchor="middle">Delegate bounded tasks</text>
-                <text class="d-label" x="340" y="132" text-anchor="middle">with clear boundaries</text>
-                <path class="d-line" d="M439 190H245" marker-end="url(#arrow)"/>
-                <text class="d-label" x="340" y="180" text-anchor="middle">Evidence for review</text>
-                <text class="d-label" x="340" y="212" text-anchor="middle">diffs and test results</text>
-                <rect class="d-boundary" x="439" y="20" width="240" height="260" rx="8"/>
-                <text class="d-title" x="559" y="46" text-anchor="middle">Agents in a harness</text>
-                <rect class="d-node" x="459" y="64" width="200" height="44" rx="8"/><text class="d-sub" x="559" y="91" text-anchor="middle">Research agents</text>
-                <rect class="d-node" x="459" y="118" width="200" height="44" rx="8"/><text class="d-sub" x="559" y="145" text-anchor="middle">Prototyping agents</text>
-                <rect class="d-node" x="459" y="172" width="200" height="44" rx="8"/><text class="d-sub" x="559" y="199" text-anchor="middle">Coding subagents</text>
-                <rect class="d-node" x="459" y="226" width="200" height="44" rx="8"/><text class="d-sub" x="559" y="253" text-anchor="middle">Test and security agents</text>
-                <rect class="d-node" x="1" y="296" width="678" height="40" rx="8"/>
-                <text class="d-sub" x="340" y="321" text-anchor="middle">Shared context, design system and curated agent skills</text>
-              </svg>
-            </div>
-            <figcaption>Figure 3. In a human–agent team, people delegate bounded tasks and review the evidence agents return. Accountability stays with people.</figcaption>
-          </figure>
-          <p>People in five core roles delegate bounded tasks, highlighted in blue, to agents working inside an agent harness: research, prototyping, coding, and test and security agents. The agents return evidence, such as diffs and test results, for people to review. Both sides work from the same context, design system and curated agent skills.</p>
+          <figure class="concept-figure" id="fig-team">
+  <figcaption id="fig-team-title-caption">Figure 3. Each delegated task has a named person accountable for its result.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Name the accountable task owner from the PO/BA, Tech Lead, developer or quality/security reviewer roles, as appropriate to the task.</li><li>The owner defines the task, boundaries and evidence; agent capabilities include research, prototyping, coding and testing.</li><li>Agents return diffs, test results and unresolved questions. The owner reviews the evidence and routes decisions to the authorised person.</li><li>People and agents use shared context, design guidance and skills. Roles and agent capabilities are not a staffing ratio or a one-to-one mapping.</li></ol></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Accountable delegation; scroll horizontally if needed"><svg viewBox="0 0 680 355" role="img" aria-labelledby="fig-team-title" aria-describedby="fig-team-title-desc"><title id="fig-team-title">Accountable delegation</title><desc id="fig-team-title-desc">Name the accountable task owner from the PO/BA, Tech Lead, developer or quality/security reviewer roles, as appropriate to the task. The owner defines the task, boundaries and evidence; agent capabilities include research, prototyping, coding and testing. Agents return diffs, test results and unresolved questions. The owner reviews the evidence and routes decisions to the authorised person. People and agents use shared context, design guidance and skills. Roles and agent capabilities are not a staffing ratio or a one-to-one mapping.</desc><rect class="d-node" x="15" y="25" width="310" height="105" rx="7"/><text class="d-title" x="170" y="51" text-anchor="middle">Accountable task owner</text><text class="d-sub" x="170" y="74" text-anchor="middle">PO/BA · Tech Lead · Developer</text><text class="d-sub" x="170" y="95" text-anchor="middle">Quality/security reviewer</text><rect class="d-node" x="385" y="25" width="280" height="105" rx="7"/><text class="d-title" x="525" y="51" text-anchor="middle">Agent capabilities</text><text class="d-sub" x="525" y="74" text-anchor="middle">Research · Prototype</text><text class="d-sub" x="525" y="95" text-anchor="middle">Code · Test</text><path class="d-line" d="M325 60H380" marker-end="url(#arrow)"/><path class="d-line d-dash" d="M385 105H330" marker-end="url(#arrow)"/><text class="d-sub" x="340" y="161" text-anchor="middle">Delegate a bounded task →</text><text class="d-sub" x="340" y="189" text-anchor="middle">← Return diffs, tests and open questions</text><rect class="d-node" x="70" y="225" width="540" height="90" rx="7"/><text class="d-title" x="340" y="251" text-anchor="middle">Shared working context</text><text class="d-sub" x="340" y="274" text-anchor="middle">Design guidance · Curated skills · Permissions</text><path class="d-line" d="M170 130V219M525 130V219"/></svg></div>
+    <p class="diagram-key">Solid arrow: delegation. Dashed arrow: returned evidence. Shared context supports both sides. Role lists do not imply headcount.</p>
+  </details>
+</figure>
+<p>Name the accountable task owner for each delegation and the person authorised to accept its result. The roles and agent capabilities are examples, not a staffing ratio. Retain diffs, test results and unresolved questions so the responsible person can review the work.</p>
 
           <h3>How role skills may evolve</h3>
           <p>Existing skills remain the foundation. The table shows, for each core role, the skill it has traditionally centred on, the emerging skill a human–agent team relies on, and an indicative proficiency level.</p>
@@ -241,30 +226,15 @@
             <li>Record the evidence needed and which checks can assess it reliably.</li>
             <li>Confirm who can authorise progress and when a person needs to intervene.</li>
           </ol>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 4, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 260" role="img" aria-labelledby="fig-control-title">
-                <title id="fig-control-title">A control objective defines evidence for automated checks. Passing checks makes work ready for a decision, not automatically approved. Exceptions, failures and high-risk changes go to an authorised reviewer. Reviewed lessons improve the checks.</title>
-                <rect class="d-node" x="1" y="20" width="150" height="56" rx="8"/><text class="d-title" x="76" y="44" text-anchor="middle">Control</text><text class="d-sub" x="76" y="64" text-anchor="middle">objective</text>
-                <path class="d-line" d="M151 48H177" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="181" y="20" width="150" height="56" rx="8"/><text class="d-title" x="256" y="44" text-anchor="middle">Required</text><text class="d-sub" x="256" y="64" text-anchor="middle">evidence</text>
-                <path class="d-line" d="M331 48H357" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="361" y="20" width="150" height="56" rx="8"/><text class="d-title" x="436" y="44" text-anchor="middle">Automated</text><text class="d-sub" x="436" y="64" text-anchor="middle">checks</text>
-                <path class="d-line" d="M511 48H553" marker-end="url(#arrow)"/><text class="d-label" x="532" y="38" text-anchor="middle">pass</text>
-                <rect class="d-node" x="557" y="20" width="122" height="56" rx="8"/><text class="d-title" x="618" y="44" text-anchor="middle">Ready for</text><text class="d-sub" x="618" y="64" text-anchor="middle">decision</text>
-                <path class="d-line d-line-accent" d="M436 76V146" marker-end="url(#arrow-accent)"/>
-                <text class="d-label d-label-accent" x="448" y="104">exception, failure</text>
-                <text class="d-label d-label-accent" x="448" y="124">or high risk</text>
-                <rect class="d-node d-node-accent" x="361" y="150" width="150" height="64" rx="8"/><text class="d-title" x="436" y="176" text-anchor="middle">Authorised</text><text class="d-sub" x="436" y="198" text-anchor="middle">reviewer</text>
-                <path class="d-line d-dash" d="M361 182H335" marker-end="url(#arrow)"/>
-                <rect class="d-boundary" x="181" y="150" width="150" height="64" rx="8"/><text class="d-sub" x="256" y="176" text-anchor="middle">Improve rules</text><text class="d-sub" x="256" y="198" text-anchor="middle">and thresholds</text>
-                <path class="d-line d-dash" d="M256 150V80" marker-end="url(#arrow)"/>
-                <text class="d-label" x="246" y="240" text-anchor="middle">Reviewed lessons improve the checks</text>
-              </svg>
-            </div>
-            <figcaption>Figure 4. Checks supply evidence for a decision. Progress still depends on the authority agreed for the task; a passing check is not an approval.</figcaption>
-          </figure>
-          <p>The control objective defines evidence, and checks assess that evidence. A pass makes the work ready for a decision. An authorised reviewer handles failed checks, exceptions and high-risk changes. The feedback path represents reviewed improvements to checks; it does not let an agent relax a rule to pass.</p>
+          <figure class="concept-figure" id="fig-control">
+  <figcaption id="fig-control-title-caption">Figure 4. Passing checks lead to a decision, with acceptance and rework recorded.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Define the control objective and required evidence, then run automated checks.</li><li>Pass: prepare evidence for the authorised decision. Failure, exception or high risk: send the evidence to an authorised reviewer first.</li><li>Accept: proceed within the approved scope. Rework: correct the work and rerun checks; unresolved failures do not become a pass.</li><li>Reviewed lessons update rules and thresholds for later checks.</li></ol></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Checks and authorised outcomes; scroll horizontally if needed"><svg viewBox="0 0 680 535" role="img" aria-labelledby="fig-control-title" aria-describedby="fig-control-title-desc"><title id="fig-control-title">Checks and authorised outcomes</title><desc id="fig-control-title-desc">Define the control objective and required evidence, then run automated checks. Pass: prepare evidence for the authorised decision. Failure, exception or high risk: send the evidence to an authorised reviewer first. Accept: proceed within the approved scope. Rework: correct the work and rerun checks; unresolved failures do not become a pass. Reviewed lessons update rules and thresholds for later checks.</desc><rect class="d-node" x="200" y="15" width="280" height="70" rx="7"/><text class="d-title" x="340" y="41" text-anchor="middle">Control and evidence</text><text class="d-sub" x="340" y="64" text-anchor="middle">Define objective and checks</text><path class="d-line" d="M340 85V115" marker-end="url(#arrow)"/><rect class="d-node" x="200" y="120" width="280" height="70" rx="7"/><text class="d-title" x="340" y="146" text-anchor="middle">Automated checks</text><text class="d-sub" x="340" y="169" text-anchor="middle">Retain results</text><path class="d-line" d="M340 190V245" marker-end="url(#arrow)"/><text class="d-label" x="443" y="223" text-anchor="middle">pass: decision ready</text><rect class="d-node" x="15" y="245" width="160" height="100" rx="7"/><text class="d-title" x="95" y="271" text-anchor="middle">Reviewer</text><text class="d-sub" x="95" y="294" text-anchor="middle">Failure, exception</text><text class="d-sub" x="95" y="315" text-anchor="middle">or high risk</text><path class="d-line" d="M200 155H95V240" marker-end="url(#arrow)"/><polygon class="d-node d-node-accent d-decision" points="235,250 470,250 480,260 480,325 470,335 235,335 225,325 225,260"/><text class="d-title" x="352.5" y="276" text-anchor="middle">Authorised decision</text><text class="d-sub" x="352.5" y="299" text-anchor="middle">Review evidence and scope</text><path class="d-line" d="M175 290H220" marker-end="url(#arrow)"/><rect class="d-node" x="20" y="415" width="195" height="70" rx="7"/><text class="d-title" x="117.5" y="441" text-anchor="middle">Correct work</text><text class="d-sub" x="117.5" y="464" text-anchor="middle">Rerun checks</text><path class="d-line" d="M260 335V375H115V410" marker-end="url(#arrow)"/><text class="d-label" x="162" y="366" text-anchor="middle">rework</text><rect class="d-node" x="445" y="415" width="215" height="70" rx="7"/><text class="d-title" x="552.5" y="441" text-anchor="middle">Approved scope</text><text class="d-sub" x="552.5" y="464" text-anchor="middle">Proceed as authorised</text><path class="d-line" d="M425 335V375H552V410" marker-end="url(#arrow)"/><text class="d-label" x="518" y="366" text-anchor="middle">accept</text><path class="d-line d-dash" d="M20 450H5V155H195" marker-end="url(#arrow)"/><text class="d-sub" x="340" y="518" text-anchor="middle">Reviewed lessons → improve rules and thresholds</text></svg></div>
+    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the authorised decision.</p>
+  </details>
+</figure>
+<p>A passing check provides evidence for the authorised decision. Record acceptance or rework with its reason; unresolved failures do not become a pass. Review lessons before changing rules or thresholds.</p>
           <h3>Set authority for the specific task</h3>
           <p>Choose agent permissions according to impact, reversibility and the evidence available. IMDA’s Model AI Governance Framework for Agentic AI discusses bounding risk and keeping agents traceable and controllable. Its May 2026 update adds deployment case studies. This external guidance does not establish EDS approval rules.</p>
           <div class="table-scroll"><table><caption>Example task permissions; these are options, not a progression to full autonomy</caption><thead><tr><th scope="col">Task boundary</th><th scope="col">Agent action</th><th scope="col">Human decision</th></tr></thead><tbody><tr><th scope="row">Advice only</th><td>Draft a recommendation without changing a system.</td><td>A person checks the advice and decides whether to act.</td></tr>
@@ -349,7 +319,7 @@
             <li id="source-9"><a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/">OWASP, LLM06:2025 Excessive Agency</a></li>
           </ol>
         </section>
-        <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+
       </article>
     </main>
     <aside class="page-contents">

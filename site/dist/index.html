@@ -37,6 +37,7 @@
             <a href="eds-team-context.html">Team context</a>
             <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
+          <a href="glossary.html">Glossary</a>
           <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -47,11 +48,10 @@
           <p class="eyebrow">Development guide</p>
           <h1>Introduction</h1>
           <p class="lead">The AI-Software Development Lifecycle (AI-SDLC) helps teams use AI across product development while keeping people responsible for judgement, evidence and decisions.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-27">27 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents">
           <summary>On this page</summary>
-          <nav aria-label="On this page"><a href="#target-audience">Target audience</a><a href="#why-ai-pdlc">Why AI-SDLC?</a><a href="#evergreen-guide">An evergreen development guide</a><a href="#sources">Sources</a></nav>
+          <nav aria-label="On this page"><a href="#choose-task">Choose your task</a><a href="#target-audience">Target audience</a><a href="#why-ai-pdlc">Why AI-SDLC?</a><a href="#evergreen-guide">An evergreen development guide</a><a href="#sources">Sources</a></nav>
         </details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -59,7 +59,13 @@
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
           </defs>
         </svg>
-        <section id="target-audience">
+        <section id="choose-task" class="task-entry"><h2>Choose your task</h2><ul>
+<li><a href="ai-pdlc.html">Understand the lifecycle</a><span>See how ideation, implementation and feedback connect.</span></li>
+<li><a href="eds-po-ba-harness.html#choose-path">Define requirements as a PO or BA</a><span>Choose a path and prepare the handoff.</span></li>
+<li><a href="eds-developer-harness.html#steps">Build an agreed change</a><span>Find the developer steps and human decisions.</span></li>
+<li><a href="eds-path-to-production.html#stages">Review release readiness</a><span>Locate pipeline checks and their blocking behaviour.</span></li>
+<li><a href="eds-skills-catalogue.html">Find a skill</a><span>Look up its purpose, availability and arguments.</span></li></ul></section>
+<section id="target-audience">
           <h2>Target audience</h2>
           <p>This guide is for <strong>in-house development squads within EDS</strong>. It gives developers a shared reference for using AI to understand problems, explore solutions, build software and check outcomes.</p>
           <p>The guide covers AI-assisted development: work supported by AI tools, whether or not the product itself contains AI.</p>
@@ -67,31 +73,33 @@
         <section id="why-ai-pdlc">
           <h2>Why AI-SDLC?</h2>
           <p>Product development has traditionally been organised around limited specialist capacity. Product management, research, design, engineering, testing, security and operations each have their own priorities, tools and pace, so the lifecycle sequences their effort carefully.</p>
-          <figure class="concept-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 700 244" role="img" aria-labelledby="fig-handoffs-title">
-                <title id="fig-handoffs-title">A familiar lifecycle runs from opportunity through requirements, design, build, test, approval and launch to learning. Each step hands work to the next, and evidence from users returns only at the end.</title>
+          <figure class="concept-figure" id="fig-handoffs">
+  <figcaption id="fig-handoffs-title-caption">Figure 1. Illustrative sequential process: late feedback can make changes expensive.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Sequence: opportunity → requirements → design → build → test → approval → launch → learning.</li><li>At each handoff: work may wait or lose context. This is an illustrative sequential process.</li><li>Feedback: learning from users returns to the opportunity after the earlier work has been done.</li></ol></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Sequential delivery; scroll horizontally if needed"><svg viewBox="0 0 700 244" role="img" aria-labelledby="fig-handoffs-title" aria-describedby="fig-handoffs-title-desc">
+                <title id="fig-handoffs-title">Sequential delivery</title><desc id="fig-handoffs-title-desc">Sequence: opportunity → requirements → design → build → test → approval → launch → learning. At each handoff: work may wait or lose context. This is an illustrative sequential process. Feedback: learning from users returns to the opportunity after the earlier work has been done.</desc>
                 <rect class="d-node" x="16" y="20" width="128" height="48" rx="8"/><text class="d-title" x="80" y="50" text-anchor="middle">Opportunity</text>
-                <path class="d-line" d="M144 44H196" marker-end="url(#arrow)"/><text class="d-label" x="172" y="64" text-anchor="middle">wait</text>
+                <path class="d-line" d="M144 44H196" marker-end="url(#arrow)"/>
                 <rect class="d-node" x="200" y="20" width="128" height="48" rx="8"/><text class="d-title" x="264" y="50" text-anchor="middle">Requirements</text>
-                <path class="d-line" d="M328 44H380" marker-end="url(#arrow)"/><text class="d-label" x="356" y="64" text-anchor="middle">wait</text>
+                <path class="d-line" d="M328 44H380" marker-end="url(#arrow)"/>
                 <rect class="d-node" x="384" y="20" width="128" height="48" rx="8"/><text class="d-title" x="448" y="50" text-anchor="middle">Design</text>
-                <path class="d-line" d="M512 44H564" marker-end="url(#arrow)"/><text class="d-label" x="540" y="64" text-anchor="middle">wait</text>
+                <path class="d-line" d="M512 44H564" marker-end="url(#arrow)"/>
                 <rect class="d-node" x="568" y="20" width="128" height="48" rx="8"/><text class="d-title" x="632" y="50" text-anchor="middle">Build</text>
-                <path class="d-line" d="M632 68V96H80V124" marker-end="url(#arrow)"/><text class="d-label" x="356" y="90" text-anchor="middle">wait</text>
+                <path class="d-line" d="M632 68V96H80V124" marker-end="url(#arrow)"/><text class="d-label" x="356" y="90" text-anchor="middle">possible wait</text>
                 <rect class="d-node" x="16" y="128" width="128" height="48" rx="8"/><text class="d-title" x="80" y="158" text-anchor="middle">Test</text>
-                <path class="d-line" d="M144 152H196" marker-end="url(#arrow)"/><text class="d-label" x="172" y="172" text-anchor="middle">wait</text>
-                <rect class="d-node" x="200" y="128" width="128" height="48" rx="8"/><text class="d-title" x="264" y="158" text-anchor="middle">Approve</text>
-                <path class="d-line" d="M328 152H380" marker-end="url(#arrow)"/><text class="d-label" x="356" y="172" text-anchor="middle">wait</text>
+                <path class="d-line" d="M144 152H196" marker-end="url(#arrow)"/><text class="d-label" x="172" y="194" text-anchor="middle">possible wait</text>
+                <polygon class="d-node d-decision" points="208,128 320,128 328,136 328,168 320,176 208,176 200,168 200,136"/><text class="d-title" x="264" y="158" text-anchor="middle">Approve</text>
+                <path class="d-line" d="M328 152H380" marker-end="url(#arrow)"/>
                 <rect class="d-node" x="384" y="128" width="128" height="48" rx="8"/><text class="d-title" x="448" y="158" text-anchor="middle">Launch</text>
-                <path class="d-line" d="M512 152H564" marker-end="url(#arrow)"/><text class="d-label" x="540" y="172" text-anchor="middle">wait</text>
+                <path class="d-line" d="M512 152H564" marker-end="url(#arrow)"/>
                 <rect class="d-node d-node-accent" x="568" y="128" width="128" height="48" rx="8"/><text class="d-title" x="632" y="158" text-anchor="middle">Learn</text>
                 <path class="d-line d-line-accent d-dash" d="M632 176V204H4V44H12" marker-end="url(#arrow-accent)"/>
                 <text class="d-label d-label-accent" x="350" y="230" text-anchor="middle">Evidence from users returns after most of the investment is made</text>
-              </svg>
-            </div>
-            <figcaption>Figure 1. In a sequential lifecycle, each handoff can add waiting and lose context, and the team learns from users only at the end.</figcaption>
-          </figure>
+              </svg></div>
+    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights learning after launch.</p>
+  </details>
+  </figure>
           <p>Work passes from opportunity to requirements, design, build, test, approval and launch before the team learns from users. Each arrow is a handoff where work can wait, lose context or be reinterpreted. The dashed path shows that evidence from users returns only after most of the effort has been spent.</p>
           <p>Agile, DevOps, continuous delivery and design thinking improved this model through smaller batches and faster feedback. Much of the work is still limited by specialist capacity, handoffs and the cost of changing direction.</p>
           <p>AI changes that balance. Research, prototyping, testing and parts of implementation can be produced faster and at lower cost, giving people more capacity to frame problems, assess evidence and make decisions. AI-SDLC uses this shift to pursue <strong>faster validated learning</strong>: testing assumptions early and using the results to solve user problems sooner.</p>
@@ -137,59 +145,43 @@
             </div></li>
             <li><div>
               <h3>Make evaluation a continuous activity</h3>
-              <p>When generation becomes cheap, evaluation becomes the constraint. Producing more options helps only if the team can decide which of them are useful.</p>
-              <figure class="concept-figure">
-                <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
-                  <svg viewBox="0 0 640 220" role="img" aria-labelledby="fig-evaluate-title">
-                    <title id="fig-evaluate-title">Several generated options are assessed against criteria. Weaker options are discarded, the best parts are combined and tested, and the team then chooses what to build. Assessment is the constraint.</title>
-                    <text class="d-label" x="56" y="17" text-anchor="middle">Generate</text>
-                    <rect class="d-node" x="1" y="24" width="110" height="36" rx="8"/><text class="d-sub" x="56" y="47" text-anchor="middle">Option A</text>
-                    <rect class="d-node" x="1" y="70" width="110" height="36" rx="8"/><text class="d-sub" x="56" y="93" text-anchor="middle">Option B</text>
-                    <rect class="d-node" x="1" y="116" width="110" height="36" rx="8"/><text class="d-sub" x="56" y="139" text-anchor="middle">Option C</text>
-                    <rect class="d-node" x="1" y="162" width="110" height="36" rx="8"/><text class="d-sub" x="56" y="185" text-anchor="middle">Option D</text>
-                    <path class="d-line" d="M111 42H136M111 88H136M111 134H136M111 180H136M136 42V180"/>
-                    <path class="d-line d-line-accent" d="M136 111H156" marker-end="url(#arrow-accent)"/>
-                    <rect class="d-node d-node-accent" x="160" y="71" width="140" height="80" rx="8"/>
-                    <text class="d-title" x="230" y="105" text-anchor="middle">Assess</text>
-                    <text class="d-sub" x="230" y="129" text-anchor="middle">against criteria</text>
-                    <text class="d-label d-label-accent" x="230" y="176" text-anchor="middle">The new constraint</text>
-                    <path class="d-line d-dash" d="M300 91H318V40H336" marker-end="url(#arrow)"/>
-                    <rect class="d-boundary" x="340" y="20" width="160" height="40" rx="8"/><text class="d-sub d-excluded" x="420" y="45" text-anchor="middle">Discard weaker</text>
-                    <path class="d-line" d="M300 111H336" marker-end="url(#arrow)"/>
-                    <rect class="d-node" x="340" y="91" width="160" height="40" rx="8"/><text class="d-title" x="420" y="116" text-anchor="middle">Combine the best</text>
-                    <path class="d-line" d="M420 131V158" marker-end="url(#arrow)"/>
-                    <rect class="d-node" x="340" y="162" width="160" height="40" rx="8"/><text class="d-title" x="420" y="187" text-anchor="middle">Test</text>
-                    <path class="d-line" d="M500 182H526" marker-end="url(#arrow)"/>
-                    <rect class="d-node" x="530" y="158" width="109" height="48" rx="8"/><text class="d-title" x="584" y="178" text-anchor="middle">Choose</text><text class="d-sub" x="584" y="198" text-anchor="middle">what to build</text>
-                  </svg>
-                </div>
-                <figcaption>Figure 2. Cheaper generation produces more options, so the capacity to assess them sets the pace.</figcaption>
-              </figure>
-              <p>Several generated options are assessed against agreed criteria. The team discards weaker options, combines the best parts, tests the result and only then chooses what to build. Assessment is highlighted because it now limits how quickly the team can move.</p>
+              <p>When generation becomes cheap, evaluation can become a constraint. Producing more options helps only if the team can decide which of them are useful.</p>
+              <figure class="concept-figure" id="fig-evaluate">
+  <figcaption id="fig-evaluate-title-caption">Figure 2. Test results determine whether an option is ready to select.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Generate options and assess them against agreed criteria; assessment is a potential bottleneck.</li><li>Discard weaker options or combine useful parts and test the result.</li><li>Pass: choose what to build. Fail: return the evidence to assessment and revise or discard the option.</li></ol></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Assess generated options; scroll horizontally if needed"><svg viewBox="0 0 680 365" role="img" aria-labelledby="fig-evaluate-title" aria-describedby="fig-evaluate-title-desc"><title id="fig-evaluate-title">Assess generated options</title><desc id="fig-evaluate-title-desc">Generate options and assess them against agreed criteria; assessment is a potential bottleneck. Discard weaker options or combine useful parts and test the result. Pass: choose what to build. Fail: return the evidence to assessment and revise or discard the option.</desc><rect class="d-node" x="10" y="50" width="180" height="90" rx="7"/><text class="d-title" x="100" y="76" text-anchor="middle">Generate</text><text class="d-sub" x="100" y="99" text-anchor="middle">Options A, B, C, D</text><path class="d-line" d="M190 95H240" marker-end="url(#arrow)"/><rect class="d-node d-node-accent" x="245" y="50" width="200" height="90" rx="7"/><text class="d-title" x="345" y="76" text-anchor="middle">Assess</text><text class="d-sub" x="345" y="99" text-anchor="middle">Against agreed criteria</text><text class="d-sub" x="345" y="165" text-anchor="middle">Potential bottleneck</text><path class="d-line" d="M445 95H495" marker-end="url(#arrow)"/><text class="d-label" x="470" y="79" text-anchor="middle">discard</text><rect class="d-node" x="500" y="50" width="170" height="90" rx="7"/><text class="d-title" x="585" y="76" text-anchor="middle">Discard</text><text class="d-sub" x="585" y="99" text-anchor="middle">Weaker options</text><path class="d-line" d="M345 140V205" marker-end="url(#arrow)"/><text class="d-label" x="386" y="190" text-anchor="middle">combine</text><rect class="d-node" x="245" y="210" width="200" height="70" rx="7"/><text class="d-title" x="345" y="236" text-anchor="middle">Test</text><text class="d-sub" x="345" y="259" text-anchor="middle">Combined approach</text><path class="d-line" d="M445 245H495" marker-end="url(#arrow)"/><text class="d-label" x="470" y="231" text-anchor="middle">pass</text><polygon class="d-node d-decision" points="510,210 660,210 670,220 670,270 660,280 510,280 500,270 500,220"/><text class="d-title" x="585" y="236" text-anchor="middle">Choose</text><text class="d-sub" x="585" y="259" text-anchor="middle">What to build</text><path class="d-line d-dash" d="M245 245H210V95H239" marker-end="url(#arrow)"/><text class="d-label" x="116" y="238" text-anchor="middle">fail: reassess</text></svg></div>
+    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights assessment.</p>
+  </details>
+</figure>
+              <p>A failed test is evidence to reassess an option, not a reason to select it. Allow time and people to review results alongside the capacity to generate alternatives.</p>
               <p>Evaluate usefulness and quality as work is created, rather than only at final testing. People frame the problem, weigh the evidence and remain accountable for decisions while AI carries out more of the execution.</p>
             </div></li>
             <li><div>
               <h3>Measure how quickly uncertainty becomes evidence</h3>
               <p>Features delivered, story points, releases and lines of code describe activity; they do not show whether the team has learned anything or created value. As AI makes output easier to generate, these measures become less informative. A better question is: how quickly can the team turn uncertainty into evidence?</p>
-              <figure class="concept-figure">
-                <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
-                  <svg viewBox="0 0 640 240" role="img" aria-labelledby="fig-loop-title">
-                    <title id="fig-loop-title">A loop from hypothesis to experiment, evidence and decision. The decision informs the next hypothesis. The goal is to shorten each turn of the loop.</title>
+              <figure class="concept-figure" id="fig-loop">
+  <figcaption id="fig-loop-title-caption">Figure 3. Measure the time and cost of turning a hypothesis into a decision.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>State a hypothesis and run an experiment.</li><li>Collect evidence and make a decision.</li><li>Feedback: use the decision to refine the next hypothesis and repeat.</li></ol></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Learning cycle; scroll horizontally if needed"><svg viewBox="0 0 640 240" role="img" aria-labelledby="fig-loop-title" aria-describedby="fig-loop-title-desc">
+                    <title id="fig-loop-title">Learning cycle</title><desc id="fig-loop-title-desc">State a hypothesis and run an experiment. Collect evidence and make a decision. Feedback: use the decision to refine the next hypothesis and repeat.</desc>
                     <rect class="d-node" x="80" y="24" width="160" height="48" rx="8"/><text class="d-title" x="160" y="54" text-anchor="middle">Hypothesis</text>
                     <path class="d-line d-line-accent" d="M240 48H396" marker-end="url(#arrow-accent)"/>
                     <rect class="d-node" x="400" y="24" width="160" height="48" rx="8"/><text class="d-title" x="480" y="54" text-anchor="middle">Experiment</text>
                     <path class="d-line d-line-accent" d="M480 72V164" marker-end="url(#arrow-accent)"/>
                     <rect class="d-node" x="400" y="168" width="160" height="48" rx="8"/><text class="d-title" x="480" y="198" text-anchor="middle">Evidence</text>
                     <path class="d-line d-line-accent" d="M400 192H244" marker-end="url(#arrow-accent)"/>
-                    <rect class="d-node" x="80" y="168" width="160" height="48" rx="8"/><text class="d-title" x="160" y="198" text-anchor="middle">Decision</text>
-                    <path class="d-line d-line-accent" d="M160 168V76" marker-end="url(#arrow-accent)"/>
+                    <polygon class="d-node d-decision" points="88,168 232,168 240,176 240,208 232,216 88,216 80,208 80,176"/><text class="d-title" x="160" y="198" text-anchor="middle">Decision</text>
+                    <path class="d-line d-line-accent d-dash" d="M160 168V76" marker-end="url(#arrow-accent)"/>
                     <text class="d-title" x="320" y="112" text-anchor="middle">Shorten each turn</text>
                     <text class="d-sub" x="320" y="136" text-anchor="middle">Time and cost to turn</text>
                     <text class="d-sub" x="320" y="156" text-anchor="middle">uncertainty into evidence</text>
-                  </svg>
-                </div>
-                <figcaption>Figure 3. The learning loop. Progress is measured by how quickly and cheaply the team completes each turn.</figcaption>
-              </figure>
+                  <text class="d-sub" x="103" y="127" text-anchor="middle">refine</text></svg></div>
+    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the learning cycle.</p>
+  </details>
+  </figure>
+<aside class="example" aria-label="Illustrative learning decision"><p><strong>Example:</strong> hypothesise that a clearer upload flow lets at least 8 of 10 pilot users submit the right document unaided, with no wrong-recipient uploads. Test on a prototype. If the agreed threshold is met, commit to a bounded implementation; otherwise revise the flow or stop, and record the evidence. This is an illustrative threshold, not a policy.</p></aside>
               <p>The loop runs from hypothesis to experiment, from experiment to evidence and from evidence to a decision, which informs the next hypothesis. Shorten each turn by lowering the cost of experiments, coordination and changing direction, and by responding sooner to user feedback.</p>
             </div></li>
           </ol>
@@ -209,16 +201,16 @@
         <section id="sources">
           <h2>Sources</h2>
           <ol class="source-list">
-            <li id="source-1"><cite>EDS AI-SDLC Playbook, Chapter 0: Why Product Development Must Change</cite></li>
+            <li id="source-1"><cite>EDS AI-SDLC Playbook, Chapter 0: Why Product Development Must Change</cite> — <strong>Private</strong> (not available online).</li>
           </ol>
         </section>
-        <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+
       </article>
     </main>
     <aside class="page-contents">
       <nav aria-label="On this page">
         <p>On this page</p>
-        <a href="#target-audience">Target audience</a>
+        <a href="#choose-task">Choose your task</a><a href="#target-audience">Target audience</a>
         <a href="#why-ai-pdlc">Why AI-SDLC?</a>
         <a href="#evergreen-guide">An evergreen development guide</a>
         <a href="#sources">Sources</a>

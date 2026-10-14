@@ -37,6 +37,7 @@
             <a href="eds-team-context.html">Team context</a>
             <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
+          <a href="glossary.html">Glossary</a>
           <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -48,7 +49,6 @@
           <h1>EDS AI-SDLC</h1>
           <p class="lead">The EDS AI-Software Development Lifecycle connects product ideation, a shared handoff and product implementation. Use this overview to understand how the loops work together, then explore each loop’s practices in detail.</p>
           <p>This guide adapts the supplied playbook into a working model for product owners, designers, engineers and reviewers. It describes recommended practices for applying AI to product development within EDS.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-04">4 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents">
           <summary>On this page</summary>
@@ -70,34 +70,14 @@
         <section id="two-loops">
           <h2>Two loops joined by a handoff</h2>
           <p>The supplied playbook describes two connected learning loops within the AI-Software Development Lifecycle (AI-SDLC). Product ideation is about making the right product: it asks whether the problem is worth solving and whether the proposed solution solves it. Product implementation is about making the product right: it turns validated intent into reliable production behaviour. Each loop has its own work, evidence and decisions.</p><p>The handoff centres on a product requirements document (PRD), supported by user interface (UI) artefacts where relevant and current organisational context.</p><p>The diagram summarises the relationship between the loops; it does not prescribe a one-way sequence.</p>
-          <figure class="concept-figure lifecycle-figure">
-            <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 250" role="img" aria-labelledby="fig-loops-title">
-                <title id="fig-loops-title">Two separate loops joined by a handoff. The product ideation loop learns and decides until it has made the right product. After a commitment decision, it hands off a PRD and UI artefacts. The product implementation loop verifies, releases and learns to make the product right, and releases the product into use. Learning from use returns to ideation and updates the product intent. The handoff is highlighted as the connection between the loops.</title>
-                <path class="d-line" d="M160 60V36H40V56" marker-end="url(#arrow)"/>
-                <text class="d-label" x="100" y="26" text-anchor="middle">learn, then decide</text>
-                <rect class="d-node" x="1" y="60" width="210" height="72" rx="8"/><text class="d-title" x="106" y="91" text-anchor="middle">Product ideation</text><text class="d-sub" x="106" y="115" text-anchor="middle">Make the right product</text>
-                <path class="d-line" d="M211 96H251" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="255" y="60" width="170" height="72" rx="8"/><text class="d-title" x="340" y="91" text-anchor="middle">Handoff</text><text class="d-sub" x="340" y="115" text-anchor="middle">PRD and UI artefacts</text>
-                <text class="d-label" x="340" y="154" text-anchor="middle">after a commitment decision</text>
-                <path class="d-line" d="M425 96H465" marker-end="url(#arrow)"/>
-                <path class="d-line" d="M640 60V36H520V56" marker-end="url(#arrow)"/>
-                <text class="d-label" x="580" y="26" text-anchor="middle">verify, release, learn</text>
-                <rect class="d-node" x="469" y="60" width="210" height="72" rx="8"/><text class="d-title" x="574" y="91" text-anchor="middle">Product implementation</text><text class="d-sub" x="574" y="115" text-anchor="middle">Make the product right</text>
-                <path class="d-line" d="M574 132V172" marker-end="url(#arrow)"/>
-                <text class="d-label" x="586" y="157">release</text>
-                <rect class="d-node" x="469" y="176" width="210" height="64" rx="8"/><text class="d-title" x="574" y="202" text-anchor="middle">Product in use</text><text class="d-sub" x="574" y="226" text-anchor="middle">Feedback and telemetry</text>
-                <path class="d-line d-dash" d="M469 208H106V136" marker-end="url(#arrow)"/>
-                <text class="d-label" x="290" y="198" text-anchor="middle">Learning from use updates the product intent</text>
-              </svg>
-            </div>
-            <ol class="mobile-lifecycle" aria-label="Lifecycle flow">
-<li><strong>Product ideation</strong><span>Test assumptions; repeat until a decision is supported.</span></li>
-<li><strong>Handoff</strong><span>Agree the scope, PRD, UI artefacts and constraints.</span></li>
-<li><strong>Product implementation</strong><span>Plan, slice, implement, verify, release and observe, learn.</span></li>
-<li><strong>Product in use</strong><span>Use feedback to refine implementation or revisit ideation.</span></li>
-</ol><figcaption>Figure 1. Product ideation and product implementation are separate loops. The PRD and UI artefacts are the handoff between them.</figcaption>
-          </figure>
+          <figure class="concept-figure" id="fig-loops">
+  <figcaption id="fig-loops-title-caption">Figure 1. Value feedback returns to ideation; defects return to implementation.</figcaption>
+  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Ideation tests assumptions and repeats until evidence supports a bounded commitment.</li><li>Handoff contains the PRD and, where there is a UI, relevant UI artefacts. Organisational context is a separate implementation input.</li><li>Implementation plans, slices, builds and verifies the increment, then releases it for use.</li><li>Feedback from use follows two routes: defects return to implementation; questions about value or intended behaviour return to ideation.</li></ol></details>
+  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Product and delivery feedback; scroll horizontally if needed"><svg viewBox="0 0 680 420" role="img" aria-labelledby="fig-loops-title" aria-describedby="fig-loops-title-desc"><title id="fig-loops-title">Product and delivery feedback</title><desc id="fig-loops-title-desc">Ideation tests assumptions and repeats until evidence supports a bounded commitment. Handoff contains the PRD and, where there is a UI, relevant UI artefacts. Organisational context is a separate implementation input. Implementation plans, slices, builds and verifies the increment, then releases it for use. Feedback from use follows two routes: defects return to implementation; questions about value or intended behaviour return to ideation.</desc><rect class="d-node" x="15" y="35" width="190" height="90" rx="7"/><text class="d-title" x="110" y="61" text-anchor="middle">Product ideation</text><text class="d-sub" x="110" y="84" text-anchor="middle">Test value and intent</text><path class="d-line" d="M205 80H240" marker-end="url(#arrow)"/><rect class="d-node d-node-accent" x="245" y="35" width="190" height="90" rx="7"/><text class="d-title" x="340" y="61" text-anchor="middle">Handoff</text><text class="d-sub" x="340" y="84" text-anchor="middle">PRD; UI artefacts</text><text class="d-sub" x="340" y="105" text-anchor="middle">where applicable</text><path class="d-line" d="M435 80H475" marker-end="url(#arrow)"/><rect class="d-node" x="480" y="35" width="185" height="90" rx="7"/><text class="d-title" x="572.5" y="61" text-anchor="middle">Implementation</text><text class="d-sub" x="572.5" y="84" text-anchor="middle">Build and verify</text><rect class="d-node" x="245" y="185" width="190" height="90" rx="7"/><text class="d-title" x="340" y="211" text-anchor="middle">Context input</text><text class="d-sub" x="340" y="234" text-anchor="middle">Organisation constraints</text><path class="d-line" d="M435 230H455V105H475" marker-end="url(#arrow)"/><rect class="d-node" x="480" y="295" width="185" height="90" rx="7"/><text class="d-title" x="572.5" y="321" text-anchor="middle">Product in use</text><text class="d-sub" x="572.5" y="344" text-anchor="middle">Observe value and defects</text><path class="d-line" d="M572 125V290" marker-end="url(#arrow)"/><text class="d-label" x="607" y="214" text-anchor="middle">release</text><path class="d-line d-dash" d="M665 340H677V80H670" marker-end="url(#arrow)"/><text class="d-sub" x="572" y="409" text-anchor="middle">defects → implementation</text><path class="d-line d-dash" d="M480 340H110V130" marker-end="url(#arrow)"/><text class="d-label" x="284" y="328" text-anchor="middle">value / intent feedback</text></svg></div>
+    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the agreed handoff.</p>
+  </details>
+</figure>
           <p>The ideation loop repeats until the team can decide on a bounded scope. The PRD records the agreed behaviour; relevant UI artefacts illustrate the experience. Implementation builds and checks that scope. Evidence from delivery and use can reopen an ideation decision, so the handoff does not end collaboration.</p>
           <div class="table-scroll"><table class="wide-table"><caption>The two loops compared</caption><thead><tr><th scope="col">Aspect</th><th scope="col">Product ideation</th><th scope="col">Product implementation</th></tr></thead><tbody>
             <tr><th scope="row">Question it answers</th><td>Are we making the right product?</td><td>Are we making the product right?</td></tr>
@@ -201,14 +181,14 @@
 <section id="sources">
   <h2>Sources</h2>
   <ol class="source-list">
-    <li id="source-1"><cite>EDS AI-SDLC Playbook, Chapter 2: Product Ideation</cite></li>
-    <li id="source-2"><cite>EDS AI-SDLC Playbook, Chapter 3: Product Implementation</cite></li>
+    <li id="source-1"><cite>EDS AI-SDLC Playbook, Chapter 2: Product Ideation</cite> — <strong>Private</strong> (not available online).</li>
+    <li id="source-2"><cite>EDS AI-SDLC Playbook, Chapter 3: Product Implementation</cite> — <strong>Private</strong> (not available online).</li>
     <li id="source-3"><a href="https://dora.dev/capabilities/user-centric-focus/">DORA, User-centric focus</a></li>
     <li id="source-4"><a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation">McKinsey, How an AI-enabled software product development life cycle will fuel innovation</a></li>
     <li id="source-5"><a href="https://defence-pp.vercel.app/#/home">MINDEF and DSTA, The Defence Product Playbook, version 1.0</a></li>
   </ol>
 </section>
-<footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+
       </article>
     </main>
     <aside class="page-contents">

@@ -1,17 +1,12 @@
 # Writing standard
 
-For DSTA’s AI-Product Development Lifecycle knowledge site  
-Status: Proposed editorial standard · Version: 0.1 · Updated: 27 September 2026
-
 ## Purpose
 
 Help readers understand a practice, decide when to use it, and complete the next step. Write for product owners, engineers, designers and reviewers who bring different levels of AI experience.
 
-This document proposes house rules for the site. It does not establish DSTA policy or prescribe an approved lifecycle. Examples are illustrative; validate roles, requirements and lifecycle stages against the organisation’s actual process before publishing.
+This document proposes house rules for the site. It does not establish EDS policy or prescribe an approved lifecycle. Examples are illustrative; validate roles, requirements and lifecycle stages against the organisation’s actual process before publishing.
 
 ## Reference and interpretation
-
-The writing reference is [Intent-Driven Development, intent-driven.dev](https://intent-driven.dev/knowledge/intent-driven-development/), accessed on 27 September 2026.
 
 The page defines its subject early, explains the problem behind the approach, and introduces named practices with their purpose. It moves from explanation to practical steps and acknowledges adoption trade-offs. Descriptive headings let readers scan before committing to the detail.
 
@@ -29,7 +24,7 @@ Sound like a knowledgeable colleague explaining work clearly. Be calm, direct an
 | Respectful | Explain unfamiliar terms without assuming inexperience. | “Obviously”, “simply”, “just” and “as everyone knows”. |
 | Accountable | Distinguish evidence, advice and requirements. | Presenting a suggestion as an organisational mandate. |
 
-Use “you” for an instruction the reader can perform. Use a role name when ownership matters. Use “we” only when its meaning is explicit; it must not imply an official DSTA position without a supporting source.
+Use “you” for an instruction the reader can perform. Use a role name when ownership matters. Use “we” only when its meaning is explicit; it must not imply an official EDS position without a supporting source.
 
 ## Sentence and paragraph rules
 
@@ -74,7 +69,7 @@ Separate three kinds of statement:
 
 Support factual claims with a source close to the claim. For performance claims, include the measurement context and date. If a result has not been measured, describe the intended benefit rather than claiming it has been achieved.
 
-Never invent DSTA committees, approval gates, job titles, mandatory templates or policy references. Mark unresolved details as authoring placeholders and resolve them before publication.
+Never invent EDS committees, approval gates, job titles, mandatory templates or policy references. Mark unresolved details as authoring placeholders and resolve them before publication.
 
 ## Page structures
 
@@ -119,7 +114,7 @@ Diagrams need a caption explaining their purpose and a text equivalent for the r
 
 ## Editing examples
 
-All examples below are fictional editorial demonstrations, not DSTA requirements.
+All examples below are fictional editorial demonstrations, not EDS requirements.
 
 | Before | After | Why |
 | --- | --- | --- |
