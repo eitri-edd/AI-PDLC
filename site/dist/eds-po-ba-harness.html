@@ -48,8 +48,7 @@
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>PO/BA harness: from business need to PRD</h1>
 <p class="lead">The PO/BA harness helps product owners (POs) and business analysts (BAs) turn a business need into a product requirements document (PRD): business-level user stories, acceptance criteria and, where useful, an HTML prototype. They choose one of three paths, then commit the results and hand them to the development team.</p>
-          <p>The harness does not govern how requirements are gathered. The three paths are starting points that suit different levels of technical experience and feature complexity. For the strategy behind the handoff, including what makes a PRD ready, <a href="product-ideation.html#handover">read the handover section in Product ideation</a>.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-12">12 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+          <p>Choose from three requirements paths based on technical experience and feature complexity. For the strategy behind the handoff, including what makes a PRD ready, <a href="product-ideation.html#handover">read the handover section in Product ideation</a>.</p>
         </header>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#choose-path">Choose a path</a>
@@ -57,7 +56,7 @@
             <a href="#path-socratic">Path 2: Socratic</a>
             <a href="#path-clara">Path 3: CLARA</a>
             <a href="#handoff">Hand off</a>
-            <a href="#sources">Sources</a>
+
         </nav></details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -91,7 +90,6 @@
             <tr><th scope="row"><a href="#path-socratic">2. Socratic workflow</a></th><td>Technical POs or BAs with large, ambiguous features whose scope is unclear</td><td>Matt Pocock’s planning skills, which question, prototype and research before anything is written</td><td>An early-draft TRD on the tracker and an optional prototype</td></tr>
             <tr><th scope="row"><a href="#path-clara">3. CLARA research</a></th><td>POs or BAs researching users for a new product or complex feature</td><td><a href="https://github.com/dsta-productops/clara">CLARA</a>, querying Confluence, with Prizm Design components for prototypes</td><td>Specification files and an optional prototype</td></tr>
           </tbody></table></div>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 1.</p>
         </section>
 
         <section id="path-speckit">
@@ -102,7 +100,6 @@
             <li><strong>Optionally, design or prototype the interface.</strong> The PO or BA validates the requirements visually with stakeholders. They can paste the user stories into <a href="https://stitch.withgoogle.com">Google Stitch</a> or <a href="https://www.figma.com/make/">Figma Make</a>, or ask the coding agent to generate a design or a standalone HTML prototype from them.</li>
             <li><strong>Optionally, hand off the prototype.</strong> Committing it alongside the specification lets developers extract reusable interface components and keep screens consistent. Conversion from a Google Stitch project is available. Conversion from a standalone HTML file is in development and not yet available <span class="status status-planned">Planned</span>.</li>
           </ol>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 1, Path 1.</p>
         </section>
 
         <section id="path-socratic">
@@ -114,7 +111,6 @@
             <li><strong>Write the specification.</strong> The agent compiles the decisions, codebase constraints and prototype results into an early-draft TRD, published to the issue tracker as the handoff artefact.</li>
             <li><strong>Optionally, hand off a prototype.</strong> If a ticket produced interface variations, they are handed off with the specification.</li>
           </ol>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 1, Path 2.</p>
         </section>
 
         <section id="path-clara">
@@ -127,7 +123,6 @@
             <li><strong>Optionally, prototype the interface.</strong> An HTML prototype of the chosen experience, built with Prizm Design components, is handed off with the specification files as a visual reference.</li>
           </ol>
           <p>CLARA can only ground its research in what it can reach. The team’s domain documentation needs to be in the Confluence spaces or knowledge bases CLARA queries; <a href="eds-team-context.html#domain">read how to add domain context</a>.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 1, Path 3; <a href="#source-2" aria-label="Source 2: Team Context Ingestion Guide (EDS harness documentation)">[2]</a> section 1.</p>
         </section>
 
         <section id="handoff">
@@ -141,16 +136,8 @@
           <p>Together, these files are the PRD: what needs to be built, captured as user stories, acceptance criteria and feature scope. The development team puts its user stories in a build order and then writes a user story level TRD for each one. After Path 2, the developer harness refines the early-draft TRD rather than starting from scratch.</p>
           <p>Each path gives better results when it is grounded in the team’s vocabulary: domain context, glossaries and existing requirements supplied at the start. <a href="eds-team-context.html#domain">Read how to add domain context</a>.</p>
           <p class="next-step"><strong>Next step:</strong> agree with your architect or Tech Lead where the PRD will live, then <a href="eds-developer-harness.html#plan">see how developers plan from it</a>.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 1 and “From PO/BA handoff to developer”; <a href="#source-2" aria-label="Source 2: Team Context Ingestion Guide (EDS harness documentation)">[2]</a> section 1.</p>
         </section>
 
-        <section id="sources">
-          <h2>Sources</h2>
-          <ol class="source-list">
-            <li id="source-1"><cite>Product Development Journey &amp; Workflow Harness (EDS harness documentation)</cite></li>
-            <li id="source-2"><cite>Team Context Ingestion Guide (EDS harness documentation)</cite></li>
-          </ol>
-        </section>
         <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -160,7 +147,7 @@
             <a href="#path-socratic">Path 2: Socratic</a>
             <a href="#path-clara">Path 3: CLARA</a>
             <a href="#handoff">Hand off</a>
-            <a href="#sources">Sources</a>
+
     </nav></aside>
   </div>
 </body>

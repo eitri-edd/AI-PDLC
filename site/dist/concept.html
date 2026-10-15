@@ -37,7 +37,6 @@
             <a href="eds-team-context.html">Team context</a>
             <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
-          <a href="glossary.html">Glossary</a>
           <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -49,20 +48,20 @@
           <h1>Concepts</h1>
           <p class="lead">Use these concepts to make AI-assisted development easier to direct and review. Each section explains a practical problem, a way to address it and a small example.</p>
           <p>An AI agent is software that uses an AI model and tools to carry out a task. The concepts below explain how to define that task, support the agent and review its work.</p>
-          <p>These are related practices rather than lifecycle stages. The recommendations and examples are guidance for discussion and do not represent EDS policy.</p>
+          <p>Use these related practices together or select the ones that fit your task.</p>
         </header>
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
           <p id="page-map-note" class="page-map-note">Choose the practice that fits your problem. Start with goals and requirements, then explore agent tools, workflow controls and model selection.</p>
-          
+
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>Goals and requirements</strong><div class="page-map-links"><a href="#how-the-concepts-fit">How the concepts fit together</a><a href="#intent-driven-development">Intent-driven development</a><a href="#spec-driven-development">Spec-driven development</a></div></li>
             <li class="page-map-node"><strong>Information and tools</strong><div class="page-map-links"><a href="#context-engineering">Context engineering</a><a href="#harness-engineering">Harness engineering</a></div></li>
             <li class="page-map-node"><strong>Workflow automation</strong><div class="page-map-links"><a href="#loop-engineering">Loop engineering</a><a href="#graph-engineering">Graph engineering</a><a href="#software-factory">Software factories</a></div></li>
             <li class="page-map-node"><strong>AI model selection</strong><div class="page-map-links"><a href="#models">AI models</a><a href="#learning-references">Learning references</a></div></li>
           </ol>
-          
+
         </figure>
         <!-- PAGE MAP END -->
         <details class="mobile-contents">
@@ -89,7 +88,7 @@
           <p>The concepts address different parts of the same work. Intent-driven development explains <strong>why a change is needed</strong>. Spec-driven development defines <strong>what the software should do</strong> and how the team will check it.</p>
           <p>Context engineering supplies the information an AI agent needs. Harness engineering provides its tools, permissions and checks. Loop engineering defines how it responds to feedback; graph engineering organises steps and dependencies. A software factory brings these practices into a delivery workflow.</p>
           <p>For example, a team wants users to resume an unfinished service request. The team agrees the goal, writes acceptance criteria, gives the agent the relevant information and tools, and reviews the result. Model selection supports that work.</p>
-          <p>The service-request examples throughout this page are fictional. Read the sections relevant to your task; the concepts are not steps that every change has to follow.</p>
+          <p>Read the sections relevant to your task. The examples show how to apply each concept.</p>
         </section>
         <section id="intent-driven-development">
           <h2>Intent-driven development</h2>
@@ -105,7 +104,18 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the agreed intent.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Help users resume an unfinished request"><p class="example-label">Example · Help users resume an unfinished request</p><p>Users leave a long request form to find supporting information. When they return, their entries are gone. The goal is to let them resume the request without re-entering the same information.</p><p>Saving a draft should not submit the request or notify a reviewer. Only the request’s owner can reopen it. The product owner will use user feedback to decide whether an explicit “Save draft” action is enough or automatic saving is needed.</p></aside>
+          <aside class="example" aria-label="Fictional example: Help users continue an unfinished request">
+            <p class="example-label">Example · Help users continue an unfinished request</p>
+            <p>A product owner asks an AI agent to “improve the request form”. Before the agent changes it, the team agrees what needs to improve:</p>
+            <ul>
+              <li><strong>Problem:</strong> users leave the form to find missing information. When they return, their entries are gone and they have to start again.</li>
+              <li><strong>Outcome:</strong> users can leave an unfinished request and return later to continue from where they stopped.</li>
+              <li><strong>Constraints:</strong> only the request’s owner can reopen it. Keeping unfinished work must not submit the request or notify a reviewer.</li>
+              <li><strong>Open question:</strong> should progress be saved automatically or when the user selects “Save draft”? The product owner will decide after testing both options with users.</li>
+            </ul>
+            <p>The agent uses this intent to propose and prototype the two options. Users try leaving and reopening a request; the team checks whether they can continue without re-entering information.</p>
+            <p>The product owner uses those findings to choose how saving should work. The team then writes the detailed acceptance criteria for implementation.</p>
+          </aside>
           <h3>Keep the record proportionate</h3>
           <p>A short issue may be enough for a small defect. A new capability may need research and a product requirements document. Recording a goal does not establish that it is valuable; test important assumptions before committing substantial effort.</p>
           <p class="next-step"><strong>Next step:</strong> Write the problem, outcome and constraints for one change. Then use <a href="product-ideation.html#product-thesis">the product thesis guidance</a> to test the case for it, or <a href="#spec-driven-development">define its acceptance criteria</a> when the need is understood.</p>
@@ -145,7 +155,19 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the selection decision.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Add an “Awaiting review” filter"><p class="example-label">Example · Add an “Awaiting review” filter</p><p>An agent is asked to add an “Awaiting review” filter to a list of service requests. The label does not tell it which records belong in that state.</p><p>Provide the agreed status definition, current access rules, the relevant code and an existing filter test. Mark an older document’s “Pending” label as superseded. The developer then checks that the browser displays the right records and retains the filter when the page is reopened.</p></aside>
+          <aside class="example" aria-label="Fictional example: Calculate annual leave correctly">
+            <p class="example-label">Example · Calculate annual leave correctly</p>
+            <p>An AI agent is asked to add an annual leave calculator to an HR system. The request alone does not explain which days count as leave.</p>
+            <p>The developer selects the current HR-approved rules and the calendar for the employee’s location. The agent receives the relevant context:</p>
+            <ul>
+              <li><strong>Leave policy:</strong> count only scheduled working days. Exclude public holidays and days the employee does not work.</li>
+              <li><strong>Work schedule:</strong> the example employee works Monday to Friday.</li>
+              <li><strong>Holiday calendar:</strong> Wednesday in the sample week is a public holiday in the employee’s location.</li>
+              <li><strong>Application code:</strong> the existing date-calculation function, the fields for work schedules and holidays, and tests for related leave rules.</li>
+            </ul>
+            <p>Using this context, the agent implements a calculation that deducts four days for leave from Monday to Friday in the sample week. Wednesday is excluded.</p>
+            <p>The developer checks the result against HR’s worked examples and records the policy version and calendar used. When the rules change, the team updates that context and the affected tests.</p>
+          </aside>
           <h3>Keep decisions available beyond the conversation</h3>
           <p>Save decisions, unresolved questions and progress in the repository or issue tracker. A future session needs access to those records to use them. Keep source versions where they affect the decision, and follow the applicable data-handling rules.</p>
           <p>Relevant information improves the basis for the work; it does not guarantee a correct result. Review retrieved material before relying on it. A document or log does not gain authority merely because an agent found it.</p>
@@ -177,7 +199,21 @@
   </details>
   </figure>
           <ul><li><strong>Agent state:</strong> what the agent is doing now and what it will try next.</li><li><strong>Tools:</strong> the actions it can perform, such as reading files, using a browser or running tests.</li><li><strong>Memory:</strong> saved decisions, progress and reference information that later work can retrieve.</li><li><strong>Orchestration:</strong> how tasks are assigned, ordered and handed over.</li><li><strong>Safety:</strong> permissions, allowed actions and limits on time, attempts or spending.</li><li><strong>Observability:</strong> records of actions and results that help people investigate and review the work.</li></ul>
-          <aside class="example" aria-label="Fictional example: Test a file upload"><p class="example-label">Example · Test a file upload</p><p>An agent adds attachments to a request form. Its harness provides the running application, a test account, sample files and test storage. The agent uploads a file, checks that it was saved and opens the saved attachment.</p><p>The test account cannot reach production storage. If test storage is unavailable, the agent records the blockage and stops. Seeing an upload button is not proof that uploading works.</p></aside>
+          <aside class="example" aria-label="Fictional example: Equip a coding agent to build file uploads">
+            <p class="example-label">Example · Equip a coding agent to build file uploads</p>
+            <p>A developer asks a coding agent to add attachments to a request form. Users need to upload a file and reopen it later.</p>
+            <p>Before the agent starts, the developer configures its harness:</p>
+            <ul>
+              <li><strong>Agent state:</strong> a task checklist tracks whether the agent is inspecting the code, implementing the change or checking the result.</li>
+              <li><strong>Tools:</strong> a code editor, terminal and browser let the agent change files, start the application and run tests. A test account, sample files and local storage support upload checks.</li>
+              <li><strong>Memory:</strong> repository instructions and saved progress notes keep setup commands, decisions and unfinished work available when the agent resumes.</li>
+              <li><strong>Orchestration:</strong> the workflow directs the agent through implementation and checks, then hands the changes and results to the developer for review.</li>
+              <li><strong>Safety:</strong> workspace permissions allow changes to the project and test storage. The environment blocks access to production credentials and deployment tools.</li>
+              <li><strong>Observability:</strong> the harness records changed files, commands, test results and browser screenshots so the developer can inspect what happened.</li>
+            </ul>
+            <p>The agent edits the upload code, adds tests and runs the application. It uses the browser to upload a sample file and reopen the saved attachment.</p>
+            <p>If local storage is unavailable, the agent records the failed check and stops for help. Otherwise, it returns the changes and test results for the developer to review before merging.</p>
+          </aside>
           <h3>Check the environment as well as the output</h3>
           <p>Provide a repeatable way to start the application, run tests and inspect failures. Enforce permissions through the tools and execution environment. Keep a reviewer responsible for acceptance; an agent’s assessment of its own work is not independent review.</p>
           <p>When failures recur, inspect the instructions, sources, tools and checks before adding more retries or access. Maintain the harness as the application changes.</p>
@@ -186,7 +222,7 @@
         </section>
         <section id="loop-engineering">
           <h2>Loop engineering</h2>
-          <p>Loop engineering means designing how an agent uses feedback to improve its work over several attempts. A feedback loop connects an action, an observed result and a decision to continue, change approach or stop.</p>
+          <p>Loop engineering means designing how an agent uses feedback to improve its work over several attempts. A feedback loop connects an action, an observed result and a decision to continue, change approach or stop. Across tasks, review findings and evaluations can also guide updates to the agent’s reusable skill instructions.</p>
           <p>Use it when a task needs repeated correction, such as fixing a failing test. Define the expected result before the run starts. Also agree how long the agent may try and when it needs help.</p>
           <h3>Define the check and every way to stop</h3>
           <p>A loop can start when a person requests it, an event occurs or a schedule runs. Each attempt needs a check of the actual result. Save progress between runs so later work can continue from the record.</p>
@@ -198,33 +234,111 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. The enclosing boundary applies to the whole run. Blue highlights the goal and successful evidence.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Fix search results that arrive out of order"><p class="example-label">Example · Fix search results that arrive out of order</p><p>A user types “printer”, then “printer paper”. The first search response arrives last and replaces the newer results. The developer creates a browser test that reproduces that order.</p><p>The agent changes the code and reruns the test. It returns passing results for review, or stops after three unsuccessful attempts. If the test environment is unavailable, it records the blockage instead. The three-attempt limit is illustrative.</p></aside>
+          <aside class="example" aria-label="Fictional example: Improve booking code and the skill that builds it">
+            <p class="example-label">Example · Improve booking code and the skill that builds it</p>
+            <p>A coding agent builds a meeting-room booking API using a skill: reusable instructions for planning, implementing and checking code. The team uses two connected feedback loops:</p>
+            <ol>
+              <li><strong>Build and check the code.</strong> The agent implements bookings and runs tests. The tests pass when requests arrive one at a time.</li>
+              <li><strong>Use review findings to improve the product.</strong> A reviewer asks what happens when two people book the same room at the same time. A new test exposes a double booking. The agent fixes the code so only one booking succeeds, then reruns the booking and regression tests.</li>
+              <li><strong>Use the failure to improve the skill.</strong> The agent proposes adding a step to identify shared resources and test simultaneous requests. The developer reviews this change to the skill instructions so future tasks include that check.</li>
+              <li><strong>Evaluate the revised skill.</strong> Run the old and revised versions on the same separate set of booking tasks with the same model, tools and time limit. Include an unfamiliar case, such as overlapping time slots. Compare test results, review findings and the effort needed to correct the code.</li>
+              <li><strong>Keep refining from evidence.</strong> If the revised skill misses a case or causes another failure, adjust its instructions and repeat the evaluation. Keep the version that meets the agreed checks without losing previously working behaviour.</li>
+            </ol>
+            <p>The code loop improves the booking feature. The skill loop improves how the agent approaches later tasks. Record both versions and their results; stop for review when the agreed checks pass or the run limit is reached.</p>
+          </aside>
           <h3>Keep the success criteria unchanged during correction</h3>
           <p>A loop can repeat a bad assumption as well as correct a defect. Check that the tests represent the intended behaviour. Do not weaken a test merely to finish the run; review a requirements change separately.</p>
           <p>Keep a record of what the agent tried and what each check found. Another agent may offer useful review, but can share the same mistaken assumptions.</p>
-          <p class="next-step"><strong>Next step:</strong> For one repetitive task, write down the success check, run limit and person to contact when blocked. See <a href="eds-developer-harness.html#do-work">how the developer workflow builds, tests and corrects a change</a>.</p>
+          <p class="next-step"><strong>Next step:</strong> Choose one recurring code review finding. Define a code check, propose a skill improvement and choose separate tasks to evaluate it. Set a run limit and record the results. See <a href="eds-developer-harness.html#do-work">how the developer workflow builds, tests and corrects a change</a>.</p>
           <p class="source-ref">Source: <a href="#source-7" aria-label="Source 7: IBM, Loop engineering">[7]</a>.</p>
         </section>
         <section id="graph-engineering">
           <h2>Graph engineering</h2>
-          <p>Graph engineering, as used here, means designing a workflow of tasks and dependencies. The graph shows what can run next, what needs to wait and where a person makes a decision. It can include feedback loops.</p>
-          <p>Use it when several activities need coordination. Some tasks can run together; others depend on a prior decision or another task’s output. A workflow graph makes those relationships visible. It can describe one agent or several.</p>
-          <p>“Graph engineering” is an emerging label. Here it refers to workflow design, rather than a knowledge graph of facts and relationships.</p>
-          <h3>Agree the dependencies before splitting the work</h3>
-          <p>In the example, the browser and server teams first agree an application programming interface (API) contract: the data exchanged and expected behaviour. They can then work separately and test the combined result.</p>
+          <p>Graph engineering means designing how work moves between tasks, checks and decisions. Each point in the graph represents an activity or decision. Each connection defines when the workflow follows that path.</p>
+          <p>Use it when an AI development workflow needs different responses to different findings. Evaluation results and review feedback determine whether an agent corrects code, asks for a decision or sends the change for review.</p>
+          <h3>Define what happens after each check</h3>
+          <p>A coding agent adds a CSV export to a service-request application. The export should include only records the user can access. The workflow checks the change and routes each finding to the right person or task.</p>
           <figure class="concept-figure" id="fig-graph">
-  <figcaption id="fig-graph-title-caption">Figure 6. Agree the interface, complete both tasks and test the combined change.</figcaption>
-  <details class="figure-reading" open><summary>Read as text: Flow and decisions</summary><ol><li>Agree how the browser and server exchange data and handle success, failure and access rules.</li><li>Browser and server work can then run in parallel. Each produces its changes and test results.</li><li>Wait for both sets of results before testing the combined feature. Missing work remains pending; it is not a failed integration test.</li><li>If the combined feature passes its checks, send the results for review. If it fails, return the finding to the responsible task, correct the work and rerun the affected checks.</li></ol></details>
-  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
-    <div class="figure-scroll" tabindex="0" role="region" aria-label="Parallel evidence and failure routing; scroll horizontally if needed"><svg viewBox="0 0 680 555" role="img" aria-labelledby="fig-graph-title" aria-describedby="fig-graph-title-desc"><title id="fig-graph-title">Parallel evidence and failure routing</title><desc id="fig-graph-title-desc">Agree how the browser and server exchange data and handle success, failure and access rules. Browser and server work can then run in parallel. Each produces its changes and test results. Wait for both sets of results before testing the combined feature. Missing work remains pending; it is not a failed integration test. If the combined feature passes its checks, send the results for review. If it fails, return the finding to the responsible task, correct the work and rerun the affected checks.</desc><rect class="d-node d-node-accent" x="210" y="10" width="260" height="70" rx="7"/><text class="d-title" x="340" y="36" text-anchor="middle">API contract</text><text class="d-sub" x="340" y="59" text-anchor="middle">Agreed behaviour</text><path class="d-line" d="M280 80V110H135V140" marker-end="url(#arrow)"/><path class="d-line" d="M400 80V110H545V140" marker-end="url(#arrow)"/><rect class="d-node" x="20" y="145" width="230" height="90" rx="7"/><text class="d-title" x="135" y="171" text-anchor="middle">Browser results</text><text class="d-sub" x="135" y="194" text-anchor="middle">Tests + changes</text><rect class="d-node" x="430" y="145" width="230" height="90" rx="7"/><text class="d-title" x="545" y="171" text-anchor="middle">Server results</text><text class="d-sub" x="545" y="194" text-anchor="middle">API and access tests</text><path class="d-line" d="M135 235V265H290V290" marker-end="url(#arrow)"/><path class="d-line" d="M545 235V265H390V290" marker-end="url(#arrow)"/><polygon class="d-node d-decision" points="245,295 435,295 445,305 445,360 435,370 245,370 235,360 235,305"/><text class="d-title" x="340" y="321" text-anchor="middle">Wait</text><text class="d-sub" x="340" y="344" text-anchor="middle">Both results ready?</text><rect class="d-node" x="15" y="305" width="175" height="75" rx="7"/><text class="d-title" x="102.5" y="331" text-anchor="middle">Pending branch</text><text class="d-sub" x="102.5" y="354" text-anchor="middle">Wait for completion</text><path class="d-line" d="M235 332H195" marker-end="url(#arrow)"/><text class="d-label" x="115" y="285" text-anchor="middle">incomplete</text><path class="d-line" d="M340 370V400" marker-end="url(#arrow)"/><text class="d-label" x="420" y="389" text-anchor="middle">both complete</text><rect class="d-node d-node-accent" x="235" y="405" width="210" height="75" rx="7"/><text class="d-title" x="340" y="431" text-anchor="middle">Integration check</text><text class="d-sub" x="340" y="454" text-anchor="middle">Browser + API</text><rect class="d-node" x="485" y="405" width="175" height="75" rx="7"/><text class="d-title" x="572.5" y="431" text-anchor="middle">Review</text><text class="d-sub" x="572.5" y="454" text-anchor="middle">Changes + results</text><path class="d-line" d="M445 442H480" marker-end="url(#arrow)"/><text class="d-label" x="467" y="429" text-anchor="middle">pass</text><rect class="d-node" x="15" y="420" width="180" height="90" rx="7"/><text class="d-title" x="105" y="446" text-anchor="middle">Assign findings</text><text class="d-sub" x="105" y="469" text-anchor="middle">Assign findings to</text><text class="d-sub" x="105" y="490" text-anchor="middle">responsible branch</text><path class="d-line d-dash" d="M235 448H200" marker-end="url(#arrow)"/><text class="d-label" x="214" y="432" text-anchor="middle">fail</text><path class="d-line d-dash" d="M15 456H5V120H135V140" marker-end="url(#arrow)"/><path class="d-line d-dash" d="M105 510V545H675V120H545V140" marker-end="url(#arrow)"/><text class="d-sub" x="341" y="526" text-anchor="middle">Rework: correct the responsible branch and rerun affected checks</text></svg></div>
-    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the shared contract and integration check.</p>
-  </details>
-</figure>
-          <aside class="example" aria-label="Fictional example: Build “Save draft” across the browser and server"><p class="example-label">Example · Build “Save draft” across the browser and server</p><p>The team agrees which draft fields to save, who may access them and what happens when two tabs make conflicting changes. One developer builds the browser states; another builds storage and access checks on the server.</p><p>Both return their changes and test results. The team then checks the real browser against the real server. If the server work is incomplete, the combined test waits. If the combined test fails, the relevant developer corrects the issue before a fresh check.</p></aside>
-          <h3>Add coordination only where it helps</h3>
-          <p>More tasks and agents mean more handovers, cost and opportunities for conflicting changes. Give each task clear inputs, outputs and ownership. Record which tasks completed and how a stopped workflow can resume without repeating an external action.</p>
-          <p>A box labelled “approval” does not enforce approval. Configure the tools and workflow to respect the required decision, and keep release permissions within the agreed authority.</p>
-          <p class="next-step"><strong>Next step:</strong> Mark the dependencies between two related tasks. Identify what they can do in parallel and the check they need together. Use <a href="eds-developer-harness.html#plan">the story-planning guidance</a> and <a href="eds-developer-harness.html#check">the task review and approval steps</a>.</p>
+            <figcaption id="fig-graph-title-caption">Figure 6. Evaluation results and review feedback determine the next step.</figcaption>
+            <details class="figure-reading" open><summary>Read as text: Conditions and routes</summary><ol>
+              <li>The agent implements the export. Automated checks evaluate the file contents, formatting and access rules.</li>
+              <li>A code failure returns to the coding agent. An access-control failure goes to a security reviewer. An unclear product rule goes to the product owner.</li>
+              <li>After corrections or an agreed decision, the agent updates the change and reruns the checks. Unresolved decisions pause that branch.</li>
+              <li>When all checks pass and open findings are resolved, a developer reviews the change. Requested changes return to the agent; approval makes the change ready to merge.</li>
+            </ol></details>
+            <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Route evaluation and review findings; scroll horizontally if needed">
+                <svg viewBox="0 0 900 700" role="img" aria-labelledby="fig-graph-title" aria-describedby="fig-graph-title-desc">
+                  <title id="fig-graph-title">Route evaluation and review findings</title>
+                  <desc id="fig-graph-title-desc">An agent implements a CSV export and runs evaluations. Code failures return to the agent. Access failures go to a security reviewer. Unclear rules go to the product owner. After a correction or decision, implementation and evaluation repeat. All checks must pass and findings must be resolved before developer review. Requested changes return to implementation. Approval makes the change ready to merge.</desc>
+                  <rect class="d-node" x="340" y="20" width="220" height="65" rx="7"/>
+                  <text class="d-title" x="450" y="47" text-anchor="middle">Agent implements</text>
+                  <text class="d-sub" x="450" y="69" text-anchor="middle">Build or revise the export</text>
+                  <path class="d-line" d="M450 85V125" marker-end="url(#arrow)"/>
+                  <polygon class="d-node d-node-accent d-decision" points="310,130 590,130 600,140 600,210 590,220 310,220 300,210 300,140"/>
+                  <text class="d-title" x="450" y="164" text-anchor="middle">Evaluate and route</text>
+                  <text class="d-sub" x="450" y="192" text-anchor="middle">Which finding needs action?</text>
+                  <path class="d-line" d="M320 220V255H112V315" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M400 220V280H337V315" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M500 220V280H562V315" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M580 220V255H787V315" marker-end="url(#arrow)"/>
+                  <rect x="27" y="281" width="170" height="25" fill="#fff"/>
+                  <rect x="252" y="281" width="170" height="25" fill="#fff"/>
+                  <rect x="477" y="281" width="170" height="25" fill="#fff"/>
+                  <rect x="687" y="268" width="200" height="42" fill="#fff"/>
+                  <text class="d-label" x="112" y="299" text-anchor="middle">Code failure</text>
+                  <text class="d-label" x="337" y="299" text-anchor="middle">Access failure</text>
+                  <text class="d-label" x="562" y="299" text-anchor="middle">Unclear rule</text>
+                  <text class="d-label" x="787" y="284" text-anchor="middle">Checks pass</text>
+                  <text class="d-label" x="787" y="304" text-anchor="middle">Findings resolved</text>
+                  <rect class="d-node" x="10" y="320" width="205" height="80" rx="7"/>
+                  <text class="d-title" x="112" y="351" text-anchor="middle">Coding agent</text>
+                  <text class="d-sub" x="112" y="377" text-anchor="middle">Correct the defect</text>
+                  <rect class="d-node" x="235" y="320" width="205" height="80" rx="7"/>
+                  <text class="d-title" x="337" y="351" text-anchor="middle">Security reviewer</text>
+                  <text class="d-sub" x="337" y="377" text-anchor="middle">Agree the access fix</text>
+                  <rect class="d-node" x="460" y="320" width="205" height="80" rx="7"/>
+                  <text class="d-title" x="562" y="351" text-anchor="middle">Product owner</text>
+                  <text class="d-sub" x="562" y="377" text-anchor="middle">Resolve the rule</text>
+                  <rect class="d-node" x="685" y="320" width="205" height="80" rx="7"/>
+                  <text class="d-title" x="787" y="351" text-anchor="middle">Developer review</text>
+                  <text class="d-sub" x="787" y="377" text-anchor="middle">Inspect code and evidence</text>
+                  <path class="d-line d-dash" d="M112 400V455H2V52H335" marker-end="url(#arrow)"/>
+                  <path class="d-line d-dash" d="M337 400V455H112"/>
+                  <path class="d-line d-dash" d="M562 400V455H337"/>
+                  <text class="d-label" x="337" y="440" text-anchor="middle">After correction or decision: implement and recheck</text>
+                  <path class="d-line" d="M787 400V475" marker-end="url(#arrow)"/>
+                  <polygon class="d-node d-node-accent d-decision" points="695,480 880,480 890,490 890,545 880,555 695,555 685,545 685,490"/>
+                  <text class="d-title" x="787" y="511" text-anchor="middle">Review decision</text>
+                  <text class="d-sub" x="787" y="536" text-anchor="middle">Approve or request changes</text>
+                  <path class="d-line d-dash" d="M685 517H640V580H2"/>
+                  <path class="d-line d-dash" d="M2 580V455"/>
+                  <text class="d-label" x="430" y="569" text-anchor="middle">Changes requested: return to the agent</text>
+                  <path class="d-line" d="M787 555V615" marker-end="url(#arrow)"/>
+                  <text class="d-label" x="820" y="593">Approved</text>
+                  <rect class="d-node d-node-accent" x="685" y="620" width="205" height="60" rx="7"/>
+                  <text class="d-title" x="787" y="656" text-anchor="middle">Ready to merge</text>
+                  <text class="d-sub" x="337" y="640" text-anchor="middle">Pause for unresolved decisions or unavailable tools.</text>
+                  <text class="d-sub" x="337" y="666" text-anchor="middle">Stop and record progress when the run limit is reached.</text>
+                </svg>
+              </div>
+              <p class="diagram-key">Labels show the condition for each branch. Dashed arrows return work for correction and evaluation. Blue highlights decisions and the completed review.</p>
+            </details>
+          </figure>
+          <aside class="example" aria-label="Fictional example: Route feedback while building a CSV export">
+            <p class="example-label">Example · Route feedback while building a CSV export</p>
+            <p>The team defines the following routes before the coding agent starts:</p>
+            <ul>
+              <li><strong>The exported file has incorrect columns:</strong> return the failing test to the coding agent. It fixes the export and reruns the checks.</li>
+              <li><strong>The export includes another team's restricted records:</strong> send the finding to a security reviewer to agree the correction. The agent applies it and reruns access and export tests.</li>
+              <li><strong>The expected behaviour is unclear:</strong> if nobody has decided whether archived requests belong in the export, pause and ask the product owner. Record the decision, update the acceptance criteria and resume implementation.</li>
+              <li><strong>All checks pass and findings are resolved:</strong> send the code and evaluation results to a developer for review. Review feedback sends specific changes back to the agent; approval makes the change ready to merge.</li>
+            </ul>
+            <p>Each route names its trigger, owner and next action. If several findings exist, resolve each one and rerun the checks before developer review. Record progress and stop when the run limit is reached.</p>
+          </aside>
+          <h3>Keep routing rules explicit</h3>
+          <p>Give each branch a clear condition, required evidence and owner. Pause when a tool or decision is unavailable. Keep the findings and decisions with the change so the workflow can resume from the right point.</p>
+          <p class="next-step"><strong>Next step:</strong> Map one AI-assisted coding workflow. For each evaluation or review outcome, name who acts next and which checks must run again. Use <a href="eds-developer-harness.html#plan">the story-planning guidance</a> and <a href="eds-developer-harness.html#check">the task review and approval steps</a>.</p>
           <p class="source-ref">Sources: <a href="#source-8" aria-label="Source 8: PuppyGraph, Graph engineering">[8]</a>; <a href="#source-9" aria-label="Source 9: Anthropic, Building effective agents">[9]</a>.</p>
         </section>
         <section id="software-factory">
@@ -262,7 +376,18 @@
     <tr><th scope="row"><a href="#source-23">System One, from TypeSafe</a></th><td><span class="cell-label">Meaning</span>TypeSafe’s name for models such as Jev that answer defined questions with choices or probabilities.</td><td><span class="cell-label">Example task</span>Select a request category from agreed options.</td></tr>
   </tbody></table></div>
           <p>A defined output format or a confidence score does not establish that an answer is correct. The model examples and research below explain the distinctions and limits.</p>
-          <aside class="example" aria-label="Fictional example: Compare models for a service-request task"><p class="example-label">Example · Compare models for a service-request task</p><p>Give each candidate model the same request examples, category definitions and supporting information. Keep a separate set of examples for the final comparison so decisions are not judged only on cases used to adjust the setup.</p><p>Record incorrect categories, response time, running cost and cases that need human review. A model that drafts helpful text may not be the best choice for classification; compare each against the task it will perform.</p></aside>
+          <aside class="example" aria-label="Fictional example: Choose a model for a coding agent">
+            <p class="example-label">Example · Choose a model for a coding agent</p>
+            <p>A team compares two models for its coding agent. One evaluation task is to fix a booking API that lets two people reserve the same room at the same time.</p>
+            <p>The harness gives both models the same code, requirements, tools and time limit. Each model produces a code change; the team runs the same tests on both results.</p>
+            <div class="table-scroll"><table><caption>Example results for the booking fix</caption><thead><tr><th scope="col">Check</th><th scope="col">Model A’s code</th><th scope="col">Model B’s code</th></tr></thead><tbody>
+              <tr><th scope="row">A user can book an available room</th><td>Pass</td><td>Pass</td></tr>
+              <tr><th scope="row">Two simultaneous requests produce only one booking</th><td>Fail: both bookings succeed</td><td>Pass: one succeeds and the other reports a conflict</td></tr>
+              <tr><th scope="row">A user cannot cancel another user’s booking</th><td>Pass</td><td>Pass</td></tr>
+            </tbody></table></div>
+            <p>For this task, Model B’s change meets all three checks. The developer also reviews the code and records response time, running cost and any corrections needed.</p>
+            <p>The team repeats the comparison on other representative coding tasks, keeping separate tasks for the final evaluation. It chooses a model that meets its quality, time and cost criteria across those tasks.</p>
+          </aside>
           <details class="self-check concept-reference" id="model-reference"><summary>Model examples and research</summary><div class="table-scroll" tabindex="0" role="region" aria-label="Model dimensions comparison">
             <table class="reference-table">
               <caption>Four dimensions of model choice</caption>
@@ -309,7 +434,7 @@
         </section>
         <section id="sources">
           <h2>Sources and learning references</h2>
-          <p>The references support the explanations on this page. The examples illustrate the practices; they do not establish organisational requirements.</p>
+          <p>The references provide further explanation and examples for each practice.</p>
           <h3 id="learning-references">Learning references</h3>
           <p>Use these courses, guides and playbooks for detailed instruction and practice. Check the implementation courses for prerequisites and tool requirements.</p>
           <ul class="source-list"><li id="learning-intent"><strong>Intent-driven development:</strong> <a href="https://circleci.com/blog/intent-driven-development/">CircleCI’s guide</a> explains how to carry outcomes, constraints and success criteria through a change.</li>

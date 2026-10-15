@@ -49,7 +49,6 @@
           <h1>Developer harness (Eitri)</h1>
 <p class="lead">Eitri is the EDS agentic developer harness. Its 19 steps take one user story from the handed-off product requirements document (PRD) to a compliance-checked technical requirements document (TRD), a set of verified issues, implementation in a self-correcting loop, and closeout with independent evidence.</p>
           <p>Steps are ordered by their dependencies and can be adjusted to fit a team’s tooling. The harness is built on Matt Pocock’s engineering workflow, and teams are encouraged to own, adapt and extend it. This page describes what each phase achieves; the <a href="eds-skills-catalogue.html">skills catalogue</a> names the skill behind each step.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-12">12 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#install">Set up once</a>
@@ -60,7 +59,7 @@
             <a href="#do-work">The build loop (11–12)</a>
             <a href="#closeout">Close out (13–19)</a>
             <a href="#done">Definition of done</a>
-            <a href="#sources">Sources</a>
+
         </nav></details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -77,7 +76,6 @@
             <li><strong>Optionally, the team’s own standards.</strong> A team can reference its own standards repository so the agent factors it into each story’s design. <a href="eds-team-context.html#standards">Read how a team registers its standards</a>.</li>
           </ul>
           <p>The harness can also record token usage and cost locally each time a skill runs. A further capability, in development and not yet available <span class="status status-planned">Planned</span>, will review standards documents against current versions of the technologies they cover and apply only the changes a person approves.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 2, Installation; <a href="#source-2" aria-label="Source 2: Skills Catalogue (EDS harness documentation)">[2]</a> Setup and metrics.</p>
         </section>
 
         <section id="steps">
@@ -125,7 +123,6 @@
           <p>Steps 1–6 set up the repository and turn one user story into a TRD. Steps 7–10 check the TRD against standards and policy, slice it into issues and verify them, with a human gate before and after slicing. Steps 11–12 build one issue in the execution mode the team chooses. Steps 13–19 improve the design, extend the architecture tests, review the change and gather browser and end-to-end evidence.</p>
           <p>The tables on this page label each step:</p>
           <aside class="status-key" aria-label="Labels used on this page"><p>Labels on this page</p><dl><div><dt><span class="status status-core">Core</span></dt><dd>Part of the normal route for every story.</dd></div><div><dt><span class="status status-recommended">Optional · Recommended</span></dt><dd>Can be left out, but including it improves confidence or quality.</dd></div><div><dt><span class="status status-optional">Optional</span></dt><dd>Can be left out when it does not apply.</dd></div><div><dt><span class="status status-setup">One-time setup</span></dt><dd>Done once for each repository, before delivery work starts.</dd></div><div><dt><span class="status status-planned">Planned</span></dt><dd>In development and not yet available. Do not count on it as a control.</dd></div><div><dt><span class="status status-hitl">HITL</span></dt><dd>Human in the loop: a person signs off before the work moves on.</dd></div></dl></aside>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 2, Development workflow.</p>
         </section>
 
         <section id="plan">
@@ -148,7 +145,6 @@
           <h3>Investigate, then write the TRD (Steps 5–6)</h3>
           <p>The developer takes the next story from the delivery plan and resolves its open decisions before anything is written. A large, ambiguous story is broken into investigation tickets and resolved one at a time; a smaller, well-defined story is stress-tested against the domain model in one session.</p>
           <p>The TRD then brings the decisions together without further questions. It covers the problem statement, the solution, user stories, implementation decisions, testing decisions and what is out of scope.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 2.1.</p>
         </section>
 
         <section id="check">
@@ -165,7 +161,6 @@
           <p>The compliance audit covers two policy sets. <a href="https://info.standards.tech.gov.sg">Instruction Manual 8 (IM8)</a> is the Singapore Government’s ICT security policy; the audit uses its application technical controls. The <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">Agentic Risk &amp; Capability Framework (ARC)</a> is GovTech’s governance framework for risks in agentic AI systems.</p>
           <p>Each control is judged as met, fixable by tightening the wording, failed, deferred to implementation because it cannot be checked at specification stage, or not applicable. Planning is not complete while any control is failed.</p>
           <p>Because every issue declares what blocks it, several agents or developers can work on different issues in parallel safely.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 2.2.</p>
         </section>
 
         <section id="modes">
@@ -176,8 +171,7 @@
             <tr><th scope="row">2. Local autonomous</th><td>The developer, through a local autonomous agent</td><td>An isolated sandbox workspace checks out the code, runs the build loop end to end and commits locally, with no interaction during the run.</td></tr>
             <tr><th scope="row">3. Cloud or CI autonomous</th><td>A GitLab pipeline or cloud runner</td><td>The pipeline detects an execution-ready issue, runs the build loop, pushes the changes, opens a merge request (MR) and triggers an automated review that posts comments for the developer.</td></tr>
           </tbody></table></div>
-          <p>These modes are the workflow’s version of the autonomy choice in Playbook Chapter 3, section 7. A team chooses one for each issue, based on how well specified it is and how much control and evidence surround it; <a href="product-implementation.html#autonomy">read how to increase autonomy with evidence</a>.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 2.3; <a href="#source-3" aria-label="Source 3: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[3]</a> section 7.</p>
+          <p>Choose a mode for each issue based on how well specified it is and how much control and evidence surround it; <a href="product-implementation.html#autonomy">read how to increase autonomy with evidence</a>.</p>
         </section>
 
         <section id="do-work">
@@ -231,7 +225,6 @@
           <h3 id="factory">Toward an AI software factory</h3>
           <p>The harness describes an AI software factory as a self-steering delivery engine: agents pick up issues, implement and validate them against a defined quality bar, commit and close them. Running the build loop in Mode 2 or Mode 3 is the harness’s route to this. Because Step 9 publishes issues with explicit dependencies, several agents can take different issues in parallel. <a href="concept.html#software-factory">Read the software factory concept</a>.</p>
           <p>Teams own the factory’s quality bar by treating the build loop as configuration they maintain. They can add a gate, such as a new scanner or performance check; tighten a threshold, such as coverage or mutation score; or add reviewers for their own domain. Raising the bar this way does not change the delivery workflow.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 2.4; <a href="#source-2" aria-label="Source 2: Skills Catalogue (EDS harness documentation)">[2]</a> Implementation skills and Review skills.</p>
         </section>
 
         <section id="closeout">
@@ -249,7 +242,6 @@
           <p>The Step 15 review runs its two parts separately, so neither influences the other. One compares the change with the repository’s documented coding standards, falling back to a baseline of common code smells. The other compares it with the originating issue or TRD, flagging missing requirements, scope creep and requirements that look implemented but are wrong.</p>
           <p>End-to-end evidence builds up one user story at a time. A run counts only after its final verifier passes, and a stability check can repeat it at least three times to flag results that change between runs. A failing run does not block a push unless the repository adds a pipeline gate.</p>
           <p>Each check writes its report to the repository, so reviewers can inspect the evidence behind a decision: the dependency graph, the architecture test plan, the compliance and review reports, browser screenshots and end-to-end results.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 2.5; <a href="#source-2" aria-label="Source 2: Skills Catalogue (EDS harness documentation)">[2]</a> Implementation skills.</p>
         </section>
 
         <section id="done">
@@ -274,17 +266,8 @@
             <li>Optionally, acceptance criteria are verified in a live browser and story end-to-end evidence is produced.</li>
           </ul>
           <p class="next-step"><strong>Next step:</strong> to see what happens once a merge request is ready, <a href="eds-path-to-production.html">follow the path to production</a>. For the skill behind each step, <a href="eds-skills-catalogue.html">open the skills catalogue</a>.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 3.</p>
         </section>
 
-        <section id="sources">
-          <h2>Sources</h2>
-          <ol class="source-list">
-            <li id="source-1"><cite>Product Development Journey &amp; Workflow Harness (EDS harness documentation)</cite></li>
-            <li id="source-2"><cite>Skills Catalogue (EDS harness documentation)</cite></li>
-            <li id="source-3"><cite>EDS AI-SDLC Playbook, Chapter 3: Product Implementation</cite></li>
-          </ol>
-        </section>
         <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -297,7 +280,7 @@
             <a href="#do-work">The build loop (11–12)</a>
             <a href="#closeout">Close out (13–19)</a>
             <a href="#done">Definition of done</a>
-            <a href="#sources">Sources</a>
+
     </nav></aside>
   </div>
 </body>

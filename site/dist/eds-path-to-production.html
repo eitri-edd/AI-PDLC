@@ -48,8 +48,7 @@
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>Path to production</h1>
 <p class="lead">Code changes pass through four pipeline stages on their way to production. Each stage widens the scope of the checks, from the developer’s staged change at commit time to the whole codebase at QA entry and before release. The same checks are reused at each scope, so enforcement stays consistent without duplicate tooling.</p>
-          <p>The path starts where the <a href="eds-developer-harness.html#closeout">developer harness closeout</a> ends and finishes with the consolidated report for the Tech Lead’s release sign-off. Confirm the applicable release authority locally.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-12">12 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+          <p>The path starts where the <a href="eds-developer-harness.html#closeout">developer harness closeout</a> ends and finishes with the consolidated report for the Tech Lead’s release sign-off.</p>
         </header>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#stages">Four pipeline stages</a>
@@ -59,7 +58,7 @@
             <a href="#pre-prod">4.4 Pre-production</a>
             <a href="#after-release">After readiness</a>
             <a href="#done">Definition of done</a>
-            <a href="#sources">Sources</a>
+
         </nav></details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -95,14 +94,13 @@
             <figcaption>Figure 1. The four pipeline stages. The check scope, shown by the widening band, grows from the staged change to the full codebase; the final stage is highlighted because it ends in a human sign-off.</figcaption>
           </figure>
           <p>A commit triggers checks on the staged change only. A merge request (MR) to the Dev branch generates documentation for the changed files. An MR to the QA branch runs full-codebase scans and document generators. Promoting a release candidate runs every readiness gate again on the full codebase and produces one report for the Tech Lead.</p>
-          <p>The harness documentation numbers these stages 4.1 to 4.4, and this page keeps that numbering.</p>
+          <p>The pipeline has four stages, numbered 4.1 to 4.4 below.</p>
           <div class="table-scroll"><table class="wide-table"><caption>Pipeline stages, triggers, checks, scope and blocking behaviour</caption><thead><tr><th scope="col">Stage</th><th scope="col">Trigger</th><th scope="col">What runs</th><th scope="col">Scope</th><th scope="col">Blocking</th></tr></thead><tbody>
             <tr><th scope="row"><a href="#pre-commit">4.1 Pre-commit</a></th><td>Each commit, through an automatic hook</td><td>The quality and compliance reviews from the build loop, including the IM8 review</td><td>Staged change</td><td>Blocks the commit on Critical or High findings</td></tr>
             <tr><th scope="row"><a href="#merge-dev">4.2 Merge to Dev</a></th><td>MR targeting the Dev branch</td><td>API documentation generation</td><td>Changed files in the MR</td><td>Does not block</td></tr>
             <tr><th scope="row"><a href="#merge-qa">4.3 Merge to QA</a></th><td>MR targeting the QA branch</td><td>Security scans, the authorisation matrix and the technical architecture document</td><td>Full codebase</td><td>Scans block on Critical or High findings; generated documents do not block</td></tr>
             <tr><th scope="row"><a href="#pre-prod">4.4 Pre-production</a></th><td>Release candidate promotion</td><td>Every readiness gate, in one run</td><td>Full codebase</td><td>Blocks the release on any gate failure</td></tr>
           </tbody></table></div>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 4.</p>
         </section>
 
         <section id="pre-commit">
@@ -110,13 +108,11 @@
           <p>An automatic hook reviews the staged change whenever a developer commits. It is the same quality and compliance gate used inside the <a href="eds-developer-harness.html#do-work">build loop</a>, scoped to the staged change for fast feedback. It runs in parallel the review against coding standards and the specification, <a href="https://semgrep.dev/">Semgrep</a> static analysis, the <a href="https://info.standards.tech.gov.sg">IM8</a> security review, the <a href="https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md">thermo-nuclear maintainability review</a> and the framework reviews.</p>
           <p>A Critical or High finding blocks the commit, and the results are written to one consolidated report. The harness allows the hook to be bypassed in an emergency.</p>
           <p>The IM8 review checks application technical controls such as input validation, authentication, secrets management, session management and audit logging.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 4.1; <a href="#source-2" aria-label="Source 2: Skills Catalogue (EDS harness documentation)">[2]</a> Implementation skills.</p>
         </section>
 
         <section id="merge-dev">
           <h2>4.2 Document changes when merging to Dev</h2>
           <p>An MR to the Dev branch generates API documentation for the changed files only, from comments in the code, so reviewers can see quickly what changed in each interface. This stage does not block the merge. Documentation for the full codebase is generated at pre-production.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 4.2.</p>
         </section>
 
         <section id="merge-qa">
@@ -130,7 +126,6 @@
             <tr><th scope="row"><a href="https://semgrep.dev/">Semgrep</a> static analysis</th><td>Findings such as injection, weak cryptography, hard-coded secrets and unsafe input handling</td><td>Blocks on Critical or High</td></tr>
           </tbody></table></div>
           <p>All outputs are point-in-time and are regenerated after codebase or dependency changes.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 4.3.</p>
         </section>
 
         <section id="pre-prod">
@@ -153,15 +148,14 @@
           </ul>
           <aside class="callout" aria-label="Note on IM8 and ARC coverage">
             <p class="example-label">Note</p>
-            <p>The pre-production report covers <a href="https://info.standards.tech.gov.sg">IM8</a> controls in the code. <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a> controls are assessed earlier, against the TRD, at the <a href="eds-developer-harness.html#check">compliance audit in Step 8</a>; the harness documentation does not describe a code-level ARC check. Do not read the pre-production report as evidence of ARC compliance in the code.</p>
+            <p>The pre-production report covers <a href="https://info.standards.tech.gov.sg">IM8</a> controls in the code. <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a> controls are assessed earlier, against the TRD, at the <a href="eds-developer-harness.html#check">compliance audit in Step 8</a>. Keep the TRD assessment and code-check results together for the release review.</p>
           </aside>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 4.4; <a href="#source-2" aria-label="Source 2: Skills Catalogue (EDS harness documentation)">[2]</a> Path to production skills.</p>
         </section>
 
         <section id="after-release">
           <h2>Plan what happens after readiness</h2>
           <p>The pipeline gates establish readiness for release, not the rollout itself. Plan limited exposure, observation and recovery, and feed production evidence back into the next PRD, using <a href="product-implementation.html#six-stages">the Release and observe and Learn stages in Product implementation</a>.</p>
-          <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[3]</a> sections 4.5 and 4.6.</p>
+
         </section>
 
         <section id="done">
@@ -184,17 +178,8 @@
             <li>The consolidated report is approved by the Tech Lead.</li>
           </ul>
           <p class="next-step"><strong>Next step:</strong> check which of these stages your pipeline already enforces, and agree with your platform team how the missing ones will be added. To change what each stage checks against, <a href="eds-team-context.html">add your team’s context</a>.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> sections 3 and 4.4.</p>
         </section>
 
-        <section id="sources">
-          <h2>Sources</h2>
-          <ol class="source-list">
-            <li id="source-1"><cite>Product Development Journey &amp; Workflow Harness (EDS harness documentation)</cite></li>
-            <li id="source-2"><cite>Skills Catalogue (EDS harness documentation)</cite></li>
-            <li id="source-3"><cite>EDS AI-SDLC Playbook, Chapter 3: Product Implementation</cite></li>
-          </ol>
-        </section>
         <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -206,7 +191,7 @@
             <a href="#pre-prod">4.4 Pre-production</a>
             <a href="#after-release">After readiness</a>
             <a href="#done">Definition of done</a>
-            <a href="#sources">Sources</a>
+
     </nav></aside>
   </div>
 </body>

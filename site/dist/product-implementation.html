@@ -37,7 +37,6 @@
             <a href="eds-team-context.html">Team context</a>
             <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
-          <a href="glossary.html">Glossary</a>
           <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -48,21 +47,21 @@
         <header class="article-header">
           <h1>Product implementation</h1>
           <p class="lead">Product implementation turns agreed requirements into working software. This page explains how to plan development, build and test changes, review quality, and prepare for release and ongoing improvement.</p>
-          <p>Product owners, architects, engineers and reviewers use the requirements, interface designs and team standards to plan the work. The final section connects this approach to the <a href="eds-ai-workflow.html">EDS AI Workflow</a>.</p>
-          <p>The six stages are adapted from the <cite>EDS AI-SDLC Playbook, Chapter 3: Product Implementation</cite>. They are a working model, and the examples are fictional. Confirm responsibilities and approval authority within your organisation.</p>
+          <p>Product owners, architects, engineers and reviewers use the requirements, interface designs and team standards to plan the work. Use the <a href="eds-ai-workflow.html">EDS AI Workflow</a> for step-by-step delivery guidance.</p>
+
         </header>
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
           <p id="page-map-note" class="page-map-note">Check the requirements, plan development and testing, and agree how the work will be reviewed. Then follow the EDS workflow to apply the approach.</p>
-          
+
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>Requirements and readiness</strong><div class="page-map-links"><a href="#implementation-loop">Software delivery overview</a><a href="#implementable-definition">Requirements, designs and team standards</a></div></li>
             <li class="page-map-node"><strong>Development planning</strong><div class="page-map-links"><a href="#executable-work">Technical design and development tasks</a><a href="#six-stages">Development, testing, release and feedback</a></div></li>
             <li class="page-map-node"><strong>Quality assurance</strong><div class="page-map-links"><a href="#gates-and-assurance">Independent testing and review</a><a href="#factory-platform">Development tools</a><a href="#autonomy">Automation and approval authority</a><a href="#measure-loop">Delivery and quality measures</a></div></li>
-            <li class="page-map-node"><strong>EDS workflow</strong><div class="page-map-links"><a href="#eds-workflow">Apply the approach and prepare a pilot</a></div></li>
+            <li class="page-map-node"><strong>EDS workflow</strong><div class="page-map-links"><a href="eds-ai-workflow.html">Follow the EDS AI Workflow</a></div></li>
           </ol>
-          
+
         </figure>
         <!-- PAGE MAP END -->
         <details class="mobile-contents">
@@ -76,7 +75,7 @@
             <a href="#factory-platform">Factory platform</a>
             <a href="#autonomy">Autonomy</a>
             <a href="#measure-loop">Measure the loop</a>
-            <a href="#eds-workflow">Use the EDS AI Workflow (Eitri)</a>
+            <a href="eds-ai-workflow.html">EDS AI Workflow (Eitri)</a>
             <a href="#sources">Sources</a>
           </nav>
         </details>
@@ -114,7 +113,7 @@
             <li><strong>Traceability</strong> links product intent to decisions, tasks, tests, releases and outcomes.</li>
             <li><strong>Feedback paths</strong> let evidence revise the PRD, TRD, context, tasks, tests, tools or policies.</li>
           </ul>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 1.</p>
+
         </section>
 
         <section id="implementable-definition">
@@ -138,7 +137,7 @@
           <p>Architecture standards, domain rules, policies, security controls, operating constraints and business priorities define what a valid implementation is. Without them, an agent can produce work that is correct locally but incompatible with the wider system.</p>
           <p>Before planning, an accountable owner should confirm that the package is coherent enough to plan from. Material unknowns should be either resolved or carried as bounded assumptions, each with an owner and a review date.</p>
           <p class="next-step"><strong>Next step:</strong> walk one critical journey through your UI artefacts, including its error and permission states. Check that each state has a matching acceptance criterion in the PRD.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 2.</p>
+
         </section>
 
         <section id="executable-work">
@@ -156,12 +155,12 @@
           <h3>Give each agent enough context, and no more</h3>
           <p>Relevant context helps an agent work within the intended scope, but does not guarantee correct output. Manage context like a product: versioned, attributable, scoped to a domain or repository, discoverable and checked for freshness. Give an agent enough to make the current decision, and disclose deeper guidance only when the task, risk or uncertainty justifies it. Log the context and tools used, so reviewers can reconstruct what informed an outcome. <a href="eds-team-context.html#matrix">See which context the EDS AI Workflow loads at each stage</a>, or <a href="concept.html#context-engineering">read about context engineering</a>.</p>
           <p class="next-step"><strong>Next step:</strong> pick one task in your backlog. Check that it links to an acceptance criterion and a TRD decision, and that someone other than its implementer could decide whether it is done.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 3; <a href="#source-3" aria-label="Source 3: GitHub Spec Kit, Specification-Driven Development">[3]</a>.</p>
+          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: GitHub Spec Kit, Specification-Driven Development">[1]</a>.</p>
         </section>
 
         <section id="six-stages">
           <h2>Run the six stages</h2>
-          <p>The six stages are this guide’s working model, not a prescribed organisational lifecycle. Each has a purpose, expected evidence and an exit decision. Scale the documentation and reviews to the change’s risk.</p>
+          <p>Each of the six stages has a purpose, expected evidence and an exit decision. Scale the documentation and reviews to the change’s risk.</p>
           <div class="table-scroll"><table class="wide-table"><caption>The six stages of the implementation loop</caption><thead><tr><th scope="col">Stage</th><th scope="col">Purpose</th><th scope="col">Evidence produced</th><th scope="col">Exit decision</th></tr></thead><tbody>
             <tr><th scope="row">1. Plan</th><td>Decide how the intent will be delivered within organisational constraints, and challenge contradictions</td><td>Reviewed TRD, decision records, risk register, requirement traceability</td><td>The required owners agree the approach is feasible and material risks have an accepted treatment</td></tr>
             <tr><th scope="row">2. Slice</th><td>Break the TRD into small vertical tasks that can be built, tested and reviewed on their own</td><td>Task graph, verification contracts, environment needs, review plan, release sequence</td><td>Every task is implementable, traceable and small enough to keep change and evidence together</td></tr>
@@ -175,7 +174,7 @@
           <p>Release and observe limits how many people a faulty change can affect. A canary release exposes a change to a limited portion of traffic first; Google’s SRE Workbook explains how comparing it with the existing version can reveal failures that pre-release tests miss. It limits exposure; it does not guarantee a safe release.</p>
           <p>Before release, record the initial audience, observation period, stop thresholds and who can halt the rollout, and rehearse recovery. Check whether recovery must also restore data or reverse external actions: rolling back code may not undo a migration, a sent message or an automated decision. For an AI capability, record the model, prompt and retrieval configuration with the release.</p>
           <p class="next-step"><strong>Next step:</strong> for the change your team is working on now, name its current stage and write down the exit decision it needs next, including who makes it.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 4; <a href="#source-4" aria-label="Source 4: Google SRE Workbook, Canarying Releases">[4]</a>.</p>
+          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: Google SRE Workbook, Canarying Releases">[2]</a>.</p>
         </section>
 
         <section id="gates-and-assurance">
@@ -193,7 +192,7 @@
   </details>
 </figure>
 <p>The lanes distinguish who produces the work, who reviews it independently and who decides. Sensors and scanners can include compilers, type checks, static analysis, security checks, contract tests and accessibility checks. Their results support the decision; an exception request does not itself authorise release.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Separation of duties; confirm roles and authority locally</caption><thead><tr><th scope="col">Role</th><th scope="col">Can</th><th scope="col">Should not do alone</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table"><caption>Separation of duties</caption><thead><tr><th scope="col">Role</th><th scope="col">Can</th><th scope="col">Should not do alone</th></tr></thead><tbody>
             <tr><th scope="row">Implementation agent</th><td>Create changes, run tests and scanners, fix findings and assemble evidence</td><td>Accept its own work or suppress independent blocking findings</td></tr>
             <tr><th scope="row">Specialist review agent</th><td>Review within a defined remit, reproduce evidence, raise findings and confirm fixes</td><td>Approve outside its remit or accept business risk</td></tr>
             <tr><th scope="row">Review orchestrator</th><td>Route reviews, merge duplicate findings, track closure and compile the quality report</td><td>Turn unresolved disagreement into a silent pass</td></tr>
@@ -215,7 +214,7 @@
           <p>Record the dataset, model, instructions, tools and environment. Repeat representative tasks because outputs vary, and check final state and side effects, not only the response. Calibrate model-based graders against human judgement and keep regression cases for fixed failures. Agree the acceptance rule before running the evaluation, and report failures by case type; for the service desk assistant, an overall pass rate could hide failures on restricted-information cases.</p>
           <p>A minimum quality report brings together the linked PRD acceptance criteria, test and evaluation results, scanner and policy findings, open exceptions or remaining risk, and the accountable person’s decision for the defined release scope.</p>
           <p class="next-step"><strong>Next step:</strong> look at the last change your team merged. Identify who, other than its author, decided it was acceptable, and where that decision is recorded.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 5; <a href="#source-5" aria-label="Source 5: Anthropic, Demystifying evals for AI agents">[5]</a>.</p>
+          <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: Anthropic, Demystifying evals for AI agents">[3]</a>.</p>
         </section>
 
         <section id="factory-platform">
@@ -238,7 +237,7 @@
             <li><strong>Readable evidence:</strong> produce quality reports that accountable people can understand and challenge.</li>
             <li><strong>Replaceable parts:</strong> put context, skills, models, scanners and tool providers behind stable contracts.</li>
           </ul>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 6.</p>
+
         </section>
 
         <section id="autonomy">
@@ -255,7 +254,7 @@
             <p class="example-label">Note</p>
             <p>Running without people is not the same as maturity. A dark factory without independent assurance, containment, monitoring and proven recovery is an unattended risk. <a href="concept.html#software-factory">Read about light and dark software factories</a>.</p>
           </aside>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 7.</p>
+
         </section>
 
         <section id="measure-loop">
@@ -283,48 +282,21 @@
             <li>Worsening product outcomes with stable system health lead to refining the PRD or experience, not infrastructure work.</li>
             <li>Recovery outside tolerance leads to stronger containment before deployment frequency increases.</li>
           </ul>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[1]</a> section 8; <a href="#source-6" aria-label="Source 6: DORA, Software delivery performance metrics">[6]</a>.</p>
+          <p class="source-ref">Source: <a href="#source-4" aria-label="Source 4: DORA, Software delivery performance metrics">[4]</a>.</p>
         </section>
 
         <section id="eds-workflow">
-          <h2>Put the strategy into practice with the EDS AI Workflow (Eitri)</h2>
-          <p>The playbook describes a minimum operating pattern: classify the change, confirm readiness, approve the TRD, slice the work, implement test-first, run independent assurance, accept the quality report, release progressively and close the learning loop. Use the EDS AI Workflow, with Eitri as its developer harness, to run this pattern. It supplies the roles, skills, human gates, default thresholds, pipeline gates and evidence that this strategy leaves open. The mapping below is this guide’s interpretation; neither document states it.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>How the EDS AI Workflow implements the strategy on this page</caption><thead><tr><th scope="col">Strategy, with playbook section</th><th scope="col">How the EDS AI Workflow implements it</th></tr></thead><tbody>
-            <tr><th scope="row">Readiness package (2)</th><td>The PO or BA hands over the PRD through one of three paths; installation and one-time setup connect the tracker, standards, context and architecture tests. <a href="eds-po-ba-harness.html">Hand off the PRD</a> and <a href="eds-team-context.html">add team context</a>.</td></tr>
-            <tr><th scope="row">Plan (4.1)</th><td><a href="eds-skills-catalogue.html#skill-dependency-orchestrator"><code>/dependency-orchestrator</code></a> sequences the stories; <a href="eds-skills-catalogue.html#skill-wayfinder"><code>/wayfinder</code></a> or <a href="eds-skills-catalogue.html#skill-grill-with-docs"><code>/grill-with-docs</code></a> and <a href="eds-skills-catalogue.html#skill-to-spec"><code>/to-spec</code></a> produce a user story level TRD; <a href="eds-skills-catalogue.html#skill-spec-standards-check"><code>/spec-standards-check</code></a>, <a href="eds-skills-catalogue.html#skill-spec-compliance"><code>/spec-compliance</code></a> and human gate HITL 1 approve it. <a href="eds-developer-harness.html#plan">Plan a story</a>.</td></tr>
-            <tr><th scope="row">Slice (4.2)</th><td><a href="eds-skills-catalogue.html#skill-to-tickets"><code>/to-tickets</code></a> and <a href="eds-skills-catalogue.html#skill-issue-verification"><code>/issue-verification</code></a> create tracer-bullet issues; HITL 2 marks them ready to build. <a href="eds-developer-harness.html#check">Check and slice</a>.</td></tr>
-            <tr><th scope="row">Implement, with inner correction (4.3, 5.2)</th><td><a href="eds-skills-catalogue.html#skill-do-work"><code>/do-work</code></a> repeats implement, review and fix until no must-fix findings remain, then runs the validation gates. <a href="eds-developer-harness.html#do-work">Run the loop</a>.</td></tr>
-            <tr><th scope="row">Verify, with outer assurance (4.4, 5)</th><td>Closeout adds feature architecture tests, a two-axis review, and browser and end-to-end evidence; pipeline stages repeat the checks at wider scope. <a href="eds-developer-harness.html#closeout">Close out</a>.</td></tr>
-            <tr><th scope="row">Release and observe (4.5)</th><td>Pipeline stages 4.1–4.4 end with <a href="eds-skills-catalogue.html#skill-pre-prod-check"><code>/pre-prod-check</code></a> and the Tech Lead’s sign-off. The harness stops at release readiness, so plan rollout and recovery as described above. <a href="eds-path-to-production.html">Follow the path to production</a>.</td></tr>
-            <tr><th scope="row">Learn (4.6)</th><td>Harness diagnosis turns execution failures into factory corrections. Product learning follows the Learn stage above. <a href="eds-ai-workflow.html#harness">Diagnose failures</a>.</td></tr>
-            <tr><th scope="row">Context (3.3)</th><td>Standards in indexed files, mapped to each story, with different sources loaded at each stage. <a href="eds-team-context.html">Add team context</a>.</td></tr>
-            <tr><th scope="row">Autonomy (7)</th><td>Three execution modes: local interactive, local autonomous, and cloud or CI autonomous. <a href="eds-developer-harness.html#modes">Choose a mode</a>.</td></tr>
-            <tr><th scope="row">Measures (8)</th><td>Harness health measures, such as verified completion rate, complement the delivery and product measures above. <a href="eds-ai-workflow.html#workflow-health">Measure workflow health</a>.</td></tr>
-          </tbody></table></div>
-          <h3>Check pilot readiness</h3>
-          <p>The playbook lists what a team needs before piloting the operating model. A team is ready when:</p>
-          <ul>
-            <li>the PRD contains testable user stories, acceptance criteria, non-functional requirements and exclusions;</li>
-            <li>the <code>design.md</code> file and HTML screens cover core journeys and their loading, empty, error, permission, accessibility and responsive states;</li>
-            <li>architecture, business, domain, policy, security and technical context is versioned, owned, accessible and current;</li>
-            <li>work can be sliced into small tasks with dependencies, risk, verification commands, completion evidence and traceability;</li>
-            <li>build agents run in constrained environments and cannot silently bypass repository, review or pipeline protections; and</li>
-            <li>end-to-end tests are derived from user stories and keep reproducible evidence for critical journeys.</li>
-          </ul>
-          <p>The EDS <a href="eds-team-context.html#checklist">team context checklist</a> and <a href="eds-developer-harness.html#install">harness installation</a> cover the tooling side of these checks: tracker, standards, repository conventions, context sources and architecture tests.</p>
-          <p class="next-step"><strong>Next step:</strong> go through the pilot readiness list with your squad and note each item you cannot yet confirm. Then <a href="eds-ai-workflow.html">read the EDS AI Workflow overview</a> and complete its team setup.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[1]</a> sections 9 and 9.1; <a href="#source-2" aria-label="Source 2: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[2]</a>.</p>
+          <h2>Continue with the EDS AI Workflow</h2>
+          <p>For the steps, roles, skills and checks used by EDS teams, <a href="eds-ai-workflow.html">read the EDS AI Workflow (Eitri) guide</a>.</p>
         </section>
 
         <section id="sources">
           <h2>Sources</h2>
           <ol class="source-list">
-            <li id="source-1"><cite>EDS AI-SDLC Playbook, Chapter 3: Product Implementation</cite> — <strong>Private</strong> (not available online).</li>
-            <li id="source-2"><cite>Product Development Journey &amp; Workflow Harness (EDS harness documentation)</cite> — <strong>Private</strong> (not available online).</li>
-            <li id="source-3"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
-            <li id="source-4"><a href="https://sre.google/workbook/canarying-releases/">Google SRE Workbook, Canarying Releases</a></li>
-            <li id="source-5"><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Anthropic, Demystifying evals for AI agents</a></li>
-            <li id="source-6"><a href="https://dora.dev/guides/dora-metrics/">DORA, Software delivery performance metrics</a></li>
+            <li id="source-1"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
+            <li id="source-2"><a href="https://sre.google/workbook/canarying-releases/">Google SRE Workbook, Canarying Releases</a></li>
+            <li id="source-3"><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Anthropic, Demystifying evals for AI agents</a></li>
+            <li id="source-4"><a href="https://dora.dev/guides/dora-metrics/">DORA, Software delivery performance metrics</a></li>
           </ol>
         </section>
 
@@ -341,7 +313,7 @@
         <a href="#factory-platform">Factory platform</a>
         <a href="#autonomy">Autonomy</a>
         <a href="#measure-loop">Measure the loop</a>
-        <a href="#eds-workflow">Use the EDS AI Workflow (Eitri)</a>
+        <a href="eds-ai-workflow.html">EDS AI Workflow (Eitri)</a>
         <a href="#sources">Sources</a>
       </nav>
     </aside>

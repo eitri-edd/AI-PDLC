@@ -37,7 +37,6 @@
             <a href="eds-team-context.html">Team context</a>
             <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
-          <a href="glossary.html">Glossary</a>
           <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -52,20 +51,20 @@
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
-          <p id="page-map-note" class="page-map-note">Find the guidance for your task, see who it is for, and learn how AI can support software development.</p>
-          
+          <p id="page-map-note" class="page-map-note">Find guidance for your development task. Learn how AI can help EDS teams test ideas early, compare options and make decisions from evidence.</p>
+
           <ol class="page-map-nodes" role="list">
-            <li class="page-map-node"><strong>Choose your task</strong><div class="page-map-links"><a href="#choose-task">Find the right guidance</a></div></li>
-            <li class="page-map-node"><strong>Know the audience</strong><div class="page-map-links"><a href="#target-audience">Who this guide is for</a></div></li>
-            <li class="page-map-node"><strong>Understand the benefits</strong><div class="page-map-links"><a href="#why-ai-pdlc">Feedback, teamwork and quality</a></div></li>
-            <li class="page-map-node"><strong>Use the guide</strong><div class="page-map-links"><a href="#evergreen-guide">Apply the guidance in daily work</a></div></li>
+            <li class="page-map-node"><strong>Development guides</strong><div class="page-map-links"><a href="#choose-task">Find the right guide</a></div></li>
+            <li class="page-map-node"><strong>EDS development teams</strong><div class="page-map-links"><a href="#target-audience">Who this guide is for</a></div></li>
+            <li class="page-map-node"><strong>Learn and decide sooner</strong><div class="page-map-links"><a href="#why-ai-pdlc">Test ideas and review evidence</a></div></li>
+            <li class="page-map-node"><strong>Use it in daily work</strong><div class="page-map-links"><a href="#evergreen-guide">Start with a small experiment</a></div></li>
           </ol>
-          
+
         </figure>
         <!-- PAGE MAP END -->
         <details class="mobile-contents">
           <summary>On this page</summary>
-          <nav aria-label="On this page"><a href="#choose-task">Choose your task</a><a href="#target-audience">Target audience</a><a href="#why-ai-pdlc">Why AI-SDLC?</a><a href="#evergreen-guide">An evergreen development guide</a><a href="#sources">Sources</a></nav>
+          <nav aria-label="On this page"><a href="#choose-task">Find the right guide</a><a href="#target-audience">Target audience</a><a href="#why-ai-pdlc">Why AI-SDLC?</a><a href="#evergreen-guide">An evergreen development guide</a></nav>
         </details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -73,12 +72,12 @@
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
           </defs>
         </svg>
-        <section id="choose-task" class="task-entry"><h2>Choose your task</h2><ul>
+        <section id="choose-task" class="task-entry"><h2>Find the right guide</h2><p>Use these guides to understand the lifecycle, define requirements, build changes and prepare for release.</p><ul>
 <li><a href="ai-pdlc.html">Understand the lifecycle</a><span>See how ideation, implementation and feedback connect.</span></li>
-<li><a href="eds-po-ba-harness.html#choose-path">Define requirements as a PO or BA</a><span>Choose a path and prepare the handoff.</span></li>
-<li><a href="eds-developer-harness.html#steps">Build an agreed change</a><span>Find the developer steps and human decisions.</span></li>
-<li><a href="eds-path-to-production.html#stages">Review release readiness</a><span>Locate pipeline checks and their blocking behaviour.</span></li>
-<li><a href="eds-skills-catalogue.html">Find a skill</a><span>Look up its purpose, availability and arguments.</span></li></ul></section>
+<li><a href="eds-po-ba-harness.html#choose-path">Define product requirements</a><span>Prepare requirements and hand them over to developers.</span></li>
+<li><a href="eds-developer-harness.html#steps">Develop and test a change</a><span>Follow the steps to plan, build and verify a change.</span></li>
+<li><a href="eds-path-to-production.html#stages">Review release readiness</a><span>See which pipeline checks must pass before release.</span></li>
+<li><a href="eds-skills-catalogue.html">Find a skill</a><span>Check what each skill does, whether it is available and how to use it.</span></li></ul></section>
 <section id="target-audience">
           <h2>Target audience</h2>
           <p>This guide is for <strong>in-house development squads within EDS</strong>. It gives developers a shared reference for using AI to understand problems, explore solutions, build software and check outcomes.</p>
@@ -116,50 +115,52 @@
   </figure>
           <p>Work passes from opportunity to requirements, design, build, test, approval and launch before the team learns from users. Each arrow is a handoff where work can wait, lose context or be reinterpreted. The dashed path shows that evidence from users returns only after most of the effort has been spent.</p>
           <p>Agile, DevOps, continuous delivery and design thinking improved this model through smaller batches and faster feedback. Much of the work is still limited by specialist capacity, handoffs and the cost of changing direction.</p>
-          <p>AI changes that balance. Research, prototyping, testing and parts of implementation can be produced faster and at lower cost, giving people more capacity to frame problems, assess evidence and make decisions. AI-SDLC uses this shift to pursue <strong>faster validated learning</strong>: testing assumptions early and using the results to solve user problems sooner.</p>
+          <p>AI can help teams draft requirements, build prototypes, write code and run checks with less manual effort. AI-SDLC brings these capabilities into the whole development workflow, with people setting goals, reviewing evidence and deciding what to release. The aim is <strong>faster validated learning</strong>: testing assumptions early and using the results to decide what to build or change.</p>
           <ol class="key-pointers">
             <li><div>
-              <h3>Reduce the hidden cost of coordination</h3>
-              <p>Much of the elapsed time in product development accumulates between activities rather than within them. A designer waits for clarification, engineering waits for design and security waits for architecture. When specialists engage one after another, their concerns surface after work has already been built on the assumptions they would have challenged.</p>
-              <p>Involve product, engineering, security and other relevant specialists early, and keep feedback flowing throughout development.</p>
+              <h3>Reduce delays between specialists</h3>
+              <p>Work can stall while a designer waits for clarification, a developer waits for design or a security reviewer waits for architecture. AI can turn shared requirements into draft screens, test cases and questions for security review, giving specialists material to review together earlier.</p>
+              <p>Give the AI tool the same requirements, constraints and recorded decisions that the team uses. Product, engineering and security specialists review the drafts, resolve conflicting assumptions and record decisions before dependent work proceeds.</p>
             </div></li>
             <li><div>
-              <h3>Learn before the cost of change grows</h3>
-              <p>The larger cost is often not building something, but changing direction after it is built. If a team tests a hypothesis in two days and finds that users do not value the solution, it has learned cheaply. The same finding after months of design, build and release preparation means far more work to reconsider.</p>
-              <p>Test the riskiest assumptions with small experiments before committing substantial effort. Judge an approach by the cost of gaining useful evidence, as well as the cost of building.</p>
+              <h3>Test assumptions before committing</h3>
+              <p>Finding that users do not need a solution after months of development can mean substantial rework. AI can help build a small prototype and draft test tasks, reducing the effort needed to put an idea in front of users.</p>
+              <p>Choose an assumption that could change the product decision, then test it with users before building the full solution. Use AI to organise the findings, check the summary against the original observations and decide whether to continue, revise or stop.</p>
             </div></li>
             <li><div>
               <h3>Explore more options before choosing</h3>
-              <p>When each extra option costs scarce specialist time, teams narrow early: ten ideas become one design before anyone has tested them. AI can reduce the effort of researching alternatives, drafting designs, building prototypes and running tests.</p>
-              <p>Generate several options, compare them and combine the strongest elements before committing. The aim is not speed for its own sake, but more evidence before decisions that are hard to reverse.</p>
+              <p>When each alternative takes substantial effort to produce, teams may settle on the first plausible design. AI can draft several interface designs or implementation approaches from the same requirements, making alternatives easier to compare.</p>
+              <p>Ask for options with different trade-offs, then test them against the same user needs, constraints and success criteria. Designers and engineers review feasibility and test results before selecting an approach or combining useful parts.</p>
             </div></li>
             <li><div>
-              <h3>Make rebuilding a practical option</h3>
-              <p>When creating another implementation takes less effort, replacing an unsuitable one becomes a reasonable choice rather than a failure. Aim to discover the right implementation quickly, instead of trying to get the first one right. Keep a solution because evidence supports it, not because it was expensive to produce.</p>
+              <h3>Revise or replace unsuitable code</h3>
+              <p>Teams can spend more effort patching an unsuitable implementation than trying a different approach. An AI agent can help rewrite a small component and run its regression tests, reducing the manual effort of comparing a replacement.</p>
+              <p>Give the agent the required behaviour, interface contracts and tests that the replacement needs to pass. Developers review the changes and test results, then decide whether the replacement improves the solution enough to justify switching.</p>
               <aside class="callout" aria-label="Note on decisions that remain costly to reverse">
                 <p class="example-label">Note</p>
                 <p>Some decisions remain costly to reverse: core data models, public APIs, regulatory commitments, major architecture choices, vendor dependencies, user migrations and security models. Make these deliberately, with human judgement.</p>
               </aside>
             </div></li>
             <li><div>
-              <h3>Improve delivery across the whole lifecycle</h3>
-              <p>Faster individual tasks do not automatically make delivery faster. If the rest of the workflow stays the same, the queue moves to the next constraint.</p>
+              <h3>Improve the whole delivery workflow</h3>
+              <p>AI can produce requirements, code and prototypes faster than the team can review them. If review, testing and user feedback cannot keep pace, work accumulates at the next step and delivery still waits.</p>
               <div class="table-scroll">
                 <table>
                   <caption>Illustrative examples of how faster tasks can move the bottleneck</caption>
                   <thead><tr><th scope="col">Faster task</th><th scope="col">If the rest stays the same</th><th scope="col">Likely result</th></tr></thead>
                   <tbody>
-                    <tr><td>Product requests are drafted faster</td><td>Engineering capacity is unchanged</td><td>The engineering queue grows</td></tr>
-                    <tr><td>Code is written faster</td><td>Security review remains manual</td><td>Security review becomes the bottleneck</td></tr>
-                    <tr><td>Prototypes are quick to build</td><td>User validation still takes months</td><td>End-to-end learning barely improves</td></tr>
+                    <tr><td>AI drafts more product requests</td><td>Engineering capacity is unchanged</td><td>The engineering queue can grow</td></tr>
+                    <tr><td>AI helps developers write code faster</td><td>Security review capacity is unchanged</td><td>Changes can queue for security review</td></tr>
+                    <tr><td>AI helps build prototypes faster</td><td>User testing still takes months to arrange</td><td>The team still waits to learn whether the solution helps</td></tr>
                   </tbody>
                 </table>
               </div>
-              <p>Adapt reviews, approvals and feedback loops alongside individual productivity, so that comparing, approving and revising work can keep pace with generation.</p>
+              <p>An agent harness provides instructions, tools and checks for AI to carry out tasks. Use it to connect development work with automated tests, policy checks and review steps.</p>
+              <p>Track where work waits, arrange user testing early and improve the slowest step before increasing the volume of generated work.</p>
             </div></li>
             <li><div>
-              <h3>Make evaluation a continuous activity</h3>
-              <p>When generation becomes cheap, evaluation can become a constraint. Producing more options helps only if the team can decide which of them are useful.</p>
+              <h3>Check AI outputs as work progresses</h3>
+              <p>AI can generate code, designs and tests in large volumes, increasing the amount of work that needs checking. An agent harness can run tests and scanners after each change, giving developers feedback while the work is still easy to revise.</p>
               <figure class="concept-figure" id="fig-evaluate">
   <figcaption id="fig-evaluate-title-caption">Figure 2. Test results determine whether an option is ready to select.</figcaption>
   <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Generate options and assess them against agreed criteria; assessment is a potential bottleneck.</li><li>Discard weaker options or combine useful parts and test the result.</li><li>Pass: choose what to build. Fail: return the evidence to assessment and revise or discard the option.</li></ol></details>
@@ -168,12 +169,13 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights assessment.</p>
   </details>
 </figure>
-              <p>A failed test is evidence to reassess an option, not a reason to select it. Allow time and people to review results alongside the capacity to generate alternatives.</p>
-              <p>Evaluate usefulness and quality as work is created, rather than only at final testing. People frame the problem, weigh the evidence and remain accountable for decisions while AI carries out more of the execution.</p>
+              <p>Define the expected behaviour and checks before the agent starts. When a check fails, use the result to correct the work or reconsider the approach.</p>
+              <p>Developers review generated tests against the requirements, and relevant specialists assess usability, security and other areas that need judgement. Keep the results with the change so reviewers can see why it is ready to proceed.</p>
             </div></li>
             <li><div>
-              <h3>Measure how quickly uncertainty becomes evidence</h3>
-              <p>Features delivered, story points, releases and lines of code describe activity; they do not show whether the team has learned anything or created value. As AI makes output easier to generate, these measures become less informative. A better question is: how quickly can the team turn uncertainty into evidence?</p>
+              <h3>Measure time to an informed decision</h3>
+              <p>AI can increase the number of prototypes, tests and code changes a team produces. Those counts alone do not show whether the team has resolved an important uncertainty or improved an outcome for users.</p>
+              <p>Track the time and cost of testing an assumption and reaching a decision. Compare AI-assisted work with the team's previous approach, including the effort spent reviewing, correcting and testing generated outputs.</p>
               <figure class="concept-figure" id="fig-loop">
   <figcaption id="fig-loop-title-caption">Figure 3. Measure the time and cost of turning a hypothesis into a decision.</figcaption>
   <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>State a hypothesis and run an experiment.</li><li>Collect evidence and make a decision.</li><li>Feedback: use the decision to refine the next hypothesis and repeat.</li></ol></details>
@@ -195,8 +197,8 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the learning cycle.</p>
   </details>
   </figure>
-<aside class="example" aria-label="Illustrative learning decision"><p><strong>Example:</strong> hypothesise that a clearer upload flow lets at least 8 of 10 pilot users submit the right document unaided, with no wrong-recipient uploads. Test on a prototype. If the agreed threshold is met, commit to a bounded implementation; otherwise revise the flow or stop, and record the evidence. This is an illustrative threshold, not a policy.</p></aside>
-              <p>The loop runs from hypothesis to experiment, from experiment to evidence and from evidence to a decision, which informs the next hypothesis. Shorten each turn by lowering the cost of experiments, coordination and changing direction, and by responding sooner to user feedback.</p>
+<aside class="example" aria-label="Illustrative learning decision"><p><strong>Example:</strong> use AI to build a prototype of a clearer upload flow. Test whether at least 8 of 10 pilot users can submit the right document unaided, with no wrong-recipient uploads. Record the preparation, review and testing effort alongside the results. If the agreed threshold is met, commit to a bounded implementation; otherwise revise the flow or stop.</p></aside>
+              <p>Use each decision to choose the next experiment. Check whether AI is helping the team reach useful decisions sooner and whether the resulting changes improve users' experience.</p>
             </div></li>
           </ol>
         </section>
@@ -212,22 +214,16 @@
           </div>
         </section>
 
-        <section id="sources">
-          <h2>Sources</h2>
-          <ol class="source-list">
-            <li id="source-1"><cite>EDS AI-SDLC Playbook, Chapter 0: Why Product Development Must Change</cite> — <strong>Private</strong> (not available online).</li>
-          </ol>
-        </section>
 
       </article>
     </main>
     <aside class="page-contents">
       <nav aria-label="On this page">
         <p>On this page</p>
-        <a href="#choose-task">Choose your task</a><a href="#target-audience">Target audience</a>
+        <a href="#choose-task">Find the right guide</a><a href="#target-audience">Target audience</a>
         <a href="#why-ai-pdlc">Why AI-SDLC?</a>
         <a href="#evergreen-guide">An evergreen development guide</a>
-        <a href="#sources">Sources</a>
+
       </nav>
     </aside>
   </div>

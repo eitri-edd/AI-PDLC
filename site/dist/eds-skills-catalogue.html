@@ -48,8 +48,7 @@
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>Skills catalogue</h1>
 <p class="lead">This catalogue lists the skills in the EDS AI Workflow (Eitri) and the Matt Pocock base set it builds on: what each does, who maintains it and whether it is available. Use it to look up a skill named on the other pages.</p>
-          <p>A skill is a packaged set of instructions that an AI agent runs for one task. Two guide skills help a team find the right one: <code>/ask-workflow</code> covers the PO/BA and developer harnesses, and <code>/ask-matt</code> covers Matt Pocock’s skills. Each skill’s arguments and flags are listed in the harness documentation <a href="#source-1" aria-label="Source 1: Skills Catalogue (EDS harness documentation)">[1]</a>.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-12">12 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+          <p>A skill is a packaged set of instructions that an AI agent runs for one task. Two guide skills help a team find the right one: <code>/ask-workflow</code> covers the PO/BA and developer harnesses, and <code>/ask-matt</code> covers Matt Pocock’s skills.</p>
         </header>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#conventions">Reading the catalogue</a>
@@ -65,7 +64,7 @@
             <a href="#mcp">MCP integrations</a>
             <a href="#path-to-production">Path to production</a>
             <a href="#additional">Additional skills</a>
-            <a href="#sources">Sources</a>
+
         </nav></details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -75,9 +74,8 @@
         </svg>
 <section id="conventions">
           <h2>Read the catalogue</h2>
-          <p>Each table names the skill, who maintains it, its status and what it does. <strong>Maintained by</strong> gives the author named in the harness documentation: “CoreX EDS team” marks an EDS add-on skill. Where a skill wraps a tool from outside EDS, the tool is linked. Step and gate numbers refer to the <a href="eds-developer-harness.html">Developer harness page</a>.</p>
+          <p>Each table names the skill, who maintains it, its status and what it does. <strong>Maintained by</strong> identifies the skill’s maintainer: “CoreX EDS team” marks an EDS add-on skill. Where a skill wraps a tool from outside EDS, the tool is linked. Step and gate numbers refer to the <a href="eds-developer-harness.html">Developer harness page</a>.</p>
           <aside class="status-key" aria-label="Labels used on this page"><p>Labels on this page</p><dl><div><dt><span class="status">Available</span></dt><dd>Ready to use.</dd></div><div><dt><span class="status status-planned">Planned</span></dt><dd>In development and not yet available. Do not count on it as a control.</dd></div></dl></aside>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Skills Catalogue (EDS harness documentation)">[1]</a> introduction.</p>
         </section>
 
         <section id="groups">
@@ -132,7 +130,6 @@
             <tr><th scope="row"><code>/code-review</code></th><td><span class="status">Available</span></td><td>Reviews a change against coding standards and against the specification, in two independent reviews. Step 15 and Gate 2.</td></tr>
             <tr><th scope="row"><code>/diagnosing-bugs</code></th><td><span class="status">Available</span></td><td>A structured diagnosis method for hard bugs and performance regressions. Step 16.</td></tr>
           </tbody></table></div>
-          <p><code>/grill-me</code> and <code>/grill-with-docs</code> are used in the workflow steps but are not listed in the harness documentation’s own catalogue.</p>
         </section>
 
         <section id="frontend">
@@ -228,16 +225,8 @@
             <tr><th scope="row"><code>/update-standards</code></th><td>CoreX EDS team</td><td><span class="status status-planned">Planned</span></td><td>Will review standards documents against current best practice and technology versions, apply only approved changes and keep an audit trail.</td></tr>
           </tbody></table></div>
           <p class="next-step"><strong>Next step:</strong> to see where a skill sits in the workflow, <a href="eds-developer-harness.html">open the Developer harness</a> or <a href="eds-path-to-production.html">Path to production</a>. To see the whole route first, <a href="eds-ai-workflow.html">return to the overview</a>.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Skills Catalogue (EDS harness documentation)">[1]</a>; <a href="#source-2" aria-label="Source 2: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[2]</a> sections 2.1 and 2.2 for <code>/grill-me</code> and <code>/grill-with-docs</code>.</p>
         </section>
 
-        <section id="sources">
-          <h2>Sources</h2>
-          <ol class="source-list">
-            <li id="source-1"><cite>Skills Catalogue (EDS harness documentation)</cite></li>
-            <li id="source-2"><cite>Product Development Journey &amp; Workflow Harness (EDS harness documentation)</cite></li>
-          </ol>
-        </section>
         <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -255,7 +244,7 @@
             <a href="#mcp">MCP integrations</a>
             <a href="#path-to-production">Path to production</a>
             <a href="#additional">Additional skills</a>
-            <a href="#sources">Sources</a>
+
     </nav></aside>
   </div>
 </body>

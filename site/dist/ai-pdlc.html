@@ -37,7 +37,6 @@
             <a href="eds-team-context.html">Team context</a>
             <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
-          <a href="glossary.html">Glossary</a>
           <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
@@ -48,20 +47,20 @@
         <header class="article-header">
           <h1>EDS AI-SDLC</h1>
           <p class="lead">The EDS AI-Software Development Lifecycle (AI-SDLC) connects product discovery with software delivery. Teams use AI to investigate user needs, define requirements, build and test software, and learn from use.</p>
-          <p>In this guide, product ideation covers discovery and product implementation covers delivery. Teams revisit discovery and delivery as they test assumptions, review results and respond to feedback. The practices are recommendations adapted from the EDS playbook.</p>
+          <p>In this guide, product ideation covers discovery and product implementation covers delivery. Teams revisit discovery and delivery as they test assumptions, review results and respond to feedback.</p>
         </header>
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
           <p id="page-map-note" class="page-map-note">See how product discovery connects to software delivery, what the team hands over, and how feedback informs the next change.</p>
-          
+
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>Product discovery</strong><div class="page-map-links"><a href="#two-loops">Discovery and delivery</a><a href="#ideation-loop">Understand needs and test ideas</a></div></li>
             <li class="page-map-node"><strong>Requirements handover</strong><div class="page-map-links"><a href="#handoff">Requirements, designs and acceptance criteria</a></div></li>
             <li class="page-map-node"><strong>Software delivery</strong><div class="page-map-links"><a href="#implementation-loop">Develop, test and release</a></div></li>
             <li class="page-map-node"><strong>Feedback and improvement</strong><div class="page-map-links"><a href="#feedback">User feedback and defect reports</a><a href="#ai-support">AI assistance and quality checks</a></div></li>
           </ol>
-          
+
         </figure>
         <!-- PAGE MAP END -->
         <details class="mobile-contents">
@@ -83,7 +82,7 @@
 
         <section id="two-loops">
           <h2>Two loops joined by a handoff</h2>
-          <p>The supplied playbook describes two connected learning loops within the AI-Software Development Lifecycle (AI-SDLC). Product ideation is about making the right product: it asks whether the problem is worth solving and whether the proposed solution solves it. Product implementation is about making the product right: it turns validated intent into reliable production behaviour. Each loop has its own work, evidence and decisions.</p><p>The handoff centres on a product requirements document (PRD), supported by user interface (UI) artefacts where relevant and current organisational context.</p><p>The diagram summarises the relationship between the loops; it does not prescribe a one-way sequence.</p>
+          <p>The AI-Software Development Lifecycle (AI-SDLC) connects two learning loops. Product ideation is about making the right product: it asks whether the problem is worth solving and whether the proposed solution solves it. Product implementation is about making the product right: it turns validated intent into reliable production behaviour. Each loop has its own work, evidence and decisions.</p><p>The handoff centres on a product requirements document (PRD), supported by user interface (UI) artefacts where relevant and current organisational context.</p><p>The diagram shows how the loops connect and feed learning back into each other.</p>
           <figure class="concept-figure" id="fig-loops">
   <figcaption id="fig-loops-title-caption">Figure 1. Value feedback returns to ideation; defects return to implementation.</figcaption>
   <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Ideation tests assumptions and repeats until evidence supports a bounded commitment.</li><li>Handoff contains the PRD and, where there is a UI, relevant UI artefacts. Organisational context is a separate implementation input.</li><li>Implementation plans, slices, builds and verifies the increment, then releases it for use.</li><li>Feedback from use follows two routes: defects return to implementation; questions about value or intended behaviour return to ideation.</li></ol></details>
@@ -101,9 +100,9 @@
             <tr><th scope="row">Each pass ends with</th><td>Improve, redesign, pivot or stop; or hand off when ready</td><td>An accepted increment or rework decision; release evidence informs the next refinement</td></tr>
             <tr><th scope="row">What it improves</th><td>The product intent</td><td>The product and the way the team builds it</td></tr>
           </tbody></table></div>
-          <p>Explore each loop below, then follow its detailed guidance. Whoever holds decision authority for commitment should be named locally; this guide does not assign it.</p>
-          <p>The Defence Product Playbook, jointly developed by MINDEF and DSTA, describes a comparable shape for product work. Its ProductOps flywheel runs Research as an outer loop and Design and Test as a fast inner loop. Each turn produces reference artefacts that DevSecOps teams act on concurrently, instead of a locked design handed off once. Read the handoff below in that spirit: it is a working agreement that the loops revisit, not a one-time transfer. The comparison is this guide’s own; the playbook does not describe the AI-SDLC loops.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 2: Product Ideation">[1]</a>; <a href="#source-2" aria-label="Source 2: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[2]</a>; <a href="#source-5" aria-label="Source 5: MINDEF and DSTA, The Defence Product Playbook">[5]</a> “Tools to use”.</p>
+          <p>Explore each loop below, then follow its detailed guidance.</p>
+          <p>The Defence Product Playbook, jointly developed by MINDEF and DSTA, describes a comparable shape for product work. Its ProductOps flywheel runs Research as an outer loop and Design and Test as a fast inner loop. Each turn produces reference artefacts that DevSecOps teams act on concurrently, instead of a locked design handed off once. Read the handoff below in that spirit: it is a working agreement that the loops revisit, not a one-time transfer.</p>
+          <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a> “Tools to use”.</p>
         </section>
 <section id="ideation-loop">
   <h2>Product ideation loop</h2>
@@ -111,7 +110,7 @@
   <p>Move through a product thesis, exploration, challenge, specification, prototyping, measurement, learning and a decision. Repeat the work needed to test the riskiest assumption. A decision can improve the current approach, redesign the solution, pivot to another opportunity or stop the work.</p>
   <p>The output is evidence-backed product intent: the problem, expected outcomes, required behaviour and the reasons for choosing them. A commitment decision moves a bounded scope into implementation; a polished prototype alone does not establish readiness.</p>
   <p><a href="product-ideation.html">Explore product ideation: thesis, experiments and decisions</a>.</p>
-  <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 2: Product Ideation">[1]</a> “From Opportunity to Validated Product Intent” and “Handover to Product Implementation”.</p>
+
 </section>
 <section id="handoff">
           <h2>Handoff between the loops</h2>
@@ -129,7 +128,7 @@
             <li><strong>Evidence and decision record:</strong> tested assumptions, methods, results, limitations, source links and the authorised commitment decision.</li>
             <li><strong>Owned ambiguity:</strong> open decisions, assumptions, exclusions and deliberate implementation freedoms, each with an owner rather than left silently unclear.</li>
           </ul>
-          <p>Bring current organisational context into the readiness review: architecture, domain, security, data and operational constraints. Chapter 3 identifies this context alongside the PRD and UI artefacts as the implementation input.</p><h3>Check readiness</h3>
+          <p>Bring current organisational context into the readiness review: architecture, domain, security, data and operational constraints. Review this context alongside the PRD and UI artefacts before implementation begins.</p><h3>Check readiness</h3>
           <p>Hand over when:</p>
           <ol class="practice-steps">
             <li>the highest-risk product assumptions have been tested;</li>
@@ -143,8 +142,8 @@
             <p>After three prototype rounds, the service desk squad’s assistant passes its task-success threshold for password and access requests but not for software requests. The product owner narrows the scope to access requests, records software requests as an exclusion with an owner, and hands over a PRD with acceptance criteria for correct, incomplete and unauthorised requests.</p>
           </aside>
           <div class="next-step"><p><strong>Next step:</strong> compare your current PRD with the handover package and readiness checks above, and list the gaps. <a href="product-implementation.html#implementable-definition">Read how implementation starts from the PRD and UI artefacts</a>, or <a href="concept.html#intent-driven-development">read about intent-driven development</a> for ways to record intent and open questions.</p></div>
-        <p>These are playbook recommendations; confirm decision authority locally.</p>
-        <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: EDS AI-SDLC Playbook, Chapter 2: Product Ideation">[1]</a> “Handover to Product Implementation”; <a href="#source-2" aria-label="Source 2: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[2]</a> “Start with an Implementable Definition”.</p>
+
+
       </section>
 <section id="implementation-loop">
   <h2>Product implementation loop</h2>
@@ -152,7 +151,7 @@
   <p>The six stages are Plan, Slice, Implement, Verify, Release and observe, and Learn. Verification can return a change for rework. Release evidence informs the next refinement; findings can also reopen earlier product or technical decisions.</p>
   <p>Each pass improves the product and the way it is built. A defect may need both a code correction and a change to context, tests or review practice to reduce recurrence.</p>
   <p><a href="product-implementation.html#six-stages">Explore implementation: stage inputs, evidence and exit decisions</a>.</p>
-  <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[2]</a> “Run the Six-Stage Product Implementation Loop” and “The loop improves two systems”.</p>
+
 </section>
 <section id="feedback">
   <h2>Feed evidence back into the right loop</h2>
@@ -162,7 +161,7 @@
     <li><strong>The product works as specified but users do not benefit:</strong> revisit ideation to test the problem, experience or value assumptions.</li>
     <li><strong>The same delivery failure recurs:</strong> improve the relevant context, tools, tests or review process and check the next increment.</li>
   </ul>
-  <p>These routing recommendations apply the feedback principles in Chapters 2 and 3. For a well-understood defect, a bounded issue with acceptance criteria may be enough; the team need not repeat every ideation activity.</p>
+  <p>Route feedback according to whether it concerns product value or implementation quality. For a well-understood defect, a bounded issue with acceptance criteria may be enough; the team need not repeat every ideation activity.</p>
   <p>DORA recommends making user feedback available to the team and displaying user measures alongside technical measures. Use that evidence to revisit priorities, rather than treating faster output as proof of value.</p>
   <h3>Diagnose a value measure that stops improving</h3>
   <p>A stalled measure does not mean the team has failed, but something is holding it back. The Defence Product Playbook suggests finding the cause before changing the plan.</p>
@@ -174,7 +173,7 @@
     <tr><th scope="row">The team cannot move fast</th><td>The team is active but slow or unfocused</td><td>Review its structure, skills and delivery process</td></tr>
   </tbody></table></div>
   <p>A measure that climbs and then flattens may mean the product has delivered the value available to it. Consider moving the product to maintenance and investing in a problem that can still move.</p>
-  <p class="source-ref">Sources: <a href="#source-3" aria-label="Source 3: DORA, User-centric focus">[3]</a>; <a href="#source-5" aria-label="Source 5: MINDEF and DSTA, The Defence Product Playbook">[5]</a> “Define the problem, measure the value” and “Govern and review”.</p>
+  <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: DORA, User-centric focus">[1]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a> “Define the problem, measure the value” and “Govern and review”.</p>
 </section>
 <section id="ai-support">
   <h2>Use AI across the lifecycle</h2>
@@ -190,16 +189,14 @@
   </ol>
   <p>The playbook’s point is that quality is built in at the first layer, not caught at the scan. Defects found only at the scan gate are found late and at greater cost. <a href="product-implementation.html#gates-and-assurance">Read how implementation applies gates and independent assurance</a>.</p>
   <div class="next-step"><p><strong>Next step:</strong> use <a href="product-ideation.html">product ideation</a> to resolve an uncertain opportunity, or <a href="product-implementation.html">product implementation</a> to deliver an agreed change.</p></div>
-  <p class="source-ref">Sources: <a href="#source-4" aria-label="Source 4: McKinsey, How an AI-enabled software product development life cycle will fuel innovation">[4]</a>; <a href="#source-5" aria-label="Source 5: MINDEF and DSTA, The Defence Product Playbook">[5]</a> “Tools to use”.</p>
+  <p class="source-ref">Sources: <a href="#source-2" aria-label="Source 2: McKinsey, How an AI-enabled software product development life cycle will fuel innovation">[2]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a> “Tools to use”.</p>
 </section>
 <section id="sources">
   <h2>Sources</h2>
   <ol class="source-list">
-    <li id="source-1"><cite>EDS AI-SDLC Playbook, Chapter 2: Product Ideation</cite> — <strong>Private</strong> (not available online).</li>
-    <li id="source-2"><cite>EDS AI-SDLC Playbook, Chapter 3: Product Implementation</cite> — <strong>Private</strong> (not available online).</li>
-    <li id="source-3"><a href="https://dora.dev/capabilities/user-centric-focus/">DORA, User-centric focus</a></li>
-    <li id="source-4"><a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation">McKinsey, How an AI-enabled software product development life cycle will fuel innovation</a></li>
-    <li id="source-5"><a href="https://defence-pp.vercel.app/#/home">MINDEF and DSTA, The Defence Product Playbook, version 1.0</a></li>
+    <li id="source-1"><a href="https://dora.dev/capabilities/user-centric-focus/">DORA, User-centric focus</a></li>
+    <li id="source-2"><a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation">McKinsey, How an AI-enabled software product development life cycle will fuel innovation</a></li>
+    <li id="source-3"><a href="https://defence-pp.vercel.app/#/home">MINDEF and DSTA, The Defence Product Playbook, version 1.0</a></li>
   </ol>
 </section>
 

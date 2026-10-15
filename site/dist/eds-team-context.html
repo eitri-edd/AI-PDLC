@@ -49,7 +49,6 @@
           <h1>Add your team’s context</h1>
 <p class="lead">The harness behaves correctly only if it can see a team’s business domain, standards, policies and conventions at the right moment. This page shows where each kind of context enters the PO/BA and developer harnesses, and how a team adds its own.</p>
           <p>For how to organise instructions so an agent loads only what it needs, <a href="eds-ai-workflow.html#context-practice">read Give agents the right context</a>. Exact file names, registry entries and environment settings are in the harness repository.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-12">12 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#matrix">Context by stage</a>
@@ -59,7 +58,7 @@
             <a href="#policies">Policies</a>
             <a href="#review-rules">Review rules</a>
             <a href="#checklist">Quick-start checklist</a>
-            <a href="#sources">Sources</a>
+
         </nav></details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -77,7 +76,6 @@
             <tr><th scope="row">4. Implementation</th><td>Coding practices, framework guides, API reference documentation</td><td>The build loop, through a knowledge-base query</td><td>Gives the agent syntax, language features and library patterns, so code passes type checks, builds and tests.</td></tr>
             <tr><th scope="row">5. Merge review</th><td>Repository style, conventions and lint expectations</td><td>The code review against the repository’s coding standards</td><td>Keeps changes consistent with the team’s style, naming rules and codebase conventions before merging.</td></tr>
           </tbody></table></div>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> context ingestion matrix.</p>
         </section>
 
         <section id="domain">
@@ -89,7 +87,6 @@
             <li><strong>Path 3, CLARA:</strong> the team places its domain documentation in the Confluence spaces or knowledge bases that CLARA queries, so personas, journey maps and specifications reflect the business.</li>
           </ul>
           <p>Whichever path is used, the committed specification files carry the domain context into the developer harness as the source-of-truth handoff.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> section 1.</p>
         </section>
 
         <section id="standards">
@@ -98,14 +95,12 @@
           <p>AppStandards uses the <a href="https://okf.md">Open Knowledge Format (OKF)</a>, which stores documentation as a version-controlled graph of Markdown concepts. Each folder has a catalogue of its contents, and each standard is split into focused files holding rules, code recipes and questions for challenging a design.</p>
           <p>The harness maps every user story to the few standards it needs, such as multi-factor authentication or single sign-on, and later steps read only those files. Loading the whole catalogue would exceed the agent’s context window and dilute its attention.</p>
           <p>To add its own standards, a team structures them in the OKF layout, registers their location with the harness’s story-sequencing skill and tags its stories with the standard’s key. The standard then appears in the delivery plan for each tagged story.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> section 2; <a href="#source-2" aria-label="Source 2: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[2]</a> section 2.1, Step 2.</p>
         </section>
 
         <section id="knowledge-base">
           <h2>Add coding practices to the knowledge base</h2>
           <p>During implementation, the agent retrieves coding practices and framework patterns from the organisation’s hosted Amazon Bedrock knowledge base. Inside the build loop, each file is routed to the relevant category of guidance; a React component file, for example, triggers a React query.</p>
           <p>To add its own context, a team uploads its design guides, library documentation and coding conventions to the data source behind its knowledge base, runs a sync and points the harness at that knowledge base.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> section 3; <a href="#source-3" aria-label="Source 3: Skills Catalogue (EDS harness documentation)">[3]</a> Additional skills.</p>
         </section>
 
         <section id="policies">
@@ -116,14 +111,12 @@
             <li><strong><a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a>:</strong> 88 agentic AI governance controls from the Agentic Risk &amp; Capability Framework.</li>
           </ul>
           <p>To enforce its own policies, a team writes its compliance checklist or internal security policy as a Markdown file and registers it with the harness. The audit then applies it alongside IM8 and ARC.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> section 4; <a href="#source-3" aria-label="Source 3: Skills Catalogue (EDS harness documentation)">[3]</a> Compliance skills.</p>
         </section>
 
         <section id="review-rules">
           <h2>Add review rules</h2>
           <p>At the end of the development loop, changes are checked against the repository’s own conventions: formatting rules, naming, design principles and lint-like expectations. A team keeps them in one coding standards file at the root of the application repository.</p>
           <p>The code review checks each change against this file, both inside the build loop and at closeout. Where the file is silent, the review falls back to a baseline of common code smells.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> section 5; <a href="#source-2" aria-label="Source 2: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[2]</a> section 2.5.</p>
         </section>
 
         <section id="checklist">
@@ -137,17 +130,8 @@
             <li><strong>Declare architecture boundary tests.</strong> Let the harness scan the project and propose boundary rules, review and customise them, then generate the tests.</li>
           </ol>
           <p class="next-step"><strong>Next step:</strong> complete items 1 and 5 first, because they need only the repository. Then <a href="eds-developer-harness.html#plan">take a first story through planning</a> and note which context the agent asked for but could not find.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Team Context Ingestion Guide (EDS harness documentation)">[1]</a> quick-start checklist.</p>
         </section>
 
-        <section id="sources">
-          <h2>Sources</h2>
-          <ol class="source-list">
-            <li id="source-1"><cite>Team Context Ingestion Guide (EDS harness documentation)</cite></li>
-            <li id="source-2"><cite>Product Development Journey &amp; Workflow Harness (EDS harness documentation)</cite></li>
-            <li id="source-3"><cite>Skills Catalogue (EDS harness documentation)</cite></li>
-          </ol>
-        </section>
         <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -159,7 +143,7 @@
             <a href="#policies">Policies</a>
             <a href="#review-rules">Review rules</a>
             <a href="#checklist">Quick-start checklist</a>
-            <a href="#sources">Sources</a>
+
     </nav></aside>
   </div>
 </body>

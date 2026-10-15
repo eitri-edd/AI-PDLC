@@ -48,9 +48,8 @@
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>EDS AI Workflow (Eitri Agentic Dev Workflow)</h1>
 <p class="lead">The EDS AI Workflow is how EDS teams carry out product implementation with AI agents. It runs from the product owner’s requirements, through Eitri, the agentic developer harness, to the pipeline gates before production. Use this overview to see the whole route and who owns each handoff, then open the page for the part you want to understand.</p>
-          <p>This section follows the EDS harness documentation <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a>, maintained by the CoreX EDS team. The workflow is made of skills: packaged instructions that an AI agent runs for one task, such as writing a specification or reviewing a change. It builds on Matt Pocock’s engineering skills and adds EDS skills for scheduling, standards, compliance, validation and release readiness. For the strategy behind it, including the six-stage loop, assurance model, autonomy and measures, <a href="product-implementation.html">read Product implementation</a>.</p>
-          <p>Some capabilities are still planned, and the thresholds shown are defaults that a team can change; both are labelled where they appear. The workflow’s roles, gates and thresholds do not establish additional EDS policy.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-10-12">12 October 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+          <p>The CoreX EDS team maintains this workflow. The workflow is made of skills: packaged instructions that an AI agent runs for one task, such as writing a specification or reviewing a change. It builds on Matt Pocock’s engineering skills and adds EDS skills for scheduling, standards, compliance, validation and release readiness. For the strategy behind it, including the six-stage loop, assurance model, autonomy and measures, <a href="product-implementation.html">read Product implementation</a>.</p>
+          <p>Some capabilities are still planned, and the thresholds shown are defaults that a team can change; both are labelled where they appear.</p>
         </header>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#pages">Pages in this section</a>
@@ -61,7 +60,7 @@
             <a href="#context-practice">Context for agents</a>
             <a href="#harness">Diagnose failures</a>
             <a href="#workflow-health">Workflow health</a>
-            <a href="#sources">Sources</a>
+
         </nav></details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -118,12 +117,11 @@
           <p>The PO or BA hands over the PRD. Developers plan one user story into a technical design, the TRD, and a person signs it off at the first human gate; unresolved findings send it back for revision. The approved design is sliced into small issues, each delivering a working piece of the story, and a person confirms at the second human gate that they are ready to build.</p>
           <p>An AI agent then builds one issue at a time in a loop that builds, checks and corrects its own work. Closeout adds independent review and evidence that the story behaves as specified, and returns failures to the loop. Finally, four pipeline stages widen the checks from the single change to the whole codebase, ending with one report for the Tech Lead’s sign-off.</p>
           <p>The <a href="eds-developer-harness.html">Developer harness page</a> breaks the middle of this route into its individual steps. The <a href="eds-path-to-production.html">Path to production page</a> covers the pipeline stages.</p>
-          <p>Against the six-stage loop in Playbook Chapter 3, section 4, the workflow covers Plan, Slice, Implement and Verify, and reaches release readiness through the pipeline gates. Progressive rollout, observation and learning from production evidence sit outside the harness. Use the <a href="product-implementation.html#six-stages">Product implementation guidance</a> for those stages.</p>
+          <p>The workflow covers Plan, Slice, Implement and Verify in the six-stage implementation loop, and reaches release readiness through the pipeline gates. Progressive rollout, observation and learning from production evidence sit outside the harness. Use the <a href="product-implementation.html#six-stages">Product implementation guidance</a> for those stages.</p>
           <aside class="callout" aria-label="Note on the methodology roadmap">
             <p class="example-label">Note</p>
-            <p>The organisation is moving toward <a href="https://www.thoughtworks.com/en-sg/insights/decoder/s/spec-driven-development">Structured-Prompt-Driven Development (SPDD)</a> from Thoughtworks, which follows the same spec-driven principles. The harness documentation expects the Eitri skills to remain broadly applicable within SPDD with little or no change.</p>
+            <p>The organisation is moving toward <a href="https://www.thoughtworks.com/en-sg/insights/decoder/s/spec-driven-development">Structured-Prompt-Driven Development (SPDD)</a> from Thoughtworks, which follows the same spec-driven principles. Eitri skills are expected to remain broadly applicable within SPDD with little or no change.</p>
           </aside>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> roadmap note and sections 1–4; <a href="#source-3" aria-label="Source 3: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[3]</a> section 4.</p>
         </section>
 
         <section id="status">
@@ -131,7 +129,6 @@
           <p>Not every step in the workflow carries the same weight. Labels show which steps every story goes through, which a team can leave out, which are not yet available and where a person decides.</p>
           <aside class="status-key" aria-label="Labels used on this page"><p>Labels on this page</p><dl><div><dt><span class="status status-core">Core</span></dt><dd>Part of the normal route for every story.</dd></div><div><dt><span class="status status-recommended">Optional · Recommended</span></dt><dd>Can be left out, but including it improves confidence or quality.</dd></div><div><dt><span class="status status-optional">Optional</span></dt><dd>Can be left out when it does not apply.</dd></div><div><dt><span class="status status-setup">One-time setup</span></dt><dd>Done once for each repository, before delivery work starts.</dd></div><div><dt><span class="status status-planned">Planned</span></dt><dd>In development and not yet available. Do not count on it as a control.</dd></div><div><dt><span class="status status-hitl">HITL</span></dt><dd>Human in the loop: a person signs off before the work moves on.</dd></div></dl></aside>
           <p>Each page in this section repeats the labels it uses beside the content they describe, so you do not need to return here.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> section 2.</p>
         </section>
 
         <section id="ownership">
@@ -149,17 +146,12 @@
             <tr><th scope="row">Developer</th><td>The next story or ready issue</td><td>Investigation, issues, the build loop and closeout evidence</td><td>A merge request (MR) with acceptance evidence</td></tr>
             <tr><th scope="row">Tech Lead / reviewers</th><td>The MR and release candidate</td><td>Standards and specification review, and the pre-production sign-off</td><td>An approved merge or release decision</td></tr>
           </tbody></table></div>
-          <p>The harness assigns the TRD to the architect or Tech Lead, while its developer journey has developers running the same planning steps. It does not name the approver at either human gate. Agree locally who drafts each TRD and who signs off at each gate.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Product Development Journey &amp; Workflow Harness (EDS harness documentation)">[1]</a> sections 1, 2.1 and 5.</p>
+          <p>Assign who drafts each TRD, who reviews the technical design and who signs off at each human gate before starting the story.</p>
         </section>
 
         <section id="principles">
           <h2>Working principles</h2>
-          <aside class="callout" aria-label="About the working principles">
-            <p class="example-label">About this part</p>
-            <p>The rest of this page comes from the earlier EDS operating handbook <a href="#source-2" aria-label="Source 2: EDS AI Development Workflow: Simplified Operating Handbook">[2]</a>. It is guidance on operating the harness well, not a description of specific skills. Where the handbook and the harness documentation differ on tools, steps or thresholds, the harness documentation applies.</p>
-          </aside>
-          <p>The handbook summarises the workflow in seven principles:</p>
+          <p>Use these seven principles to operate the harness:</p>
           <ol class="practice-steps">
             <li><strong>Provide context before important decisions.</strong> Make business goals, architecture, policy and coding constraints available early.</li>
             <li><strong>Load only what is relevant.</strong> Reveal standards progressively instead of placing the whole knowledge base in every prompt.</li>
@@ -170,13 +162,12 @@
             <li><strong>Keep people accountable for intent and risk.</strong> Automation can do the work; people approve compliance, execution readiness and release.</li>
           </ol>
           <p>An agent that reports “done” has not shown that the work is done. Let an automated check, an independent reviewer or a separate evaluator decide whether the work meets its stop condition; the agent that wrote the code is never the only judge. In the harness, the validation gates, the independent review and the browser and end-to-end evidence play this role.</p>
-          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: EDS AI Development Workflow: Simplified Operating Handbook">[2]</a> sections 1 and 7.</p>
         </section>
 
         <section id="context-practice">
           <h2>Give agents the right context</h2>
           <p>AI output depends on the context it receives. Keep context explicit, versioned, selective and traceable to the decision it influenced. The <a href="eds-team-context.html">Team context page</a> lists what a team supplies at each stage; this section explains how to organise it.</p>
-          <p>The handbook recommends layering instructions, so an agent reads a short entry point first and loads further detail only when a task calls for it:</p>
+          <p>Layer instructions so an agent reads a short entry point first and loads further detail only when a task calls for it:</p>
           <ul>
             <li><strong>A short entry map:</strong> the project’s purpose, how to run and verify it, its global constraints and where to find more.</li>
             <li><strong>Constraints:</strong> the few must and must-not rules for security, privacy, architecture, data handling and business red lines. Rules that can be checked mechanically belong in tests or policy checks.</li>
@@ -189,12 +180,11 @@
             <p class="example-label">Note</p>
             <p>Use the repository and executable checks to establish current behaviour. They do not override an applicable policy or approved requirement. When sources conflict, record the conflict and ask the responsible owner to resolve it before proceeding with the affected work.</p>
           </aside>
-          <p class="source-ref">Sources: <a href="#source-2" aria-label="Source 2: EDS AI Development Workflow: Simplified Operating Handbook">[2]</a> section 8; <a href="#source-3" aria-label="Source 3: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[3]</a> section 3.3.</p>
         </section>
 
         <section id="harness">
           <h2>Diagnose the harness when work fails</h2>
-          <p>The harness is everything around the model: instructions, tools, environment, state and feedback. A capable model can still fail because one of these is weak. Strengthen the weak layer rather than assuming the model is the only problem. This is the playbook’s factory correction: fix the cause of a class of failure, not only the current increment.</p>
+          <p>The harness is everything around the model: instructions, tools, environment, state and feedback. A capable model can still fail because one of these is weak. Strengthen the weak layer rather than assuming the model is the only problem. Improve the factory by fixing the cause of a class of failure, not only the current increment.</p>
           <figure class="concept-figure">
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-harness-title">
@@ -224,12 +214,11 @@
             <tr><th scope="row">Verification feedback</th><td>The agent reports “done”, but the behaviour is still broken</td><td>Add or tighten a validation gate in the build loop, and make failure messages actionable.</td></tr>
             <tr><th scope="row">State management</th><td>A new session repeats work or reverses an earlier decision</td><td>Record decisions, evidence, blockers and the next action in the repository and on the issue.</td></tr>
           </tbody></table></div>
-          <p class="source-ref">Sources: <a href="#source-2" aria-label="Source 2: EDS AI Development Workflow: Simplified Operating Handbook">[2]</a> section 1; <a href="#source-3" aria-label="Source 3: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[3]</a> section 1.1.</p>
         </section>
 
         <section id="workflow-health">
           <h2>Measure workflow health</h2>
-          <p>To see whether the workflow itself is healthy, the handbook suggests watching measures such as the following. They complement the <a href="product-implementation.html#measure-loop">delivery, product and governance measures</a> in Playbook Chapter 3, section 8. The harness can record token usage and cost locally to support them.</p>
+          <p>Use the following measures to assess workflow health. They complement the <a href="product-implementation.html#measure-loop">delivery, product and governance measures</a> in the implementation guidance. The harness can record token usage and cost locally to support them.</p>
           <ul>
             <li><strong>Verified completion rate:</strong> how many started issues reach a passing state with independent evidence.</li>
             <li><strong>Verification gap:</strong> how often an agent’s claim of completion fails independent validation.</li>
@@ -242,17 +231,8 @@
             <p>The service desk squad’s access-request PRD reaches the Tech Lead, who drafts the TRD for the first user story. The compliance audit fails one control because the design logs full request text, so the TRD is revised to log request identifiers before the first human gate. The first issue covers one journey: a staff member submits an access request and receives a drafted response. In the build loop, the mutation testing gate shows that no test checks the unauthorised-request case; the developer adds one. A live browser test then provides the screenshot evidence the reviewer needs to approve the MR.</p>
           </aside>
           <p class="next-step"><strong>Next step:</strong> to see how requirements are prepared, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>. To see how a story is built and checked, <a href="eds-developer-harness.html">read the Developer harness</a>, then <a href="eds-path-to-production.html">Path to production</a>. For guided practice, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">open the Eitri self-paced training</a>.</p>
-          <p class="source-ref">Sources: <a href="#source-2" aria-label="Source 2: EDS AI Development Workflow: Simplified Operating Handbook">[2]</a> section 9; <a href="#source-3" aria-label="Source 3: EDS AI-SDLC Playbook, Chapter 3: Product Implementation">[3]</a> section 8.</p>
         </section>
 
-        <section id="sources">
-          <h2>Sources</h2>
-          <ol class="source-list">
-            <li id="source-1"><cite>Product Development Journey &amp; Workflow Harness (EDS harness documentation)</cite></li>
-            <li id="source-2"><cite>EDS AI Development Workflow: Simplified Operating Handbook</cite></li>
-            <li id="source-3"><cite>EDS AI-SDLC Playbook, Chapter 3: Product Implementation</cite></li>
-          </ol>
-        </section>
         <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -265,7 +245,7 @@
             <a href="#context-practice">Context for agents</a>
             <a href="#harness">Diagnose failures</a>
             <a href="#workflow-health">Workflow health</a>
-            <a href="#sources">Sources</a>
+
     </nav></aside>
   </div>
 </body>
