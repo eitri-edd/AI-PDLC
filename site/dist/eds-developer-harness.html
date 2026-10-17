@@ -65,6 +65,14 @@
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+            <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f8fafc"/>
+            </linearGradient>
+            <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#eff6ff"/>
+              <stop offset="100%" stop-color="#dbeafe"/>
+            </linearGradient>
           </defs>
         </svg>
 <section id="install">
@@ -81,6 +89,7 @@
         <section id="steps">
           <h2>See the 19 steps in four phases</h2>
           <figure class="concept-figure">
+            <figcaption>Figure 1. The 19 steps in four phases. Dashed outlines mark optional, recommended or planned steps; highlighted steps are human gates.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 330" role="img" aria-labelledby="fig-steps-title">
                 <title id="fig-steps-title">The 19 steps of the developer harness in four columns. Plan, Steps 1 to 6: tracker setup, dependency plan, live library documentation which is planned, architecture tests, investigate scope, write the TRD. Check, Steps 7 to 10: standards check, compliance audit, human gate 1 TRD sign-off, slice into issues, verify issues, human gate 2 issues ready. Build, Steps 11 and 12: choose an execution mode, optional interface scaffold, the build loop. Close out, Steps 13 to 19: improve the design, feature architecture tests, code review, diagnose bugs, browser test, commit closeout, end-to-end tests. Optional, recommended and planned steps have dashed outlines.</title>
@@ -88,9 +97,9 @@
                 <text class="d-title" x="254" y="22" text-anchor="middle">Check, 7–10</text>
                 <text class="d-title" x="428" y="22" text-anchor="middle">Build, 11–12</text>
                 <text class="d-title" x="602" y="22" text-anchor="middle">Close out, 13–19</text>
-                <path class="d-line" d="M130 17H188" marker-end="url(#arrow)"/>
-                <path class="d-line" d="M310 17H362" marker-end="url(#arrow)"/>
-                <path class="d-line" d="M490 17H524" marker-end="url(#arrow)"/>
+                <path class="d-line d-line-accent" d="M130 17H188" marker-end="url(#arrow-accent)"/>
+                <path class="d-line d-line-accent" d="M310 17H362" marker-end="url(#arrow-accent)"/>
+                <path class="d-line d-line-accent" d="M490 17H524" marker-end="url(#arrow-accent)"/>
                 <rect class="d-node" x="1" y="40" width="158" height="32" rx="6"/><text class="d-sub" x="9" y="61">1 Tracker setup</text>
                 <rect class="d-node" x="1" y="80" width="158" height="32" rx="6"/><text class="d-sub" x="9" y="101">2 Dependency plan</text>
                 <rect class="d-boundary" x="1" y="120" width="158" height="32" rx="6"/><text class="d-sub" x="9" y="141">3 Live docs (planned)</text>
@@ -118,7 +127,6 @@
                 <rect class="d-boundary" x="523" y="280" width="156" height="32" rx="6"/><text class="d-sub" x="531" y="301">19 End-to-end tests</text>
               </svg>
             </div>
-            <figcaption>Figure 1. The 19 steps in four phases. Dashed outlines mark optional, recommended or planned steps; highlighted steps are human gates.</figcaption>
           </figure>
           <p>Steps 1–6 set up the repository and turn one user story into a TRD. Steps 7–10 check the TRD against standards and policy, slice it into issues and verify them, with a human gate before and after slicing. Steps 11–12 build one issue in the execution mode the team chooses. Steps 13–19 improve the design, extend the architecture tests, review the change and gather browser and end-to-end evidence.</p>
           <p>The tables on this page label each step:</p>
@@ -128,7 +136,7 @@
         <section id="plan">
           <h2>Plan and schedule a story (Steps 1–6)</h2>
           <p>Planning sets up the tracker and architecture checks once, puts the PRD’s user stories in a build order, and then turns one story at a time into a user story level TRD.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Planning steps and their results</caption><thead><tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">Label</th><th scope="col">Result</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table step-table"><caption>Planning steps and their results</caption><thead><tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">Label</th><th scope="col">Result</th></tr></thead><tbody>
             <tr><th scope="row">1</th><td>Set up the issue tracker, triage labels and where domain documents live</td><td><span class="status status-setup">One-time setup</span></td><td>Every skill reads the same repository configuration</td></tr>
             <tr><th scope="row">2</th><td>Sequence the PRD’s user stories by their dependencies</td><td><span class="status status-core">Core</span></td><td>A dependency graph, a planning report for the project manager (PM), a delivery plan for developers, and stories on the tracker in delivery order</td></tr>
             <tr><th scope="row">3</th><td>Connect live library documentation through <a href="https://context7.com">Context7</a></td><td><span class="status status-optional">Optional</span> <span class="status status-planned">Planned</span></td><td>Documentation for the exact library versions in the project, so the agent does not rely on outdated training data</td></tr>
@@ -150,7 +158,7 @@
         <section id="check">
           <h2>Check the TRD and slice it (Steps 7–10)</h2>
           <p>Before any code is written, the TRD is checked against standards and policy and signed off. It is then sliced into tracer-bullet issues: thin vertical slices, each reaching an observable outcome through every layer it needs. The issues are verified and approved before implementation starts.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Checking and slicing steps and their results</caption><thead><tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">Label</th><th scope="col">Result</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table step-table"><caption>Checking and slicing steps and their results</caption><thead><tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">Label</th><th scope="col">Result</th></tr></thead><tbody>
             <tr><th scope="row">7</th><td>Compare the TRD with the AppStandards attached to the story</td><td><span class="status status-core">Core</span></td><td>Gaps rated Critical or Warning, a recorded decision for each, and a pass or fail report</td></tr>
             <tr><th scope="row">8</th><td>Audit the TRD against <a href="https://info.standards.tech.gov.sg">IM8</a> and <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a> controls</td><td><span class="status status-core">Core</span></td><td>One verdict for each control and a compliance report</td></tr>
             <tr><th scope="row">Human gate 1</th><td>A person signs off the TRD</td><td><span class="status status-hitl">HITL 1</span></td><td>The design is compliance-approved and cleared for slicing</td></tr>
@@ -182,6 +190,7 @@
           <h3>Implement one issue (Step 12) <span class="status status-core">Core</span></h3>
           <p>The build loop is run by the <code>/do-work</code> skill. It adapts Matt Pocock’s implementation skill, which reviews once at the end. Instead, the loop keeps reviewing and correcting until no must-fix findings remain, and then runs validation gates for the technology stack.</p>
           <figure class="concept-figure">
+            <figcaption>Figure 2. The build loop. The inner loop repeats until the exit check passes; a failed validation gate returns to Fix. Dashed arrows show rework.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-dowork-title">
                 <title id="fig-dowork-title">The build loop. Plan: select the issue and read its context. Then the inner loop: implement, review against the issue, and check whether must-fix findings are zero. If findings remain, fix them and implement again. When all clear, run validation gates 1 and 2, for build and quality; if they fail, return to fix. When they pass, run the optional mutation gate 3, then commit only this issue’s changes and close out by posting a verification comment and closing the issue.</title>
@@ -211,7 +220,6 @@
                 <rect class="d-node d-node-accent" x="1" y="270" width="130" height="64" rx="8"/><text class="d-title" x="66" y="296" text-anchor="middle">Close out</text><text class="d-sub" x="66" y="320" text-anchor="middle">Comment, close</text>
               </svg>
             </div>
-            <figcaption>Figure 2. The build loop. The inner loop repeats until the exit check passes; a failed validation gate returns to Fix. Dashed arrows show rework.</figcaption>
           </figure>
           <p>Before writing code, the agent reads the issue, the relevant architecture decisions and the codebase, and confirms that acceptance criteria are in place. The inner loop then implements, writing tests first where the code carries logic, and reviews the result against the issue and its acceptance criteria. If must-fix findings remain, it fixes them and implements again.</p>
           <p>When the exit check is clear, Gates 1 and 2 run in parallel; any failure returns to Fix. After they pass, the optional mutation gate runs. The agent then commits only that issue’s changes, posts a comment summarising what it implemented and verified, and closes the issue.</p>
@@ -230,7 +238,7 @@
         <section id="closeout">
           <h2>Verify and close out (Steps 13–19)</h2>
           <p>After the loop commits the implementation, closeout improves the design, extends architecture tests, reviews the change against standards and the specification, and collects browser and end-to-end evidence before the merge request is approved.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Closeout steps</caption><thead><tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">Label</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table step-table"><caption>Closeout steps</caption><thead><tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">Label</th></tr></thead><tbody>
             <tr><th scope="row">13</th><td>Find shallow modules in recently changed areas and propose how to deepen them</td><td><span class="status status-recommended">Optional · Recommended</span></td></tr>
             <tr><th scope="row">14</th><td>Extend the architecture boundary tests to cover the new feature</td><td><span class="status status-core">Core</span></td></tr>
             <tr><th scope="row">15</th><td>Review the change against coding standards and against the specification, in two independent reviews</td><td><span class="status status-core">Core</span></td></tr>

@@ -1,5 +1,17 @@
 # Concepts editorial review
 
+## Reading route and examples · 17 October 2026
+
+Reviewed `dist/concept.html` against the supplied chapter views and `../writing.md`. The page already followed the requested section order and retained a collapsed model reference; this revision closes the remaining gaps.
+
+- Made the opening route explicit: goals and requirements → information and tools → workflow automation → model selection. Explained that these groups are a reading route, not lifecycle stages.
+- Added a relationship map linking each concept to the practical question it answers. Retained the definition, recognisable problem, example, limits and next-step pattern.
+- Replaced annual-leave and booking scenarios with fictional service-request filtering, draft saving and conflicting edits. Model evaluation now uses the same draft-saving scenario. Detailed provider examples and research remain in the expandable reference.
+- Expanded workflow dependencies: prerequisites, independent checks against the same candidate, joining results before review, and rerunning affected checks after changes. Added the cost and limits of graph coordination.
+- Kept direct next steps into discovery, requirements handover, team context, developer planning, testing, review and release guidance. Preserved all 84 existing IDs, including model and source anchors.
+
+Validation: all 153 links checked for local destinations and anchors where applicable; unique IDs, sequential heading levels, four captioned tables and UTF-8 decoding passed. Headless Chromium checks at 1440, 768 and 320 px confirmed no page overflow, the requested section order and working model-reference expansion. Keyboard expansion, direct navigation into the collapsed model reference and browser script-error checks passed. At 320 px with the root font size doubled, a pre-existing page overflow remains (347 px in the baseline; 346 px after this change). No shared styles were changed. External source claims and availability were not revalidated in this editorial revision. Changes have not been published.
+
 ## Models · 11 October 2026
 
 Added Models before the seven development practices, with entries in both contents menus. The summary separates scale (large/small), specialisation (general/domain-specific) and response approach (System One/more deliberative reasoning). These dimensions overlap; they are an editorial synthesis rather than a formal taxonomy. System One is interpreted as the research term System 1, not a named vendor product. No universal SLM parameter cutoff is imposed.

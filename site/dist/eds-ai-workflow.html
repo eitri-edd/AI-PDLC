@@ -66,6 +66,14 @@
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+            <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f8fafc"/>
+            </linearGradient>
+            <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#eff6ff"/>
+              <stop offset="100%" stop-color="#dbeafe"/>
+            </linearGradient>
           </defs>
         </svg>
 <section id="pages">
@@ -84,6 +92,7 @@
           <h2>Follow the route from requirements to production</h2>
           <p>A product requirements document (PRD) records what to build and why. Developers put its user stories in a build order, then turn one story at a time into a technical requirements document (TRD), check it against standards and policy, and slice it into small issues. Each issue is built and validated in a loop, closed out with independent evidence, and then passes pipeline gates on its way to production.</p>
           <figure class="concept-figure">
+            <figcaption>Figure 1. The EDS AI Workflow from the PRD handoff to the release decision. Human decisions are highlighted; dashed arrows show rework.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 290" role="img" aria-labelledby="fig-route-title">
                 <title id="fig-route-title">The EDS AI Workflow. The PO or BA hands over a PRD. Developers plan one user story into a technical design. Human gate 1 signs off the design; findings send it back for revision. The design is sliced into small issues. Human gate 2 approves them as ready; questions send them back. The build loop builds, checks and fixes one issue at a time. Closeout adds review and evidence; a failed check returns to the build loop. Release gates run the pipeline checks, and the Tech Lead approves release.</title>
@@ -112,7 +121,6 @@
                 <text class="d-label" x="1" y="274">Tech Lead approves</text>
               </svg>
             </div>
-            <figcaption>Figure 1. The EDS AI Workflow from the PRD handoff to the release decision. Human decisions are highlighted; dashed arrows show rework.</figcaption>
           </figure>
           <p>The PO or BA hands over the PRD. Developers plan one user story into a technical design, the TRD, and a person signs it off at the first human gate; unresolved findings send it back for revision. The approved design is sliced into small issues, each delivering a working piece of the story, and a person confirms at the second human gate that they are ready to build.</p>
           <p>An AI agent then builds one issue at a time in a loop that builds, checks and corrects its own work. Closeout adds independent review and evidence that the story behaves as specified, and returns failures to the loop. Finally, four pipeline stages widen the checks from the single change to the whole codebase, ending with one report for the Tech Lead’s sign-off.</p>
@@ -186,6 +194,7 @@
           <h2>Diagnose the harness when work fails</h2>
           <p>The harness is everything around the model: instructions, tools, environment, state and feedback. A capable model can still fail because one of these is weak. Strengthen the weak layer rather than assuming the model is the only problem. Improve the factory by fixing the cause of a class of failure, not only the current increment.</p>
           <figure class="concept-figure">
+            <figcaption>Figure 2. Trace a failure to one harness layer, strengthen that layer and record the failure. The highlighted layer is an example.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-harness-title">
                 <title id="fig-harness-title">Diagnosing a failure. A failure is traced to one of five harness layers: task specification, context provision, execution environment, verification feedback or state management. In this example verification feedback is the weak layer. The team strengthens that layer, then records the failure so it is less likely to recur.</title>
@@ -204,7 +213,6 @@
                 <rect class="d-node" x="511" y="268" width="168" height="64" rx="8"/><text class="d-title" x="595" y="294" text-anchor="middle">Record it</text><text class="d-sub" x="595" y="318" text-anchor="middle">Stop it recurring</text>
               </svg>
             </div>
-            <figcaption>Figure 2. Trace a failure to one harness layer, strengthen that layer and record the failure. The highlighted layer is an example.</figcaption>
           </figure>
           <p>Start from the symptom and ask which of the five layers let it through. In the figure, verification feedback is the weak layer, so the team improves its checks rather than retrying the same prompt. Recording the failure helps the next session avoid it. The table pairs each layer with its typical symptom and a response.</p>
           <div class="table-scroll"><table class="wide-table"><caption>Harness layers, typical symptoms and responses</caption><thead><tr><th scope="col">Layer</th><th scope="col">Typical symptom</th><th scope="col">Response</th></tr></thead><tbody>

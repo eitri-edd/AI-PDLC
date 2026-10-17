@@ -75,3 +75,19 @@ The playbook describes itself as a EDS guide. This review did not confirm its or
 ### Validation
 
 A headless Chromium check at 1440, 1100, 768 and 320 px passed: no page overflow, no broken anchors or duplicate IDs, sequential headings, figure and region labels numbered 1–6, every SVG linked to its title, no SVG text outside its viewBox, crowding its box or overlapping other text, all tables captioned, no console errors, and the first Tab reaches the skip link. Figures 3, 4 and 6 were inspected visually.
+
+## Ideation qualifications, 17 October 2026
+
+Updated `dist/product-ideation.html` against the supplied review comments, retaining the existing layout and section anchors.
+
+- Limited severity–frequency–reach scoring to a prioritisation aid for discretionary improvements. Added overrides for mandatory obligations and intolerable risks, including mission failure, serious harm, security and accessibility.
+- Reframed end-of-life concerns around current and foreseeable consequences. Teams can address loss of support, security maintenance or recoverability before user-facing failure.
+- Distinguished resource inputs from operational reliability and usage measures. Explained uptime as a possible guardrail, service outcome or contributor to mission value, depending on context.
+- Retained satisfaction, perceived effort and trust as potentially meaningful outcomes, triangulated with behavioural and operational evidence and explicit sampling limitations.
+- Preserved attribution of the playbook's outcome/annual-cost ratio while qualifying it as an efficiency measure. Financial ROI and comparisons across different outcome units need further justification. A plateau does not remove the value of essential maintenance or obligations.
+- Added a safety check before creating or running prototypes: permitted data, approved tools, participant information, access restrictions and prototype disposition. Linked the check to the experiment record and handoff.
+- Distinguished evidence for investigation, bounded implementation and production release. Qualified the prototype table and handoff so prototype success does not imply production readiness.
+
+These qualifications and safety checks are editorial recommendations responding to the review, not newly verified quotations from the playbook or new organisational policy. The public ideation URL could not be retrieved by the web tool; the review used the repository's publishable HTML.
+
+Validation passed: UTF-8 decoding; all 68 links checked for local destinations and anchors where applicable; unique IDs; sequential heading levels; all nine tables captioned; and no whitespace errors in the diff. Headless Chromium checks at 1440, 768 and 320 px found no page overflow or browser script errors and confirmed the safety check and three decision labels. External link availability and full accessibility conformance were not assessed. Publication was not part of this change.

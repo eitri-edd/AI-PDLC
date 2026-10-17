@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An evergreen AI-Software Development Lifecycle guide for in-house development squads within EDS.">
+  <meta name="description" content="A draft playbook for EDS product and engineering teams: AI-assisted development principles, decisions, evidence and Eitri implementation guidance.">
   <title>Introduction · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
@@ -46,50 +46,62 @@
         <header class="article-header">
           <p class="eyebrow">Development guide</p>
           <h1>Introduction</h1>
-          <p class="lead">The EDS AI-Software Development Lifecycle (AI-SDLC) guides teams from user research through software development, testing and release. This guide explains where AI can help and where people review results and make decisions.</p>
-        </header>
+          <p class="lead">This playbook explains how product and engineering teams use AI to move from uncertain needs to verified software and operational learning. It describes the decisions, evidence and accountability to agree, then shows how Eitri supports the workflow.</p>
+          <p>The AI-Software Development Lifecycle (AI-SDLC) covers discovery, implementation, release and learning from use. AI-assisted development means work supported by AI tools, whether or not the resulting product contains AI.</p>
+		</header>
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
           <p id="page-map-note" class="page-map-note">Find guidance for your development task. Learn how AI can help EDS teams test ideas early, compare options and make decisions from evidence.</p>
 
           <ol class="page-map-nodes" role="list">
-            <li class="page-map-node"><strong>Development guides</strong><div class="page-map-links"><a href="#choose-task">Find the right guide</a></div></li>
-            <li class="page-map-node"><strong>EDS development teams</strong><div class="page-map-links"><a href="#target-audience">Who this guide is for</a></div></li>
+            <li class="page-map-node"><strong>Start with your task</strong><div class="page-map-links"><a href="#choose-task">Idea, feature, defect or high-risk change</a></div></li>
+            <li class="page-map-node"><strong>Audience and authority</strong><div class="page-map-links"><a href="#target-audience">Who this guide is for</a><a href="#guide-layers">Principles, requirements and Eitri</a></div></li>
             <li class="page-map-node"><strong>Learn and decide sooner</strong><div class="page-map-links"><a href="#why-ai-pdlc">Test ideas and review evidence</a></div></li>
-            <li class="page-map-node"><strong>Use it in daily work</strong><div class="page-map-links"><a href="#evergreen-guide">Start with a small experiment</a></div></li>
+            <li class="page-map-node"><strong>Use it in daily work</strong><div class="page-map-links"><a href="#evergreen-guide">Agree the next decision and keep guidance current</a></div></li>
           </ol>
 
         </figure>
         <!-- PAGE MAP END -->
         <details class="mobile-contents">
           <summary>On this page</summary>
-          <nav aria-label="On this page"><a href="#choose-task">Find the right guide</a><a href="#target-audience">Target audience</a><a href="#why-ai-pdlc">Why AI-SDLC?</a><a href="#evergreen-guide">An evergreen development guide</a></nav>
+          <nav aria-label="On this page"><a href="#choose-task">Start with your task</a><a href="#target-audience">Audience and authority</a><a href="#guide-layers">Three layers of guidance</a><a href="#why-ai-pdlc">Why AI-SDLC?</a><a href="#evergreen-guide">Use and maintain the guide</a></nav>
         </details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
+            <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient>
+            <linearGradient id="d-grad-accent" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#eff6ff"/><stop offset="100%" stop-color="#dbeafe"/></linearGradient>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
           </defs>
         </svg>
-        <section id="choose-task" class="task-entry"><h2>Find the right guide</h2><p>Use these guides to understand the lifecycle, define requirements, build changes and prepare for release.</p><ul>
-<li><a href="ai-pdlc.html">Understand the lifecycle</a><span>See how ideation, implementation and feedback connect.</span></li>
-<li><a href="eds-po-ba-harness.html#choose-path">Define product requirements</a><span>Prepare requirements and hand them over to developers.</span></li>
-<li><a href="eds-developer-harness.html#steps">Develop and test a change</a><span>Follow the steps to plan, build and verify a change.</span></li>
-<li><a href="eds-path-to-production.html#stages">Review release readiness</a><span>See which pipeline checks must pass before release.</span></li>
-<li><a href="eds-skills-catalogue.html">Find a skill</a><span>Check what each skill does, whether it is available and how to use it.</span></li></ul></section>
+        <section id="choose-task" class="task-entry"><h2>Start with your task</h2><p>Choose the closest task. Each route gives a minimum starting workflow; the accountable owner confirms the applicable controls, evidence and approvals. Add the high-risk route when a feature or defect affects sensitive data, access, public interfaces, major architecture or a hard-to-reverse action.</p><ul>
+<li><a href="product-ideation.html#product-thesis">Explore a product idea</a><span>State the user problem and a testable assumption → agree a safe experiment and success criteria → test with users → record whether to continue, revise or stop. The product decision owner reviews the evidence before committing to implementation.</span></li>
+<li><a href="product-implementation.html#implementable-definition">Deliver a feature</a><span>Agree scope and acceptance criteria → plan bounded changes → build and verify them → obtain the applicable review and release approvals → monitor the outcome. Keep requirements, test results, unresolved risks and the decision with the change.</span></li>
+<li><a href="product-implementation.html#six-stages">Fix a defect</a><span>Record the observed and expected behaviour → reproduce the failure → assess impact → make a bounded correction and add a regression test → review and release through the applicable controls → verify recovery. If the failure is an active incident, follow the existing incident process first.</span></li>
+<li><a href="product-implementation.html#gates-and-assurance">Make a high-risk change</a><span>Identify affected systems, data and people → involve the relevant security, architecture, data or operational specialists before execution → agree independent checks, recovery and stop conditions → submit evidence and residual risks to the authorised decision-maker. Release only within the agreed authority and monitor the result.</span></li></ul>
+          <p>Once the requirements and controls are clear, use the <a href="eds-ai-workflow.html">Eitri workflow</a> for tool instructions and the <a href="eds-path-to-production.html#stages">pipeline and pre-production checks</a> for its release support. A short route does not waive an applicable control.</p>
+        </section>
 <section id="target-audience">
-          <h2>Target audience</h2>
-          <p>This guide is for <strong>in-house development squads within EDS</strong>. It gives developers a shared reference for using AI to understand problems, explore solutions, build software and check outcomes.</p>
-          <p>The guide covers AI-assisted development: work supported by AI tools, whether or not the product itself contains AI.</p>
+          <h2>Audience and authority</h2>
+          <p>This guide is for <strong>EDS product and engineering teams</strong>: product owners and managers, business analysts, designers, developers, technical leads, quality assurance (QA) and security reviewers, and operational colleagues. Organisational leaders can use it to plan ownership, capability and support.</p>
+          <p>It combines a proposed organisational playbook with EDS implementation guidance for Eitri, the AI-assisted development workflow described in this site. The playbook explains the reasons and decisions; the implementation pages describe how the current tools support them.</p>
+          <p>This draft does not establish approved EDS policy or grant approval authority. Confirm the applicable lifecycle, policies and decision owners for your work. Where a control is required, record its authoritative source and the evidence and approval it needs.</p>
+          <h3 id="guide-layers">Read the guide in three layers</h3>
+          <div class="table-scroll"><table><caption>Separate the reason, the obligation and the tool support</caption><thead><tr><th scope="col">Layer</th><th scope="col">What it explains</th><th scope="col">Where to start</th></tr></thead><tbody>
+<tr><th scope="row">Principles</th><td>Why the organisation works this way: test assumptions, verify results and retain human accountability. These explain the recommended approach.</td><td><a href="ai-pdlc.html">Lifecycle overview</a> and <a href="transformation.html">organisation transformation</a></td></tr>
+<tr><th scope="row">Operating requirements</th><td>What evidence and approvals are required by the applicable organisational process. Confirm each obligation with its policy or control owner; the guide’s recommendations do not establish a mandate.</td><td><a href="product-implementation.html#gates-and-assurance">Decisions and independent assurance</a>, alongside the authoritative policies for your work</td></tr>
+<tr><th scope="row">Eitri implementation</th><td>How the current harnesses, skills and pipeline support the workflow. Tool availability and automated checks are implementation details, not the source of approval authority.</td><td><a href="eds-ai-workflow.html">EDS AI Workflow (Eitri)</a></td></tr>
+          </tbody></table></div>
+          <p>If Eitri cannot perform a required check or capture an approval, the control still applies. Agree an alternative with the control owner and retain the evidence before proceeding. A passing tool check is evidence for a decision; it grants approval only where the applicable process explicitly authorises that automation.</p>
         </section>
         <section id="why-ai-pdlc">
           <h2>Why AI-SDLC?</h2>
-          <p>Product development has traditionally been organised around limited specialist capacity. Product management, research, design, engineering, testing, security and operations each have their own priorities, tools and pace, so the lifecycle sequences their effort carefully.</p>
+          <p>Product development draws on product management, research, design, engineering, testing, security and operations. When work moves between specialists without timely feedback or enough context, teams can wait longer to discover a mistaken assumption.</p>
           <figure class="concept-figure" id="fig-handoffs">
   <figcaption id="fig-handoffs-title-caption">Figure 1. Illustrative sequential process: late feedback can make changes expensive.</figcaption>
-  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Sequence: opportunity → requirements → design → build → test → approval → launch → learning.</li><li>At each handoff: work may wait or lose context. This is an illustrative sequential process.</li><li>Feedback: learning from users returns to the opportunity after the earlier work has been done.</li></ol></details>
-  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+  <details class="figure-reading"><summary>Read as text: Flow and branches</summary><ol><li>Sequence: opportunity → requirements → design → build → test → approval → launch → learning.</li><li>At each handoff: work may wait or lose context. This is an illustrative sequential process.</li><li>Feedback: learning from users returns to the opportunity after the earlier work has been done.</li></ol></details>
+  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
     <div class="figure-scroll" tabindex="0" role="region" aria-label="Sequential delivery; scroll horizontally if needed"><svg viewBox="0 0 700 244" role="img" aria-labelledby="fig-handoffs-title" aria-describedby="fig-handoffs-title-desc">
                 <title id="fig-handoffs-title">Sequential delivery</title><desc id="fig-handoffs-title-desc">Sequence: opportunity → requirements → design → build → test → approval → launch → learning. At each handoff: work may wait or lose context. This is an illustrative sequential process. Feedback: learning from users returns to the opportunity after the earlier work has been done.</desc>
                 <rect class="d-node" x="16" y="20" width="128" height="48" rx="8"/><text class="d-title" x="80" y="50" text-anchor="middle">Opportunity</text>
@@ -113,8 +125,8 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights learning after launch.</p>
   </details>
   </figure>
-          <p>Work passes from opportunity to requirements, design, build, test, approval and launch before the team learns from users. Each arrow is a handoff where work can wait, lose context or be reinterpreted. The dashed path shows that evidence from users returns only after most of the effort has been spent.</p>
-          <p>Agile, DevOps, continuous delivery and design thinking improved this model through smaller batches and faster feedback. Much of the work is still limited by specialist capacity, handoffs and the cost of changing direction.</p>
+          <p>In this illustrative sequence, work passes through requirements, design, build, test, approval and launch before user learning returns. Each handoff can introduce waiting or lost context. The dashed path shows the cost of postponing feedback.</p>
+          <p>Teams using smaller batches and earlier feedback can learn before launch. Specialist capacity, handoffs and the cost of changing direction still matter when introducing AI into those workflows.</p>
           <p>AI can help teams draft requirements, build prototypes, write code and run checks with less manual effort. AI-SDLC brings these capabilities into the whole development workflow, with people setting goals, reviewing evidence and deciding what to release. The aim is <strong>faster validated learning</strong>: testing assumptions early and using the results to decide what to build or change.</p>
           <ol class="key-pointers">
             <li><div>
@@ -134,7 +146,7 @@
             </div></li>
             <li><div>
               <h3>Revise or replace unsuitable code</h3>
-              <p>Teams can spend more effort patching an unsuitable implementation than trying a different approach. An AI agent can help rewrite a small component and run its regression tests, reducing the manual effort of comparing a replacement.</p>
+              <p>Teams can spend more effort patching an unsuitable implementation than trying a different approach. An AI agent is software that uses an AI model and tools to carry out a task. Within agreed permissions, it can help rewrite a small component and run regression tests for comparison.</p>
               <p>Give the agent the required behaviour, interface contracts and tests that the replacement needs to pass. Developers review the changes and test results, then decide whether the replacement improves the solution enough to justify switching.</p>
               <aside class="callout" aria-label="Note on decisions that remain costly to reverse">
                 <p class="example-label">Note</p>
@@ -162,10 +174,10 @@
               <h3>Check AI outputs as work progresses</h3>
               <p>AI can generate code, designs and tests in large volumes, increasing the amount of work that needs checking. An agent harness can run tests and scanners after each change, giving developers feedback while the work is still easy to revise.</p>
               <figure class="concept-figure" id="fig-evaluate">
-  <figcaption id="fig-evaluate-title-caption">Figure 2. Test results determine whether an option is ready to select.</figcaption>
-  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>Generate options and assess them against agreed criteria; assessment is a potential bottleneck.</li><li>Discard weaker options or combine useful parts and test the result.</li><li>Pass: choose what to build. Fail: return the evidence to assessment and revise or discard the option.</li></ol></details>
-  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
-    <div class="figure-scroll" tabindex="0" role="region" aria-label="Assess generated options; scroll horizontally if needed"><svg viewBox="0 0 680 365" role="img" aria-labelledby="fig-evaluate-title" aria-describedby="fig-evaluate-title-desc"><title id="fig-evaluate-title">Assess generated options</title><desc id="fig-evaluate-title-desc">Generate options and assess them against agreed criteria; assessment is a potential bottleneck. Discard weaker options or combine useful parts and test the result. Pass: choose what to build. Fail: return the evidence to assessment and revise or discard the option.</desc><rect class="d-node" x="10" y="50" width="180" height="90" rx="7"/><text class="d-title" x="100" y="76" text-anchor="middle">Generate</text><text class="d-sub" x="100" y="99" text-anchor="middle">Options A, B, C, D</text><path class="d-line" d="M190 95H240" marker-end="url(#arrow)"/><rect class="d-node d-node-accent" x="245" y="50" width="200" height="90" rx="7"/><text class="d-title" x="345" y="76" text-anchor="middle">Assess</text><text class="d-sub" x="345" y="99" text-anchor="middle">Against agreed criteria</text><text class="d-sub" x="345" y="165" text-anchor="middle">Potential bottleneck</text><path class="d-line" d="M445 95H495" marker-end="url(#arrow)"/><text class="d-label" x="470" y="79" text-anchor="middle">discard</text><rect class="d-node" x="500" y="50" width="170" height="90" rx="7"/><text class="d-title" x="585" y="76" text-anchor="middle">Discard</text><text class="d-sub" x="585" y="99" text-anchor="middle">Weaker options</text><path class="d-line" d="M345 140V205" marker-end="url(#arrow)"/><text class="d-label" x="386" y="190" text-anchor="middle">combine</text><rect class="d-node" x="245" y="210" width="200" height="70" rx="7"/><text class="d-title" x="345" y="236" text-anchor="middle">Test</text><text class="d-sub" x="345" y="259" text-anchor="middle">Combined approach</text><path class="d-line" d="M445 245H495" marker-end="url(#arrow)"/><text class="d-label" x="470" y="231" text-anchor="middle">pass</text><polygon class="d-node d-decision" points="510,210 660,210 670,220 670,270 660,280 510,280 500,270 500,220"/><text class="d-title" x="585" y="236" text-anchor="middle">Choose</text><text class="d-sub" x="585" y="259" text-anchor="middle">What to build</text><path class="d-line d-dash" d="M245 245H210V95H239" marker-end="url(#arrow)"/><text class="d-label" x="116" y="238" text-anchor="middle">fail: reassess</text></svg></div>
+  <figcaption id="fig-evaluate-title-caption">Figure 2. Assessment and test results inform the team’s choice of an option.</figcaption>
+  <details class="figure-reading"><summary>Read as text: Flow and branches</summary><ol><li>Generate options and assess them against agreed criteria; assessment is a potential bottleneck.</li><li>Discard weaker options or combine useful parts and test the result.</li><li>Pass: choose what to build. Fail: return the evidence to assessment and revise or discard the option.</li></ol></details>
+  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Assess generated options; scroll horizontally if needed"><svg viewBox="0 0 680 365" role="img" aria-labelledby="fig-evaluate-title" aria-describedby="fig-evaluate-title-desc"><title id="fig-evaluate-title">Assess generated options</title><desc id="fig-evaluate-title-desc">Generate options and assess them against agreed criteria; assessment is a potential bottleneck. Discard weaker options or combine useful parts and test the result. Pass: choose what to build. Fail: return the evidence to assessment and revise or discard the option.</desc><rect class="d-node" x="10" y="50" width="180" height="90" rx="8"/><text class="d-title" x="100" y="76" text-anchor="middle">Generate</text><text class="d-sub" x="100" y="99" text-anchor="middle">Options A, B, C, D</text><path class="d-line" d="M190 95H240" marker-end="url(#arrow)"/><rect class="d-node d-node-accent" x="245" y="50" width="200" height="90" rx="8"/><text class="d-title" x="345" y="76" text-anchor="middle">Assess</text><text class="d-sub" x="345" y="99" text-anchor="middle">Against agreed criteria</text><text class="d-sub" x="345" y="165" text-anchor="middle">Potential bottleneck</text><path class="d-line" d="M445 95H495" marker-end="url(#arrow)"/><text class="d-label" x="470" y="79" text-anchor="middle">discard</text><rect class="d-node" x="500" y="50" width="170" height="90" rx="8"/><text class="d-title" x="585" y="76" text-anchor="middle">Discard</text><text class="d-sub" x="585" y="99" text-anchor="middle">Weaker options</text><path class="d-line" d="M345 140V205" marker-end="url(#arrow)"/><text class="d-label" x="386" y="190" text-anchor="middle">combine</text><rect class="d-node" x="245" y="210" width="200" height="70" rx="8"/><text class="d-title" x="345" y="236" text-anchor="middle">Test</text><text class="d-sub" x="345" y="259" text-anchor="middle">Combined approach</text><path class="d-line" d="M445 245H495" marker-end="url(#arrow)"/><text class="d-label" x="470" y="231" text-anchor="middle">pass</text><polygon class="d-node d-decision" points="510,210 660,210 670,220 670,270 660,280 510,280 500,270 500,220"/><text class="d-title" x="585" y="236" text-anchor="middle">Choose</text><text class="d-sub" x="585" y="259" text-anchor="middle">What to build</text><path class="d-line d-dash" d="M245 245H210V95H239" marker-end="url(#arrow)"/><text class="d-label" x="116" y="238" text-anchor="middle">fail: reassess</text></svg></div>
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights assessment.</p>
   </details>
 </figure>
@@ -178,8 +190,8 @@
               <p>Track the time and cost of testing an assumption and reaching a decision. Compare AI-assisted work with the team's previous approach, including the effort spent reviewing, correcting and testing generated outputs.</p>
               <figure class="concept-figure" id="fig-loop">
   <figcaption id="fig-loop-title-caption">Figure 3. Measure the time and cost of turning a hypothesis into a decision.</figcaption>
-  <details class="figure-reading" open><summary>Read as text: Flow and branches</summary><ol><li>State a hypothesis and run an experiment.</li><li>Collect evidence and make a decision.</li><li>Feedback: use the decision to refine the next hypothesis and repeat.</li></ol></details>
-  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+  <details class="figure-reading"><summary>Read as text: Flow and branches</summary><ol><li>State a hypothesis and run an experiment.</li><li>Collect evidence and make a decision.</li><li>Feedback: use the decision to refine the next hypothesis and repeat.</li></ol></details>
+  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
     <div class="figure-scroll" tabindex="0" role="region" aria-label="Learning cycle; scroll horizontally if needed"><svg viewBox="0 0 640 240" role="img" aria-labelledby="fig-loop-title" aria-describedby="fig-loop-title-desc">
                     <title id="fig-loop-title">Learning cycle</title><desc id="fig-loop-title-desc">State a hypothesis and run an experiment. Collect evidence and make a decision. Feedback: use the decision to refine the next hypothesis and repeat.</desc>
                     <rect class="d-node" x="80" y="24" width="160" height="48" rx="8"/><text class="d-title" x="160" y="54" text-anchor="middle">Hypothesis</text>
@@ -188,7 +200,7 @@
                     <path class="d-line d-line-accent" d="M480 72V164" marker-end="url(#arrow-accent)"/>
                     <rect class="d-node" x="400" y="168" width="160" height="48" rx="8"/><text class="d-title" x="480" y="198" text-anchor="middle">Evidence</text>
                     <path class="d-line d-line-accent" d="M400 192H244" marker-end="url(#arrow-accent)"/>
-                    <polygon class="d-node d-decision" points="88,168 232,168 240,176 240,208 232,216 88,216 80,208 80,176"/><text class="d-title" x="160" y="198" text-anchor="middle">Decision</text>
+                    <polygon class="d-node d-node-accent d-decision" points="88,168 232,168 240,176 240,208 232,216 88,216 80,208 80,176"/><text class="d-title" x="160" y="198" text-anchor="middle">Decision</text>
                     <path class="d-line d-line-accent d-dash" d="M160 168V76" marker-end="url(#arrow-accent)"/>
                     <text class="d-title" x="320" y="112" text-anchor="middle">Shorten each turn</text>
                     <text class="d-sub" x="320" y="136" text-anchor="middle">Time and cost to turn</text>
@@ -197,17 +209,17 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the learning cycle.</p>
   </details>
   </figure>
-<aside class="example" aria-label="Illustrative learning decision"><p><strong>Example:</strong> use AI to build a prototype of a clearer upload flow. Test whether at least 8 of 10 pilot users can submit the right document unaided, with no wrong-recipient uploads. Record the preparation, review and testing effort alongside the results. If the agreed threshold is met, commit to a bounded implementation; otherwise revise the flow or stop.</p></aside>
+<aside class="example" aria-label="Fictional upload-flow discovery example"><p><strong>Example · discovery:</strong> use AI to prototype a clearer upload flow with synthetic documents and simulated recipients. Set an illustrative usability threshold: at least 8 of 10 pilot users submit the intended document unaided. Record wrong-recipient attempts, participant context and preparation, review and testing effort. The product decision owner uses the findings to choose whether to develop a bounded implementation, revise the flow or stop.</p><p>This small pilot provides exploratory usability evidence. Even with no observed wrong-recipient uploads, it cannot establish the absence of rare security failures. Security assurance needs a separate assessment of threats, access boundaries and data handling, with targeted tests and specialist review. Production acceptance also needs the applicable functional, security and operational evidence and authorised release decision.</p></aside>
               <p>Use each decision to choose the next experiment. Check whether AI is helping the team reach useful decisions sooner and whether the resulting changes improve users' experience.</p>
             </div></li>
           </ol>
         </section>
         <section id="evergreen-guide">
-          <h2>An evergreen development guide</h2>
-          <p>This site is an evergreen guide for EDS developers: a reference to return to as the squad’s work progresses, rather than a document read once. It explains AI-SDLC practices so they can be applied in day-to-day development.</p>
-          <p>The guidance is expected to change as tools develop and squads gain experience. Each practice records its reasons, so the advice can be revisited when the evidence changes.</p>
+          <h2>Use and maintain the guide</h2>
+          <p>Return to the guide as your team’s work moves from discovery to delivery and operational learning. Revisit decisions when user evidence, system behaviour, policy or tool capabilities change.</p>
+          <p>When you find a gap, record the affected guidance, supporting evidence and the person responsible for resolving it. Confirm changes to operating requirements with the relevant policy or control owner, and keep Eitri instructions aligned with those decisions.</p>
           <div class="next-step">
-            <p>To begin, pick one assumption in your current work that would be costly to get wrong. Agree what evidence would help the squad decide, then choose a small experiment to obtain it.</p>
+            <p><strong>Next step:</strong> <a href="#choose-task">choose your task route</a>. With the accountable owner, agree the scope, applicable controls, evidence and next decision before using AI to carry out the work.</p>
             <p><a href="ai-pdlc.html">Explore AI-SDLC</a> for the two loops, handoff and feedback from use.</p>
             <p><a href="transformation.html">Read Organisation transformation</a> for what changes across people, process, culture and technology.</p>
             <p><a href="concept.html">Read the Concepts guide</a> for practices that help direct AI-assisted work.</p>
@@ -220,9 +232,9 @@
     <aside class="page-contents">
       <nav aria-label="On this page">
         <p>On this page</p>
-        <a href="#choose-task">Find the right guide</a><a href="#target-audience">Target audience</a>
+        <a href="#choose-task">Start with your task</a><a href="#target-audience">Audience and authority</a><a href="#guide-layers">Three layers of guidance</a>
         <a href="#why-ai-pdlc">Why AI-SDLC?</a>
-        <a href="#evergreen-guide">An evergreen development guide</a>
+        <a href="#evergreen-guide">Use and maintain the guide</a>
 
       </nav>
     </aside>

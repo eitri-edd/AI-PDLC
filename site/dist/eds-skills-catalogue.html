@@ -70,6 +70,14 @@
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+            <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f8fafc"/>
+            </linearGradient>
+            <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#eff6ff"/>
+              <stop offset="100%" stop-color="#dbeafe"/>
+            </linearGradient>
           </defs>
         </svg>
 <section id="conventions">
@@ -97,14 +105,14 @@
 
         <section id="setup-metrics">
           <h2>Setup and metrics</h2>
-          <div class="table-scroll"><table class="wide-table"><caption>Setup and metrics skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Setup and metrics skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/setup-token-logging</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Logs token usage and cost each time a skill runs, and keeps the logs local.</td></tr>
           </tbody></table></div>
         </section>
 
         <section id="planning">
           <h2>Planning</h2>
-          <div class="table-scroll"><table class="wide-table"><caption>Planning skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Planning skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/dependency-orchestrator</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Breaks user stories into a scheduled dependency graph and produces planning reports: timeline and resourcing estimates for project managers, and a build schedule for developers. Step 2.</td></tr>
             <tr><th scope="row"><code>/stories-to-issues</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Creates tracker issues from the schedule, in delivery order, with acceptance criteria and standards references.</td></tr>
             <tr><th scope="row"><code>/reconcile-stories</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Updates the schedule from actual issue closure times and regenerates the reports, keeping the original plan structure.</td></tr>
@@ -114,7 +122,7 @@
         <section id="matt-pocock">
           <h2>Matt Pocock’s skills</h2>
           <p>These base skills are installed unchanged from Matt Pocock’s public skill set. The descriptions say how this workflow uses them.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Matt Pocock’s skills used in the workflow</caption><thead><tr><th scope="col">Skill</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Matt Pocock’s skills used in the workflow</caption><thead><tr><th scope="col">Skill</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/ask-matt</code></th><td><span class="status">Available</span></td><td>An interactive guide to Matt Pocock’s engineering skills.</td></tr>
             <tr><th scope="row"><code>/setup-matt-pocock-skills</code></th><td><span class="status">Available</span></td><td>Configures the repository’s issue tracker, triage labels and domain-document layout. Step 1.</td></tr>
             <tr><th scope="row"><code>/wayfinder</code></th><td><span class="status">Available</span></td><td>Plans work too large for one agent session as a shared map of investigation tickets, resolved one at a time. PO/BA Path 2 and Step 5.</td></tr>
@@ -135,7 +143,7 @@
         <section id="frontend">
           <h2>Frontend quality</h2>
           <p>The <a href="https://impeccable.style">Impeccable</a> suite by Paul Bakaus covers frontend quality in three layers. It is not maintained by EDS.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Impeccable frontend quality commands</caption><thead><tr><th scope="col">Command</th><th scope="col">When to use</th><th scope="col">What it covers</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Impeccable frontend quality commands</caption><thead><tr><th scope="col">Command</th><th scope="col">When to use</th><th scope="col">What it covers</th></tr></thead><tbody>
             <tr><th scope="row"><code>/impeccable audit</code></th><td>After implementing an interface slice</td><td>Accessibility, performance, theming, responsive design and common anti-patterns in generated code.</td></tr>
             <tr><th scope="row"><code>/impeccable harden</code></th><td>Before shipping a feature</td><td>Resilience: edge cases, error and empty states, text overflow and slow networks.</td></tr>
             <tr><th scope="row"><code>/impeccable polish</code></th><td>On prototypes or before a stakeholder review</td><td>Visual finish: alignment, typography, spacing, interaction states and copy.</td></tr>
@@ -144,7 +152,7 @@
 
         <section id="compliance">
           <h2>Compliance</h2>
-          <div class="table-scroll"><table class="wide-table"><caption>Compliance skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Compliance skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/policies</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Holds the organisational policy references and applies them to audit a document for security and governance compliance.</td></tr>
             <tr><th scope="row"><code>/spec-compliance</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Audits a specification or TRD against the policy references. Step 8.</td></tr>
             <tr><th scope="row"><code>/issue-verification</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Confirms that each issue is a true tracer bullet and that the set is consistent, before publishing. Step 10.</td></tr>
@@ -155,7 +163,7 @@
         <section id="implementation">
           <h2>Implementation</h2>
           <p><code>/do-work</code> runs the build loop. <code>/code-reviewer</code> is the quality and compliance gate inside that loop.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Implementation skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Implementation skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/do-work</code></th><td>CoreX EDS team, adapted from Matt Pocock’s <code>/implement</code></td><td><span class="status">Available</span></td><td>Builds one issue end to end: implement, review, validate, then commit. Step 12.</td></tr>
             <tr><th scope="row"><code>/code-reviewer</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Runs the registered quality and compliance reviews in parallel and writes one consolidated report. Used by the build loop and the pre-commit hook. Gate 2.</td></tr>
             <tr><th scope="row"><code>/mutation-testing</code></th><td>CoreX EDS team, wrapping <a href="https://pitest.org">PIT</a>, <a href="https://stryker-mutator.io">StrykerJS</a>, mutmut and Cosmic Ray</td><td><span class="status">Available</span></td><td>Introduces deliberate faults to find weak tests and missing coverage. Gate 3.</td></tr>
@@ -169,7 +177,7 @@
         <section id="review">
           <h2>Review</h2>
           <p><code>/code-reviewer</code> runs these reviewers in parallel. Each can also be run on its own.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Review skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Review skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/build-check</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Formatting, type checks or compilation, tests, coverage thresholds and production builds for changed code. Gate 1.</td></tr>
             <tr><th scope="row"><code>/im8-review</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Checks the code against <a href="https://info.standards.tech.gov.sg">IM8</a> application technical controls, automating what it can and flagging items for manual review.</td></tr>
             <tr><th scope="row"><code>/semgrep</code></th><td>CoreX EDS team, wrapping <a href="https://semgrep.dev/">Semgrep</a></td><td><span class="status">Available</span></td><td>Static analysis for vulnerabilities, hard-coded secrets, injection and unsafe patterns.</td></tr>
@@ -184,7 +192,7 @@
         <section id="architecture">
           <h2>Architecture linting</h2>
           <p>These skills turn architecture decisions into runnable boundary tests, so violations fail the build. They use <a href="https://www.archunit.org">ArchUnit</a> for a JVM backend and <a href="https://github.com/sverweij/dependency-cruiser/tree/main">dependency-cruiser</a> for a JavaScript or TypeScript frontend.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Architecture linting skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Architecture linting skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/arch-tests-plan</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Analyses the project and writes a plan of the architecture rules to test. Step 4.</td></tr>
             <tr><th scope="row"><code>/arch-tests-gen</code></th><td>CoreX EDS team, wrapping ArchUnit and dependency-cruiser</td><td><span class="status">Available</span></td><td>Generates the boundary tests from the plan. Step 4.</td></tr>
             <tr><th scope="row"><code>/arch-tests-gen-feature</code></th><td>CoreX EDS team, wrapping ArchUnit and dependency-cruiser</td><td><span class="status">Available</span></td><td>Generates boundary tests for one new feature. Step 14.</td></tr>
@@ -194,7 +202,7 @@
         <section id="mcp">
           <h2>MCP integrations</h2>
           <p>Model Context Protocol (MCP) integrations connect the agent to outside sources of context. Neither is maintained by EDS.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Model Context Protocol integrations</caption><thead><tr><th scope="col">Integration</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Model Context Protocol integrations</caption><thead><tr><th scope="col">Integration</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><a href="https://context7.com">Context7</a></th><td>Upstash</td><td><span class="status status-planned">Planned</span></td><td>Live, version-specific library documentation, fetched when the agent needs to confirm how a library behaves. Step 3.</td></tr>
             <tr><th scope="row"><a href="https://www.sonarsource.com">Sonar Context Augmentation</a></th><td>Sonar</td><td><span class="status status-planned">Planned</span></td><td>Coding guidelines, architectural awareness and code search, for the Sonar review and the build loop.</td></tr>
           </tbody></table></div>
@@ -203,7 +211,7 @@
         <section id="path-to-production">
           <h2>Path to production</h2>
           <p>These skills run before a release is promoted. <code>/pre-prod-check</code> runs them all in sequence; each can also be run alone. <a href="eds-path-to-production.html">See when each runs</a>.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Path to production skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Path to production skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/pre-prod-check</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Runs the seven readiness gates in sequence, then writes a consolidated sign-off report for the Tech Lead.</td></tr>
             <tr><th scope="row"><code>/gen-code-docs</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Generates API documentation from comments in the code.</td></tr>
             <tr><th scope="row"><code>/gen-auth-matrix</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Generates an authorisation matrix showing which roles can reach which endpoints.</td></tr>
@@ -215,7 +223,7 @@
         <section id="additional">
           <h2>Additional skills</h2>
           <p>These skills sit outside the numbered steps. Teams use them as needed during design and review.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Additional skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table skills-table"><caption>Additional skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/ask-workflow</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>An interactive guide that asks questions to find the skill or path that fits a situation, from requirements to development.</td></tr>
             <tr><th scope="row"><code>/backwards-mapping</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Traces requirements from business value back to entry points, to find vertical slices and protect security and architecture. For new systems or complex features.</td></tr>
             <tr><th scope="row"><code>/fry-me</code></th><td>CoreX EDS team, adapted from Matt Pocock</td><td><span class="status">Available</span></td><td>Questions a plan or decision until there is a shared understanding. Used by <code>/issue-verification</code>.</td></tr>

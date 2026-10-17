@@ -1,5 +1,15 @@
 # Organisation transformation: editorial review
 
+## Follow-up revision · 17 October 2026
+
+- Replaced the legacy/emergent competency comparison with existing expertise, additional responsibilities and observable work. Examples assess flawed specifications, unsafe permission boundaries, incomplete evidence and specialist escalation. Multi-agent orchestration is an optional specialism.
+- Separated QA and security contributions and competency rows, with distinct acceptance responsibilities under the existing process. Updated the delegation diagram and its text equivalents to name both reviewers.
+- Added suggested ownership for the shared harness, approved models, policy content, evaluation datasets, support, incident response and ongoing funding. These responsibilities map to existing roles; they do not establish new EDS authorities.
+- Expanded the pilot scorecard to publish comparable task types, review effort, rework, escaped defects, total cost and developer experience alongside baseline results. Added example evidence rules for expansion, restriction, retirement and bounded further testing.
+- Retained the qualified productivity evidence, human accountability and rejection of fixed staffing ratios. Explicitly rejected smaller teams or greater autonomy as maturity measures.
+
+Validation for this follow-up: checked HTML structure, heading order, table headers, internal anchors and local link targets, and checked the diff for whitespace errors. The existing visual styling is unchanged; no browser accessibility audit or publication was performed. The checks below describe the earlier review, not a repeated visual audit. The live page could not be retrieved; the repository copy was used as the editing source. No new empirical research claims were added.
+
 Reviewed on 28 September 2026 against `writing.md` and `design.md`.
 
 ## Findings and changes

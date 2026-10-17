@@ -64,12 +64,20 @@
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+            <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f8fafc"/>
+            </linearGradient>
+            <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#eff6ff"/>
+              <stop offset="100%" stop-color="#dbeafe"/>
+            </linearGradient>
           </defs>
         </svg>
 <section id="matrix">
           <h2>Know what context each stage needs</h2>
           <p>Each kind of context is fed in at the stage where it shapes a decision. Loading it earlier dilutes the agent’s attention; loading it later means the decision has already been made without it.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Context to add at each stage, where it is used and why it matters</caption><thead><tr><th scope="col">Stage</th><th scope="col">Context</th><th scope="col">Where it is used</th><th scope="col">Why it matters</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table stage-table"><caption>Context to add at each stage, where it is used and why it matters</caption><thead><tr><th scope="col">Stage</th><th scope="col">Context</th><th scope="col">Where it is used</th><th scope="col">Why it matters</th></tr></thead><tbody>
             <tr><th scope="row">1. Requirements and scope</th><td>Business domain intent, persona maps, scope boundaries</td><td>The <a href="eds-po-ba-harness.html">PO/BA paths</a>: <a href="https://speckit.org">SpecKit</a>, the Socratic workflow and <a href="https://github.com/dsta-productops/clara">CLARA</a></td><td>Grounds the user stories in the business problem, so the team does not build the wrong features.</td></tr>
             <tr><th scope="row">2. Architecture and design</th><td>Shared architecture standards, integration recipes, decision templates</td><td>Story sequencing and investigation, before the technical requirements document (TRD) is written</td><td>Applies structural constraints, such as authentication, logging and database schema, before work is sliced, so design flaws do not spread into every issue.</td></tr>
             <tr><th scope="row">3. Compliance and governance</th><td>Regulatory and security policies, such as <a href="https://info.standards.tech.gov.sg">IM8</a> and <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a></td><td>The compliance audit of the TRD</td><td>Audits the TRD against policy, so security controls are declared and resolved before coding.</td></tr>

@@ -48,12 +48,12 @@
           <h1>Concepts</h1>
           <p class="lead">Use these concepts to make AI-assisted development easier to direct and review. Each section explains a practical problem, a way to address it and a small example.</p>
           <p>An AI agent is software that uses an AI model and tools to carry out a task. The concepts below explain how to define that task, support the agent and review its work.</p>
-          <p>Use these related practices together or select the ones that fit your task.</p>
+          <p>These are related practices, not lifecycle stages. Start with the relationship map, then follow the reading route or choose the concept that addresses your current problem.</p>
         </header>
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
-          <p id="page-map-note" class="page-map-note">Choose the practice that fits your problem. Start with goals and requirements, then explore agent tools, workflow controls and model selection.</p>
+          <p id="page-map-note" class="page-map-note">Reading route: goals and requirements → information and tools → workflow automation → model selection. These groups organise the explanation; they are not lifecycle stages.</p>
 
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>Goals and requirements</strong><div class="page-map-links"><a href="#how-the-concepts-fit">How the concepts fit together</a><a href="#intent-driven-development">Intent-driven development</a><a href="#spec-driven-development">Spec-driven development</a></div></li>
@@ -81,6 +81,14 @@
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+            <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f8fafc"/>
+            </linearGradient>
+            <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#eff6ff"/>
+              <stop offset="100%" stop-color="#dbeafe"/>
+            </linearGradient>
           </defs>
         </svg>
         <section id="how-the-concepts-fit">
@@ -88,7 +96,17 @@
           <p>The concepts address different parts of the same work. Intent-driven development explains <strong>why a change is needed</strong>. Spec-driven development defines <strong>what the software should do</strong> and how the team will check it.</p>
           <p>Context engineering supplies the information an AI agent needs. Harness engineering provides its tools, permissions and checks. Loop engineering defines how it responds to feedback; graph engineering organises steps and dependencies. A software factory brings these practices into a delivery workflow.</p>
           <p>For example, a team wants users to resume an unfinished service request. The team agrees the goal, writes acceptance criteria, gives the agent the relevant information and tools, and reviews the result. Model selection supports that work.</p>
-          <p>Read the sections relevant to your task. The examples show how to apply each concept.</p>
+          <div class="table-scroll"><table><caption>Relationship map: the question each concept helps answer</caption><thead><tr><th scope="col">Concept</th><th scope="col">Question</th></tr></thead><tbody>
+            <tr><th scope="row"><a href="#intent-driven-development">Intent</a></th><td>Why is the change needed, and which outcomes and constraints matter?</td></tr>
+            <tr><th scope="row"><a href="#spec-driven-development">Specification</a></th><td>What behaviour is required, and how will the team check it?</td></tr>
+            <tr><th scope="row"><a href="#context-engineering">Context</a></th><td>Which information does the agent need for this task?</td></tr>
+            <tr><th scope="row"><a href="#harness-engineering">Harness</a></th><td>Which tools, permissions and checks let the agent act within agreed limits?</td></tr>
+            <tr><th scope="row"><a href="#loop-engineering">Feedback loops</a></th><td>How does feedback guide another attempt, a change of approach or a stop?</td></tr>
+            <tr><th scope="row"><a href="#graph-engineering">Workflow dependencies</a></th><td>Which agent tasks can run in parallel, and how do decision points join and route findings?</td></tr>
+            <tr><th scope="row"><a href="#software-factory">Software factory</a></th><td>How do these practices connect agreed work to review, release and support?</td></tr>
+            <tr><th scope="row"><a href="#models">Model selection</a></th><td>Which model meets this task’s quality, time, cost and data-handling needs?</td></tr>
+          </tbody></table></div>
+          <p>The relationships also work in reverse: a failed check may reveal missing context or an unclear requirement. Use the finding to revisit the relevant practice. The examples below follow a fictional service-request application; they illustrate choices rather than prescribe organisational policy.</p>
         </section>
         <section id="intent-driven-development">
           <h2>Intent-driven development</h2>
@@ -98,8 +116,8 @@
           <ul><li><strong>Problem:</strong> who is affected, and what prevents them from completing their task?</li><li><strong>Outcome:</strong> what should the user be able to do after the change?</li><li><strong>Constraints:</strong> which access rules, data-handling requirements or existing behaviours need to remain?</li><li><strong>Open questions:</strong> what is undecided, who will resolve it and when is the decision needed?</li></ul>
           <figure class="concept-figure" id="fig-intent">
   <figcaption id="fig-intent-title-caption">Figure 1. Agree the outcome, check the result and review any change to the goal.</figcaption>
-  <details class="figure-reading" open><summary>Read as text: Flow and decisions</summary><ol><li>Start with a requirement, bug report or redesign request. Record the user problem, desired outcome, constraints and who owns each open question.</li><li>Build and test the change against that agreement. If the result fails to meet it, correct the implementation and test again.</li><li>If the evidence shows that the goal itself needs to change, ask the agreed decision owner to review it. Update the requirements and checks only after that decision.</li><li>Keep the test results and decisions for review. A failed implementation does not by itself justify a weaker goal.</li></ol></details>
-  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+  <details class="figure-reading"><summary>Read as text: Flow and decisions</summary><ol><li>Start with a requirement, bug report or redesign request. Record the user problem, desired outcome, constraints and who owns each open question.</li><li>Build and test the change against that agreement. If the result fails to meet it, correct the implementation and test again.</li><li>If the evidence shows that the goal itself needs to change, ask the agreed decision owner to review it. Update the requirements and checks only after that decision.</li><li>Keep the test results and decisions for review. A failed implementation does not by itself justify a weaker goal.</li></ol></details>
+  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
     <div class="figure-scroll" tabindex="0" role="region" aria-label="Intent and verification; scroll horizontally if needed"><svg viewBox="0 0 680 465" role="img" aria-labelledby="fig-intent-title" aria-describedby="fig-intent-title-desc"><title id="fig-intent-title">Intent and verification</title><desc id="fig-intent-title-desc">Start with a requirement, bug report or redesign request. Record the user problem, desired outcome, constraints and who owns each open question. Build and test the change against that agreement. If the result fails to meet it, correct the implementation and test again. If the evidence shows that the goal itself needs to change, ask the agreed decision owner to review it. Update the requirements and checks only after that decision. Keep the test results and decisions for review. A failed implementation does not by itself justify a weaker goal.</desc><rect class="d-node" x="15" y="20" width="190" height="90" rx="7"/><text class="d-title" x="110" y="46" text-anchor="middle">Starting point</text><text class="d-sub" x="110" y="69" text-anchor="middle">Requirements · Bug</text><text class="d-sub" x="110" y="90" text-anchor="middle">Screen redesign</text><path class="d-line" d="M205 65H250" marker-end="url(#arrow)"/><rect class="d-node d-node-accent" x="255" y="20" width="280" height="90" rx="7"/><text class="d-title" x="395" y="46" text-anchor="middle">Intent statement</text><text class="d-sub" x="395" y="69" text-anchor="middle">Outcome · Constraints</text><text class="d-sub" x="395" y="90" text-anchor="middle">Questions and owners</text><path class="d-line" d="M395 110V150" marker-end="url(#arrow)"/><rect class="d-node" x="255" y="155" width="280" height="65" rx="7"/><text class="d-title" x="395" y="181" text-anchor="middle">Implement</text><path class="d-line" d="M395 220V260" marker-end="url(#arrow)"/><rect class="d-node" x="255" y="265" width="280" height="70" rx="7"/><text class="d-title" x="395" y="291" text-anchor="middle">Verify</text><text class="d-sub" x="395" y="314" text-anchor="middle">Against agreed intent</text><path class="d-line d-dash" d="M535 300H625V187H540" marker-end="url(#arrow)"/><text class="d-label" x="594" y="244" text-anchor="middle">defect</text><polygon class="d-node d-decision" points="25,255 200,255 210,265 210,340 200,350 25,350 15,340 15,265"/><text class="d-title" x="112.5" y="281" text-anchor="middle">Review intent change</text><text class="d-sub" x="112.5" y="304" text-anchor="middle">Evidence challenges</text><text class="d-sub" x="112.5" y="325" text-anchor="middle">intended behaviour</text><path class="d-line" d="M255 300H215" marker-end="url(#arrow)"/><path class="d-line d-dash" d="M110 255V135H300V115" marker-end="url(#arrow)"/><text class="d-label" x="133" y="127" text-anchor="middle">agreed change</text><rect class="d-node" x="255" y="385" width="280" height="60" rx="7"/><text class="d-title" x="395" y="411" text-anchor="middle">Evidence for review</text><path class="d-line" d="M395 335V380" marker-end="url(#arrow)"/><text class="d-label" x="425" y="363" text-anchor="middle">pass</text></svg></div>
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the agreed intent.</p>
   </details>
@@ -129,8 +147,8 @@
           <p>Before development, the specification informs the technical design and tasks. During review, tests and reviewers compare the working software with the same acceptance criteria. Keep design choices in the technical plan so developers can choose how to meet the requirements.</p>
           <figure class="concept-figure" id="fig-spec">
   <figcaption id="fig-spec-title-caption">Figure 2. The same requirements guide development and provide the basis for testing.</figcaption>
-  <details class="figure-reading" open><summary>Read as text: Flow and decisions</summary><ol><li>Write the required behaviour and acceptance criteria. Use them to prepare the technical plan, development tasks and tests.</li><li>Build the change and review the code and test results. Correct defects against the agreed requirements, then test again.</li><li>If the intended behaviour changes, review the requirements change and update the plan, code and tests together.</li><li>Keep passing results for the acceptance review. A passing test only covers the behaviour that it checks.</li></ol></details>
-  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+  <details class="figure-reading"><summary>Read as text: Flow and decisions</summary><ol><li>Write the required behaviour and acceptance criteria. Use them to prepare the technical plan, development tasks and tests.</li><li>Build the change and review the code and test results. Correct defects against the agreed requirements, then test again.</li><li>If the intended behaviour changes, review the requirements change and update the plan, code and tests together.</li><li>Keep passing results for the acceptance review. A passing test only covers the behaviour that it checks.</li></ol></details>
+  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
     <div class="figure-scroll" tabindex="0" role="region" aria-label="Specification and defect routes; scroll horizontally if needed"><svg viewBox="0 0 680 460" role="img" aria-labelledby="fig-spec-title" aria-describedby="fig-spec-title-desc"><title id="fig-spec-title">Specification and defect routes</title><desc id="fig-spec-title-desc">Write the required behaviour and acceptance criteria. Use them to prepare the technical plan, development tasks and tests. Build the change and review the code and test results. Correct defects against the agreed requirements, then test again. If the intended behaviour changes, review the requirements change and update the plan, code and tests together. Keep passing results for the acceptance review. A passing test only covers the behaviour that it checks.</desc><rect class="d-node d-node-accent" x="20" y="20" width="210" height="90" rx="7"/><text class="d-title" x="125" y="46" text-anchor="middle">Specification</text><text class="d-sub" x="125" y="69" text-anchor="middle">Behaviour and</text><text class="d-sub" x="125" y="90" text-anchor="middle">acceptance criteria</text><path class="d-line" d="M230 65H270" marker-end="url(#arrow)"/><rect class="d-node" x="275" y="20" width="160" height="90" rx="7"/><text class="d-title" x="355" y="46" text-anchor="middle">Plan</text><text class="d-sub" x="355" y="69" text-anchor="middle">How to build</text><path class="d-line" d="M435 65H475" marker-end="url(#arrow)"/><rect class="d-node" x="480" y="20" width="180" height="90" rx="7"/><text class="d-title" x="570" y="46" text-anchor="middle">Tasks</text><text class="d-sub" x="570" y="69" text-anchor="middle">Checkable changes</text><path class="d-line" d="M570 110V150" marker-end="url(#arrow)"/><rect class="d-node" x="455" y="155" width="205" height="70" rx="7"/><text class="d-title" x="557.5" y="181" text-anchor="middle">Implement</text><text class="d-sub" x="557.5" y="204" text-anchor="middle">Code and tests</text><path class="d-line" d="M557 225V280" marker-end="url(#arrow)"/><rect class="d-node" x="455" y="285" width="205" height="70" rx="7"/><text class="d-title" x="557.5" y="311" text-anchor="middle">Verify</text><text class="d-sub" x="557.5" y="334" text-anchor="middle">Tests and review</text><path class="d-line" d="M125 110V320H450" marker-end="url(#arrow)"/><text class="d-label" x="284" y="307" text-anchor="middle">acceptance criteria</text><path class="d-line d-dash" d="M455 320H420V190H450" marker-end="url(#arrow)"/><text class="d-sub" x="324" y="242" text-anchor="middle">defect: correct and recheck</text><polygon class="d-node d-decision" points="30,380 315,380 325,390 325,435 315,445 30,445 20,435 20,390"/><text class="d-title" x="172.5" y="406" text-anchor="middle">Reviewed specification revision</text><path class="d-line d-dash" d="M455 340H360V412H330" marker-end="url(#arrow)"/><text class="d-label" x="257" y="364" text-anchor="middle">intent changed / incorrect</text><path class="d-line d-dash" d="M20 412H5V65H15" marker-end="url(#arrow)"/><path class="d-line" d="M557 355V409" marker-end="url(#arrow)"/><text class="d-sub" x="554" y="439" text-anchor="middle">pass: acceptance evidence</text></svg></div>
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the specification.</p>
   </details>
@@ -149,24 +167,24 @@
           <p>Start with the task’s goal, acceptance criteria and constraints. Add the code and standards needed for the change. Confirm the applicable source with its owner when documents disagree. Record important decisions where the next person or agent can find them.</p>
           <figure class="concept-figure" id="fig-context">
   <figcaption id="fig-context-title-caption">Figure 3. Check information before including it in the agent’s task context.</figcaption>
-  <details class="figure-reading" open><summary>Read as text: Flow and decisions</summary><ol><li>Start with the available requirements, instructions, code, standards, test results and decisions.</li><li>Choose information that is relevant to the task, current and from an authoritative source. Exclude superseded or untrusted guidance.</li><li>Provide the goal, constraints, relevant records and links to further detail. The agent uses that information for the task.</li><li>When the agent needs more information, check newly retrieved material in the same way before using it.</li></ol></details>
-  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+  <details class="figure-reading"><summary>Read as text: Flow and decisions</summary><ol><li>Start with the available requirements, instructions, code, standards, test results and decisions.</li><li>Choose information that is relevant to the task, current and from an authoritative source. Exclude superseded or untrusted guidance.</li><li>Provide the goal, constraints, relevant records and links to further detail. The agent uses that information for the task.</li><li>When the agent needs more information, check newly retrieved material in the same way before using it.</li></ol></details>
+  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
     <div class="figure-scroll" tabindex="0" role="region" aria-label="Select and check retrieved context; scroll horizontally if needed"><svg viewBox="0 0 680 365" role="img" aria-labelledby="fig-context-title" aria-describedby="fig-context-title-desc"><title id="fig-context-title">Select and check retrieved context</title><desc id="fig-context-title-desc">Start with the available requirements, instructions, code, standards, test results and decisions. Choose information that is relevant to the task, current and from an authoritative source. Exclude superseded or untrusted guidance. Provide the goal, constraints, relevant records and links to further detail. The agent uses that information for the task. When the agent needs more information, check newly retrieved material in the same way before using it.</desc><rect class="d-node" x="10" y="20" width="200" height="115" rx="7"/><text class="d-title" x="110" y="46" text-anchor="middle">Sources</text><text class="d-sub" x="110" y="69" text-anchor="middle">Instructions · Specifications</text><text class="d-sub" x="110" y="90" text-anchor="middle">Code · Conventions</text><text class="d-sub" x="110" y="111" text-anchor="middle">Results · Decisions</text><path class="d-line" d="M210 76H260" marker-end="url(#arrow)"/><polygon class="d-node d-node-accent d-decision" points="275,20 440,20 450,30 450,125 440,135 275,135 265,125 265,30"/><text class="d-title" x="357.5" y="46" text-anchor="middle">Select and check</text><text class="d-sub" x="357.5" y="69" text-anchor="middle">Relevant? Current?</text><text class="d-sub" x="357.5" y="90" text-anchor="middle">Authoritative?</text><path class="d-line" d="M450 76H490" marker-end="url(#arrow)"/><rect class="d-node" x="495" y="20" width="175" height="115" rx="7"/><text class="d-title" x="582.5" y="46" text-anchor="middle">Working context</text><text class="d-sub" x="582.5" y="69" text-anchor="middle">Objective · Constraints</text><text class="d-sub" x="582.5" y="90" text-anchor="middle">Records · Source map</text><rect class="d-node" x="265" y="235" width="185" height="85" rx="7"/><text class="d-title" x="357.5" y="261" text-anchor="middle">Retrieved detail</text><text class="d-sub" x="357.5" y="284" text-anchor="middle">More source material</text><path class="d-line d-dash" d="M357 235V140" marker-end="url(#arrow)"/><text class="d-label" x="357" y="188" text-anchor="middle">check before use</text><rect class="d-node" x="495" y="235" width="175" height="85" rx="7"/><text class="d-title" x="582.5" y="261" text-anchor="middle">Agent works</text><text class="d-sub" x="582.5" y="284" text-anchor="middle">Identify information gaps</text><path class="d-line" d="M582 135V230" marker-end="url(#arrow)"/><path class="d-line" d="M495 278H455" marker-end="url(#arrow)"/><text class="d-label" x="476" y="220" text-anchor="middle">retrieve</text><rect class="d-node" x="10" y="235" width="200" height="85" rx="7"/><text class="d-title" x="110" y="261" text-anchor="middle">Exclude</text><text class="d-sub" x="110" y="284" text-anchor="middle">Superseded or untrusted</text><path class="d-line" d="M265 110H235V278H215" marker-end="url(#arrow)"/></svg></div>
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the selection decision.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Calculate annual leave correctly">
-            <p class="example-label">Example · Calculate annual leave correctly</p>
-            <p>An AI agent is asked to add an annual leave calculator to an HR system. The request alone does not explain which days count as leave.</p>
-            <p>The developer selects the current HR-approved rules and the calendar for the employee’s location. The agent receives the relevant context:</p>
+          <aside class="example" aria-label="Fictional example: Filter service requests by status">
+            <p class="example-label">Example · Filter service requests by status</p>
+            <p>An agent is asked to add an “Open requests” filter. The label alone does not explain which statuses count as open or which records the user may see.</p>
+            <p>The developer supplies the current product decision and the code that implements request search:</p>
             <ul>
-              <li><strong>Leave policy:</strong> count only scheduled working days. Exclude public holidays and days the employee does not work.</li>
-              <li><strong>Work schedule:</strong> the example employee works Monday to Friday.</li>
-              <li><strong>Holiday calendar:</strong> Wednesday in the sample week is a public holiday in the employee’s location.</li>
-              <li><strong>Application code:</strong> the existing date-calculation function, the fields for work schedules and holidays, and tests for related leave rules.</li>
+              <li><strong>Product rule:</strong> “Open” includes submitted and in-progress requests; drafts and closed requests are excluded.</li>
+              <li><strong>Interface behaviour:</strong> the selected filter appears in the URL so refreshing preserves it.</li>
+              <li><strong>API contract:</strong> the search endpoint accepts the corresponding status values and applies the user’s access restrictions.</li>
+              <li><strong>Application code:</strong> the existing filter component, status definitions, search handler and related tests.</li>
             </ul>
-            <p>Using this context, the agent implements a calculation that deducts four days for leave from Monday to Friday in the sample week. Wednesday is excluded.</p>
-            <p>The developer checks the result against HR’s worked examples and records the policy version and calendar used. When the rules change, the team updates that context and the affected tests.</p>
+            <p>The agent implements the filter using those definitions. The developer checks the returned records, refresh behaviour and access restrictions against the agreed examples.</p>
+            <p>If an older document includes drafts in “Open”, the developer resolves the conflict with the product owner and records the applicable decision before implementation continues.</p>
           </aside>
           <h3>Keep decisions available beyond the conversation</h3>
           <p>Save decisions, unresolved questions and progress in the repository or issue tracker. A future session needs access to those records to use them. Keep source versions where they affect the decision, and follow the applicable data-handling rules.</p>
@@ -182,17 +200,24 @@
           <p>The six components below are one way to describe the supporting environment. They work together rather than running as six consecutive steps.</p>
           <figure class="concept-figure" id="fig-harness">
   <figcaption id="fig-harness-title-caption">Figure 4. Six parts support the agent’s work, checks and limits.</figcaption>
-  <details class="figure-reading" open><summary>Read as text: How the parts work together</summary><ul><li>Agent state records the current goal, progress and latest result. Tools let the agent inspect files, make changes and run checks.</li><li>Memory keeps decisions and useful information beyond the current run. Orchestration assigns tasks and coordinates who works next.</li><li>Safety sets permissions and resource limits. Observability records actions, results, time and cost so people can inspect what happened.</li><li>For example, a tool runs an upload test. Its result updates the current state; a useful finding is saved for later work. Permissions restrict the test to approved storage.</li></ul></details>
-  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+  <details class="figure-reading"><summary>Read as text: How the parts work together</summary><ul><li>Agent state records the current goal, progress and latest result. Tools let the agent inspect files, make changes and run checks.</li><li>Memory keeps decisions and useful information beyond the current run. Orchestration assigns tasks and coordinates who works next.</li><li>Safety sets permissions and resource limits. Observability records actions, results, time and cost so people can inspect what happened.</li><li>For example, a tool runs an upload test. Its result updates the current state; a useful finding is saved for later work. Permissions restrict the test to approved storage.</li></ul></details>
+  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
     <div class="figure-scroll" tabindex="0" role="region" aria-label="Six harness components; scroll horizontally if needed"><svg viewBox="0 0 680 326" role="img" aria-labelledby="fig-harness-title" aria-describedby="fig-harness-title-desc">
                 <title id="fig-harness-title">Six harness components</title><desc id="fig-harness-title-desc">Agent state records the current goal, progress and latest result. Tools let the agent inspect files, make changes and run checks. Memory keeps decisions and useful information beyond the current run. Orchestration assigns tasks and coordinates who works next. Safety sets permissions and resource limits. Observability records actions, results, time and cost so people can inspect what happened. For example, a tool runs an upload test. Its result updates the current state; a useful finding is saved for later work. Permissions restrict the test to approved storage.</desc>
                 <rect class="d-group" x="1" y="1" width="678" height="324" rx="8"/>
                 <text class="d-label" x="16" y="28">Harness: the system surrounding the agent’s work</text>
-                <rect class="d-node" x="16" y="48" width="208" height="118" rx="8"/><text class="d-title" x="28" y="76">Agent state</text><text class="d-sub" x="28" y="106">Goal, step, observation</text><text class="d-sub" x="28" y="136">What is happening now?</text>
+                <path class="d-line d-line-accent" d="M224 107H236"/>
+                <path class="d-line d-line-accent" d="M444 107H456"/>
+                <path class="d-line d-line-accent" d="M120 166V188"/>
+                <path class="d-line d-line-accent" d="M340 166V188"/>
+                <path class="d-line d-line-accent" d="M560 166V188"/>
+                <path class="d-line d-line-accent" d="M224 247H236"/>
+                <path class="d-line d-line-accent" d="M444 247H456"/>
+                <rect class="d-node d-node-accent" x="16" y="48" width="208" height="118" rx="8"/><text class="d-title" x="28" y="76">Agent state</text><text class="d-sub" x="28" y="106">Goal, step, observation</text><text class="d-sub" x="28" y="136">What is happening now?</text>
                 <rect class="d-node" x="236" y="48" width="208" height="118" rx="8"/><text class="d-title" x="248" y="76">Tools</text><text class="d-sub" x="248" y="106">Terminal, files, browser</text><text class="d-sub" x="248" y="136">How can the agent act?</text>
                 <rect class="d-node" x="456" y="48" width="208" height="118" rx="8"/><text class="d-title" x="468" y="76">Memory</text><text class="d-sub" x="468" y="106">Saved notes and retrieval</text><text class="d-sub" x="468" y="136">What survives this run?</text>
                 <rect class="d-node" x="16" y="188" width="208" height="118" rx="8"/><text class="d-title" x="28" y="216">Orchestration</text><text class="d-sub" x="28" y="246">Roles and hand-offs</text><text class="d-sub" x="28" y="276">Who works next?</text>
-                <rect class="d-node" x="236" y="188" width="208" height="118" rx="8"/><text class="d-title" x="248" y="216">Safety</text><text class="d-sub" x="248" y="246">Permissions and limits</text><text class="d-sub" x="248" y="276">What bounds the work?</text>
+                <rect class="d-node d-node-accent" x="236" y="188" width="208" height="118" rx="8"/><text class="d-title" x="248" y="216">Safety</text><text class="d-sub" x="248" y="246">Permissions and limits</text><text class="d-sub" x="248" y="276">What bounds the work?</text>
                 <rect class="d-node" x="456" y="188" width="208" height="118" rx="8"/><text class="d-title" x="468" y="216">Observability</text><text class="d-sub" x="468" y="246">Results, time, tools, model</text><text class="d-sub" x="468" y="276">What happened in the run?</text>
               </svg></div>
     <p class="diagram-key">Lines show relationships, not a required sequence. No component is given priority.</p>
@@ -228,23 +253,23 @@
           <p>A loop can start when a person requests it, an event occurs or a schedule runs. Each attempt needs a check of the actual result. Save progress between runs so later work can continue from the record.</p>
           <figure class="concept-figure" id="fig-loop">
   <figcaption id="fig-loop-title-caption">Figure 5. A feedback loop can finish successfully, stop for help or reach its agreed limit.</figcaption>
-  <details class="figure-reading" open><summary>Read as text: Flow and decisions</summary><ol><li>Start with a goal, a check that can demonstrate completion and a limit on attempts, time or cost. The limit applies throughout the run.</li><li>The agent acts, observes the result and runs the check. If it fails, correct the work and try again within the agreed limit.</li><li>If the check passes, return the results for review. If a tool or decision is unavailable, stop, record the blockage and ask the task owner for help.</li><li>If the run reaches its limit, stop and record unfinished work. Blocked or unfinished work is not a successful result.</li></ol></details>
-  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+  <details class="figure-reading"><summary>Read as text: Flow and decisions</summary><ol><li>Start with a goal, a check that can demonstrate completion and a limit on attempts, time or cost. The limit applies throughout the run.</li><li>The agent acts, observes the result and runs the check. If it fails, correct the work and try again within the agreed limit.</li><li>If the check passes, return the results for review. If a tool or decision is unavailable, stop, record the blockage and ask the task owner for help.</li><li>If the run reaches its limit, stop and record unfinished work. Blocked or unfinished work is not a successful result.</li></ol></details>
+  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
     <div class="figure-scroll" tabindex="0" role="region" aria-label="Bounded agent run; scroll horizontally if needed"><svg viewBox="0 0 680 465" role="img" aria-labelledby="fig-loop-title" aria-describedby="fig-loop-title-desc"><title id="fig-loop-title">Bounded agent run</title><desc id="fig-loop-title-desc">Start with a goal, a check that can demonstrate completion and a limit on attempts, time or cost. The limit applies throughout the run. The agent acts, observes the result and runs the check. If it fails, correct the work and try again within the agreed limit. If the check passes, return the results for review. If a tool or decision is unavailable, stop, record the blockage and ask the task owner for help. If the run reaches its limit, stop and record unfinished work. Blocked or unfinished work is not a successful result.</desc><rect class="d-group" x="165" y="10" width="505" height="285" rx="10"/><text class="d-title" x="417" y="37" text-anchor="middle">Whole-run budget / iteration cap</text><rect class="d-node" x="10" y="65" width="125" height="70" rx="7"/><text class="d-title" x="72.5" y="91" text-anchor="middle">Trigger</text><text class="d-sub" x="72.5" y="114" text-anchor="middle">Event / schedule</text><path class="d-line" d="M135 100H190" marker-end="url(#arrow)"/><rect class="d-node d-node-accent" x="195" y="65" width="190" height="70" rx="7"/><text class="d-title" x="290" y="91" text-anchor="middle">Goal</text><text class="d-sub" x="290" y="114" text-anchor="middle">Verifiable stop</text><path class="d-line" d="M385 100H430" marker-end="url(#arrow)"/><rect class="d-node" x="435" y="65" width="205" height="70" rx="7"/><text class="d-title" x="537.5" y="91" text-anchor="middle">Act</text><text class="d-sub" x="537.5" y="114" text-anchor="middle">Use tools; observe</text><path class="d-line" d="M538 135V190" marker-end="url(#arrow)"/><polygon class="d-node d-decision" points="445,195 630,195 640,205 640,255 630,265 445,265 435,255 435,205"/><text class="d-title" x="537.5" y="221" text-anchor="middle">Check</text><text class="d-sub" x="537.5" y="244" text-anchor="middle">Observe result</text><path class="d-line d-dash" d="M435 230H405V100H430" marker-end="url(#arrow)"/><text class="d-label" x="302" y="218" text-anchor="middle">fail: adjust</text><rect class="d-node" x="10" y="360" width="200" height="85" rx="7"/><text class="d-title" x="110" y="386" text-anchor="middle">Limit reached</text><text class="d-sub" x="110" y="409" text-anchor="middle">Stop; record</text><text class="d-sub" x="110" y="430" text-anchor="middle">unfinished work</text><path class="d-line" d="M165 265H110V355" marker-end="url(#arrow)"/><text class="d-label" x="94" y="319" text-anchor="middle">any point</text><rect class="d-node" x="240" y="360" width="200" height="85" rx="7"/><text class="d-title" x="340" y="386" text-anchor="middle">Blocked</text><text class="d-sub" x="340" y="409" text-anchor="middle">Stop, record and</text><text class="d-sub" x="340" y="430" text-anchor="middle">escalate to task owner</text><path class="d-line" d="M435 250H340V355" marker-end="url(#arrow)"/><text class="d-label" x="340" y="324" text-anchor="middle">blocked</text><rect class="d-node d-node-accent" x="470" y="360" width="200" height="85" rx="7"/><text class="d-title" x="570" y="386" text-anchor="middle">Checked evidence</text><text class="d-sub" x="570" y="409" text-anchor="middle">Hand to a person</text><path class="d-line" d="M570 265V355" marker-end="url(#arrow)"/><text class="d-label" x="602" y="320" text-anchor="middle">pass</text></svg></div>
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. The enclosing boundary applies to the whole run. Blue highlights the goal and successful evidence.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Improve booking code and the skill that builds it">
-            <p class="example-label">Example · Improve booking code and the skill that builds it</p>
-            <p>A coding agent builds a meeting-room booking API using a skill: reusable instructions for planning, implementing and checking code. The team uses two connected feedback loops:</p>
+          <aside class="example" aria-label="Fictional example: Improve draft saving and the skill that builds it">
+            <p class="example-label">Example · Improve draft saving and the skill that builds it</p>
+            <p>A coding agent adds draft saving to the service-request application using a skill: reusable instructions for planning, implementing and checking code. The team uses two connected feedback loops:</p>
             <ol>
-              <li><strong>Build and check the code.</strong> The agent implements bookings and runs tests. The tests pass when requests arrive one at a time.</li>
-              <li><strong>Use review findings to improve the product.</strong> A reviewer asks what happens when two people book the same room at the same time. A new test exposes a double booking. The agent fixes the code so only one booking succeeds, then reruns the booking and regression tests.</li>
+              <li><strong>Build and check the code.</strong> The agent implements saving and runs tests. The tests pass when the user edits a draft in one browser tab.</li>
+              <li><strong>Use review findings to improve the product.</strong> A reviewer tries editing the same draft in two tabs. A new test exposes a stale save overwriting newer work. The agent adds a version check so the stale save reports a conflict and retains the user’s unsaved values, then reruns the draft and regression tests.</li>
               <li><strong>Use the failure to improve the skill.</strong> The agent proposes adding a step to identify shared resources and test simultaneous requests. The developer reviews this change to the skill instructions so future tasks include that check.</li>
-              <li><strong>Evaluate the revised skill.</strong> Run the old and revised versions on the same separate set of booking tasks with the same model, tools and time limit. Include an unfamiliar case, such as overlapping time slots. Compare test results, review findings and the effort needed to correct the code.</li>
+              <li><strong>Evaluate the revised skill.</strong> Run the old and revised versions on separate practice tasks using the same model, tools and time limit for each comparison. Include an unfamiliar case, such as two staff updating a request’s status. Compare test results, review findings and the effort needed to correct the code.</li>
               <li><strong>Keep refining from evidence.</strong> If the revised skill misses a case or causes another failure, adjust its instructions and repeat the evaluation. Keep the version that meets the agreed checks without losing previously working behaviour.</li>
             </ol>
-            <p>The code loop improves the booking feature. The skill loop improves how the agent approaches later tasks. Record both versions and their results; stop for review when the agreed checks pass or the run limit is reached.</p>
+            <p>The code loop corrects the draft feature. The skill loop tests whether revised instructions help on later tasks. Record both versions and their results. Passing checks ends correction and supplies evidence for review; reaching the run limit ends the attempt with unfinished work recorded.</p>
           </aside>
           <h3>Keep the success criteria unchanged during correction</h3>
           <p>A loop can repeat a bad assumption as well as correct a defect. Check that the tests represent the intended behaviour. Do not weaken a test merely to finish the run; review a requirements change separately.</p>
@@ -254,91 +279,94 @@
         </section>
         <section id="graph-engineering">
           <h2>Graph engineering</h2>
-          <p>Graph engineering means designing how work moves between tasks, checks and decisions. Each point in the graph represents an activity or decision. Each connection defines when the workflow follows that path.</p>
-          <p>Use it when an AI development workflow needs different responses to different findings. Evaluation results and review feedback determine whether an agent corrects code, asks for a decision or sends the change for review.</p>
-          <h3>Define what happens after each check</h3>
-          <p>A coding agent adds a CSV export to a service-request application. The export should include only records the user can access. The workflow checks the change and routes each finding to the right person or task.</p>
+          <p>Graph engineering means designing how work moves between agent tasks, automated checks and decision points. Each node in the graph represents an agent activity, a verification step or a routing decision. Each edge defines the condition for following that path.</p>
+          <p>Use it when a single-agent loop is not enough—for example, when specialist agents can check different properties in parallel and a routing decision determines whether to rework the code, rerun invalidated checks, pause on a blocker or advance a verified candidate.</p>
+          <h3>Coordinate parallel agents and explicit decision points</h3>
+          <p>A coding agent adds a CSV export to a service-request application so users can download only the records they are permitted to view. Rather than routing every finding to a person, the workflow uses an execution graph with two automated decision points and three specialist agents.</p>
+          <p>Record dependencies as well as routes. Once the coding agent produces a candidate that compiles and passes unit tests, the test, security and architecture agents run in parallel against that exact commit. A join decision waits for all three results. If any finding triggers a code change, earlier check results on the superseded commit are invalidated and rerun before the candidate can advance.</p>
           <figure class="concept-figure" id="fig-graph">
-            <figcaption id="fig-graph-title-caption">Figure 6. Evaluation results and review feedback determine the next step.</figcaption>
-            <details class="figure-reading" open><summary>Read as text: Conditions and routes</summary><ol>
-              <li>The agent implements the export. Automated checks evaluate the file contents, formatting and access rules.</li>
-              <li>A code failure returns to the coding agent. An access-control failure goes to a security reviewer. An unclear product rule goes to the product owner.</li>
-              <li>After corrections or an agreed decision, the agent updates the change and reruns the checks. Unresolved decisions pause that branch.</li>
-              <li>When all checks pass and open findings are resolved, a developer reviews the change. Requested changes return to the agent; approval makes the change ready to merge.</li>
+            <figcaption id="fig-graph-title-caption">Figure 6. Decision nodes coordinate local build checks, parallel specialist agents and conditional routing.</figcaption>
+            <details class="figure-reading"><summary>Read as text: Agent nodes, decision points and routes</summary><ol>
+              <li>The coding agent implements or revises the CSV export against the agreed API contract and access rules.</li>
+              <li><strong>Decision 1 (Build gate):</strong> checks whether the candidate compiles and passes unit tests. A build or unit failure loops immediately back to the coding agent before running heavier agents.</li>
+              <li>When the build gate passes, three specialist agents run in parallel against the same commit: a test agent checks CSV formatting and streaming, a security agent tests role-based access boundaries, and an architecture agent checks API contract and module rules.</li>
+              <li><strong>Decision 2 (Join and route):</strong> waits for all three specialist agents and evaluates their combined findings. Fixable defects route back to the coding agent with the failure trace; ambiguous specifications or reached run limits pause and escalate; passing checks advance the verified candidate for merge review.</li>
             </ol></details>
-            <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
-              <div class="figure-scroll" tabindex="0" role="region" aria-label="Route evaluation and review findings; scroll horizontally if needed">
-                <svg viewBox="0 0 900 700" role="img" aria-labelledby="fig-graph-title" aria-describedby="fig-graph-title-desc">
-                  <title id="fig-graph-title">Route evaluation and review findings</title>
-                  <desc id="fig-graph-title-desc">An agent implements a CSV export and runs evaluations. Code failures return to the agent. Access failures go to a security reviewer. Unclear rules go to the product owner. After a correction or decision, implementation and evaluation repeat. All checks must pass and findings must be resolved before developer review. Requested changes return to implementation. Approval makes the change ready to merge.</desc>
-                  <rect class="d-node" x="340" y="20" width="220" height="65" rx="7"/>
-                  <text class="d-title" x="450" y="47" text-anchor="middle">Agent implements</text>
-                  <text class="d-sub" x="450" y="69" text-anchor="middle">Build or revise the export</text>
-                  <path class="d-line" d="M450 85V125" marker-end="url(#arrow)"/>
-                  <polygon class="d-node d-node-accent d-decision" points="310,130 590,130 600,140 600,210 590,220 310,220 300,210 300,140"/>
-                  <text class="d-title" x="450" y="164" text-anchor="middle">Evaluate and route</text>
-                  <text class="d-sub" x="450" y="192" text-anchor="middle">Which finding needs action?</text>
-                  <path class="d-line" d="M320 220V255H112V315" marker-end="url(#arrow)"/>
-                  <path class="d-line" d="M400 220V280H337V315" marker-end="url(#arrow)"/>
-                  <path class="d-line" d="M500 220V280H562V315" marker-end="url(#arrow)"/>
-                  <path class="d-line" d="M580 220V255H787V315" marker-end="url(#arrow)"/>
-                  <rect x="27" y="281" width="170" height="25" fill="#fff"/>
-                  <rect x="252" y="281" width="170" height="25" fill="#fff"/>
-                  <rect x="477" y="281" width="170" height="25" fill="#fff"/>
-                  <rect x="687" y="268" width="200" height="42" fill="#fff"/>
-                  <text class="d-label" x="112" y="299" text-anchor="middle">Code failure</text>
-                  <text class="d-label" x="337" y="299" text-anchor="middle">Access failure</text>
-                  <text class="d-label" x="562" y="299" text-anchor="middle">Unclear rule</text>
-                  <text class="d-label" x="787" y="284" text-anchor="middle">Checks pass</text>
-                  <text class="d-label" x="787" y="304" text-anchor="middle">Findings resolved</text>
-                  <rect class="d-node" x="10" y="320" width="205" height="80" rx="7"/>
-                  <text class="d-title" x="112" y="351" text-anchor="middle">Coding agent</text>
-                  <text class="d-sub" x="112" y="377" text-anchor="middle">Correct the defect</text>
-                  <rect class="d-node" x="235" y="320" width="205" height="80" rx="7"/>
-                  <text class="d-title" x="337" y="351" text-anchor="middle">Security reviewer</text>
-                  <text class="d-sub" x="337" y="377" text-anchor="middle">Agree the access fix</text>
-                  <rect class="d-node" x="460" y="320" width="205" height="80" rx="7"/>
-                  <text class="d-title" x="562" y="351" text-anchor="middle">Product owner</text>
-                  <text class="d-sub" x="562" y="377" text-anchor="middle">Resolve the rule</text>
-                  <rect class="d-node" x="685" y="320" width="205" height="80" rx="7"/>
-                  <text class="d-title" x="787" y="351" text-anchor="middle">Developer review</text>
-                  <text class="d-sub" x="787" y="377" text-anchor="middle">Inspect code and evidence</text>
-                  <path class="d-line d-dash" d="M112 400V455H2V52H335" marker-end="url(#arrow)"/>
-                  <path class="d-line d-dash" d="M337 400V455H112"/>
-                  <path class="d-line d-dash" d="M562 400V455H337"/>
-                  <text class="d-label" x="337" y="440" text-anchor="middle">After correction or decision: implement and recheck</text>
-                  <path class="d-line" d="M787 400V475" marker-end="url(#arrow)"/>
-                  <polygon class="d-node d-node-accent d-decision" points="695,480 880,480 890,490 890,545 880,555 695,555 685,545 685,490"/>
-                  <text class="d-title" x="787" y="511" text-anchor="middle">Review decision</text>
-                  <text class="d-sub" x="787" y="536" text-anchor="middle">Approve or request changes</text>
-                  <path class="d-line d-dash" d="M685 517H640V580H2"/>
-                  <path class="d-line d-dash" d="M2 580V455"/>
-                  <text class="d-label" x="430" y="569" text-anchor="middle">Changes requested: return to the agent</text>
-                  <path class="d-line" d="M787 555V615" marker-end="url(#arrow)"/>
-                  <text class="d-label" x="820" y="593">Approved</text>
-                  <rect class="d-node d-node-accent" x="685" y="620" width="205" height="60" rx="7"/>
-                  <text class="d-title" x="787" y="656" text-anchor="middle">Ready to merge</text>
-                  <text class="d-sub" x="337" y="640" text-anchor="middle">Pause for unresolved decisions or unavailable tools.</text>
-                  <text class="d-sub" x="337" y="666" text-anchor="middle">Stop and record progress when the run limit is reached.</text>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Agent execution graph with decision points; scroll horizontally if needed">
+                <svg viewBox="0 0 900 670" role="img" aria-labelledby="fig-graph-title" aria-describedby="fig-graph-title-desc">
+                  <title id="fig-graph-title">Agent execution graph and routing decisions</title>
+                  <desc id="fig-graph-title-desc">A coding agent builds the CSV export and enters Decision 1, the build gate. Compile or unit failures return immediately to the coding agent. Passing candidates fan out to three parallel specialist agents on the same commit: a test agent, a security agent and an architecture agent. Decision 2 joins their outputs and routes the next step: code or boundary defects return to the coding agent for rework and re-verification; ambiguous rules or budget limits pause and escalate; all checks passing produces a verified candidate ready for merge review.</desc>
+                  <rect class="d-node" x="330" y="20" width="240" height="65" rx="8"/>
+                  <text class="d-title" x="450" y="47" text-anchor="middle">Coding agent</text>
+                  <text class="d-sub" x="450" y="69" text-anchor="middle">Build or revise CSV export</text>
+                  <path class="d-line" d="M450 85V115" marker-end="url(#arrow)"/>
+                  <polygon class="d-node d-node-accent d-decision" points="315,120 585,120 595,130 595,185 585,195 315,195 305,185 305,130"/>
+                  <text class="d-title" x="450" y="150" text-anchor="middle">Decision 1 · Build gate</text>
+                  <text class="d-sub" x="450" y="174" text-anchor="middle">Compiles and passes unit tests?</text>
+                  <path class="d-line d-dash" d="M305 157H195V52H325" marker-end="url(#arrow)"/>
+                  <text class="d-label" x="195" y="112" text-anchor="middle">Fail: quick local fix</text>
+                  <path class="d-line d-line-accent" d="M370 195V225H145V250" marker-end="url(#arrow-accent)"/>
+                  <path class="d-line d-line-accent" d="M450 195V250" marker-end="url(#arrow-accent)"/>
+                  <path class="d-line d-line-accent" d="M530 195V225H755V250" marker-end="url(#arrow-accent)"/>
+                  <text class="d-label d-label-accent" x="450" y="216" text-anchor="middle">Pass: fan out to parallel specialist agents (same commit)</text>
+                  <rect class="d-node" x="35" y="255" width="220" height="80" rx="8"/>
+                  <text class="d-title" x="145" y="286" text-anchor="middle">Test agent</text>
+                  <text class="d-sub" x="145" y="312" text-anchor="middle">CSV columns &amp; streaming</text>
+                  <rect class="d-node" x="340" y="255" width="220" height="80" rx="8"/>
+                  <text class="d-title" x="450" y="286" text-anchor="middle">Security agent</text>
+                  <text class="d-sub" x="450" y="312" text-anchor="middle">Role &amp; access boundaries</text>
+                  <rect class="d-node" x="645" y="255" width="220" height="80" rx="8"/>
+                  <text class="d-title" x="755" y="286" text-anchor="middle">Architecture agent</text>
+                  <text class="d-sub" x="755" y="312" text-anchor="middle">API contract &amp; module rules</text>
+                  <path class="d-line" d="M145 335V365H370V385" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M450 335V385" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M755 335V365H530V385" marker-end="url(#arrow)"/>
+                  <polygon class="d-node d-node-accent d-decision" points="295,390 605,390 615,400 615,460 605,470 295,470 285,460 285,400"/>
+                  <text class="d-title" x="450" y="422" text-anchor="middle">Decision 2 · Join and route</text>
+                  <text class="d-sub" x="450" y="446" text-anchor="middle">Evaluate combined agent findings</text>
+                  <path class="d-line" d="M340 470V505H150V540" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M450 470V540" marker-end="url(#arrow)"/>
+                  <path class="d-line d-line-accent" d="M560 470V505H750V540" marker-end="url(#arrow-accent)"/>
+                  <text class="d-label" x="150" y="526" text-anchor="middle">Fixable defect found</text>
+                  <text class="d-label" x="450" y="512" text-anchor="middle">Ambiguous spec or limit</text>
+                  <text class="d-label d-label-accent" x="750" y="526" text-anchor="middle">All agent checks pass</text>
+                  <rect class="d-node" x="35" y="545" width="230" height="80" rx="8"/>
+                  <text class="d-title" x="150" y="576" text-anchor="middle">Route to coding agent</text>
+                  <text class="d-sub" x="150" y="602" text-anchor="middle">Pass failure trace; rerun graph</text>
+                  <path class="d-line d-dash" d="M35 585H12V52H325" marker-end="url(#arrow)"/>
+                  <text class="d-label" x="150" y="648" text-anchor="middle">Invalidate stale checks and re-verify</text>
+                  <rect class="d-node" x="335" y="545" width="230" height="80" rx="8"/>
+                  <text class="d-title" x="450" y="576" text-anchor="middle">Pause and escalate</text>
+                  <text class="d-sub" x="450" y="602" text-anchor="middle">Record blocker for task owner</text>
+                  <rect class="d-node d-node-accent" x="635" y="545" width="230" height="80" rx="8"/>
+                  <text class="d-title" x="750" y="576" text-anchor="middle">Verified candidate</text>
+                  <text class="d-sub" x="750" y="602" text-anchor="middle">Ready for merge review</text>
                 </svg>
               </div>
-              <p class="diagram-key">Labels show the condition for each branch. Dashed arrows return work for correction and evaluation. Blue highlights decisions and the completed review.</p>
+              <p class="diagram-key">Cut-corner shapes mark automated decision points. Solid arrows show forward flow and parallel fan-out; dashed arrows return work to the coding agent when checks fail.</p>
             </details>
           </figure>
-          <aside class="example" aria-label="Fictional example: Route feedback while building a CSV export">
-            <p class="example-label">Example · Route feedback while building a CSV export</p>
-            <p>The team defines the following routes before the coding agent starts:</p>
+          <aside class="example" aria-label="Fictional example: Multi-agent routing while building a CSV export">
+            <p class="example-label">Example · Multi-agent routing while building a CSV export</p>
+            <p>The workflow graph coordinates four specialised agents and two decision gates before a developer reviews the completed change:</p>
             <ul>
-              <li><strong>The exported file has incorrect columns:</strong> return the failing test to the coding agent. It fixes the export and reruns the checks.</li>
-              <li><strong>The export includes another team's restricted records:</strong> send the finding to a security reviewer to agree the correction. The agent applies it and reruns access and export tests.</li>
-              <li><strong>The expected behaviour is unclear:</strong> if nobody has decided whether archived requests belong in the export, pause and ask the product owner. Record the decision, update the acceptance criteria and resume implementation.</li>
-              <li><strong>All checks pass and findings are resolved:</strong> send the code and evaluation results to a developer for review. Review feedback sends specific changes back to the agent; approval makes the change ready to merge.</li>
+              <li><strong>Decision 1 · Fast build gate:</strong> when the coding agent finishes a candidate, the graph runs compile and unit checks first. If a type error or broken unit test appears, the graph routes the error directly back to the coding agent without invoking the specialist agents.</li>
+              <li><strong>Parallel specialist verification:</strong> once the build gate passes, the graph fans out to three agents against the same commit—the <em>test agent</em> checks CSV column headers and pagination streaming, the <em>security agent</em> verifies that queries filter out another team’s restricted records, and the <em>architecture agent</em> checks that the controller does not bypass the service layer.</li>
+              <li><strong>Decision 2 · Join and route findings:</strong> after all three agents finish, the join node inspects their structured reports:
+                <ul>
+                  <li>If the security agent flags a missing tenant filter or the architecture agent detects a layer violation, the router sends both structured findings back to the coding agent, marks the previous test run as stale, and reruns the graph on the revised commit.</li>
+                  <li>If an agent encounters an unspecified rule—such as whether archived requests belong in the export—or reaches the retry cap, the router pauses the run and records a single escalation for the task owner.</li>
+                  <li>When all three specialist agents pass on the same commit, the router bundles the diff and verification evidence into a verified candidate for merge review.</li>
+                </ul>
+              </li>
             </ul>
-            <p>Each route names its trigger, owner and next action. If several findings exist, resolve each one and rerun the checks before developer review. Record progress and stop when the run limit is reached.</p>
+            <p>Each decision point uses explicit conditions rather than open-ended agent conversation. Humans are not pulled into intermediate syntax, test or boundary fixes; they review the verified candidate or resolve genuine specification gaps.</p>
           </aside>
           <h3>Keep routing rules explicit</h3>
-          <p>Give each branch a clear condition, required evidence and owner. Pause when a tool or decision is unavailable. Keep the findings and decisions with the change so the workflow can resume from the right point.</p>
-          <p class="next-step"><strong>Next step:</strong> Map one AI-assisted coding workflow. For each evaluation or review outcome, name who acts next and which checks must run again. Use <a href="eds-developer-harness.html#plan">the story-planning guidance</a> and <a href="eds-developer-harness.html#check">the task review and approval steps</a>.</p>
+          <p>Give each decision point a clear condition, state transition and retry bound. When a rework branch updates the code, invalidate earlier check results so the join node never combines pass notices from different commits.</p>
+          <p>A graph adds coordination work. Use a single-agent loop when a task only needs repeated test-and-fix steps. Running separate review agents catches cross-cutting defects early, but their position in the graph does not replace final human accountability for merge or release.</p>
+          <p class="next-step"><strong>Next step:</strong> Map one development workflow. Mark which agent checks can run in parallel on the same commit, what condition triggers a rework loop and when the graph should pause for a person. Use <a href="eds-developer-harness.html#plan">the story-planning guidance</a> and <a href="eds-developer-harness.html#check">the task review and approval steps</a>.</p>
           <p class="source-ref">Sources: <a href="#source-8" aria-label="Source 8: PuppyGraph, Graph engineering">[8]</a>; <a href="#source-9" aria-label="Source 9: Anthropic, Building effective agents">[9]</a>.</p>
         </section>
         <section id="software-factory">
@@ -349,8 +377,8 @@
           <p>Addy Osmani uses “light” and “dark” factory to distinguish review arrangements. In a light factory, a person reads changes before release. In a dark factory, permitted changes can be released without that reading step. These are operating choices, not levels of maturity.</p>
           <figure class="concept-figure" id="fig-factory">
   <figcaption id="fig-factory-title-caption">Figure 7. Agreed checks and release authority govern what reaches production.</figcaption>
-  <details class="figure-reading" open><summary>Read as text: Flow and decisions</summary><ol><li>Start with a queue of agreed work. Agents implement changes within their permissions and run the relevant checks.</li><li>If checks fail, correct the work or stop. A failure does not permit deployment.</li><li>For the light route, a person reviews the change. For an authorised dark route, automation makes the release decision within its agreed scope.</li><li>Release only when the applicable decision permits it. Feed monitoring results and user feedback into the next work items.</li></ol></details>
-  <details class="diagram-detail"><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+  <details class="figure-reading"><summary>Read as text: Flow and decisions</summary><ol><li>Start with a queue of agreed work. Agents implement changes within their permissions and run the relevant checks.</li><li>If checks fail, correct the work or stop. A failure does not permit deployment.</li><li>For the light route, a person reviews the change. For an authorised dark route, automation makes the release decision within its agreed scope.</li><li>Release only when the applicable decision permits it. Feed monitoring results and user feedback into the next work items.</li></ol></details>
+  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
     <div class="figure-scroll" tabindex="0" role="region" aria-label="Review and release paths; scroll horizontally if needed"><svg viewBox="0 0 680 624" role="img" aria-labelledby="fig-factory-title" aria-describedby="fig-factory-title-desc"><title id="fig-factory-title">Review and release paths</title><desc id="fig-factory-title-desc">Start with a queue of agreed work. Agents implement changes within their permissions and run the relevant checks. If checks fail, correct the work or stop. A failure does not permit deployment. For the light route, a person reviews the change. For an authorised dark route, automation makes the release decision within its agreed scope. Release only when the applicable decision permits it. Feed monitoring results and user feedback into the next work items.</desc><g transform="translate(0 30)"><rect class="d-node" x="10" y="20" width="180" height="76" rx="6"/><text class="d-title" x="100" y="45" text-anchor="middle">Queue</text><text class="d-sub" x="100" y="69" text-anchor="middle">Agreed work</text><rect class="d-node" x="250" y="20" width="180" height="76" rx="6"/><text class="d-title" x="340" y="45" text-anchor="middle">Agent work</text><text class="d-sub" x="340" y="69" text-anchor="middle">Implement and check</text><path class="d-line" d="M190 58H244" marker-end="url(#arrow)"/><path class="d-line" d="M430 58H494" marker-end="url(#arrow)"/><rect class="d-node" x="500" y="20" width="170" height="76" rx="6"/><text class="d-title" x="585" y="45" text-anchor="middle">Checks</text><text class="d-sub" x="585" y="69" text-anchor="middle">Pass or fail</text><path class="d-line" d="M585 96V136H340V170" marker-end="url(#arrow)"/><text class="d-label" x="455" y="127" text-anchor="middle">pass</text><path class="d-line d-dash" d="M585 20V6H340V15" marker-end="url(#arrow)"/><text class="d-label" x="450" y="-6" text-anchor="middle">fail: correct or stop</text><polygon class="d-node d-node-accent d-decision" points="230,175 450,175 460,185 460,241 450,251 230,251 220,241 220,185"/><text class="d-title" x="340" y="200" text-anchor="middle">Release-policy decision</text><text class="d-sub" x="340" y="224" text-anchor="middle">Within authorised scope</text><polygon class="d-node d-node-accent d-decision" points="20,315 250,315 260,325 260,385 250,395 20,395 10,385 10,325"/><text class="d-title" x="135" y="340" text-anchor="middle">Automated decision</text><text class="d-sub" x="135" y="364" text-anchor="middle">Authorised dark path</text><polygon class="d-node d-node-accent d-decision" points="430,315 660,315 670,325 670,385 660,395 430,395 420,385 420,325"/><text class="d-title" x="545" y="340" text-anchor="middle">Human review</text><text class="d-sub" x="545" y="364" text-anchor="middle">Light path</text><path class="d-line" d="M220 213H135V309" marker-end="url(#arrow)"/><text class="d-label" x="155" y="203" text-anchor="middle">dark</text><path class="d-line" d="M460 213H545V309" marker-end="url(#arrow)"/><text class="d-label" x="516" y="203" text-anchor="middle">light</text><rect class="d-node" x="235" y="459" width="210" height="76" rx="6"/><text class="d-title" x="340" y="484" text-anchor="middle">Deploy</text><text class="d-sub" x="340" y="508" text-anchor="middle">Observe the result</text><path class="d-line" d="M135 395V433H300V453" marker-end="url(#arrow)"/><text class="d-label" x="198" y="425" text-anchor="middle">approved</text><path class="d-line" d="M545 395V433H385V453" marker-end="url(#arrow)"/><text class="d-label" x="476" y="425" text-anchor="middle">approved</text><path class="d-line d-dash" d="M235 497H4V110H100V102" marker-end="url(#arrow)"/><text class="d-label" x="110" y="550" text-anchor="middle">feedback to queue</text><text class="d-label" x="340" y="575" text-anchor="middle">A rejected release stays out of production.</text></g></svg></div>
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights release decisions.</p>
   </details>
@@ -378,12 +406,12 @@
           <p>A defined output format or a confidence score does not establish that an answer is correct. The model examples and research below explain the distinctions and limits.</p>
           <aside class="example" aria-label="Fictional example: Choose a model for a coding agent">
             <p class="example-label">Example · Choose a model for a coding agent</p>
-            <p>A team compares two models for its coding agent. One evaluation task is to fix a booking API that lets two people reserve the same room at the same time.</p>
+            <p>A team compares two models for its coding agent. One evaluation task is to fix draft saving so an older browser tab cannot overwrite newer service-request changes.</p>
             <p>The harness gives both models the same code, requirements, tools and time limit. Each model produces a code change; the team runs the same tests on both results.</p>
-            <div class="table-scroll"><table><caption>Example results for the booking fix</caption><thead><tr><th scope="col">Check</th><th scope="col">Model A’s code</th><th scope="col">Model B’s code</th></tr></thead><tbody>
-              <tr><th scope="row">A user can book an available room</th><td>Pass</td><td>Pass</td></tr>
-              <tr><th scope="row">Two simultaneous requests produce only one booking</th><td>Fail: both bookings succeed</td><td>Pass: one succeeds and the other reports a conflict</td></tr>
-              <tr><th scope="row">A user cannot cancel another user’s booking</th><td>Pass</td><td>Pass</td></tr>
+            <div class="table-scroll"><table><caption>Fictional results for the draft-saving fix</caption><thead><tr><th scope="col">Check</th><th scope="col">Model A’s code</th><th scope="col">Model B’s code</th></tr></thead><tbody>
+              <tr><th scope="row">A user can save and reopen an incomplete request</th><td>Pass</td><td>Pass</td></tr>
+              <tr><th scope="row">A stale save preserves newer work and reports a conflict</th><td>Fail: newer work is overwritten</td><td>Pass: conflict reported and unsaved values retained</td></tr>
+              <tr><th scope="row">Another user cannot read or change the draft</th><td>Pass</td><td>Pass</td></tr>
             </tbody></table></div>
             <p>For this task, Model B’s change meets all three checks. The developer also reviews the code and records response time, running cost and any corrections needed.</p>
             <p>The team repeats the comparison on other representative coding tasks, keeping separate tasks for the final evaluation. It chooses a model that meets its quality, time and cost criteria across those tasks.</p>

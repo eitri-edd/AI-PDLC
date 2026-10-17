@@ -64,11 +64,20 @@
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+            <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f8fafc"/>
+            </linearGradient>
+            <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#eff6ff"/>
+              <stop offset="100%" stop-color="#dbeafe"/>
+            </linearGradient>
           </defs>
         </svg>
 <section id="stages">
           <h2>Follow the four pipeline stages</h2>
           <figure class="concept-figure">
+            <figcaption>Figure 1. The four pipeline stages. The check scope, shown by the widening band, grows from the staged change to the full codebase; the final stage is highlighted because it ends in a human sign-off.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 240" role="img" aria-labelledby="fig-pipeline-title">
                 <title id="fig-pipeline-title">Four pipeline stages from left to right. Stage 4.1, pre-commit: an automated review of the staged change on each commit. Stage 4.2, merge to Dev: API documentation for the changed files in the merge request. Stage 4.3, merge to QA: full-codebase scans and generated documents. Stage 4.4, pre-production: all readiness gates on the full codebase for the Tech Lead's sign-off. The scope of the checks widens from the developer's change to the whole codebase.</title>
@@ -91,11 +100,10 @@
                 <text class="d-label d-label-accent" x="340" y="230" text-anchor="middle">Scope of checks widens from one change to the whole codebase</text>
               </svg>
             </div>
-            <figcaption>Figure 1. The four pipeline stages. The check scope, shown by the widening band, grows from the staged change to the full codebase; the final stage is highlighted because it ends in a human sign-off.</figcaption>
           </figure>
           <p>A commit triggers checks on the staged change only. A merge request (MR) to the Dev branch generates documentation for the changed files. An MR to the QA branch runs full-codebase scans and document generators. Promoting a release candidate runs every readiness gate again on the full codebase and produces one report for the Tech Lead.</p>
           <p>The pipeline has four stages, numbered 4.1 to 4.4 below.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Pipeline stages, triggers, checks, scope and blocking behaviour</caption><thead><tr><th scope="col">Stage</th><th scope="col">Trigger</th><th scope="col">What runs</th><th scope="col">Scope</th><th scope="col">Blocking</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table pipeline-table"><caption>Pipeline stages, triggers, checks, scope and blocking behaviour</caption><thead><tr><th scope="col">Stage</th><th scope="col">Trigger</th><th scope="col">What runs</th><th scope="col">Scope</th><th scope="col">Blocking</th></tr></thead><tbody>
             <tr><th scope="row"><a href="#pre-commit">4.1 Pre-commit</a></th><td>Each commit, through an automatic hook</td><td>The quality and compliance reviews from the build loop, including the IM8 review</td><td>Staged change</td><td>Blocks the commit on Critical or High findings</td></tr>
             <tr><th scope="row"><a href="#merge-dev">4.2 Merge to Dev</a></th><td>MR targeting the Dev branch</td><td>API documentation generation</td><td>Changed files in the MR</td><td>Does not block</td></tr>
             <tr><th scope="row"><a href="#merge-qa">4.3 Merge to QA</a></th><td>MR targeting the QA branch</td><td>Security scans, the authorisation matrix and the technical architecture document</td><td>Full codebase</td><td>Scans block on Critical or High findings; generated documents do not block</td></tr>

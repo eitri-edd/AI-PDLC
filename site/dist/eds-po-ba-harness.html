@@ -62,12 +62,21 @@
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+            <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f8fafc"/>
+            </linearGradient>
+            <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#eff6ff"/>
+              <stop offset="100%" stop-color="#dbeafe"/>
+            </linearGradient>
           </defs>
         </svg>
 <section id="choose-path">
           <h2>Choose a path</h2>
           <p>The right path depends on who is writing the requirements and how much is still unknown. Each path produces a different set of files, but all three end in the same handoff.</p>
           <figure class="concept-figure">
+            <figcaption>Figure 1. Three PO/BA paths produce different files, but all end in one committed handoff to the developer harness.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 300" role="img" aria-labelledby="fig-paths-title">
                 <title id="fig-paths-title">Three PO/BA paths join at one handoff. Path 1, SpecKit, is light and business-focused and produces a written specification. Path 2, the Socratic workflow, is deep and technical and produces an early-draft TRD. Path 3, CLARA research, is research-led and produces a set of specification files. All three are committed and handed off, with an optional prototype, to the developer harness for technical planning.</title>
@@ -82,7 +91,6 @@
                 <rect class="d-node" x="460" y="220" width="219" height="64" rx="8"/><text class="d-title" x="569" y="246" text-anchor="middle">Developer harness</text><text class="d-sub" x="569" y="270" text-anchor="middle">Technical planning</text>
               </svg>
             </div>
-            <figcaption>Figure 1. Three PO/BA paths produce different files, but all end in one committed handoff to the developer harness.</figcaption>
           </figure>
           <p>Path 1 suits simple or well-defined features and produces a written specification. Path 2 suits large or ambiguous features and produces an early-draft technical requirements document (TRD) on the team’s issue tracker. Path 3 suits user research on new products and produces a set of specification files. Each path can add a prototype, and each ends with the same commit and handoff.</p>
           <div class="table-scroll"><table class="wide-table"><caption>The three PO/BA paths compared</caption><thead><tr><th scope="col">Path</th><th scope="col">Best for</th><th scope="col">Main tools</th><th scope="col">Hands off</th></tr></thead><tbody>

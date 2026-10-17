@@ -70,6 +70,14 @@
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+            <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f8fafc"/>
+            </linearGradient>
+            <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#eff6ff"/>
+              <stop offset="100%" stop-color="#dbeafe"/>
+            </linearGradient>
           </defs>
         </svg>
 
@@ -88,6 +96,7 @@
           <h2>How the course is organised</h2>
           <p>The course has four modules, taken in order. Each builds on the one before, and each lesson includes hands-on practice and self-check questions.</p>
           <figure class="concept-figure">
+            <figcaption>Figure 1. The four modules, taken in sequence. Start with the prerequisites.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 130" role="img" aria-labelledby="fig-course-title">
                 <title id="fig-course-title">The course path. Prerequisites cover why the workflow works. Lesson 0 covers planning the delivery from user stories. Lesson 1 covers running each workflow skill. Lesson 2 covers fitting the workflow to your team's context. Prerequisites is highlighted as the place to start.</title>
@@ -104,9 +113,8 @@
                 <text class="d-label" x="604" y="108" text-anchor="middle">fit it to your team</text>
               </svg>
             </div>
-            <figcaption>Figure 1. The four modules, taken in sequence. Start with the prerequisites.</figcaption>
           </figure>
-          <div class="table-scroll"><table class="wide-table"><caption>The four modules of the training</caption><thead><tr><th scope="col">Module</th><th scope="col">Main audience</th><th scope="col">What you learn</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table wide-col-first"><caption>The four modules of the training</caption><thead><tr><th scope="col">Module</th><th scope="col">Main audience</th><th scope="col">What you learn</th></tr></thead><tbody>
             <tr><th scope="row">Prerequisites: foundations of agentic engineering</th><td>Everyone</td><td>Matt Pocock’s baseline workflow, practised hands-on, and four foundation topics: how models behave, agentic engineering, development principles and multi-agent patterns</td></tr>
             <tr><th scope="row">Lesson 0: PO workflow</th><td>Product owners, with the Tech Lead</td><td>Writing fine-grained stories, producing a dependency-sequenced delivery plan, creating issues, tracking progress and accepting the result</td></tr>
             <tr><th scope="row">Lesson 1: workflow skills</th><td>Developers and Tech Leads</td><td>What each Eitri skill adds, where it runs in the five-phase workflow and what it produces</td></tr>
@@ -148,6 +156,7 @@
           <h3>Give every loop a way to stop</h3>
           <p>An agent works in a reason, act and observe cycle, often called the ReAct pattern. Observing real results is what lets it correct itself. Each loop also needs a convergence condition: an objective signal that the work is done.</p>
           <figure class="concept-figure">
+            <figcaption>Figure 2. An agent loop needs an objective convergence check, highlighted, or it has no reason to stop.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 280" role="img" aria-labelledby="fig-react-title">
                 <title id="fig-react-title">The agent loop. The agent reasons about what to do, acts by calling a tool or writing code, and observes the result. A convergence check asks whether a machine-verifiable condition is met, such as all tests passing and no must-fix findings. If it is met, the loop exits. If not, the agent reasons again.</title>
@@ -165,7 +174,6 @@
                 <text class="d-label" x="108" y="254">not met: reason again</text>
               </svg>
             </div>
-            <figcaption>Figure 2. An agent loop needs an objective convergence check, highlighted, or it has no reason to stop.</figcaption>
           </figure>
           <p>The top row runs left to right: reason, act, observe. The convergence check, highlighted in blue, then asks whether a machine-verifiable condition holds, such as all tests passing with no must-fix findings. If it does, the loop exits; if not, the agent reasons again. Without the check, the loop can run indefinitely, and each pass adds observations to the context until quality drops. <a href="concept.html#loop-engineering">Read about loop engineering</a>.</p>
           <h3>Plan before you build</h3>
@@ -233,6 +241,7 @@
           <h2>Lesson 1: what the workflow adds</h2>
           <p>The baseline workflow runs in five phases: architecture, specification, decomposition, implementation and closeout. Lesson 1 shows where Eitri adds a check to close a gap that appears in government enterprise work, and where people sign off.</p>
           <figure class="concept-figure">
+            <figcaption>Figure 3. The five phases, with the two human sign-offs highlighted.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 250" role="img" aria-labelledby="fig-phases-title">
                 <title id="fig-phases-title">The five-phase workflow with two human sign-offs. Architecture sequences the stories. Specification produces the TRD and checks its compliance. HITL gate 1 signs off the TRD. Decomposition produces verified tickets. HITL gate 2 signs off the tickets. Implementation runs the self-correcting do-work loop. Closeout adds feature boundary tests and E2E evidence. The story is accepted and the loop moves to the next story.</title>
@@ -253,7 +262,6 @@
                 <rect class="d-node" x="1" y="170" width="150" height="64" rx="8"/><text class="d-title" x="76" y="196" text-anchor="middle">Accept</text><text class="d-sub" x="76" y="220" text-anchor="middle">Then next story</text>
               </svg>
             </div>
-            <figcaption>Figure 3. The five phases, with the two human sign-offs highlighted.</figcaption>
           </figure>
           <p>Read the top row from left to right and the bottom row from right to left. Architecture sequences the stories; specification produces the technical requirements document (TRD) and audits it. Human-in-the-loop gate 1 (HITL 1), highlighted, signs off the TRD. Decomposition produces checked tickets, and HITL 2 signs them off as ready. Implementation runs the self-correcting loop, closeout adds boundary tests and acceptance evidence, and the accepted story makes way for the next.</p>
           <div class="table-scroll"><table class="wide-table"><caption>Gaps in the baseline workflow and the Eitri skill that closes each, as the training describes them</caption><thead><tr><th scope="col">Gap</th><th scope="col">Skill</th><th scope="col">Phase</th><th scope="col">What it adds</th></tr></thead><tbody>
@@ -278,7 +286,7 @@
         <section id="team-context">
           <h2>Lesson 2: inject your team’s context</h2>
           <p>Without your team’s context, the skills fall back on generic training data. Stories miss your domain vocabulary, plans ignore your architecture, specifications bypass your policies, code uses outdated APIs and reviews miss local conventions. Lesson 2 maps each kind of context to the phase and skill that reads it.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>The five-phase context injection model, as the training describes it</caption><thead><tr><th scope="col">Phase</th><th scope="col">What to inject</th><th scope="col">Where it lives</th><th scope="col">Cost of skipping it</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table stage-table"><caption>The five-phase context injection model, as the training describes it</caption><thead><tr><th scope="col">Phase</th><th scope="col">What to inject</th><th scope="col">Where it lives</th><th scope="col">Cost of skipping it</th></tr></thead><tbody>
             <tr><th scope="row">1. Business domain and requirements</th><td>Domain vocabulary, personas, systems, data model and scope</td><td><code>CONTEXT.md</code> or a Spec Kit <code>constitution.md</code></td><td>The agent designs the wrong features in generic language</td></tr>
             <tr><th scope="row">2. Architecture standards</th><td>Shared standards, integration recipes and ADR templates</td><td>The AppStandards library and any team standards in OKF, registered with the orchestrator</td><td>Architectural flaws spread into every ticket</td></tr>
             <tr><th scope="row">3. Security and governance</th><td>IM8 and ARC (built in) plus any agency policies</td><td>Markdown checklists in the policies skill, registered in its <code>SKILL.md</code></td><td>Policy gaps survive into code and need a rework sprint</td></tr>
