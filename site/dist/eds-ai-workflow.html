@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="identity" href="index.html" aria-label="AI-SDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-SDLC</span></a>
-      <span class="organisation">EDS</span>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
     </div>
   </header>
   <div class="page-layout">
@@ -51,6 +51,15 @@
           <p>The CoreX EDS team maintains this workflow. The workflow is made of skills: packaged instructions that an AI agent runs for one task, such as writing a specification or reviewing a change. It builds on Matt Pocock’s engineering skills and adds EDS skills for scheduling, standards, compliance, validation and release readiness. For the strategy behind it, including the six-stage loop, assurance model, autonomy and measures, <a href="product-implementation.html">read Product implementation</a>.</p>
           <p>Some capabilities are still planned, and the thresholds shown are defaults that a team can change; both are labelled where they appear.</p>
         </header>
+        <figure class="page-map page-map--route" aria-label="Page summary">
+          <p class="page-map-title">On this page · 4 steps to use this section</p>
+          <ol class="page-map-steps">
+            <li><a href="#workflow">See the route</a><span>Follow the end-to-end flow from PRD handoff to pre-production sign-off.</span></li>
+            <li><a href="#ownership">Check ownership</a><span>Confirm who owns the PRD, the user-story TRD, issues and release sign-off.</span></li>
+            <li><a href="#principles">Apply the principles</a><span>Use layered context, vertical slices and independent validation gates.</span></li>
+            <li><a href="#harness">Diagnose &amp; measure</a><span>Trace any failure to one of five harness layers and track workflow health.</span></li>
+          </ol>
+        </figure>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#pages">Pages in this section</a>
             <a href="#workflow">The route to production</a>
@@ -98,29 +107,30 @@
                 <title id="fig-route-title">The EDS AI Workflow. The PO or BA hands over a PRD. Developers plan one user story into a technical design. Human gate 1 signs off the design; findings send it back for revision. The design is sliced into small issues. Human gate 2 approves them as ready; questions send them back. The build loop builds, checks and fixes one issue at a time. Closeout adds review and evidence; a failed check returns to the build loop. Release gates run the pipeline checks, and the Tech Lead approves release.</title>
                 <path class="d-line d-dash" d="M428 44V22H252V40" marker-end="url(#arrow)"/>
                 <text class="d-label" x="340" y="16" text-anchor="middle">findings: revise the design</text>
-                <rect class="d-node" x="1" y="44" width="150" height="64" rx="8"/><text class="d-title" x="76" y="70" text-anchor="middle">PRD handoff</text><text class="d-sub" x="76" y="94" text-anchor="middle">From the PO or BA</text>
-                <path class="d-line" d="M151 76H173" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="177" y="44" width="150" height="64" rx="8"/><text class="d-title" x="252" y="70" text-anchor="middle">Plan the story</text><text class="d-sub" x="252" y="94" text-anchor="middle">Technical design</text>
-                <path class="d-line" d="M327 76H349" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="353" y="44" width="150" height="64" rx="8"/><text class="d-title" x="428" y="70" text-anchor="middle">Human gate 1</text><text class="d-sub" x="428" y="94" text-anchor="middle">Design sign-off</text>
+                <rect class="d-node" x="4" y="44" width="148" height="64" rx="8"/><text class="d-title" x="78" y="70" text-anchor="middle">PRD handoff</text><text class="d-sub" x="78" y="94" text-anchor="middle">From the PO or BA</text>
+                <path class="d-line" d="M152 76H173" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="177" y="44" width="148" height="64" rx="8"/><text class="d-title" x="251" y="70" text-anchor="middle">Plan the story</text><text class="d-sub" x="251" y="94" text-anchor="middle">Technical design</text>
+                <path class="d-line" d="M325 76H349" marker-end="url(#arrow)"/>
+                <polygon class="d-node d-node-accent d-decision" points="361,44 495,44 503,52 503,100 495,108 361,108 353,100 353,52"/><text class="d-title" x="428" y="70" text-anchor="middle">Human gate 1</text><text class="d-sub" x="428" y="94" text-anchor="middle">Design sign-off</text>
                 <path class="d-line" d="M503 76H525" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="529" y="44" width="150" height="64" rx="8"/><text class="d-title" x="604" y="70" text-anchor="middle">Slice the work</text><text class="d-sub" x="604" y="94" text-anchor="middle">Small issues</text>
+                <rect class="d-node" x="529" y="44" width="147" height="64" rx="8"/><text class="d-title" x="602" y="70" text-anchor="middle">Slice the work</text><text class="d-sub" x="602" y="94" text-anchor="middle">Small issues</text>
                 <path class="d-line" d="M564 108V160" marker-end="url(#arrow)"/>
                 <path class="d-line d-dash" d="M644 164V112" marker-end="url(#arrow)"/>
                 <text class="d-label" x="604" y="141" text-anchor="middle">rework</text>
-                <rect class="d-node d-node-accent" x="529" y="164" width="150" height="64" rx="8"/><text class="d-title" x="604" y="190" text-anchor="middle">Human gate 2</text><text class="d-sub" x="604" y="214" text-anchor="middle">Issues ready</text>
+                <polygon class="d-node d-node-accent d-decision" points="537,164 668,164 676,172 676,220 668,228 537,228 529,220 529,172"/><text class="d-title" x="602" y="190" text-anchor="middle">Human gate 2</text><text class="d-sub" x="602" y="214" text-anchor="middle">Issues ready</text>
                 <path class="d-line" d="M529 196H507" marker-end="url(#arrow)"/>
                 <rect class="d-node" x="353" y="164" width="150" height="64" rx="8"/><text class="d-title" x="428" y="190" text-anchor="middle">Build loop</text><text class="d-sub" x="428" y="214" text-anchor="middle">Build, check, fix</text>
                 <path class="d-line" d="M353 196H331" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="177" y="164" width="150" height="64" rx="8"/><text class="d-title" x="252" y="190" text-anchor="middle">Close out</text><text class="d-sub" x="252" y="214" text-anchor="middle">Review, evidence</text>
-                <path class="d-line" d="M177 196H155" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="1" y="164" width="150" height="64" rx="8"/><text class="d-title" x="76" y="190" text-anchor="middle">Release gates</text><text class="d-sub" x="76" y="214" text-anchor="middle">Pipeline checks</text>
-                <path class="d-line d-dash" d="M252 228V252H428V232" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="177" y="164" width="148" height="64" rx="8"/><text class="d-title" x="251" y="190" text-anchor="middle">Close out</text><text class="d-sub" x="251" y="214" text-anchor="middle">Review, evidence</text>
+                <path class="d-line" d="M177 196H156" marker-end="url(#arrow)"/>
+                <polygon class="d-node d-node-accent d-decision" points="12,164 144,164 152,172 152,220 144,228 12,228 4,220 4,172"/><text class="d-title" x="78" y="190" text-anchor="middle">Release gates</text><text class="d-sub" x="78" y="214" text-anchor="middle">Pipeline checks</text>
+                <path class="d-line d-dash" d="M251 228V252H428V232" marker-end="url(#arrow)"/>
                 <text class="d-label" x="340" y="272" text-anchor="middle">a check fails: correct</text>
-                <path class="d-line" d="M76 228V254" marker-end="url(#arrow)"/>
-                <text class="d-label" x="1" y="274">Tech Lead approves</text>
+                <path class="d-line d-line-accent" d="M78 228V254" marker-end="url(#arrow-accent)"/>
+                <text class="d-label d-label-accent" x="78" y="274" text-anchor="middle">Tech Lead approves</text>
               </svg>
             </div>
+            <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show rework when a check or review finds an issue. Cut-corner blue shapes mark human sign-off and release gates.</p>
           </figure>
           <p>The PO or BA hands over the PRD. Developers plan one user story into a technical design, the TRD, and a person signs it off at the first human gate; unresolved findings send it back for revision. The approved design is sliced into small issues, each delivering a working piece of the story, and a person confirms at the second human gate that they are ready to build.</p>
           <p>An AI agent then builds one issue at a time in a loop that builds, checks and corrects its own work. Closeout adds independent review and evidence that the story behaves as specified, and returns failures to the loop. Finally, four pipeline stages widen the checks from the single change to the whole codebase, ending with one report for the Tech Lead’s sign-off.</p>
@@ -198,21 +208,22 @@
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-harness-title">
                 <title id="fig-harness-title">Diagnosing a failure. A failure is traced to one of five harness layers: task specification, context provision, execution environment, verification feedback or state management. In this example verification feedback is the weak layer. The team strengthens that layer, then records the failure so it is less likely to recur.</title>
-                <text class="d-label" x="321" y="20" text-anchor="middle">Which harness layer is weak?</text>
-                <rect class="d-boundary" x="171" y="28" width="300" height="256" rx="8"/>
-                <rect class="d-node" x="1" y="124" width="130" height="64" rx="8"/><text class="d-title" x="66" y="150" text-anchor="middle">Failure</text><text class="d-sub" x="66" y="174" text-anchor="middle">Symptom seen</text>
-                <path class="d-line" d="M131 156H167" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="181" y="36" width="280" height="40" rx="8"/><text class="d-title" x="197" y="61">Task specification</text>
-                <rect class="d-node" x="181" y="86" width="280" height="40" rx="8"/><text class="d-title" x="197" y="111">Context provision</text>
-                <rect class="d-node" x="181" y="136" width="280" height="40" rx="8"/><text class="d-title" x="197" y="161">Execution environment</text>
-                <rect class="d-node d-node-accent" x="181" y="186" width="280" height="40" rx="8"/><text class="d-title" x="197" y="211">Verification feedback</text>
-                <rect class="d-node" x="181" y="236" width="280" height="40" rx="8"/><text class="d-title" x="197" y="261">State management</text>
-                <path class="d-line d-line-accent" d="M461 206H507" marker-end="url(#arrow-accent)"/>
-                <rect class="d-node d-node-accent" x="511" y="174" width="168" height="64" rx="8"/><text class="d-title" x="595" y="200" text-anchor="middle">Strengthen it</text><text class="d-sub" x="595" y="224" text-anchor="middle">Fix that layer</text>
-                <path class="d-line" d="M595 238V264" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="511" y="268" width="168" height="64" rx="8"/><text class="d-title" x="595" y="294" text-anchor="middle">Record it</text><text class="d-sub" x="595" y="318" text-anchor="middle">Stop it recurring</text>
+                <rect class="d-group" x="171" y="10" width="300" height="278" rx="10"/>
+                <text class="d-label" x="321" y="28" text-anchor="middle">Which harness layer is weak?</text>
+                <rect class="d-node" x="6" y="128" width="128" height="64" rx="8"/><text class="d-title" x="70" y="154" text-anchor="middle">Failure</text><text class="d-sub" x="70" y="178" text-anchor="middle">Symptom seen</text>
+                <path class="d-line" d="M134 160H167" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="181" y="40" width="280" height="40" rx="8"/><text class="d-title" x="197" y="65">Task specification</text>
+                <rect class="d-node" x="181" y="90" width="280" height="40" rx="8"/><text class="d-title" x="197" y="115">Context provision</text>
+                <rect class="d-node" x="181" y="140" width="280" height="40" rx="8"/><text class="d-title" x="197" y="165">Execution environment</text>
+                <rect class="d-node d-node-accent" x="181" y="190" width="280" height="40" rx="8"/><text class="d-title" x="197" y="215">Verification feedback</text>
+                <rect class="d-node" x="181" y="240" width="280" height="40" rx="8"/><text class="d-title" x="197" y="265">State management</text>
+                <path class="d-line d-line-accent" d="M461 210H507" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node d-node-accent" x="511" y="178" width="164" height="64" rx="8"/><text class="d-title" x="593" y="204" text-anchor="middle">Strengthen it</text><text class="d-sub" x="593" y="228" text-anchor="middle">Fix that layer</text>
+                <path class="d-line" d="M593 242V266" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="511" y="270" width="164" height="64" rx="8"/><text class="d-title" x="593" y="296" text-anchor="middle">Record it</text><text class="d-sub" x="593" y="320" text-anchor="middle">Stop it recurring</text>
               </svg>
             </div>
+            <p class="diagram-key">Solid arrows trace an observed failure to one of the five harness layers inside the shaded container, then to strengthening that layer and recording the fix.</p>
           </figure>
           <p>Start from the symptom and ask which of the five layers let it through. In the figure, verification feedback is the weak layer, so the team improves its checks rather than retrying the same prompt. Recording the failure helps the next session avoid it. The table pairs each layer with its typical symptom and a response.</p>
           <div class="table-scroll"><table class="wide-table"><caption>Harness layers, typical symptoms and responses</caption><thead><tr><th scope="col">Layer</th><th scope="col">Typical symptom</th><th scope="col">Response</th></tr></thead><tbody>

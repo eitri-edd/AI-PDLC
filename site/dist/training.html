@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A study guide to the self-paced training on the Eitri Agentic Dev Workflow: how the course is organised, the key concepts it teaches, and how to work through it.">
-  <title>Product ideation · AI-SDLC</title>
+  <title>Training · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
   <script src="site.js" defer></script>
@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="identity" href="index.html" aria-label="AI-SDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-SDLC</span></a>
-      <span class="organisation">EDS</span>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
     </div>
   </header>
   <div class="page-layout">
@@ -45,11 +45,21 @@
       <article class="concept-article">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><span aria-current="page">Training</span></nav>
         <header class="article-header">
+          <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>Training</h1>
           <p class="lead">This page is a study guide to the self-paced training on the Eitri Agentic Dev Workflow. It explains how the course is organised, draws out the key concepts it teaches, and suggests how to work through it so you can run the workflow on your own repository.</p>
           <p>This study guide is for developers, Tech Leads and product owners using the workflow. Pair it with the course’s hands-on exercises to practise the skills, gates and checks.</p>
           <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-28">28 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
+        <figure class="page-map page-map--route" aria-label="Page summary">
+          <p class="page-map-title">On this page · 4 modules in sequence</p>
+          <ol class="page-map-steps">
+            <li><a href="#how-models-behave">Prerequisites</a><span>Learn LLM behaviour, context and loop engineering, principles and multi-agent patterns.</span></li>
+            <li><a href="#po-workflow">Lesson 0: PO workflow</a><span>Write fine-grained stories, sequence dependencies and track wave delivery.</span></li>
+            <li><a href="#workflow-skills">Lesson 1: Workflow skills</a><span>Run Eitri skills across architecture, specification, decomposition, build and closeout.</span></li>
+            <li><a href="#team-context">Lesson 2: Team context</a><span>Inject domain glossary, standards, compliance policies and coding conventions.</span></li>
+          </ol>
+        </figure>
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page">
@@ -98,21 +108,22 @@
           <figure class="concept-figure">
             <figcaption>Figure 1. The four modules, taken in sequence. Start with the prerequisites.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 130" role="img" aria-labelledby="fig-course-title">
+              <svg viewBox="0 0 680 124" role="img" aria-labelledby="fig-course-title">
                 <title id="fig-course-title">The course path. Prerequisites cover why the workflow works. Lesson 0 covers planning the delivery from user stories. Lesson 1 covers running each workflow skill. Lesson 2 covers fitting the workflow to your team's context. Prerequisites is highlighted as the place to start.</title>
-                <rect class="d-node d-node-accent" x="1" y="16" width="150" height="64" rx="8"/><text class="d-title" x="76" y="42" text-anchor="middle">Prerequisites</text><text class="d-sub" x="76" y="66" text-anchor="middle">Foundations</text>
-                <path class="d-line" d="M151 48H173" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="177" y="16" width="150" height="64" rx="8"/><text class="d-title" x="252" y="42" text-anchor="middle">Lesson 0</text><text class="d-sub" x="252" y="66" text-anchor="middle">PO workflow</text>
-                <path class="d-line" d="M327 48H349" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="353" y="16" width="150" height="64" rx="8"/><text class="d-title" x="428" y="42" text-anchor="middle">Lesson 1</text><text class="d-sub" x="428" y="66" text-anchor="middle">Workflow skills</text>
-                <path class="d-line" d="M503 48H525" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="529" y="16" width="150" height="64" rx="8"/><text class="d-title" x="604" y="42" text-anchor="middle">Lesson 2</text><text class="d-sub" x="604" y="66" text-anchor="middle">Team context</text>
-                <text class="d-label" x="76" y="108" text-anchor="middle">why it works</text>
-                <text class="d-label" x="252" y="108" text-anchor="middle">plan the delivery</text>
-                <text class="d-label" x="428" y="108" text-anchor="middle">run each skill</text>
-                <text class="d-label" x="604" y="108" text-anchor="middle">fit it to your team</text>
+                <rect class="d-node d-node-accent" x="4" y="16" width="148" height="64" rx="8"/><text class="d-title" x="78" y="42" text-anchor="middle">Prerequisites</text><text class="d-sub" x="78" y="66" text-anchor="middle">Foundations</text>
+                <path class="d-line d-line-accent" d="M152 48H173" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node" x="177" y="16" width="148" height="64" rx="8"/><text class="d-title" x="251" y="42" text-anchor="middle">Lesson 0</text><text class="d-sub" x="251" y="66" text-anchor="middle">PO workflow</text>
+                <path class="d-line" d="M325 48H349" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="353" y="16" width="148" height="64" rx="8"/><text class="d-title" x="427" y="42" text-anchor="middle">Lesson 1</text><text class="d-sub" x="427" y="66" text-anchor="middle">Workflow skills</text>
+                <path class="d-line" d="M501 48H525" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="529" y="16" width="147" height="64" rx="8"/><text class="d-title" x="602" y="42" text-anchor="middle">Lesson 2</text><text class="d-sub" x="602" y="66" text-anchor="middle">Team context</text>
+                <text class="d-label d-label-accent" x="78" y="106" text-anchor="middle">why it works</text>
+                <text class="d-label" x="251" y="106" text-anchor="middle">plan the delivery</text>
+                <text class="d-label" x="427" y="106" text-anchor="middle">run each skill</text>
+                <text class="d-label" x="602" y="106" text-anchor="middle">fit it to your team</text>
               </svg>
             </div>
+            <p class="diagram-key">Solid arrows show the recommended sequence of course modules; blue highlights the starting Prerequisites module.</p>
           </figure>
           <div class="table-scroll"><table class="wide-table wide-col-first"><caption>The four modules of the training</caption><thead><tr><th scope="col">Module</th><th scope="col">Main audience</th><th scope="col">What you learn</th></tr></thead><tbody>
             <tr><th scope="row">Prerequisites: foundations of agentic engineering</th><td>Everyone</td><td>Matt Pocock’s baseline workflow, practised hands-on, and four foundation topics: how models behave, agentic engineering, development principles and multi-agent patterns</td></tr>
@@ -160,20 +171,21 @@
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 280" role="img" aria-labelledby="fig-react-title">
                 <title id="fig-react-title">The agent loop. The agent reasons about what to do, acts by calling a tool or writing code, and observes the result. A convergence check asks whether a machine-verifiable condition is met, such as all tests passing and no must-fix findings. If it is met, the loop exits. If not, the agent reasons again.</title>
-                <rect class="d-node" x="1" y="40" width="190" height="64" rx="8"/><text class="d-title" x="96" y="66" text-anchor="middle">Reason</text><text class="d-sub" x="96" y="90" text-anchor="middle">Decide the next step</text>
-                <path class="d-line" d="M191 72H241" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="4" y="40" width="186" height="64" rx="8"/><text class="d-title" x="97" y="66" text-anchor="middle">Reason</text><text class="d-sub" x="97" y="90" text-anchor="middle">Decide the next step</text>
+                <path class="d-line" d="M190 72H241" marker-end="url(#arrow)"/>
                 <rect class="d-node" x="245" y="40" width="190" height="64" rx="8"/><text class="d-title" x="340" y="66" text-anchor="middle">Act</text><text class="d-sub" x="340" y="90" text-anchor="middle">Tool, code or command</text>
                 <path class="d-line" d="M435 72H485" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="489" y="40" width="190" height="64" rx="8"/><text class="d-title" x="584" y="66" text-anchor="middle">Observe</text><text class="d-sub" x="584" y="90" text-anchor="middle">Read the result</text>
-                <path class="d-line" d="M584 104V166" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="489" y="170" width="190" height="64" rx="8"/><text class="d-title" x="584" y="196" text-anchor="middle">Convergence check</text><text class="d-sub" x="584" y="220" text-anchor="middle">Machine-verifiable</text>
+                <rect class="d-node" x="489" y="40" width="186" height="64" rx="8"/><text class="d-title" x="582" y="66" text-anchor="middle">Observe</text><text class="d-sub" x="582" y="90" text-anchor="middle">Read the result</text>
+                <path class="d-line" d="M582 104V166" marker-end="url(#arrow)"/>
+                <polygon class="d-node d-node-accent d-decision" points="497,170 667,170 675,178 675,226 667,234 497,234 489,226 489,178"/><text class="d-title" x="582" y="196" text-anchor="middle">Convergence check</text><text class="d-sub" x="582" y="220" text-anchor="middle">Machine-verifiable</text>
                 <path class="d-line d-line-accent" d="M489 202H439" marker-end="url(#arrow-accent)"/>
                 <text class="d-label d-label-accent" x="464" y="192" text-anchor="middle">met</text>
                 <rect class="d-node" x="245" y="170" width="190" height="64" rx="8"/><text class="d-title" x="340" y="196" text-anchor="middle">Exit</text><text class="d-sub" x="340" y="220" text-anchor="middle">Tests pass, no must-fix</text>
-                <path class="d-line d-dash" d="M584 234V262H96V108" marker-end="url(#arrow)"/>
-                <text class="d-label" x="108" y="254">not met: reason again</text>
+                <path class="d-line d-dash" d="M582 234V262H97V108" marker-end="url(#arrow)"/>
+                <text class="d-label" x="340" y="254" text-anchor="middle">not met: reason again</text>
               </svg>
             </div>
+            <p class="diagram-key">Solid arrows show the Reason–Act–Observe cycle and exit path; the dashed arrow shows loop continuation when the machine-verifiable convergence check (cut-corner blue decision) is not yet met.</p>
           </figure>
           <p>The top row runs left to right: reason, act, observe. The convergence check, highlighted in blue, then asks whether a machine-verifiable condition holds, such as all tests passing with no must-fix findings. If it does, the loop exits; if not, the agent reasons again. Without the check, the loop can run indefinitely, and each pass adds observations to the context until quality drops. <a href="concept.html#loop-engineering">Read about loop engineering</a>.</p>
           <h3>Plan before you build</h3>
@@ -245,23 +257,24 @@
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 3, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 250" role="img" aria-labelledby="fig-phases-title">
                 <title id="fig-phases-title">The five-phase workflow with two human sign-offs. Architecture sequences the stories. Specification produces the TRD and checks its compliance. HITL gate 1 signs off the TRD. Decomposition produces verified tickets. HITL gate 2 signs off the tickets. Implementation runs the self-correcting do-work loop. Closeout adds feature boundary tests and E2E evidence. The story is accepted and the loop moves to the next story.</title>
-                <rect class="d-node" x="1" y="40" width="150" height="64" rx="8"/><text class="d-title" x="76" y="66" text-anchor="middle">Architecture</text><text class="d-sub" x="76" y="90" text-anchor="middle">Sequence stories</text>
-                <path class="d-line" d="M151 72H173" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="177" y="40" width="150" height="64" rx="8"/><text class="d-title" x="252" y="66" text-anchor="middle">Specification</text><text class="d-sub" x="252" y="90" text-anchor="middle">TRD, compliance</text>
-                <path class="d-line" d="M327 72H349" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="353" y="40" width="150" height="64" rx="8"/><text class="d-title" x="428" y="66" text-anchor="middle">HITL 1</text><text class="d-sub" x="428" y="90" text-anchor="middle">TRD sign-off</text>
+                <rect class="d-node" x="4" y="40" width="148" height="64" rx="8"/><text class="d-title" x="78" y="66" text-anchor="middle">Architecture</text><text class="d-sub" x="78" y="90" text-anchor="middle">Sequence stories</text>
+                <path class="d-line" d="M152 72H173" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="177" y="40" width="148" height="64" rx="8"/><text class="d-title" x="251" y="66" text-anchor="middle">Specification</text><text class="d-sub" x="251" y="90" text-anchor="middle">TRD, compliance</text>
+                <path class="d-line" d="M325 72H349" marker-end="url(#arrow)"/>
+                <polygon class="d-node d-node-accent d-decision" points="361,40 495,40 503,48 503,96 495,104 361,104 353,96 353,48"/><text class="d-title" x="428" y="66" text-anchor="middle">HITL 1</text><text class="d-sub" x="428" y="90" text-anchor="middle">TRD sign-off</text>
                 <path class="d-line" d="M503 72H525" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="529" y="40" width="150" height="64" rx="8"/><text class="d-title" x="604" y="66" text-anchor="middle">Decomposition</text><text class="d-sub" x="604" y="90" text-anchor="middle">Verified tickets</text>
-                <path class="d-line" d="M604 104V166" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="529" y="170" width="150" height="64" rx="8"/><text class="d-title" x="604" y="196" text-anchor="middle">HITL 2</text><text class="d-sub" x="604" y="220" text-anchor="middle">Ticket sign-off</text>
+                <rect class="d-node" x="529" y="40" width="147" height="64" rx="8"/><text class="d-title" x="602" y="66" text-anchor="middle">Decomposition</text><text class="d-sub" x="602" y="90" text-anchor="middle">Verified tickets</text>
+                <path class="d-line" d="M602 104V166" marker-end="url(#arrow)"/>
+                <polygon class="d-node d-node-accent d-decision" points="537,170 668,170 676,178 676,226 668,234 537,234 529,226 529,178"/><text class="d-title" x="602" y="196" text-anchor="middle">HITL 2</text><text class="d-sub" x="602" y="220" text-anchor="middle">Ticket sign-off</text>
                 <path class="d-line" d="M529 202H507" marker-end="url(#arrow)"/>
                 <rect class="d-node" x="353" y="170" width="150" height="64" rx="8"/><text class="d-title" x="428" y="196" text-anchor="middle">Implementation</text><text class="d-sub" x="428" y="220" text-anchor="middle">/do-work loop</text>
                 <path class="d-line" d="M353 202H331" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="177" y="170" width="150" height="64" rx="8"/><text class="d-title" x="252" y="196" text-anchor="middle">Closeout</text><text class="d-sub" x="252" y="220" text-anchor="middle">Boundaries, E2E</text>
-                <path class="d-line" d="M177 202H155" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="1" y="170" width="150" height="64" rx="8"/><text class="d-title" x="76" y="196" text-anchor="middle">Accept</text><text class="d-sub" x="76" y="220" text-anchor="middle">Then next story</text>
+                <rect class="d-node" x="177" y="170" width="148" height="64" rx="8"/><text class="d-title" x="251" y="196" text-anchor="middle">Closeout</text><text class="d-sub" x="251" y="220" text-anchor="middle">Boundaries, E2E</text>
+                <path class="d-line" d="M177 202H156" marker-end="url(#arrow)"/>
+                <rect class="d-node d-node-accent" x="4" y="170" width="148" height="64" rx="8"/><text class="d-title" x="78" y="196" text-anchor="middle">Accept</text><text class="d-sub" x="78" y="220" text-anchor="middle">Then next story</text>
               </svg>
             </div>
+            <p class="diagram-key">Solid arrows show the five-phase sequence from architecture to story acceptance; cut-corner blue shapes mark the two mandatory human-in-the-loop (HITL) sign-off gates.</p>
           </figure>
           <p>Read the top row from left to right and the bottom row from right to left. Architecture sequences the stories; specification produces the technical requirements document (TRD) and audits it. Human-in-the-loop gate 1 (HITL 1), highlighted, signs off the TRD. Decomposition produces checked tickets, and HITL 2 signs them off as ready. Implementation runs the self-correcting loop, closeout adds boundary tests and acceptance evidence, and the accepted story makes way for the next.</p>
           <div class="table-scroll"><table class="wide-table"><caption>Gaps in the baseline workflow and the Eitri skill that closes each, as the training describes them</caption><thead><tr><th scope="col">Gap</th><th scope="col">Skill</th><th scope="col">Phase</th><th scope="col">What it adds</th></tr></thead><tbody>

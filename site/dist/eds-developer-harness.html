@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="identity" href="index.html" aria-label="AI-SDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-SDLC</span></a>
-      <span class="organisation">EDS</span>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
     </div>
   </header>
   <div class="page-layout">
@@ -50,6 +50,15 @@
 <p class="lead">Eitri is the EDS agentic developer harness. Its 19 steps take one user story from the handed-off product requirements document (PRD) to a compliance-checked technical requirements document (TRD), a set of verified issues, implementation in a self-correcting loop, and closeout with independent evidence.</p>
           <p>Steps are ordered by their dependencies and can be adjusted to fit a team’s tooling. The harness is built on Matt Pocock’s engineering workflow, and teams are encouraged to own, adapt and extend it. This page describes what each phase achieves; the <a href="eds-skills-catalogue.html">skills catalogue</a> names the skill behind each step.</p>
         </header>
+        <figure class="page-map page-map--route" aria-label="Page summary">
+          <p class="page-map-title">On this page · 4 phases across 19 steps</p>
+          <ol class="page-map-steps">
+            <li><a href="#plan">Plan (1–6)</a><span>Sequence stories, investigate open decisions and write a user-story TRD.</span></li>
+            <li><a href="#check">Check &amp; slice (7–10)</a><span>Audit against standards and IM8/ARC controls, sign off, slice and verify issues.</span></li>
+            <li><a href="#do-work">Build loop (11–12)</a><span>Implement tests first, self-review until must-fix findings reach zero, and run gates.</span></li>
+            <li><a href="#closeout">Close out (13–19)</a><span>Deepen modules, extend architecture tests, review, test in a browser and close out.</span></li>
+          </ol>
+        </figure>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#install">Set up once</a>
             <a href="#steps">The 19 steps</a>
@@ -91,42 +100,47 @@
           <figure class="concept-figure">
             <figcaption>Figure 1. The 19 steps in four phases. Dashed outlines mark optional, recommended or planned steps; highlighted steps are human gates.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 330" role="img" aria-labelledby="fig-steps-title">
+              <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-steps-title">
                 <title id="fig-steps-title">The 19 steps of the developer harness in four columns. Plan, Steps 1 to 6: tracker setup, dependency plan, live library documentation which is planned, architecture tests, investigate scope, write the TRD. Check, Steps 7 to 10: standards check, compliance audit, human gate 1 TRD sign-off, slice into issues, verify issues, human gate 2 issues ready. Build, Steps 11 and 12: choose an execution mode, optional interface scaffold, the build loop. Close out, Steps 13 to 19: improve the design, feature architecture tests, code review, diagnose bugs, browser test, commit closeout, end-to-end tests. Optional, recommended and planned steps have dashed outlines.</title>
-                <text class="d-title" x="80" y="22" text-anchor="middle">Plan, 1–6</text>
-                <text class="d-title" x="254" y="22" text-anchor="middle">Check, 7–10</text>
-                <text class="d-title" x="428" y="22" text-anchor="middle">Build, 11–12</text>
-                <text class="d-title" x="602" y="22" text-anchor="middle">Close out, 13–19</text>
-                <path class="d-line d-line-accent" d="M130 17H188" marker-end="url(#arrow-accent)"/>
-                <path class="d-line d-line-accent" d="M310 17H362" marker-end="url(#arrow-accent)"/>
-                <path class="d-line d-line-accent" d="M490 17H524" marker-end="url(#arrow-accent)"/>
-                <rect class="d-node" x="1" y="40" width="158" height="32" rx="6"/><text class="d-sub" x="9" y="61">1 Tracker setup</text>
-                <rect class="d-node" x="1" y="80" width="158" height="32" rx="6"/><text class="d-sub" x="9" y="101">2 Dependency plan</text>
-                <rect class="d-boundary" x="1" y="120" width="158" height="32" rx="6"/><text class="d-sub" x="9" y="141">3 Live docs (planned)</text>
-                <rect class="d-node" x="1" y="160" width="158" height="32" rx="6"/><text class="d-sub" x="9" y="181">4 Architecture tests</text>
-                <rect class="d-node" x="1" y="200" width="158" height="32" rx="6"/><text class="d-sub" x="9" y="221">5 Investigate scope</text>
-                <rect class="d-node" x="1" y="240" width="158" height="32" rx="6"/><text class="d-sub" x="9" y="261">6 Write the TRD</text>
-                <rect class="d-node" x="175" y="40" width="158" height="32" rx="6"/><text class="d-sub" x="183" y="61">7 Standards check</text>
-                <rect class="d-node" x="175" y="80" width="158" height="32" rx="6"/><text class="d-sub" x="183" y="101">8 Compliance audit</text>
-                <rect class="d-node d-node-accent" x="175" y="120" width="158" height="32" rx="6"/><text class="d-sub" x="183" y="141">HITL 1 · TRD sign-off</text>
-                <rect class="d-node" x="175" y="160" width="158" height="32" rx="6"/><text class="d-sub" x="183" y="181">9 Slice into issues</text>
-                <rect class="d-node" x="175" y="200" width="158" height="32" rx="6"/><text class="d-sub" x="183" y="221">10 Verify issues</text>
-                <rect class="d-node d-node-accent" x="175" y="240" width="158" height="32" rx="6"/><text class="d-sub" x="183" y="261">HITL 2 · Issues ready</text>
-                <rect class="d-node" x="349" y="40" width="158" height="32" rx="6"/><text class="d-sub" x="357" y="61">Choose a mode</text>
-                <rect class="d-boundary" x="349" y="80" width="158" height="32" rx="6"/><text class="d-sub" x="357" y="101">11 Interface scaffold</text>
-                <rect class="d-node" x="349" y="120" width="158" height="32" rx="6"/><text class="d-sub" x="357" y="141">12 Build loop</text>
-                <rect class="d-node" x="353" y="206" width="22" height="14" rx="3"/><text class="d-label" x="383" y="218">Core</text>
-                <rect class="d-boundary" x="353" y="230" width="22" height="14" rx="3"/><text class="d-label" x="383" y="242">Optional or planned</text>
-                <rect class="d-node d-node-accent" x="353" y="254" width="22" height="14" rx="3"/><text class="d-label" x="383" y="266">Human gate</text>
-                <rect class="d-boundary" x="523" y="40" width="156" height="32" rx="6"/><text class="d-sub" x="531" y="61">13 Improve design</text>
-                <rect class="d-node" x="523" y="80" width="156" height="32" rx="6"/><text class="d-sub" x="531" y="101">14 Feature arch tests</text>
-                <rect class="d-node" x="523" y="120" width="156" height="32" rx="6"/><text class="d-sub" x="531" y="141">15 Code review</text>
-                <rect class="d-boundary" x="523" y="160" width="156" height="32" rx="6"/><text class="d-sub" x="531" y="181">16 Diagnose bugs</text>
-                <rect class="d-boundary" x="523" y="200" width="156" height="32" rx="6"/><text class="d-sub" x="531" y="221">17 Browser test</text>
-                <rect class="d-boundary" x="523" y="240" width="156" height="32" rx="6"/><text class="d-sub" x="531" y="261">18 Commit closeout</text>
-                <rect class="d-boundary" x="523" y="280" width="156" height="32" rx="6"/><text class="d-sub" x="531" y="301">19 End-to-end tests</text>
+                <rect class="d-group" x="4" y="6" width="156" height="278" rx="10"/>
+                <rect class="d-group" x="176" y="6" width="156" height="278" rx="10"/>
+                <rect class="d-group" x="348" y="6" width="156" height="278" rx="10"/>
+                <rect class="d-group" x="520" y="6" width="156" height="318" rx="10"/>
+                <text class="d-title" x="82" y="27" text-anchor="middle">Plan, 1–6</text>
+                <text class="d-title" x="254" y="27" text-anchor="middle">Check, 7–10</text>
+                <text class="d-title" x="426" y="27" text-anchor="middle">Build, 11–12</text>
+                <text class="d-title" x="598" y="27" text-anchor="middle">Close out, 13–19</text>
+                <path class="d-line d-line-accent" d="M160 22H172" marker-end="url(#arrow-accent)"/>
+                <path class="d-line d-line-accent" d="M332 22H344" marker-end="url(#arrow-accent)"/>
+                <path class="d-line d-line-accent" d="M504 22H516" marker-end="url(#arrow-accent)"/>
+                <rect class="d-node" x="12" y="42" width="140" height="32" rx="6"/><text class="d-sub" x="22" y="63">1 Tracker setup</text>
+                <rect class="d-node" x="12" y="82" width="140" height="32" rx="6"/><text class="d-sub" x="22" y="103">2 Dependency plan</text>
+                <rect class="d-boundary" x="12" y="122" width="140" height="32" rx="6"/><text class="d-sub" x="22" y="143">3 Live docs (planned)</text>
+                <rect class="d-node" x="12" y="162" width="140" height="32" rx="6"/><text class="d-sub" x="22" y="183">4 Architecture tests</text>
+                <rect class="d-node" x="12" y="202" width="140" height="32" rx="6"/><text class="d-sub" x="22" y="223">5 Investigate scope</text>
+                <rect class="d-node" x="12" y="242" width="140" height="32" rx="6"/><text class="d-sub" x="22" y="263">6 Write the TRD</text>
+                <rect class="d-node" x="184" y="42" width="140" height="32" rx="6"/><text class="d-sub" x="194" y="63">7 Standards check</text>
+                <rect class="d-node" x="184" y="82" width="140" height="32" rx="6"/><text class="d-sub" x="194" y="103">8 Compliance audit</text>
+                <polygon class="d-node d-node-accent d-decision" points="190,122 318,122 324,128 324,148 318,154 190,154 184,148 184,128"/><text class="d-sub" x="194" y="143">HITL 1 · TRD sign-off</text>
+                <rect class="d-node" x="184" y="162" width="140" height="32" rx="6"/><text class="d-sub" x="194" y="183">9 Slice into issues</text>
+                <rect class="d-node" x="184" y="202" width="140" height="32" rx="6"/><text class="d-sub" x="194" y="223">10 Verify issues</text>
+                <polygon class="d-node d-node-accent d-decision" points="190,242 318,242 324,248 324,268 318,274 190,274 184,268 184,248"/><text class="d-sub" x="194" y="263">HITL 2 · Issues ready</text>
+                <rect class="d-node" x="356" y="42" width="140" height="32" rx="6"/><text class="d-sub" x="366" y="63">Choose a mode</text>
+                <rect class="d-boundary" x="356" y="82" width="140" height="32" rx="6"/><text class="d-sub" x="366" y="103">11 Interface scaffold</text>
+                <rect class="d-node d-node-accent" x="356" y="122" width="140" height="32" rx="6"/><text class="d-sub" x="366" y="143">12 Build loop</text>
+                <rect class="d-node" x="362" y="198" width="22" height="14" rx="3"/><text class="d-label" x="392" y="210">Core step</text>
+                <rect class="d-boundary" x="362" y="222" width="22" height="14" rx="3"/><text class="d-label" x="392" y="234">Optional / planned</text>
+                <polygon class="d-node d-node-accent d-decision" points="365,246 381,246 384,249 384,257 381,260 365,260 362,257 362,249"/><text class="d-label" x="392" y="258">Human gate (HITL)</text>
+                <rect class="d-boundary" x="528" y="42" width="140" height="32" rx="6"/><text class="d-sub" x="538" y="63">13 Improve design</text>
+                <rect class="d-node" x="528" y="82" width="140" height="32" rx="6"/><text class="d-sub" x="538" y="103">14 Feature arch tests</text>
+                <rect class="d-node" x="528" y="122" width="140" height="32" rx="6"/><text class="d-sub" x="538" y="143">15 Code review</text>
+                <rect class="d-boundary" x="528" y="162" width="140" height="32" rx="6"/><text class="d-sub" x="538" y="183">16 Diagnose bugs</text>
+                <rect class="d-boundary" x="528" y="202" width="140" height="32" rx="6"/><text class="d-sub" x="538" y="223">17 Browser test</text>
+                <rect class="d-boundary" x="528" y="242" width="140" height="32" rx="6"/><text class="d-sub" x="538" y="263">18 Commit closeout</text>
+                <rect class="d-boundary" x="528" y="282" width="140" height="32" rx="6"/><text class="d-sub" x="538" y="303">19 End-to-end tests</text>
               </svg>
             </div>
+            <p class="diagram-key">Columns group the 19 steps into four sequential phases. Solid borders mark core steps; dashed borders mark optional, recommended or planned steps. Cut-corner blue shapes mark human-in-the-loop (HITL) sign-off gates.</p>
           </figure>
           <p>Steps 1–6 set up the repository and turn one user story into a TRD. Steps 7–10 check the TRD against standards and policy, slice it into issues and verify them, with a human gate before and after slicing. Steps 11–12 build one issue in the execution mode the team chooses. Steps 13–19 improve the design, extend the architecture tests, review the change and gather browser and end-to-end evidence.</p>
           <p>The tables on this page label each step:</p>
@@ -192,34 +206,36 @@
           <figure class="concept-figure">
             <figcaption>Figure 2. The build loop. The inner loop repeats until the exit check passes; a failed validation gate returns to Fix. Dashed arrows show rework.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 340" role="img" aria-labelledby="fig-dowork-title">
+              <svg viewBox="0 0 680 345" role="img" aria-labelledby="fig-dowork-title">
                 <title id="fig-dowork-title">The build loop. Plan: select the issue and read its context. Then the inner loop: implement, review against the issue, and check whether must-fix findings are zero. If findings remain, fix them and implement again. When all clear, run validation gates 1 and 2, for build and quality; if they fail, return to fix. When they pass, run the optional mutation gate 3, then commit only this issue’s changes and close out by posting a verification comment and closing the issue.</title>
-                <text class="d-label" x="427" y="18" text-anchor="middle">Inner loop: repeats until must-fix findings reach zero</text>
-                <rect class="d-node" x="1" y="30" width="130" height="64" rx="8"/><text class="d-title" x="66" y="56" text-anchor="middle">Plan</text><text class="d-sub" x="66" y="80" text-anchor="middle">Read the issue</text>
-                <path class="d-line" d="M131 62H171" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="175" y="30" width="140" height="64" rx="8"/><text class="d-title" x="245" y="56" text-anchor="middle">Implement</text><text class="d-sub" x="245" y="80" text-anchor="middle">Tests first</text>
-                <path class="d-line" d="M315 62H355" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="359" y="30" width="140" height="64" rx="8"/><text class="d-title" x="429" y="56" text-anchor="middle">Review</text><text class="d-sub" x="429" y="80" text-anchor="middle">Against the issue</text>
-                <path class="d-line" d="M499 62H539" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="543" y="30" width="136" height="64" rx="8"/><text class="d-title" x="611" y="56" text-anchor="middle">Must-fix = 0?</text><text class="d-sub" x="611" y="80" text-anchor="middle">Exit check</text>
-                <path class="d-line d-dash" d="M590 94V182H503" marker-end="url(#arrow)"/>
-                <text class="d-label" x="548" y="174" text-anchor="middle">findings</text>
-                <rect class="d-node" x="359" y="150" width="140" height="64" rx="8"/><text class="d-title" x="429" y="176" text-anchor="middle">Fix</text><text class="d-sub" x="429" y="200" text-anchor="middle">Must-fix items</text>
-                <path class="d-line d-dash" d="M359 182H245V98" marker-end="url(#arrow)"/>
-                <text class="d-label" x="253" y="140">retry</text>
-                <path class="d-line d-line-accent" d="M650 94V266" marker-end="url(#arrow-accent)"/>
-                <text class="d-label d-label-accent" x="642" y="232" text-anchor="end">all clear</text>
-                <rect class="d-node" x="543" y="270" width="136" height="64" rx="8"/><text class="d-title" x="611" y="296" text-anchor="middle">Gates 1 and 2</text><text class="d-sub" x="611" y="320" text-anchor="middle">Build, quality</text>
-                <path class="d-line d-dash" d="M565 270V240H470V218" marker-end="url(#arrow)"/>
-                <text class="d-label" x="517" y="260" text-anchor="middle">gates fail</text>
-                <path class="d-line" d="M543 302H503" marker-end="url(#arrow)"/>
-                <rect class="d-boundary" x="359" y="270" width="140" height="64" rx="8"/><text class="d-title" x="429" y="296" text-anchor="middle">Gate 3</text><text class="d-sub" x="429" y="320" text-anchor="middle">Mutation, optional</text>
-                <path class="d-line" d="M359 302H319" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="175" y="270" width="140" height="64" rx="8"/><text class="d-title" x="245" y="296" text-anchor="middle">Commit</text><text class="d-sub" x="245" y="320" text-anchor="middle">This issue only</text>
-                <path class="d-line" d="M175 302H135" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="1" y="270" width="130" height="64" rx="8"/><text class="d-title" x="66" y="296" text-anchor="middle">Close out</text><text class="d-sub" x="66" y="320" text-anchor="middle">Comment, close</text>
+                <rect class="d-group" x="166" y="4" width="510" height="220" rx="10"/>
+                <text class="d-label" x="421" y="21" text-anchor="middle">Inner loop · repeats until must-fix findings reach zero</text>
+                <rect class="d-node" x="6" y="34" width="128" height="64" rx="8"/><text class="d-title" x="70" y="60" text-anchor="middle">Plan</text><text class="d-sub" x="70" y="84" text-anchor="middle">Read the issue</text>
+                <path class="d-line" d="M134 66H172" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="176" y="34" width="138" height="64" rx="8"/><text class="d-title" x="245" y="60" text-anchor="middle">Implement</text><text class="d-sub" x="245" y="84" text-anchor="middle">Tests first</text>
+                <path class="d-line" d="M314 66H354" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="358" y="34" width="138" height="64" rx="8"/><text class="d-title" x="427" y="60" text-anchor="middle">Review</text><text class="d-sub" x="427" y="84" text-anchor="middle">Against the issue</text>
+                <path class="d-line" d="M496 66H536" marker-end="url(#arrow)"/>
+                <polygon class="d-node d-node-accent d-decision" points="548,34 658,34 666,42 666,90 658,98 548,98 540,90 540,42"/><text class="d-title" x="603" y="60" text-anchor="middle">Must-fix = 0?</text><text class="d-sub" x="603" y="84" text-anchor="middle">Exit check</text>
+                <path class="d-line d-dash" d="M585 98V182H500" marker-end="url(#arrow)"/>
+                <text class="d-label" x="544" y="174" text-anchor="middle">findings</text>
+                <rect class="d-node" x="358" y="150" width="138" height="64" rx="8"/><text class="d-title" x="427" y="176" text-anchor="middle">Fix</text><text class="d-sub" x="427" y="200" text-anchor="middle">Must-fix items</text>
+                <path class="d-line d-dash" d="M358 182H245V102" marker-end="url(#arrow)"/>
+                <text class="d-label" x="275" y="144" text-anchor="middle">retry</text>
+                <path class="d-line d-line-accent" d="M642 98V266" marker-end="url(#arrow-accent)"/>
+                <text class="d-label d-label-accent" x="634" y="246" text-anchor="end">all clear</text>
+                <rect class="d-node" x="540" y="270" width="128" height="64" rx="8"/><text class="d-title" x="604" y="296" text-anchor="middle">Gates 1 and 2</text><text class="d-sub" x="604" y="320" text-anchor="middle">Build, quality</text>
+                <path class="d-line d-dash" d="M565 270V242H468V218" marker-end="url(#arrow)"/>
+                <text class="d-label" x="516" y="258" text-anchor="middle">gates fail</text>
+                <path class="d-line" d="M540 302H500" marker-end="url(#arrow)"/>
+                <rect class="d-boundary" x="358" y="270" width="138" height="64" rx="8"/><text class="d-title" x="427" y="296" text-anchor="middle">Gate 3</text><text class="d-sub" x="427" y="320" text-anchor="middle">Mutation, optional</text>
+                <path class="d-line" d="M358 302H318" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="176" y="270" width="138" height="64" rx="8"/><text class="d-title" x="245" y="296" text-anchor="middle">Commit</text><text class="d-sub" x="245" y="320" text-anchor="middle">This issue only</text>
+                <path class="d-line" d="M176 302H138" marker-end="url(#arrow)"/>
+                <rect class="d-node d-node-accent" x="6" y="270" width="128" height="64" rx="8"/><text class="d-title" x="70" y="296" text-anchor="middle">Close out</text><text class="d-sub" x="70" y="320" text-anchor="middle">Comment, close</text>
               </svg>
             </div>
+            <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show rework loops. The shaded container groups the inner self-review loop; cut-corner blue shapes mark decision checks.</p>
           </figure>
           <p>Before writing code, the agent reads the issue, the relevant architecture decisions and the codebase, and confirms that acceptance criteria are in place. The inner loop then implements, writing tests first where the code carries logic, and reviews the result against the issue and its acceptance criteria. If must-fix findings remain, it fixes them and implements again.</p>
           <p>When the exit check is clear, Gates 1 and 2 run in parallel; any failure returns to Fix. After they pass, the optional mutation gate runs. The agent then commits only that issue’s changes, posts a comment summarising what it implemented and verified, and closes the issue.</p>

@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="identity" href="index.html" aria-label="AI-SDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-SDLC</span></a>
-      <span class="organisation">EDS</span>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
     </div>
   </header>
   <div class="page-layout">
@@ -50,6 +50,15 @@
 <p class="lead">The PO/BA harness helps product owners (POs) and business analysts (BAs) turn a business need into a product requirements document (PRD): business-level user stories, acceptance criteria and, where useful, an HTML prototype. They choose one of three paths, then commit the results and hand them to the development team.</p>
           <p>Choose from three requirements paths based on technical experience and feature complexity. For the strategy behind the handoff, including what makes a PRD ready, <a href="product-ideation.html#handover">read the handover section in Product ideation</a>.</p>
         </header>
+        <figure class="page-map page-map--route" aria-label="Page summary">
+          <p class="page-map-title">On this page · 4 steps from business need to handoff</p>
+          <ol class="page-map-steps">
+            <li><a href="#choose-path">Choose a path</a><span>Pick Path 1 (SpecKit), Path 2 (Socratic) or Path 3 (CLARA) by feature complexity.</span></li>
+            <li><a href="#path-speckit">Draft specifications</a><span>Generate user stories, resolve open questions or synthesise user research.</span></li>
+            <li><a href="#path-clara">Prototype optional UI</a><span>Validate screens with stakeholders using Stitch, Figma Make or Prizm Design.</span></li>
+            <li><a href="#handoff">Commit &amp; hand off</a><span>Commit the PRD and prototype to the repository for the developer harness.</span></li>
+          </ol>
+        </figure>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#choose-path">Choose a path</a>
             <a href="#path-speckit">Path 1: SpecKit</a>
@@ -78,19 +87,21 @@
           <figure class="concept-figure">
             <figcaption>Figure 1. Three PO/BA paths produce different files, but all end in one committed handoff to the developer harness.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 300" role="img" aria-labelledby="fig-paths-title">
+              <svg viewBox="0 0 680 304" role="img" aria-labelledby="fig-paths-title">
                 <title id="fig-paths-title">Three PO/BA paths join at one handoff. Path 1, SpecKit, is light and business-focused and produces a written specification. Path 2, the Socratic workflow, is deep and technical and produces an early-draft TRD. Path 3, CLARA research, is research-led and produces a set of specification files. All three are committed and handed off, with an optional prototype, to the developer harness for technical planning.</title>
-                <rect class="d-node" x="1" y="20" width="300" height="76" rx="8"/><text class="d-title" x="17" y="48">Path 1: SpecKit</text><text class="d-sub" x="17" y="72">Light · a written specification</text>
-                <rect class="d-node" x="1" y="112" width="300" height="76" rx="8"/><text class="d-title" x="17" y="140">Path 2: Socratic workflow</text><text class="d-sub" x="17" y="164">Deep · an early-draft TRD</text>
-                <rect class="d-node" x="1" y="204" width="300" height="76" rx="8"/><text class="d-title" x="17" y="232">Path 3: CLARA research</text><text class="d-sub" x="17" y="256">Research-led · specification files</text>
-                <path class="d-line" d="M301 58H380V142"/>
-                <path class="d-line" d="M301 242H380V158"/>
-                <path class="d-line" d="M301 150H456" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="460" y="112" width="219" height="76" rx="8"/><text class="d-title" x="569" y="140" text-anchor="middle">Commit, hand off</text><text class="d-sub" x="569" y="164" text-anchor="middle">PRD, optional prototype</text>
-                <path class="d-line" d="M569 188V216" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="460" y="220" width="219" height="64" rx="8"/><text class="d-title" x="569" y="246" text-anchor="middle">Developer harness</text><text class="d-sub" x="569" y="270" text-anchor="middle">Technical planning</text>
+                <rect class="d-group" x="4" y="8" width="312" height="284" rx="10"/>
+                <rect class="d-node" x="14" y="20" width="292" height="76" rx="8"/><text class="d-title" x="30" y="48">Path 1: SpecKit</text><text class="d-sub" x="30" y="72">Light · a written specification</text>
+                <rect class="d-node" x="14" y="112" width="292" height="76" rx="8"/><text class="d-title" x="30" y="140">Path 2: Socratic workflow</text><text class="d-sub" x="30" y="164">Deep · an early-draft TRD</text>
+                <rect class="d-node" x="14" y="204" width="292" height="76" rx="8"/><text class="d-title" x="30" y="232">Path 3: CLARA research</text><text class="d-sub" x="30" y="256">Research-led · specification files</text>
+                <path class="d-line" d="M306 58H384V142"/>
+                <path class="d-line" d="M306 242H384V158"/>
+                <path class="d-line d-line-accent" d="M306 150H454" marker-end="url(#arrow-accent)"/>
+                <polygon class="d-node d-node-accent d-decision" points="468,112 666,112 674,120 674,180 666,188 468,188 460,180 460,120"/><text class="d-title" x="567" y="140" text-anchor="middle">Commit, hand off</text><text class="d-sub" x="567" y="164" text-anchor="middle">PRD, optional prototype</text>
+                <path class="d-line" d="M567 188V216" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="460" y="220" width="214" height="64" rx="8"/><text class="d-title" x="567" y="246" text-anchor="middle">Developer harness</text><text class="d-sub" x="567" y="270" text-anchor="middle">Technical planning</text>
               </svg>
             </div>
+            <p class="diagram-key">Solid arrows show how any of the three PO/BA paths inside the shaded container converges on one committed PRD handoff (cut-corner blue decision) to the developer harness.</p>
           </figure>
           <p>Path 1 suits simple or well-defined features and produces a written specification. Path 2 suits large or ambiguous features and produces an early-draft technical requirements document (TRD) on the team’s issue tracker. Path 3 suits user research on new products and produces a set of specification files. Each path can add a prototype, and each ends with the same commit and handoff.</p>
           <div class="table-scroll"><table class="wide-table"><caption>The three PO/BA paths compared</caption><thead><tr><th scope="col">Path</th><th scope="col">Best for</th><th scope="col">Main tools</th><th scope="col">Hands off</th></tr></thead><tbody>

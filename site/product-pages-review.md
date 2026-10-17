@@ -91,3 +91,38 @@ Updated `dist/product-ideation.html` against the supplied review comments, retai
 These qualifications and safety checks are editorial recommendations responding to the review, not newly verified quotations from the playbook or new organisational policy. The public ideation URL could not be retrieved by the web tool; the review used the repository's publishable HTML.
 
 Validation passed: UTF-8 decoding; all 68 links checked for local destinations and anchors where applicable; unique IDs; sequential heading levels; all nine tables captioned; and no whitespace errors in the diff. Headless Chromium checks at 1440, 768 and 320 px found no page overflow or browser script errors and confirmed the safety check and three decision labels. External link availability and full accessibility conformance were not assessed. Publication was not part of this change.
+
+## Ideation collaboration and agent journeys, 18 October 2026
+
+Reviewed `dist/product-ideation.html` against [Sumit Sheth’s From Headless to Thoughtful](https://www.linkedin.com/pulse/from-headless-thoughtful-why-3-in-a-box-operating-model-sumit-sheth-imptc/), published 18 April 2026, and the repository’s writing and design guides. The article was accessible in full. Existing uncommitted page-shell changes were retained.
+
+### Findings and changes
+
+- The page already covered evidence, product risks, experiments and decision ownership. Its collaboration guidance needed a working practice. Added a short shared brief and a suggested experiment rhythm for Product, Design and Engineering, while retaining specialist involvement and named decision authorities.
+- Discovery did not explicitly cover an agent operating the product for a user. Added an AUX subsection with checks for context, permissions, completed outcomes, retries, recovery and human takeover. A fictional sandbox experiment makes the checks concrete. This guidance applies to products operated by agents; AI-assisted development alone does not require an agent journey.
+- Connected agent journey findings to the handoff, and made continuing collaboration through implementation and production feedback explicit. Qualified the specification loop around evidence for bounded implementation.
+- Added the article beside the relevant explanations and in the source list. Its collaboration and AUX framing are practitioner guidance. The detailed checks, example and feedback controls are editorial recommendations, not quotations or new EDS requirements. No automatic model retraining or expansion of permissions is implied by feedback.
+- Added the subsection to both contents lists and the page map. Reused the existing responsive reference-table style for the new checks so they remain readable on mobile.
+
+### Validation
+
+Checked 72 local links, 36 unique IDs, matching contents lists, sequential headings and captions for all ten tables. All existing anchors and the three current figures were preserved. Headless Chromium checks passed at 1440, 768 and 320 px, with no page overflow or browser errors; enlarged text, no-JavaScript access and the keyboard skip link also passed. Visually inspected the new agent checks and collaboration content on desktop and mobile, including the stacked mobile table. The diff has no whitespace errors. Full accessibility conformance was not assessed. This review updates local source; it does not publish the site.
+
+## Practical design workflow additions, 18 October 2026
+
+Evaluated the user-supplied text, “AI in PDLC: 5 Practical Steps to Speed Up Product Design”, against the current ideation page and `../writing.md`. The notes supplied no author, source link or measurement context. They were treated as editorial input rather than verified evidence of performance or organisational requirements.
+
+| Supplied point | Decision and application |
+| --- | --- |
+| Start with a concept brief | Adopted within the thesis section. Added a suggested brief covering evidence, outcome, proposed direction, alternatives, feasibility and falsification criteria, with ownership and a next experiment. One page is an aim rather than a mandatory template. |
+| Three-in-a-box | Extended the existing guidance by naming the people covering each discipline and linking their shared brief to the experiment record. No second collaboration model or new approval authority was introduced. |
+| Prototype-led customer discovery | Retained and extended with complete administrative workflows, progress, interruption and recovery. Participation follows relevant groups, access needs and decision uncertainty; ten touchpoints is not treated as a sufficient sample or universal target. |
+| Two levels of design review | Adapted into focused review and targeted cross-team input, including design-system consistency, accessibility, feasibility and dependencies. The proposed 10–30 participants was omitted; attendance follows affected responsibilities. Review remains distinct from approval. |
+| Check for concept drift | Added a check of changes to intent, evidence, scope, risk, estimates and the next investment decision. Evidence can justify changing direction. Earlier criteria and results remain recorded, with revised criteria agreed before the next experiment. |
+| Complex administrative workflows | Added realistic tasks across screens, roles and systems, including approvals, waiting, missing information and recovery. Did not adopt the claim that user understanding is never the cause of difficulty. |
+| Asynchronous collaboration | Added version-specific feedback, a question and deadline, a named decision owner and one linked decision record. Tool brands are not prescribed. AI summaries need checking; recordings remain subject to permitted use, access and retention. |
+| Practical AI assistance | Added useful prototype inputs and review of generated results. Measure generation, review and correction effort alongside learning. Omitted the unsupported 60–80% contribution claim and product-specific integration claims. |
+
+The additions use British English, direct actions, explicit ownership and measured recommendations. They extend the existing Frame–Test–Decide structure rather than creating a parallel five-step lifecycle. No new external source or EDS policy claim was added. Existing diagrams, anchors, header wording and unrelated working-tree edits were retained.
+
+Validation passed: 74 local links, 38 unique IDs, matching contents lists, sequential headings and captions for all ten tables. All previous anchors and three figures were preserved. Headless Chromium checks at 1440, 768 and 320 px found no page overflow or browser errors; enlarged text, no-JavaScript access and the keyboard skip link also passed. Visually inspected the concept brief and scope check on desktop and mobile. The diff has no whitespace errors. Full accessibility conformance was not assessed. Publication was not part of this update.

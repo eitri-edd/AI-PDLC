@@ -1,10 +1,12 @@
 :root {
   color-scheme: light;
   --background: #ffffff;
+  --surface-canvas: #fcfdff;
   --surface-subtle: #f8fafc;
   --surface-muted: #f1f5f9;
   --surface-selected: #eff6ff;
   --surface-accent-subtle: #f5f8ff;
+  --surface-example: #f8faff;
   --text-primary: #0f172a;
   --text-body: #1e293b;
   --text-secondary: #475569;
@@ -17,16 +19,21 @@
   --accent-pressed: #1e3a8a;
   --accent-soft: #dbeafe;
   --accent-border: #93c5fd;
+  --indigo: #4338ca;
+  --indigo-soft: #eef2ff;
+  --indigo-border: #c7d2fe;
   --focus: #2563eb;
   --success-text: #166534;
   --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
   --warning-text: #92400e;
   --warning-bg: #fffbeb;
+  --warning-border: #fcd34d;
   --danger-text: #991b1b;
   --danger-bg: #fef2f2;
-  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-sm: 0 2px 8px -2px rgba(15, 23, 42, 0.06), 0 1px 3px -1px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 10px 24px -4px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.03), 0 1px 1px rgba(15, 23, 42, 0.02);
+  --shadow-sm: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 1px 3px -1px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 12px 28px -6px rgba(15, 23, 42, 0.09), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-body);
   background: var(--background);
@@ -71,16 +78,21 @@ a:hover {
 }
 .skip-link:focus { top: 0.75rem; color: #fff; }
 
-/* Sticky translucent white enterprise header */
+/* Sleek sticky translucent white enterprise header with top accent hairline */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  border-top: 2px solid transparent;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)),
+    linear-gradient(90deg, var(--accent) 0%, #3b82f6 50%, var(--indigo) 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.02);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
 }
 .header-inner {
   max-width: 90rem;
@@ -94,46 +106,51 @@ a:hover {
 }
 .identity {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 0.75rem;
   color: var(--text-primary);
   font-size: 1.0625rem;
-  font-weight: 700;
-  letter-spacing: -0.015em;
+  font-weight: 750;
+  letter-spacing: -0.02em;
   text-decoration: none;
   min-height: 2.75rem;
 }
 .identity:hover { color: var(--accent); }
 .identity-icon {
-  width: 2rem;
-  height: 2rem;
-  padding: 0.3rem;
-  border-radius: 0.45rem;
-  background: var(--surface-selected);
+  width: 2.125rem;
+  height: 2.125rem;
+  padding: 0.325rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
   border: 1px solid var(--accent-border);
   color: var(--accent);
   box-shadow: var(--shadow-xs);
 }
 .organisation {
   display: inline-flex;
+  min-width: 0;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.8rem;
   border-radius: 999px;
   background: var(--surface-subtle);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
+  font-size: 0.78125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: normal;
+  box-shadow: var(--shadow-xs);
 }
 .organisation::before {
   content: "";
+  flex-shrink: 0;
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 999px;
   background: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
 }
 .organisation span { color: var(--border-control); }
 
@@ -184,7 +201,7 @@ a:hover {
   list-style: none;
   min-height: 2.375rem;
   padding: 0.4rem 0.75rem;
-  margin: 0 0 0.625rem;
+  margin: 0 0 0.75rem;
   border: 1px solid var(--border-subtle);
   border-radius: 0.5rem;
   background: #ffffff;
@@ -197,7 +214,7 @@ a:hover {
   cursor: pointer;
   user-select: none;
   box-shadow: var(--shadow-xs);
-  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
 }
 .site-navigation > summary::-webkit-details-marker {
   display: none;
@@ -206,6 +223,7 @@ a:hover {
   background: var(--surface-selected);
   color: var(--accent);
   border-color: var(--accent-border);
+  box-shadow: var(--shadow-sm);
 }
 .site-navigation > summary::after {
   content: "«";
@@ -263,7 +281,7 @@ a:hover {
   border-radius: 0.5rem;
   text-decoration: none;
   color: var(--text-secondary);
-  font-size: 0.9375rem;
+  font-size: 0.90625rem;
   font-weight: 500;
   line-height: 1.45;
 }
@@ -283,8 +301,8 @@ a:hover {
   box-shadow: var(--shadow-sm);
 }
 .site-navigation svg {
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 1.125rem;
+  height: 1.125rem;
   flex-shrink: 0;
   color: var(--text-muted);
   transition: color 140ms ease;
@@ -294,29 +312,28 @@ a:hover {
 .site-navigation nav > a.nav-parent-active svg {
   color: var(--accent);
 }
-/* Nested pages under a section, such as the EDS AI Workflow. */
 .site-navigation nav > a.nav-parent-active {
   color: var(--accent);
   font-weight: 600;
-  background: rgba(239, 246, 255, 0.6);
+  background: rgba(239, 246, 255, 0.7);
 }
 .nav-children {
   margin: 0.25rem 0 0.625rem 1.5rem;
-  padding-left: 0.25rem;
+  padding-left: 0.35rem;
   border-left: 1.5px solid var(--border-subtle);
 }
 .nav-children a {
   display: flex;
   align-items: center;
-  min-height: 2.375rem;
-  padding: 0.4rem 0.75rem;
+  min-height: 2.3rem;
+  padding: 0.375rem 0.75rem;
   margin: 0.15rem 0;
   border: 1px solid transparent;
   border-left: 2.5px solid transparent;
-  border-radius: 0.4rem;
+  border-radius: 0.45rem;
   text-decoration: none;
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 0.859375rem;
   font-weight: 500;
   line-height: 1.45;
 }
@@ -335,26 +352,31 @@ a:hover {
 }
 
 /* Status labels in EDS tables and headings */
-.status {
+.status, .badge {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
   padding: 0.125rem 0.625rem;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--success-border);
   border-radius: 999px;
-  background: var(--surface-subtle);
+  background: var(--success-bg);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   line-height: 1.5;
-  color: var(--text-secondary);
+  color: var(--success-text);
   white-space: nowrap;
-  box-shadow: 0 1px 1px rgba(15, 23, 42, 0.03);
+  box-shadow: 0 1px 1px rgba(15, 23, 42, 0.02);
+}
+.badge {
+  border-color: var(--border-strong);
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
 }
 .status-planned {
-  border-color: #fcd34d;
-  background: #fffbeb;
-  color: #92400e;
+  border-color: var(--warning-border);
+  background: var(--warning-bg);
+  color: var(--warning-text);
 }
 .status-hitl {
   border-color: var(--accent-border);
@@ -380,9 +402,9 @@ a:hover {
   color: var(--text-secondary);
 }
 .status-setup {
-  border-color: #c7d2fe;
-  background: #eef2ff;
-  color: #3730a3;
+  border-color: var(--indigo-border);
+  background: var(--indigo-soft);
+  color: var(--indigo);
 }
 
 /* Key to the status labels a page uses */
@@ -390,15 +412,15 @@ a:hover {
   margin: 1.5rem 0;
   padding: 1.25rem 1.5rem;
   border: 1px solid var(--border-subtle);
-  border-radius: 0.625rem;
-  background: var(--surface-subtle);
+  border-radius: 0.75rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-subtle) 100%);
   box-shadow: var(--shadow-xs);
 }
 .status-key > p {
   margin: 0 0 0.75rem;
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.055em;
   line-height: 1.5;
   font-weight: 700;
   color: var(--text-muted);
@@ -406,9 +428,9 @@ a:hover {
 .status-key dl { margin: 0; font-size: 0.9375rem; line-height: 1.55; }
 .status-key dl > div {
   display: grid;
-  grid-template-columns: 12rem minmax(0, 1fr);
+  grid-template-columns: 12.5rem minmax(0, 1fr);
   gap: 0.25rem 1rem;
-  padding: 0.45rem 0;
+  padding: 0.5rem 0;
   border-top: 1px solid var(--border-subtle);
   align-items: baseline;
 }
@@ -420,32 +442,39 @@ h3 .status, th .status { vertical-align: middle; font-weight: 600; margin-left: 
 .checklist { list-style: none; padding-left: 0; }
 .checklist li {
   position: relative;
-  padding: 0.5rem 0 0.5rem 2rem;
+  padding: 0.55rem 0 0.55rem 2.1rem;
   border-bottom: 1px solid var(--border-subtle);
 }
 .checklist li:last-child { border-bottom: 0; }
 .checklist li::before {
-  content: "";
+  content: "✓";
   position: absolute;
   left: 0.125rem;
-  top: 0.85em;
-  width: 1.05rem;
-  height: 1.05rem;
+  top: 0.75em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15rem;
+  height: 1.15rem;
   border: 1.5px solid var(--accent);
   background: var(--surface-selected);
-  border-radius: 0.25rem;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  border-radius: 0.3rem;
 }
 
 /* Main content and typography */
-main { min-width: 0; padding: 2.75rem 0 4rem; }
+main { min-width: 0; padding: 2.75rem 0 4.5rem; }
 main:focus { outline: none; }
 article { max-width: 47.5rem; margin: auto; container-type: inline-size; }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
+  gap: 0.4rem;
   margin: 0 0 0.875rem;
-  padding: 0.2rem 0.65rem;
+  padding: 0.22rem 0.75rem;
   border-radius: 999px;
   background: var(--surface-selected);
   border: 1px solid var(--accent-border);
@@ -453,37 +482,57 @@ article { max-width: 47.5rem; margin: auto; container-type: inline-size; }
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.055em;
   line-height: 1.5;
+  box-shadow: var(--shadow-xs);
+}
+.eyebrow::before {
+  content: "";
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 999px;
+  background: var(--accent);
 }
 
 h1, h2, h3 { color: var(--text-primary); font-weight: 700; }
 h1 {
   margin: 0 0 1.25rem;
   font-size: 2.5rem;
-  line-height: 1.18;
-  letter-spacing: -0.028em;
+  font-weight: 750;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
 }
 h2 {
-  margin: 0 0 1rem;
-  padding-bottom: 0.5rem;
+  position: relative;
+  margin: 0 0 1.125rem;
+  padding-bottom: 0.625rem;
   border-bottom: 1px solid var(--border-subtle);
   font-size: 1.6875rem;
-  font-weight: 650;
+  font-weight: 700;
   line-height: 1.28;
-  letter-spacing: -0.018em;
+  letter-spacing: -0.02em;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 2.75rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
 }
 h3 {
-  margin: 1.75rem 0 0.625rem;
+  margin: 1.875rem 0 0.625rem;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 650;
   line-height: 1.38;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
 }
 p {
   margin: 0 0 1.05rem;
   font-size: 1.0625rem;
-  line-height: 1.7;
+  line-height: 1.72;
   color: var(--text-body);
 }
 strong { font-weight: 600; color: var(--text-primary); }
@@ -494,7 +543,7 @@ strong { font-weight: 600; color: var(--text-primary); }
   margin-bottom: 1.25rem;
 }
 
-/* Article Header & Breadcrumbs */
+/* Article Header, Metadata & Breadcrumbs */
 .article-header {
   padding-bottom: 1.75rem;
   margin-bottom: 2rem;
@@ -511,12 +560,25 @@ strong { font-weight: 600; color: var(--text-primary); }
   line-height: 1.55;
   color: var(--text-secondary);
 }
+.page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: 1.25rem;
+  padding: 0.625rem 0.875rem;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
+  gap: 0.45rem;
+  margin-bottom: 1.125rem;
   color: var(--text-muted);
   font-size: 0.8125rem;
   font-weight: 500;
@@ -535,13 +597,13 @@ strong { font-weight: 600; color: var(--text-primary); }
   font-weight: 600;
 }
 
-/* At-a-glance Page Maps */
+/* Sleek At-a-glance Page Maps */
 .page-map {
   margin: 1.75rem 0 2.25rem;
   padding: 1.375rem 1.5rem;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid #dbeafe;
   border-radius: 0.75rem;
-  background: linear-gradient(180deg, var(--surface-subtle) 0%, var(--surface-accent-subtle) 100%);
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-accent-subtle) 100%);
   box-shadow: var(--shadow-sm);
 }
 .page-map figcaption {
@@ -549,10 +611,10 @@ strong { font-weight: 600; color: var(--text-primary); }
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.375rem;
-  font-size: 0.8125rem;
+  font-size: 0.78125rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.055em;
   color: var(--accent);
 }
 .page-map figcaption::before {
@@ -583,11 +645,11 @@ article .page-map-node {
   position: relative;
   min-width: 0;
   margin: 0;
-  padding: 0.875rem;
+  padding: 0.95rem;
   background: #ffffff;
   border: 1px solid var(--border-subtle);
   border-top: 3px solid var(--accent);
-  border-radius: 0.5rem;
+  border-radius: 0.55rem;
   font-size: 0.8125rem;
   line-height: 1.45;
   box-shadow: var(--shadow-xs);
@@ -603,10 +665,11 @@ article .page-map-node:hover {
 article .page-map-node::before {
   content: "0" counter(map-step);
   display: inline-block;
-  margin-bottom: 0.35rem;
-  padding: 0.05rem 0.4rem;
-  border-radius: 0.25rem;
+  margin-bottom: 0.4rem;
+  padding: 0.08rem 0.45rem;
+  border-radius: 999px;
   background: var(--surface-selected);
+  border: 1px solid var(--accent-border);
   color: var(--accent);
   font-size: 0.6875rem;
   font-weight: 700;
@@ -634,7 +697,7 @@ article .page-map-node::before {
   z-index: 2;
   width: 0.45rem;
   height: 0.45rem;
-  top: 1.35rem;
+  top: 1.4rem;
   right: -0.68rem;
   border-top: 2px solid var(--accent);
   border-right: 2px solid var(--accent);
@@ -673,39 +736,53 @@ article .page-map-node::before {
   .page-map--branches .page-map-nodes { grid-template-columns: 1fr; }
 }
 
-/* Lists & Callouts */
-.concept-article h3 { margin-top: 1.75rem; }
+/* Lists, Callouts (Note) & Worked Examples */
+.concept-article h3 { margin-top: 1.875rem; }
 .concept-article ul, .practice-steps {
   padding-left: 1.375rem;
   font-size: 1.0625rem;
-  line-height: 1.7;
+  line-height: 1.72;
   margin: 0 0 1.125rem;
 }
 .concept-article li + li, .practice-steps li + li { margin-top: 0.625rem; }
 
-.example, .callout {
+.callout, .example {
+  border-radius: 0.625rem;
+  padding: 1.25rem 1.5rem;
+  margin: 1.625rem 0;
+  box-shadow: var(--shadow-xs);
+}
+.callout {
   background: linear-gradient(180deg, #ffffff 0%, var(--surface-accent-subtle) 100%);
   border: 1px solid var(--accent-border);
   border-left: 4px solid var(--accent);
-  border-radius: 0.625rem;
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0;
-  box-shadow: var(--shadow-xs);
 }
-.example .example-label, .callout .example-label {
+.example {
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-example) 100%);
+  border: 1px solid var(--indigo-border);
+  border-left: 4px solid var(--indigo);
+}
+.callout .example-label, .example .example-label {
   display: inline-flex;
   align-items: center;
-  padding: 0.125rem 0.55rem;
+  padding: 0.125rem 0.6rem;
   border-radius: 999px;
-  background: var(--surface-selected);
-  border: 1px solid var(--accent-border);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.045em;
   line-height: 1.5;
   font-weight: 700;
-  color: var(--accent);
   margin-bottom: 0.75rem;
+}
+.callout .example-label {
+  background: var(--surface-selected);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+}
+.example .example-label {
+  background: var(--indigo-soft);
+  border: 1px solid var(--indigo-border);
+  color: var(--indigo);
 }
 .example > :last-child, .callout > :last-child { margin-bottom: 0; }
 .callout p, .example p { color: var(--text-body); }
@@ -719,22 +796,23 @@ article .page-map-node::before {
 .concept-question strong { color: var(--accent); }
 
 .next-step {
-  margin-top: 1.75rem;
+  margin-top: 2rem;
   padding: 1.25rem 1.5rem;
-  background: linear-gradient(135deg, var(--surface-subtle) 0%, var(--surface-selected) 100%);
+  background: linear-gradient(135deg, #ffffff 0%, var(--surface-selected) 100%);
   border: 1px solid var(--accent-border);
+  border-left: 4px solid var(--accent);
   border-radius: 0.625rem;
   box-shadow: var(--shadow-xs);
 }
 .next-step p:last-child { margin-bottom: 0; }
 
 /* ==========================================================================
-   PROFESSIONAL ARCHITECTURAL DIAGRAMS & ANIMATION SYSTEM
+   SLEEK ARCHITECTURAL DIAGRAMS & ANIMATION SYSTEM
    ========================================================================== */
 .diagram-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 
 .concept-figure {
-  margin: 1.75rem 0;
+  margin: 1.875rem 0;
   background: #ffffff;
   border: 1px solid var(--border-strong);
   border-radius: 0.75rem;
@@ -751,7 +829,7 @@ article .page-map-node::before {
 .concept-figure > figcaption {
   margin: 0;
   padding: 0.875rem 1.25rem;
-  background: var(--surface-subtle);
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-subtle) 100%);
   border-bottom: 1px solid var(--border-subtle);
   color: var(--text-primary);
   font-size: 0.9375rem;
@@ -763,7 +841,27 @@ article .page-map-node::before {
   gap: 0.75rem;
   flex-wrap: wrap;
 }
-/* When figcaption is at the end of a figure (e.g., EDS workflow pages) */
+.figure-caption-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.figure-number {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: var(--surface-selected);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+/* When figcaption is at the end of a figure */
 .concept-figure > .figure-scroll + figcaption {
   border-top: 1px solid var(--border-subtle);
   border-bottom: 0;
@@ -781,7 +879,7 @@ article .page-map-node::before {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.15rem 0.55rem;
+  padding: 0.175rem 0.6rem;
   border-radius: 999px;
   background: var(--surface-selected);
   border: 1px solid var(--accent-border);
@@ -805,7 +903,7 @@ article .page-map-node::before {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.2rem 0.55rem;
+  padding: 0.22rem 0.6rem;
   border-radius: 0.375rem;
   border: 1px solid var(--border-strong);
   background: #ffffff;
@@ -814,7 +912,8 @@ article .page-map-node::before {
   font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 140ms ease, color 140ms ease, border-color 140ms ease;
+  box-shadow: var(--shadow-xs);
+  transition: background-color 140ms ease, color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
 }
 .figure-btn:hover {
   background: var(--surface-selected);
@@ -834,6 +933,9 @@ article .page-map-node::before {
   font-size: 0.8125rem;
   color: var(--text-secondary);
   font-weight: 600;
+}
+.figure-reading > summary:hover {
+  color: var(--accent);
 }
 .figure-reading[open] { padding-bottom: 0.875rem; }
 .figure-reading-label { font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.375rem; }
@@ -856,7 +958,7 @@ article .page-map-node::before {
   background: var(--surface-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
-/* Hide redundant Diagram summary toggle when already open on desktop */
+/* Hide redundant Diagram summary toggle when already open */
 .diagram-detail[open] > summary {
   display: none;
 }
@@ -864,10 +966,10 @@ article .page-map-node::before {
 
 .figure-scroll {
   overflow-x: auto;
-  padding: 1.25rem;
-  background-color: #fafcff;
+  padding: 1.5rem;
+  background-color: var(--surface-canvas);
   background-image: radial-gradient(#cbd5e1 0.85px, transparent 0.85px);
-  background-size: 16px 16px;
+  background-size: 18px 18px;
 }
 
 .concept-figure svg {
@@ -881,7 +983,7 @@ article .page-map-node::before {
 
 .diagram-key {
   margin: 0;
-  padding: 0.625rem 1.25rem;
+  padding: 0.65rem 1.25rem;
   background: var(--surface-subtle);
   border-top: 1px solid var(--border-subtle);
   font-size: 0.8125rem;
@@ -891,30 +993,34 @@ article .page-map-node::before {
 
 /* SVG Node & Connector Styling */
 .d-node {
-  fill: #ffffff;
-  stroke: #64748b;
+  fill: url(#d-grad-node);
+  stroke: #94a3b8;
   stroke-width: 1.5;
-  filter: drop-shadow(0 2px 4px rgba(15, 23, 42, 0.06));
+  filter: drop-shadow(0 3px 6px rgba(15, 23, 42, 0.06)) drop-shadow(0 1px 2px rgba(15, 23, 42, 0.03));
   transition: fill 180ms ease, stroke 180ms ease, stroke-width 180ms ease, filter 180ms ease;
 }
+.d-decision {
+  fill: url(#d-grad-decision);
+  stroke: #2563eb;
+  stroke-width: 1.75;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 3px 8px rgba(37, 99, 235, 0.1));
+}
 .d-node-accent {
-  fill: #eff6ff;
+  fill: url(#d-grad-accent);
   stroke: var(--accent);
   stroke-width: 2;
-  filter: drop-shadow(0 3px 8px rgba(29, 78, 216, 0.14));
+  filter: drop-shadow(0 4px 12px rgba(29, 78, 216, 0.15));
   animation: d-gate-pulse 3.2s ease-in-out infinite;
 }
-.d-decision {
-  stroke-linejoin: round;
-}
 .d-boundary {
-  fill: #f8fafc;
+  fill: #ffffff;
   stroke: #64748b;
   stroke-width: 1.5;
   stroke-dasharray: 6 4;
 }
 .d-group {
-  fill: #f8fafc;
+  fill: rgba(248, 250, 252, 0.92);
   stroke: #94a3b8;
   stroke-width: 1.5;
 }
@@ -924,40 +1030,43 @@ article .page-map-node::before {
   stroke-width: 1.5;
 }
 .d-title {
-  font-size: 15.5px;
+  font-size: 15px;
   font-weight: 700;
   fill: #0f172a;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
   pointer-events: none;
 }
 .d-sub {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 500;
-  fill: #1e293b;
+  fill: #334155;
   pointer-events: none;
 }
-.d-node-accent + .d-title,
-.d-node-accent + .d-sub {
+.d-node-accent + .d-title {
   fill: #1e3a8a;
-  font-weight: 650;
+}
+.d-node-accent + .d-title + .d-sub {
+  fill: #1e40af;
+  font-weight: 550;
 }
 .d-label {
-  font-size: 13.5px;
+  font-size: 12.75px;
   font-weight: 600;
   fill: #1e293b;
   paint-order: stroke fill;
-  stroke: #fafcff;
-  stroke-width: 4px;
+  stroke: #ffffff;
+  stroke-width: 5px;
   stroke-linecap: round;
   stroke-linejoin: round;
   pointer-events: none;
 }
 .d-label-accent {
+  font-size: 12.75px;
   fill: var(--accent);
   font-weight: 700;
   paint-order: stroke fill;
-  stroke: #fafcff;
-  stroke-width: 4px;
+  stroke: #ffffff;
+  stroke-width: 5px;
 }
 .d-excluded { font-style: italic; }
 
@@ -988,7 +1097,7 @@ article .page-map-node::before {
   stroke-linejoin: round;
   stroke-dasharray: 10 38;
   stroke-dashoffset: 48;
-  opacity: 0.75;
+  opacity: 0.72;
   pointer-events: none;
   animation: d-flow-forward 2.2s linear infinite;
 }
@@ -996,7 +1105,7 @@ article .page-map-node::before {
   stroke: #3b82f6;
   stroke-width: 2.75;
   stroke-dasharray: 12 36;
-  opacity: 0.9;
+  opacity: 0.88;
   animation-duration: 1.8s;
 }
 
@@ -1004,10 +1113,10 @@ article .page-map-node::before {
 .d-node-interactive { cursor: pointer; }
 .d-node-interactive:hover,
 .d-step-active {
-  fill: #eff6ff !important;
+  fill: url(#d-grad-accent) !important;
   stroke: var(--accent) !important;
   stroke-width: 2.5px !important;
-  filter: drop-shadow(0 4px 12px rgba(29, 78, 216, 0.24)) !important;
+  filter: drop-shadow(0 6px 14px rgba(29, 78, 216, 0.22)) !important;
 }
 .d-line-active {
   stroke: var(--accent) !important;
@@ -1026,7 +1135,7 @@ article .page-map-node::before {
     filter: drop-shadow(0 3px 7px rgba(29, 78, 216, 0.12));
   }
   50% {
-    filter: drop-shadow(0 4px 14px rgba(37, 99, 235, 0.28));
+    filter: drop-shadow(0 5px 14px rgba(37, 99, 235, 0.26));
   }
 }
 @keyframes d-badge-blink {
@@ -1059,11 +1168,11 @@ article .page-map-node::before {
    ========================================================================== */
 .table-scroll {
   overflow-x: auto;
-  margin: 1.5rem 0;
+  margin: 1.625rem 0;
   background: #ffffff;
   border: 1px solid var(--border-subtle);
-  border-radius: 0.625rem;
-  box-shadow: var(--shadow-xs);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-sm);
   -webkit-overflow-scrolling: touch;
 }
 table {
@@ -1071,22 +1180,22 @@ table {
   width: 100%;
   min-width: 38rem;
   font-size: 0.9375rem;
-  line-height: 1.55;
+  line-height: 1.58;
 }
 caption {
   text-align: left;
-  padding: 0.75rem 1rem;
-  background: var(--surface-subtle);
+  padding: 0.8rem 1.15rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-subtle) 100%);
   border-bottom: 1px solid var(--border-subtle);
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: 650;
   line-height: 1.5;
   color: var(--text-secondary);
 }
 th, td {
   text-align: left;
   vertical-align: top;
-  padding: 0.85rem 1.15rem;
+  padding: 0.875rem 1.15rem;
   border-bottom: 1px solid var(--border-subtle);
   overflow-wrap: break-word;
   word-break: normal;
@@ -1096,7 +1205,7 @@ tbody tr:last-child td {
   border-bottom: 0;
 }
 tbody tr:hover {
-  background: rgba(248, 250, 252, 0.75);
+  background: rgba(248, 250, 252, 0.85);
 }
 th {
   font-weight: 600;
@@ -1104,10 +1213,11 @@ th {
 }
 thead th {
   background: var(--surface-subtle);
-  border-bottom: 1px solid var(--border-strong);
-  font-size: 0.8125rem;
+  border-bottom: 1.5px solid var(--border-strong);
+  font-size: 0.78125rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   color: var(--text-secondary);
   white-space: nowrap;
 }
@@ -1165,7 +1275,7 @@ table:has(tbody tr:first-child td:nth-child(5):last-child) {
   white-space: nowrap;
 }
 
-/* Skills catalogue tables with command slugs (e.g. /dependency-orchestrator, /improve-codebase-architecture) */
+/* Skills catalogue tables with command slugs */
 .skills-table th:first-child,
 .skills-table td:first-child,
 .skills-table th[scope="row"],
@@ -1196,7 +1306,7 @@ table:has(tbody th code) th:first-child code {
   white-space: nowrap !important;
 }
 
-/* Stage & Phase tables (1. Requirements and scope, 1. Business domain...) */
+/* Stage & Phase tables */
 .stage-table,
 .wide-col-first {
   min-width: 56rem;
@@ -1219,8 +1329,8 @@ code {
   background: var(--surface-muted);
   color: #0f172a;
   border: 1px solid var(--border-subtle);
-  border-radius: 0.3rem;
-  padding: 0.1rem 0.35rem;
+  border-radius: 0.325rem;
+  padding: 0.12rem 0.38rem;
   overflow-wrap: break-word;
 }
 
@@ -1271,10 +1381,9 @@ section { margin-top: 3rem; scroll-margin-top: 5rem; }
 .key-pointers p { margin: 0 0 1rem; color: var(--text-body); }
 .key-pointers li > div > :last-child { margin-bottom: 0; }
 .key-pointers .table-scroll { margin: 1.5rem 0; }
-.key-pointers .figure-scroll { padding: 1rem; }
+.key-pointers .figure-scroll { padding: 1.25rem; }
 .key-pointers .concept-figure svg { min-width: 40rem; }
 
-/* Nested introduction lists must not impose their decorative numbering on outlines. */
 .key-pointers .figure-reading li { display: list-item; counter-increment: none; }
 .key-pointers .figure-reading li::before { content: none; }
 
@@ -1293,15 +1402,17 @@ section { margin-top: 3rem; scroll-margin-top: 5rem; }
 cite { font-style: normal; }
 
 .article-footer {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-subtle);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-  color: var(--text-secondary);
-  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-size: 0.84375rem;
+  font-weight: 500;
   line-height: 1.57;
 }
 
@@ -1325,17 +1436,19 @@ cite { font-style: normal; }
 }
 .page-contents a {
   display: block;
-  padding: 0.4rem 0 0.4rem 0.875rem;
+  padding: 0.4rem 0.5rem 0.4rem 0.875rem;
   border-left: 2px solid var(--border-subtle);
+  border-radius: 0 0.35rem 0.35rem 0;
   color: var(--text-secondary);
   font-size: 0.84375rem;
   line-height: 1.45;
   text-decoration: none;
-  transition: color 140ms ease, border-color 140ms ease, padding-left 140ms ease;
+  transition: color 140ms ease, border-color 140ms ease, background-color 140ms ease;
 }
 .page-contents a:hover {
   color: var(--accent);
   border-left-color: var(--accent-border);
+  background: var(--surface-subtle);
 }
 .page-contents a[aria-current="location"] {
   color: var(--accent);
@@ -1349,7 +1462,7 @@ cite { font-style: normal; }
   margin: 1.5rem 0;
   padding: 0 1.25rem;
   border: 1px solid var(--border-subtle);
-  border-radius: 0.625rem;
+  border-radius: 0.75rem;
   background: var(--surface-subtle);
   box-shadow: var(--shadow-xs);
 }
@@ -1374,9 +1487,10 @@ summary {
 }
 .task-entry li {
   margin: 0 !important;
-  padding: 1.25rem;
+  padding: 1.25rem 1.375rem;
   background: #ffffff;
   border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent);
   border-radius: 0.625rem;
   box-shadow: var(--shadow-xs);
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
@@ -1384,6 +1498,7 @@ summary {
 .task-entry li:hover {
   transform: translateY(-2px);
   border-color: var(--accent-border);
+  border-top-color: var(--accent);
   box-shadow: var(--shadow-sm);
 }
 .task-entry li > a {
@@ -1423,18 +1538,20 @@ summary {
   gap: 1rem;
   align-items: end;
   margin: 1.75rem 0;
-  padding: 1.25rem;
-  background: var(--surface-subtle);
-  border: 1px solid var(--border-subtle);
-  border-radius: 0.625rem;
-  box-shadow: var(--shadow-xs);
+  padding: 1.25rem 1.375rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-subtle) 100%);
+  border: 1px solid var(--border-strong);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-sm);
 }
 .skill-filters > div { flex: 1 1 12rem; min-width: 0; }
 .skill-filters label {
   display: block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
   margin-bottom: 0.375rem;
 }
 .skill-filters input, .skill-filters select, .skill-filters button {
@@ -1465,7 +1582,8 @@ summary {
 }
 #skill-results {
   flex-basis: 100%;
-  font-size: 0.875rem;
+  font-size: 0.84375rem;
+  font-weight: 500;
   color: var(--text-secondary);
   margin: 0;
 }
@@ -1630,4 +1748,3 @@ summary {
   .page-map a { color: inherit; }
   a[href^="http"]::after { content: " (" attr(href) ")"; }
 }
-

@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="identity" href="index.html" aria-label="AI-SDLC introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI-SDLC</span></a>
-      <span class="organisation">EDS</span>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
     </div>
   </header>
   <div class="page-layout">
@@ -50,6 +50,15 @@
 <p class="lead">Code changes pass through four pipeline stages on their way to production. Each stage widens the scope of the checks, from the developer’s staged change at commit time to the whole codebase at QA entry and before release. The same checks are reused at each scope, so enforcement stays consistent without duplicate tooling.</p>
           <p>The path starts where the <a href="eds-developer-harness.html#closeout">developer harness closeout</a> ends and finishes with the consolidated report for the Tech Lead’s release sign-off.</p>
         </header>
+        <figure class="page-map page-map--route" aria-label="Page summary">
+          <p class="page-map-title">On this page · 4 pipeline stages</p>
+          <ol class="page-map-steps">
+            <li><a href="#pre-commit">4.1 Pre-commit</a><span>Run fast quality and IM8 compliance checks on the developer’s staged change.</span></li>
+            <li><a href="#merge-dev">4.2 Merge to Dev</a><span>Generate API documentation for changed files in the merge request.</span></li>
+            <li><a href="#merge-qa">4.3 Merge to QA</a><span>Run full-codebase security scans and generate architecture documents.</span></li>
+            <li><a href="#pre-prod">4.4 Pre-production</a><span>Run all readiness gates on the full codebase for Tech Lead sign-off.</span></li>
+          </ol>
+        </figure>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#stages">Four pipeline stages</a>
             <a href="#pre-commit">4.1 Pre-commit</a>
@@ -79,27 +88,28 @@
           <figure class="concept-figure">
             <figcaption>Figure 1. The four pipeline stages. The check scope, shown by the widening band, grows from the staged change to the full codebase; the final stage is highlighted because it ends in a human sign-off.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
-              <svg viewBox="0 0 680 240" role="img" aria-labelledby="fig-pipeline-title">
+              <svg viewBox="0 0 680 246" role="img" aria-labelledby="fig-pipeline-title">
                 <title id="fig-pipeline-title">Four pipeline stages from left to right. Stage 4.1, pre-commit: an automated review of the staged change on each commit. Stage 4.2, merge to Dev: API documentation for the changed files in the merge request. Stage 4.3, merge to QA: full-codebase scans and generated documents. Stage 4.4, pre-production: all readiness gates on the full codebase for the Tech Lead's sign-off. The scope of the checks widens from the developer's change to the whole codebase.</title>
-                <text class="d-label" x="78" y="18" text-anchor="middle">Stage 4.1</text>
-                <text class="d-label" x="253" y="18" text-anchor="middle">Stage 4.2</text>
+                <text class="d-label" x="80" y="18" text-anchor="middle">Stage 4.1</text>
+                <text class="d-label" x="254" y="18" text-anchor="middle">Stage 4.2</text>
                 <text class="d-label" x="428" y="18" text-anchor="middle">Stage 4.3</text>
-                <text class="d-label" x="602" y="18" text-anchor="middle">Stage 4.4</text>
-                <rect class="d-node" x="1" y="28" width="155" height="92" rx="8"/><text class="d-title" x="78" y="56" text-anchor="middle">Pre-commit</text><text class="d-sub" x="78" y="80" text-anchor="middle">On each commit</text><text class="d-sub" x="78" y="102" text-anchor="middle">Automated review</text>
-                <path class="d-line" d="M156 74H172" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="176" y="28" width="155" height="92" rx="8"/><text class="d-title" x="253" y="56" text-anchor="middle">Merge to Dev</text><text class="d-sub" x="253" y="80" text-anchor="middle">MR to Dev</text><text class="d-sub" x="253" y="102" text-anchor="middle">API documentation</text>
-                <path class="d-line" d="M331 74H347" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="351" y="28" width="155" height="92" rx="8"/><text class="d-title" x="428" y="56" text-anchor="middle">Merge to QA</text><text class="d-sub" x="428" y="80" text-anchor="middle">MR to QA</text><text class="d-sub" x="428" y="102" text-anchor="middle">Scans, documents</text>
-                <path class="d-line" d="M506 74H522" marker-end="url(#arrow)"/>
-                <rect class="d-node d-node-accent" x="526" y="28" width="153" height="92" rx="8"/><text class="d-title" x="602" y="56" text-anchor="middle">Pre-production</text><text class="d-sub" x="602" y="80" text-anchor="middle">All readiness gates</text><text class="d-sub" x="602" y="102" text-anchor="middle">Tech Lead sign-off</text>
-                <text class="d-sub" x="78" y="146" text-anchor="middle">Staged change</text>
-                <text class="d-sub" x="253" y="146" text-anchor="middle">Changed files</text>
-                <text class="d-sub" x="428" y="146" text-anchor="middle">Full codebase</text>
-                <text class="d-sub" x="602" y="146" text-anchor="middle">Full codebase</text>
-                <path class="d-line d-line-accent" d="M1 186 L679 166 V206 Z" style="fill:#eff6ff"/>
-                <text class="d-label d-label-accent" x="340" y="230" text-anchor="middle">Scope of checks widens from one change to the whole codebase</text>
+                <text class="d-label d-label-accent" x="601" y="18" text-anchor="middle">Stage 4.4 · Sign-off</text>
+                <rect class="d-node" x="4" y="28" width="152" height="92" rx="8"/><text class="d-title" x="80" y="56" text-anchor="middle">Pre-commit</text><text class="d-sub" x="80" y="80" text-anchor="middle">On each commit</text><text class="d-sub" x="80" y="102" text-anchor="middle">Automated review</text>
+                <path class="d-line" d="M156 74H174" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="178" y="28" width="152" height="92" rx="8"/><text class="d-title" x="254" y="56" text-anchor="middle">Merge to Dev</text><text class="d-sub" x="254" y="80" text-anchor="middle">MR to Dev</text><text class="d-sub" x="254" y="102" text-anchor="middle">API documentation</text>
+                <path class="d-line" d="M330 74H348" marker-end="url(#arrow)"/>
+                <rect class="d-node" x="352" y="28" width="152" height="92" rx="8"/><text class="d-title" x="428" y="56" text-anchor="middle">Merge to QA</text><text class="d-sub" x="428" y="80" text-anchor="middle">MR to QA</text><text class="d-sub" x="428" y="102" text-anchor="middle">Scans, documents</text>
+                <path class="d-line d-line-accent" d="M504 74H522" marker-end="url(#arrow-accent)"/>
+                <polygon class="d-node d-node-accent d-decision" points="534,28 668,28 676,36 676,112 668,120 534,120 526,112 526,36"/><text class="d-title" x="601" y="56" text-anchor="middle">Pre-production</text><text class="d-sub" x="601" y="80" text-anchor="middle">All readiness gates</text><text class="d-sub" x="601" y="102" text-anchor="middle">Tech Lead sign-off</text>
+                <rect class="d-group" x="4" y="132" width="152" height="26" rx="6"/><text class="d-sub" x="80" y="149" text-anchor="middle">Staged change</text>
+                <rect class="d-group" x="178" y="132" width="152" height="26" rx="6"/><text class="d-sub" x="254" y="149" text-anchor="middle">Changed files</text>
+                <rect class="d-group" x="352" y="132" width="152" height="26" rx="6"/><text class="d-sub" x="428" y="149" text-anchor="middle">Full codebase</text>
+                <rect class="d-group" x="526" y="132" width="150" height="26" rx="6"/><text class="d-sub" x="601" y="149" text-anchor="middle">Full codebase</text>
+                <path class="d-line d-line-accent" d="M4 188 L676 170 V206 Z" style="fill:url(#d-grad-accent)"/>
+                <text class="d-label d-label-accent" x="340" y="232" text-anchor="middle">Scope of checks widens from one change to the whole codebase</text>
               </svg>
             </div>
+            <p class="diagram-key">Solid arrows show promotion from commit to pre-production. The widening blue band illustrates verification scope expanding from a single staged change to the full codebase; the cut-corner stage marks the Tech Lead release sign-off.</p>
           </figure>
           <p>A commit triggers checks on the staged change only. A merge request (MR) to the Dev branch generates documentation for the changed files. An MR to the QA branch runs full-codebase scans and document generators. Promoting a release candidate runs every readiness gate again on the full codebase and produces one report for the Tech Lead.</p>
           <p>The pipeline has four stages, numbered 4.1 to 4.4 below.</p>

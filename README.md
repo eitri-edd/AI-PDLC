@@ -3,7 +3,7 @@
 This repository contains the **Enterprise Digital Services (EDS) AI-SDLC Handbook** static documentation site (`site/dist/`) together with its governing editorial and design specifications:
 
 - **[`writing.md`](./writing.md)** — Editorial guide defining voice, tone, British English conventions, house terminology, page archetypes, and the separation of requirements, recommendations, and examples.
-- **[`design.md`](./design.md)** — Visual design and component guide defining the **Editorial Enterprise Light** theme (Version 0.2), layout architecture, typography, collapsible navigation, table column sizing, and interactive animated SVG diagrams.
+- **[`design.md`](./design.md)** — Visual design and component guide defining the **Editorial Enterprise Light** theme (Version 0.3), layout architecture, typography, collapsible navigation, table column sizing, and interactive animated SVG diagrams.
 - **[`site/dist/`](./site/dist/)** — The published static HTML handbook, shared stylesheet (`styles.css`), and progressive enhancement script (`site.js`).
 
 Use this README as the operational reference whenever refining existing pages, updating diagrams or tables, or adding new content to the handbook.
