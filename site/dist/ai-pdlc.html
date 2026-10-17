@@ -86,11 +86,95 @@
           <h2>Two loops joined by a handoff</h2>
           <p>The AI-Software Development Lifecycle (AI-SDLC) connects two learning loops. Product ideation is about making the right product: it asks whether the problem is worth solving and whether the proposed solution solves it. Product implementation is about making the product right: it turns validated intent into reliable production behaviour. Each loop has its own work, evidence and decisions.</p><p>The handoff centres on a product requirements document (PRD), supported by user interface (UI) artefacts where relevant and current organisational context.</p><p>The diagram shows how the loops connect and feed learning back into each other.</p>
           <figure class="concept-figure" id="fig-loops">
-  <figcaption id="fig-loops-title-caption">Figure 1. Value feedback returns to ideation; defects return to implementation.</figcaption>
-  <details class="figure-reading"><summary>Read as text: Flow and branches</summary><ol><li>Ideation tests assumptions and repeats until evidence supports a bounded commitment.</li><li>Handoff contains the PRD and, where there is a UI, relevant UI artefacts. Organisational context is a separate implementation input.</li><li>Implementation plans, slices, builds and verifies the increment, then releases it for use.</li><li>Feedback from use follows two routes: defects return to implementation; questions about value or intended behaviour return to ideation.</li></ol></details>
+  <figcaption id="fig-loops-title-caption">Figure 1. Two connected loops: ideation iterates on value and intent, handoff transfers validated scope, and implementation iterates on delivery and verification.</figcaption>
+  <details class="figure-reading"><summary>Read as text: Inner loops, handoff and cross-loop feedback</summary><ol><li><strong>Product ideation loop (inner loop):</strong> moves through <em>1. Frame</em> (thesis, explore, challenge), <em>2. Test</em> (specify, prototype, measure, learn) and <em>3. Decide</em>. If assumptions need more work, the inner loop returns to <em>Frame</em> to improve, redesign or pivot (or stops and retains learning).</li><li><strong>Handoff and context:</strong> when evidence supports commitment, the validated PRD and relevant UI artefacts combine with organisational context (architecture, domain, security and policy constraints) to enter implementation.</li><li><strong>Product implementation loop (inner loops):</strong> moves through <em>1. Plan &amp; 2. Slice</em> (TRD and verifiable tasks), <em>3. Implement</em>, <em>4. Verify</em>, and <em>5. Release &amp; 6. Learn</em>. Failed verification loops back to <em>Implement</em> for rework; delivery learning loops from <em>Learn</em> back to <em>Plan &amp; Slice</em> for the next increment.</li><li><strong>Cross-loop feedback:</strong> when production observation or user feedback in <em>Learn</em> challenges product value or intended behaviour, feedback returns across loops to <em>Product ideation</em>.</li></ol></details>
   <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
-    <div class="figure-scroll" tabindex="0" role="region" aria-label="Product and delivery feedback; scroll horizontally if needed"><svg viewBox="0 0 680 420" role="img" aria-labelledby="fig-loops-title" aria-describedby="fig-loops-title-desc"><title id="fig-loops-title">Product and delivery feedback</title><desc id="fig-loops-title-desc">Ideation tests assumptions and repeats until evidence supports a bounded commitment. Handoff contains the PRD and, where there is a UI, relevant UI artefacts. Organisational context is a separate implementation input. Implementation plans, slices, builds and verifies the increment, then releases it for use. Feedback from use follows two routes: defects return to implementation; questions about value or intended behaviour return to ideation.</desc><rect class="d-node" x="15" y="35" width="190" height="90" rx="8"/><text class="d-title" x="110" y="61" text-anchor="middle">Product ideation</text><text class="d-sub" x="110" y="84" text-anchor="middle">Test value and intent</text><path class="d-line" d="M205 80H240" marker-end="url(#arrow)"/><rect class="d-node d-node-accent" x="245" y="35" width="190" height="90" rx="8"/><text class="d-title" x="340" y="61" text-anchor="middle">Handoff</text><text class="d-sub" x="340" y="84" text-anchor="middle">PRD; UI artefacts</text><text class="d-sub" x="340" y="105" text-anchor="middle">where applicable</text><path class="d-line" d="M435 80H475" marker-end="url(#arrow)"/><rect class="d-node" x="480" y="35" width="185" height="90" rx="8"/><text class="d-title" x="572.5" y="61" text-anchor="middle">Implementation</text><text class="d-sub" x="572.5" y="84" text-anchor="middle">Build and verify</text><rect class="d-node" x="245" y="185" width="190" height="90" rx="8"/><text class="d-title" x="340" y="211" text-anchor="middle">Context input</text><text class="d-sub" x="340" y="234" text-anchor="middle">Organisation constraints</text><path class="d-line" d="M435 230H455V105H475" marker-end="url(#arrow)"/><rect class="d-node" x="480" y="295" width="185" height="90" rx="8"/><text class="d-title" x="572.5" y="321" text-anchor="middle">Product in use</text><text class="d-sub" x="572.5" y="344" text-anchor="middle">Observe value and defects</text><path class="d-line" d="M572 125V290" marker-end="url(#arrow)"/><text class="d-label" x="607" y="214" text-anchor="middle">release</text><path class="d-line d-dash" d="M665 340H677V80H670" marker-end="url(#arrow)"/><text class="d-sub" x="572" y="409" text-anchor="middle">defects → implementation</text><path class="d-line d-dash" d="M480 340H110V130" marker-end="url(#arrow)"/><text class="d-label" x="284" y="328" text-anchor="middle">value / intent feedback</text></svg></div>
-    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the agreed handoff.</p>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Two connected loops with inner cycles and handoff; scroll horizontally if needed"><svg viewBox="0 0 920 545" role="img" aria-labelledby="fig-loops-title" aria-describedby="fig-loops-title-desc"><title id="fig-loops-title">Product ideation loop and product implementation loop joined by handoff</title><desc id="fig-loops-title-desc">Two enclosing loop containers connected by a handoff bridge. On the left, the Product ideation loop runs 1 Frame, 2 Test and 3 Decide, with an inner rework loop returning from Decide to Frame and an option to stop. Committed scope exits Decide into the central Handoff node (PRD and UI artefacts), which combines with Context input (organisation constraints) to enter the right-hand Product implementation loop. Inside the implementation loop, work runs through 1 Plan and 2 Slice, 3 Implement, 4 Verify, and 5 Release and 6 Learn, with a fast rework loop from Verify to Implement and a delivery learning loop from Learn back to Plan and Slice. A cross-loop feedback path returns from Release and Learn to the Product ideation loop when value or intent needs to be revisited.</desc>
+      <!-- Left Enclosing Container: Product Ideation Loop -->
+      <rect class="d-group" x="15" y="20" width="290" height="455" rx="10"/>
+      <text class="d-title" x="160" y="46" text-anchor="middle">Product ideation loop</text>
+      <text class="d-sub" x="160" y="66" text-anchor="middle">Make the right product</text>
+
+      <rect class="d-node" x="70" y="84" width="210" height="66" rx="8"/>
+      <text class="d-title" x="175" y="111" text-anchor="middle">1. Frame</text>
+      <text class="d-sub" x="175" y="134" text-anchor="middle">Thesis · Explore · Challenge</text>
+      <path class="d-line" d="M175 150V176" marker-end="url(#arrow)"/>
+
+      <rect class="d-node" x="70" y="180" width="210" height="74" rx="8"/>
+      <text class="d-title" x="175" y="205" text-anchor="middle">2. Test</text>
+      <text class="d-sub" x="175" y="226" text-anchor="middle">Specify · Prototype</text>
+      <text class="d-sub" x="175" y="245" text-anchor="middle">Measure · Learn</text>
+      <path class="d-line" d="M175 254V280" marker-end="url(#arrow)"/>
+
+      <polygon class="d-node d-node-accent d-decision" points="80,284 270,284 280,294 280,350 270,360 80,360 70,350 70,294"/>
+      <text class="d-title" x="175" y="315" text-anchor="middle">3. Decide</text>
+      <text class="d-sub" x="175" y="338" text-anchor="middle">Commit, rework or stop</text>
+
+      <!-- Inner Ideation Rework Loop -->
+      <path class="d-line d-dash" d="M70 322H36V117H65" marker-end="url(#arrow)"/>
+      <text class="d-label" x="160" y="386" text-anchor="middle">Inner loop: rework (improve / pivot)</text>
+
+      <path class="d-line" d="M175 360V404" marker-end="url(#arrow)"/>
+      <rect class="d-boundary" x="90" y="408" width="170" height="46" rx="6"/>
+      <text class="d-sub" x="175" y="436" text-anchor="middle">Or stop &amp; retain learning</text>
+
+      <!-- Centre Bridge: Handoff & Organisational Context -->
+      <path class="d-line d-line-accent" d="M280 322H318V145H345" marker-end="url(#arrow-accent)"/>
+      <text class="d-label d-label-accent" x="318" y="242" text-anchor="middle">commit</text>
+
+      <rect class="d-node d-node-accent" x="350" y="100" width="185" height="90" rx="8"/>
+      <text class="d-title" x="442.5" y="128" text-anchor="middle">Handoff</text>
+      <text class="d-sub" x="442.5" y="151" text-anchor="middle">Validated PRD &amp; UI</text>
+      <text class="d-sub" x="442.5" y="172" text-anchor="middle">artefacts + evidence</text>
+
+      <rect class="d-node" x="350" y="224" width="185" height="86" rx="8"/>
+      <text class="d-title" x="442.5" y="251" text-anchor="middle">Context input</text>
+      <text class="d-sub" x="442.5" y="273" text-anchor="middle">Architecture, domain,</text>
+      <text class="d-sub" x="442.5" y="293" text-anchor="middle">security &amp; policy rules</text>
+
+      <path class="d-line d-line-accent" d="M535 145H562V117H630" marker-end="url(#arrow-accent)"/>
+      <path class="d-line" d="M535 267H562V117H630" marker-end="url(#arrow)"/>
+
+      <!-- Right Enclosing Container: Product Implementation Loop -->
+      <rect class="d-group" x="580" y="20" width="325" height="455" rx="10"/>
+      <text class="d-title" x="742.5" y="46" text-anchor="middle">Product implementation loop</text>
+      <text class="d-sub" x="742.5" y="66" text-anchor="middle">Make the product right</text>
+
+      <rect class="d-node" x="635" y="84" width="205" height="66" rx="8"/>
+      <text class="d-title" x="737.5" y="111" text-anchor="middle">1. Plan &amp; 2. Slice</text>
+      <text class="d-sub" x="737.5" y="134" text-anchor="middle">TRD &amp; verifiable tasks</text>
+      <path class="d-line" d="M737.5 150V176" marker-end="url(#arrow)"/>
+
+      <rect class="d-node" x="635" y="180" width="205" height="62" rx="8"/>
+      <text class="d-title" x="737.5" y="206" text-anchor="middle">3. Implement</text>
+      <text class="d-sub" x="737.5" y="228" text-anchor="middle">Build change &amp; evidence</text>
+      <path class="d-line" d="M737.5 242V268" marker-end="url(#arrow)"/>
+
+      <polygon class="d-node d-node-accent d-decision" points="645,272 830,272 840,282 840,330 830,340 645,340 635,330 635,282"/>
+      <text class="d-title" x="737.5" y="301" text-anchor="middle">4. Verify</text>
+      <text class="d-sub" x="737.5" y="324" text-anchor="middle">Independent review &amp; gates</text>
+
+      <!-- Fast Verification Rework Loop (inside Implementation container) -->
+      <path class="d-line d-dash" d="M635 306H600V211H630" marker-end="url(#arrow)"/>
+      <text class="d-label" x="608" y="354" text-anchor="middle">fail: rework</text>
+
+      <path class="d-line" d="M737.5 340V368" marker-end="url(#arrow)"/>
+      <text class="d-label" x="762" y="358" text-anchor="middle">pass</text>
+
+      <rect class="d-node" x="635" y="372" width="205" height="76" rx="8"/>
+      <text class="d-title" x="737.5" y="397" text-anchor="middle">5. Release &amp; 6. Learn</text>
+      <text class="d-sub" x="737.5" y="418" text-anchor="middle">Observe in use; evaluate</text>
+      <text class="d-sub" x="737.5" y="437" text-anchor="middle">product &amp; delivery results</text>
+
+      <!-- Inner Implementation Delivery Loop -->
+      <path class="d-line d-dash" d="M840 410H885V117H845" marker-end="url(#arrow)"/>
+      <text class="d-label" x="742.5" y="465" text-anchor="middle">Inner loop: delivery learning &amp; next increment</text>
+
+      <!-- Cross-Loop Value / Intent Feedback -->
+      <path class="d-line d-dash" d="M737.5 448V516H160V480" marker-end="url(#arrow)"/>
+      <text class="d-label" x="442.5" y="506" text-anchor="middle">Cross-loop feedback: value or intent questions reopen Product ideation (1. Frame)</text>
+    </svg></div>
+    <p class="diagram-key">Each enclosing container runs its own inner feedback loops. Solid arrows show forward progression and handoff; dashed arrows show inner rework/learning cycles and cross-loop feedback.</p>
   </details>
 </figure>
           <p>The ideation loop repeats until the team can decide on a bounded scope. The PRD records the agreed behaviour; relevant UI artefacts illustrate the experience. Implementation builds and checks that scope. Evidence from delivery and use can reopen an ideation decision, so the handoff does not end collaboration.</p>
