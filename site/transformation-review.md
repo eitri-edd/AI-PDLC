@@ -1,5 +1,16 @@
 # Organisation transformation: editorial review
 
+## Platform / Cloud Engineer proposal · 18 October 2026
+
+- Added Platform / Cloud Engineer to the contributions and competency tables, with existing expertise, AI-assisted responsibilities and observable evidence of competence.
+- Included the role in the accountable-delegation diagram, its text equivalents and the fictional team example. The added SVG label fits inside the existing owner node.
+- Defined three areas of work: CI/CD pipeline setup and maintenance, infrastructure provisioning and hardening, and operations and application health monitoring. Included blocked checks, reviewed infrastructure code, hardening evidence, tested alerts and recovery procedures as practical outputs.
+- Clarified collaboration: developers provide application health signals and diagnose code failures; platform engineers maintain shared delivery and monitoring foundations; QA and security retain their respective review responsibilities. Existing release and risk authorities still apply. The role can be available within a squad or through a named shared team with support coverage.
+- Extended shared-service ownership, pilot preparation, operational health measures and total cost to cover these responsibilities. The proposal does not create an EDS staffing requirement or grant agents production authority.
+- Consulted [Microsoft platform automation guidance](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/automation), [Microsoft security role guidance](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/secure/teams-roles) and [DORA monitoring and observability guidance](https://dora.dev/capabilities/monitoring-and-observability/). These support the practices; their mapping to this role is an editorial proposal. No new performance claims were added.
+
+Validation: browser checks at 320, 375, 768, 1100 and 1440 px found no page overflow, including expanded diagram text and horizontal scrolling of the competency table. Checked heading order, duplicate IDs, internal anchors, local links and the new SVG label bounds. Both role rows remain available without JavaScript at 320 px, with no page overflow. No browser script errors were observed. Inspected the updated diagram and mobile and desktop content visually. At 375 px with the root text size doubled, the page still has the same 483 px overflow as the unchanged page; this existing text-enlargement issue is outside this content revision. No complete accessibility audit or deployment was performed.
+
 ## Follow-up revision · 17 October 2026
 
 - Replaced the legacy/emergent competency comparison with existing expertise, additional responsibilities and observable work. Examples assess flawed specifications, unsafe permission boundaries, incomplete evidence and specialist escalation. Multi-agent orchestration is an optional specialism.
