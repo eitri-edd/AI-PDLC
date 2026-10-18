@@ -544,6 +544,16 @@ strong { font-weight: 600; color: var(--text-primary); }
 }
 
 /* Article Header, Metadata & Breadcrumbs */
+.overview-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin-top: 1.5rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  background: var(--surface-subtle);
+}
 .article-header {
   padding-bottom: 1.75rem;
   margin-bottom: 2rem;
