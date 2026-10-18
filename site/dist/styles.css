@@ -1741,7 +1741,8 @@ summary {
 
 @container (max-width: 700px) {
   .table-scroll:has(.reference-table) { overflow: visible; }
-  .reference-table { min-width: 0; display: block; }
+  /* Stacked reference rows must override the column-count table minimums above. */
+  .reference-table { min-width: 0 !important; display: block; }
   .reference-table caption { display: block; }
   .reference-table thead {
     position: absolute;
