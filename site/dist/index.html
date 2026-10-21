@@ -67,7 +67,7 @@
 
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>Start with your task</strong><div class="page-map-links"><a href="#choose-task">Idea, feature, defect or high-risk change</a></div></li>
-            <li class="page-map-node"><strong>Audience and authority</strong><div class="page-map-links"><a href="#target-audience">Who this guide is for</a><a href="#guide-layers">Principles, requirements and Eitri</a></div></li>
+            <li class="page-map-node"><strong>Audience and guidance</strong><div class="page-map-links"><a href="#target-audience">Who this guide is for</a><a href="#guide-layers">Principles, requirements and Eitri</a></div></li>
             <li class="page-map-node"><strong>Learn and decide sooner</strong><div class="page-map-links"><a href="#why-ai-pdlc">Test ideas and review evidence</a></div></li>
             <li class="page-map-node"><strong>Use it in daily work</strong><div class="page-map-links"><a href="#evergreen-guide">Agree the next decision and keep guidance current</a></div></li>
           </ol>
@@ -76,7 +76,7 @@
         <!-- PAGE MAP END -->
         <details class="mobile-contents">
           <summary>On this page</summary>
-          <nav aria-label="On this page"><a href="#choose-task">Start with your task</a><a href="#target-audience">Audience and authority</a><a href="#guide-layers">Three layers of guidance</a><a href="#why-ai-pdlc">Why AI-SDLC?</a><a href="#evergreen-guide">Use and maintain the guide</a></nav>
+          <nav aria-label="On this page"><a href="#choose-task">Start with your task</a><a href="#target-audience">Who this guide is for</a><a href="#guide-layers">Three layers of guidance</a><a href="#why-ai-pdlc">Why AI-SDLC?</a><a href="#evergreen-guide">Use and maintain the guide</a></nav>
         </details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -94,15 +94,15 @@
           <p>Once the requirements and controls are clear, use the <a href="eds-ai-workflow.html">Eitri workflow</a> for tool instructions and the <a href="eds-path-to-production.html#stages">pipeline and pre-production checks</a> for its release support. A short route does not waive an applicable control.</p>
         </section>
 <section id="target-audience">
-          <h2>Audience and authority</h2>
+          <h2>Who this guide is for</h2>
           <p>This guide is for <strong>EDS product and engineering teams</strong>: product owners and managers, business analysts, designers, developers, technical leads, quality office (QO) and cyber managers, and operational team. Organisational leaders can use it to plan ownership, capability and support.</p>
-          <p>It combines a proposed organisational playbook with EDS implementation guidance for Eitri, the AI-assisted development workflow described in this site. The playbook explains the reasons and decisions; the implementation pages describe how the current tools support them.</p>
-          <p>This draft does not establish approved EDS policy or grant approval authority. Confirm the applicable lifecycle, policies and decision owners for your work. Where a control is required, record its authoritative source and the evidence and approval it needs.</p>
+          <p>The guide connects organisational practices with EDS implementation guidance for Eitri, the AI-assisted development workflow. The playbook explains the approach and key decisions; the implementation pages show how the tools support the work.</p>
+          <p>For each workflow, identify the applicable policies, decision owners, required evidence and approvals.</p>
           <h3 id="guide-layers">Read the guide in three layers</h3>
           <div class="table-scroll"><table><caption>Separate the reason, the obligation and the tool support</caption><thead><tr><th scope="col">Layer</th><th scope="col">What it explains</th><th scope="col">Where to start</th></tr></thead><tbody>
 <tr><th scope="row">Principles</th><td>Why the organisation works this way: test assumptions, verify results and retain human accountability. These explain the recommended approach.</td><td><a href="ai-pdlc.html">Lifecycle overview</a> and <a href="transformation.html">organisation transformation</a></td></tr>
-<tr><th scope="row">Operating requirements</th><td>What evidence and approvals are required by the applicable organisational process. Confirm each obligation with its policy or control owner; the guide’s recommendations do not establish a mandate.</td><td><a href="product-implementation.html#gates-and-assurance">Decisions and independent assurance</a>, alongside the authoritative policies for your work</td></tr>
-<tr><th scope="row">Eitri implementation</th><td>How the current harnesses, skills and pipeline support the workflow. Tool availability and automated checks are implementation details, not the source of approval authority.</td><td><a href="eds-ai-workflow.html">EDS AI Workflow (Eitri)</a></td></tr>
+<tr><th scope="row">Operating requirements</th><td>The evidence, checks and approvals required by the organisational process, with the responsible policy or control owner identified.</td><td><a href="product-implementation.html#gates-and-assurance">Decisions and independent assurance</a>, alongside the authoritative policies for your work</td></tr>
+<tr><th scope="row">Eitri implementation</th><td>How Eitri’s harnesses, skills and pipeline support delivery, verification and review.</td><td><a href="eds-ai-workflow.html">EDS AI Workflow (Eitri)</a></td></tr>
           </tbody></table></div>
           <p>If Eitri cannot perform a required check or capture an approval, the control still applies. Agree an alternative with the control owner and retain the evidence before proceeding. A passing tool check is evidence for a decision; it grants approval only where the applicable process explicitly authorises that automation.</p>
         </section>
@@ -157,7 +157,7 @@
             </div></li>
             <li><div>
               <h3>Revise or replace unsuitable code</h3>
-              <p>Teams can spend more effort patching an unsuitable implementation than trying a different approach. An AI agent is software that uses an AI model and tools to carry out a task. Within agreed permissions, it can help rewrite a small component and run regression tests for comparison.</p>
+              <p>Teams can spend more effort patching an unsuitable implementation than trying a different approach. An AI agent uses a model to choose or adapt actions and tool use towards a goal, within agreed permissions and limits. It can help rewrite a small component and run regression tests for comparison.</p>
               <p>Give the agent the required behaviour, interface contracts and tests that the replacement needs to pass. Developers review the changes and test results, then decide whether the replacement improves the solution enough to justify switching.</p>
               <aside class="callout" aria-label="Note on decisions that remain costly to reverse">
                 <p class="example-label">Note</p>
@@ -247,7 +247,7 @@
     <aside class="page-contents">
       <nav aria-label="On this page">
         <p>On this page</p>
-        <a href="#choose-task">Start with your task</a><a href="#target-audience">Audience and authority</a><a href="#guide-layers">Three layers of guidance</a>
+        <a href="#choose-task">Start with your task</a><a href="#target-audience">Who this guide is for</a><a href="#guide-layers">Three layers of guidance</a>
         <a href="#why-ai-pdlc">Why AI-SDLC?</a>
         <a href="#evergreen-guide">Use and maintain the guide</a>
 

@@ -1,5 +1,27 @@
 # Concepts editorial review
 
+## Current LLM examples · 21 October 2026
+
+Replaced the historical-model approach in C03 below at the user's request. The LLM explanation and learning route now use GPT-6 Astra, GPT-6.1 Sol, Claude Fable 5.1 and Claude Opus 5.5 from the current provider catalogues, checked on 21 October 2026. Removed GPT-5, GPT-5.4 and Opus 4.x references from the public Concepts page, including source descriptions and related reasoning-control discussion. Replaced the GPT-5 prompting reference with the current GPT-6 guide and linked Anthropic's Transparency Hub for matching model/system cards. Retained all source identifiers and the merged software-factory attribution.
+
+Opened the official OpenAI catalogue, both model pages and GPT-6 guide, plus Anthropic's catalogue, both model pages and Transparency Hub. The prose describes supported capabilities and task fit without benchmark rankings. It retains the instruction to check the catalogue and record the chosen version and lifecycle status.
+
+Validation: 114 local links and anchors, 87 unique IDs and 47 source links passed, including citation numbering and accessible labels. No old GPT-5 or Opus 4.x references remain in `dist/concept.html`. Expanded-reference layout checks passed at 320, 768 and 1440 px with no page overflow or browser errors; visually inspected the desktop LLM explanation. Changes remain local and unpublished.
+
+## Findings C01, C02, C03, C05 and C06 · 21 October 2026
+
+Applied the reviewed refinements to `dist/concept.html`:
+
+- C01: distinguished agents that choose or adapt actions from workflows that combine agents, predefined paths and automated checks. Cited Anthropic's architectural distinction and retained agreed permissions and limits. Aligned the repeated definition in `dist/index.html`, `dist/transformation.html` and `../writing.md`.
+- C02: labelled the concept map as this guide's working definitions, acknowledged overlapping usage and scoped graph engineering to execution and workflow graphs.
+- C03: labelled the named model versions as historical capability examples in both the model reference and learning route. Recorded the provider statuses checked on 21 October 2026: GPT-5 deprecated; Claude Opus 4.5 and 4.8 active legacy. Directed new work to current catalogues and recording the exact version and lifecycle status.
+- C05: merged Addy Osmani's original article (20 July 2026) and the O'Reilly republication (18 September 2026) into one attribution. Retained both external links and all existing source anchors, including `source-11` within the merged entry. Updated visible citation numbers and accessible labels to match the resulting 25-entry list.
+- C06: specified paired comparisons on the same held-out tasks with the same model version, tools, starting conditions, budget and assessment criteria, plus repeated runs where outputs vary. Cases used to revise instructions become regression checks; fresh tasks remain reserved for the final comparison. This is proposed evaluation practice, not a finding that the cited decision-model preprint tested skill revisions.
+
+The preceding source review opened the provider model documentation, Anthropic's agent/workflow account, the intent, harness and graph references, both publications of Osmani's article, and the decision-model preprint. No claims about newer model defaults or measured skill-improvement results were added.
+
+Validation: 117 local links and anchors, 87 unique IDs, and 50 source links passed. Citation numbers and accessible labels match the supporting-source list. Headless Chromium checks at 320, 768 and 1440 px passed with the model reference expanded, no page overflow and no browser script errors. Confirmed the aligned definitions on the introduction and transformation pages. Visually inspected the model learning route at 320 px and the merged source list at 1440 px. Changes have not been published.
+
 ## Reading route and examples · 17 October 2026
 
 Reviewed `dist/concept.html` against the supplied chapter views and `../writing.md`. The page already followed the requested section order and retained a collapsed model reference; this revision closes the remaining gaps.

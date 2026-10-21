@@ -1,5 +1,17 @@
 # Introduction: editorial review
 
+## Site disclaimer refinement · 21 October 2026
+
+At the user's request, removed the policy, authority and ownership disclaimers flagged in the site-wide review. Refined the surrounding passages across `dist/index.html`, `dist/concept.html`, `dist/transformation.html`, `dist/product-ideation.html`, `dist/ai-pdlc.html` and `dist/eds-skills-catalogue.html`:
+
+- Replaced the introduction's policy-status disclaimers with direct guidance on finding applicable policies, owners, evidence and approvals. Renamed the audience section and aligned its navigation labels.
+- Made the concept example introduction, platform role description, shared-service ownership and pilot decision rules more direct.
+- Clarified how the product-team table supports responsibility and decision ownership, shortened the attributed lifecycle analysis, and removed repeated external-maintainer notices while retaining author attribution and the maintainer table.
+
+Validation: 405 local links and anchors and unique IDs passed across the six changed pages. Browser layout checks at 320, 768 and 1440 px passed with no page overflow or script errors; external media requests were blocked during these local copy/layout checks. The initial full-load check timed out on the introduction's external content, so the completed checks used document readiness. Visually inspected the introduction on desktop and shared-service ownership on mobile. Confirmed that the flagged wording is absent from the public pages. Changes remain local and unpublished.
+
+## Previous review · 17 October 2026
+
 Reviewed on 17 October 2026 against `writing.md`, `design.md` and the supplied introduction feedback. Revised `dist/index.html`.
 
 ## Findings and revisions

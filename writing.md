@@ -47,7 +47,7 @@ Use British English in authored prose: “organisation”, “prioritise”, “
 | AI-PDLC | Introduce after the full title on a page that uses the abbreviation. Prefer “the lifecycle” in nearby prose. |
 | AI-assisted development | Development work supported by AI tools. Do not assume the resulting product contains AI. |
 | AI product | A product whose behaviour includes an AI capability. Explain that capability where relevant. |
-| AI agent | Software that uses an AI model and tools to carry out a task. State the scope of its autonomy when it matters. |
+| AI agent | Software that uses an AI model to choose or adapt actions and tool use towards a goal, within agreed permissions and limits. A workflow can combine agents with predefined code paths and automated checks. |
 | Artefact | A recorded output of work. Prefer the specific name, such as “evaluation report”, when known. |
 | Evaluation | A structured assessment against defined criteria. Name the criteria, cases and method. |
 | Review | An examination by a person or group. State who reviews what and what decision follows. |

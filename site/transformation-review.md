@@ -1,5 +1,13 @@
 # Organisation transformation: editorial review
 
+## T07 · Orchestration glossary · 21 October 2026
+
+Broadened the subagent orchestration definition in `dist/transformation.html` to include dependent tasks running in sequence and independent tasks running in parallel where appropriate, followed by integration. The surrounding accountability and review guidance remains unchanged.
+
+Reviewed [Anthropic's Building effective agents](https://www.anthropic.com/research/building-effective-agents), which describes dynamic task decomposition, delegation and synthesis in the orchestrator–worker pattern and discusses parallelisation separately. The glossary uses a broader practical definition without making parallel execution essential.
+
+Validation: checked the one-line glossary change and the diff for whitespace errors. No structure, links or styling changed. Changes remain local and unpublished.
+
 ## Platform / Cloud Engineer proposal · 18 October 2026
 
 - Added Platform / Cloud Engineer to the contributions and competency tables, with existing expertise, AI-assisted responsibilities and observable evidence of competence.
