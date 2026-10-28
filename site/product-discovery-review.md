@@ -1,5 +1,26 @@
 # Product discovery merge review
 
+## Clarity review against writing.md, 28 October 2026
+
+Reviewed the full discovery page against the repository's [writing standard](../writing.md), concentrating on reader purpose, concrete actions, terminology, paragraph structure and the separation of instructions from reference material.
+
+| Clarity problem | Revision |
+| --- | --- |
+| The lead asked readers to hand over “evidence-backed intent” before explaining what discovery helps them decide. | Lead with choosing a problem, testing solutions and deciding what to build. Identify the six-step guide and fictional pilot in the opening. |
+| Several introductory passages repeated collaboration advice, while source commentary interrupted the action. | Name responsibilities and the decision owner first. Consolidate collaboration instructions and keep practitioner attribution in the nearby source note. |
+| Readers met abbreviations and specialist terms without enough explanation. | Expand PRD, UI and API; explain hypotheses, acceptance criteria, baselines, guardrails and technical spikes. Replace “falsification criteria”, “disposition” and unexplained testing jargon with concrete actions. |
+| Navigation used slash-separated abbreviations that differed from the step headings. | Use the same full step names in the page map and both contents lists. |
+| Twelve experiment methods interrupted the main procedure. | Keep method-selection guidance and all safety arrangements visible. Put the catalogue in a labelled reference disclosure, preserving its direct-link target, source links, mobile presentation and print behaviour. |
+| Review, deferral and approval explanations repeated without adding a new action. | Remove duplicated instructions while retaining the decision table, return routes, local approval authority and separate release criteria. |
+| The fictional commitment combined technical results, costs and limitations in one dense paragraph. | Split technical evidence F-1 and cost evidence C-1 into labelled paragraphs. Explain the test order and denied-access case in everyday language. |
+| Optional headings named abstract topics rather than reader tasks. | Use headings about linking records, recording decisions between meetings, testing an agent's journey and connecting measures to value. |
+
+Kept the seven figures, twelve tables, six fictional example panels, all existing IDs and all eighteen external references. Preserved the source qualifications, fictional numbers, experiment limitations and explicit departures from the playbook's measurement advice. Removed the unnecessary broad generalisation about weak products from the problem-framing introduction; the 6W/4C advice retains a direct source link.
+
+The page still lacks a confirmed content owner and applicable lifecycle version, both requested by writing.md. No authoritative values were supplied, so this review does not invent them or claim complete editorial compliance. The last-reviewed date remains 28 October 2026.
+
+Validation: all 814 local links/assets across thirteen pages passed, with twenty-six desktop/mobile browser loads. Expanded layouts at 1440, 768, 375 and 320 pixels, contents matching, headings, direct links, print restoration, enlarged text and reading without JavaScript passed. Additional checks confirmed preservation of every existing ID and external source URL, default collapse of the method catalogue, expansion by direct link and native no-JavaScript control, and SVG text within view boxes. Visually inspected the revised experiment instructions on desktop and the expanded catalogue on mobile. Whitespace checks passed. No commit or publication performed.
+
 ## Full content and reference audit, 28 October 2026
 
 This audit supersedes the earlier limitation below that retained references had not all been freshly checked. Reviewed the complete current discovery page, including the seven diagrams and text alternatives, twelve tables, six fictional example panels, optional sections and bibliography. Opened all seventeen original reference destinations and added an eighteenth primary reference for Jobs To Be Done. Reviewed the relevant source passages, not just link availability.
