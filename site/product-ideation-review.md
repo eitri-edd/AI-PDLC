@@ -73,3 +73,5 @@ The connected GitHub account can read the upstream repository but cannot push di
 Removed the remaining excluded discovery-source entry from the older review's source mapping. The public pages contain no coverage attributed to that source or reference to it. Removed the Draft status from Product Ideation's header metadata and the draft qualifier from the Introduction's description metadata. Retained the update date and updated the authoring guidance to keep editorial status out of rendered page metadata.
 
 Checked every HTML page for the excluded reference and draft-status metadata, previewed both changed pages at desktop and mobile widths, and reran the 24 ideation validation groups successfully. Working draft PRDs and draft responses remain substantive product concepts rather than page-status labels.
+
+The authoring standards now explicitly state that page status metadata is not required. The header template allows date or ownership metadata where useful, without a page status field. Editorial status is optional in maintenance records, rather than a required field moved elsewhere.

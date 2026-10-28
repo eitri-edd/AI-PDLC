@@ -136,7 +136,7 @@ All examples below are fictional editorial demonstrations, not EDS requirements.
 
 ## Page metadata
 
-Record a content owner, last-reviewed date and applicable lifecycle version for maintained guidance. Keep editorial status in maintenance records; do not display Draft status in page headers or description metadata.
+Record a content owner, last-reviewed date and applicable lifecycle version for maintained guidance. Page status metadata is not required. Do not add editorial status fields or badges to page headers or description metadata. Editorial status may be tracked in maintenance records when useful.
 
 Display dates as “27 September 2026”. Store machine-readable dates as `2026-09-27`. Change the review date after a substantive review, not automatically on every site build.
 

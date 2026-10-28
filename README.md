@@ -135,7 +135,7 @@ Every HTML page in `site/dist/` must use the standard 3-zone layout inside `<div
    - `site.js` automatically binds `.site-navigation` to toggle `.page-layout.sidebar-collapsed` and updates the `title` and `aria-label`.
 3. **Main Article** (`<main id="main-content"> <article>`):
    - Breadcrumb (`<nav class="breadcrumbs" aria-label="Breadcrumb">`)
-   - Article header (`<header class="article-header">` with `<p class="eyebrow">`, `<h1>`, `<p class="lead">`, and `<ul class="metadata-bar">`)
+   - Article header (`<header class="article-header">` with `<p class="eyebrow">`, `<h1>` and `<p class="lead">`; use `<ul class="metadata-bar">` for dates or ownership where useful, without a page status field)
    - Page summary box (`<aside class="page-map" aria-label="Page summary">` with *What this page covers*, *Key takeaways*, and *Read time*)
    - Mobile table of contents (`<details class="mobile-contents">`)
    - Body sections (`<section id="..."><h2>...</h2>...</section>`)
@@ -194,7 +194,7 @@ All conceptual and workflow diagrams must be authored as accessible inline SVGs 
 1. Use semantic headings (`<h2>` with a kebab-case `id`, followed by `<h3>` where needed). Never skip heading levels.
 2. Update both the `<details class="mobile-contents">` list and the right-hand `<aside class="page-contents">` list whenever you add, rename, or remove an `<h2>` section.
 3. If adding a new page, add its link to `<details class="site-navigation" open>` across **all** HTML files in `site/dist/` so navigation stays identical site-wide.
-4. Update the `<ul class="metadata-bar">` (*Last updated* date) when making substantive changes. Keep editorial Draft status out of rendered page metadata.
+4. Update the *Last updated* date after a substantive review, where displayed. Page status metadata is not required; do not add editorial status fields or badges to page headers or description metadata.
 
 ### Step 3: Add or Refine Callouts, Tables, and Diagrams
 - **Callouts**: Use `<aside class="callout callout-note|callout-tip|callout-warning|callout-danger|callout-example">` with `<p class="callout-title">`. Keep callouts to 2–4 sentences and never stack two callouts back-to-back.
