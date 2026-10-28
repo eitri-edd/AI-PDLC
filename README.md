@@ -22,7 +22,7 @@ All published pages live in `site/dist/` and are organised into two main navigat
 | [`transformation.html`](./site/dist/transformation.html) | **Organisation transformation** | Concept + Operating Guide | Covers the 4 pillars (*People*, *Process*, *Culture*, *Technology*), T-shaped role evolution, multidisciplinary squads, human vs agent task boundaries, and the 3-month pilot scorecard. |
 | [`concept.html`](./site/dist/concept.html) | **Concepts** | Concept Reference | Defines 8 foundational concepts with animated diagrams: *Intent-driven development*, *Spec-driven development*, *Context engineering*, *Harness engineering*, *Loop engineering*, *Graph engineering* (multi-agent execution with automated decision gates), *Software factories*, and *AI models*. |
 | [`ai-pdlc.html`](./site/dist/ai-pdlc.html) | **AI-SDLC overview** | Lifecycle Overview | Introduces the two connected loops—**Product discovery** and **Product implementation**—joined across the middle by the *Handoff* (PRD, UI artefacts, validation and technical evidence) and shared *Context input*, with inner rework loops and production feedback. |
-| [`product-ideation.html`](./site/dist/product-ideation.html) | **Product discovery** | Lifecycle Stage | Covers **Research**, **Opportunity identification**, **Concept validation** and **Validation handover**, with business and technical discovery throughout, feasibility evidence, owned uncertainty, the 4C problem check and outcome measures. |
+| [`product-discovery.html`](./site/dist/product-discovery.html) | **Product discovery** | Lifecycle Stage | Guides **Frame → Test → Decide → Handoff** through six practical steps, with research, opportunity selection, business and technical discovery, seven diagrams and a continuous fictional example. Frameworks and advanced guidance are optional references. |
 | [`product-implementation.html`](./site/dist/product-implementation.html) | **Product implementation** | Lifecycle Stage | Details the inner delivery loop: readiness package (PRD + UI artefacts + context), the `PRD → TRD → Tasks` artefact chain, the 6 implementation stages (*Plan*, *Slice*, *Implement*, *Verify*, *Release & observe*, *Learn*), separation of duties, and factory modes (*Co-pilot*, *Light factory*, *Dark factory*). |
 
 ### 1.2 Primary Navigation: EDS AI Workflow (`site/dist/`)
@@ -53,7 +53,7 @@ Every content update must follow the rules in [`writing.md`](./writing.md).
 ### 2.1 Audience & Layer Separation
 Write for mixed delivery squads (Product Owners, Business Analysts, Engineers, QA, Security, Risk, and Engineering Managers). Keep the three content layers distinct:
 1. **Principles and concepts** — Why the practice matters and what problem it solves (`index.html`, `transformation.html`, `concept.html`).
-2. **Operating requirements** — What artefacts, checks, roles, and handoffs must exist (`ai-pdlc.html`, `product-ideation.html`, `product-implementation.html`).
+2. **Operating requirements** — What artefacts, checks, roles, and handoffs must exist (`ai-pdlc.html`, `product-discovery.html`, `product-implementation.html`).
 3. **Eitri implementation** — How EDS implements those requirements today with specific skills, commands, and pipeline gates (`eds-*.html`, `training.html`).
 
 ### 2.2 Voice, Tone, and Language Rules
@@ -69,7 +69,7 @@ Always use the preferred term consistently across all pages:
 
 | Preferred Term | Usage Rule | Avoid |
 | :--- | :--- | :--- |
-| **AI-Product Development Lifecycle** (`AI-SDLC`) | Expand on first mention on top-level pages, then use `AI-SDLC`. | Unexplained switching between `AI-PDLC` and `AI-SDLC` |
+| **AI-Software Development Lifecycle** (`AI-SDLC`) | Expand on first mention on top-level pages, then use `AI-SDLC`. Keep the repository name and existing URL paths unchanged. | Unexplained switching between `AI-PDLC` and `AI-SDLC` |
 | **AI-assisted development** | Use when AI tools help teams design, write, test, or document software. | Confusing with an *AI product* |
 | **AI product** or **AI feature** | Use when the delivered software itself uses AI at runtime. | Calling every project an "AI project" |
 | **AI agent** | A system that plans or executes multi-step tasks using tools within defined bounds. | Using *agent* for a simple prompt or autocomplete |
@@ -101,7 +101,7 @@ When creating or refactoring a page, follow its archetype structure from `writin
   4. **In practice at EDS** (how roles apply it)
   5. **Common pitfalls** (3–5 specific failure modes and fixes)
   6. **Related pages**
-- **Lifecycle Stage Page (`ai-pdlc.html`, `product-ideation.html`, `product-implementation.html`)**:
+- **Lifecycle Stage Page (`ai-pdlc.html`, `product-discovery.html`, `product-implementation.html`)**:
   Answer in order: *Purpose*, *Entry criteria*, *Activities* (human vs AI tasks), *Outputs & artefacts*, *Exit criteria & approval gates*, *Risks & controls*, and *Hand-off to the next stage*.
 - **Procedure / Harness Page (`eds-*.html`)**:
   Include *Goal*, *When to use*, *Prerequisites*, *Numbered steps* (one action per step + expected output), *Verification*, and *Owner / review cycle*.
@@ -135,7 +135,7 @@ Every HTML page in `site/dist/` must use the standard 3-zone layout inside `<div
    - `site.js` automatically binds `.site-navigation` to toggle `.page-layout.sidebar-collapsed` and updates the `title` and `aria-label`.
 3. **Main Article** (`<main id="main-content"> <article>`):
    - Breadcrumb (`<nav class="breadcrumbs" aria-label="Breadcrumb">`)
-   - Article header (`<header class="article-header">` with `<p class="eyebrow">`, `<h1>`, `<p class="lead">`, and `<ul class="metadata-bar">`)
+   - Article header (`<header class="article-header">` with `<p class="eyebrow">`, `<h1>` and `<p class="lead">`; use `<ul class="metadata-bar">` for dates or ownership where useful, without a page status field)
    - Page summary box (`<aside class="page-map" aria-label="Page summary">` with *What this page covers*, *Key takeaways*, and *Read time*)
    - Mobile table of contents (`<details class="mobile-contents">`)
    - Body sections (`<section id="..."><h2>...</h2>...</section>`)
@@ -155,7 +155,7 @@ To prevent the first column from wrapping prematurely on multi-word labels, step
 | `.step-table` | `min-width: 5.5rem` (col 1), `14rem` (col 2) | Numbered workflow tables where column 1 is a step badge (`Step 1`) and column 2 is the step or command name (`eds-developer-harness.html`). |
 | `.skills-table` | `min-width: 15.5rem` (`24%–30%`) | Tables listing hyphenated skill identifiers or slash commands in column 1 (`eds-skills-catalogue.html`, `eds-po-ba-harness.html`). |
 | `.pipeline-table` | `min-width: 14.5rem` (`23%–28%`) | CI/CD and release gate tables (`eds-path-to-production.html`). |
-| `.stage-table` | `min-width: 14.5rem` (`23%–28%`) | Lifecycle stage breakdown tables (`product-ideation.html`, `product-implementation.html`). |
+| `.stage-table` | `min-width: 14.5rem` (`23%–28%`) | Lifecycle stage breakdown tables (`product-discovery.html`, `product-implementation.html`). |
 | `.competency-table` | `min-width: 15rem` (`24%–30%`) | Role and competency matrices (`transformation.html`). |
 | `.wide-table` | `min-width: 44rem` overall table | Combine with any class above when a table has 4+ dense columns. |
 
@@ -187,14 +187,14 @@ All conceptual and workflow diagrams must be authored as accessible inline SVGs 
 ## 4. Step-by-Step Workflow for Updating or Adding Content
 
 ### Step 1: Plan the Change Against the Three Layers
-1. Identify whether the change belongs to **Principles & concepts** (`index.html`, `transformation.html`, `concept.html`), **Operating requirements** (`ai-pdlc.html`, `product-ideation.html`, `product-implementation.html`), or **Eitri implementation** (`eds-*.html`, `training.html`).
+1. Identify whether the change belongs to **Principles & concepts** (`index.html`, `transformation.html`, `concept.html`), **Operating requirements** (`ai-pdlc.html`, `product-discovery.html`, `product-implementation.html`), or **Eitri implementation** (`eds-*.html`, `training.html`).
 2. Check whether the update introduces a **Requirement** (`must`—requires a confirmed EDS source), a **Recommendation** (`should`), or an **Example** (must be explicitly labelled and use fictional product scenarios).
 
 ### Step 2: Author or Update the HTML Structure
 1. Use semantic headings (`<h2>` with a kebab-case `id`, followed by `<h3>` where needed). Never skip heading levels.
 2. Update both the `<details class="mobile-contents">` list and the right-hand `<aside class="page-contents">` list whenever you add, rename, or remove an `<h2>` section.
 3. If adding a new page, add its link to `<details class="site-navigation" open>` across **all** HTML files in `site/dist/` so navigation stays identical site-wide.
-4. Update the `<ul class="metadata-bar">` (*Last updated* date and *Status*) when making substantive changes.
+4. Update the *Last updated* date after a substantive review, where displayed. Page status metadata is not required; do not add editorial status fields or badges to page headers or description metadata.
 
 ### Step 3: Add or Refine Callouts, Tables, and Diagrams
 - **Callouts**: Use `<aside class="callout callout-note|callout-tip|callout-warning|callout-danger|callout-example">` with `<p class="callout-title">`. Keep callouts to 2–4 sentences and never stack two callouts back-to-back.

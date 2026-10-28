@@ -2,7 +2,7 @@
 
 ## Site disclaimer refinement · 21 October 2026
 
-At the user's request, removed the policy, authority and ownership disclaimers flagged in the site-wide review. Refined the surrounding passages across `dist/index.html`, `dist/concept.html`, `dist/transformation.html`, `dist/product-ideation.html`, `dist/ai-pdlc.html` and `dist/eds-skills-catalogue.html`:
+At the user's request, removed the policy, authority and ownership disclaimers flagged in the site-wide review. Refined the surrounding passages across `dist/index.html`, `dist/concept.html`, `dist/transformation.html`, `dist/product-discovery.html`, `dist/ai-pdlc.html` and `dist/eds-skills-catalogue.html`:
 
 - Replaced the introduction's policy-status disclaimers with direct guidance on finding applicable policies, owners, evidence and approvals. Renamed the audience section and aligned its navigation labels.
 - Made the concept example introduction, platform role description, shared-service ownership and pilot decision rules more direct.

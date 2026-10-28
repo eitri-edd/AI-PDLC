@@ -28,7 +28,7 @@
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
           <a class="nav-parent-active" href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
           <div class="nav-children">
-            <a href="product-ideation.html">Product discovery</a>
+            <a href="product-discovery.html">Product discovery</a>
             <a href="product-implementation.html" aria-current="page">Product implementation</a>
           </div>
           <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
@@ -181,7 +181,7 @@
             <tr><th scope="row">5. Release and observe</th><td>Move the increment into real conditions while limiting the blast radius</td><td>Deployment record, telemetry, incidents, support signals, experiment results, adoption, recovery evidence</td><td>The increment is stable within thresholds, or has been contained or rolled back</td></tr>
             <tr><th scope="row">6. Learn</th><td>Turn outcomes into controlled changes to the product and the factory</td><td>Decision log, revised PRD or TRD, new tasks, updated context and skills, preventive controls</td><td>An accountable owner chooses the next refinement and provides an updated definition</td></tr>
           </tbody></table></div>
-          <p>In Learn, compare what happened with the PRD’s outcomes and the TRD’s assumptions, and separate product causes from factory causes. If the evidence shows the product intent was wrong, not just its delivery, return it to <a href="product-ideation.html#ideation-loop">the discovery loop</a>.</p>
+          <p>In Learn, compare what happened with the PRD’s outcomes and the TRD’s assumptions, and separate product causes from factory causes. If the evidence shows the product intent was wrong, not just its delivery, return it to <a href="product-discovery.html#discovery-loop">the discovery loop</a>.</p>
           <h3>Plan rollout and recovery before release</h3>
           <p>Release and observe limits how many people a faulty change can affect. A canary release exposes a change to a limited portion of traffic first; Google’s SRE Workbook explains how comparing it with the existing version can reveal failures that pre-release tests miss. It limits exposure; it does not guarantee a safe release.</p>
           <p>Before release, record the initial audience, observation period, stop thresholds and who can halt the rollout, and rehearse recovery. Check whether recovery must also restore data or reverse external actions: rolling back code may not undo a migration, a sent message or an automated decision. For an AI capability, record the model, prompt and retrieval configuration with the release.</p>

@@ -1,6 +1,8 @@
 # Product pages editorial review
 
-Reviewed 28 September 2026 against `../writing.md` and `../design.md`. Updated `dist/product-ideation.html` and `dist/product-implementation.html` in place.
+These dated entries describe earlier content and validation. File references use the current Product discovery path; see `product-discovery-review.md` for the reconciled guide and current path-alignment checks.
+
+Reviewed 28 September 2026 against `../writing.md` and `../design.md`. Updated `dist/product-discovery.html` and `dist/product-implementation.html` in place.
 
 ## Editorial approach
 
@@ -25,7 +27,6 @@ Online sources opened on 28 September 2026. Links appear beside the relevant exp
 
 | Source | Use and limits |
 | --- | --- |
-| [GOV.UK: How the discovery phase works](https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works) | Users, wider journey, constraints, alternatives and continuation decision. UK delivery stages and approval rules are not adopted as EDS policy. |
 | [SVPG: The Four Big Risks](https://www.svpg.com/four-big-risks/) | Value, usability, feasibility and business viability as prompts for untested assumptions. Its role assignments are not imported. |
 | [Design Council: The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/) | Existing divergent and convergent activities retained. Human decision points in the diagram are identified as this guide’s adaptation. |
 | [GitHub Spec Kit: Specification-Driven Development](https://github.com/github/spec-kit/blob/main/spec-driven.md) | Specifications, plans and tasks. PRD/TRD naming remains this guide’s usage; speed claims and claims of eliminating ambiguity are not adopted. |
@@ -47,7 +48,7 @@ Draft status, unassigned content ownership and unconfirmed lifecycle applicabili
 
 ## Ideation update, 30 September 2026
 
-Reviewed `dist/product-ideation.html` against [The Defence Product Playbook](https://defence-pp.vercel.app/), `../writing.md` and `../design.md`.
+Reviewed `dist/product-discovery.html` against [The Defence Product Playbook](https://defence-pp.vercel.app/), `../writing.md` and `../design.md`.
 
 ### Content changes
 
@@ -78,7 +79,7 @@ A headless Chromium check at 1440, 1100, 768 and 320 px passed: no page overflow
 
 ## Ideation qualifications, 17 October 2026
 
-Updated `dist/product-ideation.html` against the supplied review comments, retaining the existing layout and section anchors.
+Updated `dist/product-discovery.html` against the supplied review comments, retaining the existing layout and section anchors.
 
 - Limited severity–frequency–reach scoring to a prioritisation aid for discretionary improvements. Added overrides for mandatory obligations and intolerable risks, including mission failure, serious harm, security and accessibility.
 - Reframed end-of-life concerns around current and foreseeable consequences. Teams can address loss of support, security maintenance or recoverability before user-facing failure.
@@ -94,7 +95,7 @@ Validation passed: UTF-8 decoding; all 68 links checked for local destinations a
 
 ## Ideation collaboration and agent journeys, 18 October 2026
 
-Reviewed `dist/product-ideation.html` against [Sumit Sheth’s From Headless to Thoughtful](https://www.linkedin.com/pulse/from-headless-thoughtful-why-3-in-a-box-operating-model-sumit-sheth-imptc/), published 18 April 2026, and the repository’s writing and design guides. The article was accessible in full. Existing uncommitted page-shell changes were retained.
+Reviewed `dist/product-discovery.html` against [Sumit Sheth’s From Headless to Thoughtful](https://www.linkedin.com/pulse/from-headless-thoughtful-why-3-in-a-box-operating-model-sumit-sheth-imptc/), published 18 April 2026, and the repository’s writing and design guides. The article was accessible in full. Existing uncommitted page-shell changes were retained.
 
 ### Findings and changes
 
@@ -150,8 +151,6 @@ Existing agent journey guidance, experiment safety checks, problem framing, prod
 
 - Rechecked [Design Council, The Double Diamond](https://www.designcouncil.org.uk/resources/the-double-diamond/) for understanding and defining problems, exploring alternatives and testing solutions. Updated the source URL to its current destination.
 - Rechecked [SVPG, The Four Big Risks](https://www.svpg.com/four-big-risks/) for value, usability, feasibility and business viability, and collaborative product, design and engineering work. The evidence tables are this guide’s recommended application.
-- Added [GOV.UK, How the discovery phase works](https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works) for users, context, technical constraints, alternatives and the next investment decision. GOV.UK distinguishes discovery from alpha; this handbook uses product discovery broadly to include concept validation, and states that distinction beside the reference.
-- Added [GOV.UK, How the alpha phase works](https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works) for testing risky assumptions, including integration with existing technology. The technical investigation checklist, feasibility reporting categories, handover package and local role suggestions are editorial recommendations, not GOV.UK or EDS requirements.
 - Retained the existing Defence Product Playbook, Spec Kit and Sumit Sheth references and their established scope. They were not newly revalidated during this change.
 
 ### Validation

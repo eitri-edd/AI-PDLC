@@ -43,8 +43,9 @@ Use British English in authored prose: “organisation”, “prioritise”, “
 
 | Term | House usage |
 | --- | --- |
-| AI-Product Development Lifecycle | Use this project title on the home page and in formal references. Confirm the final title before launch. |
-| AI-PDLC | Introduce after the full title on a page that uses the abbreviation. Prefer “the lifecycle” in nearby prose. |
+| AI-Software Development Lifecycle | Use the displayed site title on the home page and in formal references. |
+| AI-SDLC | Introduce after the full title on a page that uses the abbreviation. Prefer “the lifecycle” in nearby prose. Keep the repository name `AI-PDLC`. The discovery page uses `product-discovery.html`; keep other URL paths unchanged unless explicitly requested. |
+| Product discovery | Research needs, compare opportunities and test concepts before a bounded investment. Use this as the lifecycle page title and `product-discovery.html` as its path. Ideation means generating options within discovery. |
 | AI-assisted development | Development work supported by AI tools. Do not assume the resulting product contains AI. |
 | AI product | A product whose behaviour includes an AI capability. Explain that capability where relevant. |
 | AI agent | Software that uses an AI model to choose or adapt actions and tool use towards a goal, within agreed permissions and limits. A workflow can combine agents with predefined code paths and automated checks. |
@@ -136,7 +137,7 @@ All examples below are fictional editorial demonstrations, not EDS requirements.
 
 ## Page metadata
 
-Record a content owner, status, last-reviewed date and applicable lifecycle version for maintained guidance. Suggested editorial statuses are “Draft”, “In review” and “Published”. These describe the page, not a product’s release status.
+Record a content owner, last-reviewed date and applicable lifecycle version for maintained guidance. Page status metadata is not required. Do not add editorial status fields or badges to page headers or description metadata. Editorial status may be tracked in maintenance records when useful.
 
 Display dates as “27 September 2026”. Store machine-readable dates as `2026-09-27`. Change the review date after a substantive review, not automatically on every site build.
 

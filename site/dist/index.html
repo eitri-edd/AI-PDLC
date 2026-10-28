@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A draft playbook for EDS product and engineering teams: AI-assisted development principles, decisions, evidence and Eitri implementation guidance.">
+  <meta name="description" content="A playbook for EDS product and engineering teams: AI-assisted development principles, decisions, evidence and Eitri implementation guidance.">
   <title>Introduction · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
@@ -28,7 +28,7 @@
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
           <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
           <div class="nav-children">
-            <a href="product-ideation.html">Product discovery</a>
+            <a href="product-discovery.html">Product discovery</a>
             <a href="product-implementation.html">Product implementation</a>
           </div>
           <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
@@ -87,7 +87,7 @@
           </defs>
         </svg>
         <section id="choose-task" class="task-entry"><h2>Start with your task</h2><p>Choose the closest task. Each route gives a minimum starting workflow; the accountable owner confirms the applicable controls, evidence and approvals. Add the high-risk route when a feature or defect affects sensitive data, access, public interfaces, major architecture or a hard-to-reverse action.</p><ul>
-<li><a href="product-ideation.html#product-thesis">Explore a product idea</a><span>State the user problem and a testable assumption → agree a safe experiment and success criteria → test with users → record whether to continue, revise or stop. The product decision owner reviews the evidence before committing to implementation.</span></li>
+<li><a href="product-discovery.html#product-thesis">Explore a product idea</a><span>State the user problem and a testable assumption → agree a safe experiment and success criteria → test with users → record whether to continue, revise or stop. The product decision owner reviews the evidence before committing to implementation.</span></li>
 <li><a href="product-implementation.html#implementable-definition">Deliver a feature</a><span>Agree scope and acceptance criteria → plan bounded changes → build and verify them → obtain the applicable review and release approvals → monitor the outcome. Keep requirements, test results, unresolved risks and the decision with the change.</span></li>
 <li><a href="product-implementation.html#six-stages">Fix a defect</a><span>Record the observed and expected behaviour → reproduce the failure → assess impact → make a bounded correction and add a regression test → review and release through the applicable controls → verify recovery. If the failure is an active incident, follow the existing incident process first.</span></li>
 <li><a href="product-implementation.html#gates-and-assurance">Make a high-risk change</a><span>Identify affected systems, data and people → involve the relevant security, architecture, data or operational specialists before execution → agree independent checks, recovery and stop conditions → submit evidence and residual risks to the authorised decision-maker. Release only within the agreed authority and monitor the result.</span></li></ul>

@@ -28,7 +28,7 @@
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
           <a href="ai-pdlc.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
           <div class="nav-children">
-            <a href="product-ideation.html">Product discovery</a>
+            <a href="product-discovery.html">Product discovery</a>
             <a href="product-implementation.html">Product implementation</a>
           </div>
           <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
@@ -50,7 +50,7 @@
           <p class="eyebrow">Development guide</p>
           <h1>EDS AI-SDLC</h1>
           <p class="lead">The EDS AI-Software Development Lifecycle (AI-SDLC) connects product discovery with software delivery. Teams use AI to investigate user needs, define requirements, build and test software, and learn from use.</p>
-          <p>Product discovery covers research, opportunity identification, concept validation and validation handover; product implementation covers delivery. Teams revisit discovery and delivery as they test assumptions, review results and respond to feedback.</p>
+          <p>Product discovery follows Frame, Test, Decide and Handoff through six practical steps; product implementation covers delivery. Teams revisit discovery and delivery as they test assumptions, review results and respond to feedback.</p>
         </header>
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
@@ -58,7 +58,7 @@
           <p id="page-map-note" class="page-map-note">See how product discovery connects to software delivery, what the team hands over, and how feedback informs the next change.</p>
 
           <ol class="page-map-nodes" role="list">
-            <li class="page-map-node"><strong>Product discovery</strong><div class="page-map-links"><a href="#two-loops">Discovery and delivery</a><a href="#ideation-loop">Understand needs and test ideas</a></div></li>
+            <li class="page-map-node"><strong>Product discovery</strong><div class="page-map-links"><a href="#two-loops">Discovery and delivery</a><a href="#discovery-loop">Understand needs and test ideas</a></div></li>
             <li class="page-map-node"><strong>Requirements handover</strong><div class="page-map-links"><a href="#handoff">Requirements, designs and acceptance criteria</a></div></li>
             <li class="page-map-node"><strong>Software delivery</strong><div class="page-map-links"><a href="#implementation-loop">Develop, test and release</a></div></li>
             <li class="page-map-node"><strong>Feedback and improvement</strong><div class="page-map-links"><a href="#feedback">User feedback and defect reports</a><a href="#ai-support">AI assistance and quality checks</a></div></li>
@@ -69,7 +69,7 @@
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page"><p>On this page</p><a href="#two-loops">Two connected loops</a>
-<a href="#ideation-loop">Product discovery loop</a>
+<a href="#discovery-loop">Product discovery loop</a>
 <a href="#handoff">Handoff</a>
 <a href="#implementation-loop">Product implementation loop</a>
 <a href="#feedback">Feedback from use</a>
@@ -90,31 +90,31 @@
           <p>The AI-Software Development Lifecycle (AI-SDLC) connects two learning loops. Product discovery is about making the right product: it asks whether the problem is worth solving, whether the concept helps users and whether the team can build and operate it. Product implementation is about making the product right: it turns validated intent into reliable production behaviour. Each loop has its own work, evidence and decisions.</p><p>The handoff centres on a product requirements document (PRD), supported by validation evidence, technical findings, user interface (UI) artefacts where relevant and current organisational context.</p><p>The diagram shows how the loops connect and feed learning back into each other.</p>
           <figure class="concept-figure" id="fig-loops">
   <figcaption id="fig-loops-title-caption">Figure 1. Discovery tests value and feasibility, handoff carries the evidence and scope, and implementation builds and verifies the product.</figcaption>
-  <details class="figure-reading"><summary>Read as text: Inner loops, handoff and cross-loop feedback</summary><ol><li><strong>Product discovery loop:</strong> research establishes user, business and technical evidence; opportunity identification compares problems and capabilities; concept validation tests value, usability, feasibility and viability; validation handover transfers a bounded scope and its evidence. Rework returns to research or opportunity identification; stop retains learning.</li><li><strong>Handoff and context:</strong> when evidence supports commitment, the PRD, validation evidence, technical findings and relevant UI artefacts combine with organisational context (architecture, domain, security and policy constraints) to enter implementation.</li><li><strong>Product implementation loop (inner loops):</strong> moves through <em>1. Plan &amp; 2. Slice</em> (TRD and verifiable tasks), <em>3. Implement</em>, <em>4. Verify</em>, and <em>5. Release &amp; 6. Learn</em>. Failed verification loops back to <em>Implement</em> for rework; delivery learning loops from <em>Learn</em> back to <em>Plan &amp; Slice</em> for the next increment.</li><li><strong>Cross-loop feedback:</strong> when production observation or user feedback in <em>Learn</em> challenges product value, intended behaviour or feasibility, feedback returns across loops to <em>Product discovery</em>.</li></ol></details>
+  <details class="figure-reading"><summary>Read as text: Inner loops, handoff and cross-loop feedback</summary><ol><li><strong>Product discovery loop:</strong> Frame combines problem research, opportunity selection, value and alternatives (steps 1–2). Test designs experiments and prototypes to examine value, usability, feasibility and viability (steps 3–4). Decide evaluates evidence (step 5); only a justified commitment advances to Handoff (step 6). Inconclusive evidence returns to experiment design; rework returns to the appropriate step; stop retains learning.</li><li><strong>Handoff and context:</strong> when evidence supports commitment, the PRD, validation evidence, technical findings and relevant UI artefacts combine with organisational context (architecture, domain, security and policy constraints) to enter implementation.</li><li><strong>Product implementation loop (inner loops):</strong> moves through <em>1. Plan &amp; 2. Slice</em> (TRD and verifiable tasks), <em>3. Implement</em>, <em>4. Verify</em>, and <em>5. Release &amp; 6. Learn</em>. Failed verification loops back to <em>Implement</em> for rework; delivery learning loops from <em>Learn</em> back to <em>Plan &amp; Slice</em> for the next increment.</li><li><strong>Cross-loop feedback:</strong> when production observation or user feedback in <em>Learn</em> challenges product value, intended behaviour or feasibility, feedback returns across loops to <em>Product discovery</em>.</li></ol></details>
   <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
-    <div class="figure-scroll" tabindex="0" role="region" aria-label="Two connected loops with inner cycles and handoff; scroll horizontally if needed"><svg viewBox="0 0 920 545" role="img" aria-labelledby="fig-loops-title" aria-describedby="fig-loops-title-desc"><title id="fig-loops-title">Product discovery loop and product implementation loop joined by handoff</title><desc id="fig-loops-title-desc">Two connected loops. Product discovery moves through research, opportunity identification, concept validation and validation handover. Validation can return to research or stop; the handover transfers scope, evidence and technical findings into implementation with organisational context. Implementation plans and slices, implements, verifies, releases and learns. Failed verification returns to implementation. Learning improves delivery or reopens discovery when value, behaviour or feasibility assumptions change.</desc>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Two connected loops with inner cycles and handoff; scroll horizontally if needed"><svg viewBox="0 0 920 545" role="img" aria-labelledby="fig-loops-title" aria-describedby="fig-loops-title-desc"><title id="fig-loops-title">Product discovery loop and product implementation loop joined by handoff</title><desc id="fig-loops-title-desc">Two connected loops. Product discovery moves through Frame (steps 1 and 2), Test (steps 3 and 4), Decide (step 5) and Handoff (step 6). Decide can return to framing or testing, stop or defer. Only a justified commitment advances to Handoff, transferring scope, evidence and technical findings into implementation with organisational context. Implementation plans and slices, implements, verifies, releases and learns. Failed verification returns to implementation. Learning improves delivery or reopens discovery when value, behaviour or feasibility assumptions change.</desc>
       <!-- Product discovery stages and feedback -->
       <rect class="d-group" x="15" y="20" width="290" height="455" rx="10"/>
       <text class="d-title" x="160" y="46" text-anchor="middle">Product discovery loop</text>
       <text class="d-sub" x="160" y="66" text-anchor="middle">Value and feasibility together</text>
       <rect class="d-node" x="70" y="84" width="210" height="56" rx="8"/>
-      <text class="d-title" x="175" y="107" text-anchor="middle">1. Research</text><text class="d-sub" x="175" y="129" text-anchor="middle">Users · Business · Technology</text>
+      <text class="d-title" x="175" y="107" text-anchor="middle">Frame</text><text class="d-sub" x="175" y="129" text-anchor="middle">1–2: Problem · Value · Options</text>
       <path class="d-line" d="M175 140V157" marker-end="url(#arrow)"/>
       <rect class="d-node" x="70" y="162" width="210" height="56" rx="8"/>
-      <text class="d-title" x="175" y="185" text-anchor="middle">2. Opportunities</text><text class="d-sub" x="175" y="207" text-anchor="middle">Prioritise problems and options</text>
+      <text class="d-title" x="175" y="185" text-anchor="middle">Test</text><text class="d-sub" x="175" y="207" text-anchor="middle">3–4: Experiment · Prototype</text>
       <path class="d-line" d="M175 218V235" marker-end="url(#arrow)"/>
       <polygon class="d-node d-node-accent d-decision" points="80,240 270,240 280,250 280,303 270,313 80,313 70,303 70,250"/>
-      <text class="d-title" x="175" y="264" text-anchor="middle">3. Validate concepts</text><text class="d-sub" x="175" y="287" text-anchor="middle">Value · Usability · Feasibility</text><text class="d-sub" x="175" y="306" text-anchor="middle">Business viability</text>
+      <text class="d-title" x="175" y="264" text-anchor="middle">Decide</text><text class="d-sub" x="175" y="287" text-anchor="middle">5: Evaluate evidence</text><text class="d-sub" x="175" y="306" text-anchor="middle">Commit, test again or rework</text>
       <path class="d-line d-dash" d="M70 269H35V111H65" marker-end="url(#arrow)"/>
-      <path class="d-line" d="M175 313V338" marker-end="url(#arrow)"/>
+      <path class="d-line" d="M175 313V338" marker-end="url(#arrow)"/><text class="d-label" x="214" y="332" text-anchor="middle">commit</text>
       <rect class="d-node" x="70" y="343" width="210" height="60" rx="8"/>
-      <text class="d-title" x="175" y="368" text-anchor="middle">4. Validation handover</text><text class="d-sub" x="175" y="392" text-anchor="middle">Scope · Evidence · Unknowns</text>
+      <text class="d-title" x="175" y="368" text-anchor="middle">Handoff</text><text class="d-sub" x="175" y="392" text-anchor="middle">6: Scope · Evidence · Unknowns</text>
       <path class="d-line" d="M70 294H48V443H85" marker-end="url(#arrow)"/>
       <rect class="d-boundary" x="90" y="425" width="190" height="36" rx="6"/><text class="d-sub" x="185" y="448" text-anchor="middle">Or stop / defer; retain learning</text>
 
       <!-- Centre Bridge: Handoff & Organisational Context -->
       <path class="d-line d-line-accent" d="M280 373H318V145H345" marker-end="url(#arrow-accent)"/>
-      <text class="d-label d-label-accent" x="318" y="242" text-anchor="middle">commit</text>
+      <text class="d-label d-label-accent" x="318" y="242" text-anchor="middle">handoff</text>
 
       <rect class="d-node d-node-accent" x="350" y="100" width="185" height="90" rx="8"/>
       <text class="d-title" x="442.5" y="128" text-anchor="middle">Handoff</text>
@@ -175,21 +175,22 @@
           <div class="table-scroll"><table class="wide-table"><caption>The two loops compared</caption><thead><tr><th scope="col">Aspect</th><th scope="col">Product discovery</th><th scope="col">Product implementation</th></tr></thead><tbody>
             <tr><th scope="row">Question it answers</th><td>Are we making the right product?</td><td>Are we making the product right?</td></tr>
             <tr><th scope="row">Starts from</th><td>A problem, user need, strategic priority or new capability</td><td>A PRD, validation and technical evidence, UI artefacts and organisational context</td></tr>
-            <tr><th scope="row">Loop</th><td>Research, identify opportunities, validate concepts, complete validation handover</td><td>Plan, slice, implement, verify, release and observe, learn</td></tr>
+            <tr><th scope="row">Loop</th><td>Frame (steps 1–2), Test (3–4), Decide (5), Handoff (6)</td><td>Plan, slice, implement, verify, release and observe, learn</td></tr>
             <tr><th scope="row">Main evidence</th><td>User, business and technical evidence from research, prototypes and feasibility tests</td><td>Tests, independent reviews, quality reports and production telemetry</td></tr>
-            <tr><th scope="row">Each pass ends with</th><td>Improve, redesign, pivot or stop; or hand off when ready</td><td>An accepted increment or rework decision; release evidence informs the next refinement</td></tr>
+            <tr><th scope="row">Each pass ends with</th><td>Commit to bounded implementation, continue testing, improve, redesign, pivot, defer or stop</td><td>An accepted increment or rework decision; release evidence informs the next refinement</td></tr>
             <tr><th scope="row">What it improves</th><td>The product intent</td><td>The product and the way the team builds it</td></tr>
           </tbody></table></div>
           <p>Explore each loop below, then follow its detailed guidance.</p>
           <p>The Defence Product Playbook, jointly developed by MINDEF and DSTA, describes a comparable shape for product work. Its ProductOps flywheel runs Research as an outer loop and Design and Test as a fast inner loop. Each turn produces reference artefacts that DevSecOps teams act on concurrently, instead of a locked design handed off once. Read the handoff below in that spirit: it is a working agreement that the loops revisit, not a one-time transfer.</p>
           <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a> “Tools to use”.</p>
         </section>
-<section id="ideation-loop">
+<span class="anchor-alias" id="ideation-loop" aria-hidden="true"></span>
+<section id="discovery-loop">
   <h2>Product discovery loop</h2>
   <p>Use discovery when the problem, expected value, proposed experience or technical feasibility is uncertain. Bring user observations, operational evidence, alternatives, architecture and known constraints.</p>
-  <p>Research users, business needs and technical context together. Identify and prioritise opportunities, then validate concepts through user experiments and technical spikes. Complete validation handover only when the evidence supports the next bounded investment; otherwise rework, defer or stop.</p>
+  <p>Follow four phases containing six steps. Frame: understand the problem, then define value and explore alternatives. Test: design the experiment, then prototype and learn. Decide: evaluate evidence against the agreed criteria. Handoff: prepare the evidence-backed scope after a justified commitment. Continue testing, rework, defer or stop when commitment is unsupported.</p>
   <p>The output connects product intent to validation evidence, technical findings, dependencies and owned unknowns. Technical discovery starts with research and continues through opportunity selection, concept testing and handover.</p>
-  <p><a href="product-ideation.html">Explore product discovery from research to validation handover</a>.</p>
+  <p><a href="product-discovery.html">Explore the six practical steps in Product discovery</a>.</p>
 </section>
 <section id="handoff">
           <h2>Handoff between the loops</h2>
@@ -198,7 +199,7 @@
           <p>For a product without a user interface, substitute interface contracts and representative interactions for screens. Keep the evidence and acceptance criteria proportionate to the change.</p>
           <h3>Assemble the handoff package</h3>
           <ul>
-            <li><strong>Product context and outcomes:</strong> the target users, problem statement, intended user outcome, business value and strategic fit. Check the problem statement for clarity, consequence, cause and confirmation, the 4C described in <a href="product-ideation.html#product-thesis">product discovery</a>.</li>
+            <li><strong>Product context and outcomes:</strong> the target users, problem statement, intended user outcome, business value and strategic fit. Check the problem statement for clarity, consequence, cause and confirmation, the 4C described in <a href="product-discovery.html#product-thesis">product discovery</a>.</li>
             <li><strong>Prioritised user stories:</strong> the user, required behaviour and intended value for the scope to be built.</li>
             <li><strong>Testable acceptance criteria:</strong> positive, negative, edge, permission and failure scenarios that can become tests or evaluations.</li>
             <li><strong>UI artefacts:</strong> approved representative HTML screens and flows covering the core journeys, with a <code>design.md</code> file that records interaction rules, loading, empty, error and permission states, responsive behaviour, accessibility and any intentional deviations.</li>
@@ -268,7 +269,7 @@
     <li><strong>Integration verification, after merge:</strong> confirmation that the pieces work together.</li>
   </ol>
   <p>The playbook’s point is that quality is built in at the first layer, not caught at the scan. Defects found only at the scan gate are found late and at greater cost. <a href="product-implementation.html#gates-and-assurance">Read how implementation applies gates and independent assurance</a>.</p>
-  <div class="next-step"><p><strong>Next step:</strong> use <a href="product-ideation.html">product discovery</a> to resolve an uncertain opportunity, or <a href="product-implementation.html">product implementation</a> to deliver an agreed change.</p></div>
+  <div class="next-step"><p><strong>Next step:</strong> use <a href="product-discovery.html">product discovery</a> to resolve an uncertain opportunity, or <a href="product-implementation.html">product implementation</a> to deliver an agreed change.</p></div>
   <p class="source-ref">Sources: <a href="#source-2" aria-label="Source 2: McKinsey, How an AI-enabled software product development life cycle will fuel innovation">[2]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a> “Tools to use”.</p>
 </section>
 <section id="sources">
@@ -285,7 +286,7 @@
     </main>
     <aside class="page-contents">
       <nav aria-label="On this page"><p>On this page</p><a href="#two-loops">Two connected loops</a>
-<a href="#ideation-loop">Product discovery loop</a>
+<a href="#discovery-loop">Product discovery loop</a>
 <a href="#handoff">Handoff</a>
 <a href="#implementation-loop">Product implementation loop</a>
 <a href="#feedback">Feedback from use</a>
