@@ -194,7 +194,7 @@ All conceptual and workflow diagrams must be authored as accessible inline SVGs 
 1. Use semantic headings (`<h2>` with a kebab-case `id`, followed by `<h3>` where needed). Never skip heading levels.
 2. Update both the `<details class="mobile-contents">` list and the right-hand `<aside class="page-contents">` list whenever you add, rename, or remove an `<h2>` section.
 3. If adding a new page, add its link to `<details class="site-navigation" open>` across **all** HTML files in `site/dist/` so navigation stays identical site-wide.
-4. Update the `<ul class="metadata-bar">` (*Last updated* date and *Status*) when making substantive changes.
+4. Update the `<ul class="metadata-bar">` (*Last updated* date) when making substantive changes. Keep editorial Draft status out of rendered page metadata.
 
 ### Step 3: Add or Refine Callouts, Tables, and Diagrams
 - **Callouts**: Use `<aside class="callout callout-note|callout-tip|callout-warning|callout-danger|callout-example">` with `<p class="callout-title">`. Keep callouts to 2–4 sentences and never stack two callouts back-to-back.

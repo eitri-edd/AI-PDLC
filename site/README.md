@@ -14,6 +14,6 @@ Static site source and publishable files are in `dist/`. No build or package ins
 
 Read `../writing.md` and `../design.md` before changes. Reference documents are not included in the public output. Publish only the contents of `dist/`, not the entire workspace. Relative links support hosting below a repository path.
 
-Content remains a draft. Confirm the content owner, applicable lifecycle version and substantive review date before publishing maintained guidance. GitHub Pages publishes `dist/` from `main` through `.github/workflows/pages.yml`; proposed changes can be reviewed in a pull request before merging.
+Confirm the content owner, applicable lifecycle version and substantive review date before publishing maintained guidance. Keep editorial status in maintenance records rather than page metadata. GitHub Pages publishes `dist/` from `main` through `.github/workflows/pages.yml`; proposed changes can be reviewed in a pull request before merging.
 
 The ideation and implementation pages were reviewed and supplemented with online sources on 28 September 2026. See `product-pages-review.md` for the source mapping, editorial changes and validation, including experiment design, AI evaluation, delivery measures and release recovery.

@@ -34,6 +34,7 @@ Implementation procedures are cross-linked rather than duplicated. All 38 origin
 | File | Change |
 | --- | --- |
 | `dist/product-ideation.html` | Six-step learning path, six diagrams, integrated example, PRD evolution, decisions and optional references; accessibility and contents updates. |
+| `dist/index.html` | Remove the editorial draft qualifier from the page description metadata. |
 | `dist/product-ideation.css` | Page-specific example/reference styling, metadata, focus treatment and diagram border contrast using existing tokens. |
 | `dist/product-ideation.js` | Direct-link disclosure handling and print expansion/restoration. |
 | `../writing.md` | Align the expanded AI-SDLC title and preserve repository/path names. |
@@ -41,6 +42,7 @@ Implementation procedures are cross-linked rather than duplicated. All 38 origin
 | `../README.md` | Update the ideation synopsis and terminology. |
 | `README.md` | Update page inventory, preview/publication information and remove a reference to absent `plan.md`. |
 | `product-ideation-review.md` | Record changes, validation and limits. |
+| `product-pages-review.md` | Remove the excluded discovery-source entry from the older source mapping. |
 
 ## Validation
 
@@ -65,3 +67,9 @@ The local Lighthouse mobile audit scored **99 performance, 100 accessibility, 10
 The Design Council and SVPG descriptions were checked against their primary sources. Existing Defence Product Playbook, Spec Kit and AUX attributions remain; no new EDS policy or decision authority is asserted. The Playbook web tool could not extract its application content, although the URL loaded successfully during the link check. Existing playbook interpretations remain qualified as adaptations or recommendations.
 
 The connected GitHub account can read the upstream repository but cannot push directly. The change is prepared on `improve/product-ideation-learning-journey` in an authenticated fork for upstream pull-request review. The live site changes only when the maintainers merge the pull request and the existing Pages workflow succeeds.
+
+## Metadata and reference cleanup
+
+Removed the remaining excluded discovery-source entry from the older review's source mapping. The public pages contain no coverage attributed to that source or reference to it. Removed the Draft status from Product Ideation's header metadata and the draft qualifier from the Introduction's description metadata. Retained the update date and updated the authoring guidance to keep editorial status out of rendered page metadata.
+
+Checked every HTML page for the excluded reference and draft-status metadata, previewed both changed pages at desktop and mobile widths, and reran the 24 ideation validation groups successfully. Working draft PRDs and draft responses remain substantive product concepts rather than page-status labels.
