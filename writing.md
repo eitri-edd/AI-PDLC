@@ -37,6 +37,25 @@ Use “you” for an instruction the reader can perform. Use a role name when ow
 - Explain a specialist term at first use. Keep the precise term when a simpler replacement would change its meaning.
 - Remove repeated introductions, promotional claims and conclusions that merely restate the opening.
 
+## Make guidance actionable
+
+Apply this editorial rule to every procedure, review activity and decision check: give readers enough detail to carry out the work and recognise when it is complete. A heading such as “Check accuracy” does not provide the method.
+
+Answer these questions in the surrounding passage:
+
+- **Who acts?** Name the role or address the reader directly. Identify the decision owner when the activity leads to a decision.
+- **What do they use?** Name the input, source record or version they need.
+- **What do they do?** Use concrete verbs and describe the comparison, observation or test. Replace “validate”, “ensure” or “review” used alone with the actual check.
+- **How do they judge the result?** Explain what supports the conclusion and what would leave it uncertain or require further work. Use confirmed criteria where available; label suggested criteria as recommendations.
+- **What do they record?** Name the result, evidence link, unresolved question or updated artefact.
+- **What happens next?** State the decision, follow-up action or route for unresolved findings.
+
+Keep the detail proportional to the task. A simple instruction can answer several questions in one sentence. Do not repeat information already clear in the section or add six labelled fields to every paragraph. Use a short list when a review contains several distinct checks; number it only when order matters.
+
+For research and AI-generated summaries, explain how to compare claims with original records. Include relevant checks for duplicate counts, missing or contradictory evidence, and the difference between an observation and a proposed explanation. State what the reviewer retains and how unresolved claims affect the next decision.
+
+Use one short, labelled example when readers could still confuse two ideas or misapply the instruction. Show the original statement, what the evidence supports and what still needs checking. Explain unfamiliar terms in everyday language before relying on them in the steps.
+
 ## Language and terminology
 
 Use British English in authored prose: “organisation”, “prioritise”, “behaviour” and “programme”. Preserve official product names, code identifiers and quoted titles.
@@ -135,6 +154,14 @@ All examples below are fictional editorial demonstrations, not EDS requirements.
 
 > A larger evaluation set covers more situations, but takes longer to maintain and run. Begin with the cases that would most affect users if the product failed. Add cases when reviews or operational evidence reveal gaps.
 
+### Example: making a review instruction actionable
+
+**Before:** “Validate the AI summary against the research.”
+
+**After:** “Ask the reviewer to compare each finding that affects the decision with its original interview passage or observation note. Check the context, duplicate counts and evidence the summary omitted. Record supported findings, source links and unanswered questions. Use the remaining questions to choose the next study or test.”
+
+**Fictional distinction:** An AI summary says, “The search system is broken.” The notes show that staff needed help finding an article in 7 of 24 cases. The observation supports investigating that difficulty; it does not establish the cause. Check search behaviour and article quality before choosing a fix.
+
 ## Page metadata
 
 Record a content owner, last-reviewed date and applicable lifecycle version for maintained guidance. Page status metadata is not required. Do not add editorial status fields or badges to page headers or description metadata. Editorial status may be tracked in maintenance records when useful.
@@ -145,6 +172,9 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 
 - [ ] The opening tells the intended reader what the page helps them do or understand.
 - [ ] Instructions identify actions, outputs and ownership where needed.
+- [ ] Each procedure or review explains its inputs, actual checks, basis for judging the result, recorded output and next action.
+- [ ] “Check”, “review”, “validate” and “ensure” are followed by enough detail for the reader to perform the work.
+- [ ] Difficult distinctions have a short example where needed; observations, interpretations and untested explanations remain separate.
 - [ ] Terms are consistent and abbreviations are explained.
 - [ ] Claims have appropriate evidence; recommendations and examples are labelled clearly.
 - [ ] Requirements cite a confirmed authority and state where they apply.
@@ -152,5 +182,7 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 - [ ] Headings and link text make sense when scanned independently.
 - [ ] The page includes a useful next step and current ownership metadata.
 - [ ] A colleague outside the author’s specialism can explain the main point after reading it.
+
+Do not mark a procedure or review activity editorially complete while readers still have to invent the checking method or infer what to record. Before accepting it, ask whether a reader unfamiliar with the topic could carry out the next action using the passage and its linked inputs. Revise the passage if they could not. This is an authoring acceptance rule, not a new organisational approval gate.
 
 Use [design.md](design.md) for the presentation of this content.
