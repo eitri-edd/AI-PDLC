@@ -25,7 +25,6 @@ Online sources opened on 28 September 2026. Links appear beside the relevant exp
 
 | Source | Use and limits |
 | --- | --- |
-| [GOV.UK: How the discovery phase works](https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works) | Users, wider journey, constraints, alternatives and continuation decision. UK delivery stages and approval rules are not adopted as EDS policy. |
 | [SVPG: The Four Big Risks](https://www.svpg.com/four-big-risks/) | Value, usability, feasibility and business viability as prompts for untested assumptions. Its role assignments are not imported. |
 | [Design Council: The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/) | Existing divergent and convergent activities retained. Human decision points in the diagram are identified as this guide’s adaptation. |
 | [GitHub Spec Kit: Specification-Driven Development](https://github.com/github/spec-kit/blob/main/spec-driven.md) | Specifications, plans and tasks. PRD/TRD naming remains this guide’s usage; speed claims and claims of eliminating ambiguity are not adopted. |

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-SG">
 <head>
   <meta charset="utf-8">
@@ -7,7 +7,9 @@
   <title>Product ideation · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="product-ideation.css">
   <script src="site.js" defer></script>
+  <script src="product-ideation.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -18,12 +20,12 @@
     </div>
   </header>
   <div class="page-layout">
-    <aside class="sidebar">
+    <aside class="sidebar" aria-label="Guide navigation">
       <details class="site-navigation" open>
         <summary>Guide navigation</summary>
         <nav aria-label="Guide">
           <p class="nav-label">Development guide</p>
-          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+<a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
           <a class="nav-parent-active" href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
@@ -42,49 +44,38 @@
           <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
         </nav>
       </details>
-    </aside>
+</aside>
     <main id="main" tabindex="-1">
       <article class="concept-article">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="ai-pdlc.html">AI-SDLC</a><span aria-hidden="true">/</span><span aria-current="page">Product ideation</span></nav>
         <header class="article-header">
           <p class="eyebrow">Development guide</p>
-          <h1>Product ideation</h1>
-          <p class="lead">In this guide, product ideation covers product discovery: understanding user needs and testing possible solutions before development. Use research and prototypes to decide which problem to solve, what to build and when to stop.</p>
-          <p>Product, design and engineering shape the problem, prototypes and evidence together, with relevant reviewers involved early. Keep the evolving requirements in a product requirements document (PRD), linked to interaction designs, research findings and open questions.</p>
+<h1>Product ideation</h1>
+<p class="lead">Frame a worthwhile problem, test the riskiest assumptions, decide the next investment and hand over evidence-backed intent.</p>
+<p>Use six practical steps with Product, Design and Engineering from the start. Follow one fictional service-desk assistant from problem evidence to a bounded implementation decision.</p>
+<ul class="metadata-bar"><li>Updated: <time datetime="2026-10-28">28 October 2026</time></li></ul>
 
         </header>
-        <!-- PAGE MAP START -->
-        <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
-          <figcaption id="page-map-caption">This page at a glance</figcaption>
-          <p id="page-map-note" class="page-map-note">Understand the user problem, compare solutions and test your assumptions. Agree success measures before testing, then use the results to decide what to build.</p>
-
-          <ol class="page-map-nodes" role="list">
-            <li class="page-map-node"><strong>Problem definition</strong><div class="page-map-links"><a href="#two-loops">Purpose of product discovery</a><a href="#ideation-loop">When to start or revisit discovery</a><a href="#product-thesis">User problem and product hypothesis</a><a href="#concept-brief">Write a concept brief</a></div></li>
-            <li class="page-map-node"><strong>Research and validation</strong><div class="page-map-links"><a href="#explore-and-challenge">Compare possible solutions</a><a href="#prototype">Choose a prototype</a><a href="#agent-experience">Test human and agent journeys</a><a href="#validate-and-decide">Test assumptions and decide</a></div></li>
-            <li class="page-map-node"><strong>Team and success measures</strong><div class="page-map-links"><a href="#product-team">Product, design and engineering collaboration</a><a href="#product-intent">Product goals and requirements</a><a href="#measure-learning">Success measures and limits</a></div></li>
-            <li class="page-map-node"><strong>Requirements handover</strong><div class="page-map-links"><a href="#handover">Share requirements and research findings</a></div></li>
-          </ol>
-
-        </figure>
-        <!-- PAGE MAP END -->
-        <details class="mobile-contents">
-          <summary>On this page</summary>
-          <nav aria-label="On this page">
-            <a href="#two-loops">Loop purpose</a>
-            <a href="#ideation-loop">Ideation loop</a>
-            <a href="#product-thesis">Product thesis</a>
-            <a href="#explore-and-challenge">Explore and challenge</a>
-            <a href="#prototype">Prototype</a>
-            <a href="#agent-experience">Agentic experiences</a>
-            <a href="#validate-and-decide">Validate and decide</a>
-            <a href="#product-team">Product team</a>
-            <a href="#product-intent">Product intent</a>
-            <a href="#measure-learning">Measure learning</a>
-            <a href="#handover">Handover</a>
-            <a href="#sources">Sources</a>
-          </nav>
-        </details>
-        <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
+<figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
+<figcaption id="page-map-caption">This page at a glance</figcaption>
+<p id="page-map-note" class="page-map-note">Frame → Test → Decide → Handoff. Six practical steps, with Product, Design and Engineering collaborating throughout. Handoff follows a justified commitment.</p>
+<ol class="page-map-nodes" role="list">
+<li class="page-map-node"><strong>Frame</strong><div class="page-map-links"><a href="#product-thesis">1. Understand the problem</a><a href="#explore-and-challenge">2. Define value / explore alternatives</a></div></li>
+<li class="page-map-node"><strong>Test</strong><div class="page-map-links"><a href="#experiment-design">3. Design the experiment</a><a href="#prototype">4. Prototype / learn</a></div></li>
+<li class="page-map-node"><strong>Decide</strong><div class="page-map-links"><a href="#validate-and-decide">5. Evaluate / decide</a><a href="#fig-decision">Choose a feedback route</a></div></li>
+<li class="page-map-node"><strong>Handoff</strong><div class="page-map-links"><a href="#handover">6. Prepare the handoff</a><a href="product-implementation.html#implementable-definition">Implementation readiness</a></div></li>
+</ol></figure>
+<details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page, mobile"><a href="#product-team">Start together</a>
+<a href="#ideation-loop">The learning journey</a>
+<a href="#product-thesis">1. Understand the problem</a>
+<a href="#explore-and-challenge">2. Define value / alternatives</a>
+<a href="#experiment-design">3. Design the experiment</a>
+<a href="#prototype">4. Prototype / learn</a>
+<a href="#validate-and-decide">5. Evaluate / decide</a>
+<a href="#handover">6. Prepare the handoff</a>
+<a href="#measure-learning">Optional deep dives</a>
+<a href="#sources">Sources</a></nav></details>
+<svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
             <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
@@ -99,114 +90,181 @@
           </defs>
         </svg>
 
-        <section id="two-loops"><h2>Start with the loop’s purpose</h2><p>Use the steps below to frame a thesis, test assumptions and record a decision. For the shared model and the relationship between the loops, <a href="ai-pdlc.html#two-loops">read the AI-SDLC overview</a>.</p></section>
-
-        <section id="ideation-loop">
-          <h2>How product ideation works</h2>
-          <p>Ideation starts with incomplete information. Its job is to reduce the uncertainties that could invalidate the opportunity, the user experience, the delivery approach or the expected value. AI can speed up research, drafting and prototyping; people decide which outcomes matter and which trade-offs are acceptable.</p>
-          <p>The Defence Product Playbook, jointly developed by MINDEF and DSTA, makes a similar case. It treats a requirement as a hypothesis until an operator has used it, and recommends a product approach where the problem keeps changing. Its three principles align with this loop: define real problems, structure the team right and test early.</p>
-          <h3>Know when to enter or revisit ideation</h3>
-          <p>Start when the user problem, expected value or proposed behaviour is uncertain. The playbook names three signals: the need keeps changing, the root cause is unclear, or nobody can yet show that the solution will have the intended effect. Return when research, incidents or delivery work challenge those assumptions. A well-understood defect can go directly to implementation with a clear issue and acceptance criteria; it need not restart discovery.</p>
-          <p>Bring observations of the current task, support or operational evidence, existing alternatives and known constraints. Nominate a person to gather evidence and identify who can authorise the next investment. The output is a decision with its evidence, scope and unresolved questions.</p>
-          <figure class="concept-figure" id="fig-loop">
-  <figcaption id="fig-loop-title-caption">Figure 1. Decide from evidence: commit, rework or stop.</figcaption>
-  <details class="figure-reading"><summary>Read as text: Flow and branches</summary><ol><li>Frame: state the thesis, explore alternatives and challenge assumptions.</li><li>Test: specify a draft PRD, prototype the riskiest uncertainty, measure the result and learn.</li><li>Decide: the agreed decision owner weighs the evidence. Rework means improve, redesign or pivot, returning to Frame.</li><li>Commit: version and hand over the PRD and relevant UI artefacts. Stop: record the learning and end the investment.</li></ol></details>
-  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
-    <div class="figure-scroll" tabindex="0" role="region" aria-label="Frame, test and decide; scroll horizontally if needed"><svg viewBox="0 0 680 500" role="img" aria-labelledby="fig-loop-title" aria-describedby="fig-loop-title-desc"><title id="fig-loop-title">Frame, test and decide</title><desc id="fig-loop-title-desc">Frame: state the thesis, explore alternatives and challenge assumptions. Test: specify a draft PRD, prototype the riskiest uncertainty, measure the result and learn. Decide: the agreed decision owner weighs the evidence. Rework means improve, redesign or pivot, returning to Frame. Commit: version and hand over the PRD and relevant UI artefacts. Stop: record the learning and end the investment.</desc><rect class="d-node" x="200" y="15" width="280" height="80" rx="7"/><text class="d-title" x="340" y="41" text-anchor="middle">Frame</text><text class="d-sub" x="340" y="64" text-anchor="middle">Thesis · Explore · Challenge</text><path class="d-line" d="M340 95V130" marker-end="url(#arrow)"/><rect class="d-node" x="200" y="135" width="280" height="100" rx="7"/><text class="d-title" x="340" y="161" text-anchor="middle">Test</text><text class="d-sub" x="340" y="184" text-anchor="middle">Specify · Prototype</text><text class="d-sub" x="340" y="205" text-anchor="middle">Measure · Learn</text><path class="d-line" d="M340 235V280" marker-end="url(#arrow)"/><polygon class="d-node d-node-accent d-decision" points="210,285 470,285 480,295 480,350 470,360 210,360 200,350 200,295"/><text class="d-title" x="340" y="311" text-anchor="middle">Decide</text><text class="d-sub" x="340" y="334" text-anchor="middle">Agreed decision owner</text><path class="d-line d-dash" d="M200 323H80V55H195" marker-end="url(#arrow)"/><text class="d-label" x="92" y="255" text-anchor="middle">rework</text><rect class="d-node" x="155" y="410" width="240" height="65" rx="7"/><text class="d-title" x="275" y="436" text-anchor="middle">Commit and hand off</text><text class="d-sub" x="275" y="459" text-anchor="middle">PRD; relevant UI artefacts</text><path class="d-line" d="M310 360V405" marker-end="url(#arrow)"/><text class="d-label" x="344" y="390" text-anchor="middle">commit</text><rect class="d-node" x="500" y="290" width="165" height="75" rx="7"/><text class="d-title" x="582.5" y="316" text-anchor="middle">Stop</text><text class="d-sub" x="582.5" y="339" text-anchor="middle">Retain learning</text><path class="d-line" d="M480 323H495" marker-end="url(#arrow)"/></svg></div>
-    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the commitment decision.</p>
-  </details>
-</figure>
-<p>Frame establishes what needs to be learned; Test supplies evidence; Decide records the next investment. Keep the criteria for commitment visible, and retain the learning when the decision is to stop.</p>
-          <p>Think of the loop in three parts:</p>
-          <ul>
-            <li><strong>Inputs:</strong> problems, user needs, strategic priorities, operational evidence, new capabilities and constraints.</li>
-            <li><strong>Learning work:</strong> research, challenge, specification, prototyping, testing, measurement and synthesis.</li>
-            <li><strong>Decision output:</strong> continue, change direction or stop, then update the product intent with what was learned.</li>
+<section id="product-team"><h2>Start together: Product, Design and Engineering</h2>
+<p>Product definition, design, engineering and assurance need a shared view of the evidence. Keep the people making these judgements involved throughout discovery, with agents supporting work in the same product context.</p>
+<h3>Share intent, interaction and feasibility</h3>
+<p>Sumit Sheth’s “3-in-a-Box” model brings Product, Design and Engineering together around intent, interaction and implementation. Any discipline can initiate discovery; the three shape and test the experience together. Apply this as a collaboration pattern, mapped to local roles.</p>
+<p>Use the <a href="#concept-brief">concept brief</a> to align on the outcome, intended interaction and feasibility. Name the people covering each discipline, then link the brief to the <a href="#experiment-design">experiment record</a> and next decision.</p>
+<p class="source-ref">Source: <a href="#source-5" aria-label="Source 5: Sumit Sheth, From Headless to Thoughtful">[5]</a> on continuous co-creation and the three disciplines.</p>
+<h3>Make collaboration part of each experiment</h3>
+<p>A suggested working rhythm is to have Product, Design and Engineering choose the riskiest assumption, inspect the same prototype and review the same observations. Revise the behaviour, technical approach and PRD in the same learning cycle. Involve QA, research, operations, data, security and risk specialists where the uncertainty calls for their expertise.</p>
+<p>Shared ownership of the outcome still needs named decision owners. Record disagreements and escalate unresolved scope, investment or risk choices to the authorised person. The triad does not replace specialist assurance or approval.</p>
+<details class="deep-dive"><summary>Reference: human judgement and agent-supported work</summary><div>          <p>Use the table to agree responsibilities and decision owners across the team. One person may cover several disciplines.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Human judgement and agent-supported work"><table><caption>Human judgement and agent-supported work</caption><thead><tr><th scope="col">Participant</th><th scope="col">Human judgement and accountability</th><th scope="col">Agent-supported work</th></tr>
+</thead><tbody>
+            <tr><th scope="row">Product</th><td>Problem, outcomes, priorities, trade-offs and thesis</td><td>Research summaries, options, draft specifications and decision evidence</td></tr>
+<tr><th scope="row">Design</th><td>User behaviour, desirability, usability and interaction principles</td><td>Concept variants, prototypes, journey analysis and heuristic checks</td></tr>
+<tr><th scope="row">Engineering and architecture</th><td>Feasibility, architecture, reversibility, security and operational quality</td><td>Code exploration, technical spikes, plans, tests and dependency analysis</td></tr>
+<tr><th scope="row">AI and data</th><td>Data quality, model behaviour, evaluation design and runtime controls</td><td>Dataset analysis, evaluations, tracing and model comparison</td></tr>
+<tr><th scope="row">Risk and compliance</th><td>Policy interpretation, thresholds, exceptions and accountable acceptance</td><td>Continuous checks, evidence collection, control mapping and risk screening</td></tr>
+<tr><th scope="row">Agents</th><td>No organisational accountability</td><td>Research, challenge, specification drafting, prototyping, testing and evaluation</td></tr>
+</tbody></table></div>
+          <p>For this to work, the shared environment needs:</p>
+<ul>
+            <li>access to current, relevant product and technical context;</li>
+            <li>clear ownership, permissions and decision authority;</li>
+            <li>visible agent activity, sources, outputs and status;</li>
+            <li>a structured route for review, feedback and exceptions; and</li>
+            <li>explicit human approval for high-consequence decisions.</li>
           </ul>
-          <aside class="callout" aria-label="Note on accountability">
-            <p class="example-label">Note</p>
-            <p>Agents can research and draft proposals. The product owner brings the evidence and a recommendation to the people authorised to decide on scope, investment and risk. Form the product and engineering team early, so that user value, feasibility, security and operational constraints shape the product before commitment.</p>
-          </aside>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: MINDEF and DSTA, The Defence Product Playbook">[1]</a> “Why product ways of working” and “The three principles”.</p>
-        </section>
-
-        <section id="product-thesis">
-          <h2>Start with a thesis that can be disproved</h2>
-          <p>A product thesis is a claim about why a product or capability should exist, written so that evidence could show it to be wrong. Without that property, each prototype tends to refine the idea rather than test it.</p>
-          <h3>Recognise where the idea came from</h3>
-          <p>An idea usually starts from a user or business problem, or from a new technical capability. Neither starting point is better, but each fails in its own way. Both need to arrive at an opportunity that is valuable, feasible and supported by evidence.</p>
-          <div class="table-scroll"><table><caption>Two starting points for a product idea</caption><thead><tr><th scope="col">Starting point</th><th scope="col">Strength</th><th scope="col">Common failure</th><th scope="col">Question to ask</th></tr></thead><tbody>
-            <tr><th scope="row">Problem pull: a user or business problem</th><td>Anchored in real demand and outcomes</td><td>Incremental thinking that assumes today’s workflow must remain</td><td>Could the problem be removed, rather than today’s solution improved?</td></tr>
-            <tr><th scope="row">Technology push: a new capability or lower cost</th><td>Reveals options that were previously impossible</td><td>An impressive capability searching for a valuable problem</td><td>What meaningful problem is now feasible to solve for the first time?</td></tr>
-          </tbody></table></div>
-          <h3 id="concept-brief">Write a short concept brief</h3>
-          <p>Before committing to scope, dates or estimates, capture the thesis in a short concept brief. Aim for one page, with links to supporting evidence. Any discipline can draft it; Product, Design and Engineering refine it together.</p>
-          <p>The following is a suggested working format. Record:</p>
-          <ul>
+</div></details>
+<p>Delegating work does not delegate accountability. The exchange also runs both ways: technical feasibility should shape ideas early, and user and business intent should shape architecture early. Doing both reduces late surprises about security, data location, performance, model limitations and operations.</p>
+<p class="next-step"><strong>Next step:</strong> bring Product, Design and Engineering to the next experiment. Agree the outcome, interaction and feasibility question, then review the prototype and evidence together. <a href="transformation.html#team-composition">Read about human–agent team composition</a>.</p>
+<p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: MINDEF and DSTA, The Defence Product Playbook">[1]</a> “Structure the team right”.</p>
+</section>
+<section id="ideation-loop"><h2>Follow the evidence through four phases</h2>
+<p id="two-loops">Product ideation asks whether a problem is worth solving and whether a proposed solution earns further investment. In the <a href="ai-pdlc.html#two-loops">AI-Software Development Lifecycle (AI-SDLC)</a>, implementation turns that intent into verified software and returns new learning.</p>
+<h3>When to enter or revisit discovery</h3>
+<p>Start with a user or business problem, an obligation, or a new capability whose value is uncertain. Bring observations, existing alternatives and known constraints. Name an evidence owner and the person authorised to decide the next investment. Return when research, incidents or delivery evidence challenges the intended outcome; route a well-understood defect directly to implementation.</p>
+<p>This is a recommended learning sequence, not a new set of organisational approval gates. Scale the evidence to the consequences of the decision.</p>
+<span class="anchor-alias" id="fig-loop-title-caption" aria-hidden="true"></span><span class="anchor-alias" id="fig-loop-title-desc" aria-hidden="true"></span><figure class="concept-figure ideation-figure" id="fig-loop">
+  <figcaption>Figure 1. Frame, Test, Decide, Handoff</figcaption>
+  <details class="figure-reading"><summary>Read as text: Frame, Test, Decide, Handoff</summary><ol><li>Frame: understand the problem, define value and compare alternatives.</li><li>Test: design the experiment before prototyping and learning.</li><li>Decide: commit, continue testing, rework or stop.</li><li>Only commit enters Handoff. Continue testing returns to step 3; improve to step 4, redesign to step 2, pivot to step 1.</li></ol></details>
+<details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">(expand for the detailed view)</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Frame, Test, Decide, Handoff; scroll horizontally if needed">
+      <svg viewBox="0 0 680 680" role="img" aria-labelledby="fig-loop-title" aria-describedby="fig-loop-desc">
+        <title id="fig-loop-title">Frame, Test, Decide, Handoff</title><desc id="fig-loop-desc">Steps 1 and 2 frame the problem and value; steps 3 and 4 plan and run tests. Step 5 compares evidence with agreed rules. Commit alone enters step 6 and implementation. Continue testing returns to step 3; improve returns to step 4, redesign to step 2 and pivot to step 1. Stop retains learning.</desc>
+        <text class="d-title" x="340" y="20" text-anchor="middle">Product + Design + Engineering throughout</text>
+<rect class="d-node" x="205" y="45" width="310" height="92" rx="8"/><text class="d-title" x="360.0" y="71" text-anchor="middle">Frame</text>
+<text class="d-sub" x="360.0" y="94" text-anchor="middle">1 Understand problem</text>
+<text class="d-sub" x="360.0" y="114" text-anchor="middle">2 Define value / explore alternatives</text>
+<path class="d-line" d="M360 137V180" marker-end="url(#arrow)"/><rect class="d-node" x="205" y="185" width="310" height="92" rx="8"/><text class="d-title" x="360.0" y="211" text-anchor="middle">Test</text>
+<text class="d-sub" x="360.0" y="234" text-anchor="middle">3 Design experiment</text>
+<text class="d-sub" x="360.0" y="254" text-anchor="middle">4 Prototype / learn</text>
+<path class="d-line" d="M360 277V325" marker-end="url(#arrow)"/><polygon class="d-node d-node-accent d-decision" points="215,330 505,330 515,340 515,395 505,405 215,405 205,395 205,340"/><text class="d-title" x="360.0" y="356" text-anchor="middle">Decide</text>
+<text class="d-sub" x="360.0" y="379" text-anchor="middle">5 Evaluate evidence</text>
+<path class="d-line" d="M360 405V510" marker-end="url(#arrow)"/><text class="d-label" x="401" y="465" text-anchor="middle">Commit</text>
+<rect class="d-node" x="205" y="515" width="310" height="75" rx="8"/><text class="d-title" x="360.0" y="541" text-anchor="middle">Handoff</text>
+<text class="d-sub" x="360.0" y="564" text-anchor="middle">6 Prepare evidence-backed intent</text>
+<path class="d-line" d="M360 590V630" marker-end="url(#arrow)"/><text class="d-title" x="360" y="655" text-anchor="middle">Product implementation</text>
+<path class="d-line d-dash" d="M205 350H155V231H200" marker-end="url(#arrow)"/><text class="d-label" x="146" y="297" text-anchor="end">Continue testing</text>
+<path class="d-line d-dash" d="M205 373H110V91H200" marker-end="url(#arrow)"/><text class="d-label" x="101" y="168" text-anchor="end">Rework</text>
+<path class="d-line" d="M515 367H545" marker-end="url(#arrow)"/><rect class="d-node" x="550" y="330" width="120" height="75" rx="8"/><text class="d-title" x="610.0" y="356" text-anchor="middle">Stop</text>
+<text class="d-sub" x="610.0" y="379" text-anchor="middle">Retain learning</text>
+</svg>
+    </div><p class="diagram-key">Solid arrows show forward flow. Dashed arrows show more learning or rework; Figure 5 separates the rework routes. Blue marks the human decision.</p>
+</details>
+</figure>
+<h3 id="product-intent">Grow the artefacts as evidence improves</h3>
+<div class="table-scroll" role="region" aria-label="Concept brief and PRD progression" tabindex="0"><table><caption>One evolving product intent, with increasing evidence</caption><thead><tr><th scope="col">Artefact</th><th scope="col">Purpose and maturity</th></tr>
+</thead><tbody>
+<tr><th scope="row">Concept brief (Frame)</th><td>Why this user, problem and possible direction deserve investigation. Includes alternatives, baseline, assumptions and the next test; it is not an implementation-ready specification.</td></tr>
+<tr><th scope="row">Draft PRD (Test)</th><td>A product requirements document containing hypothesised behaviour, states, constraints and provisional acceptance criteria. Link tests to the version they examine; revise the draft as findings change intent.</td></tr>
+<tr><th scope="row">Evidence-backed PRD (Handoff)</th><td>Versioned, bounded scope supported by linked evidence, UI or API artefacts, testable criteria and owned open questions. It remains revisable; commitment is not production approval.</td></tr>
+</tbody></table></div>
+<p>AI-assisted development uses AI to help research, draft, build or check software. An AI product uses AI at runtime; only products with agents taking or choosing actions need the <a href="#agent-experience">optional agent-journey checks</a>. People retain accountability in every case.</p>
+<p id="worked-example"><strong>Follow one fictional example:</strong> a service-desk knowledge assistant for staff answering routine access questions. Expand the example in each step to follow its evidence and artefacts. Every number, identifier, threshold and result is illustrative, not an EDS policy or a measured organisational result.</p>
+<nav class="example-route" aria-label="Fictional worked example"><a href="#example-1">Problem</a><a href="#example-2">Value</a><a href="#example-3">Experiment</a><a href="#example-4">Learning</a><a href="#example-5">Decision</a><a href="#example-6">Handoff</a></nav>
+</section>
+<section id="product-thesis"><h2>1. Understand the problem</h2>
+<p>Learn whose task is failing, where the friction occurs and why it matters before choosing a solution. Observe the current workflow, speak with affected people and examine support or operational evidence. Separate observed facts from interpretations and untested causes.</p>
+<h3>Use 6W to investigate and 4C to check the statement</h3>
+<p>The Defence Product Playbook traces most weak products to a weak problem statement. It suggests building the statement from six questions, the 6W: what goes wrong, where, when and how often, who feels it, why it happens and why it matters. Then check what you have written against four criteria, the 4C.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="The 4C problem-statement check, adapted from the Defence Product Playbook"><table><caption>The 4C problem-statement check, adapted from the Defence Product Playbook</caption><thead><tr><th scope="col">Criterion</th><th scope="col">What the statement shows</th></tr>
+</thead><tbody>
+            <tr><th scope="row">Clarity</th><td>One user group, the task they attempt, the friction, and how severe and frequent it is</td></tr>
+<tr><th scope="row">Consequence</th><td>The quantified cost if the problem stays unsolved</td></tr>
+<tr><th scope="row">Cause</th><td>A theory of change: the causal chain and the step worth intervening at</td></tr>
+<tr><th scope="row">Confirmation</th><td>Evidence that supports the identified cause</td></tr>
+</tbody></table></div>
+          <p>The playbook names four traps: an aspiration, a solution in disguise, an end-of-life notice and a vague pain. An end-of-life notice alone does not explain the consequence. Describe the current or foreseeable effects on support, security maintenance, compatibility, recoverability and mission continuity, with relevant dates and evidence. Teams can act before a user-facing failure: for example, plan migration before vendor security support ends or recovery becomes unviable.</p>
+<p>For discretionary improvements, severity, frequency and reach (SFR) can help compare problem statements when there are more opportunities than teams. Score each dimension low, medium or high, record the evidence and uncertainty, and use the scores to support judgement rather than as an automatic ranking.</p>
+<p>Apply explicit overrides for mandatory obligations and intolerable risks. A rare problem affecting few people may still warrant priority because of mission failure, serious harm, security exposure or an accessibility barrier. Record the consequence, applicable obligation or risk threshold, urgency and decision owner before comparing discretionary opportunities.</p>
+<figure class="concept-figure ideation-figure" id="fig-problem">
+  <figcaption>Figure 2. Turn a request into a testable problem</figcaption>
+  <details class="figure-reading"><summary>Read as text: Turn a request into a testable problem</summary><p>Start with a request, gather evidence with 6W, then check the statement with 4C. In the fictional example, the median 12-minute task and seven requests for help are observations. Poor retrieval is a hypothesis to investigate; neither the sample nor a generated summary proves causation.</p>
+</details>
+<details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">(expand for the detailed view)</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Turn a request into a testable problem; scroll horizontally if needed">
+      <svg viewBox="0 0 680 440" role="img" aria-labelledby="fig-problem-title" aria-describedby="fig-problem-desc">
+        <title id="fig-problem-title">Turn a request into a testable problem</title><desc id="fig-problem-desc">Use 6W to gather observations and 4C to check clarity, consequence, cause and confirmation. The fictional 24-case sample shows friction; poor retrieval is a causal hypothesis, not a verified explanation.</desc>
+        <rect class="d-node" x="150" y="10" width="380" height="58" rx="8"/><text class="d-title" x="340.0" y="36" text-anchor="middle">Request: “We need an AI assistant”</text>
+<path class="d-line" d="M340 68V83H182V98" marker-end="url(#arrow)"/><rect class="d-node" x="35" y="103" width="295" height="112" rx="8"/><text class="d-title" x="182.5" y="129" text-anchor="middle">6W: observe the task</text>
+<text class="d-sub" x="182.5" y="152" text-anchor="middle">What / where / when?</text>
+<text class="d-sub" x="182.5" y="172" text-anchor="middle">Who / why / why it matters?</text>
+<text class="d-sub" x="182.5" y="192" text-anchor="middle">Record sources and unknowns</text>
+<rect class="d-node" x="350" y="103" width="295" height="112" rx="8"/><text class="d-title" x="497.5" y="129" text-anchor="middle">4C: challenge the statement</text>
+<text class="d-sub" x="497.5" y="152" text-anchor="middle">Clarity / consequence</text>
+<text class="d-sub" x="497.5" y="172" text-anchor="middle">Cause / confirmation</text>
+<text class="d-sub" x="497.5" y="192" text-anchor="middle">Keep causal hypotheses explicit</text>
+<path class="d-line" d="M330 159H345" marker-end="url(#arrow)"/><path class="d-line" d="M497 215V245H340V270" marker-end="url(#arrow)"/><rect class="d-node d-node-accent" x="55" y="275" width="570" height="112" rx="8"/><text class="d-title" x="340.0" y="301" text-anchor="middle">Fictional problem statement</text>
+<text class="d-sub" x="340.0" y="324" text-anchor="middle">Service-desk staff spend a median 12 minutes on routine guidance.</text>
+<text class="d-sub" x="340.0" y="344" text-anchor="middle">Evidence: 24 observed cases; 7 needed help finding an article.</text>
+<text class="d-sub" x="340.0" y="364" text-anchor="middle">Hypothesis: poor retrieval contributes; article quality is untested.</text>
+<text class="d-label" x="340" y="416" text-anchor="middle">Observation establishes friction; it does not prove the cause.</text>
+</svg>
+    </div><p class="diagram-key">The blue statement separates observed evidence from a causal hypothesis. All service-desk numbers are fictional teaching examples.</p>
+</details>
+</figure>
+<details class="worked-example" id="example-1"><summary>Fictional service-desk example 1 of 6: understand the problem</summary><div><p><strong>Problem record P-1:</strong> staff answering routine access questions repeatedly search for the right knowledge article. In 24 fictional observed cases over two weeks, median handling time is 12 minutes; seven cases need a colleague’s help locating an article.</p>
+<p><strong>6W:</strong> what: slow guidance; where: the service desk; when: routine access queries; who: desk staff; why: retrieval may be difficult; why it matters: staff effort and user waiting. The sample shows friction; poor retrieval is still a causal hypothesis.</p>
+<p><strong>4C:</strong> clarity names the task and group; consequence is time and waiting; cause is the retrieval hypothesis; confirmation is incomplete. Check article accuracy and observe search behaviour before attributing the delay to retrieval alone.</p>
+<p><a href="#example-2">Follow the example: 2 of 6</a>.</p>
+</div></details>
+<p class="learning-output"><strong>Output:</strong> An evidenced problem statement, source notes, affected users and unresolved causes. <strong>Next:</strong> Use step 2 to compare ways of changing the outcome.</p>
+</section>
+<section id="explore-and-challenge"><h2>2. Define value and explore alternatives</h2>
+<p>Compare doing nothing, process or content changes, conventional software and AI options. Define the value before refining the interface. For technology push, first identify a credible user problem; a new capability alone does not establish demand.</p>
+<h3>Establish the baseline and measures now</h3>
+<p>Choose an outcome measure and record its current value, population, period and collection method. Agree a target, a primary measure and guardrail limits before testing. Include correctness, accessibility, privacy, security, reliability, cost and human review effort where relevant. Activity counts do not establish value.</p>
+<p>Keep deterministic boundaries, such as no unauthorised action, separate from probabilistic quality measures, such as answer accuracy. A high average quality score cannot compensate for an access-control failure. Zero observed failures in a small test does not establish that failures are impossible.</p>
+<p class="metric-strip"><strong>Measurement thread:</strong> baseline → target and guardrails → experiment result → decision. Set the first two here; preserve them alongside later results.</p>
+<h3 id="concept-brief">Write a short concept brief</h3>
+<p>Before committing to scope, dates or estimates, capture the thesis in a short concept brief. Aim for one page, with links to supporting evidence. Any discipline can draft it; Product, Design and Engineering refine it together.</p>
+<p>The following is a suggested working format. Record:</p>
+<ul>
             <li><strong>User, problem and evidence:</strong> the target user, their task, the consequence of doing nothing, and linked observations, requests or analysis. Distinguish a request from evidence of its underlying need.</li>
             <li><strong>Outcome and value:</strong> the outcome the user needs, the value to the organisation and why the opportunity matters now.</li>
             <li><strong>Proposed direction and alternatives:</strong> the initial solution hypothesis, the expected interaction and the alternatives worth comparing.</li>
             <li><strong>Feasibility and boundaries:</strong> enabling capabilities, known constraints, exclusions, risks, dependencies and unresolved assumptions.</li>
             <li><strong>Falsification criteria:</strong> evidence or limits, agreed in advance, that would trigger a redesign, a pivot or a stop.</li>
           </ul>
-          <p>Name the brief’s owner, next experiment and decision owner. Share it with relevant stakeholders before seeking the next investment, then update it as evidence changes. Develop the PRD from this brief as the intended behaviour becomes clearer.</p>
-          <aside class="example" aria-label="Fictional example of a falsification criterion">
-            <p class="example-label">Example · fictional thesis</p>
-            <p>A squad believes that service desk staff will resolve routine access requests faster with an assistant that drafts responses from the knowledge base. The thesis is weakened if staff cannot complete the task correctly, or if checking and correcting drafts removes the expected time saving. The experiment below turns those concerns into a test and a decision rule.</p>
-          </aside>
-          <h3>Test the problem statement before the solution</h3>
-          <p>The Defence Product Playbook traces most weak products to a weak problem statement. It suggests building the statement from six questions, the 6W: what goes wrong, where, when and how often, who feels it, why it happens and why it matters. Then check what you have written against four criteria, the 4C.</p>
-          <div class="table-scroll"><table><caption>The 4C problem-statement check, adapted from the Defence Product Playbook</caption><thead><tr><th scope="col">Criterion</th><th scope="col">What the statement shows</th></tr></thead><tbody>
-            <tr><th scope="row">Clarity</th><td>One user group, the task they attempt, the friction, and how severe and frequent it is</td></tr>
-            <tr><th scope="row">Consequence</th><td>The quantified cost if the problem stays unsolved</td></tr>
-            <tr><th scope="row">Cause</th><td>A theory of change: the causal chain and the step worth intervening at</td></tr>
-            <tr><th scope="row">Confirmation</th><td>Evidence that supports the identified cause</td></tr>
-          </tbody></table></div>
-          <p>The playbook names four traps: an aspiration, a solution in disguise, an end-of-life notice and a vague pain. An end-of-life notice alone does not explain the consequence. Describe the current or foreseeable effects on support, security maintenance, compatibility, recoverability and mission continuity, with relevant dates and evidence. Teams can act before a user-facing failure: for example, plan migration before vendor security support ends or recovery becomes unviable.</p>
-          <p>For discretionary improvements, severity, frequency and reach (SFR) can help compare problem statements when there are more opportunities than teams. Score each dimension low, medium or high, record the evidence and uncertainty, and use the scores to support judgement rather than as an automatic ranking.</p>
-          <p>Apply explicit overrides for mandatory obligations and intolerable risks. A rare problem affecting few people may still warrant priority because of mission failure, serious harm, security exposure or an accessibility barrier. Record the consequence, applicable obligation or risk threshold, urgency and decision owner before comparing discretionary opportunities.</p>
-          <p class="next-step"><strong>Next step:</strong> for your current idea, write one sentence each for the user, the outcome and the assumption that would most damage the case if it were false. Then agree the evidence that would show it is false, and check the problem statement against the 4C.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: MINDEF and DSTA, The Defence Product Playbook">[1]</a> “Define the problem, measure the value”.</p>
-        </section>
-
-        <section id="explore-and-challenge">
-          <h2>Widen the options, then narrow with evidence</h2>
-          <p>The Design Council’s Double Diamond separates widening the options from narrowing them. The first diamond explores and then defines the problem; the second develops possible solutions and then tests them at small scale, rejecting those that do not work.</p>
-          <figure class="concept-figure" id="fig-diamond">
-  <figcaption id="fig-diamond-title-caption">Figure 2. Explore alternatives before the agreed decision owner narrows the choice.</figcaption>
-  <details class="figure-reading"><summary>Read as text: Flow and branches</summary><ol><li>Problem space: Discover widens understanding; Define narrows it to a problem.</li><li>Decision: the locally agreed decision owner confirms the problem to pursue.</li><li>Solution space: Develop widens the options; Deliver narrows them through testing.</li><li>Decision: the agreed decision owner chooses the supported solution.</li></ol></details>
-  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
-    <div class="figure-scroll" tabindex="0" role="region" aria-label="Explore and narrow; scroll horizontally if needed"><svg viewBox="0 0 680 310" role="img" aria-labelledby="fig-diamond-title" aria-describedby="fig-diamond-title-desc">
-                <title id="fig-diamond-title">Explore and narrow</title><desc id="fig-diamond-title-desc">Problem space: Discover widens understanding; Define narrows it to a problem. Decision: the locally agreed decision owner confirms the problem to pursue. Solution space: Develop widens the options; Deliver narrows them through testing. Decision: the agreed decision owner chooses the supported solution.</desc>
-                <text class="d-label" x="180" y="24" text-anchor="middle">Problem space</text>
-                <text class="d-label" x="500" y="24" text-anchor="middle">Solution space</text>
-                <polygon class="d-node" points="20,130 180,40 340,130 180,220"/>
-                <polygon class="d-node" points="340,130 500,40 660,130 500,220"/>
-                <path class="d-line" d="M180 40V220M500 40V220"/>
-                <text class="d-title" x="110" y="128" text-anchor="middle">Discover</text><text class="d-sub" x="110" y="152" text-anchor="middle">widen</text>
-                <text class="d-title" x="250" y="128" text-anchor="middle">Define</text><text class="d-sub" x="250" y="152" text-anchor="middle">narrow</text>
-                <text class="d-title" x="430" y="128" text-anchor="middle">Develop</text><text class="d-sub" x="430" y="152" text-anchor="middle">widen</text>
-                <text class="d-title" x="570" y="128" text-anchor="middle">Deliver</text><text class="d-sub" x="570" y="152" text-anchor="middle">narrow</text>
-                <path class="d-line d-line-accent" d="M340 130V240" marker-end="url(#arrow-accent)"/>
-                <path class="d-line d-line-accent" d="M660 130V240" marker-end="url(#arrow-accent)"/>
-                <polygon class="d-node d-node-accent d-decision" points="258,244 422,244 430,252 430,292 422,300 258,300 250,292 250,252"/><text class="d-title" x="340" y="267" text-anchor="middle">Decide the problem</text><text class="d-sub" x="340" y="289" text-anchor="middle">Agreed decision owner</text>
-                <polygon class="d-node d-node-accent d-decision" points="498,244 662,244 670,252 670,292 662,300 498,300 490,292 490,252"/><text class="d-title" x="580" y="267" text-anchor="middle">Decide the solution</text><text class="d-sub" x="580" y="289" text-anchor="middle">Agreed decision owner</text>
-              </svg></div>
-    <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the two decisions.</p>
-  </details>
-  </figure>
-<p><strong>How this maps to the loop:</strong> Discover and Define expand and narrow the problem during <em>Frame</em>; Develop and Deliver expand and test solution options during <em>Test</em>. The agreed decision owner makes the <em>Decide</em> choices using that evidence. The diamonds provide another view of the same learning work.</p>
-          <p>The first diamond covers the problem space: discover widens understanding, define narrows it to a chosen problem. The second covers the solution space: develop widens the options, deliver narrows them through testing. The blue points mark decisions in this guide’s adaptation.</p>
-          <p>The Defence Product Playbook uses the same lens. It places problem definition in the first diamond and testing in the second, where testing has the greatest effect.</p>
-          <h3>Use AI differently when widening and narrowing</h3>
-          <ul>
+          <p>Name the brief’s owner, next experiment and decision owner. Share it with relevant stakeholders before seeking the next investment, then update it as evidence changes. Develop a draft PRD from this brief as the intended behaviour becomes clearer. Label assumptions and provisional criteria explicitly.</p>
+<span class="anchor-alias" id="fig-diamond-title-caption" aria-hidden="true"></span><span class="anchor-alias" id="fig-diamond-title-desc" aria-hidden="true"></span><figure class="concept-figure ideation-figure" id="fig-diamond">
+  <figcaption>Figure 3. Use the Double Diamond within the learning journey</figcaption>
+  <details class="figure-reading"><summary>Read as text: Use the Double Diamond within the learning journey</summary><ol><li>Discover and Define explore and select the problem during Frame.</li><li>Develop starts with alternatives in Frame and continues into Test.</li><li>Deliver tests and improves solutions at small scale; it does not mean production deployment here.</li><li>The problem checkpoint asks whether to investigate. The later Decide step asks whether evidence supports bounded implementation. Either diamond can reopen.</li></ol></details>
+<details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">(expand for the detailed view)</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Use the Double Diamond within the learning journey; scroll horizontally if needed">
+      <svg viewBox="0 0 680 410" role="img" aria-labelledby="fig-diamond-title" aria-describedby="fig-diamond-desc">
+        <title id="fig-diamond-title">Use the Double Diamond within the learning journey</title><desc id="fig-diamond-desc">Discover and Define widen and narrow the problem in Frame. Develop begins while exploring alternatives in Frame and continues into Test; Deliver means small-scale testing and improvement here. A problem checkpoint is distinct from the later commitment decision. Evidence can reopen either diamond.</desc>
+        <text class="d-label" x="180" y="22" text-anchor="middle">Frame: understand the problem</text>
+<text class="d-label" x="500" y="22" text-anchor="middle">Frame options → Test solutions</text>
+<polygon class="d-node" points="20,145 180,55 340,145 180,235"/><polygon class="d-node" points="340,145 500,55 660,145 500,235"/><path class="d-line" d="M180 55V235M500 55V235"/><text class="d-title" x="110" y="141" text-anchor="middle">Discover</text>
+<text class="d-sub" x="110" y="164" text-anchor="middle">widen</text>
+<text class="d-title" x="250" y="141" text-anchor="middle">Define</text>
+<text class="d-sub" x="250" y="164" text-anchor="middle">narrow</text>
+<text class="d-title" x="430" y="141" text-anchor="middle">Develop</text>
+<text class="d-sub" x="430" y="164" text-anchor="middle">widen</text>
+<text class="d-title" x="570" y="141" text-anchor="middle">Deliver</text>
+<text class="d-sub" x="570" y="164" text-anchor="middle">small-scale tests</text>
+<path class="d-line" d="M340 145V266" marker-end="url(#arrow)"/><path class="d-line" d="M660 145V255H555V266" marker-end="url(#arrow)"/><polygon class="d-node d-decision" points="230,271 445,271 455,281 455,335 445,345 230,345 220,335 220,281"/><text class="d-title" x="337.5" y="297" text-anchor="middle">Problem checkpoint</text>
+<text class="d-sub" x="337.5" y="320" text-anchor="middle">Is this worth investigating?</text>
+<polygon class="d-node d-node-accent d-decision" points="485,271 660,271 670,281 670,335 660,345 485,345 475,335 475,281"/><text class="d-title" x="572.5" y="297" text-anchor="middle">Decide</text>
+<text class="d-sub" x="572.5" y="320" text-anchor="middle">Commit or learn more</text>
+<path class="d-line d-dash" d="M555 345V380H180V240" marker-end="url(#arrow)"/><text class="d-label" x="340" y="375" text-anchor="middle">Revisit either space when evidence changes</text>
+</svg>
+    </div><p class="diagram-key">Adapted from the Design Council’s Double Diamond (CC BY 4.0). Labels and checkpoints map it to this guide; they do not add formal organisational gates.</p>
+</details>
+</figure>
+<h3>Use AI differently when widening and narrowing</h3>
+<ul>
             <li><strong>When widening,</strong> use AI to research broadly, summarise evidence, generate different concepts, surface hidden assumptions and explore alternative journeys or technical approaches.</li>
             <li><strong>When narrowing,</strong> compare options against user value, strength of evidence, feasibility, cost, risk and strategic fit. Do not choose an option because it is the most polished or the easiest to generate.</li>
           </ul>
           <p>Keep source links beside research summaries and check them before using a claim. Treat generated personas, synthetic interviews and an agent’s critique as prompts for research, not observations of real users.</p>
-          <h3>Challenge the proposal before refining it</h3>
-          <p>AI can turn a stakeholder request into a polished specification quickly. That speed creates a risk: refining an idea nobody has challenged. Before commitment, ask a reviewer, or an agent instructed to act as a critic, to work through these questions:</p>
-          <ol class="practice-steps">
+<h3>Challenge the proposal before refining it</h3>
+<p>AI can turn a stakeholder request into a polished specification quickly. That speed creates a risk: refining an idea nobody has challenged. Before commitment, ask a reviewer, or an agent instructed to act as a critic, to work through these questions:</p>
+<ol class="practice-steps">
             <li>What evidence shows that the problem is important and severe enough?</li>
             <li>What happens if the organisation does nothing?</li>
             <li>Which users experience the problem, and which do not?</li>
@@ -216,206 +274,265 @@
             <li>Which requirements conflict, and what fails at much greater scale?</li>
           </ol>
           <p>This challenge complements user research and domain expertise; it does not replace them. Regulated, safety-critical, legally consequential and highly specialised questions still need qualified human reviewers.</p>
-          <p class="next-step"><strong>Next step:</strong> before the next refinement session, put the seven questions to someone who was not involved in shaping the idea. Record the answers the team cannot yet support with evidence.</p>
-          <p class="source-ref">Sources: <a href="#source-2" aria-label="Source 2: Design Council, The Double Diamond">[2]</a>; <a href="#source-1" aria-label="Source 1: MINDEF and DSTA, The Defence Product Playbook">[1]</a> “Test early, iterate fast”.</p>
-        </section>
-
-        <section id="prototype">
-          <h2>Prototype the riskiest uncertainty</h2>
-          <p>Choose a prototype by the uncertainty it needs to resolve. A sketch may be enough to test a journey; a working integration may be needed to test feasibility. AI can help produce either, but speed and visual polish do not establish useful evidence.</p>
-          <h3>Check experiment safety before prototyping</h3>
-          <p>Before creating or running a prototype, the experiment owner records the following checks with the relevant data, security and research specialists. Resolve unclear permissions or use a safer experiment design before proceeding.</p>
-          <ul>
+<details class="worked-example" id="example-2"><summary>Fictional service-desk example 2 of 6: define value and explore alternatives</summary><div><p><strong>Concept brief v0.1:</strong> compare a curated article index, clearer guidance and a draft-response assistant. The assistant is a hypothesis, not the predetermined answer. It only retrieves permitted articles and drafts advice; staff review it, and it cannot grant access or submit requests.</p>
+<p><strong>Baseline → target:</strong> 12-minute median → at most 9 minutes on comparable tasks, including checking and correction. Also seek at least 7 of 8 staff completing correctly without help, with no restricted content exposed in the tested cases. These exploratory thresholds guide the next investment, not a production release.</p>
+<p>Product owns the outcome and cost case; Design owns the task and review journey; Engineering investigates retrieval and permissions. The theory of change is that easier source retrieval reduces search and checking effort without weakening correctness.</p>
+<p><a href="#example-3">Follow the example: 3 of 6</a>.</p>
+</div></details>
+<p class="learning-output"><strong>Output:</strong> Concept brief, alternatives, falsifiable thesis, baseline, target and guardrails. <strong>Next:</strong> Choose the highest unresolved risk and write the experiment before building.</p>
+</section>
+<section id="experiment-design"><h2>3. Design the experiment</h2>
+<p>Create a draft PRD from the concept brief before prototyping. Record hypothesised behaviour, interaction states, constraints and provisional acceptance criteria, then link the experiment to that version. The draft exposes assumptions for testing; it does not freeze the scope.</p>
+<p>Ask what evidence could change the team’s mind. Product, Design and Engineering select the greatest unresolved risk together. Use a sketch when it can answer the question; use working integration only when that is needed for credible evidence.</p>
+<figure class="concept-figure ideation-figure" id="fig-selector">
+  <figcaption>Figure 4. Select a test by the uncertainty</figcaption>
+  <details class="figure-reading"><summary>Read as text: Select a test by the uncertainty</summary><ul><li>Value: compare concepts or workflows; observe choice and task benefit.</li><li>Usability: test a realistic task with a clickable prototype; record completion, errors and recovery.</li><li>Feasibility: use a sandbox spike; record latency, failure modes and permission checks.</li><li>Viability: rehearse cost and operations; record review effort, affordability and service ownership.</li></ul><p>These are alternative starting points, not a mandatory sequence. One experiment can address several risks, but evidence for one does not settle the others.</p>
+</details>
+<details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">(expand for the detailed view)</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Select a test by the uncertainty; scroll horizontally if needed">
+      <svg viewBox="0 0 680 550" role="img" aria-labelledby="fig-selector-title" aria-describedby="fig-selector-desc">
+        <title id="fig-selector-title">Select a test by the uncertainty</title><desc id="fig-selector-desc">Four alternative paths: value uses concept or workflow comparison; usability uses task-based prototypes; feasibility uses sandbox technical spikes; viability uses cost and operating-model rehearsal. Each produces different evidence. Pick the greatest unresolved risk, not every method in sequence.</desc>
+        <rect class="d-node" x="175" y="10" width="330" height="65" rx="8"/><text class="d-title" x="340.0" y="36" text-anchor="middle">What uncertainty could invalidate the idea?</text>
+<text class="d-sub" x="340.0" y="59" text-anchor="middle">Choose the cheapest credible test</text>
+<path class="d-line" d="M175 43H15V154H30" marker-end="url(#arrow)"/><rect class="d-node" x="35" y="115" width="245" height="80" rx="8"/><text class="d-title" x="157.5" y="141" text-anchor="middle">Value</text>
+<text class="d-sub" x="157.5" y="164" text-anchor="middle">Will staff choose it?</text>
+<path class="d-line" d="M280 155H315" marker-end="url(#arrow)"/><rect class="d-node" x="320" y="115" width="335" height="80" rx="8"/><text class="d-title" x="487.5" y="141" text-anchor="middle">Compare concepts / current workflow</text>
+<text class="d-sub" x="487.5" y="164" text-anchor="middle">Observed choice and task benefit</text>
+<path class="d-line" d="M175 43H15V264H30" marker-end="url(#arrow)"/><rect class="d-node" x="35" y="225" width="245" height="80" rx="8"/><text class="d-title" x="157.5" y="251" text-anchor="middle">Usability</text>
+<text class="d-sub" x="157.5" y="274" text-anchor="middle">Can staff use it?</text>
+<path class="d-line" d="M280 265H315" marker-end="url(#arrow)"/><rect class="d-node" x="320" y="225" width="335" height="80" rx="8"/><text class="d-title" x="487.5" y="251" text-anchor="middle">Task-based clickable prototype</text>
+<text class="d-sub" x="487.5" y="274" text-anchor="middle">Completion, errors and recovery</text>
+<path class="d-line" d="M175 43H15V374H30" marker-end="url(#arrow)"/><rect class="d-node" x="35" y="335" width="245" height="80" rx="8"/><text class="d-title" x="157.5" y="361" text-anchor="middle">Feasibility</text>
+<text class="d-sub" x="157.5" y="384" text-anchor="middle">Can it work within constraints?</text>
+<path class="d-line" d="M280 375H315" marker-end="url(#arrow)"/><rect class="d-node" x="320" y="335" width="335" height="80" rx="8"/><text class="d-title" x="487.5" y="361" text-anchor="middle">Sandbox retrieval / permission spike</text>
+<text class="d-sub" x="487.5" y="384" text-anchor="middle">Latency, failures and access checks</text>
+<path class="d-line" d="M175 43H15V484H30" marker-end="url(#arrow)"/><rect class="d-node" x="35" y="445" width="245" height="80" rx="8"/><text class="d-title" x="157.5" y="471" text-anchor="middle">Viability</text>
+<text class="d-sub" x="157.5" y="494" text-anchor="middle">Can we sustain the service?</text>
+<path class="d-line" d="M280 485H315" marker-end="url(#arrow)"/><rect class="d-node" x="320" y="445" width="335" height="80" rx="8"/><text class="d-title" x="487.5" y="471" text-anchor="middle">Cost and operating-model rehearsal</text>
+<text class="d-sub" x="487.5" y="494" text-anchor="middle">Review effort, cost and ownership</text>
+</svg>
+    </div><p class="diagram-key">Choose a branch by risk. These methods are this guide’s recommendations, using SVPG’s four-risk lens.</p>
+</details>
+</figure>
+<h3>Write an experiment record</h3>
+<p>The following is a suggested working record. Complete it before building or testing so the result can inform a decision:</p>
+<ol class="practice-steps">
+            <li><strong>State the assumption.</strong> Name the user, task and behaviour expected to change. Record the current outcome as a baseline.</li>
+            <li><strong>Choose the evidence.</strong> Record the method, participants or data, prototype version and conditions. Link the experiment safety check, including permissions and stop conditions. Include relevant access needs and users likely to struggle.</li>
+            <li><strong>Set the decision rule.</strong> Agree a success measure, failure limits and a time or cost budget. Name the reviewer and next decision.</li>
+            <li><strong>Record observations and limits.</strong> Keep results linked to source notes. Separate what happened from the team’s interpretation, and record missing or contradictory evidence.</li>
+          </ol>
+          <h3>Match the method to the question</h3>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Common validation methods and the evidence each produces"><table><caption>Common validation methods and the evidence each produces</caption><thead><tr><th scope="col">Method</th><th scope="col">Question it answers</th><th scope="col">Evidence</th></tr>
+</thead><tbody>
+            <tr><th scope="row">Task-based usability testing</th><td>Can users understand and complete the journey at the fidelity being tested?</td><td>Usability, comprehension, task success</td></tr>
+<tr><th scope="row">Proof of concept</th><td>Can the essential capability or critical workflow work?</td><td>Feasibility, performance, limitations</td></tr>
+<tr><th scope="row">Proof of value</th><td>Does it create measurable value for a limited group in a realistic setting?</td><td>Adoption, outcomes, business impact</td></tr>
+<tr><th scope="row">Co-creation session</th><td>What can users, product specialists and engineers discover and build together quickly?</td><td>Ideas, prototypes, rapid feedback; confirm findings afterwards</td></tr>
+<tr><th scope="row">A/B testing</th><td>Does a change to an existing product outperform a reliable baseline?</td><td>Behaviour, conversion, performance</td></tr>
+</tbody></table></div>
+          <p>Ask participants to show how they complete the task, then use follow-up questions to understand difficulties. Report observed success separately from stated preference. For an A/B test, agree random allocation, a primary measure, sufficient sample size and a stopping rule before running it; a small convenience sample is not a reliable effect estimate.</p>
+<h3>Check experiment safety before prototyping</h3>
+<p>Before creating or running a prototype, the experiment owner records the following checks with the relevant data, security and research specialists. Resolve unclear permissions or use a safer experiment design before proceeding.</p>
+<ul>
             <li><strong>Permitted data:</strong> identify what may be collected, entered into AI tools, stored and shared. Use synthetic or appropriately de-identified data where possible; record retention and deletion arrangements.</li>
             <li><strong>Approved tools:</strong> confirm that the tools, models and hosting are approved for the intended data and use, including how providers handle submitted information.</li>
             <li><strong>Participant information:</strong> explain the purpose, prototype limitations, AI involvement, what will be recorded and how findings will be used. Confirm consent or other applicable participation requirements and a way to withdraw or report concerns.</li>
             <li><strong>Access restrictions:</strong> define who can use the prototype, access its data or invoke connected systems. Isolate the experiment, limit permissions and agree stop conditions for unexpected effects.</li>
             <li><strong>Prototype disposition:</strong> name the owner and expiry date, and decide how code, data and credentials will be deleted, archived or reviewed for reuse. Any promotion to production follows the applicable implementation and release checks.</li>
           </ul>
-          <h3>Choose the prototype and its limits</h3>
-          <p>SVPG distinguishes four product risks: value, usability, feasibility and business viability. Use these as prompts to check what remains untested. A usable interface does not show that people need it, or that the organisation can afford and operate it.</p>
-          <div class="table-scroll"><table><caption>Choose the prototype by the question it needs to answer</caption><thead><tr><th scope="col">Uncertainty</th><th scope="col">Question</th><th scope="col">Suitable prototypes</th></tr></thead><tbody>
-            <tr><th scope="row">Opportunity and value</th><td>Is this worth solving?</td><td>Concept prototype; business value prototype</td></tr>
-            <tr><th scope="row">Experience and adoption</th><td>Can people understand, access and use it?</td><td>User experience, interface and content, or device and access prototypes</td></tr>
-            <tr><th scope="row">Feasibility and delivery</th><td>Can we build, connect and operate it?</td><td>Technical or AI spike; functional prototype; operational or service prototype</td></tr>
-            <tr><th scope="row">Value and operational feasibility</th><td>Does it create value, and which operating constraints remain unresolved under the tested conditions?</td><td>Proof-of-value pilot; production-shaped prototype</td></tr>
-          </tbody></table></div>
-          <p>Prototype the riskiest assumption first. Give every prototype success criteria, an owner, and an expiry date or a decision on whether to promote it.</p>
-          <p>When asking AI to generate a prototype, supply the relevant design-system components, interaction states, content and accessibility expectations. Review the result for the intended task and technical constraints before testing it. Measure the time spent generating, reviewing and correcting it alongside the learning produced.</p>
-          <p>A prototype is not production code. Before any part of it reaches production, complete the architecture, security, testing, maintainability and operational reviews that apply, and version the validated artefacts against the user stories and criteria they support.</p>
-          <h3>Test complete workflows</h3>
-          <p>For complex administrative workflows, test a realistic task across screens, roles and systems. Include approvals, waiting, missing information, interruption and recovery. Observe whether users can identify their progress, understand the next action and resume safely.</p>
-          <p>Choose participants to cover relevant user groups, experience levels and access needs. Record gaps and run further targeted tests when those gaps could change the decision. A count of customer conversations alone does not establish adequate evidence.</p>
-          <h3 id="agent-experience">Test the experience when an agent acts for a user</h3>
-          <p>When the product will be operated by AI agents, test that interaction during discovery. Sumit Sheth calls this agentic user experience (AUX): designing how agents use a product alongside its human experience. Exposing an API alone does not establish a useful journey.</p>
-          <p>The following are suggested discovery checks for such products. For software that only uses AI during development, continue with the usual user and service journeys.</p>
-          <div class="table-scroll" role="region" aria-label="Agent journey discovery checks" tabindex="0"><table class="reference-table" role="table"><caption>Suggested checks for a journey carried out by an agent</caption><thead><tr><th scope="col">Part of the journey</th><th scope="col">What to test</th></tr></thead><tbody>
-            <tr><th scope="row">Intent and context</th><td>Can the agent identify the intended task, obtain permitted context and ask for missing information without inventing it?</td></tr>
-            <tr><th scope="row">Permission and control</th><td>Can the user see the proposed action, set its scope, give any required approval and stop further work?</td></tr>
-            <tr><th scope="row">Action and result</th><td>Can the agent choose the appropriate operation and distinguish a completed task from a request that was merely accepted?</td></tr>
-            <tr><th scope="row">Failure and recovery</th><td>What happens after a timeout, partial completion, ambiguous instruction or denied access? Check that a retry does not duplicate a consequential action.</td></tr>
-            <tr><th scope="row">Explanation and handback</th><td>Can the user inspect what changed, correct the result, recover where possible and take over with enough context?</td></tr>
-          </tbody></table></div>
-          <aside class="example" aria-label="Fictional agent journey experiment">
-            <p class="example-label">Example · fictional agent journey</p>
-            <p>For an assistant that submits access requests, test a sandbox journey with missing details, approval refused and a timeout after submission. Observe whether it asks for clarification, respects the refusal and checks request status before retrying. Record task correctness, duplicate requests and the effort needed to take over.</p>
-          </aside>
-          <p>Record the model, tool interface, permissions and test conditions with the prototype version. Repeat variable behaviours and inspect the resulting system state. <a href="product-implementation.html#gates-and-assurance">Use the AI evaluation guidance</a> to plan deeper checks during implementation.</p>
-          <p class="source-ref">Inspiration: <a href="#source-5" aria-label="Source 5: Sumit Sheth, From Headless to Thoughtful">[5]</a> on AUX. The checks and example above are this guide’s recommendations.</p>
-          <p class="next-step"><strong>Next step:</strong> name the uncertainty you most need to resolve. Use the prototype table to choose the simplest experiment that could change the team’s mind.</p>
-          <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: SVPG, The Four Big Risks">[3]</a>.</p>
-        </section>
-
-        <section id="validate-and-decide">
-          <h2>Validate, then decide</h2>
-          <p>Validation is useful only when the method matches the question. Before testing, write down the assumption, choose representative participants or data, set a success threshold and name the decision the result will inform. Feedback then becomes evidence rather than opinion.</p>
-          <h3>Write an experiment record</h3>
-          <p>The following is a suggested working record. Complete it before testing so the result can inform a decision:</p>
-          <ol class="practice-steps">
-            <li><strong>State the assumption.</strong> Name the user, task and behaviour expected to change. Record the current outcome as a baseline.</li>
-            <li><strong>Choose the evidence.</strong> Record the method, participants or data, prototype version and conditions. Link the experiment safety check, including permissions and stop conditions. Include relevant access needs and users likely to struggle.</li>
-            <li><strong>Set the decision rule.</strong> Agree a success measure, failure limits and a time or cost budget. Name the reviewer and next decision.</li>
-            <li><strong>Record observations and limits.</strong> Keep results linked to source notes. Separate what happened from the team’s interpretation, and record missing or contradictory evidence.</li>
-          </ol>
-          <aside class="example" aria-label="Fictional experiment record">
-            <p class="example-label">Example · fictional experiment</p>
-            <p>A service desk squad tests whether a draft-response assistant helps staff handle routine access requests. Eight staff complete comparable tasks using the current workflow and a prototype, with the order varied. The team records completion time, correctness, corrections and requests for help.</p>
-            <p>For this exploratory test, the team agrees to continue only if at least six participants complete the task correctly without help, the median time improves, and no response exposes restricted information. A mixed result triggers another targeted test.</p>
-          </aside>
-          <h3>Match the method to the question</h3>
-          <div class="table-scroll"><table><caption>Common validation methods and the evidence each produces</caption><thead><tr><th scope="col">Method</th><th scope="col">Question it answers</th><th scope="col">Evidence</th></tr></thead><tbody>
-            <tr><th scope="row">Task-based usability testing</th><td>Can users understand and complete the journey at the fidelity being tested?</td><td>Usability, comprehension, task success</td></tr>
-            <tr><th scope="row">Proof of concept</th><td>Can the essential capability or critical workflow work?</td><td>Feasibility, performance, limitations</td></tr>
-            <tr><th scope="row">Proof of value</th><td>Does it create measurable value for a limited group in a realistic setting?</td><td>Adoption, outcomes, business impact</td></tr>
-            <tr><th scope="row">Co-creation session</th><td>What can users, product specialists and engineers discover and build together quickly?</td><td>Ideas, prototypes, rapid feedback; confirm findings afterwards</td></tr>
-            <tr><th scope="row">A/B testing</th><td>Does a change to an existing product outperform a reliable baseline?</td><td>Behaviour, conversion, performance</td></tr>
-          </tbody></table></div>
-          <p>Ask participants to show how they complete the task, then use follow-up questions to understand difficulties. Report observed success separately from stated preference. For an A/B test, agree random allocation, a primary measure, sufficient sample size and a stopping rule before running it; a small convenience sample is not a reliable effect estimate.</p>
-          <h3>Test with the people who will use it</h3>
-          <p>The Defence Product Playbook groups fast learning into four habits, which it calls TEST:</p>
-          <ul>
+          <details class="worked-example" id="example-3"><summary>Fictional service-desk example 3 of 6: design the experiment</summary><div><p><strong>Draft PRD v0.1:</strong> staff request a draft, inspect permitted source citations, correct the response and send it themselves. The draft records these hypothesised states and the initial permission constraints before testing.</p>
+<p><strong>Experiment X-1:</strong> eight service-desk staff attempt comparable routine guidance tasks with the current workflow and prototype v0.1; vary task order to reduce learning effects. Record correctness without help, elapsed time including review and correction, retrieval failures and requests for assistance. Record current-workflow results again under these conditions.</p>
+<p><strong>Pre-agreed rule:</strong> consider a bounded pilot only at median time ≤ 9 minutes, at least 7/8 correct without help and no restricted content in tested cases. A known access breach stops the session for investigation. A small convenience sample is exploratory, not a statistically reliable effect estimate.</p>
+<p>Use approved sandbox tools and synthetic tickets with permission-separated source fixtures. Include denied and missing sources, misleading instructions inside retrieved content and keyboard-only use. Set a two-week learning budget, inform participants, record applicable consent and retention arrangements, and name the prototype owner and expiry date.</p>
+<p><a href="#example-4">Follow the example: 4 of 6</a>.</p>
+</div></details>
+<p class="learning-output"><strong>Output:</strong> Experiment record: question, method, participants or data, version, decision rule, budget and safety checks. <strong>Next:</strong> Build only enough to run this test in step 4.</p>
+</section>
+<section id="prototype"><h2>4. Prototype and learn</h2>
+<p>Run the agreed experiment, observe the complete task and record what happened before interpreting it. Preserve the prototype, dataset and plan versions so results remain understandable. Check AI-generated prototypes against the design system, accessibility expectations and technical constraints before involving users.</p>
+<p>Test realistic workflows across screens, roles and systems, including waiting, missing information, interruption and recovery. Include relevant experience levels and access needs. Record whose needs the sample does not cover; participant counts alone do not establish adequate evidence.</p>
+<p>A prototype is not production software. Keep its owner, expiry and disposition visible; any reuse follows the <a href="product-implementation.html#gates-and-assurance">implementation assurance checks</a>. Keep human review and correction effort in the measurement.</p>
+<h3>Learn and revise the draft PRD in the same cycle</h3>
+<p>Link observations to source notes, separate observation from interpretation and retain contradictory evidence. Use findings to change the draft PRD, interaction states and assumptions together. Preserve the original decision rule; agree any revised criteria before the next test.</p>
+<p>Generated personas, synthetic interviews and model critiques can suggest research questions. They are not observations of real users. Keep participant information in controlled records and link only the evidence needed for the decision.</p>
+<h3>Test with the people who will use it</h3>
+<p>The Defence Product Playbook groups fast learning into four habits, which it calls TEST:</p>
+<ul>
             <li><strong>Trial with real operators:</strong> test with the people who will use the product, not project team members standing in for them.</li>
             <li><strong>Expose the riskiest assumption:</strong> build the least you can to test the assumption most likely to sink the product, then discard it.</li>
             <li><strong>Shorten the loop:</strong> measure the time from user feedback to a changed prototype in days. If the loop is slow, fix that first.</li>
             <li><strong>Turn tests into decisions:</strong> end each test by keeping, changing or dropping the idea.</li>
           </ul>
-          <p>The playbook also gives reference points for pace: a proof of concept in front of real users within three to six months, and a proof of value with real users within a year. It presents these as prompts, not targets. If a team cannot reach them, ask what blocks it: access to users, procurement, funding or the team’s structure.</p>
-          <p>Fast iteration does not loosen assurance. Track resilience and security as guardrail measures alongside the value measure, and escalate any trade-off that carries real risk to the people authorised to accept it.</p>
-          <h3>End every loop with an explicit decision</h3>
-          <p>Distinguish three decisions. Each needs evidence proportionate to its scope and consequences; success at one does not establish readiness for the next.</p>
-          <div class="table-scroll"><table><caption>Evidence for investigation, implementation and production decisions</caption><thead><tr><th scope="col">Decision</th><th scope="col">Evidence to review</th></tr></thead><tbody>
+          <details class="worked-example" id="example-4"><summary>Fictional service-desk example 4 of 6: prototype, learn and improve</summary><div><p><strong>X-1 result / draft PRD v0.2:</strong> current-workflow median is again 12 minutes. Prototype v0.1 reaches 10 minutes, but only 6/8 staff complete correctly without help. No restricted content is observed. Two staff cannot recover when a source is missing; the pre-agreed rule is not met.</p>
+<p><strong>Rework: improve.</strong> Keep the thesis provisional, improve source visibility and the missing-source handback state, then plan X-2 within the remaining budget. Draft PRD v0.3 adds R-1: cite permitted sources or explain why no draft is available. Earlier findings and criteria stay linked.</p>
+<p><strong>X-2 result / prototype v0.2:</strong> the eight staff complete new matched tasks; 8/8 are correct without help and median time is 8.5 minutes, including review and correction. Permission fixtures reveal no exposure. Repeat participation and limited task coverage constrain the conclusion; a wider pilot is still needed.</p>
+<p><a href="#example-5">Follow the example: 5 of 6</a>.</p>
+</div></details>
+<p class="learning-output"><strong>Output:</strong> Versioned prototype, observations, result and limitations; revised draft PRD and next-risk list. <strong>Next:</strong> Compare evidence with the original rule in step 5.</p>
+</section>
+<section id="validate-and-decide"><h2>5. Evaluate and decide</h2>
+<p>Review observations, limitations and contradictory findings against the rule agreed before testing. Consider value, feasibility, cost, strategic fit, security and other guardrails together. The authorised decision owner records the next investment; a review provides advice and evidence, while approval follows local authority.</p>
+<figure class="concept-figure ideation-figure" id="fig-decision">
+  <figcaption>Figure 5. Turn evidence into a decision</figcaption>
+  <details class="figure-reading"><summary>Read as text: Turn evidence into a decision</summary><ol><li>Stop if an unacceptable risk or lack of a justified case remains after considering safer alternatives.</li><li>Continue testing at step 3 when evidence is inconclusive and another test is justified within budget.</li><li>Commit to step 6 when evidence supports a bounded implementation.</li><li>Otherwise rework: improve execution at step 4, redesign the solution at step 2 or pivot the user, problem or value at step 1. Recheck guardrails and budget every cycle.</li></ol></details>
+<details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">(expand for the detailed view)</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Turn evidence into a decision; scroll horizontally if needed">
+      <svg viewBox="0 0 680 585" role="img" aria-labelledby="fig-decision-title" aria-describedby="fig-decision-desc">
+        <title id="fig-decision-title">Turn evidence into a decision</title><desc id="fig-decision-desc">If unacceptable risk or no justified case remains, stop. If the case remains but evidence is inconclusive, continue a bounded test at step 3. If evidence supports bounded implementation, commit to handoff. Otherwise rework: improve execution at step 4, redesign the solution at step 2, or pivot the problem or value at step 1. Recheck risk and budget on every cycle.</desc>
+        <polygon class="d-node d-decision" points="195,10 485,10 495,20 495,72 485,82 195,82 185,72 185,20"/><text class="d-title" x="340.0" y="36" text-anchor="middle">Acceptable risk and remaining case?</text>
+<text class="d-sub" x="340.0" y="59" text-anchor="middle">Review guardrails, value and budget</text>
+<path class="d-line" d="M495 46H535" marker-end="url(#arrow)"/><text class="d-label" x="515" y="32" text-anchor="middle">No</text>
+<rect class="d-node" x="540" y="10" width="130" height="72" rx="8"/><text class="d-title" x="605.0" y="36" text-anchor="middle">Stop</text>
+<text class="d-sub" x="605.0" y="59" text-anchor="middle">Retain learning</text>
+<path class="d-line" d="M340 82V120" marker-end="url(#arrow)"/><text class="d-label" x="365" y="104" text-anchor="middle">Yes</text>
+<polygon class="d-node d-decision" points="195,125 485,125 495,135 495,187 485,197 195,197 185,187 185,135"/><text class="d-title" x="340.0" y="151" text-anchor="middle">Enough credible evidence?</text>
+<text class="d-sub" x="340.0" y="174" text-anchor="middle">Against the pre-agreed decision rule</text>
+<path class="d-line" d="M185 161H145" marker-end="url(#arrow)"/><text class="d-label" x="165" y="145" text-anchor="middle">No</text>
+<rect class="d-node" x="10" y="125" width="130" height="90" rx="8"/><text class="d-title" x="75.0" y="151" text-anchor="middle">Continue testing</text>
+<text class="d-sub" x="75.0" y="174" text-anchor="middle">Step 3</text>
+<text class="d-sub" x="75.0" y="194" text-anchor="middle">Bound the next test</text>
+<path class="d-line" d="M340 197V235" marker-end="url(#arrow)"/><text class="d-label" x="365" y="219" text-anchor="middle">Yes</text>
+<polygon class="d-node d-node-accent d-decision" points="195,240 485,240 495,250 495,302 485,312 195,312 185,302 185,250"/><text class="d-title" x="340.0" y="266" text-anchor="middle">Supports bounded implementation?</text>
+<text class="d-sub" x="340.0" y="289" text-anchor="middle">Scope, value and constraints supported</text>
+<path class="d-line" d="M495 276H535" marker-end="url(#arrow)"/><text class="d-label" x="515" y="260" text-anchor="middle">Yes</text>
+<rect class="d-node" x="540" y="240" width="130" height="90" rx="8"/><text class="d-title" x="605.0" y="266" text-anchor="middle">Commit</text>
+<text class="d-sub" x="605.0" y="289" text-anchor="middle">Step 6</text>
+<text class="d-sub" x="605.0" y="309" text-anchor="middle">Prepare handoff</text>
+<path class="d-line" d="M340 312V350" marker-end="url(#arrow)"/><text class="d-label" x="365" y="334" text-anchor="middle">No</text>
+<rect class="d-node" x="185" y="355" width="310" height="58" rx="8"/><text class="d-title" x="340.0" y="381" text-anchor="middle">Rework: what changes?</text>
+<path class="d-line" d="M340 413V440H110V465" marker-end="url(#arrow)"/><path class="d-line" d="M340 440V465" marker-end="url(#arrow)"/><path class="d-line" d="M340 440H570V465" marker-end="url(#arrow)"/><rect class="d-node" x="10" y="470" width="200" height="90" rx="8"/><text class="d-title" x="110.0" y="496" text-anchor="middle">Improve → step 4</text>
+<text class="d-sub" x="110.0" y="519" text-anchor="middle">Thesis supported;</text>
+<text class="d-sub" x="110.0" y="539" text-anchor="middle">execution underperforms</text>
+<rect class="d-node" x="240" y="470" width="200" height="90" rx="8"/><text class="d-title" x="340.0" y="496" text-anchor="middle">Redesign → step 2</text>
+<text class="d-sub" x="340.0" y="519" text-anchor="middle">Problem supported;</text>
+<text class="d-sub" x="340.0" y="539" text-anchor="middle">solution is weak</text>
+<rect class="d-node" x="470" y="470" width="200" height="90" rx="8"/><text class="d-title" x="570.0" y="496" text-anchor="middle">Pivot → step 1</text>
+<text class="d-sub" x="570.0" y="519" text-anchor="middle">User, problem or</text>
+<text class="d-sub" x="570.0" y="539" text-anchor="middle">value thesis changes</text>
+</svg>
+    </div><p class="diagram-key">Continue testing means insufficient evidence; rework means evidence points to a change. Commit authorises a bounded implementation, subject to local authority; release is a later decision.</p>
+</details>
+</figure>
+<div class="table-scroll" role="region" aria-label="Decision routes and feedback" tabindex="0"><table><caption>Choose one recorded outcome for the next cycle</caption><thead><tr><th scope="col">Decision</th><th scope="col">Evidence and next move</th></tr>
+</thead><tbody>
+<tr><th scope="row">Commit</th><td>Credible evidence supports a bounded scope, with acceptable constraints and owned gaps. Prepare handoff in step 6.</td></tr>
+<tr><th scope="row">Continue testing</th><td>Evidence is inconclusive or coverage is missing, without a justified change to the thesis yet. Return to step 3 with a specific question and remaining budget.</td></tr>
+<tr><th scope="row">Rework: improve</th><td>Evidence supports the thesis but execution underperforms. Return to step 4, updating the experiment plan if needed.</td></tr>
+<tr><th scope="row">Rework: redesign</th><td>The problem remains credible but the solution is weak. Return to alternatives in step 2.</td></tr>
+<tr><th scope="row">Rework: pivot</th><td>The user, problem or value thesis changes. Return to problem framing in step 1.</td></tr>
+<tr><th scope="row">Stop</th><td>No justified case remains, risk is unacceptable, or the learning budget is exhausted without support for further investment. Archive the learning and close access safely.</td></tr>
+</tbody></table></div>
+<p>Check risk and budget on every loop. A harmful or prohibited experiment stops for investigation; any resumed test needs a permitted design. Neither a favourable average score nor a commitment decision waives applicable controls.</p>
+<h3>Keep investigation, implementation and release decisions distinct</h3>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Evidence for investigation, implementation and production decisions"><table><caption>Evidence for investigation, implementation and production decisions</caption><thead><tr><th scope="col">Decision</th><th scope="col">Evidence to review</th></tr>
+</thead><tbody>
             <tr><th scope="row">Worth investigating</th><td>A credible problem, obligation or foreseeable risk; the consequence of doing nothing; a material uncertainty; and a bounded, permitted research or experiment plan with an owner and budget.</td></tr>
-            <tr><th scope="row">Worth a bounded implementation</th><td>Evidence supporting the chosen problem and solution under recorded conditions; feasible scope, acceptance criteria, expected value, cost and constraints; and owners for remaining uncertainties and risks.</td></tr>
-            <tr><th scope="row">Safe for production</th><td>Evidence from the implemented product against applicable release criteria: security, privacy, accessibility, reliability, operational readiness, monitoring and recovery, with residual risks reviewed by the authorised decision makers. Prototype results alone do not establish this.</td></tr>
-          </tbody></table></div>
-          <p>Review the evidence against the decision rule. When it supports implementation of a bounded scope, record a commitment decision and prepare the handoff. Otherwise choose one of the four responses below. If evidence is inconclusive, record that explicitly and identify the next test within the agreed budget.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Four responses when the team is not ready to commit</caption><colgroup><col style="width: 18%"><col style="width: 37%"><col style="width: 45%"></colgroup><thead><tr><th scope="col">Decision</th><th scope="col">Use when</th><th scope="col">Typical next move</th></tr></thead><tbody>
-            <tr><th scope="row">Improve</th><td>The thesis is supported, but execution is underperforming.</td><td>Tune usability, reliability, performance, cost or operating details.</td></tr>
-            <tr><th scope="row">Redesign</th><td>The problem is valid, but the current solution is weak.</td><td>Explore a materially different solution.</td></tr>
-            <tr><th scope="row">Pivot</th><td>Evidence points to a different user, problem or value.</td><td>Reframe the thesis and restart discovery.</td></tr>
-            <tr><th scope="row">Stop</th><td>The thesis, cost, strategic fit or acceptable risk is not supported.</td><td>Stop investing; keep the learning and any reusable assets.</td></tr>
-          </tbody></table></div>
-          <p>A decision review can consider six dimensions: problem evidence, solution evidence, strategic fit, cost, risk and how the learning is trending. Agree limits on time, experiments or spending in advance. Stopping a weak thesis early is a successful learning outcome.</p>
+<tr><th scope="row">Worth a bounded implementation</th><td>Evidence supporting the chosen problem and solution under recorded conditions; feasible scope, acceptance criteria, expected value, cost and constraints; and owners for remaining uncertainties and risks.</td></tr>
+<tr><th scope="row">Safe for production</th><td>Evidence from the implemented product against applicable release criteria: security, privacy, accessibility, reliability, operational readiness, monitoring and recovery, with residual risks reviewed by the authorised decision makers. Prototype results alone do not establish this.</td></tr>
+</tbody></table></div>
           <h3>Keep reviews light and regular</h3>
-          <p>Use focused reviews during each meaningful learning cycle, with broader input when a change affects other teams or shared patterns. A suggested approach is:</p>
-          <ul>
+<p>Use focused reviews during each meaningful learning cycle, with broader input when a change affects other teams or shared patterns. A suggested approach is:</p>
+<ul>
             <li><strong>Focused design review:</strong> Product, Design and Engineering examine the prototype, user evidence, accessibility, design-system patterns and feasibility. Record changes and unresolved questions.</li>
             <li><strong>Cross-team review:</strong> invite people who own affected services, domain rules, shared components or controls. Ask for specific feedback on dependencies and inconsistencies. Size participation to the decision; collect input asynchronously where practical.</li>
           </ul>
           <p>The decision owner records which feedback changes the proposal and why. A review supplies evidence and advice; formal approval follows the applicable decision authority. At each evidence review, ask:</p>
-          <ol class="practice-steps">
+<ol class="practice-steps">
             <li>What uncertainty did we address?</li>
             <li>What evidence changed our belief?</li>
             <li>What is now the highest-risk assumption?</li>
             <li>What decision is justified now that was not justified before?</li>
           </ol>
           <h3 id="scope-check">Check how the concept has changed</h3>
-          <p>Before committing more investment, compare the current proposal with the concept brief. Repeat this check when evidence materially changes the direction. Record:</p>
-          <ul>
+<p>Before committing more investment, compare the current proposal with the concept brief. Repeat this check when evidence materially changes the direction. Record:</p>
+<ul>
             <li><strong>Intent and evidence:</strong> changes to the user, problem, outcome or solution, and the findings that explain them.</li>
             <li><strong>Scope and risk:</strong> additions, removals, dependencies and changes to permissions, controls or expected value.</li>
             <li><strong>Effort and cost:</strong> updated estimates from Engineering and other relevant contributors, including ranges, assumptions and uncertainty.</li>
             <li><strong>Decision:</strong> whether the next investment remains justified, who decides and what still needs testing.</li>
           </ul>
           <p>Keep justified changes visible in the brief and PRD. Preserve earlier test criteria and results; agree revised criteria before the next experiment.</p>
-          <p>Keep human approval where the consequences exceed the organisation’s risk tolerance. Examples include material regulatory interpretation, irreversible commitments to users, security exceptions, high-impact automated actions, costly architecture decisions and deployment into sensitive domains. Widen agent autonomy only when permissions, evaluation coverage, monitoring, known failure modes and rollback make the remaining risk acceptable.</p>
-          <p class="next-step"><strong>Next step:</strong> at the end of your next prototype test, record whether to commit to a bounded scope, improve, redesign, pivot or stop. Link the evidence and any remaining uncertainty to that decision.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: MINDEF and DSTA, The Defence Product Playbook">[1]</a> “Test early, iterate fast”.</p>
-        </section>
-
-        <section id="product-team">
-          <h2>Work as one product team with agents</h2>
-          <p>Product definition, design, engineering and assurance need a shared view of the evidence. Keep the people making these judgements involved throughout discovery, with agents supporting work in the same product context.</p>
-          <h3>Bring Product, Design and Engineering together</h3>
-          <p>Sumit Sheth’s “3-in-a-Box” model brings Product, Design and Engineering together around intent, interaction and implementation. Any discipline can initiate discovery; the three shape and test the experience together. Apply this as a collaboration pattern, mapped to local roles.</p>
-          <p>Use the <a href="#concept-brief">concept brief</a> to align on the outcome, intended interaction and feasibility. Name the people covering each discipline, then link the brief to the <a href="#validate-and-decide">experiment record</a> and next decision.</p>
-          <p class="source-ref">Source: <a href="#source-5" aria-label="Source 5: Sumit Sheth, From Headless to Thoughtful">[5]</a> on continuous co-creation and the three disciplines.</p>
-          <h3>Make collaboration part of each experiment</h3>
-          <p>A suggested working rhythm is to have Product, Design and Engineering choose the riskiest assumption, inspect the same prototype and review the same observations. Revise the behaviour, technical approach and PRD in the same learning cycle. Involve QA, research, operations, data, security and risk specialists where the uncertainty calls for their expertise.</p>
-          <p>Shared ownership of the outcome still needs named decision owners. Record disagreements and escalate unresolved scope, investment or risk choices to the authorised person. The triad does not replace specialist assurance or approval.</p>
-          <p>Use the table to agree responsibilities and decision owners across the team. One person may cover several disciplines.</p>
-          <div class="table-scroll"><table><caption>Human judgement and agent-supported work</caption><thead><tr><th scope="col">Participant</th><th scope="col">Human judgement and accountability</th><th scope="col">Agent-supported work</th></tr></thead><tbody>
-            <tr><th scope="row">Product</th><td>Problem, outcomes, priorities, trade-offs and thesis</td><td>Research summaries, options, draft specifications and decision evidence</td></tr>
-            <tr><th scope="row">Design</th><td>User behaviour, desirability, usability and interaction principles</td><td>Concept variants, prototypes, journey analysis and heuristic checks</td></tr>
-            <tr><th scope="row">Engineering and architecture</th><td>Feasibility, architecture, reversibility, security and operational quality</td><td>Code exploration, technical spikes, plans, tests and dependency analysis</td></tr>
-            <tr><th scope="row">AI and data</th><td>Data quality, model behaviour, evaluation design and runtime controls</td><td>Dataset analysis, evaluations, tracing and model comparison</td></tr>
-            <tr><th scope="row">Risk and compliance</th><td>Policy interpretation, thresholds, exceptions and accountable acceptance</td><td>Continuous checks, evidence collection, control mapping and risk screening</td></tr>
-            <tr><th scope="row">Agents</th><td>No organisational accountability</td><td>Research, challenge, specification drafting, prototyping, testing and evaluation</td></tr>
-          </tbody></table></div>
-          <p>For this to work, the shared environment needs:</p>
-          <ul>
-            <li>access to current, relevant product and technical context;</li>
-            <li>clear ownership, permissions and decision authority;</li>
-            <li>visible agent activity, sources, outputs and status;</li>
-            <li>a structured route for review, feedback and exceptions; and</li>
-            <li>explicit human approval for high-consequence decisions.</li>
-          </ul>
-          <p>Delegating work does not delegate accountability. The exchange also runs both ways: technical feasibility should shape ideas early, and user and business intent should shape architecture early. Doing both reduces late surprises about security, data location, performance, model limitations and operations.</p>
-          <p class="next-step"><strong>Next step:</strong> bring Product, Design and Engineering to the next experiment. Agree the outcome, interaction and feasibility question, then review the prototype and evidence together. <a href="transformation.html#team-composition">Read about human–agent team composition</a>.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: MINDEF and DSTA, The Defence Product Playbook">[1]</a> “Structure the team right”.</p>
-        </section>
-
-        <section id="product-intent">
-          <h2>Keep product intent connected</h2>
-          <p>Product intent is the reasoning behind a product: why it exists, what it does, and the limits it works within. In many teams that reasoning is scattered across separate tools for evidence, requirements, design, architecture, policies and success measures. Missing or contradictory context can lead agents to make unsupported assumptions. Keep the sources, decisions and unresolved questions accessible together.</p>
-          <figure class="concept-figure" id="fig-stack">
-  <figcaption id="fig-stack-title-caption">Figure 3. Policies constrain every level, and evaluation checks each intended result.</figcaption>
-  <details class="figure-reading"><summary>Read as text: Relationships</summary><ul><li>Main trace: business and user outcomes lead to intended product behaviour, which architecture enables.</li><li>Policies and constraints apply alongside outcomes, behaviour and architecture; they are not derived only from architecture.</li><li>Evaluation checks outcome measures, behaviour scenarios and architecture qualities at their respective levels.</li><li>Keep the reasons connecting each level as decisions change.</li></ul></details>
-  <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
-    <div class="figure-scroll" tabindex="0" role="region" aria-label="Trace intent across levels; scroll horizontally if needed"><svg viewBox="0 0 680 365" role="img" aria-labelledby="fig-stack-title" aria-describedby="fig-stack-title-desc"><title id="fig-stack-title">Trace intent across levels</title><desc id="fig-stack-title-desc">Main trace: business and user outcomes lead to intended product behaviour, which architecture enables. Policies and constraints apply alongside outcomes, behaviour and architecture; they are not derived only from architecture. Evaluation checks outcome measures, behaviour scenarios and architecture qualities at their respective levels. Keep the reasons connecting each level as decisions change.</desc><rect class="d-node" x="220" y="15" width="240" height="85" rx="7"/><text class="d-title" x="340" y="41" text-anchor="middle">Outcomes</text><text class="d-sub" x="340" y="64" text-anchor="middle">Business intent</text><text class="d-sub" x="340" y="85" text-anchor="middle">Customer experience</text><path class="d-line" d="M340 100V130" marker-end="url(#arrow)"/><rect class="d-node" x="220" y="135" width="240" height="85" rx="7"/><text class="d-title" x="340" y="161" text-anchor="middle">Behaviour</text><text class="d-sub" x="340" y="184" text-anchor="middle">What the product does</text><path class="d-line" d="M340 220V250" marker-end="url(#arrow)"/><rect class="d-node" x="220" y="255" width="240" height="85" rx="7"/><text class="d-title" x="340" y="281" text-anchor="middle">Architecture</text><text class="d-sub" x="340" y="304" text-anchor="middle">How behaviour is enabled</text><rect class="d-node" x="10" y="15" width="170" height="325" rx="7"/><text class="d-title" x="95" y="41" text-anchor="middle">Policies / constraints</text><text class="d-sub" x="95" y="64" text-anchor="middle">Security and privacy</text><text class="d-sub" x="95" y="85" text-anchor="middle">Domain rules</text><text class="d-sub" x="95" y="106" text-anchor="middle">Operational limits</text><rect class="d-node d-node-accent" x="500" y="15" width="170" height="325" rx="7"/><text class="d-title" x="585" y="41" text-anchor="middle">Evaluation</text><text class="d-sub" x="585" y="64" text-anchor="middle">Outcome measures</text><text class="d-sub" x="585" y="85" text-anchor="middle">Behaviour scenarios</text><text class="d-sub" x="585" y="106" text-anchor="middle">Architecture qualities</text><path class="d-line" d="M180 57H220M180 177H220M180 297H220M460 57H500M460 177H500M460 297H500"/></svg></div>
-    <p class="diagram-key">Arrows trace outcomes to behaviour and architecture. Side connections show constraints and evaluation at every level. Blue highlights evaluation.</p>
-  </details>
+<p>Keep human approval where the consequences exceed the organisation’s risk tolerance. Examples include material regulatory interpretation, irreversible commitments to users, security exceptions, high-impact automated actions, costly architecture decisions and deployment into sensitive domains. Widen agent autonomy only when permissions, evaluation coverage, monitoring, known failure modes and rollback make the remaining risk acceptable.</p>
+<details class="worked-example" id="example-5"><summary>Fictional service-desk example 5 of 6: evaluate and decide</summary><div><p><strong>Decision D-1:</strong> X-1 justified improvement, not commitment. X-2 now meets the exploratory rule: 12 → 8.5 minutes (target ≤ 9), 8/8 correct (target ≥ 7/8), and no restricted content observed in the tested cases. The designated decision owner commits to implementing a bounded pilot for routine guidance.</p>
+<p>The record links both experiments, alternatives considered, remaining cost and risk, and the rationale. It excludes access grants, request submission and autonomous sending. Product and Design own the wider pilot and research coverage; Engineering owns scale and integration questions. This is not a production release decision.</p>
+<p><a href="#example-6">Follow the example: 6 of 6</a>.</p>
+</div></details>
+<p class="learning-output"><strong>Output:</strong> Dated decision, evidence links, rationale, scope changes, owners and next actions. <strong>Next:</strong> Only commit advances to step 6; use the named return step for other outcomes.</p>
+</section>
+<section id="handover"><h2>6. Prepare the handoff</h2>
+<p>After a commitment, version the PRD and link its bounded scope to the experiments, decision record and relevant UI or API artefacts. Capture exclusions, constraints, testable acceptance criteria, open questions and owners. Link the experiment safety record and the agreed disposition of prototype code, data and credentials. Keep Product, Design and Engineering involved when implementation evidence challenges the intent.</p>
+<span class="anchor-alias" id="fig-stack-title-caption" aria-hidden="true"></span><span class="anchor-alias" id="fig-stack-title-desc" aria-hidden="true"></span><figure class="concept-figure ideation-figure" id="fig-stack">
+  <figcaption>Figure 6. Trace evidence into requirements and verification</figcaption>
+  <details class="figure-reading"><summary>Read as text: Trace evidence into requirements and verification</summary><ol><li>O-1: reduce time on routine guidance while keeping task correctness.</li><li>E-2: prototype v0.2 supplies exploratory evidence under recorded conditions.</li><li>R-1: the PRD requires permitted citations and handback when evidence is missing.</li><li>UI-3: the missing or denied source state shows a reason and routes to staff.</li><li>AC-1 and T-ACL-03: a denied source returns neither a draft nor restricted content. Repeat the test on the implemented product.</li></ol><p>Access, privacy, human review and no write actions constrain every link. Engineering owns scale questions; Product and Design own a wider pilot.</p>
+</details>
+<details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">(expand for the detailed view)</span></summary>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Trace evidence into requirements and verification; scroll horizontally if needed">
+      <svg viewBox="0 0 680 625" role="img" aria-labelledby="fig-stack-title" aria-describedby="fig-stack-desc">
+        <title id="fig-stack-title">Trace evidence into requirements and verification</title><desc id="fig-stack-desc">Fictional trace: outcome O-1 links to prototype evidence E-2, PRD requirement R-1, interface state UI-3, acceptance criterion AC-1 and denied-source check T-ACL-03. Constraints apply across the chain. Prototype test results are evidence to repeat on the implemented product, not proof of release readiness. Engineering owns scale questions; Product and Design own the wider pilot.</desc>
+        <rect class="d-node" x="135" y="10" width="410" height="70" rx="8"/><text class="d-title" x="340.0" y="36" text-anchor="middle">O-1: staff resolve routine guidance correctly</text>
+<text class="d-sub" x="340.0" y="59" text-anchor="middle">Outcome: median time ≤ 9 minutes in the next pilot</text>
+<path class="d-line" d="M340 80V110" marker-end="url(#arrow)"/><rect class="d-node" x="135" y="115" width="410" height="90" rx="8"/><text class="d-title" x="340.0" y="141" text-anchor="middle">E-2: fictional prototype v0.2 findings</text>
+<text class="d-sub" x="340.0" y="164" text-anchor="middle">8/8 correct; median 8.5 minutes; zero exposures observed</text>
+<text class="d-sub" x="340.0" y="184" text-anchor="middle">Exploratory sample; not production assurance</text>
+<path class="d-line" d="M340 205V235" marker-end="url(#arrow)"/><rect class="d-node d-node-accent" x="135" y="240" width="410" height="70" rx="8"/><text class="d-title" x="340.0" y="266" text-anchor="middle">R-1: cite permitted knowledge; otherwise hand back</text>
+<text class="d-sub" x="340.0" y="289" text-anchor="middle">Evidence-backed PRD v1.0 / bounded pilot scope</text>
+<path class="d-line" d="M340 310V340" marker-end="url(#arrow)"/><rect class="d-node" x="135" y="345" width="410" height="70" rx="8"/><text class="d-title" x="340.0" y="371" text-anchor="middle">UI-3: missing or denied source → no draft</text>
+<text class="d-sub" x="340.0" y="394" text-anchor="middle">Show the reason and route to a staff member</text>
+<path class="d-line" d="M340 415V445" marker-end="url(#arrow)"/><rect class="d-node" x="135" y="450" width="410" height="90" rx="8"/><text class="d-title" x="340.0" y="476" text-anchor="middle">AC-1 → T-ACL-03: denied-source fixture</text>
+<text class="d-sub" x="340.0" y="499" text-anchor="middle">Expected: no draft and no restricted content returned</text>
+<text class="d-sub" x="340.0" y="519" text-anchor="middle">Prototype check passes; repeat on implementation</text>
+<path class="d-line d-dash" d="M105 25H75V540H105M575 25H605V540H575"/><text class="d-label" x="340" y="574" text-anchor="middle">Constraints: access, privacy, human review and no write actions</text>
+<text class="d-label" x="340" y="600" text-anchor="middle">Owned gaps: Engineering / scale; Product + Design / wider pilot</text>
+</svg>
+    </div><p class="diagram-key">Arrows show traceability, not causation or a runtime pipeline. Side brackets mark constraints across the chain. All IDs and results are fictional.</p>
+</details>
 </figure>
+<details class="worked-example" id="example-6"><summary>Fictional service-desk example 6 of 6: prepare the handoff</summary><div><p><strong>Evidence-backed PRD v1.0:</strong> routine guidance only, linked to P-1, concept brief v0.1, X-1/X-2 and decision D-1. R-1 requires permitted citations or explicit handback. UI-3 shows missing or denied sources without a draft. AC-1 defines the expected no-content result for denied-source fixture T-ACL-03, which passes on prototype v0.2 and needs verification on the implemented system.</p>
+<p>The handoff includes interaction states, the proposed read-only retrieval contract, permission assumptions, prototype disposition, the wider-pilot plan and owned questions about scale, running cost and task coverage. The 8.5-minute result supports the next investment under the tested conditions; it does not establish long-term value or production safety.</p>
+<p><a href="#example-1">Return to the problem evidence</a>.</p>
+</div></details>
+<p>For products using agents at runtime, include tested action boundaries, approval points, failure and recovery cases, and evaluation results. Link each to intended behaviour and acceptance criteria.</p>
+<p>Use the <a href="ai-pdlc.html#handoff">shared handoff package</a> and <a href="product-implementation.html#implementable-definition">implementation readiness checks</a> for the full checklist. Implementation covers technical design, task slicing, verification and release; those procedures are not repeated here.</p>
+<p>If implementation uncovers a bounded defect, correct it in that loop. If evidence challenges the user, problem, value or intended behaviour, return to the appropriate ideation step and record the change. Feedback does not automatically authorise model retraining or wider permissions.</p>
+<p class="learning-output"><strong>Output:</strong> Versioned evidence-backed PRD and linked artefacts, with remaining risks and questions assigned. <strong>Next:</strong> Continue to implementation readiness; release requires evidence from the implemented product.</p>
+</section>
+<section id="measure-learning"><h2>Optional deep dives</h2>
+<p>The six steps above are the main path. Open these references when the product or learning question calls for them; they do not add mandatory stages.</p>
+<details class="deep-dive" id="agent-experience"><summary>If the product uses AI agents at runtime: agentic UX</summary><div><h3>Test the experience when an agent acts for a user</h3>
+<p>When the product will be operated by AI agents, test that interaction during discovery. Sumit Sheth calls this agentic user experience (AUX): designing how agents use a product alongside its human experience. Exposing an API alone does not establish a useful journey.</p>
+<p>The following are suggested discovery checks for such products. For software that only uses AI during development, continue with the usual user and service journeys.</p>
+<div class="table-scroll" role="region" aria-label="Agent journey discovery checks" tabindex="0"><table class="reference-table" role="table"><caption>Suggested checks for a journey carried out by an agent</caption><thead><tr><th scope="col">Part of the journey</th><th scope="col">What to test</th></tr>
+</thead><tbody>
+            <tr><th scope="row">Intent and context</th><td>Can the agent identify the intended task, obtain permitted context and ask for missing information without inventing it?</td></tr>
+<tr><th scope="row">Permission and control</th><td>Can the user see the proposed action, set its scope, give any required approval and stop further work?</td></tr>
+<tr><th scope="row">Action and result</th><td>Can the agent choose the appropriate operation and distinguish a completed task from a request that was merely accepted?</td></tr>
+<tr><th scope="row">Failure and recovery</th><td>What happens after a timeout, partial completion, ambiguous instruction or denied access? Check that a retry does not duplicate a consequential action.</td></tr>
+<tr><th scope="row">Explanation and handback</th><td>Can the user inspect what changed, correct the result, recover where possible and take over with enough context?</td></tr>
+</tbody></table></div>
+          <aside class="example" aria-label="Fictional agent journey experiment">
+            <p class="example-label">Example · fictional agent journey</p>
+<p>For an assistant that submits access requests, test a sandbox journey with missing details, approval refused and a timeout after submission. Observe whether it asks for clarification, respects the refusal and checks request status before retrying. Record task correctness, duplicate requests and the effort needed to take over.</p>
+</aside>
+          <p>Record the model, tool interface, permissions and test conditions with the prototype version. Repeat variable behaviours and inspect the resulting system state. <a href="product-implementation.html#gates-and-assurance">Use the AI evaluation guidance</a> to plan deeper checks during implementation.</p>
+<p class="source-ref">Inspiration: <a href="#source-5" aria-label="Source 5: Sumit Sheth, From Headless to Thoughtful">[5]</a> on AUX. The checks and example above are this guide’s recommendations.</p>
+</div></details>
+<details class="deep-dive"><summary>Advanced: product intent, constraints and traceability</summary><div><p>Product intent is the reasoning behind a product: why it exists, what it does, and the limits it works within. In many teams that reasoning is scattered across separate tools for evidence, requirements, design, architecture, policies and success measures. Missing or contradictory context can lead agents to make unsupported assumptions. Keep the sources, decisions and unresolved questions accessible together.</p>
 <p>Trace outcomes into required behaviour and enabling architecture. Policies constrain all three, and evaluation checks all three. Keep these reasons explicit:</p>
-          <ul>
+<ul>
             <li>a product behaviour exists because it supports a user and business outcome;</li>
             <li>an architecture choice exists because it enables required behaviour under known constraints;</li>
             <li>a policy control exists because it addresses a defined risk; and</li>
             <li>an evaluation shows whether the intended behaviour and constraints are met.</li>
           </ul>
           <p>Keep product intent versioned, owned, accessible and auditable. Where practical, make the most valuable parts machine-readable: API descriptions, schemas, policy rules, acceptance tests and evaluation datasets can be checked automatically, not only read.</p>
-          <h3>Make asynchronous decisions traceable</h3>
-          <p>Attach feedback to a specific version of the brief, prototype or PRD. State the question, response deadline and decision owner. Keep one linked decision record with the date, options considered, evidence, rationale, actions and superseded decisions.</p>
-          <p>Link relevant comments and discussion notes from that record. Check AI-generated summaries against the original notes before relying on them, and confirm material decisions with their owners. Use recordings only where permitted, with agreed access and retention.</p>
-          <h3>Treat the specification as a living document</h3>
-          <p>In AI-assisted development, the specification is both an instruction for generating work and a basis for checking it. GitHub’s Spec Kit describes a common pattern that moves from a specification to a technical plan, then to tasks and implementation. During ideation, the specification develops alongside the evidence:</p>
-          <ol class="practice-steps">
-            <li>Product intent is drafted as a PRD.</li>
-            <li>A prototype tests the riskiest part of it.</li>
-            <li>The evidence revises the PRD.</li>
-            <li>When evidence supports a bounded implementation, the team versions the PRD and linked artefacts for handover.</li>
-          </ol>
-          <p>A useful specification is explicit enough to expose ambiguity, testable through examples, acceptance tests or evaluations, versioned and linked to outcomes, clear about constraints, permissions, non-functional requirements, edge cases and exclusions, and open to revision when evidence changes the intent.</p>
-          <p>Balance the level of detail. Too little forces agents to guess critical intent; too much creates false certainty. Increase precision as uncertainty is retired. <a href="concept.html#spec-driven-development">Read about spec-driven development</a>.</p>
-          <p class="next-step"><strong>Next step:</strong> pick one planned behaviour in your PRD. Trace it up to the user outcome it serves and down to the test or evaluation that will show it works; fill any missing link.</p>
-          <p class="source-ref">Source: <a href="#source-4" aria-label="Source 4: GitHub Spec Kit, Specification-Driven Development">[4]</a>.</p>
-        </section>
-
-        <section id="measure-learning">
-          <h2>Measure learning and outcomes, not activity</h2>
-          <p>Faster generation creates value only when the team can turn output into evidence, and evidence into better decisions. Start collecting evidence at the prototype stage instead of waiting for production. The cycle is: build, observe, evaluate, learn, update the product intent, and build again.</p>
-          <h3>Draw on several kinds of evidence</h3>
-          <ul>
+<h3>Make asynchronous decisions traceable</h3>
+<p>Attach feedback to a specific version of the brief, prototype or PRD. State the question, response deadline and decision owner. Keep one linked decision record with the date, options considered, evidence, rationale, actions and superseded decisions.</p>
+<p>Link relevant comments and discussion notes from that record. Check AI-generated summaries against the original notes before relying on them, and confirm material decisions with their owners. Use recordings only where permitted, with agreed access and retention.</p>
+<p>A useful specification makes assumptions, constraints, permissions, non-functional requirements, edge cases and exclusions explicit. Increase precision as uncertainty falls, and revise intent when evidence changes. <a href="concept.html#spec-driven-development">Read about spec-driven development</a>.</p>
+</div></details>
+<details class="deep-dive"><summary>Advanced: measurement layers and the metric ladder</summary><div><h3>Draw on several kinds of evidence</h3>
+<ul>
             <li><strong>User evidence:</strong> interviews, usability studies, support cases and co-creation sessions.</li>
             <li><strong>Behavioural evidence:</strong> product analytics, controlled experiments, workflow completion and adoption.</li>
             <li><strong>Operational evidence:</strong> telemetry, reliability, latency, incidents, model traces and recovery.</li>
@@ -423,82 +540,64 @@
             <li><strong>Cost evidence:</strong> experiment cost, delivery effort, inference cost and the human attention consumed.</li>
           </ul>
           <p>Use AI summaries to find themes worth checking against the original feedback. A summary does not establish cause, and an evaluation score covers only the cases and criteria used. <a href="product-implementation.html#gates-and-assurance">Read how to evaluate AI behaviour and check model-based judgements</a>.</p>
-          <p>Link each result to its research notes, dataset or test run. Keep participant information in the appropriate controlled location and summarise only what the decision needs. When evidence conflicts, record the conflict rather than averaging it into a reassuring conclusion.</p>
-          <p>Product, Design and Engineering should review feedback from use together. If evidence challenges the user need or intended behaviour, reopen discovery; if it reveals a bounded implementation defect, route it to delivery. Change the product intent through a recorded decision; feedback does not automatically authorise model retraining or broader agent permissions.</p>
-          <h3>Define success before building</h3>
-          <p>Features shipped, prototypes generated, prompts submitted and lines of AI-generated code measure activity. They do not show user impact or business value. Define measures at each of these layers:</p>
-          <div class="table-scroll"><table><caption>Suggested measurement layers; set local measures and thresholds before testing</caption><thead><tr><th scope="col">Layer</th><th scope="col">What it answers</th></tr></thead><tbody>
+<p>Link each result to its research notes, dataset or test run. Keep participant information in the appropriate controlled location and summarise only what the decision needs. When evidence conflicts, record the conflict rather than averaging it into a reassuring conclusion.</p>
+<p>Product, Design and Engineering should review feedback from use together. If evidence challenges the user need or intended behaviour, reopen discovery; if it reveals a bounded implementation defect, route it to delivery. Change the product intent through a recorded decision; feedback does not automatically authorise model retraining or broader agent permissions.</p>
+<h3>Connect the measures chosen in Frame</h3>
+<p>Features shipped, prototypes generated, prompts submitted and lines of AI-generated code measure activity. They do not show user impact or business value. Define measures at each of these layers:</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Suggested measurement layers; set local measures and thresholds before testing"><table><caption>Suggested measurement layers; set local measures and thresholds before testing</caption><thead><tr><th scope="col">Layer</th><th scope="col">What it answers</th></tr>
+</thead><tbody>
             <tr><th scope="row">User outcome</th><td>Did the user achieve the outcome that makes the product worthwhile?</td></tr>
-            <tr><th scope="row">Business outcome</th><td>Did the product create the intended value for the organisation?</td></tr>
-            <tr><th scope="row">Product behaviour</th><td>Did users adopt the behaviour that should drive the outcome?</td></tr>
-            <tr><th scope="row">Leading indicators</th><td>Are early signals moving in the expected direction?</td></tr>
-            <tr><th scope="row">Learning speed and cost</th><td>How quickly and affordably did a hypothesis become credible evidence and a decision?</td></tr>
-            <tr><th scope="row">Guardrails</th><td>Did quality, safety, reliability, cost, privacy and fairness stay within tolerance?</td></tr>
-          </tbody></table></div>
+<tr><th scope="row">Business outcome</th><td>Did the product create the intended value for the organisation?</td></tr>
+<tr><th scope="row">Product behaviour</th><td>Did users adopt the behaviour that should drive the outcome?</td></tr>
+<tr><th scope="row">Leading indicators</th><td>Are early signals moving in the expected direction?</td></tr>
+<tr><th scope="row">Learning speed and cost</th><td>How quickly and affordably did a hypothesis become credible evidence and a decision?</td></tr>
+<tr><th scope="row">Guardrails</th><td>Did quality, safety, reliability, cost, privacy and fairness stay within tolerance?</td></tr>
+</tbody></table></div>
           <h3>Choose a value measure to steer by</h3>
-          <p>The Defence Product Playbook describes a ladder of four kinds of measure. Use it to connect effort and early signals to value and longer-term outcomes. The adaptation below distinguishes resource inputs from usage and operational measures; a measure’s role depends on the product and its theory of change.</p>
-          <div class="table-scroll"><table><caption>The metric ladder, adapted from the Defence Product Playbook</caption><thead><tr><th scope="col">Rung</th><th scope="col">What it shows</th></tr></thead><tbody>
+<p>The Defence Product Playbook describes a ladder of four kinds of measure. Use it to connect effort and early signals to value and longer-term outcomes. The adaptation below distinguishes resource inputs from usage and operational measures; a measure’s role depends on the product and its theory of change.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="The metric ladder, adapted from the Defence Product Playbook"><table><caption>The metric ladder, adapted from the Defence Product Playbook</caption><thead><tr><th scope="col">Rung</th><th scope="col">What it shows</th></tr>
+</thead><tbody>
             <tr><th scope="row">1. Input measure</th><td>Resources invested, such as team effort, funding or compute</td></tr>
-            <tr><th scope="row">2. Leading indicator</th><td>An early behaviour change that supports part of the theory of change</td></tr>
-            <tr><th scope="row">3. Value measure</th><td>The intended outcome of solving the problem; the measure the team steers by</td></tr>
-            <tr><th scope="row">4. Outcome measure</th><td>The effect the organisation ultimately seeks; often slower to change than measures used to guide weekly work</td></tr>
-          </tbody></table></div>
+<tr><th scope="row">2. Leading indicator</th><td>An early behaviour change that supports part of the theory of change</td></tr>
+<tr><th scope="row">3. Value measure</th><td>The intended outcome of solving the problem; the measure the team steers by</td></tr>
+<tr><th scope="row">4. Outcome measure</th><td>The effect the organisation ultimately seeks; often slower to change than measures used to guide weekly work</td></tr>
+</tbody></table></div>
           <p>Higher rungs aim to measure effects closer to the intended value, but confidence still depends on evidence quality and the causal link between measures. The playbook recommends one value measure per problem that can move at least twice a year. Explain how improving it contributes to the outcome above it, and test that relationship.</p>
-          <p>Uptime is an operational reliability measure. Depending on the product, it may be a guardrail, a service outcome or a direct contributor to mission value. Usage can be a leading indicator when evidence links it to the intended outcome. Neither is naturally a resource input, and neither alone demonstrates that the problem is being solved.</p>
-          <p>Challenge a candidate measure if it can improve without improving the intended outcome, or if its causal link is untested. Retain system measures where they reveal a relevant operating constraint or outcome. Self-reported satisfaction, perceived effort and trust can also be meaningful outcomes; triangulate them with behavioural and operational evidence, and record sampling and response biases. Check measures against SMART: specific, measurable, achievable, relevant and time-bound.</p>
-          <p>Weigh value against cost. The playbook’s value-cost ratio divides the outcome delivered by annual cost and tracks its year-on-year change. Treat this as an efficiency measure with explicit outcome units, cost scope and measurement period. It is not automatically financial return on investment (ROI); financial ROI needs justified monetary benefits and costs. Compare ratios only when outcome units and cost boundaries are comparable, or when a defensible common valuation explains the comparison.</p>
-          <p>When measured value plateaus, investigate whether the product is sustaining an essential outcome or meeting an obligation before shifting investment. Maintenance may preserve mission value, supportability and risk controls even when the headline measure no longer rises.</p>
-          <p>Measures worth considering include:</p>
-          <ul>
+<p>Uptime is an operational reliability measure. Depending on the product, it may be a guardrail, a service outcome or a direct contributor to mission value. Usage can be a leading indicator when evidence links it to the intended outcome. Neither is naturally a resource input, and neither alone demonstrates that the problem is being solved.</p>
+<p>Challenge a candidate measure if it can improve without improving the intended outcome, or if its causal link is untested. Retain system measures where they reveal a relevant operating constraint or outcome. Self-reported satisfaction, perceived effort and trust can also be meaningful outcomes; triangulate them with behavioural and operational evidence, and record sampling and response biases. Check measures against SMART: specific, measurable, achievable, relevant and time-bound.</p>
+<p>Weigh value against cost. The playbook’s value-cost ratio divides the outcome delivered by annual cost and tracks its year-on-year change. Treat this as an efficiency measure with explicit outcome units, cost scope and measurement period. It is not automatically financial return on investment (ROI); financial ROI needs justified monetary benefits and costs. Compare ratios only when outcome units and cost boundaries are comparable, or when a defensible common valuation explains the comparison.</p>
+<p>When measured value plateaus, investigate whether the product is sustaining an essential outcome or meeting an obligation before shifting investment. Maintenance may preserve mission value, supportability and risk controls even when the headline measure no longer rises.</p>
+<p>Measures worth considering include:</p>
+<ul>
             <li><strong>Time to validated learning:</strong> elapsed time from an explicit hypothesis to credible evidence and a decision.</li>
             <li><strong>Cost per experiment:</strong> the cost of producing credible learning, including compute and human review.</li>
             <li><strong>Human attention ratio:</strong> the share of team time spent on users, strategy, judgement, difficult exceptions and learning, rather than producing documents and coordinating.</li>
             <li><strong>Product guardrails:</strong> task success, correction and escalation rates, model errors, latency, reliability, cost, privacy and safety incidents, fairness where material, and user trust.</li>
           </ul>
-          <p class="next-step"><strong>Next step:</strong> for your next experiment, write the hypothesis, its start date and the success threshold. Record the date of the resulting decision to measure time to validated learning.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: MINDEF and DSTA, The Defence Product Playbook">[1]</a> “Define the problem, measure the value”.</p>
-        </section>
-
-        <section id="handover">
-          <h2>Prepare the handoff</h2>
-          <p>Record the experiment results, decision, bounded scope and remaining uncertainties in the product intent. Link each acceptance criterion to the evidence and relevant prototype state. Include the experiment safety record and the agreed disposition of prototype code and data.</p>
-          <p>For an agentic experience, include the tested action boundaries, approval points, failure and recovery cases, and evaluation results. Link these to the intended behaviour and acceptance criteria.</p>
-          <p>State whether the evidence supports further investigation or a bounded implementation. Record the production evidence still needed; an ideation commitment does not authorise release.</p>
-          <p>Review the shared <a href="ai-pdlc.html#handoff">handoff package and readiness checks</a> with the people planning implementation. Resolve contradictions or give remaining questions an owner before commitment. Keep Product, Design and Engineering involved as implementation and production evidence test the agreed intent.</p>
-          <div class="next-step"><p><a href="product-implementation.html#implementable-definition">Continue to implementation readiness</a>.</p></div>
-        </section>
-
-        <section id="sources">
-          <h2>Sources</h2>
-          <ol class="source-list">
+          </div></details>
+<p class="source-ref">Sources: <a href="#source-1">Defence Product Playbook</a>; <a href="#source-4">GitHub Spec Kit</a>. Measurement interpretations and agent-journey checks are recommendations in this guide, not new organisational policy.</p>
+</section>
+<section id="sources"><h2>Sources</h2>
+<ol class="source-list">
             <li id="source-1"><a href="https://defence-pp.vercel.app/#/home">MINDEF and DSTA, The Defence Product Playbook, version 1.0</a></li>
-            <li id="source-2"><a href="https://www.designcouncil.org.uk/our-resources/the-double-diamond/">Design Council, The Double Diamond</a></li>
+            <li id="source-2"><a href="https://www.designcouncil.org.uk/resources/the-double-diamond/">Design Council, The Double Diamond</a></li>
             <li id="source-3"><a href="https://www.svpg.com/four-big-risks/">SVPG, The Four Big Risks</a></li>
             <li id="source-4"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
             <li id="source-5"><a href="https://www.linkedin.com/pulse/from-headless-thoughtful-why-3-in-a-box-operating-model-sumit-sheth-imptc/">Sumit Sheth, From Headless to Thoughtful: Why 3-in-a-Box is the Operating Model for the Agentic Era and unlocks AUX</a></li>
           </ol>
-        </section>
 
-        <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
-      </article>
-    </main>
-    <aside class="page-contents">
-      <nav aria-label="On this page">
-        <p>On this page</p>
-        <a href="#two-loops">Loop purpose</a>
-        <a href="#ideation-loop">Ideation loop</a>
-        <a href="#product-thesis">Product thesis</a>
-        <a href="#explore-and-challenge">Explore and challenge</a>
-        <a href="#prototype">Prototype</a>
-        <a href="#agent-experience">Agentic experiences</a>
-        <a href="#validate-and-decide">Validate and decide</a>
-        <a href="#product-team">Product team</a>
-        <a href="#product-intent">Product intent</a>
-        <a href="#measure-learning">Measure learning</a>
-        <a href="#handover">Handover</a>
-        <a href="#sources">Sources</a>
-      </nav>
-    </aside>
-  </div>
-</body>
-</html>
+</section>
+<aside class="next-step" aria-label="Next step"><p><a href="product-implementation.html#implementable-definition">Continue to Product implementation: readiness checks</a>.</p>
+</aside>
+<footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+</article></main><aside class="page-contents" aria-label="Page contents"><nav aria-label="On this page, desktop"><p>On this page</p>
+<a href="#product-team">Start together</a>
+<a href="#ideation-loop">The learning journey</a>
+<a href="#product-thesis">1. Understand the problem</a>
+<a href="#explore-and-challenge">2. Define value / alternatives</a>
+<a href="#experiment-design">3. Design the experiment</a>
+<a href="#prototype">4. Prototype / learn</a>
+<a href="#validate-and-decide">5. Evaluate / decide</a>
+<a href="#handover">6. Prepare the handoff</a>
+<a href="#measure-learning">Optional deep dives</a>
+<a href="#sources">Sources</a></nav></aside></div></body></html>
