@@ -22,7 +22,7 @@ All published pages live in `site/dist/` and are organised into two main navigat
 | [`transformation.html`](./site/dist/transformation.html) | **Organisation transformation** | Concept + Operating Guide | Covers the 4 pillars (*People*, *Process*, *Culture*, *Technology*), T-shaped role evolution, multidisciplinary squads, human vs agent task boundaries, and the 3-month pilot scorecard. |
 | [`concept.html`](./site/dist/concept.html) | **Concepts** | Concept Reference | Defines 8 foundational concepts with animated diagrams: *Intent-driven development*, *Spec-driven development*, *Context engineering*, *Harness engineering*, *Loop engineering*, *Graph engineering* (multi-agent execution with automated decision gates), *Software factories*, and *AI models*. |
 | [`ai-pdlc.html`](./site/dist/ai-pdlc.html) | **AI-SDLC overview** | Lifecycle Overview | Introduces the two connected loops—**Product ideation** and **Product implementation**—joined across the middle by the *Handoff* (PRD + UI artefacts) and shared *Context input*, with inner rework loops and production feedback. |
-| [`product-ideation.html`](./site/dist/product-ideation.html) | **Product ideation** | Lifecycle Stage | Details the outer discovery loop: **Frame** (thesis, explore, challenge), **Test** (specify, prototype, measure, learn), and **Decide** (commit, rework, or stop), plus the 4C readiness check and metric ladder. |
+| [`product-ideation.html`](./site/dist/product-ideation.html) | **Product ideation** | Lifecycle Stage | Guides **Frame → Test → Decide → Handoff** through six practical steps, with Product/Design/Engineering collaboration, six accessible diagrams and a continuous fictional service-desk example. Agentic UX and advanced theory are optional references. |
 | [`product-implementation.html`](./site/dist/product-implementation.html) | **Product implementation** | Lifecycle Stage | Details the inner delivery loop: readiness package (PRD + UI artefacts + context), the `PRD → TRD → Tasks` artefact chain, the 6 implementation stages (*Plan*, *Slice*, *Implement*, *Verify*, *Release & observe*, *Learn*), separation of duties, and factory modes (*Co-pilot*, *Light factory*, *Dark factory*). |
 
 ### 1.2 Primary Navigation: EDS AI Workflow (`site/dist/`)
@@ -69,7 +69,7 @@ Always use the preferred term consistently across all pages:
 
 | Preferred Term | Usage Rule | Avoid |
 | :--- | :--- | :--- |
-| **AI-Product Development Lifecycle** (`AI-SDLC`) | Expand on first mention on top-level pages, then use `AI-SDLC`. | Unexplained switching between `AI-PDLC` and `AI-SDLC` |
+| **AI-Software Development Lifecycle** (`AI-SDLC`) | Expand on first mention on top-level pages, then use `AI-SDLC`. Keep the repository name and existing URL paths unchanged. | Unexplained switching between `AI-PDLC` and `AI-SDLC` |
 | **AI-assisted development** | Use when AI tools help teams design, write, test, or document software. | Confusing with an *AI product* |
 | **AI product** or **AI feature** | Use when the delivered software itself uses AI at runtime. | Calling every project an "AI project" |
 | **AI agent** | A system that plans or executes multi-step tasks using tools within defined bounds. | Using *agent* for a simple prompt or autocomplete |

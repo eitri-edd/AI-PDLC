@@ -43,8 +43,8 @@ Use British English in authored prose: “organisation”, “prioritise”, “
 
 | Term | House usage |
 | --- | --- |
-| AI-Product Development Lifecycle | Use this project title on the home page and in formal references. Confirm the final title before launch. |
-| AI-PDLC | Introduce after the full title on a page that uses the abbreviation. Prefer “the lifecycle” in nearby prose. |
+| AI-Software Development Lifecycle | Use the displayed site title on the home page and in formal references. |
+| AI-SDLC | Introduce after the full title on a page that uses the abbreviation. Prefer “the lifecycle” in nearby prose. Keep the repository name `AI-PDLC` and existing URL paths unchanged. |
 | AI-assisted development | Development work supported by AI tools. Do not assume the resulting product contains AI. |
 | AI product | A product whose behaviour includes an AI capability. Explain that capability where relevant. |
 | AI agent | Software that uses an AI model to choose or adapt actions and tool use towards a goal, within agreed permissions and limits. A workflow can combine agents with predefined code paths and automated checks. |
