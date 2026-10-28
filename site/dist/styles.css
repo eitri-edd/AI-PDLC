@@ -1383,6 +1383,7 @@ code {
 .competency-table th[scope="row"] { overflow-wrap: normal; white-space: nowrap; }
 .concept-article a { overflow-wrap: break-word; }
 section { margin-top: 3rem; scroll-margin-top: 5rem; }
+article :is(section, h3, h4)[id] { scroll-margin-top: 5rem; }
 
 /* Numbered Key Pointers */
 .key-pointers {
@@ -1733,6 +1734,7 @@ summary {
   .figure-scroll { padding: 1rem; }
   .lead { font-size: 1.125rem; line-height: 1.65; }
   section { margin-top: 2.25rem; }
+  article :is(section, h3, h4)[id] { scroll-margin-top: 9rem; }
   .key-pointers > li { grid-template-columns: 2rem minmax(0, 1fr); gap: 0.75rem; }
   .key-pointers > li::before { width: 1.875rem; height: 1.875rem; font-size: 0.75rem; }
 }
