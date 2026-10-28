@@ -1,6 +1,6 @@
 # Design system proposal
 
-For EDS’s AI-Software Development Lifecycle knowledge site  
+For EDS’s AI-Software Development Lifecycle knowledge site
 Status: Proposed visual system · Version: 0.3 · Updated: 17 October 2026
 
 ## Design direction
