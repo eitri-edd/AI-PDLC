@@ -1385,6 +1385,68 @@ code {
 section { margin-top: 3rem; scroll-margin-top: 5rem; }
 article :is(section, h3, h4)[id] { scroll-margin-top: 5rem; }
 
+/* EITRI's forge inspiration: a warm accent within the light handbook. */
+.eitri-forge {
+  margin-top: 2rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background: #fff7ed;
+  border: 1px solid #c27c47;
+  border-left: 5px solid #9a3412;
+  border-radius: 0.75rem;
+}
+.eitri-forge .eitri-forge-label {
+  margin: 0 0 0.75rem;
+  color: #9a3412;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+.eitri-forge-header {
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+/* Display only the white-background logo from the supplied two-variant sheet. */
+.eitri-logo {
+  position: relative;
+  width: 100%;
+  max-width: 15rem;
+  aspect-ratio: 384 / 216;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+.eitri-logo img {
+  position: absolute;
+  width: 266.666667%;
+  max-width: none;
+  height: auto;
+  left: -18.75%;
+  top: -83.333333%;
+}
+.eitri-forge-header h2 { margin-bottom: 0; }
+@media (max-width: 48rem) {
+  .eitri-forge-header { grid-template-columns: minmax(0, 1fr); }
+}
+.eitri-forge h2 {
+  margin-top: 0;
+  padding-bottom: 0;
+  border: 0;
+  color: #7c2d12;
+}
+.eitri-forge h2::after { display: none; }
+.eitri-forge p { color: #431407; }
+.eitri-forge .eitri-forge-tagline {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  border-top: 1px solid #c27c47;
+  color: #7c2d12;
+  font-size: 1.125rem;
+}
+
 /* Numbered Key Pointers */
 .key-pointers {
   list-style: none;
