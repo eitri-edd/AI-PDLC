@@ -1409,23 +1409,18 @@ article :is(section, h3, h4)[id] { scroll-margin-top: 5rem; }
   align-items: center;
   margin-bottom: 1.5rem;
 }
-/* Display only the white-background logo from the supplied two-variant sheet. */
+/* Standalone white-background logo. */
 .eitri-logo {
-  position: relative;
   width: 100%;
   max-width: 15rem;
-  aspect-ratio: 384 / 216;
   overflow: hidden;
   border-radius: 0.5rem;
   background: #fff;
 }
 .eitri-logo img {
-  position: absolute;
-  width: 266.666667%;
-  max-width: none;
+  display: block;
+  width: 100%;
   height: auto;
-  left: -18.75%;
-  top: -83.333333%;
 }
 .eitri-forge-header h2 { margin-bottom: 0; }
 @media (max-width: 48rem) {
