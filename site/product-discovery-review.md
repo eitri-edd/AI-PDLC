@@ -1,5 +1,60 @@
 # Product discovery merge review
 
+## Natural discovery flow, 2 November 2026
+
+Revised the discovery guide against `writing.md` after reviewing the sequence, worked example and implementation connection. Frame, Test and Decide now describe the learning rhythm; step 6 prepares a delivery slice after a justified commitment. Kept the six steps, existing anchor IDs, source destinations and earlier measurement guidance.
+
+- Introduced entry routes based on the unresolved question and existing evidence. A provisional outcome guides problem research, with causes left explicit as hypotheses until supported. Research and comparisons can lead directly to more learning, a change or a stop.
+- Made opportunity selection, comparison of responses and success measures separate actions within step 2. The fictional A-1 comparison records what simpler options help with, why the assistant earns another test and why that choice does not demonstrate superiority.
+- Removed the blanket instruction to draft a PRD before prototyping. An experiment starts with a question, conditions and a decision rule; the PRD develops when proposed behaviour needs that detail.
+- Separated current system context from candidate-specific feasibility tests. Moved the detailed technical checklist and Double Diamond mapping into optional references. Existing direct links open those references automatically.
+- Renamed step 4 around running tests and recording findings. Steps 3–5 form a repeating cycle; improvement returns through test planning before another run. The example separates X-1 findings from the improvement decision and explicitly returns through planning and testing for X-2. Technical and cost checks are planned before results are reviewed for commitment.
+- Renamed step 6 to “Agree the delivery slice”, explaining the small useful scope, shared ownership, evidence, requirements, measurement and remaining questions. Retained the handoff package and implementation-readiness links.
+- Shortened repeated collaboration guidance, split dense paragraphs and retained concrete owners, inputs, checks, outputs and next actions. Aligned the lifecycle overview, diagram labels, text equivalents, contents lists, figure numbers and repository inventories.
+
+These are handbook recommendations. All new comparison observations remain explicitly fictional; no organisational policy, performance claim or approval authority was added. The previously noted content owner and applicable lifecycle version remain unconfirmed and have not been invented. This revision does not claim complete metadata compliance or an independent reader-comprehension test.
+
+Validation passed: 832 local links and assets across thirteen pages; twenty-six desktop/mobile page loads; expanded discovery and overview layouts at 1440, 768, 375 and 320 pixels; heading order and matching contents; all previous discovery IDs and external source links preserved; direct links into the moved references; consecutive figure numbers; SVG text within view boxes; print restoration, enlarged text and reading without JavaScript. Inspected the revised learning diagram and comparison example visually. No browser errors or failed local requests; whitespace checks passed. Changes remain local and unpublished.
+
+## Product metrics and handoff supplement, 2 November 2026
+
+Reviewed the discovery page's existing measurement ladder, experiment criteria and handoff table alongside the lifecycle overview and implementation-readiness package. The pages named measures but did not define a sufficiently concrete agreement for collecting and reviewing product outcomes after use.
+
+### Research and source boundaries
+
+- [Defence Product Playbook](https://defence-pp.vercel.app/): freshly retrieved its live HTML. The measurement section calls the value metric a North Star, connects it to a slower organisational outcome and recommends one value measure per problem. Retained the existing explicit adaptations of its metric ladder and subjective-measure guidance. Its twice-yearly movement advice is not a universal review cadence.
+- [Torres, Opportunity Solution Trees](https://www.producttalk.org/opportunity-solution-trees/): rechecked the distinction between business outcomes, product outcomes and feature traction. This supports measuring the proposed user benefit rather than treating adoption alone as success.
+- [Microsoft Research, Pre-Experiment Stage](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/): rechecked hypotheses, success measures, guardrails, data quality and comparisons. These support a balanced experiment plan, not a claim that every pilot can establish a causal effect.
+- [Amplitude, The North Star Playbook (PDF)](https://info.amplitude.com/rs/138-CDN-550/images/Amplitude-The-North-Star-Playbook.pdf): added as reference 19. Chapters 1–3 distinguish the main value measure from actionable inputs and explain precise definitions. The linked official PDF was readable; several web chapter URLs returned the introduction rather than the chapter content. Applying the framework to internal mission/service outcomes is explicitly a handbook recommendation.
+
+### Changes
+
+Added visible guidance in Frame for choosing product success measures together. Distinguish an established product North Star from the outcome for the proposed scope, supporting measures and guardrails. A feature can contribute to an existing North Star; the guidance does not require a new one per feature. If the main product measure is provisional, record how it will be assessed. Supporting input metrics are distinguished from resource inputs in the existing ladder.
+
+Added a handoff measurement-plan checklist covering definitions and calculations, counted populations, time windows, exclusions, baseline provenance, targets, instrumentation, data verification, owners, review cadence and actions. Targets are agreed before exposure, and missing baselines remain explicit collection work. Acceptance-test success, exploratory prototype results and product outcomes after use remain separate.
+
+Extended the existing fictional example with M-1: a candidate weekly correct-resolution count, demand and rate context, the existing handling-time target, supporting measures, controls and collection/review owners. It deliberately does not invent a measured weekly baseline or numerical North Star target. The example assigns a baseline collection period and target agreement before pilot exposure; the 8.5-minute and 8/8 prototype results remain exploratory.
+
+Aligned the overview's handoff item and implementation's receiving checklist through links to the new measurement plan. Both discovery contents lists expose product success measures and the handoff plan. These are recommended working records, not newly asserted EDS policy.
+
+Validation: 831 local links/assets across thirteen pages, twenty-six desktop/mobile browser loads, expanded layouts at 1440/768/375/320 pixels, heading order, matching contents, existing direct links, print restoration, enlarged text and no-JavaScript reading passed. Additional checks exercised the new anchors and links from both receiving pages. Visually inspected the success-measure guidance on desktop and the measurement plan on mobile. Whitespace checks passed. No commit or publication performed.
+
+## Shared discovery emphasis, 2 November 2026
+
+Rechecked the existing SVPG four-risk and discovery/delivery articles, Torres's opportunity-tree guidance and Sheth's 3-in-a-Box article. Refined “Start together” around the following points:
+
+- Discovery involves Product, Design and Engineering throughout; the product owner does not perform discovery alone.
+- Begin with the problem before fixing the solution. Any discipline can initiate the investigation.
+- Bring complementary expertise in value and business constraints, user experience and usability, and technical feasibility. These are areas of focus, not exclusive ownership or sequential phases.
+- Choose assumptions, develop alternatives and inspect user and technical evidence together. Keep the brief, experiment findings, PRD and recommendation linked.
+- Preserve named investment authority, specialist involvement and human accountability. Shared discovery does not imply unanimous approval or invent an organisational decision rule.
+
+SVPG explicitly describes the three disciplines working side by side and distinguishes value, usability, feasibility and business viability. Torres identifies opportunity-tree work as a product-trio activity. Sheth supports ongoing co-creation, initiation by any discipline and joint prototyping; retain this as practitioner advice rather than a demonstrated performance claim. The concrete working rhythm and fictional service-desk example are handbook recommendations, mapped to local roles rather than treating product manager and product owner as universally interchangeable titles.
+
+Moved AI-assistance guidance after the human collaboration guidance so it supports the section's main message. Preserved the existing responsibility table, anchor IDs and source destinations. Updated the page review date to 2 November 2026; the earlier whole-bibliography audit date remains historical.
+
+Validation passed: 817 local links/assets across thirteen pages; twenty-six desktop/mobile page loads; expanded discovery/overview layouts at 1440, 768, 375 and 320 pixels; matching contents, heading order, direct links, print restoration, enlarged text and no-JavaScript reading. No browser errors or failed local requests. Whitespace checks passed. Changes remain local and unpublished.
+
 ## Clarity review against writing.md, 28 October 2026
 
 Reviewed the full discovery page against the repository's [writing standard](../writing.md), concentrating on reader purpose, concrete actions, terminology, paragraph structure and the separation of instructions from reference material.
