@@ -153,17 +153,20 @@
           <p>An AI agent then builds one issue at a time in a loop that builds, checks and corrects its own work. Closeout adds independent review and evidence that the story behaves as specified, and returns failures to the loop. Finally, four pipeline stages widen the checks from the single change to the whole codebase, ending with one report for the Tech Lead’s sign-off.</p>
           <p>The <a href="eds-developer-harness.html">Developer harness page</a> breaks the middle of this route into its individual steps. The <a href="eds-path-to-production.html">Path to production page</a> covers the pipeline stages.</p>
           <p>The workflow covers Plan, Slice, Implement and Verify in the six-stage implementation loop, and reaches release readiness through the pipeline gates. Progressive rollout, observation and learning from production evidence sit outside the harness. Use the <a href="product-implementation.html#six-stages">Product implementation guidance</a> for those stages.</p>
-          <aside class="callout" aria-label="Note on the methodology roadmap">
-            <p class="example-label">Note</p>
-            <p>The Eitri training describes an organisational direction towards <a href="https://martinfowler.com/articles/structured-prompt-driven/">Structured-Prompt-Driven Development (SPDD)</a>, a method developed within Thoughtworks. Both approaches make specifications explicit. Confirm the current adoption plan with the workflow owner, and test Eitri skills against the target workflow before assuming compatibility.</p>
-          </aside>
         </section>
 
         <section id="status">
           <h2>Understand the status labels</h2>
           <p>Not every step in the workflow carries the same weight. Labels show which steps every story goes through, which a team can leave out, which are not yet available and where a person decides.</p>
           <aside class="status-key" aria-label="Labels used on this page"><p>Labels on this page</p><dl><div><dt><span class="status status-core">Core</span></dt><dd>Part of the normal route for every story.</dd></div><div><dt><span class="status status-recommended">Optional · Recommended</span></dt><dd>Can be left out, but including it improves confidence or quality.</dd></div><div><dt><span class="status status-optional">Optional</span></dt><dd>Can be left out when it does not apply.</dd></div><div><dt><span class="status status-setup">One-time setup</span></dt><dd>Done once for each repository, before delivery work starts.</dd></div><div><dt><span class="status status-planned">Planned</span></dt><dd>In development and not yet available. Do not count on it as a control.</dd></div><div><dt><span class="status status-hitl">HITL</span></dt><dd>Human in the loop: a person signs off before the work moves on.</dd></div></dl></aside>
-          <p>Each page in this section repeats the labels it uses beside the content they describe, so you do not need to return here.</p>
+          <h3 id="version-status">Verify Eitri status and version</h3>
+          <p>Workflow details and availability labels describe the documented Eitri setup. Before relying on a control, confirm the applicable configuration with the workflow owner and retain its version with the evidence:</p>
+          <ul>
+            <li>Record the installed harness and upstream skill revisions, policy-pack versions and pipeline configuration revision.</li>
+            <li>Check which skills are available and which checks are enforced, advisory or planned in that installation.</li>
+            <li>Confirm where a failed check blocks progress, which independent reviews apply and who can authorise release or an exception.</li>
+          </ul>
+          <p>Use the <a href="eds-team-context.html#policies">policy-pack guidance</a> and <a href="eds-path-to-production.html#stages">pipeline checks</a> for the specific controls. This guide does not identify the revision installed in your environment. For guided practice, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">open the Eitri training</a>.</p>
         </section>
 
         <section id="ownership">
@@ -269,8 +272,11 @@
           <p class="next-step"><strong>Next step:</strong> to see how requirements are prepared, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>. To see how a story is built and checked, <a href="eds-developer-harness.html">read the Developer harness</a>, then <a href="eds-path-to-production.html">Path to production</a>. For guided practice, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">open the Eitri self-paced training</a>.</p>
         </section>
 
-        <p class="source-ref">Workflow details and availability labels describe the documented Eitri setup. Confirm the installed harness revision and enforced pipeline checks before relying on a control. See the <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri training</a> for supporting guidance.</p>
-          <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+        <details id="method-under-consideration"><summary>Method under consideration: SPDD</summary>
+          <p>The Eitri training describes a direction towards <a href="https://martinfowler.com/articles/structured-prompt-driven/">Structured-Prompt-Driven Development (SPDD)</a>, developed within Thoughtworks. Confirm adoption status and ownership with the workflow owner. Before using it with Eitri, test specification artefacts, skill behaviour and review gates against the target workflow.</p>
+        </details>
+        <p class="source-ref"><a href="#version-status">Eitri status and version: verify installed revisions and enforced controls</a>.</p>
+          <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
     <aside class="page-contents"><nav aria-label="On this page"><p>On this page</p>

@@ -37,6 +37,29 @@ Use “you” for an instruction the reader can perform. Use a role name when ow
 - Explain a specialist term at first use. Keep the precise term when a simpler replacement would change its meaning.
 - Remove repeated introductions, promotional claims and conclusions that merely restate the opening.
 
+## Avoid redundant disclaimers
+
+Keep a qualification when it changes what readers can infer, decide or do. Remove it when it only repeats a status or distinction already clear in context.
+
+- Explain the guide’s status once under Introduction’s “Read the guide in three layers”. Link to “About this guidance” from other pages instead of repeatedly saying that practices are recommendations, citations are not endorsement or the guide does not establish policy.
+- Attribute sources positively: identify the practice being used and any material adaptation. Replace repeated statements about what a source does not prescribe with a concise description of what this guide adds or changes.
+- Keep research limitations beside the claims they qualify. Preserve operational boundaries, approval authority, availability labels, source credits and licence notices where readers need them.
+- Label a worked example as fictional and explain its illustrative data once. Keep a short fictional label on independently linked examples and diagrams that could be read or shared without that introduction; avoid repeating the full explanation.
+- Put publication metadata and adaptation history in source notes. Maintain shared Eitri version-check guidance in one reference, with compact links from other pages. Keep specific Available/Planned states and consequential control limits beside the affected steps.
+
+Judge repetition by the reader’s likely entry point. A shared explanation can replace generic boilerplate, but it cannot replace a warning needed to interpret a result or perform the current action.
+
+## Check coherence on every edit
+
+After every addition, deletion or rewrite, reread the affected section in full, its preceding and following passages, and the page’s opening, headings and next step. Check any linked page whose instructions or handoff depend on the changed text. A sentence can be accurate on its own and still interrupt or contradict the writeup.
+
+- Give each paragraph a clear purpose and connect it to the next. Introduce ideas before relying on them, and remove abrupt topic changes or repeated explanations.
+- Keep terminology, roles, step names, example data and artefact identifiers consistent across prose, tables, diagrams and linked procedures.
+- Check that outputs support the next action, and that conditions, exceptions and decision authority agree throughout the affected workflow.
+- After shortening or moving text, repair references and transitions. Confirm that captions, source notes and directly linked sections still give readers enough context.
+
+Treat this reread as part of completing every edit. Revise any gap, contradiction or unnecessary repetition before marking the change complete.
+
 ## Make guidance actionable
 
 Apply this editorial rule to every procedure, review activity and decision check: give readers enough detail to carry out the work and recognise when it is complete. A heading such as “Check accuracy” does not provide the method.
@@ -176,6 +199,8 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 - [ ] “Check”, “review”, “validate” and “ensure” are followed by enough detail for the reader to perform the work.
 - [ ] Difficult distinctions have a short example where needed; observations, interpretations and untested explanations remain separate.
 - [ ] Terms are consistent and abbreviations are explained.
+- [ ] Generic disclaimers are consolidated; material limitations, control boundaries, attribution and licence credits remain where needed.
+- [ ] The changed section, surrounding passages and affected linked guidance have been reread for coherent flow, consistent examples and complete handoffs.
 - [ ] Claims have appropriate evidence; recommendations and examples are labelled clearly.
 - [ ] Requirements cite a confirmed authority and state where they apply.
 - [ ] Examples contain no invented organisational facts.

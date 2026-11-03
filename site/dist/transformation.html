@@ -98,17 +98,21 @@
 
         <section id="why-transformation">
 <h2>Why tools alone are not enough</h2>
-          <p>A team may draft code faster while completed changes still wait for clarification, review or release. Improving that workflow requires attention to the whole path from a user need to a working result. DORA’s 2025 report describes AI as amplifying existing organisational strengths and weaknesses.</p>
-          <p>McKinsey’s November 2025 survey found that respondents in its AI high-performer group were nearly three times as likely as others to report fundamental workflow redesign. That group reported both significant AI value and an AI contribution of at least 5% to earnings before interest and taxes. This self-reported association does not establish that redesign caused the results.</p>
-          <p>Measure the effect in your own setting. METR’s early-2025 randomised study of 16 experienced open-source developers, completing 246 tasks in familiar repositories, found that allowing AI tools increased completion time by 19%. Participants nevertheless estimated that AI had saved them time.</p>
-          <p>That result is specific to those tools, tasks and developers. In February 2026, METR reported that selection effects and time-measurement problems made its follow-up data unreliable for estimating current productivity gains. Neither study supplies a forecast for your squad.</p>
-          <p>Start with one recurring delay or quality problem. Trial an AI-assisted workflow alongside the skills and controls it needs, then compare the results before expanding it.</p>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: DORA, State of AI-assisted Software Development 2025">[1]</a>; <a href="#source-2" aria-label="Source 2: McKinsey, The state of AI in 2025">[2]</a>; <a href="#source-3" aria-label="Source 3: METR, July 2025 developer productivity study">[3]</a>; <a href="#source-4" aria-label="Source 4: METR, February 2026 productivity update">[4]</a>.</p>
+          <p>AI tooling can help a team draft code faster, but organisational transformation means improving how the whole team delivers useful, reliable software. If requirements remain unclear, reviewers are unavailable or release decisions are delayed, faster coding can simply move more work into a queue. The tool changes one activity; the organisation needs to connect that capability to the rest of delivery.</p>
+          <p>That requires changes across four areas. <strong>People</strong> need the skills and time to specify tasks and judge AI-generated work. <strong>Process</strong> needs clear ownership, checks and decision points so that work can move forward. <strong>Culture</strong> needs to support questioning outputs, reporting failures and improving the workflow. <strong>Technology</strong> needs suitable context, test environments and access controls to support those practices. Each area depends on the others: trained reviewers need time in the process, and a failed check is useful only when someone can raise it and act on it.</p>
+          <p>Start with one recurring delay or quality problem, then trial the tool alongside the changes needed in those four areas. Compare the time to an accepted result, review and rework effort, and defects before expanding the trial. Use the <a href="#four-areas">four-area planning questions</a> to shape the change and the <a href="#progress-by-evidence">pilot measures</a> to judge whether it helps.</p>
+          <details class="deep-dive"><summary>Supporting evidence: workflow redesign and AI productivity</summary>
+            <p>DORA’s 2025 report describes AI as amplifying existing organisational strengths and weaknesses.</p>
+            <p>McKinsey’s November 2025 survey found that respondents in its AI high-performer group were nearly three times as likely as others to report fundamental workflow redesign. That group reported both significant AI value and an AI contribution of at least 5% to earnings before interest and taxes. This self-reported association does not establish that redesign caused the results.</p>
+            <p>Measure the effect in your own setting. METR’s early-2025 randomised study of 16 experienced open-source developers, completing 246 tasks in familiar repositories, found that allowing AI tools increased completion time by 19%. Participants nevertheless estimated that AI had saved them time.</p>
+            <p>That result is specific to those tools, tasks and developers. In February 2026, METR reported that selection effects and time-measurement problems made its follow-up data unreliable for estimating current productivity gains. Neither study supplies a forecast for your squad.</p>
+            <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: DORA, State of AI-assisted Software Development 2025">[1]</a>; <a href="#source-2" aria-label="Source 2: McKinsey, The state of AI in 2025">[2]</a>; <a href="#source-3" aria-label="Source 3: METR, July 2025 developer productivity study">[3]</a>; <a href="#source-4" aria-label="Source 4: METR, February 2026 productivity update">[4]</a>.</p>
+          </details>
         </section>
 
         <section id="four-areas">
 <h2>Four areas that change together</h2>
-          <p>This guide uses four connected areas to organise the work: people, process, culture and technology. They are a planning aid, rather than a four-part framework established by the cited studies.</p>
+          <p>Use people, process, culture and technology to plan connected changes.</p>
           <figure class="concept-figure" id="fig-areas">
   <figcaption id="fig-areas-title-caption">Figure 1. A workflow change depends on people, process, culture and technology together.</figcaption>
   <details class="figure-reading"><summary>Read as text: Relationships</summary><ul><li>People: build skills and shared judgement.</li><li>Process: make checks and decision authority explicit.</li><li>Culture: support learning and accountability.</li><li>Technology: provide controlled access and recovery. These are connected concerns, not sequential steps.</li></ul></details>
@@ -272,7 +276,7 @@
 </figure>
 <p>A passing check provides evidence for the authorised decision. Record acceptance or rework with its reason; unresolved failures do not become a pass. Review lessons before changing rules or thresholds.</p>
           <h3>Set authority for the specific task</h3>
-          <p>Choose agent permissions according to impact, reversibility and the evidence available. IMDA’s Model AI Governance Framework for Agentic AI recommends risk limits, human accountability and lifecycle controls. The linked PDF is version 1.5, published on 20 May 2026 and updated on 5 June 2026. It adds deployment case studies and guidance on multi-agent risks, third-party agents and automation bias. The permission options below are this guide’s examples, not IMDA’s prescribed tiers.</p>
+          <p>Choose agent permissions according to impact, reversibility and the evidence available. IMDA’s Model AI Governance Framework for Agentic AI recommends risk limits, human accountability and lifecycle controls. The table below gives this guide’s local task-boundary examples.</p>
           <div class="table-scroll"><table><caption>Example task permissions; these are options, not a progression to full autonomy</caption><thead><tr><th scope="col">Task boundary</th><th scope="col">Agent action</th><th scope="col">Human decision</th></tr></thead><tbody><tr><th scope="row">Advice only</th><td>Draft a recommendation without changing a system.</td><td>A person checks the advice and decides whether to act.</td></tr>
 <tr><th scope="row">Isolated change</th><td>Edit a branch and run tests using limited permissions.</td><td>A reviewer assesses the change before it enters a shared system.</td></tr>
 <tr><th scope="row">Pre-authorised routine action</th><td>Perform an explicitly permitted action after defined checks pass.</td><td>An authorised person sets the scope and stop conditions; the team monitors results.</td></tr>
@@ -376,18 +380,18 @@
           </aside>
           <p>Allow for setup and learning costs, and set a review date so a pilot does not continue indefinitely. Higher autonomy is an option, not a success measure; a useful advisory workflow may remain advisory.</p>
           <div class="next-step"><p><strong>Next step:</strong> write a short pilot brief covering the task, participants, baseline, boundaries, success criteria and review date. Use the <a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model">DORA capability guidance</a> to identify supporting improvements, and <a href="concept.html">read the Concepts guide</a> for ways to specify and supervise AI-assisted work.</p></div>
-          <p class="source-ref">Supporting evidence: <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>. The pilot procedure, scorecard and adoption rules are this guide’s recommendations; DORA does not prescribe this exact pilot design.</p>
+          <p class="source-ref">Supporting evidence: <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</p>
         </section>
 
         <section id="sources">
           <h2>Sources</h2>
-          <p>References checked on 3 November 2026. Survey findings describe associations; METR’s experiment concerns its stated tools, tasks and participants. The role mappings, permission examples and pilot controls are recommendations for local adaptation, rather than requirements established by these references.</p>
+          <p>References checked on 3 November 2026.</p>
           <ol class="source-list">
             <li id="source-1"><a href="https://dora.dev/research/2025/dora-report/">DORA, State of AI-assisted Software Development 2025</a></li>
             <li id="source-2"><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2025">McKinsey, The state of AI in 2025</a></li>
             <li id="source-3"><a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">METR, July 2025 developer productivity study</a></li>
             <li id="source-4"><a href="https://metr.org/blog/2026-02-24-uplift-update/">METR, February 2026 productivity update</a></li>
-            <li id="source-5"><a href="https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf">IMDA, Model AI Governance Framework for Agentic AI (PDF)</a>, version 1.5, published 20 May 2026, updated 5 June 2026; see pages 5 and 13 and sections 2.1–2.3.</li>
+            <li id="source-5"><a href="https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf">IMDA, Model AI Governance Framework for Agentic AI (PDF)</a>, version 1.5, published 20 May 2026, updated 5 June 2026; see pages 5 and 13 and sections 2.1–2.3. This update adds deployment case studies and guidance on multi-agent risks, third-party agents and automation bias.</li>
             <li id="source-6"><a href="https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2026/updated-model-ai-governance-framework-for-agentic-ai">IMDA, Updated Model AI Governance Framework for Agentic AI, May 2026</a></li>
             <li id="source-7"><a href="https://dora.dev/capabilities/generative-organizational-culture/">DORA, Generative organisational culture</a></li>
             <li id="source-8"><a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model">DORA, AI Capabilities Model, September 2025</a></li>
@@ -398,7 +402,7 @@
           </ol>
         </section>
 
-        <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
     <aside class="page-contents">

@@ -91,17 +91,17 @@
 <li><a href="product-implementation.html#implementable-definition">Deliver a feature</a><span>Agree scope and acceptance criteria → plan bounded changes → build and verify them → obtain the applicable review and release approvals → monitor the outcome. Keep requirements, test results, unresolved risks and the decision with the change.</span></li>
 <li><a href="product-implementation.html#six-stages">Fix a defect</a><span>Record the observed and expected behaviour → reproduce the failure → assess impact → make a bounded correction and add a regression test → review and release through the applicable controls → verify recovery. If the failure is an active incident, follow the existing incident process first.</span></li>
 <li><a href="product-implementation.html#gates-and-assurance">Make a high-risk change</a><span>Identify affected systems, data and people → involve the relevant security, architecture, data or operational specialists before execution → agree independent checks, recovery and stop conditions → submit evidence and residual risks to the authorised decision-maker. Release only within the agreed authority and monitor the result.</span></li></ul>
-          <p>Once the requirements and controls are clear, use the <a href="eds-ai-workflow.html">Eitri workflow</a> for tool instructions and the <a href="eds-path-to-production.html#stages">pipeline and pre-production checks</a> for its release support. A short route does not waive an applicable control.</p>
+          <p>Once the requirements and controls are clear, use the <a href="eds-ai-workflow.html">Eitri workflow</a> for tool instructions and the <a href="eds-path-to-production.html#stages">pipeline and pre-production checks</a> for its release support.</p>
         </section>
 <section id="target-audience">
           <h2>Who this guide is for</h2>
           <p>This guide is for <strong>EDS product and engineering teams</strong>: product owners and managers, business analysts, designers, developers, technical leads, quality office (QO) and cyber managers, and operational team. Organisational leaders can use it to plan ownership, capability and support.</p>
           <p>The guide connects organisational practices with EDS implementation guidance for Eitri, the AI-assisted development workflow. The playbook explains the approach and key decisions; the implementation pages show how the tools support the work.</p>
-          <p>For each workflow, identify the applicable policies, decision owners, required evidence and approvals.</p>
           <h3 id="guide-layers">Read the guide in three layers</h3>
+          <p id="about-guidance">This guide combines research, engineering practices and EDS workflow documentation. Its models, examples and suggested thresholds are guidance for local adaptation. Requirements are identified with their authority and scope; applicable organisational policies and authorised decisions take precedence.</p>
           <div class="table-scroll"><table><caption>Separate the reason, the obligation and the tool support</caption><thead><tr><th scope="col">Layer</th><th scope="col">What it explains</th><th scope="col">Where to start</th></tr></thead><tbody>
 <tr><th scope="row">Principles</th><td>Why the organisation works this way: test assumptions, verify results and retain human accountability. These explain the recommended approach.</td><td><a href="ai-pdlc.html">Lifecycle overview</a> and <a href="transformation.html">organisation transformation</a></td></tr>
-<tr><th scope="row">Operating requirements</th><td>The evidence, checks and approvals required by the organisational process, with the responsible policy or control owner identified.</td><td><a href="product-implementation.html#gates-and-assurance">Decisions and independent assurance</a>, alongside the authoritative policies for your work</td></tr>
+<tr><th scope="row">Operating requirements</th><td>Identify the applicable policies, decision owners, required evidence and approvals for the workflow.</td><td><a href="product-implementation.html#gates-and-assurance">Decisions and independent assurance</a>, alongside the authoritative policies for your work</td></tr>
 <tr><th scope="row">Eitri implementation</th><td>How Eitri’s harnesses, skills and pipeline support delivery, verification and review.</td><td><a href="eds-ai-workflow.html">EDS AI Workflow (Eitri)</a></td></tr>
           </tbody></table></div>
           <p>If Eitri cannot perform a required check or capture an approval, the control still applies. Agree an alternative with the control owner and retain the evidence before proceeding. A passing tool check is evidence for a decision; it grants approval only where the applicable process explicitly authorises that automation.</p>
@@ -136,7 +136,7 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights learning after launch.</p>
   </details>
   </figure>
-          <p>In this illustrative sequence, work passes through requirements, design, build, test, approval and launch before user learning returns. Each handoff can introduce waiting or lost context. The dashed path shows the cost of postponing feedback.</p>
+          <p>The diagram shows work passing through requirements, design, build, test, approval and launch before user learning returns. Each handoff can introduce waiting or lost context. The dashed path shows the cost of postponing feedback.</p>
           <p>Teams using smaller batches and earlier feedback can learn before launch. Specialist capacity, handoffs and the cost of changing direction still matter when introducing AI into those workflows.</p>
           <p>AI can help teams draft requirements, build prototypes, write code and run checks with less manual effort. AI-SDLC brings these capabilities into the whole development workflow, with people setting goals, reviewing evidence and deciding what to release. The aim is <strong>faster validated learning</strong>: testing assumptions early and using the results to decide what to build or change.</p>
           <ol class="key-pointers">
@@ -238,7 +238,7 @@
           </div>
         </section>
 
-        <footer class="article-footer">
+        <footer class="article-footer"><span><a href="#about-guidance">About this guidance</a></span>
           <span>AI-Software Development Lifecycle</span>
           <span>EDS</span>
         </footer>

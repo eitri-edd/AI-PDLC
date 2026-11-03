@@ -96,7 +96,7 @@
         </svg>
         <section id="how-the-concepts-fit">
           <h2>How the concepts fit together</h2>
-          <p>These are the working definitions used in this guide. Usage overlaps across authors and tools. Here, graph engineering refers to execution and workflow graphs rather than knowledge graphs.</p>
+          <p>These are the working definitions used in this guide. Here, graph engineering refers to execution and workflow graphs rather than knowledge graphs.</p>
           <p>The concepts address different parts of the same work. Intent-driven development explains <strong>why a change is needed</strong>. Spec-driven development defines <strong>what the software should do</strong> and how the team will check it.</p>
           <p>Context engineering supplies the information an AI agent needs. Harness engineering provides its tools, permissions and checks. Loop engineering defines how it responds to feedback; graph engineering organises steps and dependencies. A software factory brings these practices into a delivery workflow.</p>
           <p>For example, a team wants users to resume an unfinished service request. The team agrees the goal, writes acceptance criteria, gives the agent the relevant information and tools, and reviews the result. Model selection supports that work.</p>
@@ -201,7 +201,7 @@
           <p>Harness engineering means designing the tools, permissions, checks and progress records around an AI agent. This supporting environment is the agent’s harness. It lets the agent do the work, observe the result and stay within agreed limits.</p>
           <p>Use it when an agent cannot run the application, check a result or resume unfinished work. A better prompt cannot replace a missing test environment or an access control.</p>
           <h3>Provide the tools and controls the task needs</h3>
-          <p>This guide groups the supporting environment into six components. They work together rather than running as consecutive steps. Walking Labs uses a different five-part grouping: instructions, tools, environment, state and feedback. The diagram below is a synthesis, not a shared taxonomy prescribed by all three sources.</p>
+          <p>This guide groups the supporting environment into six components. They work together rather than running as consecutive steps.</p>
           <figure class="concept-figure" id="fig-harness">
   <figcaption id="fig-harness-title-caption">Figure 4. Six parts support the agent’s work, checks and limits.</figcaption>
   <details class="figure-reading"><summary>Read as text: How the parts work together</summary><ul><li>Agent state records the current goal, progress and latest result. Tools let the agent inspect files, make changes and run checks.</li><li>Memory keeps decisions and useful information beyond the current run. Orchestration assigns tasks and coordinates who works next.</li><li>Safety sets permissions and resource limits. Observability records actions, results, time and cost so people can inspect what happened.</li><li>For example, a tool runs an upload test. Its result updates the current state; a useful finding is saved for later work. Permissions restrict the test to approved storage.</li></ul></details>
@@ -467,7 +467,7 @@
         </section>
         <section id="sources">
           <h2>Sources and learning references</h2>
-          <p>References checked on 3 November 2026. Provider documentation supports product capabilities; research findings apply to their stated tasks and methods. Practitioner articles and courses explain approaches rather than establish standards or prove universal gains. The diagrams, fictional examples and evaluation procedures are this guide’s synthesis.</p>
+          <p>References checked on 3 November 2026. See the sources below for research and provider documentation.</p>
           <h3 id="learning-references">Learning references</h3>
           <p>Use these courses, guides and playbooks for detailed instruction and practice. Check the implementation courses for prerequisites and tool requirements.</p>
           <ul class="source-list"><li id="learning-intent"><strong>Intent-driven development:</strong> <a href="https://circleci.com/blog/intent-driven-development/">CircleCI’s guide</a> explains how to carry outcomes, constraints and success criteria through a change.</li>
@@ -485,7 +485,7 @@
             <li id="source-2"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
             <li id="source-3"><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a></li>
             <li id="source-4"><a href="https://openai.com/index/harness-engineering/">OpenAI, Harness engineering</a></li>
-            <li id="source-5"><a href="https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/">Walking Labs, What a harness actually is</a></li>
+            <li id="source-5"><a href="https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/">Walking Labs, What a harness actually is</a>. Uses five components: instructions, tools, environment, state and feedback; the six-component grouping above is this guide’s synthesis.</li>
             <li id="source-6"><a href="https://www.anthropic.com/research/effective-harnesses-for-long-running-agents">Anthropic, Effective harnesses for long-running agents</a></li>
             <li id="source-7"><a href="https://www.ibm.com/think/topics/loop-engineering">IBM, Loop engineering</a></li>
             <li id="source-8"><a href="https://www.puppygraph.com/learn/graph-engineering">PuppyGraph, Graph engineering</a></li>
@@ -507,9 +507,9 @@
             <li id="source-25"><a href="https://docs.typesafe.ai/confidence">TypeSafe, Confidence</a>. Explains probability distributions, confidence statistics and task-specific thresholds; Noul has no separate confidence field.</li>
             <li id="source-26"><a href="https://arxiv.org/abs/2610.02267">Li (2026), Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses</a>. Preprint comparing Jev and Laya; reports decision-point results and limitations in routing, threshold selection and deployment accounting.</li>
           </ol>
-          <p class="source-ref">The model examples illustrate capabilities and trade-offs. Provider documentation covers product behaviour; the research papers explain underlying concepts. Evaluate the exact version and configuration you will use.</p>
+          <p class="source-ref">Evaluate the exact model version and configuration you will use.</p>
         </section>
-        <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
     <aside class="page-contents">
