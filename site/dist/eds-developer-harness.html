@@ -182,9 +182,9 @@
             <tr><th scope="row">10</th><td>Verify the issues</td><td><span class="status status-core">Core</span></td><td>Each issue questioned against eight quality criteria, and the set checked for coverage, overlap and sound dependencies</td></tr>
             <tr><th scope="row">Human gate 2</th><td>A person approves the issues</td><td><span class="status status-hitl">HITL 2</span></td><td>The issues are execution-ready and development can begin</td></tr>
           </tbody></table></div>
-          <p>The compliance audit covers two policy sets. <a href="https://info.standards.tech.gov.sg">Instruction Manual 8 (IM8)</a> is the Singapore Government’s ICT security policy; the audit uses its application technical controls. The <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">Agentic Risk &amp; Capability Framework (ARC)</a> is GovTech’s governance framework for risks in agentic AI systems.</p>
+          <p>The compliance audit covers two policy sets. <a href="https://info.standards.tech.gov.sg">Instruction Manual 8 (IM8)</a> is the Singapore Government’s ICT and Smart Systems policy framework; the audit uses the application security controls packaged with the harness. The <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">Agentic Risk &amp; Capability Framework (ARC)</a> is GovTech’s governance framework for risks in agentic AI systems.</p>
           <p>Each control is judged as met, fixable by tightening the wording, failed, deferred to implementation because it cannot be checked at specification stage, or not applicable. Planning is not complete while any control is failed.</p>
-          <p>Because every issue declares what blocks it, several agents or developers can work on different issues in parallel safely.</p>
+          <p>Declared dependencies help identify issues that can run in parallel. Before assigning them, check for shared files, data, interfaces and environment conflicts. Isolate changes and verify the integrated result; dependency ordering alone does not establish safety.</p>
         </section>
 
         <section id="modes">
@@ -265,7 +265,7 @@
             <tr><th scope="row">18</th><td>Commit the closeout artefacts as logically grouped commits</td><td><span class="status status-recommended">Optional · Recommended</span></td></tr>
             <tr><th scope="row">19</th><td>Turn the user story into repeatable <a href="https://playwright.dev">Playwright</a> end-to-end tests with fresh evidence</td><td><span class="status status-recommended">Optional · Recommended</span></td></tr>
           </tbody></table></div>
-          <p>The Step 15 review runs its two parts separately, so neither influences the other. One compares the change with the repository’s documented coding standards, falling back to a baseline of common code smells. The other compares it with the originating issue or TRD, flagging missing requirements, scope creep and requirements that look implemented but are wrong.</p>
+          <p>The Step 15 review runs its two parts separately to reduce influence between them. Reviewers still need the original requirements, the changed code and reproducible evidence; separate runs can share the same mistaken assumptions. One compares the change with the repository’s documented coding standards, falling back to a baseline of common code smells. The other compares it with the originating issue or TRD, flagging missing requirements, scope creep and requirements that look implemented but are wrong.</p>
           <p>End-to-end evidence builds up one user story at a time. A run counts only after its final verifier passes, and a stability check can repeat it at least three times to flag results that change between runs. A failing run does not block a push unless the repository adds a pipeline gate.</p>
           <p>Each check writes its report to the repository, so reviewers can inspect the evidence behind a decision: the dependency graph, the architecture test plan, the compliance and review reports, browser screenshots and end-to-end results.</p>
         </section>
@@ -294,7 +294,8 @@
           <p class="next-step"><strong>Next step:</strong> to see what happens once a merge request is ready, <a href="eds-path-to-production.html">follow the path to production</a>. For the skill behind each step, <a href="eds-skills-catalogue.html">open the skills catalogue</a>.</p>
         </section>
 
-        <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+        <p class="source-ref">Workflow details and availability labels describe the documented Eitri setup. Confirm the installed harness revision and enforced pipeline checks before relying on a control. See the <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri training</a> for supporting guidance.</p>
+          <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
     <aside class="page-contents"><nav aria-label="On this page"><p>On this page</p>

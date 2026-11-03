@@ -49,7 +49,7 @@
         <header class="article-header">
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>Add your team’s context</h1>
-<p class="lead">The harness behaves correctly only if it can see a team’s business domain, standards, policies and conventions at the right moment. This page shows where each kind of context enters the PO/BA and developer harnesses, and how a team adds its own.</p>
+<p class="lead">The harness needs relevant business domain information, standards, policies and conventions before decisions depend on them. Context supports correct behaviour, but does not guarantee it. This page shows where each kind of context enters the PO/BA and developer harnesses, and how a team adds its own.</p>
           <p>For how to organise instructions so an agent loads only what it needs, <a href="eds-ai-workflow.html#context-practice">read Give agents the right context</a>. Exact file names, registry entries and environment settings are in the harness repository.</p>
         </header>
         <figure class="page-map page-map--route" aria-label="Page summary">
@@ -87,9 +87,9 @@
         </svg>
 <section id="matrix">
           <h2>Know what context each stage needs</h2>
-          <p>Each kind of context is fed in at the stage where it shapes a decision. Loading it earlier dilutes the agent’s attention; loading it later means the decision has already been made without it.</p>
+          <p>Each kind of context is fed in at the stage where it shapes a decision. Provide constraints before the decisions they govern, then retrieve detailed guidance when it becomes relevant. Excess irrelevant material can reduce effectiveness; critical policies may apply across several stages.</p>
           <div class="table-scroll"><table class="wide-table stage-table"><caption>Context to add at each stage, where it is used and why it matters</caption><thead><tr><th scope="col">Stage</th><th scope="col">Context</th><th scope="col">Where it is used</th><th scope="col">Why it matters</th></tr></thead><tbody>
-            <tr><th scope="row">1. Requirements and scope</th><td>Business domain intent, persona maps, scope boundaries</td><td>The <a href="eds-po-ba-harness.html">PO/BA paths</a>: <a href="https://speckit.org">SpecKit</a>, the Socratic workflow and <a href="https://github.com/dsta-productops/clara">CLARA</a></td><td>Grounds the user stories in the business problem, so the team does not build the wrong features.</td></tr>
+            <tr><th scope="row">1. Requirements and scope</th><td>Business domain intent, persona maps, scope boundaries</td><td>The <a href="eds-po-ba-harness.html">PO/BA paths</a>: <a href="https://github.com/github/spec-kit">SpecKit</a>, the Socratic workflow and <a href="https://github.com/dsta-productops/clara">CLARA</a></td><td>Grounds the user stories in the business problem, so the team does not build the wrong features.</td></tr>
             <tr><th scope="row">2. Architecture and design</th><td>Shared architecture standards, integration recipes, decision templates</td><td>Story sequencing and investigation, before the technical requirements document (TRD) is written</td><td>Applies structural constraints, such as authentication, logging and database schema, before work is sliced, so design flaws do not spread into every issue.</td></tr>
             <tr><th scope="row">3. Compliance and governance</th><td>Regulatory and security policies, such as <a href="https://info.standards.tech.gov.sg">IM8</a> and <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a></td><td>The compliance audit of the TRD</td><td>Audits the TRD against policy, so security controls are declared and resolved before coding.</td></tr>
             <tr><th scope="row">4. Implementation</th><td>Coding practices, framework guides, API reference documentation</td><td>The build loop, through a knowledge-base query</td><td>Gives the agent syntax, language features and library patterns, so code passes type checks, builds and tests.</td></tr>
@@ -112,7 +112,7 @@
           <h2>Add shared standards and recipes</h2>
           <p>During planning, the harness matches each story to implementation standards. The base library is AppStandards, cloned from the shared repository or from a team fork.</p>
           <p>AppStandards uses the <a href="https://okf.md">Open Knowledge Format (OKF)</a>, which stores documentation as a version-controlled graph of Markdown concepts. Each folder has a catalogue of its contents, and each standard is split into focused files holding rules, code recipes and questions for challenging a design.</p>
-          <p>The harness maps every user story to the few standards it needs, such as multi-factor authentication or single sign-on, and later steps read only those files. Loading the whole catalogue would exceed the agent’s context window and dilute its attention.</p>
+          <p>The harness maps every user story to the few standards it needs, such as multi-factor authentication or single sign-on, and later steps read only those files. Loading the whole catalogue can consume substantial context and introduce irrelevant material. Select the standards needed for the task and check that mandatory constraints remain available.</p>
           <p>To add its own standards, a team structures them in the OKF layout, registers their location with the harness’s story-sequencing skill and tags its stories with the standard’s key. The standard then appears in the delivery plan for each tagged story.</p>
         </section>
 
@@ -126,10 +126,10 @@
           <h2>Add security and governance policies</h2>
           <p>Before work is sliced into issues, the compliance audit checks the TRD against the policy references held in the harness and writes a checklist report. Two references ship with the harness:</p>
           <ul>
-            <li><strong><a href="https://info.standards.tech.gov.sg">IM8</a>:</strong> 36 application security controls from Instruction Manual 8.</li>
-            <li><strong><a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a>:</strong> 88 agentic AI governance controls from the Agentic Risk &amp; Capability Framework.</li>
+            <li><strong><a href="https://info.standards.tech.gov.sg">IM8</a>:</strong> 36 application security checks in the documented Eitri policy pack, drawn from Instruction Manual 8; this is not a count of the entire policy framework.</li>
+            <li><strong><a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a>:</strong> 88 agentic AI governance checks in the documented Eitri policy pack, based on the Agentic Risk &amp; Capability Framework. Confirm the pack version and applicable controls before an audit.</li>
           </ul>
-          <p>To enforce its own policies, a team writes its compliance checklist or internal security policy as a Markdown file and registers it with the harness. The audit then applies it alongside IM8 and ARC.</p>
+          <p>To include its own policies in the audit, a team writes its compliance checklist or internal security policy as a Markdown file and registers it with the harness. The audit assesses the document alongside IM8 and ARC. Enforce applicable controls through tests, access controls and pipeline checks; a written policy or model assessment alone does not enforce them.</p>
         </section>
 
         <section id="review-rules">
@@ -151,7 +151,8 @@
           <p class="next-step"><strong>Next step:</strong> complete items 1 and 5 first, because they need only the repository. Then <a href="eds-developer-harness.html#plan">take a first story through planning</a> and note which context the agent asked for but could not find.</p>
         </section>
 
-        <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+        <p class="source-ref">Workflow details and availability labels describe the documented Eitri setup. Confirm the installed harness revision and enforced pipeline checks before relying on a control. See the <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri training</a> for supporting guidance.</p>
+          <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
     <aside class="page-contents"><nav aria-label="On this page"><p>On this page</p>

@@ -50,8 +50,9 @@
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>Training</h1>
           <p class="lead">This page is a study guide to the self-paced training on the Eitri Agentic Dev Workflow. It explains how the course is organised, draws out the key concepts it teaches, and suggests how to work through it so you can run the workflow on your own repository.</p>
+          <p class="source-ref">This companion summarises the training’s five-phase workflow and retains its command names, including <code>/dependency-orchestrator</code>. The <a href="eds-developer-harness.html">developer harness</a> uses a 19-step view and the local catalogue names <code>/project-horizon</code>. Confirm the applicable harness revision before transferring commands between these views.</p>
           <p>This study guide is for developers, Tech Leads and product owners using the workflow. Pair it with the course’s hands-on exercises to practise the skills, gates and checks.</p>
-          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-09-28">28 September 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
+          <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-11-02">2 November 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
         <figure class="page-map page-map--route" aria-label="Page summary">
           <p class="page-map-title">On this page · 4 modules in sequence</p>
@@ -140,17 +141,17 @@
           <h2>Key concept: how language models behave</h2>
           <p>The workflow’s design follows from a few properties of large language models (LLMs). Understanding them explains why the workflow writes everything down, keeps context small and trusts tests over appearances.</p>
           <h3>Context has limits, and quality drops before them</h3>
-          <p>The context window is all the text a model can see in one call: instructions, code and conversation. The training uses a rule of thumb that models reason most reliably in roughly the first 40% of their context limit, the “smart zone”, and degrade beyond it. Separately, research by Liu et al. has found that models recall information in the middle of a long context less accurately than information at the start or end. Put critical instructions first, and do not bury key reference material mid-context.</p>
-          <h3>Models remember nothing between calls</h3>
+          <p>The context window limits the input and generated content a model can process in a request; supported inputs can include text and other modalities. The training’s “40% smart zone” is a heuristic, not a universal model limit. Liu et al. found position-sensitive retrieval on the models and tasks they tested; that study does not establish a fixed threshold for current models. Keep context relevant and evaluate retrieval and task completion at the lengths your workflow uses.</p>
+          <h3>Keep durable memory outside individual model calls</h3>
           <div class="table-scroll"><table><caption>The three memory stores described in the training</caption><thead><tr><th scope="col">Store</th><th scope="col">What it is</th><th scope="col">Lasts</th></tr></thead><tbody>
             <tr><th scope="row">In-context</th><td>The current prompt and conversation</td><td>Only for the current call or session</td></tr>
             <tr><th scope="row">External</th><td>Files, version control and issue trackers</td><td>Across sessions</td></tr>
-            <tr><th scope="row">Parametric</th><td>The model’s trained weights</td><td>Fixed; cannot be updated by the team</td></tr>
+            <tr><th scope="row">Parametric</th><td>The model’s trained weights</td><td>Normally unchanged during inference; supported training or fine-tuning can change weights</td></tr>
           </tbody></table></div>
-          <p>The workflow relies on external memory. Specifications, decisions and progress are written to the repository and tracker, so the next session can pick them up.</p>
+          <p>The workflow relies on external memory. Specifications, decisions and progress are written to the repository and tracker, so later sessions can retrieve them. Applications can preserve conversation state between calls; that state needs to be supplied or retrieved, rather than learned into the model’s weights.</p>
           <h3>Plausible is not the same as correct</h3>
           <ul>
-            <li><strong>Hallucination</strong> is a generation problem: a model predicts likely text rather than checking facts, so it can be confidently wrong even with the right reference material in front of it.</li>
+            <li><strong>Hallucination</strong> is a generation problem: a model can generate unsupported or incorrect statements, even when relevant reference material is available. Check claims against the original evidence and use tools to verify observable results.</li>
             <li><strong>Non-determinism</strong> means the same input can produce different output on each run, so output that looked right once may not the next time.</li>
           </ul>
           <p>Both lead to the same safeguard: human review for judgement, and machine-verifiable tests as the signal that work is finished.</p>
@@ -159,7 +160,7 @@
 
         <section id="context-and-loops">
           <h2>Key concept: engineer the context and the loop</h2>
-          <p>Prompt engineering is about how you phrase an instruction. The training recommends role framing, describing the behaviour you want rather than what to avoid, asking for step-by-step reasoning and stating explicit completion criteria. Context engineering is about what information is in the window at each step. As the window fills, recall degrades silently, which the training calls context rot. The design rule is to pre-load only what is always needed and retrieve everything else just in time. <a href="concept.html#context-engineering">Read about context engineering</a>.</p>
+          <p>Prompt engineering concerns the instructions you give a model. State the goal, constraints, required output and completion criteria clearly, then follow the chosen model’s prompting guidance. Asking reasoning models to reveal step-by-step reasoning is not a general best practice; <a href="https://developers.openai.com/api/docs/guides/reasoning-best-practices">OpenAI recommends simple, direct instructions</a>. Context engineering concerns the information available at each step. Long or irrelevant context can impair performance; retrieve further detail when the task needs it. <a href="concept.html#context-engineering">Read about context engineering</a>.</p>
           <h3>Choose how the agent gets information</h3>
           <div class="table-scroll"><table class="wide-table"><caption>Three ways to supply knowledge, as the training describes them</caption><thead><tr><th scope="col">Mechanism</th><th scope="col">How it works</th><th scope="col">Best for</th></tr></thead><tbody>
             <tr><th scope="row">Retrieval-augmented generation (RAG)</th><td>Documents are split into chunks, indexed and searched on each request; the most relevant chunks are added to the context</td><td>Stable reference knowledge, such as framework guides</td></tr>
@@ -167,7 +168,7 @@
             <tr><th scope="row">Model Context Protocol (MCP)</th><td>An open protocol that connects the agent to tools and systems so it can query their current state</td><td>Live data, such as the issue tracker, a database or a running application</td></tr>
           </tbody></table></div>
           <h3>Give every loop a way to stop</h3>
-          <p>An agent works in a reason, act and observe cycle, often called the ReAct pattern. Observing real results is what lets it correct itself. Each loop also needs a convergence condition: an objective signal that the work is done.</p>
+          <p>ReAct is one pattern for interleaving reasoning, actions and observations; agents and workflows can use other control structures. Observed results provide feedback for correction. Define a success check and separate stop conditions for exhausted time, cost or attempts, denied permissions and unresolved decisions. A stopped or blocked run is not a successful result.</p>
           <figure class="concept-figure">
             <figcaption>Figure 2. An agent loop needs an objective convergence check, highlighted, or it has no reason to stop.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
@@ -189,36 +190,36 @@
             </div>
             <p class="diagram-key">Solid arrows show the Reason–Act–Observe cycle and exit path; the dashed arrow shows loop continuation when the machine-verifiable convergence check (cut-corner blue decision) is not yet met.</p>
           </figure>
-          <p>The top row runs left to right: reason, act, observe. The convergence check, highlighted in blue, then asks whether a machine-verifiable condition holds, such as all tests passing with no must-fix findings. If it does, the loop exits; if not, the agent reasons again. Without the check, the loop can run indefinitely, and each pass adds observations to the context until quality drops. <a href="concept.html#loop-engineering">Read about loop engineering</a>.</p>
+          <p>The top row runs left to right: reason, act, observe. The convergence check, highlighted in blue, then asks whether a machine-verifiable condition holds, such as all tests passing with no must-fix findings. If it does, the loop exits; if not, the agent reasons again. Without success and stop conditions, a loop can continue beyond its useful budget. Retain progress and distinguish a passing result from a stop for limits or help. <a href="concept.html#loop-engineering">Read about loop engineering</a>.</p>
           <h3>Plan before you build</h3>
-          <p>Finish research, questions and planning before writing code. Interleaving them causes three failures: research uses up context needed for coding, the agent describes what it would do instead of doing it, and ambiguities surface mid-implementation. The training describes this separation as Questions, Research, Structure, Plan, Implement (QRSPI).</p>
+          <p>Resolve important questions and plan a bounded change before implementation. The training calls its sequence Questions, Research, Structure, Plan, Implement (QRSPI). Treat it as a workflow choice: a prototype or technical spike may be needed to resolve an unknown, and implementation evidence can reopen a design decision. Record the finding and update the plan before dependent work continues.</p>
           <h3>Package procedures as skills</h3>
-          <p>A skill is a reusable capability in a <code>SKILL.md</code> file, with instructions, scripts and resources, invoked as a slash command. Only each skill’s name and one-line description load at start-up; the full instructions load when the skill is used. This progressive disclosure is how Eitri adds skills without filling every session’s context.</p>
+          <p>A skill packages reusable instructions in a SKILL.md file, with optional scripts and resources. Invocation depends on the host: a person may select a skill or the agent may load one when its description matches the task. See the <a href="https://agentskills.io/specification">Agent Skills specification</a>. Only each skill’s name and one-line description load at start-up; the full instructions load when the skill is used. This progressive disclosure is how Eitri adds skills without filling every session’s context.</p>
           <p class="source-ref">Source: <a href="#source-4" aria-label="Source 4: Anthropic, Effective context engineering for AI agents">[4]</a>.</p>
         </section>
 
         <section id="development-principles">
           <h2>Key concept: principles that make agent work verifiable</h2>
-          <p>Agents guess rather than pause when something is ambiguous. The training’s development principles each remove a place where guessing would go unnoticed.</p>
+          <p>Agents can fill gaps with unsupported assumptions when a task is ambiguous. The training’s development principles each remove a place where guessing would go unnoticed.</p>
           <div class="table-scroll"><table class="wide-table"><caption>Development principles and why agents need them</caption><thead><tr><th scope="col">Principle</th><th scope="col">What it means</th><th scope="col">Why it matters with agents</th></tr></thead><tbody>
-            <tr><th scope="row">Human-in-the-loop design</th><td>People review at defined checkpoints for judgement; the system corrects itself only where the result is machine-verifiable</td><td>Scope changes and compliance sign-off cannot be verified automatically. A gate that can be bypassed, even by accident, is not a gate.</td></tr>
-            <tr><th scope="row">Specification first</th><td>A complete specification exists before implementation, and wins when code and specification disagree</td><td>The agent implements intent instead of inventing it mid-loop, which prevents intent drift</td></tr>
-            <tr><th scope="row">Test-driven development (TDD)</th><td>Write a failing test, make it pass with minimal code, then refactor</td><td>Passing tests are the objective signal that the loop has converged</td></tr>
+            <tr><th scope="row">Human-in-the-loop design</th><td>People review at defined checkpoints for judgement; the system corrects itself only where the result is machine-verifiable</td><td>Scope changes and compliance sign-off cannot be verified automatically. Enforce required checks at the shared execution boundary and record authorised exceptions.</td></tr>
+            <tr><th scope="row">Specification first</th><td>Agreed behaviour and constraints guide implementation; resolve conflicting sources with the accountable owner</td><td>Explicit intent helps expose drift; revise requirements through recorded decisions when evidence changes</td></tr>
+            <tr><th scope="row">Test-driven development (TDD)</th><td>Write a failing test, make it pass with minimal code, then refactor</td><td>Passing tests provide evidence for the cases checked; review coverage, side effects and unresolved findings too</td></tr>
             <tr><th scope="row">Architecture decision records (ADRs)</th><td>Short records of context, decision and consequences, kept in version control</td><td>A later session can see that a choice was deliberate instead of silently reversing it</td></tr>
-            <tr><th scope="row">Tracer bullets</th><td>Thin vertical slices that cut through data, logic, interface and tests</td><td>A horizontal slice cannot be tested end to end, so the agent cannot verify its own output</td></tr>
+            <tr><th scope="row">Tracer bullets</th><td>Thin vertical slices that cut through data, logic, interface and tests</td><td>Vertical slices demonstrate a user outcome across relevant layers; horizontal components can still have unit, contract and integration tests</td></tr>
             <tr><th scope="row">Living documentation</th><td>Documented standards are kept in step with reality</td><td>Agents treat repository documentation as instructions and follow stale rules faithfully</td></tr>
           </tbody></table></div>
           <p><a href="concept.html#spec-driven-development">Read about spec-driven development</a>.</p>
-          <p class="source-ref">Source: <a href="#source-5" aria-label="Source 5: Michael Nygard, Documenting architecture decisions">[5]</a>.</p>
+          <p class="source-ref">ADR guidance: <a href="#source-5" aria-label="Source 5: Michael Nygard, Documenting architecture decisions">[5]</a>.</p>
         </section>
 
         <section id="multi-agent">
           <h2>Key concept: multi-agent patterns</h2>
-          <p>Several Eitri skills split work across agents. Four patterns, described by Anthropic, explain how they do it without losing accuracy:</p>
+          <p>Several Eitri skills split work across agents. Anthropic describes orchestration and parallelisation patterns; the review boundaries below are workflow recommendations, not guarantees of accuracy:</p>
           <ul>
-            <li><strong>Orchestrator and workers:</strong> the orchestrator sequences work and routes blockers but does not read files or make implementation decisions, which would fill its context and weaken coordination.</li>
-            <li><strong>Subagents with isolated context:</strong> each subagent starts with a clean context, a restricted tool set and one bounded task, so work on one ticket cannot pollute another.</li>
-            <li><strong>Independent review:</strong> a reviewing agent receives only the final output and the original specification. If it inherits the implementer’s conversation, it tends to judge the reasoning rather than whether the code meets the specification.</li>
+            <li><strong>Orchestrator and workers:</strong> a coordinator decomposes the task, assigns workers and combines their results. Its permitted tools and decisions depend on the workflow; the pattern does not prohibit reading files.</li>
+            <li><strong>Subagents with isolated context:</strong> give each worker a bounded task and the context and tools it needs. Configure isolation explicitly; separate conversations do not isolate shared files, data or services.</li>
+            <li><strong>Independent review:</strong> give the reviewer original requirements, the change and reproducible evidence. A separate context can reduce influence from the implementer’s narrative, but shared assumptions can still cause correlated errors.</li>
             <li><strong>Parallel, specialised work:</strong> independent tasks, such as several compliance checks, can run at the same time, and simpler tasks can go to cheaper models.</li>
           </ul>
           <p class="source-ref">Source: <a href="#source-6" aria-label="Source 6: Anthropic, Building effective agents">[6]</a>.</p>
@@ -335,7 +336,7 @@
             <ol class="practice-steps">
               <li>Why can placing reference material early in the context not prevent hallucination?</li>
               <li>Why is “it looks right” an unreliable sign that an agent has finished?</li>
-              <li>Why should a reviewing agent see only the output and the specification?</li>
+              <li>Which original requirements and reproducible evidence should an independent reviewer inspect?</li>
               <li>Why must a ticket cut through every layer it touches?</li>
               <li>A stakeholder asks for a new story during a wave. What should the product owner do?</li>
               <li>When does a finding during acceptance count as a defect rather than a new requirement?</li>
@@ -353,7 +354,7 @@
             <li id="source-1"><a href="https://github.com/mattpocock/skills">Matt Pocock, skills</a></li>
             <li id="source-2"><a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">SGTechStack, Eitri Agentic Dev Workflow self-paced training</a></li>
             <li id="source-3"><a href="https://arxiv.org/abs/2307.03172">Liu et al., Lost in the Middle: How Language Models Use Long Contexts</a></li>
-            <li id="source-4"><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a></li>
+            <li id="source-4"><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a></li>
             <li id="source-5"><a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Michael Nygard, Documenting architecture decisions</a></li>
             <li id="source-6"><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic, Building effective agents</a></li>
           </ol>

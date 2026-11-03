@@ -126,7 +126,7 @@
         <section id="pre-commit">
           <h2>4.1 Check each commit</h2>
           <p>An automatic hook reviews the staged change whenever a developer commits. It is the same quality and compliance gate used inside the <a href="eds-developer-harness.html#do-work">build loop</a>, scoped to the staged change for fast feedback. It runs in parallel the review against coding standards and the specification, <a href="https://semgrep.dev/">Semgrep</a> static analysis, the <a href="https://info.standards.tech.gov.sg">IM8</a> security review, the <a href="https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md">thermo-nuclear maintainability review</a> and the framework reviews.</p>
-          <p>A Critical or High finding blocks the commit, and the results are written to one consolidated report. The harness allows the hook to be bypassed in an emergency.</p>
+          <p>When the hook runs, a Critical or High finding blocks the commit and its results are written to one consolidated report. Local hooks can be bypassed. Required release controls should also be enforced in the shared pipeline; follow the applicable exception process and retain the reason and follow-up evidence for any authorised bypass.</p>
           <p>The IM8 review checks application technical controls such as input validation, authentication, secrets management, session management and audit logging.</p>
         </section>
 
@@ -200,7 +200,8 @@
           <p class="next-step"><strong>Next step:</strong> check which of these stages your pipeline already enforces, and agree with your platform team how the missing ones will be added. To change what each stage checks against, <a href="eds-team-context.html">add your team’s context</a>.</p>
         </section>
 
-        <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+        <p class="source-ref">Workflow details and availability labels describe the documented Eitri setup. Confirm the installed harness revision and enforced pipeline checks before relying on a control. See the <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri training</a> for supporting guidance.</p>
+          <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
     <aside class="page-contents"><nav aria-label="On this page"><p>On this page</p>

@@ -17,3 +17,7 @@ Read `../writing.md` and `../design.md` before changes. Reference documents are 
 Confirm the content owner, applicable lifecycle version and substantive review date before publishing maintained guidance. Page status metadata is not required and should not be added to page headers or description metadata. Editorial status may be tracked in maintenance records when useful. GitHub Pages publishes `dist/` from `main` through `.github/workflows/pages.yml`; proposed changes can be reviewed in a pull request before merging.
 
 The discovery and implementation pages were reviewed and supplemented with online sources on 28 September 2026. See `product-pages-review.md` for the source mapping, editorial changes and validation, including experiment design, AI evaluation, delivery measures and release recovery.
+
+## Accuracy review
+
+The [2 November 2026 accuracy review](accuracy-review.md) covers all 13 pages, corrections and outstanding source/version checks. The [reference inventory](reference-checks.json) records all 100 original external URLs and the additional sources used by the corrections. Public-source checks do not establish the current internal Eitri release or policy-pack version.

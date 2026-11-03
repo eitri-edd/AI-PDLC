@@ -1,0 +1,1067 @@
+{
+  "checked_on": "2026-11-02",
+  "scope": "Original external href inventory in 13 site/dist HTML pages. Retrieved means readable source returned, not blanket verification of every claim in the source.",
+  "original_unique_urls": 100,
+  "counts": {
+    "retrieved": 97,
+    "dynamic_page_no_text": 1,
+    "verification_challenge": 2
+  },
+  "references": [
+    {
+      "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/",
+      "files": [
+        "ai-pdlc.html",
+        "concept.html",
+        "eds-ai-workflow.html",
+        "eds-developer-harness.html",
+        "eds-path-to-production.html",
+        "eds-po-ba-harness.html",
+        "eds-skills-catalogue.html",
+        "eds-team-context.html",
+        "index.html",
+        "product-discovery.html",
+        "product-implementation.html",
+        "training.html",
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Internal Error ()",
+      "method": "direct HTTP retry"
+    },
+    {
+      "url": "https://dora.dev/capabilities/user-centric-focus/",
+      "files": [
+        "ai-pdlc.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "DORA | Capabilities: User-centric focus",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation",
+      "files": [
+        "ai-pdlc.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "AI-enabled software development fuels innovation | McKinsey",
+      "method": "web reader"
+    },
+    {
+      "url": "https://defence-pp.vercel.app/#/home",
+      "files": [
+        "ai-pdlc.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Internal Error ()",
+      "method": "direct HTTP retry"
+    },
+    {
+      "url": "https://circleci.com/blog/intent-driven-development/",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Intent-driven development: How to guide agents from idea to implementation - CircleCI",
+      "method": "web reader"
+    },
+    {
+      "url": "https://agentfactory.panaversity.org/docs/spec-driven-development-crash-course",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Spec-Driven Development: A Crash Course | The AI Agent Factory",
+      "method": "web reader"
+    },
+    {
+      "url": "https://github.com/mlnjsh/context-engineering",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "GitHub - mlnjsh/context-engineering: 🧠 The Complete Guide to Context Engineering — Research Papers, Blogs, YouTube Videos, Tools & Best Practices for LLM Context Window Optimization · GitHub",
+      "method": "web reader"
+    },
+    {
+      "url": "https://intent-driven.dev/knowledge/context-engineering/",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Context Engineering | Spec-Driven Development | intent-driven.dev",
+      "method": "web reader"
+    },
+    {
+      "url": "https://walkinglabs.github.io/learn-harness-engineering/en/",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Welcome to Learn Harness Engineering | Learn Harness Engineering",
+      "method": "web reader"
+    },
+    {
+      "url": "https://agentfactory.panaversity.org/docs/harness-engineering-crash-course",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Harness Engineering: A Crash Course | The AI Agent Factory",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.iwoszapar.com/resources/loop-engineering-playbook/access",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "The Loop Engineering Playbook - Full Access",
+      "method": "web reader"
+    },
+    {
+      "url": "https://agentfactory.panaversity.org/docs/loop-engineering-crash-course",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Loop Engineering: A Crash Course | The AI Agent Factory",
+      "method": "web reader"
+    },
+    {
+      "url": "https://agentfactory.panaversity.org/docs/graph-engineering-crash-course",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Graph Engineering: A Crash Course | The AI Agent Factory",
+      "method": "web reader"
+    },
+    {
+      "url": "https://vercel.com/academy/creating-a-software-factory",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Creating a Software Factory | Vercel Academy",
+      "method": "web reader"
+    },
+    {
+      "url": "https://addyosmani.com/blog/software-factories/",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Software Factories, Light and Dark | AddyOsmani.com",
+      "method": "web reader"
+    },
+    {
+      "url": "https://intent-driven.dev/knowledge/intent-driven-development/",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Intent-Driven Development | intent-driven.dev",
+      "method": "web reader"
+    },
+    {
+      "url": "https://github.com/github/spec-kit/blob/main/spec-driven.md",
+      "files": [
+        "concept.html",
+        "product-discovery.html",
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "spec-kit/spec-driven.md at main · github/spec-kit · GitHub",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "files": [
+        "concept.html",
+        "training.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Effective context engineering for AI agents \\ Anthropic",
+      "method": "web reader"
+    },
+    {
+      "url": "https://openai.com/index/harness-engineering/",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Harness engineering: leveraging Codex in an agent-first world | OpenAI",
+      "method": "web reader"
+    },
+    {
+      "url": "https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Lecture 02. What a Harness Actually Is | Learn Harness Engineering",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Effective harnesses for long-running agents \\ Anthropic",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.ibm.com/think/topics/loop-engineering",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "What Is Loop Engineering? | IBM",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.puppygraph.com/learn/graph-engineering",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "What Is Graph Engineering? Definition and Patterns",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Building effective AI agents \\ Anthropic",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.oreilly.com/radar/software-factories-light-and-dark/",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Software Factories, Light and Dark – O’Reilly",
+      "method": "web reader"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "GPT-6 Astra Model | OpenAI API",
+      "method": "web reader"
+    },
+    {
+      "url": "https://aclanthology.org/2020.acl-main.740/",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Don’t Stop Pretraining: Adapt Language Models to Domains and Tasks - ACL Anthology",
+      "method": "web reader"
+    },
+    {
+      "url": "https://arxiv.org/abs/2303.17564",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "[2303.17564] BloombergGPT: A Large Language Model for Finance",
+      "method": "web reader"
+    },
+    {
+      "url": "https://arxiv.org/abs/2404.14219",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "[2404.14219] Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+      "method": "web reader"
+    },
+    {
+      "url": "https://arxiv.org/abs/2407.06023",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "[2407.06023] Distilling System 2 into System 1",
+      "method": "web reader"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "GPT-6.1 Sol Model | OpenAI API",
+      "method": "web reader"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Claude Fable 5.1 - Claude Platform Docs",
+      "method": "web reader"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Claude Opus 5.5 - Claude Platform Docs",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.anthropic.com/transparency",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Anthropic’s Transparency Hub \\ Anthropic",
+      "method": "web reader"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/latest-model",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Using GPT-6 | OpenAI API",
+      "method": "web reader"
+    },
+    {
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Introducing System One Models & Jev - TypeSafe AI Blog",
+      "method": "web reader"
+    },
+    {
+      "url": "https://docs.typesafe.ai/concepts/system-one",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "System One - TypeSafe",
+      "method": "web reader"
+    },
+    {
+      "url": "https://docs.typesafe.ai/primitives",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Primitives (Questions) - TypeSafe",
+      "method": "web reader"
+    },
+    {
+      "url": "https://docs.typesafe.ai/confidence",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Confidence - TypeSafe",
+      "method": "web reader"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.02267",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "[2610.02267] Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.thoughtworks.com/en-sg/insights/decoder/s/spec-driven-development",
+      "files": [
+        "eds-ai-workflow.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Spec-driven development | Thoughtworks Singapore",
+      "method": "web reader"
+    },
+    {
+      "url": "https://context7.com",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Context7 - Up-to-date docs for AI agents",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.archunit.org",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Unit test your Java architecture - ArchUnit",
+      "method": "web reader"
+    },
+    {
+      "url": "https://github.com/sverweij/dependency-cruiser/tree/main",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "GitHub - sverweij/dependency-cruiser: Validate and visualize dependencies. Your rules. JavaScript, TypeScript, CoffeeScript. ES6, CommonJS, AMD. · GitHub",
+      "method": "web reader"
+    },
+    {
+      "url": "https://info.standards.tech.gov.sg",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-path-to-production.html",
+        "eds-skills-catalogue.html",
+        "eds-team-context.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Home | Singapore Government ICT&SS Policy Reform",
+      "method": "web reader"
+    },
+    {
+      "url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-path-to-production.html",
+        "eds-skills-catalogue.html",
+        "eds-team-context.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Agentic Risk & Capability Framework - Agentic Risk & Capability Framework",
+      "method": "web reader"
+    },
+    {
+      "url": "https://stitch.withgoogle.com",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-po-ba-harness.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "dynamic_page_no_text",
+      "title": "Stitch - Design with AI",
+      "method": "web reader",
+      "note": "JavaScript application; no readable product documentation returned. Eitri conversion status remains an internal version-dependent claim."
+    },
+    {
+      "url": "https://semgrep.dev/",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-path-to-production.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Semgrep App Security Platform | AI-assisted SAST, SCA and Secrets Detection",
+      "method": "web reader"
+    },
+    {
+      "url": "https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-path-to-production.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "plugins/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md at main · cursor/plugins · GitHub",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.sonarsource.com",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "AI Code Review & Verification Tools | Code Security | Sonar",
+      "method": "web reader"
+    },
+    {
+      "url": "https://pitest.org",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "PIT Mutation Testing",
+      "method": "web reader"
+    },
+    {
+      "url": "https://stryker-mutator.io",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Stryker Mutator",
+      "method": "web reader"
+    },
+    {
+      "url": "https://agent-browser.dev",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "agent-browser | Browser Automation for AI",
+      "method": "web reader"
+    },
+    {
+      "url": "https://playwright.dev",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Fast and reliable end-to-end testing for modern web apps | Playwright",
+      "method": "web reader"
+    },
+    {
+      "url": "https://owasp.org/projects/threat-dragon",
+      "files": [
+        "eds-path-to-production.html",
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "OWASP Threat Dragon | OWASP Foundation",
+      "method": "web reader"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats",
+      "files": [
+        "eds-path-to-production.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Threats - Microsoft Threat Modeling Tool - Azure | Microsoft Learn",
+      "method": "web reader"
+    },
+    {
+      "url": "https://linddun.org",
+      "files": [
+        "eds-path-to-production.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Internal Error ()",
+      "method": "direct HTTP retry"
+    },
+    {
+      "url": "https://speckit.org",
+      "files": [
+        "eds-po-ba-harness.html",
+        "eds-team-context.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Spec Kit - AI-Powered Specification-Driven Development Toolkit",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.figma.com/make/",
+      "files": [
+        "eds-po-ba-harness.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Internal Error ()",
+      "method": "direct HTTP retry"
+    },
+    {
+      "url": "https://github.com/dsta-productops/clara",
+      "files": [
+        "eds-po-ba-harness.html",
+        "eds-team-context.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "GitHub - dsta-productops/clara · GitHub",
+      "method": "web reader"
+    },
+    {
+      "url": "https://impeccable.style",
+      "files": [
+        "eds-skills-catalogue.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Impeccable: The missing design vocabulary for agents",
+      "method": "web reader"
+    },
+    {
+      "url": "https://okf.md",
+      "files": [
+        "eds-team-context.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "OKF — The Markdown Spec for Humans and AI Agents",
+      "method": "web reader"
+    },
+    {
+      "url": "https://defence-pp.vercel.app/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Internal Error ()",
+      "method": "direct HTTP retry"
+    },
+    {
+      "url": "https://www.designcouncil.org.uk/resources/the-double-diamond/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "The Double Diamond - Design Council",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.svpg.com/four-big-risks/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "The Four Big Risks - Silicon Valley Product Group : Silicon Valley Product Group",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.linkedin.com/pulse/from-headless-thoughtful-why-3-in-a-box-operating-model-sumit-sheth-imptc/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "From Headless to Thoughtful: Why 3-in-a-Box is the Operating Model for the Agentic Era and unlocks AUX",
+      "method": "web reader"
+    },
+    {
+      "url": "https://productschool.com/blog/product-fundamentals/what-is-product-discovery",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "The Definitive Guide to Product Discovery and Frameworks",
+      "method": "web reader"
+    },
+    {
+      "url": "https://productschool.com/blog/product-fundamentals/product-experimentation",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "The Product Experimentation Playbook for AI PMs",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.producttalk.org/opportunity-solution-trees/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Opportunity Solution Trees: Visualize Your Discovery to Stay Aligned and Drive Outcomes",
+      "method": "web reader"
+    },
+    {
+      "url": "https://theleanstartup.com/principles",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "The Lean Startup | Methodology",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.svpg.com/dual-track-agile/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Dual-Track Agile - Silicon Valley Product Group : Silicon Valley Product Group",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.gv.com/sprint",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "The Design Sprint — GV",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.nngroup.com/articles/wizard-of-oz/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "The Wizard of Oz Method in UX - NN/G",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Patterns of Trustworthy Experimentation: Pre-Experiment Stage - Microsoft Research",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.optimizely.com/optimization-glossary/multivariate-testing",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Multivariate testing",
+      "method": "web reader"
+    },
+    {
+      "url": "https://productschool.com/blog/artificial-intelligence/how-improve-product-discovery-with-ai",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Your Guide on How to Improve Product Discovery with AI",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.nngroup.com/articles/synthetic-users/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Synthetic Users: If, When, and How to Use AI-Generated “Research” - NN/G",
+      "method": "web reader"
+    },
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.christenseninstitute.org/theory/jobs-to-be-done/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Jobs to Be Done Theory - Christensen Institute",
+      "method": "web reader"
+    },
+    {
+      "url": "https://info.amplitude.com/rs/138-CDN-550/images/Amplitude-The-North-Star-Playbook.pdf",
+      "files": [
+        "product-discovery.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "",
+      "method": "web reader"
+    },
+    {
+      "url": "https://sre.google/workbook/canarying-releases/",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Google SRE - Canary Release: Deployment Safety and Efficiency",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Demystifying evals for AI agents \\ Anthropic",
+      "method": "web reader"
+    },
+    {
+      "url": "https://dora.dev/guides/dora-metrics/",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "DORA | DORA’s software delivery performance metrics",
+      "method": "web reader"
+    },
+    {
+      "url": "https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training",
+      "files": [
+        "training.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "GitHub - SGTechStack/ai-coding-workflow-d2-self-paced-training · GitHub",
+      "method": "web reader"
+    },
+    {
+      "url": "https://github.com/mattpocock/skills",
+      "files": [
+        "training.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "GitHub - mattpocock/skills: Skills for Real Engineers. Straight from my .agents directory. · GitHub",
+      "method": "web reader"
+    },
+    {
+      "url": "https://arxiv.org/abs/2307.03172",
+      "files": [
+        "training.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "[2307.03172] Lost in the Middle: How Language Models Use Long Contexts",
+      "method": "web reader"
+    },
+    {
+      "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+      "files": [
+        "training.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Documenting Architecture Decisions",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "files": [
+        "training.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Building effective AI agents \\ Anthropic",
+      "method": "web reader"
+    },
+    {
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Introducing DORA’s inaugural AI Capabilities Model | Google Cloud Blog",
+      "method": "web reader"
+    },
+    {
+      "url": "https://dora.dev/research/2025/dora-report/",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "DORA | State of AI-assisted Software Development 2025",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2025",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "The State of AI: Global Survey 2025 | McKinsey",
+      "method": "web reader"
+    },
+    {
+      "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity - METR",
+      "method": "web reader"
+    },
+    {
+      "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "We are Changing our Developer Productivity Experiment Design - METR",
+      "method": "web reader"
+    },
+    {
+      "url": "https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "verification_challenge",
+      "title": "www.imda.gov.sg",
+      "method": "web reader",
+      "note": "Full source text not retrieved; official indexed excerpts corroborate publication/update dates but do not constitute full framework verification."
+    },
+    {
+      "url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2026/updated-model-ai-governance-framework-for-agentic-ai",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "verification_challenge",
+      "title": "www.imda.gov.sg",
+      "method": "web reader",
+      "note": "Full source text not retrieved; official indexed excerpts corroborate publication/update dates but do not constitute full framework verification."
+    },
+    {
+      "url": "https://dora.dev/capabilities/generative-organizational-culture/",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "DORA | Capabilities: Generative organizational culture",
+      "method": "web reader"
+    },
+    {
+      "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "LLM06:2025 Excessive Agency - OWASP Gen AI Security Project",
+      "method": "web reader"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/automation",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Automation - Cloud Adoption Framework | Microsoft Learn",
+      "method": "web reader"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/secure/teams-roles",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "Security Teams, Roles, and Functions - Cloud Adoption Framework | Microsoft Learn",
+      "method": "web reader"
+    },
+    {
+      "url": "https://dora.dev/capabilities/monitoring-and-observability/",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-02",
+      "result": "retrieved",
+      "title": "DORA | Capabilities: Monitoring and observability",
+      "method": "web reader"
+    }
+  ],
+  "additional_checked_sources": [
+    "https://github.com/github/spec-kit",
+    "https://martinfowler.com/articles/structured-prompt-driven/",
+    "https://developers.openai.com/api/docs/guides/reasoning-best-practices",
+    "https://agentskills.io/specification",
+    "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/arc_framework/controls/",
+    "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/00-pm-ba-workflow.html",
+    "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html",
+    "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html",
+    "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+    "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
+    "https://www.anthropic.com/research/demystifying-evals-for-ai-agents"
+  ],
+  "final_unique_urls": 101,
+  "final_reference_coverage": "Every external href in the final HTML inventory has a retrieval record or is an explicitly checked additional source. Original unreadable source exceptions remain documented."
+}

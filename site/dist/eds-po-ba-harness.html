@@ -107,7 +107,7 @@
           </figure>
           <p>Path 1 suits simple or well-defined features and produces a written specification. Path 2 suits large or ambiguous features and produces an early-draft technical requirements document (TRD) on the team’s issue tracker. Path 3 suits user research on new products and produces a set of specification files. Each path can add a prototype, and each ends with the same commit and handoff.</p>
           <div class="table-scroll"><table class="wide-table"><caption>The three PO/BA paths compared</caption><thead><tr><th scope="col">Path</th><th scope="col">Best for</th><th scope="col">Main tools</th><th scope="col">Hands off</th></tr></thead><tbody>
-            <tr><th scope="row"><a href="#path-speckit">1. SpecKit</a></th><td>Non-technical POs or BAs with simple or well-defined features</td><td><a href="https://speckit.org">SpecKit</a>, with optional <a href="https://stitch.withgoogle.com">Google Stitch</a>, <a href="https://www.figma.com/make/">Figma Make</a> or an agent-built HTML prototype</td><td>A specification file and an optional prototype</td></tr>
+            <tr><th scope="row"><a href="#path-speckit">1. SpecKit</a></th><td>Non-technical POs or BAs with simple or well-defined features</td><td><a href="https://github.com/github/spec-kit">SpecKit</a>, with optional <a href="https://stitch.withgoogle.com">Google Stitch</a>, <a href="https://www.figma.com/make/">Figma Make</a> or an agent-built HTML prototype</td><td>A specification file and an optional prototype</td></tr>
             <tr><th scope="row"><a href="#path-socratic">2. Socratic workflow</a></th><td>Technical POs or BAs with large, ambiguous features whose scope is unclear</td><td>Matt Pocock’s planning skills, which question, prototype and research before anything is written</td><td>An early-draft TRD on the tracker and an optional prototype</td></tr>
             <tr><th scope="row"><a href="#path-clara">3. CLARA research</a></th><td>POs or BAs researching users for a new product or complex feature</td><td><a href="https://github.com/dsta-productops/clara">CLARA</a>, querying Confluence, with Prizm Design components for prototypes</td><td>Specification files and an optional prototype</td></tr>
           </tbody></table></div>
@@ -115,7 +115,7 @@
 
         <section id="path-speckit">
           <h2>Path 1: SpecKit, for simple or well-defined features</h2>
-          <p>This path fits a feature that is already understood, where the team needs clear user stories quickly. <a href="https://speckit.org">SpecKit</a> is GitHub’s open-source toolkit for spec-driven development.</p>
+          <p>This path fits a feature that is already understood, where the team needs clear user stories quickly. <a href="https://github.com/github/spec-kit">SpecKit</a> is GitHub’s open-source toolkit for spec-driven development.</p>
           <ol class="practice-steps">
             <li><strong>Generate the specification.</strong> SpecKit produces a specification file with the functional requirements and core user stories.</li>
             <li><strong>Optionally, design or prototype the interface.</strong> The PO or BA validates the requirements visually with stakeholders. They can paste the user stories into <a href="https://stitch.withgoogle.com">Google Stitch</a> or <a href="https://www.figma.com/make/">Figma Make</a>, or ask the coding agent to generate a design or a standalone HTML prototype from them.</li>
@@ -136,7 +136,7 @@
 
         <section id="path-clara">
           <h2>Path 3: product research with CLARA</h2>
-          <p>This path fits a new product or complex feature, where the team needs to understand users before it can detail functional requirements. <a href="https://github.com/dsta-productops/clara">CLARA</a> is an interactive research harness that queries Confluence to refine product concepts.</p>
+          <p>This path fits a new product or complex feature, where the team needs to understand users before it can detail functional requirements. <a href="https://github.com/dsta-productops/clara">CLARA</a> is a research harness for synthesising programme knowledge and producing product artefacts. The EDS path described here uses Confluence; the upstream CLARA core also supports a Plane distribution.</p>
           <ol class="practice-steps">
             <li><strong>Research and discover.</strong> CLARA’s step-by-step research harness gathers and refines what is already known.</li>
             <li><strong>Work through the design-thinking stages.</strong> The team builds user personas and journey maps, defines the root-cause problem statement, generates solution ideas and converges on the best user experience.</li>
@@ -159,7 +159,8 @@
           <p class="next-step"><strong>Next step:</strong> agree with your architect or Tech Lead where the PRD will live, then <a href="eds-developer-harness.html#plan">see how developers plan from it</a>.</p>
         </section>
 
-        <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+        <p class="source-ref">Workflow details and availability labels describe the documented Eitri setup. Confirm the installed harness revision and enforced pipeline checks before relying on a control. See the <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri training</a> for supporting guidance.</p>
+          <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
     <aside class="page-contents"><nav aria-label="On this page"><p>On this page</p>
