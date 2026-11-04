@@ -52,8 +52,8 @@
           <p class="eyebrow">Development guide</p>
 <h1>Product discovery</h1>
 <p class="lead">Decide which problem to solve, test possible solutions and use the evidence to choose what to build.</p>
-<p>Use these six steps with Product, Design and Engineering to choose the next learning or delivery investment. A fictional service-desk example follows the decisions from an initial problem to a limited pilot.</p>
-<ul class="metadata-bar"><li>Updated: <time datetime="2026-11-04">4 November 2026</time></li></ul>
+<p>Use these six steps with Product, Design and Engineering to choose the next learning or delivery investment. Start with a user problem, an existing finding or an uncertain capability; you do not need a settled solution. A fictional service-desk example follows the decisions from an initial problem to a limited pilot.</p>
+<ul class="metadata-bar"><li>Last reviewed: <time datetime="2026-11-05">5 November 2026</time></li></ul>
 
         </header>
 <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
@@ -65,6 +65,11 @@
 <li class="page-map-node"><strong>Decide</strong><div class="page-map-links"><a href="#validate-and-decide">5. Decide the next investment</a><a href="#fig-decision">Choose a feedback route</a></div></li>
 <li class="page-map-node"><strong>Prepare delivery</strong><div class="page-map-links"><a href="#handover">6. Agree what to build first</a><a href="product-implementation.html#implementable-definition">Implementation readiness</a></div></li>
 </ol></figure>
+        <aside class="ai-chapter-map" aria-label="How AI can help in this chapter">
+          <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help in this chapter</p>
+          <ul role="list"><li><a href="#ai-research">Organise research</a></li><li><a href="#ai-prioritisation">Challenge priorities</a></li><li><a href="#ai-concept-iteration">Explore alternatives</a></li></ul>
+        </aside>
+
 <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page, mobile"><a href="#product-team">Start together</a>
 <a href="#discovery-loop">The learning journey</a>
 <a href="#product-thesis">1. Frame and understand the problem</a>
@@ -96,8 +101,7 @@
         </svg>
 
 <section id="product-team"><h2>Start together: Product, Design and Engineering</h2>
-<p><strong>Product discovery is shared work for Product, Design and Engineering throughout the learning cycle.</strong> The product owner does not carry discovery alone. Bring all three perspectives into problem framing, research, alternatives, experiments and the recommendation on what to build.</p>
-<p>Begin with the problem and evidence, before a solution is fixed. Any discipline can initiate discovery. Keep all three involved as findings change the direction.</p>
+<p><strong>Product, Design and Engineering investigate the problem and compare possible responses together.</strong> Any discipline can initiate discovery. Begin with the evidence before fixing a solution, and keep all three perspectives involved as findings change the direction.</p>
 <p class="source-ref">Basis: <a href="#source-3">SVPG’s four-risk guidance [3]</a> calls for collaborative problem solving; <a href="#source-12">its discovery and delivery guidance [10]</a> describes Product, Design and Engineering working side by side.</p>
 
 <h3>Bring different expertise to the same problem</h3>
@@ -106,16 +110,18 @@
 <li><strong>Design:</strong> investigate how people carry out the task, where they struggle and whether they can use the proposed solution. Shape and test the complete experience, including failure and recovery.</li>
 <li><strong>Engineering:</strong> investigate what is technically possible with the available time, skills and technology. Explore alternatives and test uncertain capabilities, integrations, permissions and operating costs early.</li>
 </ul>
-<p>These are complementary areas of expertise, not separate phases or exclusive ownership of questions. All three help frame the problem, generate options and interpret findings. Map the responsibilities to local roles and involve research, testing, operations, security and other specialists as needed.</p>
+<p>These areas of expertise overlap: all three help frame the problem, generate options and interpret findings. Map the responsibilities to local roles and involve research, testing, operations, security and other specialists as needed.</p>
 
-<p>Choose the question, compare responses and review findings together. Use the same source notes and test results to record what changed, where the team disagrees and what to investigate next.</p>
+<p>Use shared source notes and test results to record what changed, where the team disagrees and what to investigate next.</p>
 <p>Keep a short <a href="#concept-brief">concept brief</a> linked to the <a href="#experiment-design">experiment and decision records</a>. Develop the product requirements document (PRD) together as intended behaviour becomes clearer. The authorised decision owner makes the investment decision using the team’s evidence; collaboration does not replace local approval authority.</p>
 <p class="source-ref"><a href="#source-10">Torres’s opportunity-tree guidance [8]</a> describes discovery mapping as a team activity for Product, Design and Engineering. <a href="#source-5">Sheth’s “3-in-a-Box” proposal [5]</a> emphasises continuous co-creation around intent, interaction and implementation.</p>
 
+<aside class="ai-help" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
 <h3 id="ai-discovery">Keep AI assistance connected to evidence</h3>
 <p>Use AI to support the team’s research, prototypes and technical tests. Give each task a question, permitted inputs, an expected output and a reviewer. When an AI agent uses tools to carry out several steps, set its permissions before it starts. Label observations, AI interpretations and untested suggestions separately, and check original sources before relying on a generated claim.</p>
 <p class="source-ref">Related reading: <a href="#source-17">Product School’s AI discovery guide [15]</a>. <a href="#source-19">NIST’s Generative AI Profile [17]</a>, action MS-2.5-003 and Appendix A.1.6, support checking generated citations and retaining content provenance.</p>
 
+</aside>
 <details class="deep-dive"><summary>Reference: human judgement and agent-supported work</summary><div>          <p>Use the table to agree responsibilities and decision owners across the team. One person may cover several disciplines.</p>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Human judgement and agent-supported work"><table><caption>Human judgement and agent-supported work</caption><thead><tr><th scope="col">Participant</th><th scope="col">Human judgement and accountability</th><th scope="col">Agent-supported work</th></tr>
 </thead><tbody>
@@ -135,8 +141,8 @@
             <li>explicit human approval for high-consequence decisions.</li>
           </ul>
 </div></details>
-<p>People remain accountable for delegated work. Review technical limits alongside user needs before investing in a solution.</p>
-<p><a href="transformation.html#team-composition">Read about human–agent team composition</a>.</p>
+<p>Review technical limits alongside user needs before investing in a solution.</p>
+<p><a href="transformation.html#team-composition">Read about delegated work and review capacity</a>.</p>
 <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: MINDEF and DSTA, The Defence Product Playbook">[1]</a>, “Structure the team right”, on named accountability and multidisciplinary teams.</p>
 </section>
 <span class="anchor-alias" id="ideation-loop" aria-hidden="true"></span>
@@ -174,7 +180,7 @@
 </details>
 </figure>
 <p>Steps 3–5 form a short cycle: choose a test, run it, then decide what the findings justify. Repeat within the agreed budget. Decisions to investigate, change direction or stop can also follow problem research or an early comparison; there is no need to complete every step first. Scale the work to the consequences of the decision.</p>
-<p>Business discovery investigates need, value, adoption and affordability. Technical discovery investigates whether a candidate solution can work within delivery and operating limits. Carry both through every phase; a critical technical question can justify a test before the problem framing is complete.</p>
+<p>Business discovery investigates need, value, adoption and affordability. Technical discovery investigates whether a candidate solution can work within delivery and operating limits. Carry both throughout discovery; a critical technical question can justify a test before the problem framing is complete.</p>
 <h3 id="product-intent">Develop the brief and PRD as you learn</h3>
 <p>Keep records detailed enough for the next decision. A delivery slice is a small, useful scope the team can build and assess. Agree that scope from the evidence, then carry its requirements and remaining questions into implementation.</p>
 <div class="table-scroll" role="region" aria-label="Concept brief and PRD progression" tabindex="0"><table><caption>One evolving product intent, with increasing evidence</caption><thead><tr><th scope="col">Artefact</th><th scope="col">Purpose and maturity</th></tr>
@@ -223,6 +229,7 @@
 <p>Agree which decision the research will inform, what could change it and how much time and money to spend. For each question, name a source, method and owner. Review existing findings first, and recruit people with different tasks, experience and access needs.</p>
 <ul><li><strong>Problem evidence:</strong> observe the current task and alternatives; record friction, consequences and exceptions with the source and date.</li><li><strong>Starting measure (baseline):</strong> record the current outcome, how it is measured and who would benefit from improvement. Record gaps that prevent a credible comparison.</li><li><strong>System context:</strong> ask system owners to demonstrate the relevant interfaces, permissions and failure behaviour. Mark unconfirmed capabilities as assumptions.</li><li><strong>Findings:</strong> separate observations from explanations, retain contradictions and identify the next question. Decide whether the evidence supports comparing opportunities or requires further investigation.</li></ul>
 <p class="source-ref">Problem research follows the <a href="#source-2">Design Council’s Discover and Define [2]</a>.</p></div>
+<aside class="ai-help" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
 <h3 id="ai-research">Check AI summaries against the research</h3>
 <p>Use AI to group interview notes, support cases or observations into recurring issues. Before using the summary to choose a problem or solution, ask a reviewer to check it against the original records:</p>
 <ol class="practice-steps">
@@ -231,6 +238,7 @@
 <li><strong>Look for missing issues.</strong> Choose a sample of original records yourself, beyond those the AI cited. Check whether the summary missed different experiences, access needs or rare but serious problems. Review recordings or observation notes when a transcript leaves relevant behaviour unclear.</li>
 <li><strong>Separate observations from explanations.</strong> Label what the research shows and what still needs testing. Ask system owners to check technical explanations against documentation or executable tests before treating them as facts.</li>
 </ol>
+</aside>
 <aside class="example" aria-label="Fictional example of checking an AI summary">
 <p class="example-label">Example · fictional service-desk research</p>
 <p>An AI summary says, “The search system is broken.” The original observations show that staff needed help finding an article in 7 of 24 cases. Record that finding, but leave the cause open: search behaviour, article quality or another issue could explain the difficulty. Choose a follow-up observation or technical test to investigate.</p>
@@ -297,11 +305,13 @@
 <svg viewBox="0 0 680 740" role="img" aria-labelledby="fig-opportunity-title" aria-describedby="fig-opportunity-desc"><title id="fig-opportunity-title">Separate the opportunity, concepts and tests</title><desc id="fig-opportunity-desc">Fictional example: one outcome connects to an observed opportunity and three alternative concepts. The assistant branch illustrates separate user/value and technical feasibility tests. Both feed a joint evidence review; the branches are questions, not successful test results.</desc>
 <rect class="d-node" x="130" y="15" width="420" height="69" rx="8"/><text class="d-title" x="340" y="41" text-anchor="middle">Outcome: reduce routine guidance time</text><text class="d-sub" x="340" y="64" text-anchor="middle">Keep correctness and access boundaries intact</text><path class="d-line" d="M340 84V114" marker-end="url(#arrow)"/><rect class="d-node" x="100" y="120" width="480" height="90" rx="8"/><text class="d-title" x="340" y="146" text-anchor="middle">Opportunity: finding the right article is difficult</text><text class="d-sub" x="340" y="169" text-anchor="middle">Observed: 7 of 24 fictional cases needed help</text><text class="d-sub" x="340" y="190" text-anchor="middle">Poor retrieval is a hypothesis; investigate other causes</text><path class="d-line" d="M340 210V235H110V260" marker-end="url(#arrow)"/><path class="d-line" d="M340 235V260" marker-end="url(#arrow)"/><path class="d-line" d="M340 235H570V260" marker-end="url(#arrow)"/><rect class="d-node" x="15" y="265" width="190" height="69" rx="8"/><text class="d-title" x="110" y="291" text-anchor="middle">Concept A</text><text class="d-sub" x="110" y="314" text-anchor="middle">Curated article index</text><rect class="d-node" x="245" y="265" width="190" height="69" rx="8"/><text class="d-title" x="340" y="291" text-anchor="middle">Concept B</text><text class="d-sub" x="340" y="314" text-anchor="middle">Clearer guidance</text><rect class="d-node d-node-accent" x="475" y="265" width="190" height="69" rx="8"/><text class="d-title" x="570" y="291" text-anchor="middle">Concept C</text><text class="d-sub" x="570" y="314" text-anchor="middle">Draft-response assistant</text><text class="d-label" x="340" y="372" text-anchor="middle">Compare all three with the current workflow</text><text class="d-label" x="340" y="397" text-anchor="middle">Illustration below: investigate Concept C; selection remains provisional</text><path class="d-line" d="M570 334V425H170V455" marker-end="url(#arrow)"/><path class="d-line" d="M570 425H510V455" marker-end="url(#arrow)"/><rect class="d-node" x="15" y="460" width="310" height="90" rx="8"/><text class="d-title" x="170" y="486" text-anchor="middle">User and value test</text><text class="d-sub" x="170" y="509" text-anchor="middle">Can staff complete comparable tasks?</text><text class="d-sub" x="170" y="530" text-anchor="middle">Record correctness, time and correction effort</text><rect class="d-node" x="355" y="460" width="310" height="90" rx="8"/><text class="d-title" x="510" y="486" text-anchor="middle">Technical feasibility test</text><text class="d-sub" x="510" y="509" text-anchor="middle">Can retrieval respect source permissions?</text><text class="d-sub" x="510" y="530" text-anchor="middle">Test permitted, denied and missing sources</text><path class="d-line" d="M170 550V580H340M510 550V580H340"/><path class="d-line" d="M340 580V610" marker-end="url(#arrow)"/><rect class="d-node d-node-accent" x="100" y="615" width="480" height="90" rx="8"/><text class="d-title" x="340" y="641" text-anchor="middle">Review the evidence together</text><text class="d-sub" x="340" y="664" text-anchor="middle">A useful prototype cannot settle an untested integration.</text><text class="d-sub" x="340" y="685" text-anchor="middle">A failed concept can leave the underlying need intact.</text>
 </svg></div><p class="diagram-key">Schematic comparison of alternative concepts and complementary tests; no concept is selected. Not a complete Opportunity Solution Tree.</p></details></figure>
-          <h3 id="ai-prioritisation">Check the assumptions behind priorities</h3>
+          <aside class="ai-help" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
+<h3 id="ai-prioritisation">Check the assumptions behind priorities</h3>
           <p>Compare planned investment with actual effort, measured outcomes, obligations and dependencies. Use competitor research to suggest questions for users; a supplier’s launch announcement alone does not show what customers need.</p>
           <p>Compare delivering sooner with testing the largest uncertainty first. Use the same intended outcomes and resource limits for both plans. Engineering checks dependencies, quality targets, operating cost and how easily the approach could change. Record what evidence would change the order of work.</p>
           <p>For an AI-generated ranking, record the benefit, effort and dependency assumptions. Check whether plausible changes would reverse the ranking. Agreement across generated answers does not replace evidence.</p>
 
+</aside>
 <h3 id="product-success">Define success for the selected scope</h3>
 <p>Product, Design and Engineering agree how they will tell whether users benefit and the product creates value. Choose the measures during discovery, test whether they can be collected, and carry them into the <a href="#measurement-plan">handoff measurement plan</a>. Passing acceptance tests shows that behaviour meets the specification; product measures show whether that behaviour helps people in use.</p>
 <p>A <strong>North Star metric</strong> is a main product measure of the value users receive, chosen for its expected connection to longer-term business results. <a href="#source-21">Amplitude’s North Star Playbook [19]</a> pairs it with a small set of measures the team can influence. For an internal service, this guide recommends relating that value to the organisation’s mission or service outcome.</p>
@@ -315,12 +325,14 @@
 <p>Assess access restrictions separately from average quality scores. An accurate answer still fails the test if it exposes restricted information. Finding no failures in a small test does not prove that failures are impossible.</p>
 <p class="source-ref">The <a href="#source-1">Defence Product Playbook [1]</a> connects a value measure to a longer-term outcome. <a href="#source-10">Torres [8]</a> distinguishes product outcomes from feature adoption.</p>
 <p class="metric-strip"><strong>Measurement thread:</strong> outcome → metric definition and baseline → target and guardrails → experiment result → handoff → review after use. Keep definitions and evidence linked across the journey.</p>
+<aside class="ai-help" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
 <h3>Use AI differently when widening and narrowing</h3>
 <ul>
             <li><strong>When widening,</strong> use AI to research broadly, summarise evidence, generate different concepts, surface hidden assumptions and explore alternative journeys or technical approaches.</li>
             <li><strong>When narrowing,</strong> compare options against user value, strength of evidence, feasibility, cost, risk and strategic fit. Do not choose an option because it is the most polished or the easiest to generate.</li>
           </ul>
           <p>Keep source links beside research summaries and check them before using a claim. Treat generated personas, synthetic interviews and an agent’s critique as prompts for research, not observations of real users.</p>
+</aside>
 <h3>Challenge the proposal before refining it</h3>
 <p>AI can turn a stakeholder request into a polished specification quickly. That speed creates a risk: refining an idea nobody has challenged. Before commitment, ask a reviewer, or an agent instructed to act as a critic, to work through these questions:</p>
 <ol class="practice-steps">
@@ -450,15 +462,17 @@
 <h3>Keep findings separate from proposed changes</h3>
 <p>Link observations to source notes, separate observation from interpretation and retain contradictory evidence. Record suggested changes to the concept, interaction states or draft PRD alongside the findings. Use step 5 to decide which changes the evidence supports before another test. Preserve the original decision rule; agree any revised criteria before the next test.</p>
 <p>Generated personas, synthetic interviews and model critiques can suggest research questions. They are not observations of real users; see <a href="#source-18">Nielsen Norman Group’s assessment of synthetic users [16]</a>. Keep participant information in controlled records and link only the evidence needed for the decision.</p>
+<aside class="ai-help" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
 <h3 id="ai-concept-iteration">Generate alternatives from verified findings</h3>
           <p>After a test, use the reviewed findings to generate different responses to the same need. Keep the original observations and test criteria alongside each proposed change. Compare alternatives by the failure they address, the value assumption they test and the technical work they require.</p>
           <p>Include a simpler or non-AI approach where useful. Engineering checks whether the new behaviour remains feasible, and Design checks the complete journey. Record candidate follow-up experiments for the decision in step 5. More generated variants are useful only when they expose a choice worth testing.</p>
 
+</aside>
 <h3>Test with the people who will use it</h3>
-<p>The Defence Product Playbook groups fast learning into four habits, which it calls TEST:</p>
+<p>The Defence Product Playbook groups fast learning into four habits, which it calls TEST. The following adapts those habits to this guide’s experiment and prototype closure records:</p>
 <ul>
             <li><strong>Trial with real operators:</strong> test with the people who will use the product, not project team members standing in for them.</li>
-            <li><strong>Expose the riskiest assumption:</strong> build the least you can to test the assumption most likely to sink the product, then discard it.</li>
+            <li><strong>Expose the riskiest assumption:</strong> build only what is needed to test the assumption most likely to invalidate the proposal. Use the prototype’s recorded closure plan to retire it, retain it for research or assess it for reuse.</li>
             <li><strong>Shorten the loop:</strong> measure the time from user feedback to a changed prototype in days. If the loop is slow, fix that first.</li>
             <li><strong>Turn tests into decisions:</strong> end each test by keeping, changing or dropping the idea.</li>
           </ul>
@@ -530,6 +544,8 @@
 <p><a href="#example-6">Follow the example: 6 of 6</a>.</p>
 </div></details>
 <p class="learning-output"><strong>Output:</strong> Dated decision, evidence links, rationale, scope changes, owners and next actions. <strong>Next:</strong> Only a delivery commitment advances to step 6; use the named return step for other outcomes.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-decision" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask AI to assemble the experiment findings, limitations and open questions into a draft decision brief, linked to the test records. Product, Design and Engineering check that it separates observations from interpretations; the authorised owner records the investment decision and its rationale.</p></aside>
 </section>
 <section id="handover"><h2>6. Agree what to build first</h2>
 <p>Use the investment decision from step 5 to agree the first useful scope to build and assess. This <strong>delivery slice</strong> gives a defined user group a complete, limited capability. Product, Design and Engineering agree its boundaries together using the concept brief, experiment findings and technical and cost evidence.</p>
@@ -551,7 +567,7 @@
 </ul>
 <p>At handoff, ask the delivery team to explain how each result will be collected and used. Resolve missing definitions, owners or critical collection work before judging the pilot or release a success. Keep open measurement questions visible with a plan to resolve them.</p>
 <p class="source-ref">The measurement-plan format applies <a href="#source-21">Amplitude’s metric-and-input framework [19]</a> and draws on <a href="#source-15">Microsoft’s experiment guidance [13]</a> on hypotheses, success measures, guardrails and data quality. A measurement plan does not replace experiment design or release assurance.</p>
-<span class="anchor-alias" id="fig-stack-title-caption" aria-hidden="true"></span><span class="anchor-alias" id="fig-stack-title-desc" aria-hidden="true"></span><div class="table-scroll" role="region" aria-label="Validation handover package" tabindex="0"><table class="reference-table"><caption>Validation handover package</caption><thead><tr><th scope="col">Artefact</th><th scope="col">Content to carry forward</th><th scope="col">Readiness check</th></tr></thead><tbody>
+<span class="anchor-alias" id="fig-stack-title-caption" aria-hidden="true"></span><span class="anchor-alias" id="fig-stack-title-desc" aria-hidden="true"></span><div class="table-scroll" role="region" aria-label="Discovery evidence to carry into implementation" tabindex="0"><table class="reference-table"><caption>Discovery evidence to carry into implementation</caption><thead><tr><th scope="col">Artefact</th><th scope="col">Content to carry forward</th><th scope="col">Readiness check</th></tr></thead><tbody>
             <tr><th scope="row">Opportunity and decision</th><td><span class="cell-label">Content to carry forward</span>Problem, users, outcome, baseline, alternatives, selected concept and reasons; the next investment, decision owner and date.</td><td><span class="cell-label">Readiness check</span>The recommendation follows from the evidence, including conflicting findings and rejected options.</td></tr>
             <tr><th scope="row">PRD and experience</th><td><span class="cell-label">Content to carry forward</span>Bounded scope, exclusions, stories, acceptance criteria, quality targets and UI artefacts or representative API interactions.</td><td><span class="cell-label">Readiness check</span>The intended behaviour is testable, including failure, permission, recovery and accessibility cases.</td></tr>
             <tr><th scope="row">Validation evidence</th><td><span class="cell-label">Content to carry forward</span>Assumptions, test criteria, method, participants or datasets, versions, results, limitations and evidence links.</td><td><span class="cell-label">Readiness check</span>Supported, unsupported and inconclusive claims are distinct; tests cover the highest-risk business and technical assumptions.</td></tr>
@@ -595,7 +611,7 @@
 <p><a href="#example-1">Return to the problem evidence</a>.</p>
 </div></details>
 <p>For products using agents at runtime, include the tested limits on actions, approval points, failure and recovery cases, and evaluation results. Link each to intended behaviour and acceptance criteria.</p>
-<p>Use the <a href="ai-pdlc.html#handoff">shared handoff package</a> and <a href="product-implementation.html#implementable-definition">implementation readiness checks</a> for the full checklist. Implementation covers technical design, task slicing, verification and release; those procedures are not repeated here.</p>
+<p>The table above explains what discovery contributes. Use the <a href="ai-pdlc.html#handoff">shared handoff package</a> as the common checklist, then apply the <a href="product-implementation.html#implementable-definition">implementation readiness checks</a> to the scope being changed. Link the same records across these checks instead of creating separate copies. Implementation develops the technical design, tasks, verification and release evidence.</p>
 <p>If implementation uncovers a bounded defect, correct it in that loop. If evidence challenges the user, problem, value or intended behaviour, return to the appropriate discovery step and record the change. Feedback does not automatically authorise model retraining or wider permissions.</p>
 <p class="learning-output"><strong>Output:</strong> Versioned evidence-backed PRD, linked evidence and a product measurement plan, with owners for remaining questions. <strong>Next:</strong> Confirm implementation can collect the agreed measures; release requires evidence from the implemented product.</p>
 </section>

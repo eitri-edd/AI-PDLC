@@ -49,9 +49,9 @@
         <header class="article-header">
           <p class="eyebrow">Development guide</p>
           <h1>Concepts</h1>
-          <p class="lead">Use these concepts to make AI-assisted development easier to direct and review. Each section explains a practical problem, a way to address it and a small example.</p>
+          <p class="lead">An AI coding agent can produce a working change that solves the wrong problem or misses an important constraint. This page explains how clear goals, relevant information, suitable tools and feedback help teams direct and check its work.</p>
           <p>An AI agent uses a model to choose or adapt actions and tool use towards a goal, within agreed permissions and limits. A workflow can combine agents with predefined code paths and automated checks. The concepts below explain how to define the task, support the agent and review its work. <a href="#source-9" aria-label="Source 9: Anthropic, Building effective agents">[9]</a></p>
-          <p>These are related practices, not lifecycle stages. Start with the relationship map, then follow the reading route or choose the concept that addresses your current problem.</p>
+          <p>The examples assume familiarity with requirements, code changes and tests. These practices support work throughout the lifecycle. Start with the relationship map, then follow the reading route or choose the concept that addresses your current problem.</p>
         </header>
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
@@ -59,25 +59,30 @@
           <p id="page-map-note" class="page-map-note">Reading route: goals and requirements → information and tools → workflow automation → model selection. These groups organise the explanation; they are not lifecycle stages.</p>
 
           <ol class="page-map-nodes" role="list">
-            <li class="page-map-node"><strong>Goals and requirements</strong><div class="page-map-links"><a href="#how-the-concepts-fit">How the concepts fit together</a><a href="#intent-driven-development">Intent-driven development</a><a href="#spec-driven-development">Spec-driven development</a></div></li>
-            <li class="page-map-node"><strong>Information and tools</strong><div class="page-map-links"><a href="#context-engineering">Context engineering</a><a href="#harness-engineering">Harness engineering</a></div></li>
-            <li class="page-map-node"><strong>Workflow automation</strong><div class="page-map-links"><a href="#loop-engineering">Loop engineering</a><a href="#graph-engineering">Graph engineering</a><a href="#software-factory">Software factories</a></div></li>
-            <li class="page-map-node"><strong>AI model selection</strong><div class="page-map-links"><a href="#models">AI models</a><a href="#learning-references">Learning references</a></div></li>
+            <li class="page-map-node"><strong>Goals and requirements</strong><div class="page-map-links"><a href="#how-the-concepts-fit">How the concepts fit together</a><a href="#intent-driven-development">Agree the goal</a><a href="#spec-driven-development">Define the behaviour</a></div></li>
+            <li class="page-map-node"><strong>Information and tools</strong><div class="page-map-links"><a href="#context-engineering">Supply relevant information</a><a href="#harness-engineering">Equip the agent</a></div></li>
+            <li class="page-map-node"><strong>Workflow automation</strong><div class="page-map-links"><a href="#loop-engineering">Use feedback</a><a href="#graph-engineering">Coordinate tasks and checks</a><a href="#software-factory">Connect the delivery workflow</a></div></li>
+            <li class="page-map-node"><strong>AI model selection</strong><div class="page-map-links"><a href="#models">Choose an AI model</a><a href="#learning-references">Learning references</a></div></li>
           </ol>
 
         </figure>
+        <aside class="ai-chapter-map" aria-label="How AI can help in this chapter">
+          <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help in this chapter</p>
+          <ul role="list"><li><a href="#ai-help-intent">Clarify intent and specifications</a></li><li><a href="#ai-help-context">Use context and tools</a></li><li><a href="#ai-help-loop">Improve and coordinate work</a></li><li><a href="#ai-help-models">Compare models</a></li></ul>
+        </aside>
+
         <!-- PAGE MAP END -->
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page"><a href="#how-the-concepts-fit">How the concepts fit together</a>
-<a href="#intent-driven-development">Intent-driven development</a>
-<a href="#spec-driven-development">Spec-driven development</a>
-<a href="#context-engineering">Context engineering</a>
-<a href="#harness-engineering">Harness engineering</a>
-<a href="#loop-engineering">Loop engineering</a>
-<a href="#graph-engineering">Graph engineering</a>
-<a href="#software-factory">Software factories</a>
-<a href="#models">AI models</a>
+<a href="#intent-driven-development">Agree the goal</a>
+<a href="#spec-driven-development">Define the behaviour</a>
+<a href="#context-engineering">Supply relevant information</a>
+<a href="#harness-engineering">Equip the agent</a>
+<a href="#loop-engineering">Use feedback</a>
+<a href="#graph-engineering">Coordinate tasks and checks</a>
+<a href="#software-factory">Connect the delivery workflow</a>
+<a href="#models">Choose an AI model</a>
 <a href="#sources">Sources and learning references</a></nav>
         </details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
@@ -96,24 +101,24 @@
         </svg>
         <section id="how-the-concepts-fit">
           <h2>How the concepts fit together</h2>
-          <p>These are the working definitions used in this guide. Here, graph engineering refers to execution and workflow graphs rather than knowledge graphs.</p>
-          <p>The concepts address different parts of the same work. Intent-driven development explains <strong>why a change is needed</strong>. Spec-driven development defines <strong>what the software should do</strong> and how the team will check it.</p>
-          <p>Context engineering supplies the information an AI agent needs. Harness engineering provides its tools, permissions and checks. Loop engineering defines how it responds to feedback; graph engineering organises steps and dependencies. A software factory brings these practices into a delivery workflow.</p>
-          <p>For example, a team wants users to resume an unfinished service request. The team agrees the goal, writes acceptance criteria, gives the agent the relevant information and tools, and reviews the result. Model selection supports that work.</p>
-          <div class="table-scroll"><table><caption>Relationship map: the question each concept helps answer</caption><thead><tr><th scope="col">Concept</th><th scope="col">Question</th></tr></thead><tbody>
-            <tr><th scope="row"><a href="#intent-driven-development">Intent</a></th><td>Why is the change needed, and which outcomes and constraints matter?</td></tr>
-            <tr><th scope="row"><a href="#spec-driven-development">Specification</a></th><td>What behaviour is required, and how will the team check it?</td></tr>
-            <tr><th scope="row"><a href="#context-engineering">Context</a></th><td>Which information does the agent need for this task?</td></tr>
-            <tr><th scope="row"><a href="#harness-engineering">Harness</a></th><td>Which tools, permissions and checks let the agent act within agreed limits?</td></tr>
-            <tr><th scope="row"><a href="#loop-engineering">Feedback loops</a></th><td>How does feedback guide another attempt, a change of approach or a stop?</td></tr>
-            <tr><th scope="row"><a href="#graph-engineering">Workflow dependencies</a></th><td>Which agent tasks can run in parallel, and how do decision points join and route findings?</td></tr>
-            <tr><th scope="row"><a href="#software-factory">Software factory</a></th><td>How do these practices connect agreed work to review, release and support?</td></tr>
-            <tr><th scope="row"><a href="#models">Model selection</a></th><td>Which model meets this task’s quality, time, cost and data-handling needs?</td></tr>
+          <p>Building a change with an AI agent involves more than asking it to write code. The team needs to agree what would help users, describe the expected behaviour, give the agent information and tools, and decide what happens after each check. The concepts on this page explain how those decisions work together.</p>
+          <h3>Example: save a request and return later</h3>
+          <p>In this fictional service-request application, users leave a form to find missing information and lose what they have entered. After trying two prototypes with users, the product owner chooses a “Save draft” action. A coding agent will help implement it; the team remains responsible for deciding whether the change meets the need and is ready to release.</p>
+          <p>The table follows that one change using this guide’s working definitions. Each concept answers a different question about the same work; the rows are not lifecycle stages.</p>
+          <div class="table-scroll"><table><caption>How each concept contributes to the “Save draft” change</caption><thead><tr><th scope="col">Concept</th><th scope="col">Contribution to the same change</th></tr></thead><tbody>
+            <tr><th scope="row"><a href="#intent-driven-development">Intent</a></th><td>The goal is for users to leave an unfinished request and continue later without re-entering saved information. Adding a button is only useful if users can complete that task.</td></tr>
+            <tr><th scope="row"><a href="#spec-driven-development">Specification</a></th><td>The team defines the behaviour: save incomplete entries without submitting the request, restore them when its owner returns, and reject access by another user. A stale browser tab must not overwrite a newer save.</td></tr>
+            <tr><th scope="row"><a href="#context-engineering">Context</a></th><td>The developer supplies those criteria, the existing form and storage code, access rules and relevant tests. These records tell the agent what to build and which existing behaviour to preserve.</td></tr>
+            <tr><th scope="row"><a href="#harness-engineering">Harness</a></th><td>The agent gets an editor, terminal, browser and test accounts so it can change the code and try saving and reopening a draft. Permissions restrict it to the project and test data; progress notes and run records support later review.</td></tr>
+            <tr><th scope="row"><a href="#loop-engineering">Feedback loops</a></th><td>A two-tab test exposes an older save overwriting newer work. The agent corrects the code and reruns the checks within an agreed attempt limit. The developer can also test a revision to the reusable instructions so later tasks include simultaneous-edit checks.</td></tr>
+            <tr><th scope="row"><a href="#graph-engineering">Workflow dependencies</a></th><td>After the build passes, separate agents check saved values, access restrictions and conflicting edits in parallel on the same commit. The workflow waits for all results. A code change triggers fresh checks; an unclear product rule pauses the work for a decision.</td></tr>
+            <tr><th scope="row"><a href="#software-factory">Software factory</a></th><td>The repeatable delivery workflow connects the agreed task, agent work and check results to human review and the authorised release process. After release, the team investigates save failures and user feedback, adding follow-up work to the queue.</td></tr>
+            <tr><th scope="row"><a href="#models">Model selection</a></th><td>Before choosing the coding agent’s model, the developer compares candidates on representative changes, including draft saving, using the same tools and checks. The choice considers correctness, correction effort, time, cost and permitted data handling.</td></tr>
           </tbody></table></div>
-          <p>The relationships also work in reverse: a failed check may reveal missing context or an unclear requirement. Use the finding to revisit the relevant practice. The examples below use a fictional service-request application to show how these practices work together.</p>
+          <p>A failed check can send the team back to an earlier decision. If a two-tab test reveals that nobody agreed what the user should see after a conflict, another code retry will not settle that question. The product owner resolves the expected behaviour; the developer updates the criteria and task context before the agent continues. The sections below explain each practice in more detail using the same fictional application.</p>
         </section>
         <section id="intent-driven-development">
-          <h2>Intent-driven development</h2>
+          <h2>Agree the goal (intent-driven development)</h2>
           <p>Intent-driven development makes the intended outcome, behaviour and constraints explicit and keeps them available as AI-assisted work progresses. Start by agreeing why a change is needed, then carry that intent through planning, implementation and review.</p>
           <p>Use it when a request leaves room for conflicting interpretations. “Improve the form” could mean a new layout, fewer questions or a way to save unfinished work. Agree the user need before asking an agent to implement a solution.</p>
           <h3>Agree the outcome and constraints</h3>
@@ -140,11 +145,13 @@
           </aside>
           <h3>Keep the record proportionate</h3>
           <p>A short issue may be enough for a small defect. A new capability may need research and a product requirements document. Recording a goal does not establish that it is valuable; test important assumptions before committing substantial effort.</p>
-          <p class="next-step"><strong>Next step:</strong> Write the problem, outcome and constraints for one change. Then use <a href="product-discovery.html#product-thesis">the product thesis guidance</a> to test the case for it, or <a href="#spec-driven-development">define its acceptance criteria</a> when the need is understood.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-intent" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give AI the user problem, intended outcome and known constraints. Ask it to surface conflicting interpretations and open questions. The product owner checks these against the user evidence and records the agreed intent before implementation.</p></aside>
+<p class="next-step"><strong>Next step:</strong> Write the problem, outcome and constraints for one change. Then use <a href="product-discovery.html#product-thesis">the product thesis guidance</a> to test the case for it, or <a href="#spec-driven-development">define its acceptance criteria</a> when the need is understood.</p>
           <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Intent-Driven Development, intent-driven.dev">[1]</a>.</p>
         </section>
         <section id="spec-driven-development">
-          <h2>Spec-driven development</h2>
+          <h2>Define the behaviour (spec-driven development)</h2>
           <p>Specification-driven development, or spec-driven development, uses written requirements to guide development and review. The specification describes the expected behaviour, including important exceptions and constraints. Acceptance criteria state how the team will judge whether that behaviour works.</p>
           <p>Use it when a broad request leaves developers or agents to guess the details. “Saving works” does not explain what happens when a connection fails, another user requests the draft or two browser tabs make changes.</p>
           <h3>Use the requirements to guide both development and testing</h3>
@@ -160,11 +167,13 @@
           <aside class="example" aria-label="Fictional example: Describe what “Save draft” means"><p class="example-label">Example · Describe what “Save draft” means</p><p>The team chooses an explicit “Save draft” action. It agrees these acceptance criteria before implementation:</p><ul><li><strong>Incomplete form:</strong> saving keeps the entered values without submitting the request.</li><li><strong>Successful save:</strong> show “Draft saved” after the server confirms it. Reopening the draft restores the saved values.</li><li><strong>Failed save:</strong> retain the values on screen, explain the failure and offer a retry.</li><li><strong>Access control:</strong> reject another user’s attempt to read or change the draft, including requests made outside the browser interface.</li><li><strong>Conflicting edits:</strong> if another browser tab has saved a newer version, explain the conflict and preserve the unsaved values.</li></ul></aside>
           <h3>Add detail as decisions become clearer</h3>
           <p>Too little detail forces the team to invent product rules. Too much detail before research can make an untested idea look settled. Resolve important unknowns, then update the specification as the team learns. Human review still covers judgements that automated tests cannot settle.</p>
-          <p class="next-step"><strong>Next step:</strong> Check one requirement for its success, failure and access-control cases. Use <a href="ai-pdlc.html#handoff">the requirements handover checklist</a>, then <a href="product-implementation.html#executable-work">translate it into technical design and development tasks</a>.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-spec" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can draft acceptance scenarios from agreed requirements, including failure, permission and conflicting-edit cases. Product and Engineering compare each scenario with the intended behaviour, resolve invented assumptions and retain the accepted criteria for implementation and testing.</p></aside>
+<p class="next-step"><strong>Next step:</strong> Check one requirement for its success, failure and access-control cases. Use <a href="ai-pdlc.html#handoff">the requirements handover checklist</a>, then <a href="product-implementation.html#executable-work">translate it into technical design and development tasks</a>.</p>
           <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: GitHub Spec Kit, Specification-Driven Development">[2]</a>.</p>
         </section>
         <section id="context-engineering">
-          <h2>Context engineering</h2>
+          <h2>Supply relevant information (context engineering)</h2>
           <p>Context engineering means selecting and maintaining the information an AI agent needs for its current task. That information can include requirements, relevant code, team standards, test results and earlier decisions.</p>
           <p>Use it when an agent follows an outdated rule, misses a business meaning or cannot find a decision. Supplying more documents alone does not solve the problem. Give the agent the relevant information and a clear way to find further detail.</p>
           <h3>Choose relevant, current and authoritative sources</h3>
@@ -194,15 +203,17 @@
           <p>Before ending a task, the developer records agreed decisions, unfinished work and unresolved questions in the repository or issue tracker. Include the reason for each decision, links to supporting evidence and the applicable source versions. Name an owner and next action for each open question.</p>
           <p>At the start of the next task, give the person or agent links to these records. Check whether later decisions have replaced them before adding them to the task context. In the filter example, record which statuses count as “Open” and link that decision from the implementation task. Follow the applicable data-handling rules when saving or sharing context.</p>
           <p>Relevant information improves the basis for the work; it does not guarantee a correct result. Review retrieved material before relying on it. A document or log does not gain authority merely because an agent found it.</p>
-          <p class="next-step"><strong>Next step:</strong> List the information missing from one recent task. Use <a href="eds-team-context.html#matrix">the context-by-stage guide</a> to identify the right source, then <a href="eds-team-context.html#checklist">prepare and check that source</a>.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-context" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask an agent to reference the supplied requirements, relevant code and current standards in its proposed approach. Check that each source applies to the task; record conflicting rules and missing information before relying on the proposal.</p></aside>
+<p class="next-step"><strong>Next step:</strong> List the information missing from one recent task. Use <a href="eds-team-context.html#matrix">the context-by-stage guide</a> to identify the right source, then <a href="eds-team-context.html#checklist">prepare and check that source</a>.</p>
           <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: Anthropic, Effective context engineering for AI agents">[3]</a>.</p>
         </section>
         <section id="harness-engineering">
-          <h2>Harness engineering</h2>
+          <h2>Equip the agent (harness engineering)</h2>
           <p>Harness engineering means designing the tools, permissions, checks and progress records around an AI agent. This supporting environment is the agent’s harness. It lets the agent do the work, observe the result and stay within agreed limits.</p>
           <p>Use it when an agent cannot run the application, check a result or resume unfinished work. A better prompt cannot replace a missing test environment or an access control.</p>
           <h3>Provide the tools and controls the task needs</h3>
-          <p>This guide groups the supporting environment into six components. They work together rather than running as consecutive steps.</p>
+          <p>This guide uses a six-part grouping, synthesised from the linked harness sources. The components work together rather than running as consecutive steps; other sources group them differently.</p>
           <figure class="concept-figure" id="fig-harness">
   <figcaption id="fig-harness-title-caption">Figure 4. Six parts support the agent’s work, checks and limits.</figcaption>
   <details class="figure-reading"><summary>Read as text: How the parts work together</summary><ul><li>Agent state records the current goal, progress and latest result. Tools let the agent inspect files, make changes and run checks.</li><li>Memory keeps decisions and useful information beyond the current run. Orchestration assigns tasks and coordinates who works next.</li><li>Safety sets permissions and resource limits. Observability records actions, results, time and cost so people can inspect what happened.</li><li>For example, a tool runs an upload test. Its result updates the current state; a useful finding is saved for later work. Permissions restrict the test to approved storage.</li></ul></details>
@@ -242,16 +253,19 @@
               <li><strong>Observability:</strong> the harness records changed files, commands, test results and browser screenshots so the developer can inspect what happened.</li>
             </ul>
             <p>The agent edits the upload code, adds tests and runs the application. It uses the browser to upload a sample file and reopen the saved attachment.</p>
-            <p>If local storage is unavailable, the agent records the failed check and stops for help. Otherwise, it returns the changes and test results for the developer to review before merging.</p>
+            <p>If local storage is unavailable, the agent records the failed check and stops for help. Otherwise, it returns the changes and test results for review.</p>
+            <p>Before merging, the developer reopens the saved sample file and compares its contents with the original. Using harmless test files, the developer also attempts an operation outside the permitted test-storage location and confirms that the environment blocks it. The developer retains the diff, file comparison and permission-check results. A failed or inconclusive check returns the change for correction before another review.</p>
           </aside>
           <h3>Check the environment as well as the output</h3>
           <p>Provide a repeatable way to start the application, run tests and inspect failures. Enforce permissions through the tools and execution environment. Keep a reviewer responsible for acceptance; an agent’s assessment of its own work is not independent review.</p>
           <p>When failures recur, inspect the instructions, sources, tools and checks before adding more retries or access. Maintain the harness as the application changes.</p>
-          <p class="next-step"><strong>Next step:</strong> Check whether a developer can start the application, run its tests and inspect a failure using the documented setup. Follow <a href="eds-developer-harness.html#install">the Eitri installation guide</a> and <a href="eds-team-context.html#checklist">team setup checklist</a> to fill the gaps.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-harness" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>With scoped tools and a test environment, an agent can change files, run checks and report failures. The developer repeats the behaviour and permission checks described in the upload example, retains the results with the diff and records unresolved findings before deciding whether the change is ready to merge.</p></aside>
+<p class="next-step"><strong>Next step:</strong> Check whether a developer can start the application, run its tests and inspect a failure using the documented setup. Follow <a href="eds-developer-harness.html#install">the Eitri installation guide</a> and <a href="eds-team-context.html#checklist">team setup checklist</a> to fill the gaps.</p>
           <p class="source-ref">Sources: <a href="#source-4" aria-label="Source 4: OpenAI, Harness engineering">[4]</a>; <a href="#source-5" aria-label="Source 5: Walking Labs, What a harness actually is">[5]</a>; <a href="#source-6" aria-label="Source 6: Anthropic, Effective harnesses for long-running agents">[6]</a>.</p>
         </section>
         <section id="loop-engineering">
-          <h2>Loop engineering</h2>
+          <h2>Use feedback (loop engineering)</h2>
           <p>Loop engineering means designing how an agent uses feedback to improve its work over several attempts. A feedback loop connects an action, an observed result and a decision to continue, change approach or stop. Across tasks, review findings and evaluations can also guide updates to the agent’s reusable skill instructions.</p>
           <p>Use it when a task needs repeated correction, such as fixing a failing test. Define the expected result before the run starts. Also agree how long the agent may try and when it needs help.</p>
           <h3>Define the check and every way to stop</h3>
@@ -267,30 +281,39 @@
           <aside class="example" aria-label="Fictional example: Improve draft saving and the skill that builds it">
             <p class="example-label">Example · Improve draft saving and the skill that builds it</p>
             <p>A coding agent adds draft saving to the service-request application using a skill: reusable instructions for planning, implementing and checking code. The team uses two connected feedback loops:</p>
-            <ol>
-              <li><strong>Build and check the code.</strong> The agent implements saving and runs tests. The tests pass when the user edits a draft in one browser tab.</li>
-              <li><strong>Use review findings to improve the product.</strong> A reviewer tries editing the same draft in two tabs. A new test exposes a stale save overwriting newer work. The agent adds a version check so the stale save reports a conflict and retains the user’s unsaved values, then reruns the draft and regression tests.</li>
-              <li><strong>Use the failure to improve the skill.</strong> The agent proposes adding a step to identify shared resources and test simultaneous requests. The developer reviews this change to the skill instructions so future tasks include that check.</li>
-              <li><strong>Evaluate the revised skill.</strong> Run both versions on the same held-out practice tasks: tasks kept separate from the examples used to revise the skill. Use the same model version, tools, starting conditions, budget and assessment criteria. Include an unfamiliar case, such as two staff updating a request’s status. Repeat runs where outputs vary. Compare test results, review findings and the effort needed to correct the code.</li>
-              <li><strong>Keep refining from evidence.</strong> If the revised skill misses a case or causes another failure, adjust its instructions and keep that case as a regression check. Once a case informs a revision, it is no longer held out. Reserve fresh held-out tasks for the final comparison. Keep the version that meets the agreed checks without losing previously working behaviour.</li>
-            </ol>
-            <p>The code loop corrects the draft feature. The skill loop tests whether revised instructions help on later tasks. Record both versions and their results. Passing checks ends correction and supplies evidence for review; reaching the run limit ends the attempt with unfinished work recorded.</p>
+            <ul>
+              <li><strong>Correct the code.</strong> A reviewer finds that saving from an older browser tab overwrites newer work. The agent adds a version check, then reruns the tests to confirm that a stale save reports a conflict and preserves unsaved values.</li>
+              <li><strong>Improve the reusable instructions.</strong> The agent proposes adding simultaneous-edit checks to the skill. The developer compares both skill versions on separate practice tasks before deciding whether to keep the revision.</li>
+            </ul>
+            <p>The first loop checks this feature. The second checks whether revised instructions help on later tasks. Passing checks supplies evidence for review; reaching the run limit leaves unfinished work to record.</p>
           </aside>
+          <details class="self-check" id="compare-skill-versions">
+            <summary>Compare two skill versions</summary>
+            <p>Use this suggested method when deciding whether a skill revision addresses a recurring failure. The developer conducting the comparison records the decision and evidence.</p>
+            <ol>
+              <li>Keep the original and revised instructions. Reserve held-out tasks: tasks that were not used to revise the skill. Include an unfamiliar simultaneous-edit case, such as two staff updating a request’s status.</li>
+              <li>Run both versions on the same tasks with the same model version, tools, starting conditions, budget and assessment criteria. Repeat runs where outputs vary. Compare test results, review findings and the effort needed to correct the code.</li>
+              <li>If a result informs another revision, keep that case as a regression check and reserve fresh tasks for the final comparison. Keep the revision only when it meets the agreed checks without losing previously working behaviour. If the evidence is mixed or incomplete, record the uncertainty and continue the comparison before adopting it.</li>
+              <li>Retain both skill versions, task and configuration versions, results, corrections and the reason for the decision. Use later failures to identify the next revision to test.</li>
+            </ol>
+          </details>
+
           <h3>Keep the success criteria unchanged during correction</h3>
           <p>A loop can repeat a bad assumption as well as correct a defect. Check that the tests represent the intended behaviour. Do not weaken a test merely to finish the run; review a requirements change separately.</p>
           <p>Keep a record of what the agent tried and what each check found. Another agent may offer useful review, but can share the same mistaken assumptions.</p>
-          <p class="next-step"><strong>Next step:</strong> Choose one recurring code review finding. Define a code check, propose a skill improvement and reserve held-out tasks for comparing both versions under the same conditions. Set a run limit and record the results. See <a href="eds-developer-harness.html#do-work">how the developer workflow builds, tests and corrects a change</a>.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-loop" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give an agent the failing check, the expected behaviour and an attempt or cost limit. It can propose a correction and rerun the check. Review the diff and test changes against the original criteria; keep the attempt results and escalate when the stop condition is reached.</p></aside>
+<p class="next-step"><strong>Next step:</strong> Choose one failing check and define the expected result, run limit and action when the limit is reached. For recurring findings, use <a href="#compare-skill-versions">the skill-version comparison method</a>. See <a href="eds-developer-harness.html#do-work">how the developer workflow builds, tests and corrects a change</a>.</p>
           <p class="source-ref">Source: <a href="#source-7" aria-label="Source 7: IBM, Loop engineering">[7]</a>.</p>
         </section>
         <section id="graph-engineering">
-          <h2>Graph engineering</h2>
-          <p>Graph engineering means designing how work moves between agent tasks, automated checks and decision points. Each node in the graph represents an agent activity, a verification step or a routing decision. Each edge defines the condition for following that path.</p>
-          <p>Use it when a single-agent loop is not enough—for example, when specialist agents can check different properties in parallel and a routing decision determines whether to rework the code, rerun invalidated checks, pause on a blocker or advance a verified candidate.</p>
-          <h3>Coordinate parallel agents and explicit decision points</h3>
-          <p>A coding agent adds a CSV export to a service-request application so users can download only the records they are permitted to view. Rather than routing every finding to a person, the workflow uses an execution graph with two automated decision points and three specialist agents.</p>
-          <p>Record dependencies as well as routes. Once the coding agent produces a candidate that compiles and passes unit tests, the test, security and architecture agents run in parallel against that exact commit. A join decision waits for all three results. If any finding triggers a code change, earlier check results on the superseded commit are invalidated and rerun before the candidate can advance.</p>
+          <h2>Coordinate tasks and checks (graph engineering)</h2>
+          <p>Some checks can run independently, but the next action depends on all their results. A workflow graph makes those dependencies and routing conditions explicit. In this guide, graph engineering means designing execution and workflow graphs rather than knowledge graphs.</p>
+          <p>Use a graph when work needs parallel checks or different routes after a result. A single-agent feedback loop may be enough for a task that only needs repeated correction.</p>
+          <h3>Coordinate parallel checks on the same change</h3>
+          <p><strong>Fictional example:</strong> a coding agent adds a CSV export to the service-request application. After the code compiles and passes unit tests, test, security and architecture agents check the same commit in parallel. Each activity or decision is a <strong>node</strong>; a connecting route is an <strong>edge</strong>. A <strong>join</strong> waits for all three results before routing the change to correction, help or merge review.</p>
           <figure class="concept-figure" id="fig-graph">
-            <figcaption id="fig-graph-title-caption">Figure 6. Decision nodes coordinate local build checks, parallel specialist agents and conditional routing.</figcaption>
+            <figcaption id="fig-graph-title-caption">Figure 6. Fictional CSV-export workflow: decision nodes coordinate build checks, parallel agents and the next action.</figcaption>
             <details class="figure-reading"><summary>Read as text: Agent nodes, decision points and routes</summary><ol>
               <li>The coding agent implements or revises the CSV export against the agreed API contract and access rules.</li>
               <li><strong>Decision 1 (Build gate):</strong> checks whether the candidate compiles and passes unit tests. A build or unit failure loops immediately back to the coding agent before running heavier agents.</li>
@@ -352,30 +375,17 @@
               <p class="diagram-key">Cut-corner shapes mark automated decision points. Solid arrows show forward flow and parallel fan-out; dashed arrows return work to the coding agent when checks fail.</p>
             </details>
           </figure>
-          <aside class="example" aria-label="Fictional example: Multi-agent routing while building a CSV export">
-            <p class="example-label">Example · Multi-agent routing while building a CSV export</p>
-            <p>The workflow graph coordinates four specialised agents and two decision gates before a developer reviews the completed change:</p>
-            <ul>
-              <li><strong>Decision 1 · Fast build gate:</strong> when the coding agent finishes a candidate, the graph runs compile and unit checks first. If a type error or broken unit test appears, the graph routes the error directly back to the coding agent without invoking the specialist agents.</li>
-              <li><strong>Parallel specialist verification:</strong> once the build gate passes, the graph fans out to three agents against the same commit—the <em>test agent</em> checks CSV column headers and pagination streaming, the <em>security agent</em> verifies that queries filter out another team’s restricted records, and the <em>architecture agent</em> checks that the controller does not bypass the service layer.</li>
-              <li><strong>Decision 2 · Join and route findings:</strong> after all three agents finish, the join node inspects their structured reports:
-                <ul>
-                  <li>If the security agent flags a missing tenant filter or the architecture agent detects a layer violation, the router sends both structured findings back to the coding agent, marks the previous test run as stale, and reruns the graph on the revised commit.</li>
-                  <li>If an agent encounters an unspecified rule—such as whether archived requests belong in the export—or reaches the retry cap, the router pauses the run and records a single escalation for the task owner.</li>
-                  <li>When all three specialist agents pass on the same commit, the router bundles the diff and verification evidence into a verified candidate for merge review.</li>
-                </ul>
-              </li>
-            </ul>
-            <p>Each decision point uses explicit conditions rather than open-ended agent conversation. Humans are not pulled into intermediate syntax, test or boundary fixes; they review the verified candidate or resolve genuine specification gaps.</p>
-          </aside>
+          <p>In the CSV example, the security check attempts to export another team’s restricted records, while the architecture check compares the change with the application’s module rules. A missing access filter returns the findings to the coding agent. An unanswered product question, such as whether archived requests belong in the export, pauses the run for the task owner.</p>
           <h3>Keep routing rules explicit</h3>
           <p>Give each decision point a clear condition, state transition and retry bound. When a rework branch updates the code, invalidate earlier check results so the join node never combines pass notices from different commits.</p>
           <p>A graph adds coordination work. Use a single-agent loop when a task only needs repeated test-and-fix steps. Separate review agents can expose cross-cutting defects, but they can also share errors or miss a defect. Their position in the graph does not replace final human accountability for merge or release.</p>
-          <p class="next-step"><strong>Next step:</strong> Map one development workflow. Mark which agent checks can run in parallel on the same commit, what condition triggers a rework loop and when the graph should pause for a person. Use <a href="eds-developer-harness.html#plan">the story-planning guidance</a> and <a href="eds-developer-harness.html#check">the task review and approval steps</a>.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-graph" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Agents can implement a bounded change and carry out specialist reviews using the task graph’s dependencies. Check the combined diff and reproduce findings before advancing; retain task results and routing decisions, and rerun checks invalidated by later changes.</p></aside>
+<p class="next-step"><strong>Next step:</strong> Map one development workflow. Mark which agent checks can run in parallel on the same commit, what condition triggers a rework loop and when the graph should pause for a person. Use <a href="eds-developer-harness.html#plan">the story-planning guidance</a> and <a href="eds-developer-harness.html#check">the task review and approval steps</a>.</p>
           <p class="source-ref">Sources: <a href="#source-8" aria-label="Source 8: PuppyGraph, Graph engineering">[8]</a>; <a href="#source-9" aria-label="Source 9: Anthropic, Building effective agents">[9]</a>.</p>
         </section>
         <section id="software-factory">
-          <h2>Software factories</h2>
+          <h2>Connect the delivery workflow (software factories)</h2>
           <p>In this guide, a software factory brings requirements, agent work, testing, review and release controls into a repeatable delivery workflow. The aim is to turn agreed work into changes that the team can check, release and support.</p>
           <p>Use the idea when individual coding tasks are fast but work still waits for clarification, review or release. Improving one task does not remove the constraints elsewhere in delivery.</p>
           <h3>Choose how people review and approve changes</h3>
@@ -393,11 +403,13 @@
           <h3>Keep understanding and recovery alongside automation</h3>
           <p>Track review waiting time, rework, defects and cost before increasing throughput. Keep design decisions available and practise diagnosis and recovery. A passing test suite does not show that people can explain or repair every change.</p>
           <p>A preview is not a production release. Preserve the approval, monitoring and recovery controls needed for the action being taken.</p>
-          <p class="next-step"><strong>Next step:</strong> Choose a small group of changes and measure where they wait. Use <a href="product-implementation.html#autonomy">the automation and approval guidance</a>, then <a href="eds-path-to-production.html#stages">review the release checks</a>.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-factory" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Agents can process agreed tasks through implementation, checks and evidence collection. Give them explicit scope and permissions. The team inspects the evidence and follows the configured acceptance and release process, retaining results and recovery information for each change.</p></aside>
+<p class="next-step"><strong>Next step:</strong> Choose a small group of changes and measure where they wait. Use <a href="product-implementation.html#autonomy">the automation and approval guidance</a>, then <a href="eds-path-to-production.html#stages">review the release checks</a>.</p>
           <p class="source-ref">Source: <a href="#source-10" aria-label="Source 10: Addy Osmani, Software Factories, Light and Dark, also republished by O’Reilly">[10]</a>.</p>
         </section>
         <section id="models">
-          <h2>AI models</h2>
+          <h2>Choose an AI model</h2>
           <p>An AI model is trained on data to recognise patterns and produce outputs. Depending on the model, those outputs can include text, analysis or a choice from defined options. Model selection means choosing and testing a model for a particular task.</p>
           <p>A convincing answer to one question does not show how a model will handle other tasks. Compare models on realistic examples, including difficult cases and missing information.</p>
           <h3>Understand the labels before comparing options</h3>
@@ -464,7 +476,9 @@
           </details>
           <h3>Evaluate the complete task</h3>
           <p>Use the information, tools and permissions that the model will actually receive. Compare results with the current approach, including rules or human handling where relevant. A smaller model does not guarantee speed or privacy, and a larger one does not guarantee better results.</p>
-          <p class="next-step"><strong>Next step:</strong> Choose one task and agree its acceptance criteria before comparing models. Use <a href="product-implementation.html#gates-and-assurance">the testing and independent review guidance</a>, and retain cases where a model fails for future checks.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-models" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Use the same representative tasks, inputs and acceptance checks when comparing models for an agent. AI can produce candidate answers or changes; people check correctness and failure cases alongside measured cost and time. Retain the model and configuration versions with the evaluation results.</p></aside>
+<p class="next-step"><strong>Next step:</strong> Choose one task and agree its acceptance criteria before comparing models. Use <a href="product-implementation.html#gates-and-assurance">the testing and independent review guidance</a>, and retain cases where a model fails for future checks.</p>
         </section>
         <section id="sources">
           <h2>Sources and learning references</h2>
@@ -510,19 +524,20 @@
           </ol>
           <p class="source-ref">Evaluate the exact model version and configuration you will use.</p>
         </section>
+        <p class="source-ref">Last editorial review: <time datetime="2026-11-05">5 November 2026</time>.</p>
         <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
     <aside class="page-contents">
       <nav aria-label="On this page"><p>On this page</p><a href="#how-the-concepts-fit">How the concepts fit together</a>
-<a href="#intent-driven-development">Intent-driven development</a>
-<a href="#spec-driven-development">Spec-driven development</a>
-<a href="#context-engineering">Context engineering</a>
-<a href="#harness-engineering">Harness engineering</a>
-<a href="#loop-engineering">Loop engineering</a>
-<a href="#graph-engineering">Graph engineering</a>
-<a href="#software-factory">Software factories</a>
-<a href="#models">AI models</a>
+<a href="#intent-driven-development">Agree the goal</a>
+<a href="#spec-driven-development">Define the behaviour</a>
+<a href="#context-engineering">Supply relevant information</a>
+<a href="#harness-engineering">Equip the agent</a>
+<a href="#loop-engineering">Use feedback</a>
+<a href="#graph-engineering">Coordinate tasks and checks</a>
+<a href="#software-factory">Connect the delivery workflow</a>
+<a href="#models">Choose an AI model</a>
 <a href="#sources">Sources and learning references</a></nav>
     </aside>
   </div>

@@ -213,3 +213,24 @@ Did not adopt general performance promises, automatic prioritisation, a universa
 ### Validation
 
 Checked 801 local links across all 13 HTML pages, unique IDs and preservation of every anchor from the preceding revisions. The page retains 16 tables and its three figures. Matching contents lists, heading order, table captions and wrappers passed. Chromium checks at 1440, 768, 375 and 320 px found no page overflow, SVG text outside its view box or browser errors. Keyboard skip navigation, enlarged text, no-JavaScript access, reduced-motion loading and linked heading visibility passed. Visually inspected AI research synthesis and prioritisation on desktop and mobile. The diff has no whitespace errors. These are local source changes; publication and full accessibility conformance were not part of this review.
+
+## Writing-standard refinement, 5 November 2026
+
+Reviewed the current working copies of both product pages against the current `../writing.md`, including its uncommitted changes. Applied the preceding editorial recommendations selectively. Preserved the discovery journey, fictional data, sources, existing anchors, AI assistance panels and the human acceptance diagram.
+
+- Discovery now states its starting materials, compresses repeated collaboration guidance and uses consistent activity terminology. The TEST passage is explicitly an adaptation and follows the existing prototype closure options. Its evidence table explains discovery's contribution; the lifecycle overview remains the common handoff checklist, and implementation applies readiness checks to the same linked records.
+- Implementation now introduces document abbreviations before the first diagram, explains software factory as a house term and provides an entry route for bounded defects and maintenance. The six internal activities are distinguished from lifecycle stages. Readiness and platform tables are recommendations; HTML screens, `design.md` and test-driven development are working options. Existing Eitri gates remain linked and are not relaxed.
+- Verification includes a method, evidence record, failure route and a fictional continuation of discovery's AC-1/UI-3/T-ACL-03 service-desk example. The additional implementation failure and correction are illustrative, not reported results. The example retains a separate release decision and links back to the product measurement plan.
+- Human acceptance and delegated automation now have explicit scopes. The assurance diagram illustrates the human route. Automation requires existing delegated authority; the autonomy modes do not establish Eitri availability. The accountable person refers exceptions outside their remit to the applicable authority.
+
+### Maintenance gaps
+
+Content owner: unconfirmed for both pages. Applicable organisational lifecycle version: unconfirmed for both pages. Confirm these from authoritative records before publication; no owner, lifecycle version or approval authority has been invented. The pages record this substantive editorial review date. No new external-source validation was performed, and discovery's historical source-check dates remain unchanged.
+
+Representative-reader task, not yet run: using discovery's handoff and the implementation example, identify the expected denied-source behaviour, find its evidence, describe what happens after a failed check and distinguish change acceptance from release approval. Observe any uncertainty about terms, records or authority, then revise the affected passage. No usability findings are claimed.
+
+### Verification
+
+Passed the existing site checks: 13 pages, 910 local links/assets, 26 desktop/mobile loads, discovery/overview expanded layouts, direct links, legacy anchors, print restoration, enlarged text and no-JavaScript discovery reading. Additional checks passed for both edited pages at 1440, 768, 375 and 320 pixels with disclosures expanded, matching contents, sequential headings, preserved anchors and no browser errors. The new implementation example is visible without JavaScript; enlarged text passed at a 1440-pixel viewport. Visually inspected the new example at desktop and mobile widths. Whitespace checks passed.
+
+A further stress check at a 320-pixel viewport with 200% root text exposed overflow in the shared diagram toolbar. This combination is not covered by the passing enlarged-text result above; the shared toolbar layout remains a follow-up issue. Full accessibility conformance and representative-reader understanding have not been established. No commit or publication was performed; unrelated workspace changes were preserved.

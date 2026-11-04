@@ -61,6 +61,11 @@
             <li><a href="#checklist">Run the checklist</a><span>Verify that every context source is versioned and reachable before starting a story.</span></li>
           </ol>
         </figure>
+        <aside class="ai-chapter-map" aria-label="How AI can help in this chapter">
+          <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help in this chapter</p>
+          <ul role="list"><li><a href="#ai-help-domain">Apply domain knowledge</a></li><li><a href="#ai-help-standards">Use relevant standards</a></li><li><a href="#ai-help-policy">Surface policy gaps</a></li><li><a href="#ai-help-review">Review local conventions</a></li></ul>
+        </aside>
+
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#matrix">Context by stage</a>
             <a href="#domain">Business domain</a>
@@ -106,7 +111,9 @@
             <li><strong>Path 3, CLARA:</strong> the team places its domain documentation in the Confluence spaces or knowledge bases that CLARA queries, so personas, journey maps and specifications reflect the business.</li>
           </ul>
           <p>Whichever path is used, the committed specification files carry the domain context into the developer harness as the source-of-truth handoff.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-domain" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can use supplied glossaries and business rules to draft stories in the team’s vocabulary. The PO or BA checks terms, scope and rules against the authoritative domain records and retains the corrected specification as the handoff.</p></aside>
+</section>
 
         <section id="standards">
           <h2>Add shared standards and recipes</h2>
@@ -114,13 +121,17 @@
           <p>AppStandards uses the <a href="https://okf.md">Open Knowledge Format (OKF)</a>, which stores documentation as a version-controlled graph of Markdown concepts. Each folder has a catalogue of its contents, and each standard is split into focused files holding rules, code recipes and questions for challenging a design.</p>
           <p>The harness maps every user story to the few standards it needs, such as multi-factor authentication or single sign-on, and later steps read only those files. Loading the whole catalogue can consume substantial context and introduce irrelevant material. Select the standards needed for the task and check that mandatory constraints remain available.</p>
           <p>To add its own standards, a team structures them in the OKF layout, registers their location with the harness’s story-sequencing skill and tags its stories with the standard’s key. The standard then appears in the delivery plan for each tagged story.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-standards" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>The agent can use the story’s selected standards and recipes to propose a technical approach. Engineers check that the references are current and applicable and that no mandatory constraint is missing; retain the selected standard keys and reviewed design with the story.</p></aside>
+</section>
 
         <section id="knowledge-base">
           <h2>Add coding practices to the knowledge base</h2>
           <p>During implementation, the agent retrieves coding practices and framework patterns from the organisation’s hosted Amazon Bedrock knowledge base. Inside the build loop, each file is routed to the relevant category of guidance; a React component file, for example, triggers a React query.</p>
           <p>To add its own context, a team uploads its design guides, library documentation and coding conventions to the data source behind its knowledge base, runs a sync and points the harness at that knowledge base.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-practices" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give the agent access to the relevant, synchronised library and framework guidance for the task. It can propose code using those patterns. Developers check API and version compatibility, run build and behaviour checks and retain the results with the change.</p></aside>
+</section>
 
         <section id="policies">
           <h2>Add security and governance policies</h2>
@@ -130,13 +141,17 @@
             <li><strong><a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a>:</strong> 88 agentic AI governance checks in the documented Eitri policy pack, based on the Agentic Risk &amp; Capability Framework. Confirm the pack version and applicable controls before an audit.</li>
           </ul>
           <p>To include its own policies in the audit, a team writes its compliance checklist or internal security policy as a Markdown file and registers it with the harness. The audit assesses the document alongside IM8 and ARC. Enforce applicable controls through tests, access controls and pipeline checks; a written policy or model assessment alone does not enforce them.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-policy" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>The compliance skill can compare the TRD with the registered policy references and write findings. Reviewers check the applicable policy version and reproduce the claimed gap or control evidence. Keep the checklist report and resolved findings; enforce controls through the documented technical checks.</p></aside>
+</section>
 
         <section id="review-rules">
           <h2>Add review rules</h2>
           <p>At the end of the development loop, changes are checked against the repository’s own conventions: formatting rules, naming, design principles and lint-like expectations. A team keeps them in one coding standards file at the root of the application repository.</p>
           <p>The code review checks each change against this file, both inside the build loop and at closeout. Where the file is silent, the review falls back to a baseline of common code smells.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-review" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can compare a diff with the repository’s coding standards and flag apparent inconsistencies. The developer checks each finding against the actual rule and changed behaviour, makes justified corrections and retains the review and check results.</p></aside>
+</section>
 
         <section id="checklist">
           <h2>Set up your team’s context</h2>

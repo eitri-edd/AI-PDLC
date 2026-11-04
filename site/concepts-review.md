@@ -1,5 +1,27 @@
 # Concepts editorial review
 
+## Connected example · 5 November 2026
+
+Reworked “How the concepts fit together” around one fictional “Save draft” change. Replaced the generic question table with concrete contributions from all eight topics: intent, specification, context, harness, feedback loops, workflow dependencies, software factory and model selection. The example distinguishes the user outcome from the button, information from execution tools, correction from parallel coordination, and checks from release authority. It includes reusable-instruction improvement and feedback after release without introducing a second scenario.
+
+Kept model selection explicitly before choosing the agent's model and stated that table rows are not lifecycle stages. Added a conflict example showing why an unresolved product rule requires a decision and updated criteria and context before another attempt. Reread the opening and the linked intent, specification, loop, graph, factory and model explanations for consistent behaviour and authority. The original detailed scenarios remain unchanged.
+
+Validation: existing anchors preserved; local destinations, duplicate IDs, heading order, balanced tags and whitespace checked. No external factual claims were added. Representative-reader checking remains pending as recorded below; no browser layout check was performed for this text-only revision.
+
+## Writing-standard review · 5 November 2026
+
+Applied the latest working-copy `../writing.md` to `dist/concept.html`. Reworked the opening and relationship explanation around a familiar service-request problem, stated assumed knowledge, and introduced the mechanism before the specialist labels. Added action-led headings and matching concise navigation labels while retaining every existing anchor.
+
+Shortened the graph explanation, defined node, edge and join through the CSV example, and kept the diagram's text equivalent. The first CSV scenario and diagram caption carry fictional labels. Identified the six-part harness grouping as this guide's synthesis beside its introduction. Made the upload review concrete: compare the reopened sample with the original, check the storage boundary with harmless test files, retain results and return failed or inconclusive checks for correction.
+
+Reduced the loop example to the two connected ideas and moved the skill-version comparison method into a linked disclosure on the same page. The method preserves held-out tasks, matched conditions, repeated runs where needed, regression cases and recorded evidence; it also explains how mixed findings affect adoption. Detailed model research remains in its existing collapsed reference. No external provider claims or availability dates were revalidated.
+
+Recorded the substantive editorial review date as 5 November 2026. **Authoring follow-up:** confirm the content owner and applicable lifecycle version before publishing; neither value is established by the available repository guidance. No organisational owner or version has been invented.
+
+Validation: all 94 pre-existing IDs preserved, with one new comparison-method anchor; 123 local links and asset destinations resolve. Duplicate-ID, heading-order, balanced HTML/SVG tag and whitespace checks passed. Reread affected explanations, adjacent passages, navigation and next steps. No browser layout check was performed for this content-only revision.
+
+**Reader check pending:** ask a representative reader familiar with requirements, code changes and tests to distinguish context, harness and feedback loops, then choose the next action for an agent that repeatedly fails a check. Record their explanation, chosen action, hesitation and missing information here, then revise any confusing passages. This editorial review does not establish reader comprehension. Changes remain local and unpublished.
+
 ## Decision-record wording, 4 November 2026
 
 Rephrased “Keep decisions available beyond the conversation” as “Record decisions for the next task”, following `writing.md`. Named the developer's recording action, the reasons and evidence to retain, owners for open questions, and how the next person or agent checks for superseding decisions. Connected the guidance to the existing “Open requests” filter example. Reread the context-engineering introduction, example, limitations, next step and linked context-preparation guidance.

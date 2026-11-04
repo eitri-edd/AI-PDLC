@@ -61,6 +61,11 @@
             <li><a href="#pre-prod">4.4 Pre-production</a><span>Run all readiness gates on the full codebase for Tech Lead sign-off.</span></li>
           </ol>
         </figure>
+        <aside class="ai-chapter-map" aria-label="How AI can help in this chapter">
+          <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help in this chapter</p>
+          <ul role="list"><li><a href="#ai-help-commit">Explain review findings</a></li><li><a href="#ai-help-qa">Check generated documents</a></li><li><a href="#ai-help-readiness">Prepare readiness evidence</a></li></ul>
+        </aside>
+
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#stages">Four pipeline stages</a>
             <a href="#pre-commit">4.1 Pre-commit</a>
@@ -128,7 +133,9 @@
           <p>An automatic hook reviews the staged change whenever a developer commits. It is the same quality and compliance gate used inside the <a href="eds-developer-harness.html#do-work">build loop</a>, scoped to the staged change for fast feedback. It runs in parallel the review against coding standards and the specification, <a href="https://semgrep.dev/">Semgrep</a> static analysis, the <a href="https://info.standards.tech.gov.sg">IM8</a> security review, the <a href="https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md">thermo-nuclear maintainability review</a> and the framework reviews.</p>
           <p>When the hook runs, a Critical or High finding blocks the commit and its results are written to one consolidated report. Local hooks can be bypassed. Required release controls should also be enforced in the shared pipeline; follow the applicable exception process and retain the reason and follow-up evidence for any authorised bypass.</p>
           <p>The IM8 review checks application technical controls such as input validation, authentication, secrets management, session management and audit logging.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-commit" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>An AI reviewer can help relate a finding to the staged code and propose a correction. Give it the actual report and applicable rule. The developer checks the location and reasoning, reruns the original checks and retains the new results; scanners and pipeline rules determine their own pass or fail states.</p></aside>
+</section>
 
         <section id="merge-dev">
           <h2>4.2 Document changes when merging to Dev</h2>
@@ -146,7 +153,9 @@
             <tr><th scope="row"><a href="https://semgrep.dev/">Semgrep</a> static analysis</th><td>Findings such as injection, weak cryptography, hard-coded secrets and unsafe input handling</td><td>Blocks on Critical or High</td></tr>
           </tbody></table></div>
           <p>All outputs are point-in-time and are regenerated after codebase or dependency changes.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-qa" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>When AI assists with an authorisation matrix or architecture document, ground it in the current code and interface definitions. Engineers check role-to-endpoint mappings and dependencies against the implementation and retain the reviewed documents. Generated documentation does not replace the configured security scans.</p></aside>
+</section>
 
         <section id="pre-prod">
           <h2>4.4 Confirm pre-production readiness</h2>
@@ -170,7 +179,9 @@
             <p class="example-label">Note</p>
             <p>The pre-production report covers <a href="https://info.standards.tech.gov.sg">IM8</a> controls in the code. <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a> controls are assessed earlier, against the TRD, at the <a href="eds-developer-harness.html#check">compliance audit in Step 8</a>. Keep the TRD assessment and code-check results together for the release review.</p>
           </aside>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-readiness" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can help organise current gate outputs into a draft readiness summary with links to the reports and unresolved findings. The Tech Lead checks that the evidence matches the release candidate and every required result is present, then records the release decision through the existing process.</p></aside>
+</section>
 
         <section id="after-release">
           <h2>Plan what happens after readiness</h2>

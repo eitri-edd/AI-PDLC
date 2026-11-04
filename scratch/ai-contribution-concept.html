@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How AI can help · Handbook design concept</title>
+<link rel="stylesheet" href="../site/dist/styles.css">
+<style>
+/* Proposed extension of Editorial Enterprise Light. Design variance 3,
+   motion 1, density 5: preserve the handbook's reading-first composition. */
+:root { --ai-ink:#0f666a; --ai-rule:#147d82; --ai-soft:#f0f9f9; --ai-border:#b8d9da; }
+body { background:var(--surface-subtle); }
+.concept-top { background:white; border-top:2px solid var(--accent); border-bottom:1px solid var(--border-subtle); }
+.concept-top>div { max-width:1250px; margin:auto; padding:18px 28px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+.concept-top strong { color:var(--text-primary); font-size:15px; }
+.concept-top span { font-size:12px; color:var(--text-secondary); }
+.workspace { max-width:1250px; margin:32px auto 70px; padding:0 28px; }
+.intro { max-width:850px; margin-bottom:28px; }
+.intro h1 { font-size:32px; margin:8px 0 12px; line-height:1.2; }
+.intro>p { font-size:16px; }
+.kicker { color:var(--text-secondary); font-size:11px; letter-spacing:.09em; font-weight:750; text-transform:uppercase; }
+.preview-controls { display:flex; gap:8px; flex-wrap:wrap; margin:16px 0; align-items:center; }
+.preview-controls button { font:inherit; font-size:13px; padding:10px 14px; border:1px solid var(--border-strong); background:white; border-radius:6px; color:var(--text-secondary); cursor:pointer; }
+.preview-controls button[aria-pressed="true"] { background:var(--accent); color:white; border-color:var(--accent); }
+.preview-controls a { margin-left:auto; font-size:13px; }
+.preview { display:grid; grid-template-columns:184px minmax(0,1fr); border:1px solid var(--border-subtle); border-radius:12px; overflow:clip; background:white; box-shadow:var(--shadow-sm); }
+.preview-nav { background:var(--surface-subtle); padding:26px 18px; border-right:1px solid var(--border-subtle); }
+.preview-nav p { margin:0 0 22px; font-size:11px; font-weight:700; color:var(--text-secondary); letter-spacing:.05em; }
+.preview-nav a { display:block; margin:0 -8px 6px; padding:10px 8px; color:var(--text-secondary); text-decoration:none; font-size:12px; line-height:1.5; border-radius:6px; }
+.preview-nav .selected { background:white; color:var(--accent); box-shadow:inset 3px 0 var(--accent); }
+.reading { padding:30px 40px 34px; min-width:0; width:100%; max-width:none; margin:0; container-type:normal; }
+.reading .breadcrumbs { font-size:11px; margin-bottom:20px; }
+.reading h2.chapter-title { border:0; padding:0; font-size:30px; margin:7px 0 12px; line-height:1.2; }
+.reading h2.chapter-title:after { display:none; }
+.chapter-lead { color:var(--text-secondary); font-size:15px; line-height:1.75; max-width:65ch; margin-bottom:20px; }
+.chapter-map { padding:12px 0 12px 15px; border-left:3px solid var(--ai-rule); margin:18px 0 30px; }
+.ai-label { display:inline-flex; align-items:center; gap:8px; font-size:11px; color:var(--ai-ink); font-weight:750; text-transform:uppercase; letter-spacing:.06em; }
+.ai-monogram { font-family:Consolas,monospace; font-weight:700; text-transform:none; letter-spacing:-.05em; border:1px solid var(--ai-rule); border-radius:4px; padding:1px 4px; font-size:11px; line-height:1.4; background:white; }
+.chapter-map p { font-size:13px; margin:5px 0 0; color:var(--text-secondary); line-height:1.65; }
+.reading h3 { font-size:19px; margin:24px 0 10px; }
+.reading .core-copy { font-size:14px; line-height:1.8; margin-bottom:18px; max-width:67ch; }
+.ai-module { border:1px solid var(--ai-border); border-left:3px solid var(--ai-rule); border-radius:0 10px 10px 0; background:var(--ai-soft); padding:20px 23px; }
+.ai-module h4 { font-size:18px; color:var(--text-primary); margin:10px 0 8px; line-height:1.4; }
+.ai-module .benefit { font-size:14px; margin:0 0 17px; line-height:1.7; }
+.ai-module dl { margin:0; }
+.ai-module dl>div { display:grid; grid-template-columns:112px minmax(0,1fr); gap:16px; padding:11px 0; border-top:1px solid var(--ai-border); }
+.ai-module dt { color:var(--ai-ink); font-size:12px; font-weight:700; line-height:1.7; }
+.ai-module dd { margin:0; color:var(--text-body); font-size:13px; line-height:1.7; }
+.ai-module details { border-top:1px solid var(--ai-border); margin-top:5px; padding-top:12px; }
+.ai-module summary { font-size:12px; color:var(--ai-ink); font-weight:650; cursor:pointer; }
+.ai-module details p { font-size:13px; margin:10px 0 0; }
+.ai-inline { display:flex; align-items:baseline; gap:10px; border-left:2px solid var(--ai-rule); padding-left:12px; margin:18px 0; }
+.ai-inline p { font-size:13px; margin:0; line-height:1.7; }
+.ai-inline .ai-label { flex-shrink:0; }
+.preview-note { font-size:12px; margin:13px 0 0; color:var(--text-secondary); }
+.proposal { margin-top:52px; }
+.proposal h2 { font-size:24px; }
+.proposal h3 { font-size:17px; margin:26px 0 10px; }
+.proposal p,.proposal li { font-size:14px; line-height:1.8; }
+.rationale { display:grid; grid-template-columns:1fr 1fr; gap:36px; }
+.rationale dl { font-size:14px; margin:0; }
+.rationale dt { font-weight:700; margin-top:16px; }
+.rationale dd { margin:5px 0 0; line-height:1.8; color:var(--text-secondary); }
+.treatments { display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; border-top:1px solid var(--border-strong); border-bottom:1px solid var(--border-strong); padding:22px 0; margin:24px 0; }
+.treatments strong { display:block; font-size:14px; }
+.treatments p { font-size:13px; margin-bottom:0; }
+.mini-mark { width:42px; height:4px; background:var(--ai-rule); margin-bottom:14px; }
+.application { width:100%; border-collapse:collapse; min-width:0!important; background:white; box-shadow:none; }
+.application th,.application td { min-width:0!important; width:auto!important; white-space:normal; font-size:13px; padding:14px 16px; line-height:1.75; }
+.application th:first-child,.application td:first-child { width:23%!important; }
+.application caption { text-align:left; color:var(--text-primary); font-size:17px; padding:16px 0; font-weight:700; }
+.language { display:flex; gap:20px; flex-wrap:wrap; margin:18px 0; }
+.language span { font-size:12px; font-weight:600; padding-left:10px; border-left:3px solid var(--border-strong); }
+.language .ai { border-color:var(--ai-rule); color:var(--ai-ink); }
+.language .human { border-color:var(--accent); color:var(--accent); }
+.language .gate { border-color:var(--warning-text); color:var(--warning-text); }
+.handoff { display:grid; grid-template-columns:1fr auto 1fr auto 1fr; align-items:start; gap:14px; margin:24px 0; }
+.handoff>div { border-top:3px solid var(--border-control); padding-top:12px; }
+.handoff .machine { border-color:var(--ai-rule); }
+.handoff .person { border-color:var(--accent); }
+.handoff strong { font-size:13px; display:block; margin-bottom:6px; }
+.handoff small { font-size:12px; line-height:1.7; color:var(--text-secondary); display:block; }
+.arrow { margin-top:19px; color:var(--text-secondary); }
+footer { font-size:12px; color:var(--text-secondary); border-top:1px solid var(--border-subtle); padding-top:20px; margin-top:36px; }
+[hidden] { display:none!important; }
+@media(max-width:850px) { .preview { grid-template-columns:1fr; } .preview-nav { display:none; } .reading { padding:28px; } .rationale { grid-template-columns:1fr; gap:0; } }
+@media(max-width:540px) { .workspace { margin-top:24px; padding:0 16px; } .concept-top>div { padding:15px 16px; } .intro h1 { font-size:27px; } .reading { padding:22px 17px; } .reading h2.chapter-title { font-size:25px; } .ai-module { padding:18px 15px; } .ai-module dl>div { grid-template-columns:1fr; gap:3px; } .ai-inline { display:block; } .ai-inline p { margin-top:7px; } .preview-controls a { margin:8px 0; width:100%; } .treatments { grid-template-columns:1fr; gap:22px; } .handoff { grid-template-columns:1fr; } .arrow { margin:0; transform:rotate(90deg); width:20px; } .application,.application tbody,.application tr,.application td { display:block; width:100%!important; } .application thead { display:none; } .application td:first-child { width:100%!important; font-weight:700; background:var(--surface-subtle); } .application td { border:0; padding:9px 14px; } .application tr { border-bottom:1px solid var(--border-strong); padding-bottom:12px; } }
+@media print { body { background:white; } .preview-controls,.preview-nav { display:none; } .preview { display:block; } .workspace { padding:0; } .ai-module { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<header class="concept-top"><div><strong>AI Software Development Lifecycle (AI-SDLC)</strong><span>Design concept · 4 November 2026</span></div></header>
+<main class="workspace">
+<header class="intro"><span class="kicker">An extension of Editorial Enterprise Light</span><h1>Show how AI can help.</h1><p>Keep the handbook’s familiar reading experience. Give AI assistance its own consistent accent, show how it can help beside the activity, and connect generated work to human judgement and retained evidence.</p></header>
+<div class="preview-controls" role="group" aria-label="Preview a chapter">
+<button type="button" data-chapter="discovery" aria-pressed="true">Product discovery</button>
+<button type="button" data-chapter="implementation" aria-pressed="false">Implementation</button>
+<button type="button" data-chapter="concepts" aria-pressed="false">Concepts</button>
+<button type="button" data-chapter="transformation" aria-pressed="false">Transformation</button>
+<a href="#design-rationale">Read the design rationale ↓</a>
+</div>
+<div class="preview" id="chapter-preview">
+<aside class="preview-nav" aria-label="Handbook context"><p>GUIDE NAVIGATION</p><a href="../site/dist/index.html">Introduction</a><a href="../site/dist/transformation.html" data-nav="transformation">Organisation transformation</a><a href="../site/dist/concept.html" data-nav="concepts">Concepts</a><a href="../site/dist/ai-pdlc.html">AI-SDLC</a><a href="../site/dist/product-discovery.html" data-nav="discovery" class="selected">Product discovery</a><a href="../site/dist/product-implementation.html" data-nav="implementation">Product implementation</a><a href="../site/dist/eds-ai-workflow.html">EDS AI Workflow (Eitri)</a></aside>
+<article class="reading" aria-live="polite" aria-atomic="true">
+<nav class="breadcrumbs" aria-label="Preview breadcrumb">Handbook <span aria-hidden="true">/</span> <span id="crumb">Product discovery</span></nav>
+<span class="kicker">Development guide</span>
+<h2 class="chapter-title" id="chapter-title">Product discovery</h2>
+<p class="chapter-lead" id="chapter-lead">Decide which problem to solve, test possible solutions and use the evidence to choose what to build.</p>
+<aside class="chapter-map" aria-label="How AI can help in this chapter"><span class="ai-label"><span class="ai-monogram" aria-hidden="true">AI</span> How AI can help in this chapter</span><p id="chapter-map">Group research themes · Challenge assumptions · Generate concept variants</p></aside>
+<h3 id="activity-title">Frame and understand the problem</h3>
+<p class="core-copy" id="activity-copy">Product, Design and Engineering investigate the same problem together. Begin with user observations, the current workflow and the decision you need to make.</p>
+<aside class="ai-module" aria-labelledby="ai-task">
+<span class="ai-label"><span class="ai-monogram" aria-hidden="true">AI</span> How AI can help</span>
+<h4 id="ai-task">Turn research notes into themes you can check</h4>
+<p class="benefit" id="benefit">AI can help organise a large set of notes so the team can spend more review time on patterns, exceptions and unanswered questions.</p>
+<dl>
+<div><dt>Give AI</dt><dd id="inputs">Permitted interview notes and support cases, source identifiers, and the research question.</dd></div>
+<div><dt>AI helps by</dt><dd id="contribution">Grouping recurring issues, linking each theme to source extracts, and flagging contradictory observations.</dd></div>
+<div><dt>People check</dt><dd id="human-check">Check claims against the original records. Sample uncited records for missed issues. Product, Design and Engineering choose what to investigate.</dd></div>
+<div><dt>Keep as evidence</dt><dd id="artefact">A checked theme summary with source links, uncertainties, the reviewer and the next research question.</dd></div>
+</dl>
+<details><summary>Example task brief</summary><p id="task-brief">Group these permitted notes by user difficulty. Link each theme to source IDs. Separate observation from interpretation. List contradictory records and open questions. Do not invent quotations.</p></details>
+</aside>
+<h3 id="next-title">Compare possible responses</h3>
+<p class="core-copy" id="next-copy">Include the current workflow and simpler process or content changes when comparing solutions. Choose the next test from the uncertainty that matters most.</p>
+<aside class="ai-inline" aria-label="More ways AI can help"><span class="ai-label">How AI can help</span><p id="inline-copy">Ask AI to challenge the assumptions behind a proposed ranking. The team checks the assumptions and chooses the next investment.</p></aside>
+<a id="source-link" href="../site/dist/product-discovery.html#ai-research" style="font-size:12px">Read the existing chapter guidance →</a>
+</article>
+</div>
+<p class="preview-note">Illustrative adaptation of the existing handbook content. Switch chapters to compare the same design language across different subjects.</p>
+<section class="proposal" id="design-rationale">
+<span class="kicker">Review and recommendation</span><h2>One visual language, used at three scales.</h2>
+<div class="rationale"><div><h3>What the current pages already do well</h3><p>All 13 pages share a stable white reading surface, navy headings, blue navigation, clear page maps and diagrams. Discovery already connects AI research, prioritisation and concept iteration to the relevant activities. Implementation distinguishes execution, independent checks and accountable decisions.</p><p>The design should build on that structure. The main gap is recognition: AI-specific passages often use the same headings and paragraph treatment as general guidance.</p></div><div><h3>What needs a distinct meaning</h3><dl><dt>Teal means “AI can help here”</dt><dd>Use a dark teal rule, a pale teal surface and the literal label “How AI can help”. The framed AI monogram is optional; the text label carries the meaning.</dd><dt>The existing colours keep their jobs</dt><dd>Blue remains navigation and human decision emphasis. Indigo continues to identify examples. Green, amber and red keep their status meanings. Teal never means passed, approved or implemented.</dd></dl></div></div>
+<div class="treatments"><div><div class="mini-mark"></div><strong>Chapter orientation</strong><p>A compact “How AI can help in this chapter” strip after the existing page map, listing relevant contributions. In a rollout, each item links to its section; it does not create a second table of contents.</p></div><div><div class="mini-mark"></div><strong>Help within a section</strong><p>A pale panel immediately after the activity it supports. Name the benefit, permitted inputs, AI action, human check and retained artefact. Use this where a task needs explanation.</p></div><div><div class="mini-mark"></div><strong>Inline help</strong><p>A slim rule and text label for a short tip or reminder. Use one sentence when the surrounding section already explains the inputs and checks.</p></div></div>
+<h3>Show AI working inside the delivery flow</h3><div class="language"><span>Existing context or artefact</span><span class="ai">How AI can help</span><span class="human">Human judgement</span><span class="gate">Decision gate</span></div>
+<figure style="margin:0"><figcaption style="font-size:13px;color:var(--text-secondary)">Illustrative research flow: generated themes become decision evidence after checking.</figcaption><div class="handoff"><div><strong>Research notes</strong><small>Permitted inputs with source identifiers</small></div><span class="arrow" aria-hidden="true">→</span><div class="machine"><strong>AI · group themes</strong><small>Candidate findings linked to original observations</small></div><span class="arrow" aria-hidden="true">→</span><div class="person"><strong>People · check and decide</strong><small>Validate findings and choose the next question</small></div></div></figure>
+<p>Apply the same teal accent and explicit AI label to AI nodes in existing diagrams. Preserve current decision shapes and status labels. Use solid connectors for handoffs and dashed connectors for rework, as the handbook already does. Any optional step-through interaction should reveal inputs, AI action and review in order; the static diagram remains complete.</p>
+<table class="application"><caption>Where the treatment belongs across all 13 pages</caption><thead><tr><th scope="col">Chapter</th><th scope="col">What to make visible</th><th scope="col">Best treatment</th></tr></thead><tbody>
+<tr><td><a href="../site/dist/index.html">Introduction</a></td><td>How AI changes work across discovery, delivery and learning, and where human judgement remains essential.</td><td>One orientation strip with links into relevant chapters.</td></tr>
+<tr><td><a href="../site/dist/transformation.html">Organisation transformation</a></td><td>How delegation changes skills, workflow, learning culture and technology needs. Connect each change to a pilot measure.</td><td>A small contribution under each relevant pillar; one fuller pilot example.</td></tr>
+<tr><td><a href="../site/dist/concept.html">Concepts</a></td><td>For each concept: what it enables an AI system to do, what the team supplies and how the result is checked.</td><td>One compact application example per concept. Avoid framing the entire AI concept explanation as a callout.</td></tr>
+<tr><td><a href="../site/dist/ai-pdlc.html">AI-SDLC overview</a></td><td>Where AI supports the two loops and how artefacts connect discovery, implementation and learning.</td><td>AI-labelled nodes in the existing loop diagram, plus links to detailed examples.</td></tr>
+<tr><td><a href="../site/dist/product-discovery.html">Product discovery</a></td><td>Research synthesis, assumption checks and concept variants alongside the six steps.</td><td>Section panels for substantive tasks; inline notes for smaller contributions. Retain current AI anchors.</td></tr>
+<tr><td><a href="../site/dist/product-implementation.html">Product implementation</a></td><td>Planning, task slicing, code and test generation, independent checks and feedback. Distinguish agent assistance from the test or scanner itself.</td><td>Contribution entries beside relevant stages; AI labels in the assurance diagram.</td></tr>
+<tr><td><a href="../site/dist/eds-ai-workflow.html">EDS AI Workflow</a></td><td>Which steps delegate work to agents, what context they receive and what evidence they return.</td><td>Small contributions at handoffs. Keep Implemented, Planned and other status badges separate.</td></tr>
+<tr><td><a href="../site/dist/eds-po-ba-harness.html">PO/BA harness</a></td><td>AI-assisted questioning, research and PRD drafting within each documented path.</td><td>A task panel per path, linked to the existing procedure and artefacts.</td></tr>
+<tr><td><a href="../site/dist/eds-developer-harness.html">Developer harness</a></td><td>Agent execution, expected outputs and human gates across Plan, Check, Build and Close out.</td><td>An actor label in relevant step rows and a compact contribution at phase level.</td></tr>
+<tr><td><a href="../site/dist/eds-path-to-production.html">Path to production</a></td><td>Agent-assisted findings and evidence preparation where the existing procedure supports them.</td><td>Inline annotation. Keep deterministic pipeline checks and authorised release decisions separately labelled.</td></tr>
+<tr><td><a href="../site/dist/eds-team-context.html">Team context</a></td><td>How domain knowledge, standards and review rules change the inputs available to agents.</td><td>An inputs → agent use → verification example for each meaningful context category.</td></tr>
+<tr><td><a href="../site/dist/eds-skills-catalogue.html">Skills catalogue</a></td><td>What an agent uses a skill for and which artefact or check results.</td><td>Concise contribution text in existing entries. Keep catalogue status and category filters distinct.</td></tr>
+<tr><td><a href="../site/dist/training.html">Training</a></td><td>What the learner delegates, what they inspect and how they recognise an acceptable result.</td><td>A compact practice task with expected evidence beside the relevant lesson.</td></tr>
+</tbody></table>
+<h3>Keep the meaning clear as the pattern expands</h3><ul><li><strong>AI assistance and AI product behaviour:</strong> reserve the teal contribution treatment for AI helping delivery work. Label guidance about AI inside the delivered product “When your product uses AI”, using the existing neutral reference treatment.</li><li><strong>Meaning before decoration:</strong> apply the treatment to a bounded contribution, rather than every mention of AI or an entire chapter. Avoid duplicating AI guidance in a second section.</li><li><strong>Benefit without invented results:</strong> describe the work AI helps with. Any speed, quality or cost improvement is a hypothesis to measure locally.</li><li><strong>Progressive detail:</strong> keep the contribution and human check visible. Collapse optional task briefs, examples and tool-specific instructions; link Eitri commands back to their existing procedures.</li><li><strong>Accessible recognition:</strong> pair teal with a text label, preserve blue focus rings and underlined links, and stack input/action/review rows on mobile. Use a rule and label in print so colour is optional.</li></ul>
+<h3>Suggested first application</h3><p>Start with the existing discovery research guidance, one implementation stage, one concept and one transformation pillar. Check whether readers can identify the AI task, its evidence and the human decision without relying on colour. Extend the pattern after those examples read naturally within their chapters.</p>
+<footer>Basis: the 13 pages in site/dist, the shared styles, design.md and writing.md. This proposal illustrates presentation and editorial structure; it does not establish EDS policy or implementation status.</footer>
+</section>
+</main>
+<script>
+const examples = {
+ discovery:{title:'Product discovery',lead:'Decide which problem to solve, test possible solutions and use the evidence to choose what to build.',map:'Group research themes · Challenge assumptions · Generate concept variants',activity:'Frame and understand the problem',copy:'Product, Design and Engineering investigate the same problem together. Begin with user observations, the current workflow and the decision you need to make.',task:'Turn research notes into themes you can check',benefit:'AI can help organise a large set of notes so the team can spend more review time on patterns, exceptions and unanswered questions.',inputs:'Permitted interview notes and support cases, source identifiers, and the research question.',contribution:'Grouping recurring issues, linking each theme to source extracts, and flagging contradictory observations.',check:'Check claims against the original records. Sample uncited records for missed issues. Product, Design and Engineering choose what to investigate.',artefact:'A checked theme summary with source links, uncertainties, the reviewer and the next research question.',brief:'Group these permitted notes by user difficulty. Link each theme to source IDs. Separate observation from interpretation. List contradictory records and open questions. Do not invent quotations.',next:'Compare possible responses',nextCopy:'Include the current workflow and simpler process or content changes when comparing solutions. Choose the next test from the uncertainty that matters most.',inline:'Ask AI to challenge the assumptions behind a proposed ranking. The team checks the assumptions and chooses the next investment.',href:'product-discovery.html#ai-research'},
+ implementation:{title:'Product implementation',lead:'Turn agreed product intent into tested software through planning, implementation, verification and learning.',map:'Draft technical plans · Implement bounded tasks · Assemble evidence for independent review',activity:'Build and verify a bounded change',copy:'Start from agreed behaviour and acceptance criteria. Keep the implementation scope small enough to inspect, test and correct before progressing.',task:'Generate a change and make its checks reproducible',benefit:'An agent can carry out a bounded implementation task and collect check results for reviewers to reproduce and assess.',inputs:'The agreed task, relevant code, acceptance criteria, team standards and permitted tool access.',contribution:'Proposing code and tests, running permitted checks, correcting findings and collecting the results.',check:'Review code and test changes independently. Reproduce important checks against the agreed behaviour. The authorised person decides whether the increment can progress.',artefact:'The change set, test and scan results, independent review findings and the recorded decision.',brief:'Implement the agreed task within the permitted files. Run the documented checks. Report changed behaviour, test results and unresolved findings. Stop if the task requires access outside the agreed scope.',next:'Learn from the increment',nextCopy:'Use operating behaviour and delivery evidence to identify what the product and the delivery process need next.',inline:'Use AI to group recurring failures for investigation. Engineers reproduce the failures and decide which changes address their causes.',href:'product-implementation.html'},
+ concepts:{title:'Concepts',lead:'Understand the practices that connect intent, context, controlled execution and verifiable results.',map:'Clarify intent · Supply relevant context · Bound execution · Verify outcomes',activity:'Context engineering',copy:'Give an agent the information it needs for the current task. Select relevant product intent, technical constraints and team standards, and keep them current.',task:'Apply the right context to a proposed change',benefit:'Relevant context can help an agent propose a change that fits the system and exposes assumptions for review.',inputs:'The task, current repository evidence, applicable standards and source versions.',contribution:'Using the supplied context to propose an approach, reference constraints and identify missing information.',check:'Confirm that sources are current and applicable. Check proposed behaviour against the task and standards. Resolve conflicting or missing context.',artefact:'A referenced proposal, explicit assumptions and a record of the context used.',brief:'Using these approved sources, propose an approach to the task. Reference the relevant constraints. Identify missing information and conflicting instructions before proposing code.',next:'Connect context to the harness',nextCopy:'The harness supplies tools, permissions and checks so the agent can execute within the agreed boundaries.',inline:'An agent can flag missing context during a task. The team decides which sources are authoritative and updates the shared context.',href:'concept.html'},
+ transformation:{title:'Organisation transformation',lead:'Plan changes across people, process, culture and technology, then use pilot evidence to decide what to adopt.',map:'Delegate bounded work · Strengthen review skills · Learn from pilot evidence',activity:'People: broaden skills and retain specialist judgement',copy:'Teams need time and skills to specify work, assess generated results and resolve uncertainty. Choose recurring work where delegation can be tested and reviewed.',task:'Move from producing every draft to specifying and checking',benefit:'AI can prepare drafts and surface alternatives, giving specialists more material to assess against the task and its constraints.',inputs:'A recurring task, agreed quality criteria, permitted context and a named reviewer.',contribution:'Drafting alternatives, explaining assumptions and revising the work in response to specific feedback.',check:'Specialists test the reasoning and quality. The team records review effort and rework, and the decision owner decides whether the working practice should expand.',artefact:'Reviewed work, the feedback record and pilot measures that include accepted results, review effort and defects.',brief:'Draft two approaches to this recurring task using the permitted context. Explain assumptions and uncertainties. Identify how a reviewer could check each approach against the agreed criteria.',next:'Run a pilot and decide from evidence',nextCopy:'Choose a delivery problem and establish a baseline. Compare accepted outcomes, review effort and rework before expanding the practice.',inline:'AI can summarise pilot observations and reported failures. The team checks the records and decides which process, skills or tooling changes to make.',href:'transformation.html'}
+};
+const fields={'chapter-title':'title','crumb':'title','chapter-lead':'lead','chapter-map':'map','activity-title':'activity','activity-copy':'copy','ai-task':'task','benefit':'benefit','inputs':'inputs','contribution':'contribution','human-check':'check','artefact':'artefact','task-brief':'brief','next-title':'next','next-copy':'nextCopy','inline-copy':'inline'};
+document.querySelectorAll('[data-chapter]').forEach(button=>button.addEventListener('click',()=>{
+ const key=button.dataset.chapter, entry=examples[key];
+ Object.entries(fields).forEach(([id,field])=>document.getElementById(id).textContent=entry[field]);
+ document.getElementById('source-link').href='../site/dist/'+entry.href;
+ document.querySelectorAll('[data-chapter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+ document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('selected',a.dataset.nav===key));
+ document.querySelector('.ai-module details').open=false;
+}));
+</script>
+</body>
+</html>

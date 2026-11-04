@@ -65,6 +65,11 @@
           </ol>
 
         </figure>
+        <aside class="ai-chapter-map" aria-label="How AI can help in this chapter">
+          <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help in this chapter</p>
+          <ul role="list"><li><a href="#ai-support">Support both delivery loops</a></li><li><a href="#ai-help-handoff">Prepare the handoff</a></li><li><a href="#ai-help-feedback">Organise feedback</a></li></ul>
+        </aside>
+
         <!-- PAGE MAP END -->
         <details class="mobile-contents">
           <summary>On this page</summary>
@@ -229,7 +234,9 @@
           <div class="next-step"><p><strong>Next step:</strong> compare your current PRD with the handover package and readiness checks above, and list the gaps. <a href="product-implementation.html#implementable-definition">Read how implementation starts from the PRD and UI artefacts</a>, or <a href="concept.html#intent-driven-development">read about intent-driven development</a> for ways to record intent and open questions.</p></div>
 
 
-      </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-handoff" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give AI the agreed scope and current discovery artefacts to draft a handoff summary and flag missing acceptance criteria or evidence links. Product, Design and Engineering compare the summary with the originals, resolve gaps and retain the reviewed package with the commitment decision.</p></aside>
+</section>
 <section id="implementation-loop">
   <h2>Product implementation loop</h2>
   <p>Use implementation when the next change has agreed behaviour and testable acceptance criteria. The team combines the handoff with organisational context, then translates the product requirements document (PRD) into a technical requirements document (TRD) and verifiable tasks.</p>
@@ -261,12 +268,16 @@
   </tbody></table></div>
   <p>The playbook suggests moving investment towards another problem when a plateau means the product has delivered its available value. This handbook adds a diagnostic check: distinguish saturation from measurement limits or changing conditions, and assess essential outcomes and obligations before reducing investment. Maintenance can preserve reliability, supportability and risk controls even when the headline measure stops rising.</p>
   <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: DORA, User-centric focus">[1]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/problems">Define the problem, measure the value</a> and <a href="https://defence-pp.vercel.app/#/govern">Govern and review</a>. Adaptation: the table applies the playbook’s actions to this lifecycle; escalation follows local decision authority.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-feedback" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask AI to group permitted feedback, defect reports and operating observations with links to the original records. The team checks the proposed groups and their context, then records whether to correct implementation, reopen discovery or improve the delivery process.</p></aside>
 </section>
 <section id="ai-support">
   <h2>Use AI across the lifecycle</h2>
+<div class="ai-help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
   <p>AI-assisted development means using AI to support development work; the resulting product does not need to contain an AI feature. People still decide the intended outcomes, acceptable trade-offs and scope of agent activity.</p>
   <p>In discovery, AI can help synthesise research, challenge assumptions and draft prototypes. In implementation, it can help plan tasks, produce changes and collect verification evidence. Review the sources, assumptions and outputs before relying on them.</p>
-  <p>McKinsey’s 10 February 2025 article argues for AI assistance across product development: connect research with usage evidence, test ideas earlier, and consider quality, risk, compliance and accessibility from discovery onwards. Its anticipated benefits are proposals and industry perspectives, rather than proof of improvement for every team.</p>
+  </div>
+<p>McKinsey’s 10 February 2025 article argues for AI assistance across product development: connect research with usage evidence, test ideas earlier, and consider quality, risk, compliance and accessibility from discovery onwards. Its anticipated benefits are proposals and industry perspectives, rather than proof of improvement for every team.</p>
   <p>Hold AI-written work to the same quality bar as any other work. The Defence Product Playbook’s ProductOps Quality Model sets four layers of checks, so that quality does not depend on who or what authored the code:</p>
   <ol class="practice-steps">
     <li><strong>Prevention, before the build:</strong> project rules for agents, reusable design-system components and typed contract boundaries.</li>

@@ -330,7 +330,7 @@ if (skillForm) {
   function revealLinkedSkill() {
     if (!location.hash) return;
     const target = document.getElementById(location.hash.slice(1));
-    if (!target?.matches('[data-skill]')) return;
+    if (!target?.matches('[data-skill], .ai-help')) return;
     query.value = '';
     status.value = 'all';
     filterSkills();

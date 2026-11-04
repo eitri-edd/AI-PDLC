@@ -1,5 +1,20 @@
 # Organisation transformation: editorial review
 
+## Alignment with the revised writing standard · 4 November 2026
+
+Revised the chapter against the current `writing.md`, focusing on the reader’s task, connected explanations, terminology and the distinction between general guidance and implementation-specific practices.
+
+- Rewrote the opening for team leads and delivery teams, connecting faster drafting to requirements, review capacity and a bounded pilot.
+- Combined People and Team composition into one section. Retained `#team-composition` on the delegated-work heading for existing links, and updated both contents lists, the page map and the discovery page’s incoming link label.
+- Removed the overlapping contributions table while retaining the detailed competency table, specialist responsibilities and the distinction between QA acceptance and security approval. Clarified product-owner usage and the contribution of business analysis without assigning new authority.
+- Replaced the glossary with explanations beside the relevant passages. Separated PRD/TRD meanings from workflow-specific preparation and approval, linked to implementation guidance, and removed the generic two-tier review prescription.
+- Replaced the search-filter scenario with the upload-feature pilot used elsewhere in the chapter. The example now traces an omitted recipient-access check through correction, independent review and retained evidence, with effort counted in the final comparison.
+- Promoted shared capability ownership into a separate section, retaining its anchor and maintenance, support and funding responsibilities. Distinguished development-tool evaluation cases from evaluation of AI behaviour in a delivered product.
+- Specified how reviewers compare AI assessments with original evidence, record missed defects and unsupported findings, and handle unresolved disagreements.
+- Preserved the existing research claims, nearby limitations, source-check date, pilot scorecard, stop conditions, decision authority and fictional effort figures. No new empirical claims were introduced.
+
+Validation: source-level checks passed for balanced tags, heading order, unique IDs, local files and anchors, incoming chapter anchors, table headers and diagram text references. `git diff --check` passed for the edited files. Browser policy blocked opening the local HTML file, so no visual layout review was completed. A comprehension check with a representative reader remains outstanding; this is not recorded as completed reader validation. Changes remain local and unpublished.
+
 ## Clarity and pilot examples · 4 November 2026
 
 Assessed the requested Introduction passage, four-area example and pilot guidance against `writing.md`. The main issues were an abstract explanation of late feedback, categories presented as actors, compressed review instructions and an indirect decision heading.

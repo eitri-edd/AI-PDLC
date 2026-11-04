@@ -1,7 +1,7 @@
 # Design system proposal
 
 For EDS’s AI-Software Development Lifecycle knowledge site
-Status: Proposed visual system · Version: 0.3 · Updated: 17 October 2026
+Status: Proposed visual system · Version: 0.4 · Updated: 4 November 2026
 
 ## Design direction
 
@@ -53,6 +53,38 @@ Use semantic tokens in components so the palette remains consistent across pages
 Use white text on solid accent buttons. Use primary, body or secondary text on white and neutral surfaces. Pair semantic status colours only with their designated light backgrounds and borders. Always include a text status label; colour alone does not convey meaning.
 
 Keep blue purposeful. Avoid dark-mode neon glows, heavy full-bleed gradients or decorative AI stock art.
+
+## How AI can help
+
+Use this treatment to make AI assistance recognisable within the activity it supports. Keep the existing white reading surface, typography, navigation and status colours. Teal identifies AI assistance; it does not indicate that work is implemented, correct or approved.
+
+| Token | Value | Use |
+| --- | --- | --- |
+| `ai-ink` | `#0F666A` | AI assistance labels and field headings; contrast exceeds 6:1 on white and the AI surface |
+| `ai-rule` | `#147D82` | Recognisable left rule and framed AI text mark |
+| `ai-surface` | `#F0F9F9` | Pale surface for a substantive AI task explanation |
+| `ai-border` | `#B8D9DA` | Quiet dividers inside that explanation |
+
+Apply the pattern at three scales:
+
+- **Chapter orientation (`.ai-chapter-map`):** after the existing page map, show “How AI can help in this chapter” with two to four descriptive links to the relevant passages. Keep the existing table of contents as the complete reading route.
+- **Task explanation (`.ai-help`):** place a pale teal panel beside the relevant activity. Use the literal label “How AI can help”, a descriptive task heading, and enough detail to identify the inputs, AI action, human checks and retained evidence. Use `.ai-help-facts` for “Give AI”, “AI helps by”, “People check” and “Keep as evidence” when a task needs structured explanation. Highlight existing useful passages rather than repeating them.
+- **Short guidance (`.ai-help.ai-help--inline`):** use a slim teal rule and the same label when a short paragraph can explain the assistance and how its result is checked. Keep it on the white reading surface.
+
+Use semantic asides for supporting guidance and preserve existing section anchors, sources, examples, status labels and decision authority. The framed “AI” mark is decorative; the visible text label communicates meaning without colour. Keep links and focus rings blue. Stack structured fields on narrow screens and retain labels and rules in print. The treatment needs no animation or JavaScript.
+
+Reserve this treatment for AI helping the team perform delivery work. Keep guidance about AI inside the delivered product in its existing reference or example treatment, with an explicit explanation of when it applies. Deterministic tests, scanners and pipeline gates retain their own meanings, even when an agent invokes them or summarises their results. Describe proposed benefits as work AI can help with; measure improvements locally.
+
+### Chapter-link alignment and responsive behaviour
+
+Keep the chapter label on its own line, followed by a semantic list of links. Align the label and link list to the same left edge inside the teal rule.
+
+- Above `40rem`, use a wrapping flex row with `align-items: baseline`. Links on the same row share a text baseline. Use `0.25rem` between rows and `1.25rem` between items; let links wrap naturally when the reading column narrows.
+- Reset every direct list item with `.ai-chapter-map ul > li { margin: 0; min-width: 0; }`. This selector overrides the article’s general `.concept-article li + li` spacing rule. Otherwise, later links inherit a top margin and appear lower than the first link.
+- At `40rem` and below, stack the links vertically. Use `0.5rem` vertical padding on each link for comfortable touch spacing; keep list-item margins at zero.
+- Preserve blue, underlined links and visible keyboard focus. Use real section anchors so navigation works without JavaScript. In the skills catalogue, following an AI-help link clears active filters when necessary to reveal its target.
+
+Check alignment across all 13 handbook pages at `1440px`, `768px`, `375px` and `320px`. Confirm that links on the same row align, wrapped rows retain consistent spacing, mobile links stack without horizontal overflow and every link reveals its destination. Keep this adjustment in the shared stylesheet rather than adding page-specific offsets.
 
 ## Typography
 

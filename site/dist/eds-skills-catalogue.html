@@ -61,6 +61,11 @@
             <li><a href="#path-to-production">Pipeline &amp; MCP</a><span>Browse pre-commit, Dev/QA/pre-prod readiness gates and MCP integrations.</span></li>
           </ol>
         </figure>
+        <aside class="ai-chapter-map" aria-label="How AI can help in this chapter">
+          <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help in this chapter</p>
+          <ul role="list"><li><a href="#ai-help-skills">Choose a skill for a task</a></li><li><a href="#ai-help-skill-review">Check the result</a></li></ul>
+        </aside>
+
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#conventions">Reading the catalogue</a>
             <a href="#groups">Skill groups</a>
@@ -95,7 +100,19 @@
           <h2>Read the catalogue</h2>
           <p>Each table names the skill, who maintains it, its status and what it does. <strong>Maintained by</strong> identifies the skill’s maintainer: “CoreX EDS team” marks an EDS add-on skill. Where a skill wraps a tool from outside EDS, the tool is linked. Step and gate numbers refer to the <a href="eds-developer-harness.html">Developer harness page</a>.</p>
           <aside class="status-key" aria-label="Labels used on this page"><p>Labels on this page</p><dl><div><dt><span class="status">Available</span></dt><dd>Ready to use.</dd></div><div><dt><span class="status status-planned">Planned</span></dt><dd>In development and not yet available. Do not count on it as a control.</dd></div></dl></aside>
-        </section>
+
+          <aside class="ai-help" id="ai-help-skills" aria-labelledby="ai-help-skills-title">
+            <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
+            <h3 id="ai-help-skills-title">Choose a skill by the result you need</h3>
+            <p>A skill gives an agent a reusable procedure for a bounded task. Use the catalogue to connect that task to its inputs, resulting artefact and next reviewer.</p>
+            <dl class="ai-help-facts">
+              <div><dt>Give AI</dt><dd>The task, required input artefacts, relevant context and the selected skill’s instructions.</dd></div>
+              <div><dt>AI helps by</dt><dd>Following the selected planning, implementation or review procedure and producing its documented artefacts or findings.</dd></div>
+              <div><dt>People check</dt><dd>Check that the skill applies to the task and is available in the installed workflow. Compare its result with the original requirement and reproduce relevant checks.</dd></div>
+              <div><dt>Keep as evidence</dt><dd>The selected skill and version, inputs, output artefacts, check results and unresolved findings.</dd></div>
+            </dl>
+          </aside>
+</section>
 
         <section id="groups">
           <h2>See the skill groups</h2>
@@ -198,7 +215,9 @@
             <tr><th scope="row"><code>/spec-standards-check</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Checks a specification against the standards referenced on its issue, flagging critical gaps and warnings. Step 7.</td></tr>
             <tr><th scope="row"><code>/sonar-review</code></th><td>CoreX EDS team, using <a href="https://www.sonarsource.com">Sonar</a></td><td><span class="status status-planned">Planned</span></td><td>Will check changed files against the team’s Sonar quality profiles and architecture constraints.</td></tr>
           </tbody></table></div>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-skill-review" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>A review skill can flag missing requirements or coding-standard violations in a supplied change. Give it the original issue or TRD and applicable rules. Reviewers inspect the cited code and reproduce findings; retain confirmed issues and reasons for dismissing unsupported findings before the next decision.</p></aside>
+</section>
 
         <section id="architecture">
           <h2>Architecture linting</h2>

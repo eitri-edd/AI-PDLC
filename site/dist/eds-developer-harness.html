@@ -61,6 +61,11 @@
             <li><a href="#closeout">Close out (13–19)</a><span>Deepen modules, extend architecture tests, review, test in a browser and close out.</span></li>
           </ol>
         </figure>
+        <aside class="ai-chapter-map" aria-label="How AI can help in this chapter">
+          <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help in this chapter</p>
+          <ul role="list"><li><a href="#ai-help-dev-plan">Draft technical plans</a></li><li><a href="#ai-help-dev-check">Challenge and slice</a></li><li><a href="#ai-help-dev-build">Implement and correct</a></li><li><a href="#ai-help-dev-closeout">Collect review evidence</a></li></ul>
+        </aside>
+
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#install">Set up once</a>
             <a href="#steps">The 19 steps</a>
@@ -169,7 +174,9 @@
           <h3>Investigate, then write the TRD (Steps 5–6)</h3>
           <p>The developer takes the next story from the delivery plan and resolves its open decisions before anything is written. A large, ambiguous story is broken into investigation tickets and resolved one at a time; a smaller, well-defined story is stress-tested against the domain model in one session.</p>
           <p>The TRD then brings the decisions together without further questions. It covers the problem statement, the solution, user stories, implementation decisions, testing decisions and what is out of scope.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-dev-plan" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>With the PRD, repository and applicable standards, agents can propose story dependencies and a story-level TRD. The developer and Tech Lead compare the proposed design with the user story, inspect dependencies and resolve assumptions; retain the reviewed plan before progressing.</p></aside>
+</section>
 
         <section id="check">
           <h2>Check the TRD and slice it (Steps 7–10)</h2>
@@ -185,7 +192,9 @@
           <p>The compliance audit covers two policy sets. <a href="https://info.standards.tech.gov.sg">Instruction Manual 8 (IM8)</a> is the Singapore Government’s ICT and Smart Systems policy framework; the audit uses the application security controls packaged with the harness. The <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">Agentic Risk &amp; Capability Framework (ARC)</a> is GovTech’s governance framework for risks in agentic AI systems.</p>
           <p>Each control is judged as met, fixable by tightening the wording, failed, deferred to implementation because it cannot be checked at specification stage, or not applicable. Planning is not complete while any control is failed.</p>
           <p>Declared dependencies help identify issues that can run in parallel. Before assigning them, check for shared files, data, interfaces and environment conflicts. Isolate changes and verify the integrated result; dependency ordering alone does not establish safety.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-dev-check" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Agents can assess the TRD against supplied standards and policies and draft verifiable issues. Reviewers trace findings to the applicable rule and check that the issues cover the approved design. Keep the reports, dependencies and documented human sign-offs.</p></aside>
+</section>
 
         <section id="modes">
           <h2>Choose an execution mode</h2>
@@ -251,7 +260,19 @@
           <h3 id="factory">Toward an AI software factory</h3>
           <p>The harness describes an AI software factory as a self-steering delivery engine: agents pick up issues, implement and validate them against a defined quality bar, commit and close them. Running the build loop in Mode 2 or Mode 3 is the harness’s route to this. Because Step 9 publishes issues with explicit dependencies, several agents can take different issues in parallel. <a href="concept.html#software-factory">Read the software factory concept</a>.</p>
           <p>Teams own the factory’s quality bar by treating the build loop as configuration they maintain. They can add a gate, such as a new scanner or performance check; tighten a threshold, such as coverage or mutation score; or add reviewers for their own domain. Raising the bar this way does not change the delivery workflow.</p>
-        </section>
+
+          <aside class="ai-help" id="ai-help-dev-build" aria-labelledby="ai-help-dev-build-title">
+            <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
+            <h3 id="ai-help-dev-build-title">Implement a bounded issue and report what passed</h3>
+            <p>The build loop connects agent changes to check results so the developer can inspect evidence rather than rely on a completion claim.</p>
+            <dl class="ai-help-facts">
+              <div><dt>Give AI</dt><dd>One issue, acceptance criteria, relevant architecture decisions, coding guidance and permitted tool access.</dd></div>
+              <div><dt>AI helps by</dt><dd>Implementing the issue, writing tests, running the configured checks and correcting findings within the loop’s limits.</dd></div>
+              <div><dt>People check</dt><dd>The developer inspects code and test changes against the issue and reproduces important results. Unresolved failures follow the documented rework or escalation route.</dd></div>
+              <div><dt>Keep as evidence</dt><dd>The scoped diff, check and review reports, unresolved findings and the issue’s implementation summary.</dd></div>
+            </dl>
+          </aside>
+</section>
 
         <section id="closeout">
           <h2>Verify and close out (Steps 13–19)</h2>
@@ -268,7 +289,9 @@
           <p>The Step 15 review runs its two parts separately to reduce influence between them. Reviewers still need the original requirements, the changed code and reproducible evidence; separate runs can share the same mistaken assumptions. One compares the change with the repository’s documented coding standards, falling back to a baseline of common code smells. The other compares it with the originating issue or TRD, flagging missing requirements, scope creep and requirements that look implemented but are wrong.</p>
           <p>End-to-end evidence builds up one user story at a time. A run counts only after its final verifier passes, and a stability check can repeat it at least three times to flag results that change between runs. A failing run does not block a push unless the repository adds a pipeline gate.</p>
           <p>Each check writes its report to the repository, so reviewers can inspect the evidence behind a decision: the dependency graph, the architecture test plan, the compliance and review reports, browser screenshots and end-to-end results.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-dev-closeout" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Agents can propose refactoring, extend architecture tests and collect browser or end-to-end evidence where those steps are used. Reviewers check the original acceptance criteria and changed code and reproduce results before accepting the change. Keep reports and screenshots with the story.</p></aside>
+</section>
 
         <section id="done">
           <h2>Definition of done for planning and implementation</h2>

@@ -61,6 +61,11 @@
             <li><a href="#handoff">Commit &amp; hand off</a><span>Commit the PRD and prototype to the repository for the developer harness.</span></li>
           </ol>
         </figure>
+        <aside class="ai-chapter-map" aria-label="How AI can help in this chapter">
+          <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help in this chapter</p>
+          <ul role="list"><li><a href="#ai-help-speckit">Draft a specification</a></li><li><a href="#ai-help-socratic">Resolve unknowns</a></li><li><a href="#ai-help-clara">Organise research</a></li></ul>
+        </aside>
+
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#choose-path">Choose a path</a>
             <a href="#path-speckit">Path 1: SpecKit</a>
@@ -121,7 +126,9 @@
             <li><strong>Optionally, design or prototype the interface.</strong> The PO or BA validates the requirements visually with stakeholders. They can paste the user stories into <a href="https://stitch.withgoogle.com">Google Stitch</a> or <a href="https://www.figma.com/make/">Figma Make</a>, or ask the coding agent to generate a design or a standalone HTML prototype from them.</li>
             <li><strong>Optionally, hand off the prototype.</strong> Committing it alongside the specification lets developers extract reusable interface components and keep screens consistent. Conversion from a Google Stitch project is available. Conversion from a standalone HTML file is in development and not yet available <span class="status status-planned">Planned</span>.</li>
           </ol>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-speckit" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give the specification workflow the user need, scope, domain terms and known rules. AI can draft requirements and user stories; the PO or BA checks each against the intended behaviour, resolves unsupported assumptions with stakeholders and commits the accepted specification.</p></aside>
+</section>
 
         <section id="path-socratic">
           <h2>Path 2: Socratic workflow, for large or ambiguous features</h2>
@@ -132,7 +139,9 @@
             <li><strong>Write the specification.</strong> The agent compiles the decisions, codebase constraints and prototype results into an early-draft TRD, published to the issue tracker as the handoff artefact.</li>
             <li><strong>Optionally, hand off a prototype.</strong> If a ticket produced interface variations, they are handed off with the specification.</li>
           </ol>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-socratic" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>The agent can turn unclear scope into investigation tickets and compile resolved decisions into the early-draft TRD. The PO or BA checks answers against business evidence, and Engineering checks technical findings; retain unresolved questions and prototype results with the handoff.</p></aside>
+</section>
 
         <section id="path-clara">
           <h2>Path 3: product research with CLARA</h2>
@@ -144,7 +153,9 @@
             <li><strong>Optionally, prototype the interface.</strong> An HTML prototype of the chosen experience, built with Prizm Design components, is handed off with the specification files as a visual reference.</li>
           </ol>
           <p>CLARA can only ground its research in what it can reach. The team’s domain documentation needs to be in the Confluence spaces or knowledge bases CLARA queries; <a href="eds-team-context.html#domain">read how to add domain context</a>.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-clara" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>CLARA can organise accessible programme knowledge into research artefacts and draft specifications. Give it relevant domain sources; the team checks generated claims, personas and journeys against those sources and actual research, then commits the reviewed artefacts with their limitations.</p></aside>
+</section>
 
         <section id="handoff">
           <h2>Commit the artefacts and hand off</h2>

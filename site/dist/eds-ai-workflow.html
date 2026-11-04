@@ -85,6 +85,11 @@
             <li><a href="#harness">Diagnose &amp; measure</a><span>Trace any failure to one of five harness layers and track workflow health.</span></li>
           </ol>
         </figure>
+        <aside class="ai-chapter-map" aria-label="How AI can help in this chapter">
+          <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help in this chapter</p>
+          <ul role="list"><li><a href="#ai-help-workflow">Connect agent tasks</a></li><li><a href="#ai-help-context-use">Apply relevant context</a></li><li><a href="#ai-help-diagnose">Investigate failures</a></li></ul>
+        </aside>
+
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#eitri-inspiration">The EITRI inspiration</a>
             <a href="#pages">Pages in this section</a>
@@ -162,7 +167,19 @@
           <p>An AI agent then builds one issue at a time in a loop that builds, checks and corrects its own work. Closeout adds independent review and evidence that the story behaves as specified, and returns failures to the loop. Finally, four pipeline stages widen the checks from the single change to the whole codebase, ending with one report for the Tech Lead’s sign-off.</p>
           <p>The <a href="eds-developer-harness.html">Developer harness page</a> breaks the middle of this route into its individual steps. The <a href="eds-path-to-production.html">Path to production page</a> covers the pipeline stages.</p>
           <p>The workflow covers Plan, Slice, Implement and Verify in the six-stage implementation loop, and reaches release readiness through the pipeline gates. Progressive rollout, observation and learning from production evidence sit outside the harness. Use the <a href="product-implementation.html#six-stages">Product implementation guidance</a> for those stages.</p>
-        </section>
+
+          <aside class="ai-help" id="ai-help-workflow" aria-labelledby="ai-help-workflow-title">
+            <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
+            <h3 id="ai-help-workflow-title">Connect each agent task to the next artefact</h3>
+            <p>The workflow lets agents help develop a PRD into technical plans, bounded issues and implementation evidence. Review the artefact at each handoff before relying on it.</p>
+            <dl class="ai-help-facts">
+              <div><dt>Give AI</dt><dd>The agreed PRD, repository context, applicable standards and the current step’s required artefacts.</dd></div>
+              <div><dt>AI helps by</dt><dd>Drafting plans and issues, carrying out bounded implementation tasks and collecting check results through the documented skills.</dd></div>
+              <div><dt>People check</dt><dd>The assigned reviewers compare artefacts with the original intent and reproduce relevant checks. People sign off at the documented human gates.</dd></div>
+              <div><dt>Keep as evidence</dt><dd>The reviewed plans, issues, check reports and gate decisions, linked to the story and installed workflow version.</dd></div>
+            </dl>
+          </aside>
+</section>
 
         <section id="status">
           <h2>Understand the status labels</h2>
@@ -227,7 +244,9 @@
             <p class="example-label">Note</p>
             <p>Use the repository and executable checks to establish current behaviour. They do not override an applicable policy or approved requirement. When sources conflict, record the conflict and ask the responsible owner to resolve it before proceeding with the affected work.</p>
           </aside>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-context-use" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask an agent to identify the source and version behind a proposed decision and flag missing context. Check those references against current team standards, resolve conflicts with the source owner and keep the applicable context with the decision record.</p></aside>
+</section>
 
         <section id="harness">
           <h2>Diagnose the harness when work fails</h2>
@@ -262,7 +281,9 @@
             <tr><th scope="row">Verification feedback</th><td>The agent reports “done”, but the behaviour is still broken</td><td>Add or tighten a validation gate in the build loop, and make failure messages actionable.</td></tr>
             <tr><th scope="row">State management</th><td>A new session repeats work or reverses an earlier decision</td><td>Record decisions, evidence, blockers and the next action in the repository and on the issue.</td></tr>
           </tbody></table></div>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-diagnose" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Supply the failed task, tool results and relevant progress records. AI can suggest which instruction, tool, environment or feedback gap to investigate. Engineers reproduce the failure, test a targeted correction and record whether it prevents the same failure on a comparable task.</p></aside>
+</section>
 
         <section id="workflow-health">
           <h2>Measure workflow health</h2>

@@ -49,7 +49,8 @@
         <header class="article-header">
           <p class="eyebrow">Development guide</p>
           <h1>Organisation transformation</h1>
-          <p class="lead">Adopting AI-assisted development changes how teams work, learn and review results. Plan changes across people, process, culture and technology, assign ownership for shared services, then use pilot evidence to decide what to adopt.</p>
+          <p class="lead">Introducing AI tools changes more than how a team drafts code. Someone still needs to define the task, check the result and decide whether it can be used. When drafting becomes faster, unclear requirements or limited review capacity can become more visible.</p>
+          <p>This chapter helps team leads and delivery teams plan those changes across people, process, culture and technology. Start with one recurring problem, identify the supporting changes and use a small pilot to decide whether the proposed workflow helps.</p>
           <p>AI-assisted development means using AI to support development work. The resulting software does not need to contain AI.</p>
         </header>
         <!-- PAGE MAP START -->
@@ -58,25 +59,30 @@
           <p id="page-map-note" class="page-map-note">Plan how your organisation will adopt AI-assisted development. Address people, process, culture and technology together, then assess a small pilot.</p>
 
           <ol class="page-map-nodes" role="list">
-            <li class="page-map-node"><strong>Case for change</strong><div class="page-map-links"><a href="#why-transformation">Why tools alone are not enough</a></div></li>
+            <li class="page-map-node"><strong>Case for change</strong><div class="page-map-links"><a href="#why-transformation">Why the way of working needs to change</a></div></li>
             <li class="page-map-node"><strong>Change planning</strong><div class="page-map-links"><a href="#four-areas">Four areas to address</a></div></li>
-            <li class="page-map-node"><strong>People and ways of working</strong><div class="page-map-links"><a href="#people">Skills and responsibilities</a><a href="#team-composition">Team structure</a><a href="#process">Process and approvals</a><a href="#culture">Learning culture</a><a href="#technology">Tools and access controls</a><a href="#shared-ownership">Shared service ownership</a></div></li>
+            <li class="page-map-node"><strong>People and ways of working</strong><div class="page-map-links"><a href="#people">Skills and responsibilities</a><a href="#team-composition">Delegated work</a><a href="#process">Process and approvals</a><a href="#culture">Learning culture</a><a href="#technology">Tools and access controls</a><a href="#shared-ownership">Shared capability ownership</a></div></li>
             <li class="page-map-node"><strong>Pilot and evaluation</strong><div class="page-map-links"><a href="#progress-by-evidence">Measure results and decide what changes</a></div></li>
           </ol>
 
         </figure>
+        <aside class="ai-chapter-map" aria-label="How AI can help in this chapter">
+          <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help in this chapter</p>
+          <ul role="list"><li><a href="#ai-help-people">Support learning</a></li><li><a href="#ai-help-process">Prepare review evidence</a></li><li><a href="#ai-help-culture">Learn from failures</a></li><li><a href="#ai-help-technology">Test bounded delegation</a></li></ul>
+        </aside>
+
         <!-- PAGE MAP END -->
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page">
-            <a href="#why-transformation">Why tools alone are not enough</a>
+            <a href="#why-transformation">Why the way of working needs to change</a>
             <a href="#four-areas">Four areas that change together</a>
 <a href="#people">People</a>
-            <a href="#team-composition">Team composition</a>
+            <a href="#team-composition">Delegated work and review</a>
             <a href="#process">Process</a>
             <a href="#culture">Culture</a>
             <a href="#technology">Technology</a>
-            <a href="#shared-ownership">Shared service ownership</a>
+            <a href="#shared-ownership">Shared capability ownership</a>
             <a href="#progress-by-evidence">Run a pilot and decide from evidence</a>
             <a href="#sources">Sources</a>
           </nav>
@@ -97,7 +103,7 @@
         </svg>
 
         <section id="why-transformation">
-<h2>Why tools alone are not enough</h2>
+<h2>Why the way of working needs to change</h2>
           <p>AI tooling can help a team draft code faster, but organisational transformation means improving how the whole team delivers useful, reliable software. If requirements remain unclear, reviewers are unavailable or release decisions are delayed, faster coding can simply move more work into a queue. The tool changes one activity; the organisation needs to connect that capability to the rest of delivery.</p>
           <p>That requires changes across four areas. <strong>People</strong> need the skills and time to specify tasks and judge AI-generated work. <strong>Process</strong> needs clear ownership, checks and decision points so that work can move forward. <strong>Culture</strong> needs to support questioning outputs, reporting failures and improving the workflow. <strong>Technology</strong> needs suitable context, test environments and access controls to support those practices. Each area depends on the others: trained reviewers need time in the process, and a failed check is useful only when someone can raise it and act on it.</p>
           <p>Start with one recurring delay or quality problem, then trial the tool alongside the changes needed in those four areas. Compare the time to an accepted result, review and rework effort, and defects before expanding the trial. Use the <a href="#four-areas">four-area planning questions</a> to shape the change and the <a href="#progress-by-evidence">pilot measures</a> to judge whether it helps.</p>
@@ -153,7 +159,7 @@
         </section>
 
         <section id="people">
-<h2>People: broaden skills and retain specialist judgement</h2>
+<h2>People: develop skills and organise responsibilities</h2>
           <p>AI-assisted work still needs people who understand the user’s problem and can recognise an incorrect result. Build enough shared knowledge for colleagues to work across tasks, while preserving access to specialist review.</p>
           <h3>Develop breadth alongside depth</h3>
           <p>A T-shaped practitioner combines deep expertise in one field with enough breadth to collaborate across the lifecycle. Use this as a development goal, not an expectation that one person can replace a multidisciplinary team.</p>
@@ -183,27 +189,17 @@
   </details>
   </figure>
 <p><strong>Observe the practice:</strong> breadth means a developer can trace one user requirement through implementation, testing and operational evidence, and recognise when to ask for help. Depth means a security specialist can explain a failed access-control test and verify the correction.</p>
-          <p>The horizontal bar represents skills shared across the team, such as specifying work, testing results and supervising AI tools. The vertical stem represents depth in a field such as security, design or data. Both are needed to judge when specialist help is necessary.</p>
           <h3>Make review responsibilities explicit</h3>
-          <p>Agree who contributes to each change and what evidence they provide.</p>
-          <div class="table-scroll"><table><caption>Example contributions to an AI-assisted change</caption><thead><tr><th scope="col">Role</th><th scope="col">Contribution and recorded output</th></tr></thead><tbody><tr><th scope="row">Product owner</th><td>Define the user need, scope and acceptance criteria; record whether the result meets them.</td></tr>
-<tr><th scope="row">Designer</th><td>Test the experience with users; record usability and accessibility findings.</td></tr>
-<tr><th scope="row">Technical lead</th><td>Review architectural trade-offs and task boundaries; record decisions that affect other systems.</td></tr>
-<tr><th scope="row">Developer</th><td>Give the tool a bounded task; check the change and record test results and unresolved issues.</td></tr>
-<tr><th scope="row">Platform / Cloud Engineer</th><td>Set up and maintain continuous integration and continuous delivery (CI/CD) pipelines; provision and harden infrastructure; monitor operations and application health with developers. Retain pipeline results, reviewed infrastructure changes, hardening checks, dashboards and recovery evidence.</td></tr>
-<tr><th scope="row">Quality assurance specialist</th><td>Assess behaviour, reliability and test coverage; record exploratory findings, defects and gaps in acceptance evidence.</td></tr>
-<tr><th scope="row">Security specialist</th><td>Assess threats, data exposure and permission boundaries; record security findings and whether proposed controls address them.</td></tr></tbody></table></div>
+          <p>For each change, agree who specifies the user need, carries out the work and reviews the result. Identify the evidence each reviewer needs and the person authorised to accept the change. Use the role examples below to plan skills and review capacity; map them to the organisation’s existing responsibilities.</p>
           <p>Quality assurance (QA) and security collaborate, but answer different questions. QA assesses whether behaviour and reliability meet agreed criteria; security assesses threats and the effectiveness of protective controls. Record their acceptance responsibilities separately under the existing process. A QA acceptance does not grant security approval, and a security review does not establish functional acceptance. Route unresolved risks to the person authorised to accept them.</p>
           <h3>Learn through supported practice</h3>
           <p>Reserve time for coached work on a low-risk task. Pair a learner with someone able to review the result, and include a flawed output so the learner can practise detecting errors. Assess the specification, verification and explanation of limits, as well as the completed work.</p>
           <p>Team leads can collect recurring skill gaps; whoever coordinates training can use that evidence to arrange coaching and share worked examples. Avoid treating tool usage or course completion alone as proof of competence.</p>
-          <p class="next-step"><strong>Next step:</strong> choose one repeated task. Name who will specify it, who will review it and which skill each person needs to practise.</p>
-        </section>
 
-        <section id="team-composition">
-<h2>Team composition: towards human–agent teams</h2>
-          <p>As agents take on more bounded tasks, a squad can become a human–agent team. People set intent, define boundaries, verify results and make decisions. Agents carry out delegated work such as research, prototyping, coding and test generation.</p>
-          <p>Agents hold no organisational accountability. Every agent task has a person who delegated it and a person who decides on the result.</p>
+          <aside class="ai-help ai-help--inline" id="ai-help-people" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Use AI to draft alternative approaches to a low-risk practice task and explain its assumptions. A learner and coach check the results against the agreed criteria, identify errors and record the skill to practise next. Assess the review as well as the finished work.</p></aside>
+          <h3 id="team-composition">Organise delegated work and review capacity</h3>
+          <p>Delegating a task to an agent changes who produces the first result and what reviewers need to inspect. People define the outcome and permitted actions, then check the returned work and decide whether it can be used. Agents can carry out bounded research, prototyping, coding or test generation; organisational accountability remains with people.</p>
+          <p>The diagram uses product owner (PO), business analyst (BA), technical lead, developer, platform engineer and QA and security reviewer as example contributors. Choose the task owner and reviewers from the roles involved in the work.</p>
           <figure class="concept-figure" id="fig-team">
   <figcaption id="fig-team-title-caption">Figure 3. Each delegated task has a named person accountable for its result.</figcaption>
   <details class="figure-reading"><summary>Read as text: Flow and branches</summary><ol><li>Name the accountable task owner from the PO/BA, Tech Lead, developer, Platform / Cloud Engineer, QA or security reviewer roles, as appropriate to the task.</li><li>The owner defines the task, boundaries and evidence; agent capabilities include research, prototyping, coding and testing.</li><li>Agents return diffs, test results and unresolved questions. The owner reviews the evidence and routes decisions to the authorised person.</li><li>People and agents use shared context, design guidance and skills. Assign people and agent capabilities according to the task.</li></ol></details>
@@ -212,56 +208,47 @@
     <p class="diagram-key">Solid arrow: delegation. Dashed arrow: returned evidence. Shared context supports both sides.</p>
   </details>
 </figure>
-<p>Name the accountable task owner for each delegation and the person authorised to accept its result. The roles and agent capabilities are examples, not a staffing ratio. Retain diffs, test results and unresolved questions so the responsible person can review the work.</p>
+<p>Name the person delegating each task and the person authorised to accept its result. Retain the changed files, test results and unresolved questions for review. Assign work according to the team’s capacity to check it; the diagram’s roles and agent capabilities are examples, not a staffing ratio.</p>
 
           <h3>Build on existing expertise</h3>
           <p>AI-assisted work adds responsibilities to established professional expertise. Use the examples below to agree development needs for the work each person actually does. Assess competence through observed decisions and reviewed outputs.</p>
+          <p>The examples use “product owner” for the person clarifying a change’s user need, scope and acceptance criteria. Where product management and product ownership are separate roles, agree their contributions under the existing process rather than treating the titles as interchangeable. A business analyst may help investigate needs and specify requirements; that contribution does not itself grant acceptance authority.</p>
+          <p>Agree who maintains the instructions, tools, permissions and checks around the agent. Together, these form its <a href="concept.html#harness-engineering">agent harness</a>. For interface work, designers can supply named values for colour, typography and spacing, called design tokens, to guide generated screens.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Role competencies table, scrolls sideways on narrow screens">
             <table class="competency-table">
               <caption>Existing expertise, additional responsibilities and observable competence.</caption>
               <thead><tr><th scope="col">Role</th><th scope="col">Existing expertise</th><th scope="col">Additional responsibilities</th><th scope="col">Observable work</th></tr></thead>
               <tbody>
-                <tr><th scope="row">Product manager</th><td>Discovery, product strategy, prioritisation and outcome evaluation</td><td>Clarify intent for AI-assisted tasks; define evaluation criteria and exclusions.</td><td>Identifies a flawed specification, resolves conflicting needs and rejects an outcome claim based on incomplete evidence.</td></tr>
+                <tr><th scope="row">Product owner</th><td>User needs, scope, prioritisation and acceptance criteria</td><td>Clarify intent for AI-assisted tasks; define evaluation criteria and exclusions.</td><td>Identifies a flawed specification, resolves conflicting needs and rejects an outcome claim based on incomplete evidence.</td></tr>
                 <tr><th scope="row">UI/UX designer</th><td>User research, interaction design, accessibility and usability evaluation</td><td>Evaluate generated experiences and failure states; guide prototypes with design tokens.</td><td>Finds a misleading interaction or accessibility failure and tests the correction with relevant users.</td></tr>
                 <tr><th scope="row">Technical lead</th><td>Architecture, system trade-offs, engineering guidance and code review</td><td>Review agent task boundaries, integration risks and the suitability of the harness.</td><td>Detects an unsafe permission boundary, requests missing evidence and involves a security or platform specialist when needed.</td></tr>
                 <tr><th scope="row">Developer</th><td>Software design, implementation, debugging, testing and operations</td><td>Specify bounded tasks; inspect agent actions; verify changes against requirements.</td><td>Finds a specification error repeated in generated code and tests, checks the correction and escalates beyond their expertise.</td></tr>
-                <tr><th scope="row">Platform / Cloud Engineer</th><td>CI/CD automation, cloud infrastructure, networking, identity, hardening, monitoring and service recovery</td><td>Review AI-generated pipeline and infrastructure changes; bound deployment permissions; maintain automated controls and operational visibility.</td><td>Rejects an over-permissive deployment change, demonstrates a blocked pipeline check, verifies infrastructure hardening and tests that an application failure triggers an actionable alert and recovery procedure.</td></tr>
+                <tr><th scope="row">Platform / Cloud Engineer</th><td>Continuous integration and continuous delivery (CI/CD) automation, cloud infrastructure, networking, identity, hardening, monitoring and service recovery</td><td>Review AI-generated pipeline and infrastructure changes; bound deployment permissions; maintain automated controls and operational visibility.</td><td>Rejects an over-permissive deployment change, demonstrates a blocked pipeline check, verifies infrastructure hardening and tests that an application failure triggers an actionable alert and recovery procedure.</td></tr>
                 <tr><th scope="row">QA specialist</th><td>Test strategy, exploratory testing, reliability and defect analysis</td><td>Maintain evaluation cases for AI-assisted work; assess generated tests and gaps in evidence.</td><td>Identifies a missing failure case, reproduces a defect and records whether quality acceptance criteria are met.</td></tr>
-                <tr><th scope="row">Security specialist</th><td>Threat modelling, access control, security testing and risk assessment</td><td>Assess agent tools, data flows, prompt injection and isolation controls.</td><td>Demonstrates an unsafe permission boundary, verifies the control and routes residual risk to the authorised decision-maker.</td></tr>
+                <tr><th scope="row">Security specialist</th><td>Threat modelling, access control, security testing and risk assessment</td><td>Assess agent tools, data flows and isolation controls, including attempts to redirect an agent through instructions in untrusted content (prompt injection).</td><td>Demonstrates an unsafe permission boundary, verifies the control and routes residual risk to the authorised decision-maker.</td></tr>
               </tbody>
             </table>
           </div>
           <p>Include Platform / Cloud Engineer capacity from planning through operation, either within the squad or through a named shared platform team. Agree the boundary between shared infrastructure and application responsibilities, with a support route and deputy. Developers add application health signals and diagnose code failures; platform engineers maintain the delivery and monitoring foundations. QA checks behaviour and reliability; security reviews threats and controls. Release and risk decisions follow the existing authorities.</p>
           <p>Everyone needs to recognise incomplete evidence and know when to involve a specialist. Multi-agent orchestration is an optional specialism for people whose tasks require it; it is not a mastery target for every developer. Assign it with time for integration, review and recovery.</p>
 
-          <h3>Terms used in these examples</h3>
-          <ul>
-            <li><strong>PRD (product requirements document):</strong> the problem, users, scope and acceptance criteria for a product change.</li>
-            <li><strong>TRD (technical requirements document):</strong> how the change will be built, including architecture, interfaces, data and constraints. A developer writes it as the blueprint for agent tasks, and the tech lead reviews it before agents start.</li>
-            <li><strong>Design-token system:</strong> named values for colour, type and spacing, so that interfaces produced by agents stay consistent with the approved design.</li>
-            <li><strong>Agent harness:</strong> the instructions, tools, permissions and checks that bound an agent’s work. <a href="concept.html#harness-engineering">Read about harness engineering</a>.</li>
-            <li><strong>Subagent orchestration:</strong> splitting work into bounded tasks for several agents, running dependent tasks in sequence and independent tasks in parallel where appropriate, and integrating their results.</li>
-            <li><strong>Trajectory debugging:</strong> examining the sequence of steps, tool calls and decisions an agent took, to find where it went wrong.</li>
-            <li><strong>Tier-1 and Tier-2 review:</strong> two layers of review. The developer reviews and verifies agent output first (Tier 1); the tech lead then reviews the developer’s submission (Tier 2).</li>
-            <li><strong>Automated red-teaming and sandbox safety:</strong> probing a system automatically with adversarial inputs such as prompt injection, and running agent work in isolated environments with limited access.</li>
-            <li><strong>LLM security:</strong> protecting systems that use a large language model (LLM) against risks such as prompt injection, data leakage and excessive permissions.</li>
-          </ul>
+          <p>For document definitions, see the <a href="product-implementation.html#executable-work">PRD and TRD guidance</a>: the product requirements document (PRD) describes the required outcomes; the technical requirements document (TRD) records how the system will deliver them. Who prepares and approves these records depends on the applicable workflow. Follow the <a href="eds-developer-harness.html#plan">Eitri planning steps</a> when using that implementation.</p>
 
-          <h3>Make the transition in steps</h3>
-          <p>A squad does not become a human–agent team in one move. Change team composition one task at a time, alongside the task permissions in the <a href="#process">process section</a> and the evidence from a <a href="#progress-by-evidence">pilot</a>.</p>
+          <h3>Practise delegation on one task</h3>
+          <p>Start with a task whose outcome the team can check. Agree the <a href="#process">permitted actions</a>, arrange review capacity and use a <a href="#progress-by-evidence">pilot</a> to assess whether the arrangement helps. Keep the scope small while the team learns.</p>
           <ol class="practice-steps">
             <li>Discuss the table with each squad member, and agree one additional responsibility to practise and the work that will demonstrate competence.</li>
             <li>Start with advice-only or isolated tasks, where a person reviews every result.</li>
-            <li>Pair each learner with someone who can review their work; for example, a tech lead reviewing a developer’s first TRD.</li>
+            <li>Pair each learner with someone who can review their work; for example, a technical lead checking a proposed implementation against the requirements and access limits.</li>
             <li>Widen an agent’s scope only when the evidence supports it and the person with authority agrees.</li>
           </ol>
-          <aside class="example" aria-label="Fictional example of a human–agent team at work">
-            <p class="example-label">Example · fictional team</p>
-            <p>A developer who previously implemented features by hand writes a TRD for a search filter change, and the tech lead reviews it before any agent starts. The developer dispatches three bounded tasks to coding subagents on isolated branches: the filter logic, its tests and the documentation update.</p>
-            <p>The developer reviews each diff and test result (Tier 1), integrates them and opens a merge request, which the tech lead reviews (Tier 2). No agent can merge or deploy.</p>
-            <p>The Platform / Cloud Engineer configures the pipeline checks and a test environment. With the developer, they add a health check for the search journey, test its alert and rehearse rollback before the authorised release decision.</p>
+          <aside class="example" aria-label="Fictional upload-feature review">
+            <p class="example-label">Example · fictional upload-feature review</p>
+            <p>In the upload-feature pilot, the developer gives the agent the agreed upload behaviour and recipient-access rules. The agent drafts a change and tests on the isolated branch. The developer compares both with the requirements and finds that neither checks whether the selected recipient is authorised.</p>
+            <p>The developer records the gap and reproduces the failure, then corrects the task instructions and asks the agent to revise the change. After checking the correction, the developer retains the failed and passing test results. A security reviewer examines the access-control evidence, and the technical lead reviews the integrated change. These are the fictional team’s chosen review arrangements; acceptance follows the existing decision authority.</p>
+            <p>The platform engineer retains pipeline results and confirms that the agent cannot merge or deploy. The pilot lead records the review and correction effort, including the failed attempt, for the comparison at the end of this chapter.</p>
           </aside>
-          <p>Parallel agents increase the volume of work to review. Delegate only as many tasks as the team can verify properly; unreviewed output is not progress.</p>
+          <p>If several agents work on separate tasks, plan time to integrate and review their results. Tests generated from the same misunderstood requirement can repeat the implementation error. Additional agents do not remove the need for an independent check against the intended behaviour.</p>
           <p>Choose team size and specialist coverage from workload, risk and review capacity. Smaller teams and greater agent autonomy are not measures of maturity.</p>
           <p class="next-step"><strong>Next step:</strong> with each squad member, pick the table row closest to their role. Agree one additional responsibility to practise on the next low-risk task, what evidence will demonstrate it and who will review the result.</p>
         </section>
@@ -291,7 +278,9 @@
 <tr><th scope="row">Pre-authorised routine action</th><td>Perform an explicitly permitted action after defined checks pass.</td><td>An authorised person sets the scope and stop conditions; the team monitors results.</td></tr>
 <tr><th scope="row">High-impact or uncertain action</th><td>Prepare evidence within its permitted scope.</td><td>An authorised person decides before execution; the agent stops if authority is missing.</td></tr></tbody></table></div>
           <p>Record who delegated the task, its scope, the evidence and the outcome. Protect these records under the applicable data-handling rules. Escalate failed checks, unexpected access requests and changes outside scope.</p>
-          <p class="next-step"><strong>Next step:</strong> document one checkpoint’s purpose, required evidence and decision authority. Review the proposed change with the person responsible for that control.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-process" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Given a change and the control’s criteria, AI can assemble evidence links and flag apparent gaps for review. The control owner checks the original results and resolves missing evidence. Retain the findings and authorised decision; a generated summary does not grant approval.</p></aside>
+<p class="next-step"><strong>Next step:</strong> document one checkpoint’s purpose, required evidence and decision authority. Review the proposed change with the person responsible for that control.</p>
           <p class="source-ref">Sources: <a href="#source-5" aria-label="Source 5: IMDA, Model AI Governance Framework for Agentic AI (PDF)">[5]</a>; <a href="#source-6" aria-label="Source 6: IMDA, Updated Model AI Governance Framework for Agentic AI, May 2026">[6]</a>.</p>
         </section>
 
@@ -299,14 +288,16 @@
 <h2>Culture: make learning and accountability visible</h2>
           <p>People need to be able to question AI output, report failures and ask for help without pressure to demonstrate speed gains. DORA links high trust and effective information flow with stronger software delivery and organisational performance.</p>
           <h3>Explain the change and listen to concerns</h3>
-          <p>Before a pilot, the team lead can explain its purpose, how responsibilities may change and how results will be assessed. Invite concerns about workload, skills and review effort. Record unanswered questions and assign someone to follow them up.</p>
+          <p>Before a pilot, the team lead can explain its purpose, how responsibilities may change and how results will be assessed and which decisions remain open. Invite concerns about workload, job responsibilities, skills and review effort. Record unanswered questions and assign someone to follow them up.</p>
           <p>DORA’s AI Capabilities Model identifies a clearly communicated position on AI use as a supporting capability. Make permitted tools, data boundaries and the route for questions easy to find. Agree these with the relevant organisational owners.</p>
           <h3>Agree what acceptable work looks like</h3>
           <p>Set acceptance criteria before the task starts. Use tests for behaviour that can be checked automatically and human review for contextual judgement. An AI-generated assessment can help a reviewer, but it can also be wrong.</p>
           <p>For each change, record whether the criteria were met, which risks remain and who can decide on them. Where recovery matters, check the recovery method. Passing tests alone does not demonstrate that a change is useful, secure or ready to release.</p>
           <h3>Turn failures into improvements</h3>
           <p>At a retrospective, examine the task instructions, available context, tool permissions and review evidence. Agree a specific improvement, an owner and a completion date. Recognise useful escalation and defects caught during review, as well as successful delivery.</p>
-          <p class="next-step"><strong>Next step:</strong> discuss one failed AI-assisted task with the people involved. Choose one improvement to a test, instruction or control, and record who will make it.</p>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-culture" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask AI to group permitted pilot feedback and failure reports into themes linked to the original records. Team members check for missing or contradictory accounts, then record agreed improvements, owners and follow-up dates.</p></aside>
+<p class="next-step"><strong>Next step:</strong> discuss one failed AI-assisted task with the people involved. Choose one improvement to a test, instruction or control, and record who will make it.</p>
           <p class="source-ref">Sources: <a href="#source-7" aria-label="Source 7: DORA, Generative organisational culture">[7]</a>; <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</p>
         </section>
 
@@ -318,9 +309,10 @@
           <div class="table-scroll"><table><caption>Suggested capabilities and how to check them</caption><thead><tr><th scope="col">Capability</th><th scope="col">Practical check</th></tr></thead><tbody><tr><th scope="row">Relevant context</th><td>Give the tool current requirements and approved reference material; record their versions and restrict access to what the task needs.</td></tr>
 <tr><th scope="row">Identity and permissions</th><td>Use scoped credentials or delegated access that preserves the user’s authority limits. Check that unauthorised actions are denied.</td></tr>
 <tr><th scope="row">Isolated execution</th><td>Separate experimental work from shared systems. Limit tool access, execution time and spending.</td></tr>
-<tr><th scope="row">Verification</th><td>Run tests against acceptance criteria. Compare a sample of AI assessments with qualified reviewers and investigate disagreement.</td></tr>
+<tr><th scope="row">Verification</th><td>Run tests against acceptance criteria and retain the results. If AI assesses the work, compare its findings with qualified reviewers using the method below.</td></tr>
 <tr><th scope="row">Action records</th><td>Record changes, tool calls, versions and outcomes with appropriate access and retention controls; avoid unnecessary sensitive content.</td></tr>
 <tr><th scope="row">Recovery</th><td>Test stopping a run, revoking access and restoring affected state. Identify actions that cannot be undone.</td></tr></tbody></table></div>
+          <p>To check an AI assessment, select routine and higher-risk cases from the task’s agreed scope. Ask qualified reviewers to assess the original evidence against the same criteria, then compare conclusions. Record missed defects, unsupported findings and unresolved disagreements. The person responsible for the check decides whether the automated assessment is suitable for the proposed use, with additional review where uncertainty remains.</p>
           <p>DORA’s capabilities research associates useful internal platforms and access to relevant internal data with stronger AI benefits. This supports improving context and platform quality; it does not justify unrestricted data access.</p>
           <h3>Build, harden and operate the delivery path</h3>
           <p>The Platform / Cloud Engineer connects delivery automation with reliable service operation. Agree these responsibilities with the application team and existing platform and security owners:</p>
@@ -334,7 +326,13 @@
           <h3>Keep verification independent of generation</h3>
           <p>Combine automated tests with specialist review according to the task’s risk. An agent’s explanation that its own work is correct is not independent evidence. Review the test cases too: tests generated from a misunderstood requirement may repeat the same error.</p>
           <p>A merge request can collect code-change evidence, but other actions need controls at their own point of execution. Data access, deployment and external communications may happen outside a code review. Enforce permissions where those actions occur.</p>
-          <h3 id="shared-ownership">Assign ownership for shared services</h3>
+          <aside class="ai-help ai-help--inline" id="ai-help-technology" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>On an isolated pilot task, an agent can draft code and run permitted tests using the supplied context. Developers and platform engineers inspect its actions, test access boundaries and recovery, and retain the results before proposing a wider scope.</p></aside>
+<p class="next-step"><strong>Next step:</strong> list one agent’s tools, data access and permissions. With the system owner, remove unnecessary access and test recovery.</p>
+          <p class="source-ref">Sources: <a href="#source-9" aria-label="Source 9: OWASP, LLM06:2025 Excessive Agency">[9]</a>; <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</p>
+        </section>
+
+        <section id="shared-ownership">
+          <h2>Ownership: maintain shared capabilities</h2>
           <p>Squad pilots depend on shared services that need ongoing maintenance. Map the responsibilities below to existing roles, and name an owner and a deputy or support route before wider adoption.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Shared service ownership table, scrolls sideways on narrow screens"><table><caption>Shared service ownership before wider adoption</caption><thead><tr><th scope="col">Responsibility</th><th scope="col">Owner to identify</th><th scope="col">Work to maintain</th></tr></thead><tbody>
 <tr><th scope="row">Shared harness</th><td>Platform or engineering maintainer</td><td>Version instructions, tools and integrations; test changes, publish releases and keep a rollback route.</td></tr>
@@ -343,14 +341,15 @@
 <tr><th scope="row">Operations and application health</th><td>Platform / Cloud Engineer and application service owner, with developers</td><td>Maintain health signals, dashboards, alerts and runbooks; agree responders, support coverage and escalation. Review incidents and feed findings into delivery work.</td></tr>
 <tr><th scope="row">Approved models</th><td>Model service owner, working with security, privacy and procurement</td><td>Maintain permitted models and uses, data terms, access limits and costs; evaluate upgrades and provide migration notice.</td></tr>
 <tr><th scope="row">Policy content</th><td>The owner of each applicable policy or control</td><td>Keep authoritative guidance current, version changes and resolve conflicts. Harness maintainers implement agreed controls.</td></tr>
-<tr><th scope="row">Evaluation datasets</th><td>Evaluation owner, with domain, QA and security reviewers</td><td>Maintain representative tasks, expected outcomes, adversarial cases, access rights and version history; investigate gaps and rerun checks after changes.</td></tr>
+<tr><th scope="row">Evaluation cases and datasets</th><td>Named owner for each evaluation, with domain, QA and security reviewers</td><td>Maintain representative tasks, expected outcomes, adversarial cases, access rights and version history. State whether the cases assess a development tool or an AI capability in the product; investigate gaps and rerun checks after relevant changes.</td></tr>
 <tr><th scope="row">Support</th><td>Service support owner</td><td>Publish a help route, triage failures, maintain known issues and provide coaching or specialist escalation.</td></tr>
 <tr><th scope="row">Incident response</th><td>Existing service and security incident owners</td><td>Agree who can stop runs and revoke access, preserve evidence, recover service, communicate impact and authorise resumption.</td></tr>
 <tr><th scope="row">Ongoing funding</th><td>Accountable budget owner</td><td>Fund model use, maintenance, evaluation, support and incident capacity; review total cost and decide whether continued funding is justified.</td></tr>
           </tbody></table></div>
+          <p>Keep development-tool evaluations separate from evaluations of AI behaviour in the delivered product. The upload pilot assesses a development agent; the upload feature itself need not contain AI. If a product does contain AI, name the owner of its behavioural evaluation and operational monitoring as well.</p>
           <p>Keep this ownership record with the shared service documentation, including contacts, capacity, funding and review dates. Squad leads report gaps to these owners; service owners publish changes and known limits to affected squads. A pilot lead does not automatically inherit responsibility for the shared platform.</p>
-          <p class="next-step"><strong>Next step:</strong> list one agent’s tools, data access and permissions. With the system owner, remove unnecessary access and test recovery. Before wider adoption, complete the shared ownership record and confirm maintenance capacity and funding.</p>
-          <p class="source-ref">Sources: <a href="#source-9" aria-label="Source 9: OWASP, LLM06:2025 Excessive Agency">[9]</a>; <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</p>
+          <p class="next-step"><strong>Next step:</strong> map the shared capabilities needed by the pilot to existing owners. Record maintenance capacity, support contacts and funding gaps; resolve them with the responsible owners before wider adoption.</p>
+
         </section>
 
         <section id="progress-by-evidence">
@@ -399,7 +398,9 @@
           <p>Allow for setup and learning costs, and set a review date so a pilot does not continue indefinitely. Higher autonomy is an option, not a success measure; a useful advisory workflow may remain advisory.</p>
           <div class="next-step"><p><strong>Next step:</strong> write a short pilot brief covering the task, participants, baseline, boundaries, success criteria and review date. Use the <a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model">DORA capability guidance</a> to identify supporting improvements, and <a href="concept.html">read the Concepts guide</a> for ways to specify and supervise AI-assisted work.</p></div>
           <p class="source-ref">Supporting evidence: <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</p>
-        </section>
+
+          <aside class="ai-help ai-help--inline" id="ai-help-pilot" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can draft a comparison of pilot task records using the agreed baseline and measure definitions. The pilot lead checks totals, scope differences, review effort and defects against the underlying records, then retains the comparison for the authorised adoption decision.</p></aside>
+</section>
 
         <section id="sources">
           <h2>Sources</h2>
@@ -426,14 +427,14 @@
     <aside class="page-contents">
       <nav aria-label="On this page">
         <p>On this page</p>
-        <a href="#why-transformation">Why tools alone are not enough</a>
+        <a href="#why-transformation">Why the way of working needs to change</a>
         <a href="#four-areas">Four areas that change together</a>
         <a href="#people">People</a>
-        <a href="#team-composition">Team composition</a>
+        <a href="#team-composition">Delegated work and review</a>
         <a href="#process">Process</a>
         <a href="#culture">Culture</a>
         <a href="#technology">Technology</a>
-            <a href="#shared-ownership">Shared service ownership</a>
+            <a href="#shared-ownership">Shared capability ownership</a>
         <a href="#progress-by-evidence">Run a pilot and decide from evidence</a>
         <a href="#sources">Sources</a>
       </nav>
