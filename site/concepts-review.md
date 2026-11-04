@@ -1,5 +1,11 @@
 # Concepts editorial review
 
+## Decision-record wording, 4 November 2026
+
+Rephrased “Keep decisions available beyond the conversation” as “Record decisions for the next task”, following `writing.md`. Named the developer's recording action, the reasons and evidence to retain, owners for open questions, and how the next person or agent checks for superseding decisions. Connected the guidance to the existing “Open requests” filter example. Reread the context-engineering introduction, example, limitations, next step and linked context-preparation guidance.
+
+Validation: existing anchors and source links preserved; local links, heading order, balanced HTML/SVG tags and whitespace checks passed. This targeted wording review did not re-audit model references or include browser layout verification.
+
 ## Current LLM examples · 21 October 2026
 
 Replaced the historical-model approach in C03 below at the user's request. The LLM explanation and learning route now use GPT-6 Astra, GPT-6.1 Sol, Claude Fable 5.1 and Claude Opus 5.5 from the current provider catalogues, checked on 21 October 2026. Removed GPT-5, GPT-5.4 and Opus 4.x references from the public Concepts page, including source descriptions and related reasoning-control discussion. Replaced the GPT-5 prompting reference with the current GPT-6 guide and linked Anthropic's Transparency Hub for matching model/system cards. Retained all source identifiers and the merged software-factory attribution.

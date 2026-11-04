@@ -1,5 +1,22 @@
 # Organisation transformation: editorial review
 
+## Clarity and pilot examples · 4 November 2026
+
+Assessed the requested Introduction passage, four-area example and pilot guidance against `writing.md`. The main issues were an abstract explanation of late feedback, categories presented as actors, compressed review instructions and an indirect decision heading.
+
+The revision follows three editorial steps: explain the practical problem, name the people and checks, then show how the results lead to a decision.
+
+| Passage | Revision and example |
+| --- | --- |
+| Introduction: specialist handoffs | Explain why decisions need timely discussion. A fictional upload feature shows how a late recipient-access review leads to changes in design, code and tests. |
+| Four areas of change | Replace the single sentence with actions by the product owner, developer, reviewers and platform engineer. Keep one upload-feature pilot across all four areas and introduce AI agent before using the term. |
+| Run a pilot and decide from evidence | Define a pilot and baseline, separate boundaries from assessment criteria, and name who collects results, checks them and decides. Explain scorecard measures in everyday language. |
+| Agree what the evidence permits | Rename the heading to state the four choices. Explain the conditions and follow-up for each, including a bounded trial of a proposed revision. Fictional figures show drafting effort falling from 60 to 20 minutes while total human effort remains 90 minutes. |
+
+Reread the revised passages with the surrounding explanation, page opening, headings, next steps and linked process and shared-ownership guidance. Retained existing approval authority, stop conditions, recovery, observation periods and comparison limitations. The examples remain fictional; no new empirical claims or organisational requirements were added.
+
+Validation: checked balanced HTML tags, heading sequence, duplicate IDs and all local links and anchors on both edited pages; checks passed. `git diff --check` passed. No browser layout or accessibility audit was performed. Changes remain local and unpublished.
+
 ## T07 · Orchestration glossary · 21 October 2026
 
 Broadened the subagent orchestration definition in `dist/transformation.html` to include dependent tasks running in sequence and independent tasks running in parallel where appropriate, followed by integration. The surrounding accountability and review guidance remains unchanged.

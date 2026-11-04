@@ -1,5 +1,20 @@
 # Product discovery merge review
 
+## Targeted writing review, 4 November 2026
+
+Refined the requested sections against `writing.md`, with concrete inputs, actions, evidence checks, recorded outputs and next decisions.
+
+- Expanded each 6W question into research prompts and each 4C check into an assessment readers can perform. Retained the distinction between observed difficulty and an unconfirmed cause, including a route for further investigation.
+- Explained the four weak substitutes with fictional statements, why each is incomplete and what to investigate next. Retained planning for foreseeable end-of-life risks before a service failure.
+- Rewrote step 2 as “Choose a user need and compare solutions”. Separated opportunity importance from assumptions about a particular solution's effort or feasibility. Made the comparison, evidence limits and return routes explicit.
+- Rewrote the experiment-record guidance as “Record the test plan and decision criteria”, including ownership, measures, inconclusive outcomes and links to test arrangements. Expanded “Match the test method to the uncertainty” with questions, methods, observable signals and limits.
+- Rewrote step 6 as “Agree what to build first”, explaining a delivery slice, testable scope, blocking questions and the receiving team's check. Retained the measurement plan, handoff table, worked example and distinction between implementation commitment and release approval.
+- Aligned both contents lists, the page map, decision labels, example heading and lifecycle overview. Preserved existing IDs and external source destinations. Updated the discovery review date to 4 November 2026.
+
+Rechecked the relevant 6W, 4C and four-trap passages in the live Defence Product Playbook using an HTTP retrieval after the web reader could not open it. Also rechecked Torres's opportunity definitions and Microsoft's pre-experiment guidance. The expanded procedures are this guide's application of those practices; no new organisational requirements or measured results were introduced. Content owner and lifecycle version remain unconfirmed.
+
+Validation passed: 863 local links and assets across thirteen HTML pages; duplicate-ID checks; preservation of existing IDs and external source URLs on all three edited pages; sequential headings; balanced HTML/SVG tags; matching chapter labels in discovery navigation; and whitespace checks. Reread the affected sections, surrounding guidance, worked examples and implementation-readiness handoff. This text revision did not include a browser layout review or publication.
+
 ## Natural discovery flow, 2 November 2026
 
 Revised the discovery guide against `writing.md` after reviewing the sequence, worked example and implementation connection. Frame, Test and Decide now describe the learning rhythm; step 6 prepares a delivery slice after a justified commitment. Kept the six steps, existing anchor IDs, source destinations and earlier measurement guidance.
