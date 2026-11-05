@@ -313,7 +313,7 @@
 
 </aside>
 <h3 id="product-success">Define success for the selected scope</h3>
-<p>Product, Design and Engineering agree how they will tell whether users benefit and the product creates value. Choose the measures during discovery, test whether they can be collected, and carry them into the <a href="#measurement-plan">handoff measurement plan</a>. Passing acceptance tests shows that behaviour meets the specification; product measures show whether that behaviour helps people in use.</p>
+<p>Product, Design and Engineering agree how they will tell whether users benefit and the product creates value. Choose the measures during discovery, test whether they can be collected, and carry them into the <a href="#measurement-plan">handoff measurement plan</a>. Passing acceptance tests provides evidence that the tested behaviour meets the specification under the recorded conditions. Product measures help the team assess whether users benefit in practice.</p>
 <p>A <strong>North Star metric</strong> is a main product measure of the value users receive, chosen for its expected connection to longer-term business results. <a href="#source-21">Amplitude’s North Star Playbook [19]</a> pairs it with a small set of measures the team can influence. For an internal service, this guide recommends relating that value to the organisation’s mission or service outcome.</p>
 <ul>
 <li><strong>Product direction:</strong> use the existing product North Star where it fits. Explain the link from the proposed change to that measure and the wider outcome. Avoid inventing a different North Star for every feature.</li>
@@ -612,7 +612,7 @@
 </div></details>
 <p>For products using agents at runtime, include the tested limits on actions, approval points, failure and recovery cases, and evaluation results. Link each to intended behaviour and acceptance criteria.</p>
 <p>The table above explains what discovery contributes. Use the <a href="ai-pdlc.html#handoff">shared handoff package</a> as the common checklist, then apply the <a href="product-implementation.html#implementable-definition">implementation readiness checks</a> to the scope being changed. Link the same records across these checks instead of creating separate copies. Implementation develops the technical design, tasks, verification and release evidence.</p>
-<p>If implementation uncovers a bounded defect, correct it in that loop. If evidence challenges the user, problem, value or intended behaviour, return to the appropriate discovery step and record the change. Feedback does not automatically authorise model retraining or wider permissions.</p>
+<p>If implementation uncovers a bounded defect, correct it in that loop. If evidence challenges the user, problem, value or intended behaviour, return to the appropriate discovery step and record the change. Use the overview’s <a href="ai-pdlc.html#feedback">feedback signals and decisions</a> to diagnose unclear outcomes and coordinate the response. Feedback does not automatically authorise model retraining or wider permissions.</p>
 <p class="learning-output"><strong>Output:</strong> Versioned evidence-backed PRD, linked evidence and a product measurement plan, with owners for remaining questions. <strong>Next:</strong> Confirm implementation can collect the agreed measures; release requires evidence from the implemented product.</p>
 </section>
 <section id="measure-learning"><h2>Optional deep dives</h2>

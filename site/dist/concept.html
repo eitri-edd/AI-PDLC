@@ -101,26 +101,27 @@
         </svg>
         <section id="how-the-concepts-fit">
           <h2>How the concepts fit together</h2>
-          <p>Building a change with an AI agent involves more than asking it to write code. The team needs to agree what would help users, describe the expected behaviour, give the agent information and tools, and decide what happens after each check. The concepts on this page explain how those decisions work together.</p>
-          <h3>Example: save a request and return later</h3>
-          <p>In this fictional service-request application, users leave a form to find missing information and lose what they have entered. After trying two prototypes with users, the product owner chooses a “Save draft” action. A coding agent will help implement it; the team remains responsible for deciding whether the change meets the need and is ready to release.</p>
-          <p>The table follows that one change using this guide’s working definitions. Each concept answers a different question about the same work; the rows are not lifecycle stages.</p>
-          <div class="table-scroll"><table><caption>How each concept contributes to the “Save draft” change</caption><thead><tr><th scope="col">Concept</th><th scope="col">Contribution to the same change</th></tr></thead><tbody>
-            <tr><th scope="row"><a href="#intent-driven-development">Intent</a></th><td>The goal is for users to leave an unfinished request and continue later without re-entering saved information. Adding a button is only useful if users can complete that task.</td></tr>
-            <tr><th scope="row"><a href="#spec-driven-development">Specification</a></th><td>The team defines the behaviour: save incomplete entries without submitting the request, restore them when its owner returns, and reject access by another user. A stale browser tab must not overwrite a newer save.</td></tr>
-            <tr><th scope="row"><a href="#context-engineering">Context</a></th><td>The developer supplies those criteria, the existing form and storage code, access rules and relevant tests. These records tell the agent what to build and which existing behaviour to preserve.</td></tr>
-            <tr><th scope="row"><a href="#harness-engineering">Harness</a></th><td>The agent gets an editor, terminal, browser and test accounts so it can change the code and try saving and reopening a draft. Permissions restrict it to the project and test data; progress notes and run records support later review.</td></tr>
-            <tr><th scope="row"><a href="#loop-engineering">Feedback loops</a></th><td>A two-tab test exposes an older save overwriting newer work. The agent corrects the code and reruns the checks within an agreed attempt limit. The developer can also test a revision to the reusable instructions so later tasks include simultaneous-edit checks.</td></tr>
-            <tr><th scope="row"><a href="#graph-engineering">Workflow dependencies</a></th><td>After the build passes, separate agents check saved values, access restrictions and conflicting edits in parallel on the same commit. The workflow waits for all results. A code change triggers fresh checks; an unclear product rule pauses the work for a decision.</td></tr>
-            <tr><th scope="row"><a href="#software-factory">Software factory</a></th><td>The repeatable delivery workflow connects the agreed task, agent work and check results to human review and the authorised release process. After release, the team investigates save failures and user feedback, adding follow-up work to the queue.</td></tr>
-            <tr><th scope="row"><a href="#models">Model selection</a></th><td>Before choosing the coding agent’s model, the developer compares candidates on representative changes, including draft saving, using the same tools and checks. The choice considers correctness, correction effort, time, cost and permitted data handling.</td></tr>
+          <p>Building a change with an AI agent involves more than asking it to write code. The team needs to agree what would help users, describe the expected behaviour, give the agent information and tools, and decide what happens after each check.</p>
+          <h3>Example: build a meeting room booking application</h3>
+          <p>In this fictional example, employees struggle to find available meeting rooms and sometimes encounter conflicting reservations. The team investigates the causes and compares improving the existing calendar workflow with building a booking application. For the example, it chooses an application for finding rooms, making bookings and cancelling the user’s own bookings.</p>
+          <p>AI agents help draft requirements, change code and run checks. Application code enforces one rule that connects the examples: confirmed bookings for the same room must not overlap, including when employees submit requests simultaneously. AI supports development; the application does not need an AI model to enforce this rule.</p>
+          <p>The table uses this guide’s working definitions to show each concept’s contribution. Model choice and other decisions can be revisited as the work changes.</p>
+          <div class="table-scroll"><table><caption>How each concept contributes to the fictional booking application</caption><thead><tr><th scope="col">Concept</th><th scope="col">Contribution to the application</th></tr></thead><tbody>
+            <tr><th scope="row"><a href="#intent-driven-development">Intent</a></th><td>The team investigates why employees struggle to reserve rooms, agrees the intended outcome and carries that agreement into implementation and review.</td></tr>
+            <tr><th scope="row"><a href="#spec-driven-development">Specification</a></th><td>Criteria define confirmation, conflicts, cancellation, access and service failures. Two simultaneous requests cannot produce overlapping confirmed bookings.</td></tr>
+            <tr><th scope="row"><a href="#context-engineering">Context</a></th><td>The developer supplies booking rules, the reservation API contract, relevant code and tests. Conflicting rules need a recorded decision before implementation continues.</td></tr>
+            <tr><th scope="row"><a href="#harness-engineering">Harness</a></th><td>An editor, terminal, browser and isolated test database let the agent change code and exercise booking behaviour. Permissions and run records bound and explain its actions.</td></tr>
+            <tr><th scope="row"><a href="#loop-engineering">Feedback loops</a></th><td>A concurrent-booking test exposes a defect. The agent corrects the code within agreed limits; the developer can separately evaluate revised instructions for future tasks.</td></tr>
+            <tr><th scope="row"><a href="#graph-engineering">Workflow dependencies</a></th><td>After the build passes, specialist agents check functionality, permissions and architecture on the same commit. Combined findings determine correction, escalation or human review.</td></tr>
+            <tr><th scope="row"><a href="#software-factory">Software factory</a></th><td>The delivery workflow connects agreed booking changes to checks, review, release authority and monitoring. Booking failures and user feedback become follow-up work.</td></tr>
+            <tr><th scope="row"><a href="#models">Model selection</a></th><td>The developer compares models on representative booking tasks using the same tools and checks. Correctness, correction effort, time, cost and data handling inform the choice.</td></tr>
           </tbody></table></div>
-          <p>A failed check can send the team back to an earlier decision. If a two-tab test reveals that nobody agreed what the user should see after a conflict, another code retry will not settle that question. The product owner resolves the expected behaviour; the developer updates the criteria and task context before the agent continues. The sections below explain each practice in more detail using the same fictional application.</p>
+          <p>A failed check can expose an unresolved decision. If the team has not agreed whether bookings may extend beyond opening hours, another code retry will not settle that question. The product owner resolves the expected behaviour; the developer records the decision and updates the criteria and task context before the agent continues.</p>
         </section>
         <section id="intent-driven-development">
           <h2>Agree the goal (intent-driven development)</h2>
           <p>Intent-driven development makes the intended outcome, behaviour and constraints explicit and keeps them available as AI-assisted work progresses. Start by agreeing why a change is needed, then carry that intent through planning, implementation and review.</p>
-          <p>Use it when a request leaves room for conflicting interpretations. “Improve the form” could mean a new layout, fewer questions or a way to save unfinished work. Agree the user need before asking an agent to implement a solution.</p>
+          <p>Use it when a request leaves room for conflicting interpretations. “Improve room booking” could mean clearer availability, fewer steps or reliable confirmation. Agree the user need before asking an agent to implement a solution.</p>
           <h3>Agree the outcome and constraints</h3>
           <ul><li><strong>Problem:</strong> who is affected, and what prevents them from completing their task?</li><li><strong>Outcome:</strong> what should the user be able to do after the change?</li><li><strong>Constraints:</strong> which access rules, data-handling requirements or existing behaviours need to remain?</li><li><strong>Open questions:</strong> what is undecided, who will resolve it and when is the decision needed?</li></ul>
           <figure class="concept-figure" id="fig-intent">
@@ -131,29 +132,29 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the agreed intent.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Help users continue an unfinished request">
-            <p class="example-label">Example · Help users continue an unfinished request</p>
-            <p>A product owner asks an AI agent to “improve the request form”. Before the agent changes it, the team agrees what needs to improve:</p>
+          <aside class="example" aria-label="Fictional example: Decide what room booking should improve">
+            <p class="example-label">Fictional example · Decide what room booking should improve</p>
+            <p>The team investigates employees’ difficulty finding and reserving meeting rooms before choosing what to build:</p>
             <ul>
-              <li><strong>Problem:</strong> users leave the form to find missing information. When they return, their entries are gone and they have to start again.</li>
-              <li><strong>Outcome:</strong> users can leave an unfinished request and return later to continue from where they stopped.</li>
-              <li><strong>Constraints:</strong> only the request’s owner can reopen it. Keeping unfinished work must not submit the request or notify a reviewer.</li>
-              <li><strong>Open question:</strong> should progress be saved automatically or when the user selects “Save draft”? The product owner will decide after testing both options with users.</li>
+              <li><strong>Problem:</strong> employees report unavailable rooms appearing bookable and conflicting reservations.</li>
+              <li><strong>Outcome:</strong> employees can find a suitable room and make a reliable reservation.</li>
+              <li><strong>Constraints:</strong> confirmed bookings cannot overlap; users can cancel only their own bookings unless separately authorised.</li>
+              <li><strong>Open question:</strong> is the difficulty caused by unclear availability or unreliable confirmation? The product owner compares observations of both tasks before selecting an improvement.</li>
             </ul>
-            <p>The agent uses this intent to propose and prototype the two options. Users try leaving and reopening a request; the team checks whether they can continue without re-entering information.</p>
-            <p>The product owner uses those findings to choose how saving should work. The team then writes the detailed acceptance criteria for implementation.</p>
+            <p>AI can organise the findings and suggest options. Employees try the proposed workflow; the product owner records where they find a suitable room, complete a reservation or need help. Those observations inform the choice between improving the existing workflow and building an application.</p>
+            <p>After choosing the application, the team keeps the outcome and supporting evidence with its requirements. Later tests check booking behaviour; user observations are still needed to assess whether the application solves the original problem.</p>
           </aside>
           <h3>Keep the record proportionate</h3>
           <p>A short issue may be enough for a small defect. A new capability may need research and a product requirements document. Recording a goal does not establish that it is valuable; test important assumptions before committing substantial effort.</p>
 
-          <aside class="ai-help ai-help--inline" id="ai-help-intent" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give AI the user problem, intended outcome and known constraints. Ask it to surface conflicting interpretations and open questions. The product owner checks these against the user evidence and records the agreed intent before implementation.</p></aside>
+          <aside class="ai-help ai-help--inline" id="ai-help-intent" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask AI to group employee feedback and link proposed findings to the original notes. The product owner compares decision-relevant findings with those notes, checks contradictory or duplicated evidence and records unsupported explanations as open questions. Use those questions to choose the next observation or prototype test.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Write the problem, outcome and constraints for one change. Then use <a href="product-discovery.html#product-thesis">the product thesis guidance</a> to test the case for it, or <a href="#spec-driven-development">define its acceptance criteria</a> when the need is understood.</p>
           <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Intent-Driven Development, intent-driven.dev">[1]</a>.</p>
         </section>
         <section id="spec-driven-development">
           <h2>Define the behaviour (spec-driven development)</h2>
           <p>Specification-driven development, or spec-driven development, uses written requirements to guide development and review. The specification describes the expected behaviour, including important exceptions and constraints. Acceptance criteria state how the team will judge whether that behaviour works.</p>
-          <p>Use it when a broad request leaves developers or agents to guess the details. “Saving works” does not explain what happens when a connection fails, another user requests the draft or two browser tabs make changes.</p>
+          <p>Use it when a broad request leaves developers or agents to guess the details. “Booking works” does not explain what happens when storage fails, another employee tries to cancel a booking or two users reserve the same room.</p>
           <h3>Use the requirements to guide both development and testing</h3>
           <p>Before development, the specification informs the technical design and tasks. During review, tests and reviewers compare the working software with the same acceptance criteria. Keep design choices in the technical plan so developers can choose how to meet the requirements.</p>
           <figure class="concept-figure" id="fig-spec">
@@ -164,12 +165,22 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the specification and acceptance evidence.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Describe what “Save draft” means"><p class="example-label">Example · Describe what “Save draft” means</p><p>The team chooses an explicit “Save draft” action. It agrees these acceptance criteria before implementation:</p><ul><li><strong>Incomplete form:</strong> saving keeps the entered values without submitting the request.</li><li><strong>Successful save:</strong> show “Draft saved” after the server confirms it. Reopening the draft restores the saved values.</li><li><strong>Failed save:</strong> retain the values on screen, explain the failure and offer a retry.</li><li><strong>Access control:</strong> reject another user’s attempt to read or change the draft, including requests made outside the browser interface.</li><li><strong>Conflicting edits:</strong> if another browser tab has saved a newer version, explain the conflict and preserve the unsaved values.</li></ul></aside>
+          <aside class="example" aria-label="Fictional example: Define when a room booking succeeds">
+            <p class="example-label">Fictional example · Define when a room booking succeeds</p>
+            <p>The team agrees these criteria for its booking application:</p>
+            <ul>
+              <li><strong>Confirmation:</strong> show a confirmed booking only after the server has committed the reservation.</li>
+              <li><strong>Conflict:</strong> confirmed bookings for one room cannot overlap. Under normal service conditions, two valid simultaneous requests for the same available slot produce one confirmation and one conflict response.</li>
+              <li><strong>Service failure:</strong> if storage fails before a reservation is committed, show a failure response and no confirmation. Do not describe this as a booking conflict.</li>
+              <li><strong>Cancellation:</strong> cancelling one’s own booking makes the slot available again if no other restriction applies. Reject another user’s cancellation attempt, including a direct API request, unless that user has separate authority.</li>
+            </ul>
+            <p>The developer tests Alice and Ben requesting Room A from 10:00 to 11:00 simultaneously. Compare both responses and the stored reservations with the criteria; retain the results. A passing concurrency test covers the conditions exercised, so review the design as well as the test.</p>
+          </aside>
           <h3>Add detail as decisions become clearer</h3>
           <p>Too little detail forces the team to invent product rules. Too much detail before research can make an untested idea look settled. Resolve important unknowns, then update the specification as the team learns. Human review still covers judgements that automated tests cannot settle.</p>
 
-          <aside class="ai-help ai-help--inline" id="ai-help-spec" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can draft acceptance scenarios from agreed requirements, including failure, permission and conflicting-edit cases. Product and Engineering compare each scenario with the intended behaviour, resolve invented assumptions and retain the accepted criteria for implementation and testing.</p></aside>
-<p class="next-step"><strong>Next step:</strong> Check one requirement for its success, failure and access-control cases. Use <a href="ai-pdlc.html#handoff">the requirements handover checklist</a>, then <a href="product-implementation.html#executable-work">translate it into technical design and development tasks</a>.</p>
+          <aside class="ai-help ai-help--inline" id="ai-help-spec" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can draft success, failure, permission and concurrent-booking scenarios from agreed rules. The product owner compares expected results with those rules; the developer checks that each result can be observed or tested. Resolve invented assumptions and retain accepted criteria with the implementation task.</p></aside>
+<p class="next-step"><strong>Next step:</strong> Write success, failure, concurrent-booking and access-control cases for one booking requirement. Use <a href="ai-pdlc.html#handoff">the requirements handover checklist</a>, then <a href="product-implementation.html#executable-work">translate it into technical design and development tasks</a>.</p>
           <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: GitHub Spec Kit, Specification-Driven Development">[2]</a>.</p>
         </section>
         <section id="context-engineering">
@@ -186,26 +197,23 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the selection decision.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Filter service requests by status">
-            <p class="example-label">Example · Filter service requests by status</p>
-            <p>An agent is asked to add an “Open requests” filter. The label alone does not explain which statuses count as open or which records the user may see.</p>
-            <p>The developer supplies the current product decision and the code that implements request search:</p>
+          <aside class="example" aria-label="Fictional example: Supply reliable room availability rules">
+            <p class="example-label">Fictional example · Supply reliable room availability rules</p>
+            <p>An agent is asked to add room availability search. “Available” needs a shared meaning. The developer supplies:</p>
             <ul>
-              <li><strong>Product rule:</strong> “Open” includes submitted and in-progress requests; drafts and closed requests are excluded.</li>
-              <li><strong>Interface behaviour:</strong> the selected filter appears in the URL so refreshing preserves it.</li>
-              <li><strong>API contract:</strong> the search endpoint accepts the corresponding status values and applies the user’s access restrictions.</li>
-              <li><strong>Application code:</strong> the existing filter component, status definitions, search handler and related tests.</li>
+              <li><strong>Product rules:</strong> confirmed bookings block overlapping slots; cancelled bookings do not. Include agreed opening hours and access restrictions.</li>
+              <li><strong>API contract:</strong> the reservation endpoint, time-interval format, authentication requirements and error responses.</li>
+              <li><strong>Application code:</strong> the room directory, reservation service, search interface and related tests.</li>
             </ul>
-            <p>The agent implements the filter using those definitions. The developer checks the returned records, refresh behaviour and access restrictions against the agreed examples.</p>
-            <p>If an older document includes drafts in “Open”, the developer resolves the conflict with the product owner and records the applicable decision before implementation continues.</p>
+            <p>An older note says cancelled bookings still block availability. The developer asks the product owner to confirm the applicable rule and records the decision, source version and superseded note. The agent then implements against the resolved sources.</p>
           </aside>
           <h3>Record decisions for the next task</h3>
           <p>Before ending a task, the developer records agreed decisions, unfinished work and unresolved questions in the repository or issue tracker. Include the reason for each decision, links to supporting evidence and the applicable source versions. Name an owner and next action for each open question.</p>
-          <p>At the start of the next task, give the person or agent links to these records. Check whether later decisions have replaced them before adding them to the task context. In the filter example, record which statuses count as “Open” and link that decision from the implementation task. Follow the applicable data-handling rules when saving or sharing context.</p>
+          <p>At the start of the next task, give the person or agent links to these records. Check whether later decisions have replaced them before adding them to the task context. In the booking example, record which reservation statuses block availability and link that decision from the implementation task. Follow the applicable data-handling rules when saving or sharing context.</p>
           <p>Relevant information improves the basis for the work; it does not guarantee a correct result. Review retrieved material before relying on it. A document or log does not gain authority merely because an agent found it.</p>
 
-          <aside class="ai-help ai-help--inline" id="ai-help-context" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask an agent to reference the supplied requirements, relevant code and current standards in its proposed approach. Check that each source applies to the task; record conflicting rules and missing information before relying on the proposal.</p></aside>
-<p class="next-step"><strong>Next step:</strong> List the information missing from one recent task. Use <a href="eds-team-context.html#matrix">the context-by-stage guide</a> to identify the right source, then <a href="eds-team-context.html#checklist">prepare and check that source</a>.</p>
+          <aside class="ai-help ai-help--inline" id="ai-help-context" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask an agent to identify the source for each booking rule in its proposed approach. The developer opens those records, compares their versions and scope with the task, and records conflicts or missing decisions. Resolve consequential gaps with the source owner before relying on the proposal.</p></aside>
+<p class="next-step"><strong>Next step:</strong> Identify the current booking rules and API contract for one task; record missing or conflicting information. Use <a href="eds-team-context.html#matrix">the context-by-stage guide</a> to identify the right source, then <a href="eds-team-context.html#checklist">prepare and check that source</a>.</p>
           <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: Anthropic, Effective context engineering for AI agents">[3]</a>.</p>
         </section>
         <section id="harness-engineering">
@@ -216,10 +224,10 @@
           <p>This guide uses a six-part grouping, synthesised from the linked harness sources. The components work together rather than running as consecutive steps; other sources group them differently.</p>
           <figure class="concept-figure" id="fig-harness">
   <figcaption id="fig-harness-title-caption">Figure 4. Six parts support the agent’s work, checks and limits.</figcaption>
-  <details class="figure-reading"><summary>Read as text: How the parts work together</summary><ul><li>Agent state records the current goal, progress and latest result. Tools let the agent inspect files, make changes and run checks.</li><li>Memory keeps decisions and useful information beyond the current run. Orchestration assigns tasks and coordinates who works next.</li><li>Safety sets permissions and resource limits. Observability records actions, results, time and cost so people can inspect what happened.</li><li>For example, a tool runs an upload test. Its result updates the current state; a useful finding is saved for later work. Permissions restrict the test to approved storage.</li></ul></details>
+  <details class="figure-reading"><summary>Read as text: How the parts work together</summary><ul><li>Agent state records the current goal, progress and latest result. Tools let the agent inspect files, make changes and run checks.</li><li>Memory keeps decisions and useful information beyond the current run. Orchestration assigns tasks and coordinates who works next.</li><li>Safety sets permissions and resource limits. Observability records actions, results, time and cost so people can inspect what happened.</li><li>For example, a tool runs a concurrent-booking test. Its result updates the current state; a useful finding is saved for later work. Permissions restrict the test to an isolated database.</li></ul></details>
   <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
     <div class="figure-scroll" tabindex="0" role="region" aria-label="Six harness components; scroll horizontally if needed"><svg viewBox="0 0 680 326" role="img" aria-labelledby="fig-harness-title" aria-describedby="fig-harness-title-desc">
-                <title id="fig-harness-title">Six harness components</title><desc id="fig-harness-title-desc">Agent state records the current goal, progress and latest result. Tools let the agent inspect files, make changes and run checks. Memory keeps decisions and useful information beyond the current run. Orchestration assigns tasks and coordinates who works next. Safety sets permissions and resource limits. Observability records actions, results, time and cost so people can inspect what happened. For example, a tool runs an upload test. Its result updates the current state; a useful finding is saved for later work. Permissions restrict the test to approved storage.</desc>
+                <title id="fig-harness-title">Six harness components</title><desc id="fig-harness-title-desc">Agent state records the current goal, progress and latest result. Tools let the agent inspect files, make changes and run checks. Memory keeps decisions and useful information beyond the current run. Orchestration assigns tasks and coordinates who works next. Safety sets permissions and resource limits. Observability records actions, results, time and cost so people can inspect what happened. For example, a tool runs a concurrent-booking test. Its result updates the current state; a useful finding is saved for later work. Permissions restrict the test to an isolated database.</desc>
                 <rect class="d-group" x="1" y="1" width="678" height="324" rx="8"/>
                 <text class="d-label" x="16" y="28">Harness: the system surrounding the agent’s work</text>
                 <path class="d-line d-line-accent" d="M224 107H236"/>
@@ -240,27 +248,17 @@
   </details>
   </figure>
           <ul><li><strong>Agent state:</strong> what the agent is doing now and what it will try next.</li><li><strong>Tools:</strong> the actions it can perform, such as reading files, using a browser or running tests.</li><li><strong>Memory:</strong> saved decisions, progress and reference information that later work can retrieve.</li><li><strong>Orchestration:</strong> how tasks are assigned, ordered and handed over.</li><li><strong>Safety:</strong> permissions, allowed actions and limits on time, attempts or spending.</li><li><strong>Observability:</strong> records of actions and results that help people investigate and review the work.</li></ul>
-          <aside class="example" aria-label="Fictional example: Equip a coding agent to build file uploads">
-            <p class="example-label">Example · Equip a coding agent to build file uploads</p>
-            <p>A developer asks a coding agent to add attachments to a request form. Users need to upload a file and reopen it later.</p>
-            <p>Before the agent starts, the developer configures its harness:</p>
-            <ul>
-              <li><strong>Agent state:</strong> a task checklist tracks whether the agent is inspecting the code, implementing the change or checking the result.</li>
-              <li><strong>Tools:</strong> a code editor, terminal and browser let the agent change files, start the application and run tests. A test account, sample files and local storage support upload checks.</li>
-              <li><strong>Memory:</strong> repository instructions and saved progress notes keep setup commands, decisions and unfinished work available when the agent resumes.</li>
-              <li><strong>Orchestration:</strong> the workflow directs the agent through implementation and checks, then hands the changes and results to the developer for review.</li>
-              <li><strong>Safety:</strong> workspace permissions allow changes to the project and test storage. The environment blocks access to production credentials and deployment tools.</li>
-              <li><strong>Observability:</strong> the harness records changed files, commands, test results and browser screenshots so the developer can inspect what happened.</li>
-            </ul>
-            <p>The agent edits the upload code, adds tests and runs the application. It uses the browser to upload a sample file and reopen the saved attachment.</p>
-            <p>If local storage is unavailable, the agent records the failed check and stops for help. Otherwise, it returns the changes and test results for review.</p>
-            <p>Before merging, the developer reopens the saved sample file and compares its contents with the original. Using harmless test files, the developer also attempts an operation outside the permitted test-storage location and confirms that the environment blocks it. The developer retains the diff, file comparison and permission-check results. A failed or inconclusive check returns the change for correction before another review.</p>
+          <aside class="example" aria-label="Fictional example: Equip an agent to test room reservations">
+            <p class="example-label">Fictional example · Equip an agent to test room reservations</p>
+            <p>A developer asks a coding agent to implement booking confirmation. Its harness provides an editor, terminal, browser, test runner and isolated database with two simulated users. Saved setup instructions and progress notes support later runs; the task state records the latest failing check.</p>
+            <p>Permissions restrict the agent to the project and test data. The workflow returns changed files, commands and test results to the developer. If the database cannot start, the agent records the blockage and requests help.</p>
+            <p>Before accepting the work, the developer reruns the simultaneous-booking test and compares the responses and stored records with the agreed criteria. The developer also tries cancelling another test user’s booking and confirms rejection. Retain the diff, test configuration and results; return failed or inconclusive checks for correction.</p>
           </aside>
           <h3>Check the environment as well as the output</h3>
           <p>Provide a repeatable way to start the application, run tests and inspect failures. Enforce permissions through the tools and execution environment. Keep a reviewer responsible for acceptance; an agent’s assessment of its own work is not independent review.</p>
           <p>When failures recur, inspect the instructions, sources, tools and checks before adding more retries or access. Maintain the harness as the application changes.</p>
 
-          <aside class="ai-help ai-help--inline" id="ai-help-harness" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>With scoped tools and a test environment, an agent can change files, run checks and report failures. The developer repeats the behaviour and permission checks described in the upload example, retains the results with the diff and records unresolved findings before deciding whether the change is ready to merge.</p></aside>
+          <aside class="ai-help ai-help--inline" id="ai-help-harness" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>With scoped tools and test data, an agent can run booking checks and report failures. The developer repeats the concurrency and cancellation checks described above and compares the tool configuration with the permitted workspace and database. Keep configuration and run evidence with unresolved findings for the acceptance decision.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Check whether a developer can start the application, run its tests and inspect a failure using the documented setup. Follow <a href="eds-developer-harness.html#install">the Eitri installation guide</a> and <a href="eds-team-context.html#checklist">team setup checklist</a> to fill the gaps.</p>
           <p class="source-ref">Sources: <a href="#source-4" aria-label="Source 4: OpenAI, Harness engineering">[4]</a>; <a href="#source-5" aria-label="Source 5: Walking Labs, What a harness actually is">[5]</a>; <a href="#source-6" aria-label="Source 6: Anthropic, Effective harnesses for long-running agents">[6]</a>.</p>
         </section>
@@ -278,20 +276,20 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. The enclosing boundary applies to the whole run. Blue highlights the goal and successful evidence.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Improve draft saving and the skill that builds it">
-            <p class="example-label">Example · Improve draft saving and the skill that builds it</p>
-            <p>A coding agent adds draft saving to the service-request application using a skill: reusable instructions for planning, implementing and checking code. The team uses two connected feedback loops:</p>
+          <aside class="example" aria-label="Fictional example: Correct double booking and improve reusable instructions">
+            <p class="example-label">Fictional example · Correct double booking and improve reusable instructions</p>
+            <p>A coding agent implements reservations using a skill: reusable instructions for planning, implementing and checking code. The team uses two connected feedback loops:</p>
             <ul>
-              <li><strong>Correct the code.</strong> A reviewer finds that saving from an older browser tab overwrites newer work. The agent adds a version check, then reruns the tests to confirm that a stale save reports a conflict and preserves unsaved values.</li>
-              <li><strong>Improve the reusable instructions.</strong> The agent proposes adding simultaneous-edit checks to the skill. The developer compares both skill versions on separate practice tasks before deciding whether to keep the revision.</li>
+              <li><strong>Correct the code.</strong> A concurrent-booking test confirms overlapping reservations for Alice and Ben. The agent inspects the trace, corrects reservation handling and reruns the agreed checks within the attempt limit. An unavailable tool, unclear rule or exhausted budget stops the run for the task owner.</li>
+              <li><strong>Improve the reusable instructions.</strong> If similar failures recur, the developer compares the existing skill with a revision that includes competing-operation tests. Separate evaluation tasks determine whether to keep the revision.</li>
             </ul>
-            <p>The first loop checks this feature. The second checks whether revised instructions help on later tasks. Passing checks supplies evidence for review; reaching the run limit leaves unfinished work to record.</p>
+            <p>The first loop checks this implementation. The second checks instructions for later work. Keep both sets of results; neither loop changes the booking rule merely to obtain a pass.</p>
           </aside>
           <details class="self-check" id="compare-skill-versions">
             <summary>Compare two skill versions</summary>
             <p>Use this suggested method when deciding whether a skill revision addresses a recurring failure. The developer conducting the comparison records the decision and evidence.</p>
             <ol>
-              <li>Keep the original and revised instructions. Reserve held-out tasks: tasks that were not used to revise the skill. Include an unfamiliar simultaneous-edit case, such as two staff updating a request’s status.</li>
+              <li>Keep the original and revised instructions. Reserve held-out tasks: tasks that were not used to revise the skill. Include an unfamiliar competing-operation case, such as simultaneous cancellation and rebooking, with agreed expected outcomes.</li>
               <li>Run both versions on the same tasks with the same model version, tools, starting conditions, budget and assessment criteria. Repeat runs where outputs vary. Compare test results, review findings and the effort needed to correct the code.</li>
               <li>If a result informs another revision, keep that case as a regression check and reserve fresh tasks for the final comparison. Keep the revision only when it meets the agreed checks without losing previously working behaviour. If the evidence is mixed or incomplete, record the uncertainty and continue the comparison before adopting it.</li>
               <li>Retain both skill versions, task and configuration versions, results, corrections and the reason for the decision. Use later failures to identify the next revision to test.</li>
@@ -300,9 +298,9 @@
 
           <h3>Keep the success criteria unchanged during correction</h3>
           <p>A loop can repeat a bad assumption as well as correct a defect. Check that the tests represent the intended behaviour. Do not weaken a test merely to finish the run; review a requirements change separately.</p>
-          <p>Keep a record of what the agent tried and what each check found. Another agent may offer useful review, but can share the same mistaken assumptions.</p>
+          <p>Keep a record of what the agent tried and what each check found. Another agent may offer useful checks, but can share the same mistaken assumptions.</p>
 
-          <aside class="ai-help ai-help--inline" id="ai-help-loop" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give an agent the failing check, the expected behaviour and an attempt or cost limit. It can propose a correction and rerun the check. Review the diff and test changes against the original criteria; keep the attempt results and escalate when the stop condition is reached.</p></aside>
+          <aside class="ai-help ai-help--inline" id="ai-help-loop" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give an agent the failing booking check, the expected behaviour and an attempt or cost limit. It can propose a correction and rerun the check. The developer compares the diff and test changes with the original criteria; keep the attempt results and escalate when the stop condition is reached.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Choose one failing check and define the expected result, run limit and action when the limit is reached. For recurring findings, use <a href="#compare-skill-versions">the skill-version comparison method</a>. See <a href="eds-developer-harness.html#do-work">how the developer workflow builds, tests and corrects a change</a>.</p>
           <p class="source-ref">Source: <a href="#source-7" aria-label="Source 7: IBM, Loop engineering">[7]</a>.</p>
         </section>
@@ -311,42 +309,46 @@
           <p>Some checks can run independently, but the next action depends on all their results. A workflow graph makes those dependencies and routing conditions explicit. In this guide, graph engineering means designing execution and workflow graphs rather than knowledge graphs.</p>
           <p>Use a graph when work needs parallel checks or different routes after a result. A single-agent feedback loop may be enough for a task that only needs repeated correction.</p>
           <h3>Coordinate parallel checks on the same change</h3>
-          <p><strong>Fictional example:</strong> a coding agent adds a CSV export to the service-request application. After the code compiles and passes unit tests, test, security and architecture agents check the same commit in parallel. Each activity or decision is a <strong>node</strong>; a connecting route is an <strong>edge</strong>. A <strong>join</strong> waits for all three results before routing the change to correction, help or merge review.</p>
+          <p><strong>Fictional example:</strong> a coding agent implements room reservations. After the code compiles and passes unit tests, test, security and architecture agents check the same commit in parallel. Each activity or decision is a <strong>node</strong>; a connecting route is an <strong>edge</strong>. A <strong>join</strong> waits for all three results before routing the change to correction, help or merge review.</p>
           <figure class="concept-figure" id="fig-graph">
-            <figcaption id="fig-graph-title-caption">Figure 6. Fictional CSV-export workflow: decision nodes coordinate build checks, parallel agents and the next action.</figcaption>
+            <figcaption id="fig-graph-title-caption">Figure 6. Fictional booking workflow: decision nodes coordinate build checks, parallel agents and the next action.</figcaption>
             <details class="figure-reading"><summary>Read as text: Agent nodes, decision points and routes</summary><ol>
-              <li>The coding agent implements or revises the CSV export against the agreed API contract and access rules.</li>
-              <li><strong>Decision 1 (Build gate):</strong> checks whether the candidate compiles and passes unit tests. A build or unit failure loops immediately back to the coding agent before running heavier agents.</li>
-              <li>When the build gate passes, three specialist agents run in parallel against the same commit: a test agent checks CSV formatting and streaming, a security agent tests role-based access boundaries, and an architecture agent checks API contract and module rules.</li>
-              <li><strong>Decision 2 (Join and route):</strong> waits for all three specialist agents and evaluates their combined findings. Fixable defects route back to the coding agent with the failure trace; ambiguous specifications or reached run limits pause and escalate; passing checks advance the verified candidate for merge review.</li>
+              <li>The coding agent implements or revises room reservations against the agreed criteria and API contract.</li>
+              <li><strong>Decision 1 (Build gate):</strong> checks whether the candidate compiles and passes unit tests. A build or unit failure returns to the coding agent within the run limit. A blocked check or reached limit stops the run for the task owner.</li>
+              <li>When the build gate passes, three specialist agents run in parallel against the same commit: a test agent checks conflicts and cancellation, a security agent tests role-based access boundaries, and an architecture agent checks transaction boundaries and the API contract.</li>
+              <li><strong>Decision 2 (Join and route):</strong> waits for all three specialist agents and evaluates their combined findings. Fixable defects return to the coding agent within the run limit. Blocked checks, ambiguous rules or reached limits stop and escalate; all required checks passing advances the candidate for human merge review. After a code change, rerun the build and all three branches on the new commit.</li>
             </ol></details>
             <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
               <div class="figure-scroll" tabindex="0" role="region" aria-label="Agent execution graph with decision points; scroll horizontally if needed">
-                <svg viewBox="0 0 900 670" role="img" aria-labelledby="fig-graph-title" aria-describedby="fig-graph-title-desc">
+                <svg viewBox="0 -45 900 715" role="img" aria-labelledby="fig-graph-title" aria-describedby="fig-graph-title-desc">
                   <title id="fig-graph-title">Agent execution graph and routing decisions</title>
-                  <desc id="fig-graph-title-desc">A coding agent builds the CSV export and enters Decision 1, the build gate. Compile or unit failures return immediately to the coding agent. Passing candidates fan out to three parallel specialist agents on the same commit: a test agent, a security agent and an architecture agent. Decision 2 joins their outputs and routes the next step: code or boundary defects return to the coding agent for rework and re-verification; ambiguous rules or budget limits pause and escalate; all checks passing produces a verified candidate ready for merge review.</desc>
+                  <desc id="fig-graph-title-desc">A coding agent implements reservations and enters Decision 1, the build gate. Compile or unit failures return to the coding agent within the run limit. Blocked checks or reached limits stop the run for the task owner. Passing candidates fan out to three parallel specialist agents on the same commit: a test agent, a security agent and an architecture agent. Decision 2 joins their outputs and routes the next step: fixable defects return for correction within the run limit; blocked checks, ambiguous rules or reached limits stop and escalate; all required checks passing produces a candidate for human merge review. A code change invalidates all earlier check results.</desc>
+                  <rect class="d-group" x="1" y="-43" width="898" height="711" rx="8"/>
+                  <text class="d-label" x="450" y="-18" text-anchor="middle">Run limits apply throughout; blocked checks stop for the task owner</text>
                   <rect class="d-node" x="330" y="20" width="240" height="65" rx="8"/>
                   <text class="d-title" x="450" y="47" text-anchor="middle">Coding agent</text>
-                  <text class="d-sub" x="450" y="69" text-anchor="middle">Build or revise CSV export</text>
+                  <text class="d-sub" x="450" y="69" text-anchor="middle">Build or revise reservations</text>
                   <path class="d-line" d="M450 85V115" marker-end="url(#arrow)"/>
                   <polygon class="d-node d-node-accent d-decision" points="315,120 585,120 595,130 595,185 585,195 315,195 305,185 305,130"/>
                   <text class="d-title" x="450" y="150" text-anchor="middle">Decision 1 · Build gate</text>
                   <text class="d-sub" x="450" y="174" text-anchor="middle">Compiles and passes unit tests?</text>
                   <path class="d-line d-dash" d="M305 157H195V52H325" marker-end="url(#arrow)"/>
-                  <text class="d-label" x="195" y="112" text-anchor="middle">Fail: quick local fix</text>
+                  <text class="d-label" x="195" y="112" text-anchor="middle">Fail: retry within limit</text>
+                  <path class="d-line" d="M595 157H885V660H585V585H570" marker-end="url(#arrow)"/>
+                  <text class="d-label" x="740" y="145" text-anchor="middle">Blocked or limit reached</text>
                   <path class="d-line d-line-accent" d="M370 195V225H145V250" marker-end="url(#arrow-accent)"/>
                   <path class="d-line d-line-accent" d="M450 195V250" marker-end="url(#arrow-accent)"/>
                   <path class="d-line d-line-accent" d="M530 195V225H755V250" marker-end="url(#arrow-accent)"/>
                   <text class="d-label d-label-accent" x="450" y="216" text-anchor="middle">Pass: fan out to parallel specialist agents (same commit)</text>
                   <rect class="d-node" x="35" y="255" width="220" height="80" rx="8"/>
                   <text class="d-title" x="145" y="286" text-anchor="middle">Test agent</text>
-                  <text class="d-sub" x="145" y="312" text-anchor="middle">CSV columns &amp; streaming</text>
+                  <text class="d-sub" x="145" y="312" text-anchor="middle">Conflicts &amp; cancellation</text>
                   <rect class="d-node" x="340" y="255" width="220" height="80" rx="8"/>
                   <text class="d-title" x="450" y="286" text-anchor="middle">Security agent</text>
                   <text class="d-sub" x="450" y="312" text-anchor="middle">Role &amp; access boundaries</text>
                   <rect class="d-node" x="645" y="255" width="220" height="80" rx="8"/>
                   <text class="d-title" x="755" y="286" text-anchor="middle">Architecture agent</text>
-                  <text class="d-sub" x="755" y="312" text-anchor="middle">API contract &amp; module rules</text>
+                  <text class="d-sub" x="755" y="312" text-anchor="middle">Transactions &amp; API rules</text>
                   <path class="d-line" d="M145 335V365H370V385" marker-end="url(#arrow)"/>
                   <path class="d-line" d="M450 335V385" marker-end="url(#arrow)"/>
                   <path class="d-line" d="M755 335V365H530V385" marker-end="url(#arrow)"/>
@@ -356,8 +358,8 @@
                   <path class="d-line" d="M340 470V505H150V540" marker-end="url(#arrow)"/>
                   <path class="d-line" d="M450 470V540" marker-end="url(#arrow)"/>
                   <path class="d-line d-line-accent" d="M560 470V505H750V540" marker-end="url(#arrow-accent)"/>
-                  <text class="d-label" x="150" y="526" text-anchor="middle">Fixable defect found</text>
-                  <text class="d-label" x="450" y="512" text-anchor="middle">Ambiguous spec or limit</text>
+                  <text class="d-label" x="150" y="526" text-anchor="middle">Fixable; within limit</text>
+                  <text class="d-label" x="450" y="512" text-anchor="middle">Blocked, unclear or limit</text>
                   <text class="d-label d-label-accent" x="750" y="526" text-anchor="middle">All agent checks pass</text>
                   <rect class="d-node" x="35" y="545" width="230" height="80" rx="8"/>
                   <text class="d-title" x="150" y="576" text-anchor="middle">Route to coding agent</text>
@@ -368,19 +370,19 @@
                   <text class="d-title" x="450" y="576" text-anchor="middle">Pause and escalate</text>
                   <text class="d-sub" x="450" y="602" text-anchor="middle">Record blocker for task owner</text>
                   <rect class="d-node d-node-accent" x="635" y="545" width="230" height="80" rx="8"/>
-                  <text class="d-title" x="750" y="576" text-anchor="middle">Verified candidate</text>
+                  <text class="d-title" x="750" y="576" text-anchor="middle">Candidate for review</text>
                   <text class="d-sub" x="750" y="602" text-anchor="middle">Ready for merge review</text>
                 </svg>
               </div>
-              <p class="diagram-key">Cut-corner shapes mark automated decision points. Solid arrows show forward flow and parallel fan-out; dashed arrows return work to the coding agent when checks fail.</p>
+              <p class="diagram-key">Cut-corner shapes mark automated decision points. Solid arrows show forward flow, parallel checks and escalation; dashed arrows return work for correction. The enclosing boundary applies run limits to every branch.</p>
             </details>
           </figure>
-          <p>In the CSV example, the security check attempts to export another team’s restricted records, while the architecture check compares the change with the application’s module rules. A missing access filter returns the findings to the coding agent. An unanswered product question, such as whether archived requests belong in the export, pauses the run for the task owner.</p>
+          <p>In the booking example, the security agent attempts to cancel another user’s booking, while the architecture agent examines transaction boundaries and the API contract. Fixable permission defects return to the coding agent within the run limit. An unanswered rule, such as whether employees may book outside opening hours, pauses work for the product owner.</p>
           <h3>Keep routing rules explicit</h3>
-          <p>Give each decision point a clear condition, state transition and retry bound. When a rework branch updates the code, invalidate earlier check results so the join node never combines pass notices from different commits.</p>
-          <p>A graph adds coordination work. Use a single-agent loop when a task only needs repeated test-and-fix steps. Separate review agents can expose cross-cutting defects, but they can also share errors or miss a defect. Their position in the graph does not replace final human accountability for merge or release.</p>
+          <p>Give each decision point a clear condition and retry bound. Stop for the task owner when a check is blocked, times out or reaches the run limit; a missing result is not a pass. In this example, a code change invalidates all earlier results: rerun the build and three branches so the join compares evidence from one commit. Retain that commit identifier, findings and routing decision.</p>
+          <p>A graph adds coordination work. Use a single-agent loop when a task only needs repeated test-and-fix steps. Separate specialist agents can expose cross-cutting defects, but they can also share errors or miss a defect. Their position in the graph does not replace final human accountability for merge or release.</p>
 
-          <aside class="ai-help ai-help--inline" id="ai-help-graph" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Agents can implement a bounded change and carry out specialist reviews using the task graph’s dependencies. Check the combined diff and reproduce findings before advancing; retain task results and routing decisions, and rerun checks invalidated by later changes.</p></aside>
+          <aside class="ai-help ai-help--inline" id="ai-help-graph" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Agents can carry out specialist checks using the graph’s dependencies. The developer compares each report’s commit identifier with the candidate and reproduces reported defects before advancing. Keep findings and routing decisions; rerun the build and all required branches after a code change.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Map one development workflow. Mark which agent checks can run in parallel on the same commit, what condition triggers a rework loop and when the graph should pause for a person. Use <a href="eds-developer-harness.html#plan">the story-planning guidance</a> and <a href="eds-developer-harness.html#check">the task review and approval steps</a>.</p>
           <p class="source-ref">Sources: <a href="#source-8" aria-label="Source 8: PuppyGraph, Graph engineering">[8]</a>; <a href="#source-9" aria-label="Source 9: Anthropic, Building effective agents">[9]</a>.</p>
         </section>
@@ -399,7 +401,12 @@
   </details>
   </figure>
           <p>For an unattended route, agree which changes are permitted, what checks are needed, who can pause it and how to recover. Running a coding task without supervision does not itself authorise merge or release.</p>
-          <aside class="example" aria-label="Fictional example: Handle a queue of service-request fixes"><p class="example-label">Example · Handle a queue of service-request fixes</p><p>The team receives a reproducible search bug, an unclear upload error and a request to let managers read every draft. The first two can become development tasks. The access change waits for a product and permissions decision.</p><p>Agents work on the agreed fixes in isolated environments. Tests and a preview help a reviewer inspect the result. Approved changes follow the team’s release process; new defects and feedback return to the work queue.</p></aside>
+          <aside class="example" aria-label="Fictional example: Deliver booking improvements">
+            <p class="example-label">Fictional example · Deliver booking improvements</p>
+            <p>The team receives a booking-label change, a concurrent-reservation defect and a request to let facilities staff cancel other users’ bookings. The permission change waits for an agreed product and access decision; the other items can become bounded development tasks.</p>
+            <p>Agents implement agreed changes and collect check results in isolated environments. A reviewer compares each change with its criteria and unresolved findings. The team follows the release process authorised for that type of change.</p>
+            <p>After release, the team investigates failed confirmations, overlapping bookings and cancellation errors. Record the affected version, relevant logs and an owner for follow-up work. User observations help assess whether room booking has become easier.</p>
+          </aside>
           <h3>Keep understanding and recovery alongside automation</h3>
           <p>Track review waiting time, rework, defects and cost before increasing throughput. Keep design decisions available and practise diagnosis and recovery. A passing test suite does not show that people can explain or repair every change.</p>
           <p>A preview is not a production release. Preserve the approval, monitoring and recovery controls needed for the action being taken.</p>
@@ -416,24 +423,23 @@
           <p>The labels below describe different properties and can overlap. A small model can specialise in a domain; a large model can do so too.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Model terms and example tasks"><table class="reference-table"><caption>Model labels and what they mean</caption><thead><tr><th scope="col">Term</th><th scope="col">Meaning</th><th scope="col">Example task</th></tr></thead><tbody>
     <tr><th scope="row">Large language model (LLM)</th><td><span class="cell-label">Meaning</span>A language model with many parameters: numerical values learned during training. Used for tasks such as drafting text and explaining code.</td><td><span class="cell-label">Example task</span>Draft acceptance criteria or explain code.</td></tr>
-    <tr><th scope="row">Domain-specific language model</th><td><span class="cell-label">Meaning</span>A model trained or adapted for a subject area’s language and tasks.</td><td><span class="cell-label">Example task</span>Work with specialist service terminology.</td></tr>
-    <tr><th scope="row">Small language model (SLM)</th><td><span class="cell-label">Meaning</span>A language model with fewer parameters than larger alternatives. Consider it when computing resources or local operation matter.</td><td><span class="cell-label">Example task</span>Classify a service request.</td></tr>
-    <tr><th scope="row"><a href="#source-23">System One, from TypeSafe</a></th><td><span class="cell-label">Meaning</span>TypeSafe’s name for models such as Jev that answer defined questions with choices or probabilities.</td><td><span class="cell-label">Example task</span>Select a request category from agreed options.</td></tr>
+    <tr><th scope="row">Domain-specific language model</th><td><span class="cell-label">Meaning</span>A model trained or adapted for a subject area’s language and tasks.</td><td><span class="cell-label">Example task</span>Interpret specialist terminology in a document.</td></tr>
+    <tr><th scope="row">Small language model (SLM)</th><td><span class="cell-label">Meaning</span>A language model with fewer parameters than larger alternatives. Consider it when computing resources or local operation matter.</td><td><span class="cell-label">Example task</span>Extract fields from a short text.</td></tr>
+    <tr><th scope="row"><a href="#source-23">System One, from TypeSafe</a></th><td><span class="cell-label">Meaning</span>TypeSafe’s name for models such as Jev that answer defined questions with choices or probabilities.</td><td><span class="cell-label">Example task</span>Choose from predefined categories.</td></tr>
   </tbody></table></div>
           <p>A defined output format or a confidence score does not establish that an answer is correct. The model examples and research below explain the distinctions and limits.</p>
           <aside class="example" aria-label="Fictional example: Choose a model for a coding agent">
-            <p class="example-label">Example · Choose a model for a coding agent</p>
-            <p>A team compares two models for its coding agent. One evaluation task is to fix draft saving so an older browser tab cannot overwrite newer service-request changes.</p>
-            <p>The harness gives both models the same code, requirements, tools and time limit. Each model produces a code change; the team runs the same tests on both results.</p>
-            <div class="table-scroll"><table><caption>Fictional results for the draft-saving fix</caption><thead><tr><th scope="col">Check</th><th scope="col">Model A’s code</th><th scope="col">Model B’s code</th></tr></thead><tbody>
-              <tr><th scope="row">A user can save and reopen an incomplete request</th><td>Pass</td><td>Pass</td></tr>
-              <tr><th scope="row">A stale save preserves newer work and reports a conflict</th><td>Fail: newer work is overwritten</td><td>Pass: conflict reported and unsaved values retained</td></tr>
-              <tr><th scope="row">Another user cannot read or change the draft</th><td>Pass</td><td>Pass</td></tr>
+            <p class="example-label">Fictional example · Choose a model for a coding agent</p>
+            <p>A developer compares two models on booking tasks, including correcting simultaneous reservations. Each run starts from the same repository revision, requirements, tools and limits, in a separate environment. The developer runs identical acceptance checks against each model’s code.</p>
+            <div class="table-scroll"><table><caption>Fictional check results for the reservation fix</caption><thead><tr><th scope="col">Check</th><th scope="col">Model A’s code</th><th scope="col">Model B’s code</th></tr></thead><tbody>
+              <tr><th scope="row">Confirm one valid request for an available room</th><td>Pass</td><td>Pass</td></tr>
+              <tr><th scope="row">Handle simultaneous requests without overlapping confirmations</th><td>Fail: both confirmed</td><td>Pass: one confirmation and one conflict</td></tr>
+              <tr><th scope="row">Reject cancellation by another unauthorised user</th><td>Pass</td><td>Pass</td></tr>
             </tbody></table></div>
-            <p>For this task, Model B’s change meets all three checks. The developer also reviews the code and records response time, running cost and any corrections needed.</p>
-            <p>The team repeats the comparison on other representative coding tasks, keeping separate tasks for the final evaluation. It chooses a model that meets its quality, time and cost criteria across those tasks.</p>
+            <p>Model B’s change meets these checks on this run. The developer also examines the code, records corrections, elapsed time and cost, and retains model and configuration versions with both successful and failed results.</p>
+            <p>Repeat the comparison where outputs vary and use other representative tasks, keeping fresh tasks for the final evaluation. Select against agreed quality, time, cost and data-handling criteria across those results; one successful fix does not establish a general ranking.</p>
           </aside>
-          <details class="self-check concept-reference" id="model-reference"><summary>Model examples and research</summary><div class="table-scroll" tabindex="0" role="region" aria-label="Model dimensions comparison">
+          <details class="self-check concept-reference" id="model-reference"><summary>Model examples and research</summary><p>This reference also covers models used inside delivered products. The service-triage example illustrates that separate use; it is not a feature of the booking application.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Model dimensions comparison">
             <table class="reference-table">
               <caption>Four dimensions of model choice</caption>
               <thead><tr><th scope="col">Dimension</th><th scope="col">Labels</th><th scope="col">What to assess</th></tr></thead>
@@ -468,8 +474,8 @@
           <p>Questions in the same request are evaluated independently against the same state. Code combines their answers, checks permissions and decides the next action. If a later question needs an earlier answer, build a follow-up request with that result. Open-ended writing and complex reasoning can remain with a generative model or a person. <a href="#source-24" aria-label="Source 23: TypeSafe, Primitives documentation">[23]</a></p>
           <p><strong>Confidence needs interpretation:</strong> Choice and Score include a confidence statistic derived from their probability distributions. Noul returns a yes/no probability without a separate confidence field. Confidence is not proof of correctness, and a valid output type does not establish that the judgement is right. Check accuracy and calibration on representative, held-out cases before setting thresholds for action, further analysis or human review. <a href="#source-25" aria-label="Source 24: TypeSafe, Confidence documentation">[24]</a></p>
           <p><strong>What the evidence supports:</strong> TypeSafe reports speed and cost gains on its own workflows; those gains depend on the comparison and deployment conditions. A separate 2026 preprint, <em>Fast Models, Slow Evidence</em>, found Jev more accurate than Laya on nine of eleven tested decision points, but neither model outperformed chance on zero-shot model routing. Its self-audit identified omitted costs and thresholds fitted on evaluation data that overstated deployment benefits. These findings concern that comparison and evaluation design, not all System One models or applications. <a href="#source-22" aria-label="Source 21: TypeSafe AI, Introducing System One Models and Jev">[21]</a> <a href="#source-26" aria-label="Source 25: Li, Fast Models, Slow Evidence">[25]</a></p>
-          <aside class="example" aria-label="Example: Triage a service request with Jev">
-            <p class="example-label">Example · Triage a service request with Jev</p>
+          <aside class="example" aria-label="Fictional example: Triage a service request with Jev">
+            <p class="example-label">Fictional example · Triage a service request with Jev</p>
             <p>Supply a request’s text, relevant service details and the triage rubric. Ask separately for its category, urgency and whether it reports an outage. Application code applies the validated routing rules. Uncertain, conflicting or uncovered cases go to a person; an LLM can draft a response when needed. Keep access and release approvals in their existing decision process.</p>
           </aside>
           <p><strong>Related research:</strong> Yu and colleagues’ System 2 distillation work concerns training models to answer directly from reasoning-derived examples. GPT-6 Astra reasoning effort and Claude thinking controls vary deliberation within generative models. These are related ways to balance computation and quality, but they do not establish the typed-decision interface that defines Jev. <a href="#source-16" aria-label="Source 15: Distilling System 2 into System 1">[15]</a> <a href="#source-21" aria-label="Source 20: OpenAI, GPT-6 model guide">[20]</a> <a href="#source-18" aria-label="Source 17: Anthropic, Claude Fable 5.1 documentation">[17]</a> <a href="#source-19" aria-label="Source 18: Anthropic, Claude Opus 5.5 documentation">[18]</a></p>
@@ -524,7 +530,7 @@
           </ol>
           <p class="source-ref">Evaluate the exact model version and configuration you will use.</p>
         </section>
-        <p class="source-ref">Last editorial review: <time datetime="2026-11-05">5 November 2026</time>.</p>
+        <p class="source-ref">Last editorial review: <time datetime="2026-11-06">6 November 2026</time>.</p>
         <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
