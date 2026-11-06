@@ -3,7 +3,7 @@
   "scope": "Original external href inventory in 13 site/dist HTML pages. Retrieved means readable source returned, not blanket verification of every claim in the source.",
   "original_unique_urls": 100,
   "counts": {
-    "retrieved": 97,
+    "retrieved": 100,
     "dynamic_page_no_text": 1,
     "verification_challenge": 2
   },
@@ -1047,6 +1047,36 @@
       "result": "retrieved",
       "title": "DORA | Capabilities: Monitoring and observability",
       "method": "web reader"
+    },
+    {
+      "url": "https://www.harness.io/blog/why-ai-coding-agents-lose-context-after-pr",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-06",
+      "result": "retrieved",
+      "title": "Why AI Coding Agents Lose Context After the PR, and How to Keep It | Harness Blog",
+      "method": "web reader"
+    },
+    {
+      "url": "https://martinfowler.com/articles/are-harnesses-worth-the-cost.html",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-06",
+      "result": "retrieved",
+      "title": "Are Harnesses Worth the Cost?",
+      "method": "web reader"
+    },
+    {
+      "url": "https://martinfowler.com/rachels-ramblings/good-devs-wary.html",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-06",
+      "result": "retrieved",
+      "title": "Why are good developers so wary of agentic development?",
+      "method": "web reader"
     }
   ],
   "additional_checked_sources": [
@@ -1062,6 +1092,6 @@
     "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
     "https://www.anthropic.com/research/demystifying-evals-for-ai-agents"
   ],
-  "final_unique_urls": 101,
+  "final_unique_urls": 104,
   "final_reference_coverage": "Every external href in the final HTML inventory has a retrieval record or is an explicitly checked additional source. Original unreadable source exceptions remain documented."
 }
