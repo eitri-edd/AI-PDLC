@@ -186,6 +186,30 @@ A visual containing asset-specific actions, sample participants, invented result
 
 Keep the AI-SDLC overview focused on the end-to-end lifecycle, responsibilities, evidence and feedback. Put the continuous application journey in Project Discovery and Product implementation. Captions, accessible descriptions and surrounding prose follow the same topic/example distinction as the visual.
 
+## Structure substantial learning chapters
+
+When a lifecycle chapter combines general guidance, one sustained fictional case and a method catalogue, make three distinct and optional reading paths:
+
+1. **Understand — playbook.** Explain the general purpose, prerequisites, people, actions, expected outputs, evidence and decision authority without relying on fictional characters. Keep its explanatory diagrams, method tables and primary headings case-independent.
+2. **Apply — continuous worked example.** Introduce the fictional premise once. Follow one coherent story, with each chapter showing the situation, team action, observed evidence, decision and what changes next. Present implementation as requirements → technical design → small tasks → implementation → independent verification → authorised release → monitoring and learning. Explain feedback routes; never imply a preselected solution or automatic approval.
+3. **Explore — reference toolkit.** Defer optional frameworks, deeper platform and risk checks, measurement catalogues and supplementary case illustrations. Do not interrupt concept tables or role descriptions with multiple miniature fictional examples.
+
+Give each reading path a meaningful text label and a clear visual boundary using `design.md`. Link theory steps and the corresponding case chapters both ways; preserve deep-link IDs and cross-page handoffs. A reader should understand the playbook without the fictional case and follow the case without opening the optional library.
+
+Use this structure when it materially improves a long learning chapter. Do not add navigation cards or a case story to a short procedure or simple reference page. The teaching order does not alter the actual lifecycle, local approval authority or safety requirements.
+
+## Source attribution belongs at the end of each page
+
+Place **all standalone source-attribution notes in the final page-level `Sources` section**, before the article footer. This includes source recaps placed at the end of content sections, framework inspiration, references supporting a table, method adaptations, and research/sources notes. A content section should not end with a separate “Source:”, “Sources:”, “Basis:”, “Supporting guidance:”, “Measurement source:” or equivalent standalone credit.
+
+- Keep one Sources section per page that cites external works. Preserve the established reference IDs, source names, source URLs and links. List source-to-section mappings under a descriptive “Section attribution and adaptations” subheading, with section links, without duplicating the entire numbered bibliography.
+- Preserve precise inline numbered source links next to a material claim when needed for traceability, but move standalone attribution explanations and bibliographic recaps to the Sources section.
+- **Do not separate a consequential caveat from its claim.** Research population, sample size, limitations, applicability and uncertainty affecting the reader's decision stay next to the relevant statement. Licensed-image credits or required quotation credits stay with the asset when required by the licence, with fuller reference details at the bottom.
+- An operational link or resource is not automatically attribution. Video links, training entry points, Eitri version warnings, approval requirements and actionable security cautions remain where the reader needs them even if they currently use a `source-ref` CSS class. Do not create empty Sources sections for pages with no external citations.
+- Preserve all existing HTML IDs, links, intended meaning, reference numbering and factual claims. A move is not permission to remove a source or weaken a qualification.
+
+**Editorial validation:** inspect all published pages for standalone source credits before the last Sources section; distinguish source credits from instructional prose and operational links. Check section-to-source mapping, stable anchors, source URLs, meaningful caveats, navigation, chronological worked journeys and responsive presentation before merging.
+
 ## Page structures
 
 Choose a structure that fits the reader’s task. Omit sections that do not help; do not fill a template with generic text.
@@ -295,6 +319,8 @@ Record a content owner, last-reviewed date and applicable lifecycle version for 
 Display dates as “27 September 2026”. Store machine-readable dates as `2026-09-27`. Change the review date after a substantive review, not automatically on every site build.
 
 ## Editorial acceptance checklist
+- [ ] Standalone source credits and adaptations appear only in the final Sources section, while material caveats and operational links remain in context.
+- [ ] Substantial teaching chapters separate independent theory, the continuous fictional case and optional reference material when that structure aids learning.
 
 - [ ] The opening tells the intended reader what the page helps them do or understand.
 - [ ] Prerequisites match the reader’s assumed knowledge, and the page structure fits its main purpose.
