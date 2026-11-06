@@ -3,7 +3,7 @@
 This repository contains the **Enterprise Digital Services (EDS) AI-SDLC Handbook** static documentation site (`site/dist/`) together with its governing editorial and design specifications:
 
 - **[`writing.md`](./writing.md)** — Editorial guide defining voice, tone, British English conventions, house terminology, page archetypes, and the separation of requirements, recommendations, and examples.
-- **[`design.md`](./design.md)** — Visual design and component guide defining the **Editorial Enterprise Light** theme (Version 0.3), layout architecture, typography, collapsible navigation, table column sizing, and interactive animated SVG diagrams.
+- **[`design.md`](./design.md)** — Visual design and component guide (Version 0.5): **Editorial Enterprise Light** for topic explanations, **Matte Stone** for fictional learning examples, plus layout, typography, navigation, tables and accessible diagrams.
 - **[`site/dist/`](./site/dist/)** — The published static HTML handbook, shared stylesheet (`styles.css`), and progressive enhancement script (`site.js`).
 
 Use this README as the operational reference whenever refining existing pages, updating diagrams or tables, or adding new content to the handbook.
@@ -21,8 +21,8 @@ All published pages live in `site/dist/` and are organised into two main navigat
 | [`index.html`](./site/dist/index.html) | **Introduction** | Overview / Orientation | Explains why AI changes software delivery, the shifting bottleneck (from typing code to intent, verification, and context), the three handbook layers (*Principles*, *Operating requirements*, *Eitri implementation*), and the 6 key pointers. |
 | [`transformation.html`](./site/dist/transformation.html) | **Organisation transformation** | Concept + Operating Guide | Covers the 4 pillars (*People*, *Process*, *Culture*, *Technology*), T-shaped role evolution, multidisciplinary squads, human vs agent task boundaries, and the 3-month pilot scorecard. |
 | [`concept.html`](./site/dist/concept.html) | **Concepts** | Concept Reference | Defines 8 foundational concepts with animated diagrams: *Intent-driven development*, *Spec-driven development*, *Context engineering*, *Harness engineering*, *Loop engineering*, *Graph engineering* (multi-agent execution with automated decision gates), *Software factories*, and *AI models*. |
-| [`ai-pdlc.html`](./site/dist/ai-pdlc.html) | **AI-SDLC overview** | Lifecycle Overview | Introduces the two connected loops—**Product discovery** and **Product implementation**—joined across the middle by the *Handoff* (PRD, UI artefacts, validation and technical evidence) and shared *Context input*, with inner rework loops and production feedback. |
-| [`product-discovery.html`](./site/dist/product-discovery.html) | **Product discovery** | Lifecycle Stage | Guides **Frame → Test → Decide, then prepare delivery** through six practical steps, with research, opportunity selection, business and technical discovery, seven diagrams and a continuous fictional example. Frameworks and advanced guidance are optional references. |
+| [`ai-pdlc.html`](./site/dist/ai-pdlc.html) | **AI-SDLC overview** | Lifecycle Overview | Introduces the two connected loops—**Project Discovery** and **Product implementation**—joined across the middle by the *Handoff* (PRD, UI artefacts, validation and technical evidence) and shared *Context input*, with inner rework loops and production feedback. |
+| [`product-discovery.html`](./site/dist/product-discovery.html) | **Project Discovery** | Lifecycle Stage | Guides **Frame → Test → Decide, then prepare delivery** through six practical steps, with research, opportunity selection, business and technical research, seven topic diagrams and a separate matte asset-workflow diagram within the continuous learning journey. Frameworks and advanced guidance are optional references. |
 | [`product-implementation.html`](./site/dist/product-implementation.html) | **Product implementation** | Lifecycle Stage | Details the inner delivery loop: readiness package (PRD + UI artefacts + context), the `PRD → TRD → Tasks` artefact chain, the 6 implementation stages (*Plan*, *Slice*, *Implement*, *Verify*, *Release & observe*, *Learn*), separation of duties, and factory modes (*Co-pilot*, *Light factory*, *Dark factory*). |
 
 ### 1.2 Primary Navigation: EDS AI Workflow (`site/dist/`)
@@ -59,7 +59,7 @@ Write for mixed delivery squads (Product Owners, Business Analysts, Engineers, Q
 ### 2.2 Voice, Tone, and Language Rules
 - **British English**: Use British spelling throughout (*organisation*, *artefact*, *standardise*, *behaviour*, *prioritise*, *catalogue*, *analyse*).
 - **Direct, active voice**: Address the reader as *you* or name the specific role (*the Product Owner*, *the tech lead*, *the developer*, *the release owner*).
-- **Sentence & paragraph length**: Aim for **15–25 words** per sentence and **3–5 sentences** per paragraph. Put one idea in each sentence.
+- **Sentence & paragraph length**: Aim for **15–25 words** per sentence and usually **two to four sentences** per paragraph, following [`writing.md`](./writing.md#sentence-and-paragraph-rules). Keep one main idea per paragraph and connect the explanation naturally.
 - **Concrete verbs over buzzwords**: Prefer *specify, test, review, approve, deploy, measure, roll back*. Avoid *unlock, supercharge, revolutionary, seamless, paradigm, game-changing*.
 - **Personification boundary**: Describe what a model or agent *generates*, *retrieves*, *checks*, or *executes*. Never write that an AI *believes*, *understands*, *cares*, or *takes responsibility*.
 
@@ -89,6 +89,9 @@ Never blur mandatory policy with advice or illustrative scenarios:
 3. **Examples (`Example` callout or explicit label)**:
    - Label clearly as an example. Use neutral, realistic software delivery scenarios (such as an internal service-request portal or CSV export feature).
    - **Never** invent EDS policy names, committee names, mandatory roles, metrics, or approval boards inside an example.
+   - Keep fictional application panels, tables and diagrams in the separate Matte Stone theme. Reserve the existing blue diagram treatment for general topic explanations. Follow the [topic and example rules](./writing.md#separate-topic-explanations-from-learning-examples).
+
+Use descriptive names for requirements, findings, decisions and checks throughout reader-facing content. Keep traceability through links and technical records, rather than invented pointer codes. See [descriptive reference names](./writing.md#use-descriptive-names-for-references).
 
 ### 2.5 Page Archetype Templates
 
@@ -110,7 +113,7 @@ When creating or refactoring a page, follow its archetype structure from `writin
 
 ## 3. Visual Design & Technical Standards (from `design.md`)
 
-All pages share [`site/dist/styles.css`](./site/dist/styles.css) (**Editorial Enterprise Light**, Version 0.2) and [`site/dist/site.js`](./site/dist/site.js).
+All pages share [`site/dist/styles.css`](./site/dist/styles.css) and [`site/dist/site.js`](./site/dist/site.js). The current authoring specification is [design.md](./design.md); verify each page against it rather than assuming existing styles already implement every rule.
 
 ### 3.1 Colour Palette & Contrast Rules
 - **Surfaces**: Crisp alabaster page canvas (`--bg-canvas: #fafcff`), pure white elevated cards and tables (`--bg-surface: #ffffff`), cool slate headers/code blocks (`--bg-subtle: #f3f6fb`), and soft blue active highlights (`--bg-muted: #e8eef7`).
@@ -163,6 +166,8 @@ To prevent the first column from wrapping prematurely on multi-word labels, step
 
 All conceptual and workflow diagrams must be authored as accessible inline SVGs inside `<figure class="concept-figure">` and follow these rules:
 
+Classify the content first. The blue blueprint treatment explains general topics and processes; a fictional application uses the [Matte Stone example treatment](./design.md#topic-diagrams-and-fictional-learning-examples), with an explicit example wrapper/modifier and visible label. Shared figure structure does not imply shared colours or motion. Use descriptive action and decision names in both modes; split mixed topic/example visuals.
+
 1. **Top Caption & Reading Guide**:
    - Place `<figcaption>` **at the top** of `<figure class="concept-figure">` with a `<span class="figure-number">Figure N</span>` badge and title.
    - Immediately follow with a collapsed `<details class="figure-reading"><summary>How to read this diagram</summary>...</details>`.
@@ -171,10 +176,10 @@ All conceptual and workflow diagrams must be authored as accessible inline SVGs 
    - Include `<title id="...">` and `<desc id="...">` linked via `aria-labelledby` on the `<svg>`.
 3. **Standard SVG Classes (`styles.css` + `site.js`)**:
    - **Containers & boundaries**: `.d-boundary` (outer loop/system container, `#f8fafc` fill, dashed border) and `.d-group` (inner stage/loop container).
-   - **Nodes**: `.d-node` (standard white card node), `.d-node-accent` (highlighted blue card node), `.d-decision` (amber decision gate, automatically receives subtle `@keyframes d-gate-pulse`). Add `data-step="1"`, `data-step="2"`, etc. on `<g>` nodes if you want the interactive **Step through** toolbar button to highlight nodes in sequence.
+   - **Nodes**: `.d-node`, `.d-node-accent` and `.d-decision` identify standard steps, emphasis and decisions. Topic diagrams use the blue styling in `design.md`; example diagrams override fills, outlines and effects with Matte Stone. Add `data-step="1"`, `data-step="2"`, etc. on `<g>` nodes when a reader-controlled **Step through** action helps explain sequence.
    - **Connectors & Animation**:
-     - `.d-line` (primary solid connector) and `.d-line-accent` (primary active flow connector). `site.js` automatically clones these paths into animated `.d-flow-pulse` overlays and injects the `.figure-toolbar` (*Animated flow*, *Pause/Play*, and *Step through*).
-     - `.d-dash` (rework, feedback, or conditional loop path—automatically animates with marching dashes `@keyframes d-march`).
+     - `.d-line` and `.d-line-accent` show forward paths; `.d-dash` shows feedback, rework or conditional paths. Explain their meaning in text.
+     - Topic diagrams can use flow animation when it teaches the relationship. Learning examples are still by default; ensure the shared enhancer does not add blue gradients, glows, elevation or automatic pulses to them. Follow the theme-specific behaviour in `design.md`.
    - **High-Contrast Typography**:
      - `.d-title` (`13.5px`, weight `700`, `#0f172a`) for node headings.
      - `.d-sub` (`11.5px`, weight `500`, `#1e293b`) for node subtitles.
@@ -199,7 +204,7 @@ All conceptual and workflow diagrams must be authored as accessible inline SVGs 
 ### Step 3: Add or Refine Callouts, Tables, and Diagrams
 - **Callouts**: Use `<aside class="callout callout-note|callout-tip|callout-warning|callout-danger|callout-example">` with `<p class="callout-title">`. Keep callouts to 2–4 sentences and never stack two callouts back-to-back.
 - **Tables**: Wrap in `<div class="table-wrap" role="region" aria-label="..." tabindex="0">` and apply the appropriate first-column width class (`.wide-col-first`, `.step-table`, `.skills-table`, `.pipeline-table`, `.stage-table`, or `.competency-table`).
-- **Diagrams**: Follow the `<figure class="concept-figure">` structure, ensure every text node uses `.d-title`, `.d-sub`, or `.d-label` (never low-contrast grey text on shaded backgrounds), and verify that inner and outer loops are visually enclosed when depicting iterative workflows.
+- **Diagrams**: Follow the shared figure structure and readable text classes, then apply the topic or example theme according to content. Verify that loops are visually enclosed where relevant and that labels explain their meaning without invented reference codes. See [diagram purpose and styling](./design.md#diagrams-icons-and-purposeful-motion).
 
 ### Step 4: Run the Pre-Publication Checklist
 
@@ -207,6 +212,8 @@ Before considering any content or design update complete, verify every item belo
 
 - [ ] **Layer & source accuracy (`writing.md`)**: Requirements (`must`), recommendations (`should`), and examples are clearly separated; no EDS committees, roles, or policies are invented inside examples.
 - [ ] **Language & tone (`writing.md`)**: British English spelling is used throughout; sentences average 15–25 words; active voice and house terminology (`AI-SDLC`, `artefact`, `evaluation`, `review` vs `approval`) are used consistently.
+- [ ] **Readable references (`writing.md`)**: Pointers use descriptive names across text, tables, diagrams and links; existing anchors and technical traceability are preserved.
+- [ ] **Topic versus example (`design.md`)**: Blue diagrams explain general content. Fictional application content uses the labelled Matte Stone treatment throughout its panels, tables and diagrams, with static default presentation.
 - [ ] **Navigation & ToC sync (`design.md`)**: `<details class="site-navigation" open>` is present and collapsible on all pages; `aria-current="page"` is set on the active page; mobile and desktop "On this page" links match all `<h2>` IDs.
 - [ ] **Table readability (`design.md`)**: Every multi-column table is inside `.table-wrap` and uses the appropriate table class so first-column labels do not wrap awkwardly.
-- [ ] **Diagram legibility & animation (`design.md`)**: Every SVG diagram has `<title>` and `<desc>`, uses high-contrast node fills (`.d-node`, `.d-node-accent`) and text classes (`.d-title`, `.d-sub`, `.d-label`), and works cleanly with the interactive `.figure-toolbar`.
+- [ ] **Diagram legibility & motion (`design.md`)**: Each SVG has `<title>`, `<desc>`, a text equivalent and high-contrast labels. Motion/controls fit its purpose and theme; the enhancer respects example styling and reduced motion.

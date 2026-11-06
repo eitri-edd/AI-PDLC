@@ -6,7 +6,14 @@
   --surface-muted: #f1f5f9;
   --surface-selected: #eff6ff;
   --surface-accent-subtle: #f5f8ff;
-  --surface-example: #f8faff;
+  --example-surface: #f3f0eb;
+  --example-canvas: #e8e3dc;
+  --example-card: #faf8f4;
+  --example-ink: #2f3437;
+  --example-secondary: #57534e;
+  --example-accent: #7a4b3a;
+  --example-border: #837569;
+  --surface-example: var(--example-surface);
   --text-primary: #0f172a;
   --text-body: #1e293b;
   --text-secondary: #475569;
@@ -1936,4 +1943,83 @@ summary {
   .d-flow-pulse { display: none !important; }
   .page-map a { color: inherit; }
   a[href^="http"]::after { content: " (" attr(href) ")"; }
+}
+
+/* Fictional learning content uses flat Matte Stone surfaces, separate from topic diagrams. */
+:is(.example, .learning-example, .worked-example) {
+  background: var(--example-surface);
+  color: var(--example-ink);
+  border: 1px solid var(--example-border);
+  border-left: 3px solid var(--example-accent);
+  border-radius: 0.625rem;
+  box-shadow: none;
+}
+.learning-example:not(.worked-example) { margin: 1.5rem 0; padding: 1.25rem 1.5rem; }
+.learning-example--compact:not(.worked-example) { margin: 0.75rem 0 0; padding: 0.75rem; }
+:is(.example, .learning-example, .worked-example) :is(p, h3, h4, li, summary) { color: var(--example-ink); }
+:is(.example, .learning-example, .worked-example) .example-label {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: var(--example-canvas);
+  border: 1px solid var(--example-border);
+  border-radius: 0.2rem;
+  color: var(--example-accent);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  line-height: 1.5;
+}
+.learning-example--compact .example-label { margin: 0 0 0.5rem; }
+.learning-example > :last-child { margin-bottom: 0; }
+.learning-example :is(.table-scroll, table) { background: var(--example-card); box-shadow: none; border-color: var(--example-border); }
+.learning-example :is(th, td, caption) { color: var(--example-ink); border-color: var(--example-border); }
+.learning-example :is(thead th, caption) { background: var(--example-canvas); }
+.learning-example tbody tr:hover { background: var(--example-surface); }
+.learning-example .cell-label { color: var(--example-secondary); }
+.journey-next { margin-top: 1.25rem; padding-top: 0.75rem; border-top: 1px solid var(--example-border); }
+.concept-figure--example,
+.concept-figure--example:hover {
+  background: var(--example-card);
+  border-color: var(--example-border);
+  box-shadow: none;
+  transform: none;
+  transition: none;
+}
+.concept-figure--example > figcaption {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  background: var(--example-canvas);
+  border-color: var(--example-border);
+  color: var(--example-ink);
+}
+.concept-figure--example .figure-scroll { background: var(--example-canvas); background-image: none; }
+.concept-figure--example .figure-scroll svg { min-width: 32rem; }
+.concept-figure--example :is(.diagram-key, .figure-reading, .diagram-detail > summary) {
+  background: var(--example-surface);
+  border-color: var(--example-border);
+  color: var(--example-secondary);
+}
+.concept-figure--example :is(.d-node, .d-group, .d-boundary, .d-decision) {
+  fill: var(--example-card);
+  stroke: var(--example-border);
+  filter: none !important;
+  animation: none !important;
+  transition: none;
+}
+.concept-figure--example .d-node-accent { fill: var(--example-surface); stroke: var(--example-accent); }
+.concept-figure--example .d-title { fill: var(--example-ink); }
+.concept-figure--example .d-sub { fill: var(--example-secondary); }
+.concept-figure--example .d-node-accent + .d-title + .d-sub { fill: var(--example-secondary); font-weight: 500; }
+.concept-figure--example :is(.d-label, .d-label-accent) { fill: var(--example-ink); stroke: var(--example-canvas); }
+.concept-figure--example :is(.d-line, .d-line-accent) { stroke: var(--example-border); animation: none; }
+.concept-figure--example .d-flow-pulse { display: none; }
+@media (max-width: 40rem) {
+  .learning-example:not(.worked-example) { padding: 1rem; }
+  .learning-example--compact:not(.worked-example) { padding: 0.75rem; }
+}
+@media print {
+  .learning-example, .worked-example { break-inside: auto; }
+  .concept-figure--example .figure-scroll svg { min-width: 0; }
 }
