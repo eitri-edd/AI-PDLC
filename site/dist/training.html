@@ -107,7 +107,7 @@
             <p class="example-label">Note</p>
             <p>The training expects a software development background. Without experience of writing, testing and shipping code, you cannot critically review what the agent produces, and the workflow depends on that review.</p>
           </aside>
-          <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: Matt Pocock, skills">[1]</a>; <a href="#source-2" aria-label="Source 2: SGTechStack, Eitri Agentic Dev Workflow self-paced training">[2]</a>.</p>
+          
         </section>
 
         <section id="course-map">
@@ -160,7 +160,7 @@
             <li><strong>Non-determinism</strong> means the same input can produce different output on each run, so output that looked right once may not the next time.</li>
           </ul>
           <p>Both lead to the same safeguard: human review for judgement, and machine-verifiable tests as the signal that work is finished.</p>
-          <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: Liu et al., Lost in the Middle: How Language Models Use Long Contexts">[3]</a>.</p>
+          
         </section>
 
         <section id="context-and-loops">
@@ -200,7 +200,7 @@
           <p>Resolve important questions and plan a bounded change before implementation. The training calls its sequence Questions, Research, Structure, Plan, Implement (QRSPI). Treat it as a workflow choice: a prototype or technical spike may be needed to resolve an unknown, and implementation evidence can reopen a design decision. Record the finding and update the plan before dependent work continues.</p>
           <h3>Package procedures as skills</h3>
           <p>A skill packages reusable instructions in a SKILL.md file, with optional scripts and resources. Invocation depends on the host: a person may select a skill or the agent may load one when its description matches the task. See the <a href="https://agentskills.io/specification">Agent Skills specification</a>. Only each skill’s name and one-line description load at start-up; the full instructions load when the skill is used. This progressive disclosure is how Eitri adds skills without filling every session’s context.</p>
-          <p class="source-ref">Source: <a href="#source-4" aria-label="Source 4: Anthropic, Effective context engineering for AI agents">[4]</a>.</p>
+          
         </section>
 
         <section id="development-principles">
@@ -215,7 +215,7 @@
             <tr><th scope="row">Living documentation</th><td>Documented standards are kept in step with reality</td><td>Agents treat repository documentation as instructions and follow stale rules faithfully</td></tr>
           </tbody></table></div>
           <p><a href="concept.html#spec-driven-development">Read about spec-driven development</a>.</p>
-          <p class="source-ref">ADR guidance: <a href="#source-5" aria-label="Source 5: Michael Nygard, Documenting architecture decisions">[5]</a>.</p>
+          
         </section>
 
         <section id="multi-agent">
@@ -227,7 +227,7 @@
             <li><strong>Independent review:</strong> give the reviewer original requirements, the change and reproducible evidence. A separate context can reduce influence from the implementer’s narrative, but shared assumptions can still cause correlated errors.</li>
             <li><strong>Parallel, specialised work:</strong> independent tasks, such as several compliance checks, can run at the same time, and simpler tasks can go to cheaper models.</li>
           </ul>
-          <p class="source-ref">Source: <a href="#source-6" aria-label="Source 6: Anthropic, Building effective agents">[6]</a>.</p>
+          
         </section>
 
         <section id="po-workflow">
@@ -356,11 +356,19 @@
             <p>Answers to these and more are in each lesson’s “Food for thought” sections and knowledge checks.</p>
           </details>
           <p class="next-step"><strong>Next step:</strong> <a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">open the Eitri self-paced training</a> and start with the prerequisites. Then <a href="eds-developer-harness.html">read the developer harness page</a> to see the same skills in the governed sequence.</p>
-          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: SGTechStack, Eitri Agentic Dev Workflow self-paced training">[2]</a>.</p>
+          
         </section>
 
         <section id="sources">
           <h2>Sources</h2>
+<div class="source-attribution-notes" aria-label="Section attribution and adaptations"><h3>Section attribution and adaptations</h3><ul>
+<li><strong><a href="#about-training">What the training teaches</a>:</strong> Sources: <a href="#source-1" aria-label="Source 1: Matt Pocock, skills">[1]</a>; <a href="#source-2" aria-label="Source 2: SGTechStack, Eitri Agentic Dev Workflow self-paced training">[2]</a>.</li>
+<li><strong><a href="#how-models-behave">Key concept: how language models behave</a>:</strong> Source: <a href="#source-3" aria-label="Source 3: Liu et al., Lost in the Middle: How Language Models Use Long Contexts">[3]</a>.</li>
+<li><strong><a href="#context-and-loops">Key concept: engineer the context and the loop</a>:</strong> Source: <a href="#source-4" aria-label="Source 4: Anthropic, Effective context engineering for AI agents">[4]</a>.</li>
+<li><strong><a href="#development-principles">Key concept: principles that make agent work verifiable</a>:</strong> ADR guidance: <a href="#source-5" aria-label="Source 5: Michael Nygard, Documenting architecture decisions">[5]</a>.</li>
+<li><strong><a href="#multi-agent">Key concept: multi-agent patterns</a>:</strong> Source: <a href="#source-6" aria-label="Source 6: Anthropic, Building effective agents">[6]</a>.</li>
+<li><strong><a href="#study-plan">Work through the course</a>:</strong> Source: <a href="#source-2" aria-label="Source 2: SGTechStack, Eitri Agentic Dev Workflow self-paced training">[2]</a>.</li>
+</ul></div>
           <p>References checked on 6 November 2026.</p>
           <ol class="source-list">
             <li id="source-1"><a href="https://github.com/mattpocock/skills">Matt Pocock, skills</a></li>

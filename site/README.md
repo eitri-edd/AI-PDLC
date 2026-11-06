@@ -13,6 +13,8 @@ Static site source and publishable files are in `dist/`. No build or package ins
 - `dist/styles.css`: Shared styles from `../design.md`.
 - `dist/site.js`: Responsive navigation and current-section indication.
 
+For substantial lifecycle chapters, keep the playbook, fictional worked journey and optional references distinct. Put standalone source attributions and adaptation notes only in each page's bottom Sources section; retain material research limitations and operational links beside their relevant instructions.
+
 Read `../writing.md` and `../design.md` before changes. Reference documents are not included in the public output. Publish only the contents of `dist/`, not the entire workspace. Relative links support hosting below a repository path.
 
 The authoring standards reserve blue diagrams for topic explanations and specify a separate flat Matte Stone theme for fictional learning panels, tables and diagrams. Use descriptive reference names in published text and visuals; keep technical identifiers in anchors or linked records. Apply these rules when revising the affected pages and verify the rendered result against the standards.

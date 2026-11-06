@@ -112,7 +112,7 @@
             <p>McKinsey’s November 2025 survey found that respondents in its AI high-performer group were nearly three times as likely as others to report fundamental workflow redesign. That group reported both significant AI value and an AI contribution of at least 5% to earnings before interest and taxes. This self-reported association does not establish that redesign caused the results.</p>
             <p>Measure the effect in your own setting. METR’s early-2025 randomised study of 16 experienced open-source developers, completing 246 tasks in familiar repositories, found that allowing AI tools increased completion time by 19%. Participants nevertheless estimated that AI had saved them time.</p>
             <p>That result is specific to those tools, tasks and developers. In February 2026, METR reported that selection effects and time-measurement problems made its follow-up data unreliable for estimating current productivity gains. Neither study supplies a forecast for your squad.</p>
-            <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: DORA, State of AI-assisted Software Development 2025">[1]</a>; <a href="#source-2" aria-label="Source 2: McKinsey, The state of AI in 2025">[2]</a>; <a href="#source-3" aria-label="Source 3: METR, July 2025 developer productivity study">[3]</a>; <a href="#source-4" aria-label="Source 4: METR, February 2026 productivity update">[4]</a>.</p>
+            
           </details>
         </section>
 
@@ -282,7 +282,7 @@
 
           <aside class="ai-help ai-help--inline" id="ai-help-process" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Given a change and the control’s criteria, AI can assemble evidence links and flag apparent gaps for review. The control owner checks the original results and resolves missing evidence. Retain the findings and authorised decision; a generated summary does not grant approval.</p></aside>
 <p class="next-step"><strong>Next step:</strong> document one checkpoint’s purpose, required evidence and decision authority. Review the proposed change with the person responsible for that control.</p>
-          <p class="source-ref">Sources: <a href="#source-5" aria-label="Source 5: IMDA, Model AI Governance Framework for Agentic AI (PDF)">[5]</a>; <a href="#source-6" aria-label="Source 6: IMDA, Updated Model AI Governance Framework for Agentic AI, May 2026">[6]</a>.</p>
+          
         </section>
 
         <section id="culture">
@@ -299,7 +299,7 @@
 
           <aside class="ai-help ai-help--inline" id="ai-help-culture" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask AI to group permitted pilot feedback and failure reports into themes linked to the original records. Team members check for missing or contradictory accounts, then record agreed improvements, owners and follow-up dates.</p></aside>
 <p class="next-step"><strong>Next step:</strong> discuss one failed AI-assisted task with the people involved. Choose one improvement to a test, instruction or control, and record who will make it.</p>
-          <p class="source-ref">Sources: <a href="#source-7" aria-label="Source 7: DORA, Generative organisational culture">[7]</a>; <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</p>
+          
         </section>
 
         <section id="technology">
@@ -323,13 +323,13 @@
             <li><strong>Operations and application health:</strong> work with developers to collect metrics, logs and traces, and check important user journeys. Agree service health targets; monitor availability, latency, errors and resource capacity. Test alert routing to a named responder and maintain runbooks with diagnosis, escalation and recovery steps.</li>
           </ul>
           <p>AI tools can draft pipeline definitions, infrastructure changes and runbooks, or summarise operational evidence. Review generated changes and test them in an isolated environment before authorised promotion. Grant agents permissions for their delegated task; agree separately who can deploy, change production infrastructure or respond to incidents.</p>
-          <p class="source-ref">Supporting guidance: <a href="#source-10" aria-label="Source 10: Microsoft Cloud Adoption Framework, Automation">[10]</a>; <a href="#source-11" aria-label="Source 11: Microsoft Cloud Adoption Framework, Security teams, roles, and functions">[11]</a>; <a href="#source-12" aria-label="Source 12: DORA, Monitoring and observability">[12]</a>. The allocation to a Platform / Cloud Engineer is this guide’s proposed mapping of these practices.</p>
+          
           <h3>Keep verification independent of generation</h3>
           <p>Combine automated tests with specialist review according to the task’s risk. An agent’s explanation that its own work is correct is not independent evidence. Review the test cases too: tests generated from a misunderstood requirement may repeat the same error.</p>
           <p>A merge request can collect code-change evidence, but other actions need controls at their own point of execution. Data access, deployment and external communications may happen outside a code review. Enforce permissions where those actions occur.</p>
           <aside class="ai-help ai-help--inline" id="ai-help-technology" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>On an isolated pilot task, an agent can draft code and run permitted tests using the supplied context. Developers and platform engineers inspect its actions, test access boundaries and recovery, and retain the results before proposing a wider scope.</p></aside>
 <p class="next-step"><strong>Next step:</strong> list one agent’s tools, data access and permissions. With the system owner, remove unnecessary access and test recovery.</p>
-          <p class="source-ref">Sources: <a href="#source-9" aria-label="Source 9: OWASP, LLM06:2025 Excessive Agency">[9]</a>; <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</p>
+          
         </section>
 
         <section id="shared-ownership">
@@ -398,13 +398,21 @@
           </aside>
           <p>Allow for setup and learning costs, and set a review date so a pilot does not continue indefinitely. Higher autonomy is an option, not a success measure; a useful advisory workflow may remain advisory.</p>
           <div class="next-step"><p><strong>Next step:</strong> write a short pilot brief covering the task, participants, baseline, boundaries, success criteria and review date. Use the <a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model">DORA capability guidance</a> to identify supporting improvements, and <a href="concept.html">read the Concepts guide</a> for ways to specify and supervise AI-assisted work.</p></div>
-          <p class="source-ref">Supporting evidence: <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</p>
+          
 
           <aside class="ai-help ai-help--inline" id="ai-help-pilot" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can draft a comparison of pilot task records using the agreed baseline and measure definitions. The pilot lead checks totals, scope differences, review effort and defects against the underlying records, then retains the comparison for the authorised adoption decision.</p></aside>
 </section>
 
         <section id="sources">
           <h2>Sources</h2>
+<div class="source-attribution-notes" aria-label="Section attribution and adaptations"><h3>Section attribution and adaptations</h3><ul>
+<li><strong><a href="#why-transformation">Why the way of working needs to change</a>:</strong> Sources: <a href="#source-1" aria-label="Source 1: DORA, State of AI-assisted Software Development 2025">[1]</a>; <a href="#source-2" aria-label="Source 2: McKinsey, The state of AI in 2025">[2]</a>; <a href="#source-3" aria-label="Source 3: METR, July 2025 developer productivity study">[3]</a>; <a href="#source-4" aria-label="Source 4: METR, February 2026 productivity update">[4]</a>.</li>
+<li><strong><a href="#process">Process: connect checks to decisions</a>:</strong> Sources: <a href="#source-5" aria-label="Source 5: IMDA, Model AI Governance Framework for Agentic AI (PDF)">[5]</a>; <a href="#source-6" aria-label="Source 6: IMDA, Updated Model AI Governance Framework for Agentic AI, May 2026">[6]</a>.</li>
+<li><strong><a href="#culture">Culture: make learning and accountability visible</a>:</strong> Sources: <a href="#source-7" aria-label="Source 7: DORA, Generative organisational culture">[7]</a>; <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</li>
+<li><strong><a href="#technology">Technology: provide bounded access and recovery</a>:</strong> Supporting guidance: <a href="#source-10" aria-label="Source 10: Microsoft Cloud Adoption Framework, Automation">[10]</a>; <a href="#source-11" aria-label="Source 11: Microsoft Cloud Adoption Framework, Security teams, roles, and functions">[11]</a>; <a href="#source-12" aria-label="Source 12: DORA, Monitoring and observability">[12]</a>. The allocation to a Platform / Cloud Engineer is this guide’s proposed mapping of these practices.</li>
+<li><strong><a href="#technology">Technology: provide bounded access and recovery</a>:</strong> Sources: <a href="#source-9" aria-label="Source 9: OWASP, LLM06:2025 Excessive Agency">[9]</a>; <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</li>
+<li><strong><a href="#progress-by-evidence">Run a pilot and decide from evidence</a>:</strong> Supporting evidence: <a href="#source-8" aria-label="Source 8: DORA, AI Capabilities Model, September 2025">[8]</a>.</li>
+</ul></div>
           <p>References checked on 6 November 2026.</p>
           <ol class="source-list">
             <li id="source-1"><a href="https://dora.dev/research/2025/dora-report/">DORA, State of AI-assisted Software Development 2025</a></li>

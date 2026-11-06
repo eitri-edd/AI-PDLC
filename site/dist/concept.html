@@ -149,7 +149,7 @@
 
           <aside class="ai-help ai-help--inline" id="ai-help-intent" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask AI to group employee feedback and link proposed findings to the original notes. The product owner compares decision-relevant findings with those notes, checks contradictory or duplicated evidence and records unsupported explanations as open questions. Use those questions to choose the next observation or prototype test.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Write the problem, outcome and constraints for one change. Then use <a href="product-discovery.html#product-thesis">the product thesis guidance</a> to test the case for it, or <a href="#spec-driven-development">define its acceptance criteria</a> when the need is understood.</p>
-          <p class="source-ref">Source: <a href="#source-1" aria-label="Source 1: Intent-Driven Development, intent-driven.dev">[1]</a>.</p>
+          
         </section>
         <section id="spec-driven-development">
           <h2>Define the behaviour (spec-driven development)</h2>
@@ -181,7 +181,7 @@
 
           <aside class="ai-help ai-help--inline" id="ai-help-spec" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can draft success, failure, permission and concurrent-booking scenarios from agreed rules. The product owner compares expected results with those rules; the developer checks that each result can be observed or tested. Resolve invented assumptions and retain accepted criteria with the implementation task.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Write success, failure, concurrent-booking and access-control cases for one booking requirement. Use <a href="ai-pdlc.html#handoff">the requirements handover checklist</a>, then <a href="product-implementation.html#executable-work">translate it into technical design and development tasks</a>.</p>
-          <p class="source-ref">Source: <a href="#source-2" aria-label="Source 2: GitHub Spec Kit, Specification-Driven Development">[2]</a>.</p>
+          
         </section>
         <section id="context-engineering">
           <h2>Supply relevant information (context engineering)</h2>
@@ -223,7 +223,7 @@
 
           <aside class="ai-help ai-help--inline" id="ai-help-context" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask an agent to identify the source for each booking rule in its proposed approach. The developer opens those records, compares their versions and scope with the task, and records conflicts or missing decisions. Resolve consequential gaps with the source owner before relying on the proposal.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Identify the current booking rules and API contract for one task; record missing or conflicting information. Use <a href="eds-team-context.html#matrix">the context-by-stage guide</a> to identify the right source, then <a href="eds-team-context.html#checklist">prepare and check that source</a>.</p>
-          <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: Anthropic, Effective context engineering for AI agents">[3]</a>.</p>
+          
         </section>
         <section id="harness-engineering">
           <h2>Equip the agent (harness engineering)</h2>
@@ -269,7 +269,7 @@
 
           <aside class="ai-help ai-help--inline" id="ai-help-harness" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>With scoped tools and test data, an agent can run booking checks and report failures. The developer repeats the concurrency and cancellation checks described above and compares the tool configuration with the permitted workspace and database. Keep configuration and run evidence with unresolved findings for the acceptance decision.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Check whether a developer can start the application, run its tests and inspect a failure using the documented setup. Follow <a href="eds-developer-harness.html#install">the Eitri installation guide</a> and <a href="eds-team-context.html#checklist">team setup checklist</a> to fill the gaps.</p>
-          <p class="source-ref">Sources: <a href="#source-4" aria-label="Source 4: OpenAI, Harness engineering">[4]</a>; <a href="#source-5" aria-label="Source 5: Walking Labs, What a harness actually is">[5]</a>; <a href="#source-6" aria-label="Source 6: Anthropic, Effective harnesses for long-running agents">[6]</a>.</p>
+          
         </section>
         <section id="loop-engineering">
           <h2>Use feedback (loop engineering)</h2>
@@ -311,7 +311,7 @@
 
           <aside class="ai-help ai-help--inline" id="ai-help-loop" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give an agent the failing booking check, the expected behaviour and an attempt or cost limit. It can propose a correction and rerun the check. The developer compares the diff and test changes with the original criteria; keep the attempt results and escalate when the stop condition is reached.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Choose one failing check and define the expected result, run limit and action when the limit is reached. For recurring findings, use <a href="#compare-skill-versions">the skill-version comparison method</a>. See <a href="eds-developer-harness.html#do-work">how the developer workflow builds, tests and corrects a change</a>.</p>
-          <p class="source-ref">Source: <a href="#source-7" aria-label="Source 7: IBM, Loop engineering">[7]</a>.</p>
+          
         </section>
         <section id="graph-engineering">
           <h2>Coordinate tasks and checks (graph engineering)</h2>
@@ -393,7 +393,7 @@
 
           <aside class="ai-help ai-help--inline" id="ai-help-graph" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Agents can carry out specialist checks using the graph’s dependencies. The developer compares each report’s commit identifier with the candidate and reproduces reported defects before advancing. Keep findings and routing decisions; rerun the build and all required branches after a code change.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Map one development workflow. Mark which agent checks can run in parallel on the same commit, what condition triggers a rework loop and when the graph should pause for a person. Use <a href="eds-developer-harness.html#plan">the story-planning guidance</a> and <a href="eds-developer-harness.html#check">the task review and approval steps</a>.</p>
-          <p class="source-ref">Sources: <a href="#source-8" aria-label="Source 8: PuppyGraph, Graph engineering">[8]</a>; <a href="#source-9" aria-label="Source 9: Anthropic, Building effective agents">[9]</a>.</p>
+          
         </section>
         <section id="software-factory">
           <h2>Connect the delivery workflow (software factories)</h2>
@@ -422,7 +422,7 @@
 
           <aside class="ai-help ai-help--inline" id="ai-help-factory" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Agents can process agreed tasks through implementation, checks and evidence collection. Give them explicit scope and permissions. The team inspects the evidence and follows the configured acceptance and release process, retaining results and recovery information for each change.</p></aside>
 <p class="next-step"><strong>Next step:</strong> Choose a small group of changes and measure where they wait. Use <a href="product-implementation.html#autonomy">the automation and approval guidance</a>, then <a href="eds-path-to-production.html#stages">review the release checks</a>.</p>
-          <p class="source-ref">Source: <a href="#source-10" aria-label="Source 10: Addy Osmani, Software Factories, Light and Dark, also republished by O’Reilly">[10]</a>.</p>
+          
         </section>
         <section id="models">
           <h2>Choose an AI model</h2>
@@ -449,7 +449,7 @@
             <p>A developer tests the four configurations on reservation tasks, including simultaneous booking requests. Each run starts from the same repository revision, requirements, tools and limits in a separate environment. The harnessed conditions receive the same approved contracts, test feedback and guidance; the independent acceptance suite is withheld from every agent.</p>
             <p>The developer records accepted runs, elapsed time, token use, cost, correction effort and any control failures. Fresh booking tasks form the final evaluation set. A configuration is useful only if it meets the agreed criteria on those tasks; one successful fix does not establish a general ranking.</p>
           </aside>
-          <p class="source-ref">Illustrative basis: <a href="#source-27" aria-label="Source 27: Harness, Why AI Coding Agents Lose Context After the PR">[27]</a>; <a href="#source-28" aria-label="Source 28: Naresh Jain, Are Harnesses Worth the Cost?">[28]</a>. The reported experiment is task-specific; this guide’s comparison matrix is a recommended local evaluation design.</p>
+          
           <details class="self-check concept-reference" id="model-reference"><summary>Model examples and research</summary><p>This reference also covers models used inside delivered products. The service-triage example illustrates that separate use; it is not a feature of the booking application.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Model dimensions comparison">
             <table class="reference-table">
               <caption>Four dimensions of model choice</caption>
@@ -499,6 +499,16 @@
         </section>
         <section id="sources">
           <h2>Sources and learning references</h2>
+<div class="source-attribution-notes" aria-label="Section attribution and adaptations"><h3>Section attribution and adaptations</h3><ul>
+<li><strong><a href="#intent-driven-development">Agree the goal (intent-driven development)</a>:</strong> Source: <a href="#source-1" aria-label="Source 1: Intent-Driven Development, intent-driven.dev">[1]</a>.</li>
+<li><strong><a href="#spec-driven-development">Define the behaviour (spec-driven development)</a>:</strong> Source: <a href="#source-2" aria-label="Source 2: GitHub Spec Kit, Specification-Driven Development">[2]</a>.</li>
+<li><strong><a href="#context-engineering">Supply relevant information (context engineering)</a>:</strong> Source: <a href="#source-3" aria-label="Source 3: Anthropic, Effective context engineering for AI agents">[3]</a>.</li>
+<li><strong><a href="#harness-engineering">Equip the agent (harness engineering)</a>:</strong> Sources: <a href="#source-4" aria-label="Source 4: OpenAI, Harness engineering">[4]</a>; <a href="#source-5" aria-label="Source 5: Walking Labs, What a harness actually is">[5]</a>; <a href="#source-6" aria-label="Source 6: Anthropic, Effective harnesses for long-running agents">[6]</a>.</li>
+<li><strong><a href="#loop-engineering">Use feedback (loop engineering)</a>:</strong> Source: <a href="#source-7" aria-label="Source 7: IBM, Loop engineering">[7]</a>.</li>
+<li><strong><a href="#graph-engineering">Coordinate tasks and checks (graph engineering)</a>:</strong> Sources: <a href="#source-8" aria-label="Source 8: PuppyGraph, Graph engineering">[8]</a>; <a href="#source-9" aria-label="Source 9: Anthropic, Building effective agents">[9]</a>.</li>
+<li><strong><a href="#software-factory">Connect the delivery workflow (software factories)</a>:</strong> Source: <a href="#source-10" aria-label="Source 10: Addy Osmani, Software Factories, Light and Dark, also republished by O’Reilly">[10]</a>.</li>
+<li><strong><a href="#models">Choose an AI model</a>:</strong> Illustrative basis: <a href="#source-27" aria-label="Source 27: Harness, Why AI Coding Agents Lose Context After the PR">[27]</a>; <a href="#source-28" aria-label="Source 28: Naresh Jain, Are Harnesses Worth the Cost?">[28]</a>. The reported experiment is task-specific; this guide’s comparison matrix is a recommended local evaluation design.</li>
+</ul></div>
           <p>References checked on 6 November 2026. See the sources below for research and provider documentation.</p>
           <h3 id="learning-references">Learning references</h3>
           <p>Use these courses, guides and playbooks for detailed instruction and practice. Check the implementation courses for prerequisites and tool requirements.</p>
