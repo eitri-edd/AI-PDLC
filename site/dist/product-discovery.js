@@ -32,7 +32,7 @@ window.addEventListener('hashchange', revealDiscoveryTarget);
 // Keep optional reference and example content readable in printed copies.
 let discoveryPrintDetails = [];
 window.addEventListener('beforeprint', () => {
-  discoveryPrintDetails = [...document.querySelectorAll('.worked-example, .deep-dive')]
+  discoveryPrintDetails = [...document.querySelectorAll('.worked-example, .deep-dive, .case-extra-library, .case-supplement')]
     .filter((detail) => !detail.open);
   discoveryPrintDetails.forEach((detail) => { detail.open = true; });
 });
