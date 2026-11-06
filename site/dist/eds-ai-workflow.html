@@ -118,7 +118,7 @@
         </svg>
 <section id="pages">
           <h2>Find the page you need</h2>
-          <div class="table-scroll"><table class="wide-table"><caption>Pages in the EDS AI Workflow section</caption><thead><tr><th scope="col">Page</th><th scope="col">Roles involved</th><th scope="col">What it explains</th></tr></thead><tbody>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Pages in the EDS AI Workflow section; scroll horizontally if needed"><table class="wide-table"><caption>Pages in the EDS AI Workflow section</caption><thead><tr><th scope="col">Page</th><th scope="col">Roles involved</th><th scope="col">What it explains</th></tr></thead><tbody>
             <tr><th scope="row"><a href="eds-po-ba-harness.html">PO/BA harness</a></th><td>Product owner (PO), business analyst (BA)</td><td>How a business need becomes a product requirements document (PRD), through one of three paths.</td></tr>
             <tr><th scope="row"><a href="eds-developer-harness.html">Developer harness</a></th><td>Architect, Tech Lead, developer</td><td>How Eitri turns one user story into a checked design, small issues, working code and evidence.</td></tr>
             <tr><th scope="row"><a href="eds-path-to-production.html">Path to production</a></th><td>Tech Lead, reviewer, platform team</td><td>Which checks run at commit, merge and pre-production, and what blocks a release.</td></tr>
@@ -198,12 +198,12 @@
         <section id="ownership">
           <h2>Know who owns each artefact</h2>
           <p>The PRD and the TRD are different agreements with different owners. The PRD states what the product needs to do and why, for the whole feature. The TRD is written for one user story at a time and adds how that story fits the architecture, the codebase and the applicable policies.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>PRD and user story level TRD compared</caption><thead><tr><th scope="col">Artefact</th><th scope="col">Accountable role</th><th scope="col">Produced in</th><th scope="col">Contains</th></tr></thead><tbody>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="PRD and user story level TRD compared; scroll horizontally if needed"><table class="wide-table"><caption>PRD and user story level TRD compared</caption><thead><tr><th scope="col">Artefact</th><th scope="col">Accountable role</th><th scope="col">Produced in</th><th scope="col">Contains</th></tr></thead><tbody>
             <tr><th scope="row">PRD</th><td>PO / BA</td><td>One of the three <a href="eds-po-ba-harness.html">PO/BA paths</a></td><td>Business-level user stories, acceptance criteria, feature scope and, where applicable, an HTML prototype</td></tr>
             <tr><th scope="row">User story level TRD</th><td>Architect / Tech Lead</td><td>The <a href="eds-developer-harness.html#plan">planning steps</a> of the developer harness</td><td>Technical constraints, architecture decisions, alignment with the domain model, codebase context, testing decisions and exclusions</td></tr>
           </tbody></table></div>
           <p>A technical PO or BA can also hand over an early-draft TRD. In that case the developer harness refines the draft instead of starting again.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Role boundaries and handoffs in the EDS AI Workflow</caption><thead><tr><th scope="col">Role</th><th scope="col">Starts with</th><th scope="col">Owns</th><th scope="col">Hands off</th></tr></thead><tbody>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Role boundaries and handoffs in the EDS AI Workflow; scroll horizontally if needed"><table class="wide-table"><caption>Role boundaries and handoffs in the EDS AI Workflow</caption><thead><tr><th scope="col">Role</th><th scope="col">Starts with</th><th scope="col">Owns</th><th scope="col">Hands off</th></tr></thead><tbody>
             <tr><th scope="row">PO / BA</th><td>A business problem or opportunity</td><td>Requirements path, user stories, acceptance criteria, optional prototype</td><td>PRD and specification files</td></tr>
             <tr><th scope="row">Project manager (PM) / BA</th><td>The handed-off PRD</td><td>The story dependency graph, release split and planning report</td><td>A dependency graph that developers can plan against</td></tr>
             <tr><th scope="row">Architect / Tech Lead</th><td>The dependency graph</td><td>The delivery plan for the team size, user story TRDs and architecture tests</td><td>Stories in delivery order with standards attached</td></tr>
@@ -274,7 +274,7 @@
             <p class="diagram-key">Solid arrows trace an observed failure to one of the five harness layers inside the shaded container, then to strengthening that layer and recording the fix.</p>
           </figure>
           <p>Start from the symptom and ask which of the five layers let it through. In the figure, verification feedback is the weak layer, so the team improves its checks rather than retrying the same prompt. Recording the failure helps the next session avoid it. The table pairs each layer with its typical symptom and a response.</p>
-          <div class="table-scroll"><table class="wide-table"><caption>Harness layers, typical symptoms and responses</caption><thead><tr><th scope="col">Layer</th><th scope="col">Typical symptom</th><th scope="col">Response</th></tr></thead><tbody>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Harness layers, typical symptoms and responses; scroll horizontally if needed"><table class="wide-table"><caption>Harness layers, typical symptoms and responses</caption><thead><tr><th scope="col">Layer</th><th scope="col">Typical symptom</th><th scope="col">Response</th></tr></thead><tbody>
             <tr><th scope="row">Task specification</th><td>Plausible implementation, wrong behaviour</td><td>Tighten the PRD or TRD, acceptance criteria, exclusions and issue scope, then verify the issues again.</td></tr>
             <tr><th scope="row">Context provision</th><td>Breaks a domain, security, architecture or interface rule the agent could not see</td><td>Put the rule in the repository and route it through the right <a href="eds-team-context.html">context source</a>.</td></tr>
             <tr><th scope="row">Execution environment</th><td>Time lost on dependencies, connectivity or setup</td><td>Standardise initialisation and keep a reproducible sandbox.</td></tr>

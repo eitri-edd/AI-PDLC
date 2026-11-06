@@ -322,7 +322,9 @@ if (skillForm) {
       if (!row.hidden) count++;
     }
     for (const group of groups) {
-      group.hidden = !rows.some((row) => row.closest('section') === group && !row.hidden);
+      // Keep the filters available when their own section has no matching rows.
+      group.hidden = !group.contains(skillForm) &&
+        !rows.some((row) => row.closest('section') === group && !row.hidden);
       group.querySelectorAll('table').forEach((table) => {
         const skills = [...table.querySelectorAll('[data-skill]')];
         const wrapper = table.closest('.table-scroll');
