@@ -8,7 +8,7 @@ This document proposes house rules for the site. It does not establish EDS polic
 
 ## Scope and authority
 
-In this guide, AI-SDLC means the software development lifecycle supported by AI tools and agents. It covers discovery, implementation, release and learning from use. The resulting product may or may not contain AI. This is the guide’s house definition; distinguish it from a named methodology when discussing an external source.
+In this guide, AI-SDLC means the software development lifecycle supported by AI tools and agents. It covers Project Discovery, implementation, release and learning from use. The resulting product may or may not contain AI. This is the guide’s house definition; distinguish it from a named methodology when discussing an external source.
 
 This file is the authoritative writing standard for the site. Other authoring documents should link here rather than duplicate its rules. If an existing summary differs, follow this file and correct the summary when maintaining that document.
 
@@ -99,12 +99,15 @@ Use one short, labelled example when readers could still confuse two ideas or mi
 
 Use British English in authored prose: “organisation”, “prioritise”, “behaviour” and “programme”. Preserve official product names, code identifiers and quoted titles.
 
+Use established software development lifecycle (SDLC) terminology for engineering concepts and explain specialist terms at first use. Keep the term precise while making its meaning concrete: “Regression testing reruns related workflows to detect unintended effects of a change.” Avoid replacing a useful engineering term with a vague word such as “checks”, or adding jargon that does not help the reader perform the task.
+
 | Term | House usage |
 | --- | --- |
 | AI-Software Development Lifecycle | The displayed site title. Use it on the home page and in formal references; explain its scope using the house definition above. |
 | AI-SDLC | Introduce after the full title on a page that uses the abbreviation. Prefer “the lifecycle” in nearby prose. |
 | AI-DLC | When referring to AWS’s AI-Driven Development Lifecycle methodology, use its name and abbreviation with a source. Do not treat AI-DLC as an interchangeable spelling of this guide’s AI-SDLC. |
-| Product discovery | Research needs, compare opportunities and test concepts to inform an investment decision. Ideation means generating options within discovery. Discovery can continue as implementation and use reveal new questions. |
+| Project Discovery | Research needs, compare opportunities and test concepts to inform an investment decision. Ideation means generating options within Project Discovery. Project Discovery can continue as implementation and use reveal new questions. |
+| Pilot project | Use “pilot project” for the project trialling the application. State its scope separately; avoid “one-project pilot”. |
 | AI-assisted development | Development work supported by AI tools. Do not assume the resulting product contains AI. |
 | AI product | A product whose behaviour includes an AI capability. Explain that capability where relevant. |
 | AI agent | Software that uses an AI model to choose or adapt actions and tool use towards a goal, within agreed permissions and limits. A workflow can combine agents with predefined code paths and automated checks. |
@@ -128,9 +131,28 @@ Use “stage” for a named part of the lifecycle, “activity” for work withi
 
 Keep a shared glossary as the site grows. Use one term for one concept and distinguish established terms, working definitions adopted by this guide and product-specific vocabulary. For an emerging or ambiguous term, explain the mechanism in plain language, state how this guide uses the term and cite the source where relevant. Apply this rule to labels such as “harness engineering”, “loop engineering”, “graph engineering” and “software factory”; do not assume they have the same meaning across publications.
 
+### Use descriptive names for references
+
+Name the behaviour, finding, decision or task the reader needs to follow. Do not invent short pointer codes for requirements, acceptance checks, experiments, evidence or tasks in published explanations and learning journeys. A reader should understand a reference without memorising a key or consulting a separate identifier table.
+
+| Avoid in reader-facing content | Use a descriptive label |
+| --- | --- |
+| R-2/AC-3 | Yearly declaration requirement and the check that retries preserve existing responses |
+| X-1 → X-2 | First usability test → revised usability test |
+| AM-3 | Build the annual declaration workflow |
+| T-CAMPAIGN-01 | Check that a yearly workflow retry creates no duplicate task |
+
+Apply this rule to prose, headings, diagram nodes, captions, accessible descriptions, table rows, labels and link text. Use the same descriptive name across Project Discovery, implementation and the linked evidence. State the relationship in words: “The yearly declaration requirement is checked by retrying the worker and inspecting the saved response.” Avoid chains of unexplained codes separated by slashes or arrows.
+
+Keep traceability through descriptive links, stable HTML anchors and technical metadata. Preserve existing anchors when changing visible labels. A real issue or test identifier can appear beside its descriptive name in a technical reference or linked record when readers need it to locate that record; it is not the primary label in a learning journey. Do not create a new code system merely to make an example look formal.
+
+Established terms such as product requirements document (PRD), technical requirements document (TRD), six questions (6W) and four checks (4C) can be used after their full names and purpose are explained. These abbreviations name a document or taught method; they do not replace the meaning of an individual pointer. Ordinary step numbers, figure numbers and meaningful version/date information remain useful for sequence and navigation.
+
 ## Repository and maintenance conventions
 
-Keep the repository name `AI-PDLC`. Use “Product discovery” as the lifecycle page title and `product-discovery.html` as its path. Keep other URL paths unchanged unless explicitly requested.
+Use “Project Discovery” in full whenever referring to this guide’s stage or page. Do not shorten the stage name to “Discovery”. Apply the name consistently in prose, headings, navigation, learning examples, captions, diagrams and accessible descriptions. Preserve published source titles and established method names when citing them.
+
+Keep the repository name `AI-PDLC`. Use “Project Discovery” as the lifecycle page title and `product-discovery.html` as its path. Keep other URL paths unchanged unless explicitly requested.
 
 Maintain writing rules here and presentation rules in [design.md](design.md). Keep summaries in other authoring documents brief and link to the relevant standard. Check summaries for conflicting terminology, page structures or length guidance when maintaining them.
 
@@ -152,6 +174,18 @@ Check that a source supports the particular claim and applies to the activity be
 
 Never invent EDS committees, approval gates, job titles, mandatory templates or policy references. Mark unresolved details as authoring placeholders and resolve them before publication.
 
+## Separate topic explanations from learning examples
+
+Use the handbook's existing blue diagram theme to explain a topic, mechanism, method or general process. Its labels show the actions, roles, decisions and relationships the reader needs to understand. The explanation should make sense without knowing the fictional application used elsewhere on the page.
+
+Place fictional applications, worked journeys, simulated results and example-specific evidence in clearly labelled learning-example sections. Use the separate **Matte Stone** treatment defined in [design.md](design.md#topic-diagrams-and-fictional-learning-examples) for all related text panels, tables and diagrams. Keep a continuous example across the relevant chapters and link its descriptive records; give a topic explanation and its application their own visual boundaries.
+
+Give every learning example a short, descriptive title in sentence case: “Learning example · Problem background” or “Learning example · The annual-task retry requirement”. Name the topic or situation the example illustrates. Apply this format to worked journeys, compact examples in tables and diagram labels. Avoid a bare “Learning example” label or a title that only names the fictional application or tells readers to continue reading.
+
+A visual containing asset-specific actions, sample participants, invented results or a fictional requirement is an example diagram even when its boxes resemble the general process. Split a mixed visual into a topic explanation and a separate applied example. Do not rely on colour alone: include a visible “Learning example” label and explain which premise was supplied and which findings or results are illustrative.
+
+Keep the AI-SDLC overview focused on the end-to-end lifecycle, responsibilities, evidence and feedback. Put the continuous application journey in Project Discovery and Product implementation. Captions, accessible descriptions and surrounding prose follow the same topic/example distinction as the visual.
+
 ## Page structures
 
 Choose a structure that fits the reader’s task. Omit sections that do not help; do not fill a template with generic text.
@@ -163,7 +197,7 @@ Choose the main purpose before drafting. Explanation helps readers understand; a
 1. **Title:** Name the concept in familiar terms.
 2. **Opening:** Explain what it means and where it applies in two or three sentences.
 3. **Problem:** Describe a concrete situation the reader recognises.
-4. **Explanation:** Show how the practice works, using a small example.
+4. **Explanation:** Explain the general mechanism, using a topic diagram where useful. Put a small worked application in a separate labelled learning-example panel.
 5. **Limits:** Explain prerequisites, costs or cases where it may not help.
 6. **Next step:** Link to a relevant procedure or template.
 
@@ -204,9 +238,13 @@ Use one page title and sentence case for headings. Prefer specific headings such
 
 Use prose for explanation, numbered lists for sequences, bullets for parallel items and tables for comparisons. Avoid deeply nested lists and wide tables filled with paragraphs.
 
+When an example contains three or more parallel items, types, options or checks, put them in a bullet list rather than running them together in a sentence. Introduce the list with a complete thought, keep the items grammatically consistent and explain the result or next action afterwards where needed. Apply this rule inside learning panels and table cells as well as in the main text. Use numbered lists when order matters, and keep comparison tables when readers need to compare the same attributes across options. Keep connected explanation in prose; do not turn every sentence into a bullet.
+
+Write learning examples in familiar language that readers could use in conversation with a colleague. Spell out relationships such as “who holds the asset and whether it works” instead of compressed wording such as “custody/status”. Keep precise terms where needed, explain them at first use and use the same names throughout a continuous example.
+
 Make link text meaningful on its own: “Read the evaluation guide”, not “click here”. Include the file type for downloads. Use callouts only for an exception, a consequential requirement or a useful example; keep essential instructions in the main flow.
 
-Diagrams need a caption explaining their purpose and a text equivalent for the relationships they convey. Do not make the image the only place an instruction appears.
+Diagrams need a caption explaining their purpose and a text equivalent for the relationships they convey. Classify each as a topic explanation or learning example before styling it. Use descriptive action and decision labels; do not make the image the only place an instruction appears.
 
 ## Editing examples
 
@@ -266,6 +304,9 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 - [ ] “Check”, “review”, “validate” and “ensure” are followed by enough detail for the reader to perform the work.
 - [ ] Difficult distinctions have a short example where needed; observations, interpretations and untested explanations remain separate.
 - [ ] Terms are consistent and abbreviations are explained.
+- [ ] References use descriptive names rather than invented pointer codes; traceability is retained through links and technical records.
+- [ ] Topic diagrams explain the general content in the blue theme; fictional application diagrams and related panels use the labelled Matte Stone theme.
+- [ ] The overview explains the lifecycle, while the continuous learning example stays in the product chapters; supplied premises and illustrative findings remain distinguishable.
 - [ ] Ambiguous terms have a clear scope; house definitions and named external methodologies remain distinguishable.
 - [ ] Stage guidance explains AI’s contribution, the checks on its output and the responsibilities or decisions retained by people.
 - [ ] Generic disclaimers are consolidated; material limitations, control boundaries, attribution and licence credits remain where needed.
@@ -273,6 +314,7 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 - [ ] Claims have appropriate evidence; recommendations and examples are labelled clearly.
 - [ ] Requirements cite a confirmed authority and state where they apply.
 - [ ] Examples contain no invented organisational facts.
+- [ ] Learning examples sound natural, and groups of three or more parallel items use bullets; sequences and comparisons retain the structure that helps readers follow them.
 - [ ] Headings and link text make sense when scanned independently.
 - [ ] The page includes a useful next step and current ownership metadata.
 - [ ] A representative reader can explain the concept in their own words, identify the next action and distinguish recommendations from requirements.

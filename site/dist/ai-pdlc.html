@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Understand the AI-Software Development Lifecycle: product discovery, the handoff, product implementation and feedback from use.">
+  <meta name="description" content="Understand the AI-Software Development Lifecycle: Project Discovery, the handoff, product implementation and feedback from use.">
   <title>AI-SDLC · Development guide</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
@@ -28,7 +28,7 @@
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
           <a href="ai-pdlc.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
           <div class="nav-children">
-            <a href="product-discovery.html">Product discovery</a>
+            <a href="product-discovery.html">Project Discovery</a>
             <a href="product-implementation.html">Product implementation</a>
           </div>
           <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
@@ -49,16 +49,16 @@
         <header class="article-header">
           <p class="eyebrow">Development guide</p>
           <h1>EDS AI-SDLC</h1>
-          <p class="lead">The EDS AI-Software Development Lifecycle (AI-SDLC) connects product discovery and product implementation through shared intent, evidence and learning. Discovery investigates the problem, compares possible responses and informs the next investment. Implementation turns agreed intent into working software, checks it and observes its effects in use.</p>
-          <p>Product, Design and Engineering collaborate throughout. Delivery findings can change the proposed solution or reopen the problem; bounded fixes can start from existing requirements. This overview explains those connections. The chapters provide the detailed practices, including how AI can help.</p>
-        </header>
+          <p class="lead">The EDS AI-Software Development Lifecycle (AI-SDLC) connects Project Discovery, implementation and learning from use. Project Discovery investigates needs and tests possible responses. A delivery agreement defines what to build next. Implementation builds and checks that scope before release; evidence from use informs the next decision.</p>
+          <p>Product, Design and Engineering collaborate throughout. Delivery findings can change the proposed solution or reopen the problem; bounded fixes can start from existing requirements. This overview explains the end-to-end flow, responsibilities, evidence and decisions. The Project Discovery and Product implementation chapters provide the practical techniques and worked journey.</p>
+                </header>
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
-          <p id="page-map-note" class="page-map-note">See how product discovery connects to software delivery, what the team hands over, and how feedback informs the next change.</p>
+          <p id="page-map-note" class="page-map-note">See how Project Discovery connects to software delivery, what the team hands over, and how feedback informs the next change.</p>
 
           <ol class="page-map-nodes" role="list">
-            <li class="page-map-node"><strong>Product discovery</strong><div class="page-map-links"><a href="#two-loops">Discovery and delivery</a><a href="#discovery-loop">Understand needs and test ideas</a></div></li>
+            <li class="page-map-node"><strong>Project Discovery</strong><div class="page-map-links"><a href="#two-loops">Project Discovery and delivery</a><a href="#discovery-loop">Understand needs and test ideas</a></div></li>
             <li class="page-map-node"><strong>Delivery agreement</strong><div class="page-map-links"><a href="#handoff">Scope, evidence and success measures</a></div></li>
             <li class="page-map-node"><strong>Software delivery</strong><div class="page-map-links"><a href="#implementation-loop">Develop, test and release</a></div></li>
             <li class="page-map-node"><strong>Feedback and improvement</strong><div class="page-map-links"><a href="#feedback">User feedback and defect reports</a><a href="#ai-support">AI assistance and quality checks</a></div></li>
@@ -74,7 +74,7 @@
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page"><p>On this page</p><a href="#two-loops">Two connected loops</a>
-<a href="#discovery-loop">Product discovery loop</a>
+<a href="#discovery-loop">Project Discovery loop</a>
 <a href="#handoff">Handoff</a>
 <a href="#implementation-loop">Product implementation loop</a>
 <a href="#feedback">Feedback from use</a>
@@ -92,16 +92,17 @@
 
         <section id="two-loops">
           <h2>One lifecycle, two connected learning loops</h2>
-          <p>Discovery asks whether the problem is worth solving and which response deserves the next investment. Implementation asks whether the change meets the agreed intent and what happens when people use it. Both loops create evidence that can change the next decision.</p>
+          <p>Project Discovery asks whether the problem is worth solving and which response deserves the next investment. Implementation asks whether the change meets the agreed intent and what happens when people use it. Both loops create evidence that can change the next decision. Read the flow from Project Discovery to the delivery agreement, implementation, release and learning; use the linked chapters for detailed methods and the continuous learning journey.</p>
           <p>A shared readiness agreement connects the loops through a product requirements document (PRD), supporting evidence, technical findings, user interface (UI) artefacts where relevant and current organisational context. Feedback from delivery and use keeps the agreement open to revision.</p>
+
           <figure class="concept-figure" id="fig-loops">
-  <figcaption id="fig-loops-title-caption">Figure 1. Discovery informs investment; the shared agreement guides implementation; evidence from delivery and use updates the next decision.</figcaption>
-  <details class="figure-reading"><summary>Read as text: Inner loops, handoff and cross-loop feedback</summary><ol><li><strong>Product discovery loop:</strong> Frame combines problem research, opportunity selection, value and alternatives (steps 1–2). Test chooses and runs experiments to examine value, usability, feasibility and viability (steps 3–4). Decide evaluates evidence after each test (step 5); only a justified delivery commitment advances to Prepare delivery (step 6). Inconclusive evidence returns to step 3; improve returns through steps 3–4, redesign to step 2 and pivot to step 1. Defer records an owner and reopening trigger; stop retains learning.</li><li><strong>Handoff and context:</strong> current organisational context informs both loops. When evidence supports commitment, the PRD, validation evidence, technical findings and relevant UI artefacts combine with organisational context (architecture, domain, security and policy constraints) to enter implementation.</li><li><strong>Product implementation loop (inner loops):</strong> moves through <em>1. Plan &amp; 2. Slice</em> (TRD and verifiable tasks), <em>3. Implement</em>, <em>4. Verify</em>, and <em>5. Release and observe &amp; 6. Learn</em>. Failed verification loops back to <em>Implement</em> for rework; delivery learning loops from <em>Learn</em> back to <em>Plan &amp; Slice</em> for the next increment.</li><li><strong>Cross-loop feedback:</strong> when production observation or user feedback in <em>Learn</em> challenges product value, intended behaviour or feasibility, feedback returns across loops to <em>Product discovery</em>.</li></ol></details>
+  <figcaption id="fig-loops-title-caption">Figure 1. Project Discovery informs investment; the shared agreement guides implementation; evidence from delivery and use updates the next decision.</figcaption>
+  <details class="figure-reading"><summary>Read as text: Inner loops, handoff and cross-loop feedback</summary><ol><li><strong>Project Discovery loop:</strong> Frame combines problem research, opportunity selection, value and alternatives (steps 1–2). Test chooses and runs experiments to examine value, usability, feasibility and viability (steps 3–4). Decide evaluates evidence after each test (step 5); only a justified delivery commitment advances to Prepare delivery (step 6). Inconclusive evidence returns to step 3; improve returns through steps 3–4, redesign to step 2 and pivot to step 1. Defer records an owner and reopening trigger; stop retains learning.</li><li><strong>Handoff and context:</strong> current organisational context informs both loops. When evidence supports commitment, the PRD, validation evidence, technical findings and relevant UI artefacts combine with organisational context (architecture, domain, security and policy constraints) to enter implementation.</li><li><strong>Product implementation loop (inner loops):</strong> moves through <em>1. Plan &amp; 2. Slice</em> (TRD and verifiable tasks), <em>3. Implement</em>, <em>4. Verify</em>, and <em>5. Release and observe &amp; 6. Learn</em>. Failed verification loops back to <em>Implement</em> for rework; delivery learning loops from <em>Learn</em> back to <em>Plan &amp; Slice</em> for the next increment.</li><li><strong>Cross-loop feedback:</strong> when production observation or user feedback in <em>Learn</em> challenges product value, intended behaviour or feasibility, feedback returns across loops to <em>Project Discovery</em>.</li></ol></details>
   <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
-    <div class="figure-scroll" tabindex="0" role="region" aria-label="Two connected loops with inner cycles and handoff; scroll horizontally if needed"><svg viewBox="0 0 920 545" role="img" aria-labelledby="fig-loops-title" aria-describedby="fig-loops-title-desc"><title id="fig-loops-title">Product discovery loop and product implementation loop joined by handoff</title><desc id="fig-loops-title-desc">Two connected loops. Product discovery moves through Frame (steps 1 and 2), Test (steps 3 and 4), Decide (step 5), then Prepare delivery (step 6) after a justified commitment. Decide can return to framing or testing, stop or defer. Only a justified commitment advances to Prepare delivery; its handoff transfers scope, evidence and technical findings into implementation. Shared organisational context informs discovery and implementation. Implementation plans and slices, implements, verifies, releases and learns. Failed verification returns to implementation. Learning improves delivery or reopens discovery when value, behaviour or feasibility assumptions change.</desc>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Two connected loops with inner cycles and handoff; scroll horizontally if needed"><svg viewBox="0 0 920 545" role="img" aria-labelledby="fig-loops-title" aria-describedby="fig-loops-title-desc"><title id="fig-loops-title">Project Discovery loop and product implementation loop joined by handoff</title><desc id="fig-loops-title-desc">Two connected loops. Project Discovery moves through Frame (steps 1 and 2), Test (steps 3 and 4), Decide (step 5), then Prepare delivery (step 6) after a justified commitment. Decide can return to framing or testing, stop or defer. Only a justified commitment advances to Prepare delivery; its handoff transfers scope, evidence and technical findings into implementation. Shared organisational context informs Project Discovery and implementation. Implementation plans and slices, implements, verifies, releases and learns. Failed verification returns to implementation. Learning improves delivery or reopens Project Discovery when value, behaviour or feasibility assumptions change.</desc>
       <!-- Product discovery stages and feedback -->
       <rect class="d-group" x="15" y="20" width="290" height="455" rx="10"/>
-      <text class="d-title" x="160" y="46" text-anchor="middle">Product discovery loop</text>
+      <text class="d-title" x="160" y="46" text-anchor="middle">Project Discovery loop</text>
       <text class="d-sub" x="160" y="66" text-anchor="middle">Value · Usability · Feasibility · Viability</text>
       <rect class="d-node" x="70" y="84" width="210" height="56" rx="8"/>
       <text class="d-title" x="175" y="107" text-anchor="middle">Frame</text><text class="d-sub" x="175" y="129" text-anchor="middle">1–2: Problem · Value · Options</text>
@@ -174,12 +175,12 @@
 
       <!-- Cross-Loop Value / Intent Feedback -->
       <path class="d-line d-dash" d="M737.5 448V516H160V480" marker-end="url(#arrow)"/>
-      <text class="d-label" x="442.5" y="506" text-anchor="middle">Feedback: value, behaviour or feasibility questions reopen discovery</text>
+      <text class="d-label" x="442.5" y="506" text-anchor="middle">Feedback: value, behaviour or feasibility questions reopen Project Discovery</text>
     </svg></div>
     <p class="diagram-key">Each enclosing container runs its own inner feedback loops. Solid arrows show forward progression and handoff; dashed arrows show inner rework/learning cycles and cross-loop feedback.</p>
   </details>
 </figure>
-          <div class="table-scroll"><table class="wide-table"><caption>The two loops compared</caption><thead><tr><th scope="col">Aspect</th><th scope="col">Product discovery</th><th scope="col">Product implementation</th></tr></thead><tbody>
+          <div class="table-scroll"><table class="wide-table"><caption>The two loops compared</caption><thead><tr><th scope="col">Aspect</th><th scope="col">Project Discovery</th><th scope="col">Product implementation</th></tr></thead><tbody>
             <tr><th scope="row">Question it answers</th><td>Are we making the right product?</td><td>Are we making the product right?</td></tr>
             <tr><th scope="row">Starts from</th><td>A problem, user need, strategic priority or new capability</td><td>Agreed behaviour and acceptance criteria, supporting evidence and organisational context; a bounded fix may use existing requirements and an issue record</td></tr>
             <tr><th scope="row">Loop</th><td>Frame (steps 1–2), Test (3–4), Decide (5), Prepare delivery (6)</td><td>Plan, slice, implement, verify, release and observe, learn</td></tr>
@@ -188,59 +189,34 @@
             <tr><th scope="row">What it improves</th><td>The product intent</td><td>The product and the way the team builds it</td></tr>
           </tbody></table></div>
           <p>Explore each loop below, then follow its detailed guidance.</p>
-          <p>The MINDEF and DSTA Defence Product Playbook’s ProductOps flywheel connects research, repeated design and testing, and concurrent DevSecOps work. This guide applies that iterative principle through its discovery and implementation loops.</p>
+          <p>The MINDEF and DSTA Defence Product Playbook’s ProductOps flywheel connects research, repeated design and testing, and concurrent DevSecOps work. This guide applies that iterative principle through its Project Discovery and implementation loops.</p>
           <p class="source-ref">Source: <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/tools">Tools to use</a>.</p>
         </section>
 <span class="anchor-alias" id="ideation-loop" aria-hidden="true"></span>
 <section id="discovery-loop">
-  <h2>Product discovery: decide what is worth building</h2>
-  <p>Use discovery when the problem, expected value, proposed experience or technical feasibility is uncertain. Product, Design and Engineering use <strong>Frame → Test → Decide</strong> to investigate needs, compare responses and test assumptions. Start with the question you need to answer and check whether existing evidence still applies.</p>
+  <h2>Project Discovery: decide what is worth building</h2>
+  <p>Use Project Discovery when the problem, expected value, proposed experience or technical feasibility is uncertain. Product, Design and Engineering use <strong>Frame → Test → Decide</strong> to investigate needs, compare responses and test assumptions. Start with the question you need to answer and check whether existing evidence still applies.</p>
   <p>The authorised decision owner records the findings, their limitations and what to invest in next. The team may continue testing, revise the approach, defer or stop, depending on what it learns. When the evidence justifies building a limited scope, <a href="product-discovery.html#handover">prepare the next delivery slice</a> with testable requirements, linked findings, measures and owners for remaining questions.</p>
-  <p>Draft the PRD when the team needs to describe the proposed behaviour in detail. It is not required for every discovery test.</p>
-  <p><a href="product-discovery.html">Explore the six practical steps in Product discovery</a>.</p>
+  <p>Draft the PRD when the team needs to describe the proposed behaviour in detail. It is not required for every Project Discovery test.</p>
+
+  <p><a href="product-discovery.html">Explore the six practical steps in Project Discovery</a>.</p>
 </section>
 <section id="handoff">
-          <h2>Agree the next delivery slice</h2>
-          <p>Before implementation begins, agree what the next delivery slice should achieve and what it includes. Review the supporting evidence, constraints and unresolved questions, then agree how the team will measure results and who will review them. Both chapters use the checklist below. Link the same source records from each chapter and name owners for unresolved questions.</p>
-          <p>The agreement supports the next investment. “Validated” means supported under the recorded test conditions, not proven for every user or production setting. Production release requires separate evidence and the applicable release decision.</p>
-          <p>For a product without a user interface, substitute interface contracts and representative interactions for screens. Keep the evidence and acceptance criteria proportionate to the change.</p>
-          <h3>Assemble the handoff package</h3>
-          <ul>
-            <li><strong>Product context and outcomes:</strong> the target users, problem statement, intended user outcome, business value and strategic fit. Check the problem statement for clarity, consequence, cause and confirmation, the 4C described in <a href="product-discovery.html#product-thesis">product discovery</a>.</li>
-            <li><strong>Prioritised user stories:</strong> the user, required behaviour and intended value for the scope to be built.</li>
-            <li><strong>Testable acceptance criteria:</strong> positive, negative, edge, permission and failure scenarios that can become tests or evaluations.</li>
-            <li><strong>UI artefacts, where relevant:</strong> representative HTML screens and flows reviewed with Product, Design and Engineering, with a <code>design.md</code> file that records interaction rules, loading, empty, error and permission states, responsive behaviour, accessibility and any intentional deviations.</li>
-            <li><strong>Constraints and dependencies:</strong> business rules, non-functional requirements, architecture and data dependencies, and security, privacy, AI and compliance guardrails.</li>
-            <li><strong>Technical findings:</strong> architecture and reuse options, data and integration checks, spike results, confirmed dependencies, quality targets, operating constraints and build/run cost ranges, with test conditions and remaining limitations.</li>
-            <li><strong>Product measurement plan:</strong> the product’s main measure of user value (its North Star), where established, and success measures for this scope. Include definitions, baselines, targets, guardrails, data sources, collection tasks, owners and review decisions. Use the <a href="product-discovery.html#measurement-plan">discovery measurement checklist</a> to make these ready for implementation.</li>
-            <li><strong>Evidence and decision record:</strong> tested assumptions, methods, results, limitations, source links and the authorised commitment decision.</li>
-            <li><strong>Remaining uncertainty and design freedom:</strong> distinguish unresolved risks from deliberate implementation choices. Record each unknown’s impact, owner, next check, time or cost bound, and trigger to reconsider scope or stop. Preserve explicit exclusions and legitimate design choices.</li>
-          </ul>
-          <p>Bring current organisational context into the readiness review: architecture, domain, security, data and operational constraints. Review this context alongside the PRD and UI artefacts before implementation begins.</p><h3>Check readiness</h3>
-          <p>Product, Design and Engineering walk through the package together and record gaps and owners. Use these recommended readiness checks for the agreed slice:</p>
-          <ol class="practice-steps">
-            <li>the highest-risk value, usability, viability and technical feasibility assumptions have been tested for the bounded scope;</li>
-            <li>the UI artefacts, or interface contracts for services without screens, represent the core interactions and important states;</li>
-            <li>acceptance criteria are precise enough to evaluate the implementation;</li>
-            <li>constraints, guardrails and measurement obligations are explicit; and</li>
-            <li>unknowns that could invalidate the solution have been resolved, or the scope narrowed; other accepted uncertainty has an owner, bounded checks and an escalation trigger.</li>
-          </ol>
-          <aside class="example" aria-label="Fictional handover example">
-            <p class="example-label">Example · fictional service-desk journey</p>
-            <p>In the fictional service-desk pilot, the <a href="product-discovery.html#example-6">agreed requirement</a> is to return no draft or restricted content when the user lacks access to a source. The prototype passes this check, but the <a href="product-implementation.html#example-permission-check">implemented build returns a restricted excerpt</a>. The developer corrects the response, and an independent reviewer repeats the check. The release owner considers those results alongside the other release evidence.</p>
-            <p>These checks do not establish whether users benefit. <a href="product-discovery.html#example-6">Measurement plan M-1</a> proposes tracking the weekly number of distinct routine guidance cases resolved correctly, but its baseline and target are not yet agreed. The pilot also proposes a median handling time of at most nine minutes. Before judging improvement, the team needs to confirm that the baseline and pilot cover comparable tasks.</p>
-          </aside>
-          <div class="next-step"><p><strong>Next step:</strong> compare your current PRD with the handover package and readiness checks above, and list the gaps. <a href="product-implementation.html#implementable-definition">Read how implementation starts from the PRD and UI artefacts</a>, or <a href="concept.html#intent-driven-development">read about intent-driven development</a> for ways to record intent and open questions.</p></div>
-
-
-
-          <aside class="ai-help ai-help--inline" id="ai-help-handoff" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give AI the agreed scope and current discovery artefacts to draft a handoff summary and flag missing acceptance criteria or evidence links. Product, Design and Engineering compare the summary with the originals, resolve gaps and retain the reviewed package with the commitment decision.</p></aside>
+<h2>Agree the next delivery slice</h2>
+<p>The handoff connects learning with a bounded delivery commitment. Product, Design and Engineering agree the useful scope to build, the evidence supporting it and how the result will be judged. Keep them involved as implementation exposes new information.</p>
+<p>A shared package carries the product requirements document (PRD), relevant UI or interface artefacts, validation and technical findings, current organisational context, and a measurement plan. It describes the intended outcomes, scope and exclusions, acceptance criteria, dependencies and remaining uncertainty. Link the source records rather than making separate copies for each stage.</p>
+<h3>Check readiness together</h3>
+<p>The receiving team checks that the behaviour is testable and the designs cover critical interactions. Review evidence for user value, usability, technical feasibility and viability within the bounded scope. Record missing constraints, measurement work and unresolved questions. Resolve questions that could invalidate the scope before dependent work; name an owner, next check and escalation trigger for accepted uncertainty.</p>
+<p>The authorised investment owner records the commitment and its limits. This permits the next delivery work; production release needs separate implementation and operational evidence, reviewed through the applicable release decision.</p>
+<p>Use <a href="product-discovery.html#handover">Project Discovery’s detailed handoff and measurement guidance</a>, then <a href="product-implementation.html#implementable-definition">implementation’s readiness checks</a>.</p>
+<aside class="ai-help ai-help--inline" id="ai-help-handoff" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can assemble a draft handoff summary and flag missing criteria or evidence links. Product, Design and Engineering compare it with the source records, resolve gaps and retain the reviewed package with the commitment decision.</p></aside>
 </section>
 <section id="implementation-loop">
   <h2>Product implementation: deliver and verify the intent</h2>
   <p>Use implementation when the next change has agreed behaviour and testable acceptance criteria. Link requirements to relevant design decisions, tasks and verification evidence using records appropriate to the change. A PRD and technical requirements document (TRD) carry product intent and technical decisions; a bounded defect or maintenance change may use existing requirements and its issue record.</p>
   <p>The six activities are <strong>Plan → Slice → Implement → Verify → Release and observe → Learn</strong>, with rework and feedback throughout. Passing checks provides evidence that the change meets agreed criteria under recorded conditions. Independent reviewers compare the results with the agreed criteria and identify any failures. The authorised decision maker then decides whether to accept the quality report and remaining risk for the defined scope or return the work for correction.</p>
-  <p>Release follows applicable criteria and the authorised release decision, with limited exposure, monitoring, stop thresholds and recovery arrangements. Evidence from use then helps the team assess whether the expected benefit is emerging. Compare results with the agreed outcomes and technical assumptions, then update the relevant requirements, design decisions, tasks or context. Findings can reopen discovery at any point, including during planning.</p>
+  <p>Release follows applicable criteria and the authorised release decision, with limited exposure, monitoring, stop thresholds and recovery arrangements. Evidence from use then helps the team assess whether the expected benefit is emerging. Compare results with the agreed outcomes and technical assumptions, then update the relevant requirements, design decisions, tasks or context. Findings can reopen Project Discovery at any point, including during planning.</p>
+
   <p><a href="product-implementation.html#six-stages">Explore implementation: stage inputs, evidence and exit decisions</a>.</p>
 
 </section>
@@ -249,8 +225,8 @@
   <p>Compare observed results with the intended user outcome, acceptance criteria and operating guardrails. Investigate why the results differ before deciding which loop needs attention.</p>
   <div class="table-scroll" tabindex="0" role="region" aria-label="Feedback signals and decisions; scroll horizontally if needed"><table class="wide-table"><caption>Feedback signals and decisions</caption><thead><tr><th scope="col">Signal</th><th scope="col">First response</th><th scope="col">Decision to record</th></tr></thead><tbody>
     <tr><th scope="row">Behaviour violates agreed criteria</th><td>Correct and independently verify the implementation; contain live impact where necessary</td><td>Correction, evidence and any release or recovery action</td></tr>
-    <tr><th scope="row">Expected benefit is absent or unclear</th><td>Check measurement quality, exposure, adoption, observation period, task mix and operating conditions</td><td>Correct delivery or measurement issues, gather more evidence, or reopen discovery to test product assumptions</td></tr>
-    <tr><th scope="row">New evidence challenges scope or constraints</th><td>Assess affected work and involve the relevant decision authority; use discovery to compare alternatives where needed</td><td>Continue with authorised changes, narrow, pause or stop affected work</td></tr>
+    <tr><th scope="row">Expected benefit is absent or unclear</th><td>Check measurement quality, exposure, adoption, observation period, task mix and operating conditions</td><td>Correct delivery or measurement issues, gather more evidence, or reopen Project Discovery to test product assumptions</td></tr>
+    <tr><th scope="row">New evidence challenges scope or constraints</th><td>Assess affected work and involve the relevant decision authority; use Project Discovery to compare alternatives where needed</td><td>Continue with authorised changes, narrow, pause or stop affected work</td></tr>
     <tr><th scope="row">A defect or delay recurs</th><td>Address the immediate issue and investigate contributing delivery conditions</td><td>Preventive change to context, tools, tests or review practice, its owner and a check for recurrence</td></tr>
   </tbody></table></div>
   <p>These routes can overlap. Product, Design and Engineering review the evidence together and name an owner to coordinate the response. Record the finding, evidence links, next action and review trigger. Distinguish that coordinating owner from whoever holds authority to change scope, accept risk or approve release under the applicable local arrangements.</p>
@@ -258,8 +234,8 @@
   <details><summary>Further reading: diagnose a value measure that stops improving</summary>
   <p>A stalled measure does not mean the team has failed, but something is holding it back. The Defence Product Playbook suggests finding the cause before changing the plan.</p>
   <div class="table-scroll"><table class="wide-table"><caption>Likely causes of a stalled value measure, adapted from the Defence Product Playbook</caption><thead><tr><th scope="col">Likely cause</th><th scope="col">How you can tell</th><th scope="col">Action</th></tr></thead><tbody>
-    <tr><th scope="row">The root cause is not addressed</th><td>Users adopt the product, but the problem persists</td><td>Revisit the problem statement in discovery</td></tr>
-    <tr><th scope="row">An assumption was false</th><td>Research shows an assumption was wrong</td><td>Pivot the approach in discovery</td></tr>
+    <tr><th scope="row">The root cause is not addressed</th><td>Users adopt the product, but the problem persists</td><td>Revisit the problem statement in Project Discovery</td></tr>
+    <tr><th scope="row">An assumption was false</th><td>Research shows an assumption was wrong</td><td>Pivot the approach in Project Discovery</td></tr>
     <tr><th scope="row">The problem has changed</th><td>Evidence shows it shrank or shifted</td><td>Redefine or deprioritise the problem</td></tr>
     <tr><th scope="row">The team is blocked from outside</th><td>The team waits on an approval, decision or access it cannot grant itself</td><td>Escalate to whoever holds the blocking decision</td></tr>
     <tr><th scope="row">The team cannot move fast</th><td>The team is active but slow or unfocused</td><td>Review its structure, skills and delivery process</td></tr>
@@ -268,7 +244,7 @@
   <p class="source-ref">Sources: <a href="#source-1" aria-label="Source 1: DORA, User-centric focus">[1]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/problems">Define the problem, measure the value</a> and <a href="https://defence-pp.vercel.app/#/govern">Govern and review</a>. Adaptation: the table applies the playbook’s actions to this lifecycle; escalation follows local decision authority.</p>
   </details>
 
-          <aside class="ai-help ai-help--inline" id="ai-help-feedback" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask AI to group permitted feedback, defect reports and operating observations with links to the original records. The team checks the proposed groups and their context, then records whether to correct implementation, reopen discovery or improve the delivery process.</p></aside>
+          <aside class="ai-help ai-help--inline" id="ai-help-feedback" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask AI to group permitted feedback, defect reports and operating observations with links to the original records. The team checks the proposed groups and their context, then records whether to correct implementation, reopen Project Discovery or improve the delivery process.</p></aside>
 </section>
 <section id="ai-support">
   <h2>Use AI across the lifecycle</h2>
@@ -277,7 +253,8 @@
   <p>AI can help organise research and challenge assumptions, draft plans and changes, and trace feedback to the requirements and decisions it affects. People remain responsible for deciding what to invest in, accepting work and material risks, and authorising release.</p>
   <p>Compare findings that affect the decision with the original research notes or test results. Check whether the AI omitted conflicting evidence, counted the same observation twice or presented an interpretation as an observation. Keep supported findings and source links, and record unanswered questions before using the summary to guide work. Check generated code and tests against the agreed criteria, retaining the results for independent review.</p>
   </div>
-<p>McKinsey’s 10 February 2025 article argues for AI assistance across product development: connect research with usage evidence, test ideas earlier, and consider quality, risk, compliance and accessibility from discovery onwards. Its anticipated benefits are proposals and industry perspectives, rather than proof of improvement for every team.</p>
+
+<p>McKinsey’s 10 February 2025 article argues for AI assistance across product development: connect research with usage evidence, test ideas earlier, and consider quality, risk, compliance and accessibility from Project Discovery onwards. Its anticipated benefits are proposals and industry perspectives, rather than proof of improvement for every team.</p>
   <p>Hold AI-written work to the same quality bar as any other work. The Defence Product Playbook’s ProductOps Quality Model sets four layers of checks, so that quality does not depend on who or what authored the code:</p>
   <ol class="practice-steps">
     <li><strong>Prevention, before the build:</strong> project rules for agents, reusable design-system components and typed contract boundaries.</li>
@@ -286,7 +263,7 @@
     <li><strong>Integration verification, after merge:</strong> confirmation that the pieces work together.</li>
   </ol>
   <p>The playbook argues for preventing defects through the first layer, rather than relying on later scanning. Apply the relevant release criteria alongside these checks. <a href="product-implementation.html#gates-and-assurance">Read how implementation applies gates and independent assurance</a>.</p>
-  <div class="next-step"><p><strong>Choose where to go next:</strong> <a href="product-discovery.html">Investigate an uncertain problem, value or solution in Product discovery</a>, or <a href="product-implementation.html">plan, build and verify an agreed change in Product implementation</a>. Use the <a href="eds-ai-workflow.html">EDS AI Workflow (Eitri)</a> for the local delivery procedure.</p></div>
+  <div class="next-step"><p><strong>Choose where to go next:</strong> <a href="product-discovery.html">Investigate an uncertain problem, value or solution in Project Discovery</a>, or <a href="product-implementation.html">plan, build and verify an agreed change in Product implementation</a>. Use the <a href="eds-ai-workflow.html">EDS AI Workflow (Eitri)</a> for the local delivery procedure.</p></div>
   <p class="source-ref">Sources: <a href="#source-2" aria-label="Source 2: McKinsey, How an AI-enabled software product development life cycle will fuel innovation">[2]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/tools">Tools to use</a>.</p>
 </section>
 <section id="sources">
@@ -304,7 +281,7 @@
     </main>
     <aside class="page-contents">
       <nav aria-label="On this page"><p>On this page</p><a href="#two-loops">Two connected loops</a>
-<a href="#discovery-loop">Product discovery loop</a>
+<a href="#discovery-loop">Project Discovery loop</a>
 <a href="#handoff">Handoff</a>
 <a href="#implementation-loop">Product implementation loop</a>
 <a href="#feedback">Feedback from use</a>

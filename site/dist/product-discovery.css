@@ -10,7 +10,9 @@
 }
 .worked-example {
   background: var(--surface-example);
-  border-left: 3px solid var(--indigo);
+  border-color: var(--example-border);
+  border-left: 3px solid var(--example-accent);
+  padding: 0;
 }
 .worked-example > summary,
 .deep-dive > summary {

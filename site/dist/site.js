@@ -106,6 +106,12 @@ function enhanceDiagrams() {
     if (!svg || svg.dataset.enhanced === 'true') return;
     svg.dataset.enhanced = 'true';
 
+    // Worked application diagrams retain their static matte presentation.
+    if (figure.matches('.concept-figure--example') || figure.closest('.learning-example, .example, .worked-example')) {
+      figure.classList.add('concept-figure--example');
+      return;
+    }
+
     // Pad viewBox slightly so node borders and drop-shadows at x=0/1 or y=0/1 are never clipped
     const vbAttr = svg.getAttribute('viewBox');
     if (vbAttr) {
