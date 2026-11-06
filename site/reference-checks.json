@@ -1,6 +1,6 @@
 {
-  "checked_on": "2026-11-02",
-  "scope": "Original external href inventory in 13 site/dist HTML pages. Retrieved means readable source returned, not blanket verification of every claim in the source.",
+  "checked_on": "2026-11-06",
+  "scope": "Original external href inventory in 13 site/dist HTML pages. Retrieved means readable source returned, not blanket verification of every claim in the source. Daily maintenance verification on 2026-11-06 found 109 distinct external hrefs and no broken destination; individual per-reference retrieval records retain their original check dates.",
   "original_unique_urls": 100,
   "counts": {
     "retrieved": 100,

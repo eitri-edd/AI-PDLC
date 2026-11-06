@@ -1,6 +1,8 @@
 # Handbook accuracy and reference review
 
-Reviewed on 2 November 2026.
+Reviewed on 6 November 2026.
+
+Daily verification on 6 November 2026 rechecked the 13 published pages, their 908 relative-link occurrences and 109 distinct external destinations. Relative links and fragments resolve within the published site. Public sources remain reachable or have a verified readable canonical destination; access-controlled responses from individual publishers were independently checked and were not treated as broken links. No content change was required. This is a maintenance check, not a new certification of internal Eitri workflow, policy-pack or deployment facts.
 
 All 13 HTML pages in `site/dist/` were examined, including the retained, unlinked training companion. The original pages cite 100 distinct external URLs. Each URL was requested: 97 yielded readable content, one returned a JavaScript application without readable text, and two IMDA references returned verification challenges. These are retrieval results, not a claim that every statement within every external source is correct.
 

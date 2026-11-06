@@ -20,4 +20,4 @@ The discovery and implementation pages were reviewed and supplemented with onlin
 
 ## Accuracy review
 
-The [2 November 2026 accuracy review](accuracy-review.md) covers all 13 pages, corrections and outstanding source/version checks. The [reference inventory](reference-checks.json) records all 100 original external URLs and the additional sources used by the corrections. Public-source checks do not establish the current internal Eitri release or policy-pack version.
+The [6 November 2026 accuracy review](accuracy-review.md) covers all 13 pages, corrections and outstanding source/version checks. The [reference inventory](reference-checks.json) records all 100 original external URLs and the additional sources used by the corrections. Public-source checks do not establish the current internal Eitri release or policy-pack version.
