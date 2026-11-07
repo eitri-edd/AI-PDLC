@@ -230,6 +230,7 @@
     <tr><th scope="row">Behaviour violates agreed criteria</th><td>Correct and independently verify the implementation; contain live impact where necessary</td><td>Correction, evidence and any release or recovery action</td></tr>
     <tr><th scope="row">Expected benefit is absent or unclear</th><td>Check measurement quality, exposure, adoption, observation period, task mix and operating conditions</td><td>Correct delivery or measurement issues, gather more evidence, or reopen Project Discovery to test product assumptions</td></tr>
     <tr><th scope="row">New evidence challenges scope or constraints</th><td>Assess affected work and involve the relevant decision authority; use Project Discovery to compare alternatives where needed</td><td>Continue with authorised changes, narrow, pause or stop affected work</td></tr>
+    <tr><th scope="row">Review queue grows or agent changes wait longer than expected</th><td>Check change size, work in progress, review capacity and whether consequential judgement was delayed until code review</td><td>Slice work smaller, add pairing or a design review, or rebalance review capacity; retain independent checks and acceptance criteria</td></tr>
     <tr><th scope="row">A defect or delay recurs</th><td>Address the immediate issue and investigate contributing delivery conditions</td><td>Preventive change to context, tools, tests or review practice, its owner and a check for recurrence</td></tr>
   </tbody></table></div>
   <p>These routes can overlap. Product, Design and Engineering review the evidence together and name an owner to coordinate the response. Record the finding, evidence links, next action and review trigger. Distinguish that coordinating owner from whoever holds authority to change scope, accept risk or approve release under the applicable local arrangements.</p>
@@ -273,14 +274,15 @@
   <h2>Sources and scope</h2>
 <div class="source-attribution-notes" aria-label="Section attribution and adaptations"><h3>Section attribution and adaptations</h3><ul>
 <li><strong><a href="#two-loops">One lifecycle, two connected learning loops</a>:</strong> Source: <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/tools">Tools to use</a>.</li>
-<li><strong><a href="#feedback">Use evidence to choose the next action</a>:</strong> Sources: <a href="#source-1" aria-label="Source 1: DORA, User-centric focus">[1]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/problems">Define the problem, measure the value</a> and <a href="https://defence-pp.vercel.app/#/govern">Govern and review</a>. Adaptation: the table applies the playbook’s actions to this lifecycle; escalation follows local decision authority.</li>
+<li><strong><a href="#feedback">Use evidence to choose the next action</a>:</strong> Sources: <a href="#source-1" aria-label="Source 1: DORA, User-centric focus">[1]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/problems">Define the problem, measure the value</a> and <a href="https://defence-pp.vercel.app/#/govern">Govern and review</a>. Adaptation: the table applies the playbook’s actions to this lifecycle; escalation follows local decision authority. Investigate review queues by moving consequential judgement earlier and keeping independent acceptance. <a href="#source-4" aria-label="Source 4: Rachel Laycock, Maybe We Shouldn't Be Reviewing All This Code">[4]</a></li>
 <li><strong><a href="#ai-support">Use AI across the lifecycle</a>:</strong> Sources: <a href="#source-2" aria-label="Source 2: McKinsey, How an AI-enabled software product development life cycle will fuel innovation">[2]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/tools">Tools to use</a>.</li>
 </ul></div>
-  <p>References checked on 6 November 2026.</p>
+  <p>References checked on 7 November 2026.</p>
   <ol class="source-list">
     <li id="source-1"><a href="https://dora.dev/capabilities/user-centric-focus/">DORA, User-centric focus</a></li>
     <li id="source-2"><a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation">McKinsey, How an AI-enabled software product development life cycle will fuel innovation</a></li>
     <li id="source-3"><a href="https://defence-pp.vercel.app/#/home">MINDEF and DSTA, The Defence Product Playbook, live web edition</a></li>
+    <li id="source-4"><a href="https://martinfowler.com/rachels-ramblings/code-review.html">Rachel Laycock, Maybe We Shouldn't Be Reviewing All This Code</a> (2 September 2026). Practitioner argument for earlier design discussion, deterministic checks and review focused on consequential changes.</li>
   </ol>
 </section>
 

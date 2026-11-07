@@ -1,5 +1,5 @@
 {
-  "checked_on": "2026-11-06",
+  "checked_on": "2026-11-07",
   "scope": "Original external href inventory in 13 site/dist HTML pages. Retrieved means readable source returned, not blanket verification of every claim in the source. Daily maintenance verification on 2026-11-06 found 109 distinct external hrefs and no broken destination; individual per-reference retrieval records retain their original check dates.",
   "original_unique_urls": 100,
   "counts": {
@@ -1077,6 +1077,18 @@
       "result": "retrieved",
       "title": "Why are good developers so wary of agentic development?",
       "method": "web reader"
+    },
+    {
+      "url": "https://martinfowler.com/rachels-ramblings/code-review.html",
+      "files": [
+        "ai-pdlc.html",
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-07",
+      "result": "retrieved",
+      "title": "Maybe We Shouldn't Be Reviewing All This Code",
+      "method": "web reader",
+      "note": "Practitioner argument for earlier judgement and deterministic checks; not a measured effectiveness claim."
     }
   ],
   "additional_checked_sources": [
@@ -1092,6 +1104,6 @@
     "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
     "https://www.anthropic.com/research/demystifying-evals-for-ai-agents"
   ],
-  "final_unique_urls": 104,
+  "final_unique_urls": 105,
   "final_reference_coverage": "Every external href in the final HTML inventory has a retrieval record or is an explicitly checked additional source. Original unreadable source exceptions remain documented."
 }

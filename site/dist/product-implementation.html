@@ -229,6 +229,11 @@
           <h3>Separate correction from assurance</h3>
           <p>Use automated tests and scanners to give the implementer fast feedback. Then have reviewers or independent automated checks examine the change against the agreed acceptance criteria. Keep the acceptance decision separate from producing the change.</p>
           <p>Use a human decision where the applicable procedure requires approval, interpretation or risk acceptance. Automation can authorise a routine action only within explicitly delegated scope, criteria and permissions. If that authority is absent or the criteria are inconclusive, refer the decision to the authorised person. The diagram below shows the route with human acceptance.</p>
+          <h3>Move judgement earlier; review by exception</h3>
+          <p>For a consequential or unfamiliar change, compare credible options and agree the important constraints before implementation starts. A short design session or pairing can surface trade-offs while the team can still change direction. Keep that work proportionate to risk and uncertainty.</p>
+          <p>Automate checks that have deterministic answers, such as formatting, known security findings and agreed architecture rules. A fitness function is an automated check for an important design constraint. Keep agent-generated changes small enough to verify against one agreed outcome, rather than passing a large batch to a reviewer.</p>
+          <p>Human review is most useful by exception: for a fundamental architecture change, a sensitive security boundary, a large blast radius, an unfamiliar critical system or a change the team cannot confidently explain. This does not remove applicable gates, independent checks or the authorised acceptance decision. It moves the judgement that helps the team make a better change to an earlier point in the work.</p>
+          <p>In the asset-management example, the team can agree annual-verification permissions and duplicate-task constraints before an agent implements the schedule. They then review the data model, start endpoint, worker and screen as separate verifiable changes. A human reviewer gives extra attention to the permission and inspection-authority boundaries; automated checks cover repeatable rules.</p>
           <figure class="concept-figure" id="fig-assure">
   <figcaption id="fig-assure-title-caption">Figure 2. Human acceptance route: independent findings inform an accept, rework or exception referral.</figcaption>
   <details class="figure-reading"><summary>Read as text: Flow and branches</summary><ol><li>Implementer lane: the agent or developer implements, runs sensors/scanners and fixes findings.</li><li>Independent review lane: specialist reviewers check the evidence; the review orchestrator consolidates findings. Blocking findings return to the implementer.</li><li>Accountable decision lane: the authorised person reviews the quality report and release scope.</li><li>Accept: authorise the defined increment. Reject/rework: return findings for correction and fresh review.</li><li>Exception: record the risk and refer it to the applicable exception authority. An exception request does not authorise release.</li></ol></details>
@@ -389,7 +394,7 @@
         <section id="measure-loop"><p class="implementation-section-type">Reference toolkit · Optional</p><h2>Measure whether the whole loop works</h2>
           <p>No single measure shows whether delivery is improving. Speed can improve while escaped defects, policy exceptions or harm to users increase. Balance measures across flow, quality, recovery, product outcomes, system health and governance.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Suggested measures; set local measures and thresholds before relying on them; scroll horizontally if needed"><table class="wide-table"><caption>Suggested measures; set local measures and thresholds before relying on them</caption><thead><tr><th scope="col">Family</th><th scope="col">Example signals</th><th scope="col">Question it answers</th></tr></thead><tbody>
-            <tr><th scope="row">Flow</th><td>Lead time, cycle time, work in progress, gate wait time, review latency, deployment frequency</td><td>Does valuable work move predictably, and where does evidence wait?</td></tr>
+            <tr><th scope="row">Flow</th><td>Lead time, cycle time, work in progress, gate wait time, review latency, change size, deployment frequency</td><td>Does valuable work move predictably, and where does evidence wait?</td></tr>
             <tr><th scope="row">Quality</th><td>First-pass review rate, escaped defects, mutation score, change failure rate, evaluation pass rate</td><td>Does the loop prevent and detect important failures?</td></tr>
             <tr><th scope="row">Recovery</th><td>Time to detect, contain, restore and prevent recurrence; rollback success; repeat defects</td><td>Can the team limit harm and learn quickly when something fails?</td></tr>
             <tr><th scope="row">Product</th><td>Adoption, task success, retention, time saved, satisfaction, error rate, harm and fairness indicators</td><td>Is the product solving the intended user problem?</td></tr>
@@ -403,7 +408,7 @@
           <h3>Agree the response before the signal arrives</h3>
           <p>The following are suggested responses to investigate and adapt locally:</p>
           <ul>
-            <li>Review latency above its target leads to more review capacity, smaller tasks or a simpler review policy.</li>
+            <li>Review latency above its target or growing change size leads to checking work in progress, reviewer capacity and whether important judgement was deferred to code review. Slice work smaller, add pairing or a design review, or rebalance review capacity; do not lower independent checks merely to clear a queue.</li>
             <li>Recurring defects lead to factory fixes, such as new scanner rules, better tests, updated skills or corrected context.</li>
             <li>A falling mutation score prompts a review of changed tests and code before increasing autonomy, even when line coverage stays high.</li>
             <li>Repeated gate bypasses lead to a governance review and can reduce autonomy automatically.</li>
@@ -428,15 +433,15 @@
 <div class="source-attribution-notes" aria-label="Section attribution and adaptations"><h3>Section attribution and adaptations</h3><ul>
 <li><strong><a href="#executable-work">Translate intent into executable work</a>:</strong> Source: <a href="#source-1" aria-label="Source 1: GitHub Spec Kit, Specification-Driven Development">[1]</a>.</li>
 <li><strong><a href="#six-stages">Plan, build, check and learn</a>:</strong> Source: <a href="#source-2" aria-label="Source 2: Google SRE Workbook, Canarying Releases">[2]</a>.</li>
-<li><strong><a href="#gates-and-assurance">Govern progress with gates and independent checks</a>:</strong> Source: <a href="#source-3" aria-label="Source 3: Anthropic, Demystifying evals for AI agents">[3]</a>.</li>
+<li><strong><a href="#gates-and-assurance">Govern progress with gates and independent checks</a>:</strong> Source: <a href="#source-3" aria-label="Source 3: Anthropic, Demystifying evals for AI agents">[3]</a>. Adaptation: move consequential judgement earlier and reserve human review for changes needing it. <a href="#source-16" aria-label="Source 16: Rachel Laycock, Maybe We Shouldn't Be Reviewing All This Code">[16]</a></li>
 <li><strong><a href="#implementation-case-study">From an agreed pilot to working software</a>:</strong> AWS service references: <a href="#source-12">Java on ECS with Fargate [12]</a>, <a href="#source-14">S3 access through CloudFront [14]</a> and <a href="#source-15">ECS monitoring with CloudWatch [15]</a>.</li>
 <li><strong><a href="#implementation-case-study">From an agreed pilot to working software</a>:</strong> Design references: <a href="#source-8">the transactional outbox pattern [8]</a>, <a href="#source-9">SQS standard-queue behaviour [9]</a>, <a href="#source-10">visibility timeouts and DLQs [10]</a>, <a href="#source-11">EventBridge Scheduler targets [11]</a>, <a href="#source-13">SES sending activity [13]</a> and <a href="#source-6">idempotent retries [6]</a>.</li>
 <li><strong><a href="#implementation-case-study">From an agreed pilot to working software</a>:</strong> Testing terms: <a href="#source-7">ASTQB’s explanation of confirmation and regression testing [7]</a>.</li>
 <li><strong><a href="#autonomy">Increase autonomy only with evidence</a>:</strong> Context: <a href="#source-5" aria-label="Source 5: Rachel Laycock, Why are good developers so wary of agentic development?">[5]</a>. The pilot check adapts a practitioner perspective; it is not a controlled-effectiveness claim.</li>
 <li><strong><a href="#measure-loop">Measure whether the whole loop works</a>:</strong> Source: <a href="#source-4" aria-label="Source 4: DORA, Software delivery performance metrics">[4]</a>.</li>
 </ul></div>
-          <p>References checked on 6 November 2026.</p>
-          <p class="source-ref">Editorial review: <time datetime="2026-11-06">6 November 2026</time>. The asset management journey continues the problem introduced in Project Discovery. Its follow-up research, implementation failures, proposed controls and operating results are illustrative.</p>
+          <p>References checked on 7 November 2026.</p>
+          <p class="source-ref">Editorial review: <time datetime="2026-11-07">7 November 2026</time>. The asset management journey continues the problem introduced in Project Discovery. Its follow-up research, implementation failures, proposed controls and operating results are illustrative.</p>
           <ol class="source-list">
             <li id="source-1"><a href="https://github.com/github/spec-kit/blob/main/spec-driven.md">GitHub Spec Kit, Specification-Driven Development</a></li>
             <li id="source-2"><a href="https://sre.google/workbook/canarying-releases/">Google SRE Workbook, Canarying Releases</a></li>
@@ -453,6 +458,7 @@
             <li id="source-13"><a href="https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html">Amazon SES, Monitoring sending activity</a></li>
             <li id="source-14"><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html">Amazon CloudFront, Restrict access to an Amazon S3 origin</a></li>
             <li id="source-15"><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html">Amazon ECS, Monitor Amazon ECS using CloudWatch</a></li>
+            <li id="source-16"><a href="https://martinfowler.com/rachels-ramblings/code-review.html">Rachel Laycock, Maybe We Shouldn't Be Reviewing All This Code</a> (2 September 2026). Practitioner argument for moving design discussion and deterministic checks earlier, while reserving human review for consequential changes.</li>
           </ol>
         </section>
 
