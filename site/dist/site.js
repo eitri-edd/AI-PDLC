@@ -77,9 +77,9 @@ function ensureSharedDiagramDefs() {
         <stop offset="0%" stop-color="#ffffff"/>
         <stop offset="100%" stop-color="#f8fafc"/>
       </linearGradient>
-      <linearGradient id="d-grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#eff6ff"/>
-        <stop offset="100%" stop-color="#dbeafe"/>
+        <stop offset="100%" stop-color="#e0f2fe"/>
       </linearGradient>`
     );
   }

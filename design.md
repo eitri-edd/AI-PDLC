@@ -1,11 +1,11 @@
 # Design system proposal
 
 For EDS’s AI-Software Development Lifecycle knowledge site
-Status: Proposed visual system · Version: 0.5 · Updated: 6 November 2026
+Status: Proposed visual system · Version: 0.6 · Updated: 7 November 2026
 
 ## Design direction
 
-Build a sleek, polished, white-based enterprise knowledge site ("Editorial Enterprise Light") with pure white reading surfaces, whisper-quiet cool-alabaster panels, precision royal-blue and indigo accents, crisp typographic hierarchy and generous whitespace. The experience should feel like an authoritative, modern engineering and product handbook—effortless to scan, comfortable for long-form reading, and crystal clear when presenting complex multi-agent workflows, human decision gates and delivery status.
+Build a sleek, polished, white-based enterprise knowledge site ("Editorial Enterprise Light", futuristic refresh) with pure white reading surfaces, whisper-quiet cool-alabaster panels, precision royal-blue accents extended by a sky-cyan secondary (`#0EA5E9`) and indigo, a subtle ambient sky wash behind the canvas, gradient accent hairlines on headings, cards and active navigation, crisp typographic hierarchy with a geometric display face (Space Grotesk) for titles and system labels, and generous whitespace. The experience should feel like an authoritative, modern engineering and product handbook—effortless to scan, comfortable for long-form reading, and crystal clear when presenting complex multi-agent workflows, human decision gates and delivery status.
 
 This is a proposed project design system, not an official EDS brand standard. Confirm approved identity assets and corporate requirements before launch. Use the project title and icon mark until an approved corporate logo is available.
 
@@ -40,10 +40,14 @@ Use semantic tokens in components so the palette remains consistent across pages
 | `border-strong` | `#CBD5E1` | Emphasised card borders, diagram frames and input outlines |
 | `border-control` | `#64748B` | High-contrast diagram connectors and form controls |
 | `accent` | `#1D4ED8` | Links, primary actions, active indicators and HITL decision highlights |
+| `accent-2` | `#0EA5E9` | Sky-cyan secondary accent for gradient hairlines, glows and highlight dots |
 | `accent-hover` | `#1E40AF` | Hovered links and interactive controls |
 | `accent-pressed` | `#1E3A8A` | Pressed primary controls |
 | `accent-soft` | `#DBEAFE` | Soft accent badge fill and diagram pulse rings |
+| `accent-2-soft` | `#E0F2FE` | Soft sky fill for highlight rings and tinted gradients |
 | `accent-border` | `#93C5FD` | Border for highlighted callouts, active cards and HITL nodes |
+| `gradient-accent` | `linear-gradient(90deg, #1D4ED8, #0EA5E9 55%, #6366F1)` | Gradient hairlines on headings, card top rules, active nav bars and figure accents |
+| `glow-accent` | `0 10px 30px -12px rgba(29, 78, 216, 0.3)` | Restrained accent glow on primary panels such as next-step cards |
 | `indigo` / `indigo-soft` | `#4338CA` / `#EEF2FF` | One-time setup pills and secondary accents in the main theme |
 | `focus` | `#2563EB` | Keyboard focus outline |
 | `success-text` / `success-bg` | `#166534` / `#F0FDF4` | Confirmed completion or passing checks |
@@ -127,14 +131,14 @@ Check alignment across all 13 handbook pages at `1440px`, `768px`, `375px` and `
 
 ## Typography
 
-Use a modern enterprise sans-serif stack: `"Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif`. Use `"JetBrains Mono", "Cascadia Code", Consolas, "SFMono-Regular", monospace` for code and skill identifiers.
+Use a modern enterprise sans-serif stack: `"Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif` for body text, loaded from Google Fonts (variable, `opsz` + `wght` axes) with `font-feature-settings: "cv02", "cv03", "cv04", "cv11"`. Use `"Space Grotesk", "Inter", "Segoe UI", system-ui, sans-serif` (Google Fonts, `wght 300–700`) for display roles: page/section/subsection headings, the brand identity, eyebrow and figure-number pills, uppercase system labels (page contents heading, status-key intro, page-map captions, table headers, kickers) and task-entry / learning-path card titles. Use `"JetBrains Mono", "Cascadia Code", Consolas, "SFMono-Regular", monospace` (Google Fonts, `wght 400–600`) for code and skill identifiers.
 
 | Role | Desktop size / line height | Weight & styling |
 | --- | --- | --- |
 | Eyebrow label | 12 / 18 px (`0.75rem`) | 700, uppercase, `0.055em` letter-spacing, accent pill with leading dot |
-| Page title (`h1`) | 40 / 47 px (`2.5rem`) | 750, `-0.03em` letter-spacing |
-| Section heading (`h2`) | 27 / 35 px (`1.6875rem`) | 700, `-0.02em` letter-spacing, bottom hairline with accent rule |
-| Subsection heading (`h3`) | 20 / 28 px (`1.25rem`) | 650, `-0.012em` letter-spacing |
+| Page title (`h1`) | 40 / 47 px (`2.5rem`) | Space Grotesk, 700, `-0.035em` letter-spacing |
+| Section heading (`h2`) | 27 / 35 px (`1.6875rem`) | Space Grotesk, 700, `-0.025em` letter-spacing, bottom hairline with `--gradient-accent` rule |
+| Subsection heading (`h3`) | 20 / 28 px (`1.25rem`) | Space Grotesk, 650, `-0.015em` letter-spacing |
 | Small heading (`h4`) | 18 / 26 px (`1.125rem`) | 600 |
 | Introductory lead (`.lead`) | 19.5 / 32 px (`1.21875rem`) | 400, `--text-secondary` |
 | Article body | 17 / 29 px (`1.0625rem`) | 400, `--text-body` |
@@ -185,10 +189,10 @@ Every page across the handbook follows a unified, predictable visual order:
 | Component | Appearance and behaviour |
 | --- | --- |
 | Text link | Royal blue (`--accent`), underlined with subtle offset and `1px` thickness. Darkens on hover with stronger underline. |
-| Sidebar item | Comfortable `42px` row target with `18px` outline icon. Selected item uses a pure white card (`#FFFFFF`), `--accent` text, a `3px` left accent bar, `--shadow-xs` and `aria-current="page"`. |
+| Sidebar item | Comfortable `42px` row target with `18px` outline icon. Selected item uses a pure white card (`#FFFFFF`), `--accent` text, a `3px` left bar with a vertical `--accent` → `--accent-2` gradient, `--shadow-xs` and `aria-current="page"`. |
 | Page contents | Right-hand sticky rail (`On this page`). Active section uses `--accent` text, font-weight `600`, a `2px` blue left indicator bar and soft blue tint. |
-| Page map (`.page-map`) | Sleek white-and-alabaster container (`12px` radius, `1px` border, `--shadow-sm`) with a 4-column horizontal step grid. Each step is a crisp white card with a top accent bar, `01`–`04` pill badge, bold heading and direct anchor links, joined by directional connectors. |
-| Task entry cards (`.task-entry`) | Responsive 2-column card grid on white surfaces with `1px` border, subtle shadow, bold title link with animated trailing arrow, and clear workflow steps. |
+| Page map (`.page-map`) | Minimal Editorial Ledger spec-sheet (`1.5px` top rule, `1px` bottom rule, zero card background or shadow) with a unified 4-column horizontal hairline grid (`.page-map-nodes` and `.page-map-steps`). Each column is separated by a `1px` vertical hairline rule and displays a monospace slate numeral (`01`–`04` in JetBrains Mono, no pill), a bold heading in Space Grotesk and direct anchor links. |
+| Task entry & learning path cards (`.task-entry`, `.discovery-path-card`, `.implementation-path-card`) | Responsive card grids on white-to-alabaster surfaces (`#FFFFFF` → `#F8FAFC`) with `1px` border, subtle shadow, bold title in Space Grotesk with animated trailing arrow, and clear workflow descriptions. Learning path cards use a unified, understated cool-slate palette at rest (soft slate pill kicker, `#CBD5E1` top rule, deep navy-slate heading) that highlights to royal blue on hover/focus. |
 | Note Callout (`.callout`) | White-to-ice-blue panel (`#FFFFFF` to `#F5F8FF`) with `1px solid var(--accent-border)` and a `4px` solid `--accent` left rule. Includes a royal-blue uppercase pill label (`Note`). |
 | Learning example (`.learning-example`, `.example`, `.worked-example`) | Flat `--example-surface` with a `1px` `--example-border` border, `4px` `--example-accent` left rule and charcoal text. Use a visible “Learning example” label on a flat canvas-coloured badge. Related tables and diagrams use the same Matte Stone palette. |
 | Applied example figure (`.concept-figure--example`) | Shared accessible figure structure with the Matte Stone overrides above; flat nodes/canvas, descriptive labels and static default presentation. Keep the application caption and illustrative status visible. |
@@ -265,8 +269,12 @@ Target WCAG 2.2 Level AA:
   --accent: #1d4ed8;
   --accent-hover: #1e40af;
   --accent-pressed: #1e3a8a;
+  --accent-2: #0ea5e9;
   --accent-soft: #dbeafe;
+  --accent-2-soft: #e0f2fe;
   --accent-border: #93c5fd;
+  --gradient-accent: linear-gradient(90deg, #1d4ed8 0%, #0ea5e9 55%, #6366f1 100%);
+  --glow-accent: 0 10px 30px -12px rgba(29, 78, 216, 0.3);
   --indigo: #4338ca;
   --indigo-soft: #eef2ff;
   --indigo-border: #c7d2fe;
