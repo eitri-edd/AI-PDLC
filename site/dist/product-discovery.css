@@ -21,9 +21,9 @@
 .worked-example {
   background: var(--surface-example);
   border-color: var(--example-border);
-  border-left: 3px solid var(--example-accent);
-  border-radius: 0.625rem;
-  box-shadow: none;
+  border-left: 3px solid var(--example-rule);
+  border-radius: 0 0.625rem 0.625rem 0;
+  box-shadow: var(--shadow-xs);
   padding: 0;
 }
 .worked-example > summary,

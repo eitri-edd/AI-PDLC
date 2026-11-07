@@ -6,13 +6,15 @@
   --surface-muted: #f1f5f9;
   --surface-selected: #eff6ff;
   --surface-accent-subtle: #f5f8ff;
-  --example-surface: #f3f0eb;
-  --example-canvas: #e8e3dc;
-  --example-card: #faf8f4;
-  --example-ink: #2f3437;
-  --example-secondary: #57534e;
-  --example-accent: #7a4b3a;
-  --example-border: #837569;
+  --example-surface: #f7f4fc;
+  --example-canvas: #f0eaf8;
+  --example-card: #ffffff;
+  --example-ink: #241b35;
+  --example-secondary: #5d506d;
+  --example-accent: #704699;
+  --example-border: #d9cce8;
+  --example-rule: #8056a4;
+  --example-line: #786785;
   --surface-example: var(--example-surface);
   --text-primary: #0f172a;
   --text-body: #1e293b;
@@ -2147,37 +2149,31 @@ summary {
 }
 .learning-example--compact .example-label { margin: 0 0 0.5rem; }
 
-/* Method first: permanent learning headers in the two product chapters. */
-.method-learning {
-  --example-surface: #ffffff;
-  --surface-example: var(--example-surface);
-  --example-canvas: #f5f6fc;
-  --example-card: #ffffff;
-  --example-ink: #17233b;
-  --example-secondary: #4b5c73;
-  --example-accent: #4f46e5;
-  --example-border: #cbd2e1;
+/* Method first: one shared learning treatment across the handbook. */
+:is(.example, .learning-example, .worked-example) {
+  border-left: 3px solid var(--example-rule);
+  border-radius: 0 0.625rem 0.625rem 0;
+  box-shadow: var(--shadow-xs);
 }
-.method-learning :is(.example, .learning-example, .worked-example) {
-  border-left-width: 1px;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 20px rgba(23, 35, 59, 0.035);
-}
-.method-learning .learning-example-header {
+.learning-example-header {
   display: grid;
   grid-template-columns: 1.5rem minmax(0, 1fr);
   gap: 0.875rem;
   margin: 0 0 1.25rem;
   text-transform: none;
 }
-.method-learning .learning-icon {
+.learning-icon {
   width: 1.5rem;
   height: 1.5rem;
   margin-top: 0.125rem;
+  padding: 0.125rem;
+  border: 1px solid var(--example-rule);
+  border-radius: 0.25rem;
+  background: var(--example-card);
   color: var(--example-accent);
 }
-.method-learning .learning-header-copy { display: block; min-width: 0; }
-.method-learning .learning-header-meta {
+.learning-header-copy { display: block; min-width: 0; }
+.learning-header-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -2185,19 +2181,19 @@ summary {
   gap: 0.25rem 1rem;
   margin-bottom: 0.375rem;
 }
-.method-learning .learning-kind {
+.learning-kind {
   font-family: "Space Grotesk", "Inter", "Segoe UI", system-ui, sans-serif;
   font-size: 0.8125rem;
   font-weight: 650;
   letter-spacing: 0.015em;
   color: var(--example-accent);
 }
-.method-learning .learning-step {
+.learning-step {
   color: var(--example-secondary);
   font-size: 0.75rem;
   font-weight: 500;
 }
-.method-learning .learning-title {
+.learning-title {
   display: block;
   color: var(--example-ink);
   font-family: "Space Grotesk", "Inter", "Segoe UI", system-ui, sans-serif;
@@ -2207,7 +2203,7 @@ summary {
   letter-spacing: -0.015em;
   overflow-wrap: anywhere;
 }
-.method-learning .learning-benefit {
+.learning-benefit {
   display: block;
   margin-top: 0.375rem;
   color: var(--example-secondary);
@@ -2215,18 +2211,18 @@ summary {
   font-weight: 400;
   line-height: 1.55;
 }
-.method-learning .learning-summary {
+.learning-summary {
   display: block;
   padding: 1.375rem 1.5rem;
   list-style: none;
   cursor: pointer;
 }
-.method-learning .learning-summary::-webkit-details-marker { display: none; }
-.method-learning .learning-summary::marker { content: ""; }
-.method-learning .learning-summary .learning-example-header { margin: 0; }
-.method-learning .learning-summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; border-radius: 0.75rem; }
-.method-learning .learning-summary:hover .learning-title { color: var(--example-accent); }
-.method-learning .learning-action {
+.learning-summary::-webkit-details-marker { display: none; }
+.learning-summary::marker { content: ""; }
+.learning-summary .learning-example-header { margin: 0; }
+.learning-summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; border-radius: 0.75rem; }
+.learning-summary:hover .learning-title { color: var(--example-accent); }
+.learning-action {
   display: flex;
   align-items: center;
   gap: 0.625rem;
@@ -2235,31 +2231,31 @@ summary {
   font-size: 0.8125rem;
   font-weight: 600;
 }
-.method-learning .learning-chevron {
+.learning-chevron {
   width: 0.375rem;
   height: 0.375rem;
   border-right: 1.5px solid currentColor;
   border-bottom: 1.5px solid currentColor;
   transform: translateY(-0.125rem) rotate(45deg);
 }
-.method-learning .learning-close,
-.method-learning details[open] > .learning-summary .learning-expand { display: none; }
-.method-learning details[open] > .learning-summary .learning-close { display: inline; }
-.method-learning details[open] > .learning-summary .learning-chevron { transform: translateY(0.125rem) rotate(225deg); }
-.method-learning details[open] > .learning-summary { border-bottom: 1px solid var(--example-border); margin-bottom: 1.25rem; }
-.method-learning .learning-example--compact .learning-title { font-size: 1.0625rem; }
-.method-learning .learning-example--compact .learning-example-header { margin-bottom: 0.75rem; }
-.method-learning :is(.case-supplement, .implementation-case-supplement) { padding: 0; background: var(--example-surface); }
-.method-learning :is(.case-supplement, .implementation-case-supplement) > div { padding: 0 1.25rem 1.25rem; }
+.learning-close,
+details[open] > .learning-summary .learning-expand { display: none; }
+details[open] > .learning-summary .learning-close { display: inline; }
+details[open] > .learning-summary .learning-chevron { transform: translateY(0.125rem) rotate(225deg); }
+details[open] > .learning-summary { border-bottom: 1px solid var(--example-border); margin-bottom: 1.25rem; }
+.learning-example--compact .learning-title { font-size: 1.0625rem; }
+.learning-example--compact .learning-example-header { margin-bottom: 0.75rem; }
+:is(.case-supplement, .implementation-case-supplement) { padding: 0; background: var(--example-surface); }
+:is(.case-supplement, .implementation-case-supplement) > div { padding: 0 1.25rem 1.25rem; }
 @media (max-width: 40rem) {
-  .method-learning .learning-summary { padding: 1.125rem 1rem; }
-  .method-learning .learning-example-header { grid-template-columns: 1.25rem minmax(0, 1fr); gap: 0.625rem; }
-  .method-learning .learning-icon { width: 1.25rem; height: 1.25rem; }
-  .method-learning .learning-title { font-size: 1.125rem; }
+  .learning-summary { padding: 1.125rem 1rem; }
+  .learning-example-header { grid-template-columns: 1.25rem minmax(0, 1fr); gap: 0.625rem; }
+  .learning-icon { width: 1.25rem; height: 1.25rem; }
+  .learning-title { font-size: 1.125rem; }
 }
 @media print {
-  .method-learning :is(.example, .learning-example, .worked-example) { box-shadow: none; }
-  .method-learning .learning-action { display: none; }
+  :is(.example, .learning-example, .worked-example) { box-shadow: none; }
+  .learning-action { display: none; }
 }
 .learning-example > :last-child { margin-bottom: 0; }
 .learning-example :is(.table-scroll, table) { background: var(--example-card); box-shadow: none; border-color: var(--example-border); }
@@ -2293,7 +2289,7 @@ summary {
 }
 .concept-figure--example :is(.d-node, .d-group, .d-boundary, .d-decision) {
   fill: var(--example-card);
-  stroke: var(--example-border);
+  stroke: var(--example-line);
   filter: none !important;
   animation: none !important;
   transition: none;
@@ -2303,7 +2299,7 @@ summary {
 .concept-figure--example .d-sub { fill: var(--example-secondary); }
 .concept-figure--example .d-node-accent + .d-title + .d-sub { fill: var(--example-secondary); font-weight: 500; }
 .concept-figure--example :is(.d-label, .d-label-accent) { fill: var(--example-ink); stroke: var(--example-canvas); }
-.concept-figure--example :is(.d-line, .d-line-accent) { stroke: var(--example-border); animation: none; }
+.concept-figure--example :is(.d-line, .d-line-accent) { stroke: var(--example-line); animation: none; }
 .concept-figure--example .d-flow-pulse { display: none; }
 /* The header wraps on phones; keep every in-article anchor below it. */
 @media (max-width: 1099px) {

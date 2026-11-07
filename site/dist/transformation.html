@@ -144,8 +144,8 @@
   </details>
   </figure>
           <p>The four areas apply to the same task. The example below shows how a team could address them together in a small pilot.</p>
-          <aside class="example" aria-label="Fictional upload-feature pilot across four areas">
-            <p class="example-label">Example · fictional upload-feature pilot</p>
+          <aside class="example learning-example" aria-label="Fictional upload-feature pilot across four areas">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Plan a bounded AI pilot</span><span class="learning-benefit">See how people, process, culture and technology support the same pilot task.</span></span></div>
             <p>An AI agent uses a model to choose or adapt actions and tool use towards a goal, within agreed permissions and limits. In this pilot, a team asks an agent to help build a document upload feature on an isolated branch, using synthetic documents and simulated recipients.</p>
             <ul>
               <li><strong>People:</strong> the product owner and developer agree a task brief describing the intended user, upload behaviour and access limits. They name reviewers with time to check the code, tests and security implications.</li>
@@ -246,8 +246,8 @@
             <li>Pair each learner with someone who can review their work; for example, a technical lead checking a proposed implementation against the requirements and access limits.</li>
             <li>Widen an agent’s scope only when the evidence supports it and the person with authority agrees.</li>
           </ol>
-          <aside class="example" aria-label="Fictional upload-feature review">
-            <p class="example-label">Example · fictional upload-feature review</p>
+          <aside class="example learning-example" aria-label="Fictional upload-feature review">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Review and correct an agent-generated change</span><span class="learning-benefit">See how a missed access check becomes a reproducible failure and a verified correction.</span></span></div>
             <p>In the upload-feature pilot, the developer gives the agent the agreed upload behaviour and recipient-access rules. The agent drafts a change and tests on the isolated branch. The developer compares both with the requirements and finds that neither checks whether the selected recipient is authorised.</p>
             <p>The developer records the gap and reproduces the failure, then corrects the task instructions and asks the agent to revise the change. After checking the correction, the developer retains the failed and passing test results. A security reviewer examines the access-control evidence, and the technical lead reviews the integrated change. These are the fictional team’s chosen review arrangements; acceptance follows the existing decision authority.</p>
             <p>The platform engineer retains pipeline results and confirms that the agent cannot merge or deploy. The pilot lead records the review and correction effort, including the failed attempt, for the comparison at the end of this chapter.</p>
@@ -388,8 +388,8 @@
             <li><strong>Keep testing when a specific question remains.</strong> If there are too few tasks, the comparison is weak, follow-up is unfinished or a proposed revision needs evaluation, record what the next trial will test. Keep the trial within its existing limits, assign the additional work and set an end date for the extension.</li>
           </ul>
           <p>If a stop condition is met during the trial, stop the affected actions immediately and follow the agreed response and recovery procedure. Reassess the decision after a material change to the model, agent harness or workflow.</p>
-          <aside class="example" aria-label="Fictional upload-feature pilot results">
-            <p class="example-label">Example · fictional upload-feature pilot results</p>
+          <aside class="example learning-example" aria-label="Fictional upload-feature pilot results">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Evaluate the full effort of a pilot</span><span class="learning-benefit">See why faster drafting can leave total effort unchanged once review and corrections are counted.</span></span></div>
             <p>The team from the earlier example compares six baseline changes with six AI-assisted changes of similar difficulty. It had agreed to look for a saving of at least 15 minutes of human effort per accepted change without weakening quality or access controls. The figures below are fictional averages, including effort spent on failed attempts.</p>
             <div class="table-scroll" tabindex="0" role="region" aria-label="Illustrative human effort per accepted change; scroll horizontally if needed"><table><caption>Illustrative human effort per accepted change</caption><thead><tr><th scope="col">Activity</th><th scope="col">Baseline</th><th scope="col">AI-assisted trial</th></tr></thead><tbody>
               <tr><th scope="row">Draft the change</th><td>60 minutes</td><td>20 minutes</td></tr>

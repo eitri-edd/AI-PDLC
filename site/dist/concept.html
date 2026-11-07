@@ -135,8 +135,8 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the agreed intent.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Decide what room booking should improve">
-            <p class="example-label">Fictional example · Decide what room booking should improve</p>
+          <aside class="example learning-example" aria-label="Fictional example: Decide what room booking should improve">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Define the outcome before choosing a solution</span><span class="learning-benefit">See how a team connects a booking problem to the outcome it wants to improve.</span></span></div>
             <p>The team investigates employees’ difficulty finding and reserving meeting rooms before choosing what to build:</p>
             <ul>
               <li><strong>Problem:</strong> employees report unavailable rooms appearing bookable and conflicting reservations.</li>
@@ -168,8 +168,8 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the specification and acceptance evidence.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Define when a room booking succeeds">
-            <p class="example-label">Fictional example · Define when a room booking succeeds</p>
+          <aside class="example learning-example" aria-label="Fictional example: Define when a room booking succeeds">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Define testable acceptance criteria</span><span class="learning-benefit">See how booking rules become checks for success, failure and concurrent requests.</span></span></div>
             <p>The team agrees these criteria for its booking application:</p>
             <ul>
               <li><strong>Confirmation:</strong> show a confirmed booking only after the server has committed the reservation.</li>
@@ -200,8 +200,8 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. Blue highlights the selection decision.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Supply reliable room availability rules">
-            <p class="example-label">Fictional example · Supply reliable room availability rules</p>
+          <aside class="example learning-example" aria-label="Fictional example: Supply reliable room availability rules">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Supply the context an agent needs</span><span class="learning-benefit">See how product rules and technical evidence guide an agent’s implementation.</span></span></div>
             <p>An agent is asked to add room availability search. “Available” needs a shared meaning. The developer supplies:</p>
             <ul>
               <li><strong>Product rules:</strong> confirmed bookings block overlapping slots; cancelled bookings do not. Include agreed opening hours and access restrictions.</li>
@@ -260,8 +260,8 @@
   </details>
   </figure>
           <ul><li><strong>Agent state:</strong> what the agent is doing now and what it will try next.</li><li><strong>Tools:</strong> the actions it can perform, such as reading files, using a browser or running tests.</li><li><strong>Memory:</strong> saved decisions, progress and reference information that later work can retrieve.</li><li><strong>Orchestration:</strong> how tasks are assigned, ordered and handed over.</li><li><strong>Safety:</strong> permissions, allowed actions and limits on time, attempts or spending.</li><li><strong>Observability:</strong> records of actions and results that help people investigate and review the work.</li></ul>
-          <aside class="example" aria-label="Fictional example: Equip an agent to test room reservations">
-            <p class="example-label">Fictional example · Equip an agent to test room reservations</p>
+          <aside class="example learning-example" aria-label="Fictional example: Equip an agent to test room reservations">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Equip an agent to verify its work</span><span class="learning-benefit">See how tools, permissions and a test environment support a bounded task.</span></span></div>
             <p>A developer asks a coding agent to implement booking confirmation. Its harness provides an editor, terminal, browser, test runner and isolated database with two simulated users. Saved setup instructions and progress notes support later runs; the task state records the latest failing check.</p>
             <p>Permissions restrict the agent to the project and test data. The workflow returns changed files, commands and test results to the developer. If the database cannot start, the agent records the blockage and requests help.</p>
             <p>Before accepting the work, the developer reruns the simultaneous-booking test and compares the responses and stored records with the agreed criteria. The developer also tries cancelling another test user’s booking and confirms rejection. Retain the diff, test configuration and results; return failed or inconclusive checks for correction.</p>
@@ -288,8 +288,8 @@
     <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show feedback or rework. Cut-corner shapes mark decisions. The enclosing boundary applies to the whole run. Blue highlights the goal and successful evidence.</p>
   </details>
 </figure>
-          <aside class="example" aria-label="Fictional example: Correct double booking and improve reusable instructions">
-            <p class="example-label">Fictional example · Correct double booking and improve reusable instructions</p>
+          <aside class="example learning-example" aria-label="Fictional example: Correct double booking and improve reusable instructions">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Learn from a failed implementation</span><span class="learning-benefit">See how a defect leads to a correction and better reusable instructions.</span></span></div>
             <p>A coding agent implements reservations using a skill: reusable instructions for planning, implementing and checking code. The team uses two connected feedback loops:</p>
             <ul>
               <li><strong>Correct the code.</strong> A concurrent-booking test confirms overlapping reservations for Alice and Ben. The agent inspects the trace, corrects reservation handling and reruns the agreed checks within the attempt limit. An unavailable tool, unclear rule or exhausted budget stops the run for the task owner.</li>
@@ -413,8 +413,8 @@
   </details>
   </figure>
           <p>For an unattended route, agree which changes are permitted, what checks are needed, who can pause it and how to recover. Running a coding task without supervision does not itself authorise merge or release.</p>
-          <aside class="example" aria-label="Fictional example: Deliver booking improvements">
-            <p class="example-label">Fictional example · Deliver booking improvements</p>
+          <aside class="example learning-example" aria-label="Fictional example: Deliver booking improvements">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Sequence work by risk and dependencies</span><span class="learning-benefit">See how different booking changes follow different implementation and review paths.</span></span></div>
             <p>The team receives a booking-label change, a concurrent-reservation defect and a request to let facilities staff cancel other users’ bookings. The permission change waits for an agreed product and access decision; the other items can become bounded development tasks.</p>
             <p>Agents implement agreed changes and collect check results in isolated environments. A reviewer compares each change with its criteria and unresolved findings. The team follows the release process authorised for that type of change.</p>
             <p>After release, the team investigates failed confirmations, overlapping bookings and cancellation errors. Record the affected version, relevant logs and an owner for follow-up work. User observations help assess whether room booking has become easier.</p>
@@ -447,8 +447,8 @@
             <tr><th scope="row">Cost-optimised model</th><td>Configuration C</td><td>Configuration D</td></tr>
           </tbody></table></div>
           <p>For each configuration, compare acceptance on held-out tasks, cost per accepted outcome, latency and token use, human correction effort, and security and policy compliance. A specialised harness can add time or cost, so evaluate its effect rather than assuming it helps every model or task.</p>
-          <aside class="example" aria-label="Fictional example: Compare a model and harness for a booking change">
-            <p class="example-label">Fictional example · Compare a model and harness for a booking change</p>
+          <aside class="example learning-example" aria-label="Fictional example: Compare a model and harness for a booking change">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Compare models and harnesses</span><span class="learning-benefit">See how consistent tasks and evidence support a useful configuration comparison.</span></span></div>
             <p>A developer tests the four configurations on reservation tasks, including simultaneous booking requests. Each run starts from the same repository revision, requirements, tools and limits in a separate environment. The harnessed conditions receive the same approved contracts, test feedback and guidance; the independent acceptance suite is withheld from every agent.</p>
             <p>The developer records accepted runs, elapsed time, token use, cost, correction effort and any control failures. Fresh booking tasks form the final evaluation set. A configuration is useful only if it meets the agreed criteria on those tasks; one successful fix does not establish a general ranking.</p>
           </aside>
@@ -488,8 +488,8 @@
           <p>Questions in the same request are evaluated independently against the same state. Code combines their answers, checks permissions and decides the next action. If a later question needs an earlier answer, build a follow-up request with that result. Open-ended writing and complex reasoning can remain with a generative model or a person. <a href="#source-24" aria-label="Source 23: TypeSafe, Primitives documentation">[23]</a></p>
           <p><strong>Confidence needs interpretation:</strong> Choice and Score include a confidence statistic derived from their probability distributions. Noul returns a yes/no probability without a separate confidence field. Confidence is not proof of correctness, and a valid output type does not establish that the judgement is right. Check accuracy and calibration on representative, held-out cases before setting thresholds for action, further analysis or human review. <a href="#source-25" aria-label="Source 24: TypeSafe, Confidence documentation">[24]</a></p>
           <p><strong>What the evidence supports:</strong> TypeSafe reports speed and cost gains on its own workflows; those gains depend on the comparison and deployment conditions. A separate 2026 preprint, <em>Fast Models, Slow Evidence</em>, found Jev more accurate than Laya on nine of eleven tested decision points, but neither model outperformed chance on zero-shot model routing. Its self-audit identified omitted costs and thresholds fitted on evaluation data that overstated deployment benefits. These findings concern that comparison and evaluation design, not all System One models or applications. <a href="#source-22" aria-label="Source 21: TypeSafe AI, Introducing System One Models and Jev">[21]</a> <a href="#source-26" aria-label="Source 25: Li, Fast Models, Slow Evidence">[25]</a></p>
-          <aside class="example" aria-label="Fictional example: Triage a service request with Jev">
-            <p class="example-label">Fictional example · Triage a service request with Jev</p>
+          <aside class="example learning-example" aria-label="Fictional example: Triage a service request with Jev">
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Triage a service request</span><span class="learning-benefit">See how a rubric and separate decisions guide a service-request workflow.</span></span></div>
             <p>Supply a request’s text, relevant service details and the triage rubric. Ask separately for its category, urgency and whether it reports an outage. Application code applies the validated routing rules. Uncertain, conflicting or uncovered cases go to a person; an LLM can draft a response when needed. Keep access and release approvals in their existing decision process.</p>
           </aside>
           <p><strong>Related research:</strong> Yu and colleagues’ System 2 distillation work concerns training models to answer directly from reasoning-derived examples. GPT-6 Astra reasoning effort and Claude thinking controls vary deliberation within generative models. These are related ways to balance computation and quality, but they do not establish the typed-decision interface that defines Jev. <a href="#source-16" aria-label="Source 15: Distilling System 2 into System 1">[15]</a> <a href="#source-21" aria-label="Source 20: OpenAI, GPT-6 model guide">[20]</a> <a href="#source-18" aria-label="Source 17: Anthropic, Claude Fable 5.1 documentation">[17]</a> <a href="#source-19" aria-label="Source 18: Anthropic, Claude Opus 5.5 documentation">[18]</a></p>
