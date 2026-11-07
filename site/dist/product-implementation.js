@@ -10,6 +10,12 @@ function revealImplementationJourney() {
   if (!id.startsWith('asset-') && !id.startsWith('implementation-') && id !== 'example-annual-workflow' && id !== 'example-permission-check') return;
   const target = document.getElementById(id === 'example-permission-check' ? 'example-annual-workflow' : id);
   if (!target) return;
+  // Technical anchors remain usable after their content moves into a supplement.
+  let disclosure = target.closest('details');
+  while (disclosure) {
+    disclosure.open = true;
+    disclosure = disclosure.parentElement?.closest('details');
+  }
   requestAnimationFrame(() => requestAnimationFrame(() => {
     if (window.location.hash !== requestedHash) return;
     target.scrollIntoView({ block: 'start', behavior: 'instant' });

@@ -16,7 +16,7 @@ Editorial requirements govern how authors prepare guidance. Organisational requi
 
 ## Write for the reader’s task
 
-Before drafting, identify the intended reader, what they already know and what the page will help them understand or do. A role name alone does not establish someone’s AI experience. State prerequisites where they affect the reader’s ability to follow the page.
+Before drafting, identify the intended reader, what they already know and what the page will help them understand or do. A role name alone does not establish someone’s AI experience. State prerequisites where they affect the reader’s ability to follow the page. Distinguish work the reader performs from work they commission or review with a specialist; explain what to ask for and how to use the result. Where “you” addresses one role on a page for several audiences, name that role. Distinguish the reader’s role from a fictional character’s job in the example.
 
 Start with a familiar problem and explain the mechanism before introducing specialist labels. Build from the reader’s existing knowledge, with a short example where an unfamiliar relationship needs explanation. Link to optional detail without making the reader leave the page to understand its main point.
 
@@ -72,9 +72,23 @@ After every edit, reread the affected passage and its surrounding text. Scale th
 - Give each paragraph a clear purpose and connect it to the next. Introduce ideas before relying on them, and remove abrupt topic changes or repeated explanations.
 - Keep terminology, roles, step names, example data and artefact identifiers consistent across prose, tables, diagrams and linked procedures.
 - Check that outputs support the next action, and that conditions, exceptions and decision authority agree throughout the affected workflow.
+- In a worked journey, explain how the evidence changes between decisions. If an early check passes and a later check fails, identify the different case, build, configuration or test coverage that explains the result. Do not invent a cause for a real failure; retain it as unresolved when the records do not establish one.
 - After shortening or moving text, repair references and transitions. Confirm that captions, source notes and directly linked sections still give readers enough context.
 
 Treat this reread as part of completing every edit. Revise any gap, contradiction or unnecessary repetition before marking the change complete.
+
+## Review teaching through reader tasks
+
+For a substantial learning change, define the reader action the edit should improve before rewriting. After each change, reread the passage and its surrounding material against that intent. In the maintenance record, link or quote the changed passage, explain whether it meets the intent and record corrections and remaining uncertainty. Reassess a correction before accepting it; an edit being present does not demonstrate that it helps.
+
+- Identify the reviewed page revision or dated local snapshot. Verify live behaviour and related work before treating a crawler omission, closed panel or old issue status as a content defect.
+- Separate observed problems, interpretations and proposed changes. Quote or link the affected passage and explain the consequence for the reader; a readability score alone does not establish comprehension.
+- Check whether a reader can identify who acts, what they compare, the evidence they retain and the next decision. Use a short task with an expected answer rather than asking only whether the page is clear.
+- Recheck the whole journey after local edits: definitions, responsibility, evidence, decision authority, examples and feedback must still agree. Moving a technical passage also requires checking its anchors, source mapping, disclosure access and print treatment.
+- Report what each check establishes: an author reread assesses the explanation; markup and link checks assess structure; browser checks assess the behaviour and layouts exercised; a reader session supplies evidence of comprehension. Identify skipped checks and remaining limits. A browser may repair malformed HTML, so a readable rendering does not establish valid source structure.
+- For new or substantially changed teaching, ask a representative reader with the stated prerequisites to attempt the intended task without corrective coaching. Record their answer, hesitation, assistance and consequential misunderstandings; revise the affected passage and repeat the task. If that session has not happened, retain the prompts and report comprehension as unverified. An agent's successful answer is not a substitute for observed reader results.
+
+Use specific conclusions such as “the revised passage names the failure route” or “the moved link opens its target”. Reserve claims about reader understanding for observed reader evidence. Preserve the distinction when summarising an otherwise successful edit.
 
 ## Make guidance actionable
 
@@ -91,9 +105,15 @@ Answer these questions in the surrounding passage:
 
 Keep the detail proportional to the task. A simple instruction can answer several questions in one sentence. Do not repeat information already clear in the section or add six labelled fields to every paragraph. Use a short list when a review contains several distinct checks; number it only when order matters.
 
+A role label alone is not an action: “Engineering owns feasibility” leaves the reader's contribution unclear. Say what they agree, ask, compare or decide with Engineering. When a step needs a summary, improve its existing output and next-action guidance before adding another box or checklist.
+
 For research and AI-generated summaries, explain how to compare claims with original records. Include relevant checks for duplicate counts, missing or contradictory evidence, and the difference between an observation and a proposed explanation. State what the reviewer retains and how unresolved claims affect the next decision.
 
 Use one short, labelled example when readers could still confuse two ideas or misapply the instruction. Show the original statement, what the evidence supports and what still needs checking. Explain unfamiliar terms in everyday language before relying on them in the steps.
+
+When teaching an evidence-based decision, show a completed example of the report or record, including the result, unresolved findings, decision maker and next permitted action. A list of fields alone does not teach how to interpret the evidence. Identify the version or scope assessed; a passing aggregate score cannot override a failed required criterion.
+
+Distinguish accepting a change from authorising its release, and requesting an exception from granting one, wherever those decisions arise. Use the applicable authority rather than assigning approval to the reader by implication.
 
 ## Language and terminology
 
@@ -129,7 +149,9 @@ These definitions guide usage; testing, evaluation, verification and validation 
 
 Use “stage” for a named part of the lifecycle, “activity” for work within it, “step” for an action in a procedure and “decision point” for a choice that affects what happens next. Preserve “phase” when describing an external methodology that uses it, and explain its relationship to the guide’s stages.
 
-Keep a shared glossary as the site grows. Use one term for one concept and distinguish established terms, working definitions adopted by this guide and product-specific vocabulary. For an emerging or ambiguous term, explain the mechanism in plain language, state how this guide uses the term and cite the source where relevant. Apply this rule to labels such as “harness engineering”, “loop engineering”, “graph engineering” and “software factory”; do not assume they have the same meaning across publications.
+Keep a shared glossary as the site grows. Use one term for one concept and distinguish established terms, working definitions adopted by this guide and product-specific vocabulary. Define unfamiliar terms where readers need them; a glossary supplements that explanation. When two terms are easily confused, contrast them through the same task or case.
+
+When sources use the same term differently, choose a consistent term for the guide and explain the source mapping in the adaptation notes. Do not make readers alternate definitions within a procedure. Distinguish confusing vocabulary from a factual contradiction, and explain when a classification depends on context. For emerging terms such as “harness engineering”, “loop engineering”, “graph engineering” and “software factory”, explain the mechanism, state this guide's usage and cite the source where relevant.
 
 ### Use descriptive names for references
 
@@ -174,6 +196,23 @@ Check that a source supports the particular claim and applies to the activity be
 
 Never invent EDS committees, approval gates, job titles, mandatory templates or policy references. Mark unresolved details as authoring placeholders and resolve them before publication.
 
+### Teach measurement with a complete example
+
+When teaching how to measure a result, carry one coherent record from the intended benefit through its definition, baseline, target, observation and next decision. Introduce the plain questions before specialist calculation or collection fields. Include:
+
+- what counts, the people or cases included, and the observation period;
+- the baseline and its source, the proposed target and review date;
+- how the result is collected and checked, who owns it, and applicable guardrails; and
+- what meeting, missing or breaching a criterion would change, including an inconclusive result.
+
+For rates, show the calculation and keep the denominator visible. Explain changes in the counted population or period before comparing results. Keep measures separate when combining them would hide an important failure. Explain what the evidence can support; meeting a target does not itself establish causation or override another decision criterion.
+
+Do not invent a historical baseline for a new service. Explain how the first comparable observation period will establish one, and keep an earlier workflow's product baseline separate from the new service's delivery measures. Show counts beside rates when a changed denominator could suggest an improvement that the event count does not support.
+
+Distinguish zero from an unobserved or undefined measure. Deployments with no failures can have a zero failure rate, but provide no observed recovery time. With no deployments, the failure rate has no denominator. State the missing evidence rather than substituting zero.
+
+Label additional fictional planning figures where they enter an established case. Keep observed findings, targets and hypothetical future results distinguishable; a conditional example is not a completed test. Carry the same definitions into the handoff and later review.
+
 ## Separate topic explanations from learning examples
 
 Use the handbook's existing blue diagram theme to explain a topic, mechanism, method or general process. Its labels show the actions, roles, decisions and relationships the reader needs to understand. The explanation should make sense without knowing the fictional application used elsewhere on the page.
@@ -188,13 +227,19 @@ Keep the AI-SDLC overview focused on the end-to-end lifecycle, responsibilities,
 
 ## Structure substantial learning chapters
 
-When a lifecycle chapter combines general guidance, one sustained fictional case and a method catalogue, make three distinct and optional reading paths:
+When a lifecycle chapter combines general guidance, one sustained fictional case and a method catalogue, make three distinguishable reading paths:
 
 1. **Understand — playbook.** Explain the general purpose, prerequisites, people, actions, expected outputs, evidence and decision authority without relying on fictional characters. Keep its explanatory diagrams, method tables and primary headings case-independent.
 2. **Apply — continuous worked example.** Introduce the fictional premise once. Follow one coherent story, with each chapter showing the situation, team action, observed evidence, decision and what changes next. Present implementation as requirements → technical design → small tasks → implementation → independent verification → authorised release → monitoring and learning. Explain feedback routes; never imply a preselected solution or automatic approval.
-3. **Explore — reference toolkit.** Defer optional frameworks, deeper platform and risk checks, measurement catalogues and supplementary case illustrations. Do not interrupt concept tables or role descriptions with multiple miniature fictional examples.
+3. **Explore — reference toolkit.** Defer method catalogues, framework comparisons, detailed calculation and collection instructions, and specialist implementation checks. Keep the purpose, applicability, essential limits and next action in the playbook. Optional reading does not make an applicable check optional. Do not interrupt concept tables or role descriptions with multiple miniature fictional examples.
 
 Give each reading path a meaningful text label and a clear visual boundary using `design.md`. Link theory steps and the corresponding case chapters both ways; preserve deep-link IDs and cross-page handoffs. A reader should understand the playbook without the fictional case and follow the case without opening the optional library.
+
+Within the main case, explain why each technical choice matters to the requirement and which task or check tests it. Move detailed service catalogues and configuration mechanics to the reference path when they interrupt that reasoning. Preserve their full content and technical anchors; update surrounding links and attribution to match the new location. If summarising local thresholds, retain their scope, revision dependence, blocking conditions and required or optional status, with a link to the maintained procedure.
+
+Choose the teaching order for the reader's difficulty. A brief, labelled introduction to the running case can precede the playbook. One compact, clearly separated example beside an unfamiliar distinction can connect the rule to a task; keep the full story in the case path. The general instruction should still make sense if the reader skips the example.
+
+Judge reference placement by what the reader needs for the next action, rather than by whether material sounds technical or sits in a closed panel. Use question-led choices before a catalogue, and explain when to open it. Reuse existing definitions and examples before adding another glossary or illustration.
 
 Across the handbook, use the Method first example header from `design.md`: “Worked example”, the method or topic, and a short learning benefit for each standalone example and main journey chapter. Compact supplements can omit a separate benefit when their descriptive title and immediate content explain the learning purpose. Keep these visible when an accordion is collapsed. State the benefit concretely, such as “See how observations become a clear problem statement.” Place the fictional scenario question inside the expanded body. Supplementary examples retain descriptive topic titles and identify their learning purpose before expansion.
 
@@ -266,13 +311,15 @@ Use one page title and sentence case for headings. Prefer specific headings such
 
 Use prose for explanation, numbered lists for sequences, bullets for parallel items and tables for comparisons. Avoid deeply nested lists and wide tables filled with paragraphs.
 
+Keep a decision readable alongside the evidence and responsibility that explain it. Check the actual reading column as well as narrow screens; do not accept a layout that hides the next action while making the introductory columns easy to read. Shorten or reorganise the comparison and use the responsive treatments in [design.md](design.md). Use one numbering scheme for each sequence; distinguish chapter labels from activity numbers and avoid competing manual and automatic numbering.
+
 When an example contains three or more parallel items, types, options or checks, put them in a bullet list rather than running them together in a sentence. Introduce the list with a complete thought, keep the items grammatically consistent and explain the result or next action afterwards where needed. Apply this rule inside learning panels and table cells as well as in the main text. Use numbered lists when order matters, and keep comparison tables when readers need to compare the same attributes across options. Keep connected explanation in prose; do not turn every sentence into a bullet.
 
 Write learning examples in familiar language that readers could use in conversation with a colleague. Spell out relationships such as “who holds the asset and whether it works” instead of compressed wording such as “custody/status”. Keep precise terms where needed, explain them at first use and use the same names throughout a continuous example.
 
 Make link text meaningful on its own: “Read the evaluation guide”, not “click here”. Include the file type for downloads. Use callouts only for an exception, a consequential requirement or a useful example; keep essential instructions in the main flow.
 
-Diagrams need a caption explaining their purpose and a text equivalent for the relationships they convey. Classify each as a topic explanation or learning example before styling it. Use descriptive action and decision labels; do not make the image the only place an instruction appears.
+Diagrams need a caption explaining their purpose and a text equivalent for the relationships they convey. Classify each as a topic explanation or learning example before styling it. Use descriptive action and decision labels; do not make the image the only place an instruction appears. An adjacent table or list can serve as the equivalent if it preserves the diagram's relevant relationships, choices and return routes. Remove duplication without removing accessible meaning.
 
 ## Editing examples
 
@@ -323,17 +370,17 @@ Record a content owner, last-reviewed date and applicable lifecycle version for 
 Display dates as “27 September 2026”. Store machine-readable dates as `2026-09-27`. Change the review date after a substantive review, not automatically on every site build.
 
 ## Editorial acceptance checklist
-- [ ] Standalone source credits and adaptations appear only in the final Sources section, while material caveats and operational links remain in context.
-- [ ] Substantial teaching chapters separate independent theory, the continuous fictional case and optional reference material when that structure aids learning.
 
+- [ ] Standalone source credits and adaptations appear only in the final Sources section, while material caveats and operational links remain in context.
+- [ ] Substantial teaching chapters distinguish general guidance, the continuous case and reference material; short examples help without making the general instructions depend on the case.
 - [ ] The opening tells the intended reader what the page helps them do or understand.
 - [ ] Prerequisites match the reader’s assumed knowledge, and the page structure fits its main purpose.
 - [ ] Explanations introduce unfamiliar mechanisms before relying on specialist labels and connect ideas naturally.
-- [ ] Instructions identify actions, outputs and ownership where needed.
+- [ ] Instructions identify actions, outputs and ownership, including what the intended reader asks of specialists or does with their findings.
 - [ ] Each procedure or review explains its inputs, actual checks, basis for judging the result, recorded output and next action.
 - [ ] “Check”, “review”, “validate” and “ensure” are followed by enough detail for the reader to perform the work.
 - [ ] Difficult distinctions have a short example where needed; observations, interpretations and untested explanations remain separate.
-- [ ] Terms are consistent and abbreviations are explained.
+- [ ] Terms are explained in context and used consistently; different source definitions are mapped without changing meanings mid-procedure.
 - [ ] References use descriptive names rather than invented pointer codes; traceability is retained through links and technical records.
 - [ ] Topic diagrams explain general content in the blue theme; fictional application diagrams and related panels use the shared lavender Method first treatment specified in `design.md`.
 - [ ] Worked-example headers use the shared label and book mark on every page; standalone and main journey headers state a concrete learning benefit, and collapsed supplementary groups preview their subjects.
@@ -341,18 +388,20 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 - [ ] Ambiguous terms have a clear scope; house definitions and named external methodologies remain distinguishable.
 - [ ] Stage guidance explains AI’s contribution, the checks on its output and the responsibilities or decisions retained by people.
 - [ ] Generic disclaimers are consolidated; material limitations, control boundaries, attribution and licence credits remain where needed.
-- [ ] The changed section, surrounding passages and affected linked guidance have been reread for coherent flow, consistent examples and complete handoffs.
+- [ ] The changed section, surrounding passages and affected linked guidance have been reread; evidence supports each next decision and explains changed results within the journey.
 - [ ] Claims have appropriate evidence; recommendations and examples are labelled clearly.
+- [ ] Where measurement is taught, the worked record retains definitions, populations, periods, calculations, owners and decision criteria; illustrative figures and future results cannot be mistaken for observations.
+- [ ] The core path supports the next action without requiring a catalogue; applicable limits remain visible when detail moves into a reference.
+- [ ] Decision examples show a completed record and its consequence; aggregate scores, acceptance, exceptions and release permission retain their distinct meanings.
+- [ ] Reorganised content retains usable anchors and correct attribution; structural and browser checks cover the changed links, disclosures and reading layouts, with untested behaviour recorded.
 - [ ] Requirements cite a confirmed authority and state where they apply.
 - [ ] Examples contain no invented organisational facts.
 - [ ] Learning examples sound natural, and groups of three or more parallel items use bullets; sequences and comparisons retain the structure that helps readers follow them.
 - [ ] Headings and link text make sense when scanned independently.
 - [ ] The page includes a useful next step and current ownership metadata.
-- [ ] A representative reader can explain the concept in their own words, identify the next action and distinguish recommendations from requirements.
+- [ ] The task-based review records author, structural, browser and representative-reader evidence separately; pending comprehension checks remain explicitly unverified.
 
 Do not mark a procedure or review activity editorially complete while readers still have to invent the checking method or infer what to record. Before accepting it, ask whether a reader unfamiliar with the topic could carry out the next action using the passage and its linked inputs. Revise the passage if they could not. This is an authoring acceptance rule, not a new organisational approval gate.
-
-For a new or substantially changed explanation, tutorial or procedure, check understanding with a representative reader who has the stated prerequisites. Ask them to explain the concept or perform a representative task using the documentation. Observe where they hesitate, misinterpret a term or need missing information; revise those passages. Record the task and findings in maintenance notes. A general statement that the page is clear does not demonstrate that the reader can use it.
 
 ## Sources for this standard
 

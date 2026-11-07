@@ -33,3 +33,17 @@
 .implementation-toolkit-header{margin:3rem 0 1.25rem}
 @media(max-width:800px){.implementation-learning-path{grid-template-columns:1fr}.implementation-chapter-nav ol{grid-template-columns:1fr}}
 @media print{.implementation-case-extras,.implementation-case-supplement{break-inside:auto}}
+
+/* Decision tables must expose the action and its evidence without sideways reading. */
+.implementation-decision-table{min-width:0!important;table-layout:fixed}
+.implementation-decision-table :is(th,td){overflow-wrap:break-word}
+.implementation-decision-table thead th{white-space:normal}
+.implementation-decision-table :is(th:first-child,td:first-child,th[scope="row"]){width:18%;min-width:0}
+@container(max-width:700px){
+  .implementation-decision-table{table-layout:auto}
+  .implementation-decision-table :is(th:first-child,td:first-child,th[scope="row"]){width:auto}
+}
+@media print{
+  .table-scroll:has(.implementation-decision-table){overflow:visible}
+  .implementation-decision-table{min-width:0!important}
+}

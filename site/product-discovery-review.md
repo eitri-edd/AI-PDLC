@@ -1,5 +1,166 @@
 # Product discovery merge review
 
+## Issue 29: changes and review after revision, 7 November 2026
+
+Prepared a local revision of [Project Discovery](dist/product-discovery.html) against [issue 29](https://github.com/eitri-edd/AI-PDLC/issues/29). The issue's readability scores are editorial judgements; this revision does not treat them as measured comprehension. No GitHub comment, commit, publication or issue update forms part of this change.
+
+Each item below records the intended improvement, actual revised wording or structural change, and the assessment after rereading it with the surrounding section. **Text intent met** means that the revised content supplies the explanation or action identified here. It does not mean that an aspiring PM has demonstrated comprehension. The representative-reader check required by `writing.md` remains pending.
+
+### 1. Human judgement and the shared environment
+
+**Intent:** show who does the work, what AI contributes, and who checks or decides.
+
+**Changed:** the optional responsibility table now starts with a labelled Maya illustration: “AI groups Maya’s interview notes. Product checks the findings against the original notes; Engineering checks claims about permissions.” Specialist responsibility cells use questions about building, changing direction, data, dependable results and rules. The environment list asks where current information lives, what the agent may change, where work is visible, who reviews it and who can approve consequential actions.
+
+**Review after change — text intent met.** A reader can assign a reviewer and identify the next investment decision without interpreting “runtime controls” or “control mapping”. Technical responsibilities and local decision authority remain explicit. The reference remains optional; the core role descriptions still stand independently. Real role assignments need the organisation's own arrangements.
+
+### 2. AI-assisted development versus an AI product
+
+**Intent:** let readers identify when additional agent-journey checks apply.
+
+**Changed:** “Using AI to summarise Maya’s interviews is AI-assisted development. Adding AI that interprets members’ fault reports makes AI part of the product: an AI feature.” A separate sentence covers agents operating the product, including an external agent using software that contains no AI itself.
+
+**Review after change — text intent met.** Development assistance, product AI and agents acting through a product are distinguishable. The previous sentence's restricted “only products with agents” implication is removed. The example does not assert that Maya's planned pilot contains AI; it illustrates the distinction conditionally. Applicability points directly to the agent checks.
+
+### 3. Twelve-method catalogue
+
+**Intent:** help a new PM choose the next test without learning twelve methods first.
+
+**Changed:** moved the complete, already-collapsed catalogue from Step 3 into the optional reference toolkit. Kept a descriptive link from Step 3 and moved both contents entries into the toolkit's position. The core retains the four-risk questions, practical starting methods and their evidence limits.
+
+**Review after change — text intent met.** Readers can proceed from uncertainty to a test without opening the catalogue. All twelve methods, source links, limits and the published `experiment-methods` anchor remain. The review does not claim that this material was previously fully expanded or compulsory. The core still explains that a small exploratory comparison cannot establish a population effect or settle every risk.
+
+### 4. Arrangements for running and closing a test
+
+**Intent:** translate data and access requirements into questions a PM can resolve before testing.
+
+**Changed:** a fictional example starts with asset records, simulated actions, isolation from the live register and ownership of research access. The checklist asks: “What information may we use?”, “May this tool receive the information?”, “What will participants be told?”, “What can the prototype change?” and “Who closes the experiment?” Synthetic data and retention are explained in everyday language.
+
+**Review after change — text intent met.** The experiment owner can take these questions to the appropriate specialists and record answers. Consent or other applicable participation requirements, withdrawal, provider handling, permissions, stop conditions, expiry and production checks remain. The text says fictional records can test an interface but do not establish real user behaviour; using safer test data does not become a substitute for research.
+
+### 5. Step 6 measurement plan
+
+**Intent:** make it possible to prepare a measurement plan while retaining enough precision to interpret the result.
+
+**Changed:** five visible questions cover the useful result and counted cases, baseline and target, collection and ownership, unacceptable results, and review decisions. They link to Maya's completed planning example. Detailed fields sit in an optional “define and check the measurement record” disclosure. Numerator, denominator and instrumentation are explained where they appear.
+
+**Review after change — text intent met; operational values remain to be agreed.** The first pass is an actionable set of questions rather than a dense collection specification. The detailed record still covers exclusions, failed attempts, source dates, missing baselines, duplicate counts, access, owners, comparisons and actions. Its collapsed state is not permission to omit necessary collection work; the handoff check still requires definitions, owners and collection plans.
+
+### 6. AI-assisted findings and provenance
+
+**Intent:** explain what to retain and why, without making the handoff a collection of unexplained metadata.
+
+**Changed:** “AI suggests that members misunderstand asset status. Design checks the relevant interview passages and records which observations support or contradict the suggestion.” The accompanying instruction joins the finding, source passage or controlled link, reviewer, relevant AI setup and decision.
+
+**Review after change — text intent met.** A finding is linked to the original observation and the requirement it changes. Tool versions and instructions have a purpose: investigating how a material generated claim arose. Sensitive originals remain controlled rather than being copied into every document. Generated scenarios and rejected interpretations remain distinct from user evidence. This explains provenance without claiming reproducibility from a version number alone.
+
+### 7. Technical assumptions and spikes
+
+**Intent:** help the PM commission and interpret a technical investigation rather than perform it without Engineering.
+
+**Changed:** Step 3 defines a spike as “a short technical investigation to answer a specific question” and connects it to handover permissions. The technical reference starts with “What could prevent this solution working, and what small test would tell us?” Response time explains latency; the TRD appears as the destination for findings during technical design.
+
+**Review after change — text intent met.** The PM can agree the question, time limit and decision. Engineering remains responsible for the technical method and evidence. The reference preserves tests of denied actions, actual dependencies, failure, recovery, cost and AI comparisons. A simulated interaction is explicitly distinguished from testing the real connection. Deep-linking to the technical reference remains supported.
+
+### 8. Frameworks table
+
+**Intent:** make the library useful for lookup without requiring a framework-selection exercise.
+
+**Changed:** the introduction says, “You can use the six steps without choosing a named framework.” Each framework row starts with a question, such as “Are we choosing a solution too early?” and “How do we connect needs, options and tests?” The framework names, source links and working artefacts remain.
+
+**Review after change — text intent met.** A reader can identify why to open a row and can skip the section entirely. The table remains a specialist reference and is still long when expanded; this revision does not claim to turn it into introductory reading. It preserves continuous collaboration, rather than implying separate discovery and delivery teams.
+
+### 9. Agent journeys / AUX
+
+**Intent:** explain agent interaction through a recognisable task before introducing the specialist label.
+
+**Changed:** the reference starts with an agent drafting Alex's fault report. It asks whether Alex can check the asset and description and whether the agent checks for success before retrying after a timeout. “Task and information” and “human takeover” replace less familiar row labels. AUX is defined after the example.
+
+**Review after change — text intent met.** The reader can recognise permission, duplicate-action and takeover failures. The section remains conditional on an agent operating the product. Its existing checks of missing information, denied access, partial completion, resulting system state and variable behaviour remain. A human-looking draft or successful API request is not presented as proof that the complete task succeeded.
+
+### 10. Advanced intent, decision and requirement linking
+
+**Intent:** show why linked records help before discussing machine-readable formats.
+
+**Changed:** an example connects members choosing the wrong status, revised response choices, the requirement to preserve answers and the acceptance check on Maya's queue. The general instruction says, “A reviewer should be able to follow a requirement back to its reason and evidence.” Automatically checked records have a separate optional subsection.
+
+**Review after change — text intent met.** The benefit is intelligible without knowing schemas or policy languages. Version ownership, conflicting requirements, source checks and decision records remain. Machine-readable records are described as checking specific conditions, not as understanding the user need or proving that the requirement is correct.
+
+### 11. Measurement vocabulary and uptime
+
+**Intent:** use stable meanings across selection, testing, handoff and later review.
+
+**Changed:** the core defines value measure and North Star, then calls relevant behaviours “supporting measures” and effort/funding/compute “resources”. It explains the external term “input metric” once. The ladder uses resources invested, supporting measure, user-value measure and organisational outcome. It explicitly describes different questions rather than ranks of evidence strength. Uptime is illustrated as an asset-service reliability guardrail, with the broader contextual qualification retained in the source adaptation.
+
+**Review after change — text intent met.** The guide no longer teaches two operational definitions of input. It does not claim uptime is always a guardrail, that usage proves value or that a higher ladder position establishes causation. Maya's candidate value measure is not declared an established North Star. The original page already explained the terminology distinction; the revision reduces the burden of remembering it rather than claiming to repair a proven technical contradiction.
+
+**Measurement example review:** the case now separates record accuracy from resolution of reported problems. Additional explicitly fictional planning figures show 72 correct records out of a fixed roster of 100, an illustrative target of 90%, a four-week review, supporting handover acknowledgements, guardrails and named collection/review roles. An 86% result is conditional, not an invented observed outcome. The original eight-member study and annual-cycle limits remain separate. Real baselines, target justification and operating thresholds are deliberately left to the team before release.
+
+### 12. Sources and attribution
+
+**Intent:** preserve verification and attribution without presenting source history as another lesson.
+
+**Changed:** collapsed section-attribution and adaptation notes in the existing final Sources section. The numbered bibliography remains visible, with every existing external source URL, reference number and ID retained. Material limitations stay beside the claims they qualify.
+
+**Review after change — text intent met.** A reader can skip adaptation history or inspect it deliberately. Direct links to the measurement adaptation reveal the disclosure. Source prose was already at the end, so this is a small reading-path improvement rather than a major content correction. No external source was deleted and no new source-check date was invented.
+
+### Review of the nine near-misses
+
+| Pointer | Actual change | Assessment after the change |
+| --- | --- | --- |
+| Concept brief / draft PRD / evidence-backed PRD | Introduced the progression as why to investigate, behaviour worth testing and scope to build; explicitly avoided three compulsory document gates. | Text intent met: the table retains maturity and evidence expectations without adding an approval sequence. |
+| North Star definition | Defined value measure before North Star; used accurate asset records as a candidate, linked to the completed case. | Text intent met: a feature-level target and an established product North Star remain distinct. Reader classification still needs observation. |
+| Measurement thread | Replaced the abstract arrow chain with actions at selection, test planning and handoff, all pointing to the same case record. | Text intent met: readers can locate the next action and see why prototype results are separate. |
+| SVPG four-risk note | Put four plain questions before the established labels and attribution in Step 3. | Text intent met: value, usability, feasibility and viability remain separate; the tests are alternative starting points. |
+| Independent judgement | Named comparison with original observations, another explanation, limits and the treatment of unsupported claims. | Text intent met: the reviewer has a method; no new approval board or universal gate is invented. |
+| Investigation / implementation / release | Added the questions of funding learning, funding the scope and permitting the implemented version into use. | Text intent met: funding a pilot remains separate from releasing it. The existing evidence table is preserved. |
+| Human approval and risk tolerance | Specified permissions and approval points before action; exceeding a boundary stops work for referral. Approval cannot make a prohibited action permissible. | Text intent met: the action and escalation route are concrete. Actual authorities and limits remain local. |
+| Figure 6 traceability | Added a wrong-status → distinct-answer requirement → saved-answer check in the case and linked it to the existing figure. | Text intent met: there is a concrete chain, and the topic diagram retains its accessible text equivalent. |
+| Frameworks introduction | Stated that the six steps work without selecting a framework and made the table question-led. | Text intent met: frameworks are optional aids rather than extra stages. |
+
+### Shared changes and second-pass corrections
+
+- Moved the existing Maya introduction before roles and method, retaining its `worked-example` anchor and the six-chapter case. Short examples use the existing lavender treatment. Detailed cases remain separate from the general blue diagrams.
+- Replaced the six existing Output/Next panels with PM action, record, next decision and readiness summaries. This reuses the existing panels rather than stacking six additional callouts.
+- On rereading, the first draft's test-stage summaries only named owners. Revised Steps 3 and 4 to say what the PM agrees or checks.
+- On rereading, “Maya needs dependable records” blurred a need with an outcome. Revised the case to describe the desired change separately from members' reporting difficulty and possible concepts.
+- Split the Step 5 opening into the evidence comparison and the next investment action. Preserved Commit / Continue / Improve / Redesign / Pivot / Defer / Stop and their return routes.
+- A link check found a newly mistyped Figure 6 anchor; corrected it to the existing `fig-stack` ID. Visual inspection found the relocated introductory panel's direct link could sit under the fixed header; added a page-specific scroll margin and checked it again.
+- Kept diagram text alternatives rather than deleting accessible explanations to meet a word-count goal. Kept source mappings and all existing safety/evidence qualifications in moved references.
+
+### Verification and remaining reader check
+
+The browser and link verification results are recorded in `.preview/issue29-validation.json`. They cover 100 preserved IDs, all local page links and assets, balanced HTML, matching contents, the catalogue's placement, desktop/mobile layouts with references closed and expanded, direct links, header clearance, diagram text equivalents, print restoration, enlarged text and use without JavaScript. Screenshots of the introduction, measurement questions, mobile measurement example and framework reference were visually inspected. Whitespace checks cover the tracked changes.
+
+**Representative-reader verification remains pending.** Following `writing.md`, ask a reader with delivery experience who is learning product management to do these tasks with the revised page:
+
+1. Distinguish Maya's desired outcome, the researched opportunity and two possible concepts.
+2. Select a test for the largest uncertainty and explain what it would leave unresolved.
+3. Use the fictional measurement record to explain the denominator, why 86% misses the target and why 90% does not override unauthorised changes.
+4. Explain why eight successful prototype tasks do not establish production readiness, population benefit or a causal improvement.
+5. Identify their next action and the person who decides whether to fund it.
+
+Record the reader's answers, hesitations, missing information and requested help. Revise any passage that fails the task. An author self-review and browser checks cannot substitute for this evidence, so the issue's comprehension intent is not marked fully verified.
+
+## Writing standard refinements from issue 29, 7 November 2026
+
+Reviewed the lessons above against the current [writing standard](../writing.md), including the task-based teaching-review section already added during the Product implementation work. Extended that section rather than duplicating its review protocol. These are house editorial choices drawn from the revisions, not new externally validated findings or organisational delivery requirements.
+
+| Lesson from the change and reread | Refinement to the standard | Assessment after refining the rule |
+| --- | --- | --- |
+| A responsibility label did not explain the PM's contribution to a specialist test. | Distinguish work readers perform, commission and review; require the action and use of the result. Improve existing summaries before adding boxes. | Covers the actual failure without imposing a six-field template on every paragraph. |
+| Separation of theory and examples could be read as forbidding a helpful early scene. | Permit a brief labelled case introduction and a compact example beside a difficult distinction, while keeping general instructions independent. | Resolves the tension between familiar-problem-first teaching and separate reading paths. It does not require Maya in every section or every page to start with a story. |
+| Optional reference material was mistaken for compulsory core reading, while some technical checks were still essential. | Judge placement by the next reader action. Keep purpose, applicability, essential limits and next action visible; link question-led choices to detailed references. | Preserves applicable checks and technical precision. A collapsed panel alone neither establishes a defect nor makes its content unnecessary. |
+| Existing definitions were present but did not resolve confusion between neighbouring concepts. | Contrast easily confused terms through the same task; reuse existing definitions and examples before adding another glossary. | Targets understanding of relationships rather than definition count. |
+| Two sources' meanings of input increased the reader's burden; uptime was not universally misclassified. | Choose stable guide terminology, map source usage in adaptation notes and identify context-dependent classifications. | Prevents alternating definitions without declaring every vocabulary difference a factual error. |
+| Separate metric passages did not teach a complete measurement decision; new numbers could resemble actual findings. | Teach one record from benefit through calculation, population, baseline, target, collection, result and decision. Distinguish observations, targets and conditional fictional results. | Retains denominators, provenance, owners, guardrails and evidence limits. The rule applies when teaching measurement, rather than requiring a full measurement tutorial around every reported number. |
+| Replacing diagram prose wholesale could remove an accessible explanation. | Allow an adjacent table or list as the text equivalent only when it preserves relationships, choices and return routes. | Supports reducing duplication while preserving accessible meaning. |
+| An edit could exist without fulfilling its intended teaching action. | Extend the existing per-change review rule to link the changed passage, explain the assessment, record corrections and reassess them. Strengthen the reader-evidence checklist. | Keeps editorial review, structural checks and observed human comprehension separate; pending reader work cannot be reported as a pass. |
+
+Rereading the standards edit found two scope problems. Moved the measurement subsection after the general source and policy rules so it did not accidentally contain them. Narrowed its checklist item to passages that teach measurement, avoiding a new requirement to expand every numerical example into a tutorial. Rechecked the reading-path rules against familiar-problem-first guidance and the independent-playbook requirement; the compact example is an aid, not a dependency.
+
+Preserved the existing terminology table, source URLs, organisational-authority boundary and representative-reader requirement. Checked Markdown headings, local document links, retained source references and whitespace. This standards change makes no new claim that the revised pages have passed a human-reader session.
+
 ## Targeted writing review, 4 November 2026
 
 Refined the requested sections against `writing.md`, with concrete inputs, actions, evidence checks, recorded outputs and next decisions.

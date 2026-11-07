@@ -55,6 +55,8 @@
   border-block: 1px solid var(--border-strong);
   font-size: 0.9375rem;
 }
+/* Keep the introductory case and measurement record visible below the header. */
+:where(#worked-example, #maya-measurement) { scroll-margin-top: 6rem; }
 .example-route { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-block: 1rem 1.5rem; }
 .example-route a { padding-block: 0.35rem; }
 .anchor-alias { display: block; scroll-margin-top: 6rem; }
