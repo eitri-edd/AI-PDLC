@@ -1,7 +1,7 @@
 # Design system proposal
 
 For EDS’s AI-Software Development Lifecycle knowledge site
-Status: Proposed visual system · Version: 0.7 · Updated: 7 November 2026
+Status: Proposed visual system · Version: 0.8 · Updated: 7 November 2026
 
 ## Design direction
 
@@ -14,7 +14,7 @@ Pair this system with [writing.md](writing.md). Content clarity takes priority o
 ## Principles
 
 1. **Make reading and comprehension effortless.** Give explanations a stable, comfortable reading column (`47.5rem`, expanding to `58rem` when the left navigation rail is collapsed) on a pure white canvas (`#FFFFFF`), framed by subtle cool-alabaster navigation and context panels (`#F8FAFC`).
-2. **Give topic explanations and examples distinct treatments.** Reserve the existing blue diagram theme for explaining topics, methods and general processes. Fictional learning content uses Method first in Project Discovery and Product implementation, and Matte Stone elsewhere. Visible labels identify examples in both treatments. Royal blue still identifies navigation, links and focus; indigo also identifies learning within the two product chapters.
+2. **Give topic explanations and examples distinct treatments.** Reserve blue for general topic diagrams, teal for AI assistance and the shared pale lavender and plum Method first treatment for worked examples on every page. Visible labels identify their purpose without relying on colour.
 3. **Create depth through crisp hairline borders and micro-elevation.** Use `1px` borders (`#E2E8F0` and `#CBD5E1`) paired with subtle, multi-layered ambient shadows on cards, tables and diagram frames so structure is immediately legible without heavy chrome.
 4. **Make structure, context and flow immediately visible.** Include an eyebrow label, lead paragraph and an at-a-glance **Page map** (`This page at a glance`). Maps usually show four reading groups; use three for a branching route where appropriate. Use diagrams and purposeful motion to explain actual loops, decision gates, parallel fan-out and feedback paths.
 5. **Keep interactions predictable, fast and accessible.** Prefer familiar links, collapsible navigation rails, instant table filtering and keyboard-accessible diagram controls (`Step through` and `Pause / Play`). Always honour `prefers-reduced-motion`.
@@ -31,7 +31,7 @@ Use semantic tokens in components so the palette remains consistent across pages
 | `surface-muted` | `#F1F5F9` | Code pills, neutral badges and subtle hover states |
 | `surface-selected` | `#EFF6FF` | Selected navigation, note callouts and highlighted diagram nodes |
 | `surface-accent-subtle` | `#F5F8FF` | Subtle tinted backgrounds for callouts and next-step banners; page maps remain transparent |
-| `surface-example` | `#F3F0EB` | Alias of `example-surface`; white inside `.method-learning` |
+| `surface-example` | `#F7F4FC` | Alias of `example-surface`; the shared lavender worked-example surface on every page |
 | `text-primary` | `#0F172A` | Headings, primary labels and diagram node titles |
 | `text-body` | `#1E293B` | Long-form article body text for comfortable contrast |
 | `text-secondary` | `#475569` | Metadata, captions, table cells and supporting descriptions |
@@ -60,64 +60,53 @@ Keep blue purposeful. Avoid dark-mode neon glows, heavy full-bleed gradients or 
 
 ## Topic diagrams and fictional learning examples
 
-Choose the visual's purpose before choosing its colours. The existing Editorial Enterprise Light blue diagram theme explains the topic or general content. Fictional applications use **Method first** in Project Discovery and Product implementation, scoped by `.method-learning`, and **Matte Stone** elsewhere. Both treatments separate the application from general guidance through a consistent example boundary and visible label. The palettes below identify learning content, not risk, approval or implementation status.
+Use one Method first worked-example treatment across every handbook page, including Organisation transformation, Concepts, Project Discovery, Product implementation, EDS AI Workflow and Training. A pale lavender surface and muted plum rule give examples the same visual weight as the teal AI-help panels. The book mark and visible label identify learning content without relying on colour. These colours communicate a teaching purpose, not risk, approval or implementation status.
 
-| Content | Theme and caption | What belongs in the visual |
+| Content | Treatment | What belongs in it |
 | --- | --- | --- |
-| Topic explanation | Existing white/alabaster and blue diagram theme; caption names the process or relationship being explained | General actions, roles, choices, dependencies and feedback that help explain the topic without a fictional application |
-| Fictional learning example in the two product chapters | Method first; a visible “Worked example” label, method or topic title and descriptive application caption | Application-specific actions, supplied scenario details, illustrative findings, example requirements and the worked journey |
-| Fictional learning example elsewhere | Matte Stone; a visible “Learning example” label and descriptive application caption | The same kinds of fictional application content, outside `.method-learning` |
+| Topic explanation | Existing white/alabaster and blue diagram theme | General actions, roles, choices, dependencies and feedback |
+| Worked example | Method first header, lavender panel and plum book mark and left rule | A concrete application, scenario, illustrative evidence and the resulting decision |
+| AI assistance | Existing teal “How AI can help” treatment | How AI supports a delivery task and what people check |
 
-A diagram that uses fictional asset-management records or sample results is a learning example under either palette. Split a visual that mixes general teaching and fictional evidence into two clearly bounded figures. Keep the main AI-SDLC overview at the topic level; place the continuous application journey in the product chapters. Follow [the writing standard's reference rules](writing.md#use-descriptive-names-for-references) for readable node, caption and link names.
+Keep the AI-SDLC overview focused on the lifecycle, responsibilities, evidence and feedback. Place the continuous application journey in the product chapters. Split a figure that mixes general teaching and fictional evidence into distinct topic and example figures. Use [descriptive reference names](writing.md#use-descriptive-names-for-references) in nodes, captions and links.
 
-### Matte Stone palette
+### Shared lavender learning palette
+
+Define these tokens once in the shared stylesheet. Do not create page-specific palettes or override them on an article wrapper.
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `example-surface` | `#F3F0EB` | Flat warm-stone background for the learning section or callout |
-| `example-canvas` | `#E8E3DC` | Diagram canvas, caption band and table header |
-| `example-card` | `#FAF8F4` | Flat node and table-cell surface |
-| `example-ink` | `#2F3437` | Charcoal headings, body text and node labels |
-| `example-secondary` | `#57534E` | Supporting text and captions |
-| `example-accent` | `#7A4B3A` | Muted clay left rule, example badge, important node outlines and selected steps |
-| `example-border` | `#837569` | Taupe connectors, boundaries and meaningful borders |
+| `example-surface` / `surface-example` | `#F7F4FC` | Pale lavender panel body and collapsed accordion surface |
+| `example-canvas` | `#F0EAF8` | Diagram canvas, caption band and table header |
+| `example-card` | `#FFFFFF` | Diagram nodes, table cells and the book mark background |
+| `example-ink` | `#241B35` | Titles and body text |
+| `example-secondary` | `#5D506D` | Supporting copy and captions |
+| `example-accent` | `#704699` | Book icon, learning label and interaction cues |
+| `example-rule` | `#8056A4` | Three-pixel left rule and framed book mark |
+| `example-border` | `#D9CCE8` | Decorative panel and table separators |
+| `example-line` | `#786785` | Meaningful diagram connectors, arrowheads and node outlines |
 
-Use flat, opaque fills with no gradients, glossy highlights, neon colours, glows, dot grids, raised hover effects or decorative drop shadows. Keep typography, spacing and geometry consistent with the handbook. A clay border or stronger outline can emphasise the current step; retain textual roles and decision labels. This palette denotes fictional learning, not risk, approval or implementation status.
+Keep the panel surface pale and static, with a fine outline, a three-pixel plum left rule, restrained shadow and the same spacing as AI-help panels. Keep body copy graphite and links and keyboard focus blue. Do not use a coloured text badge as the sole learning identifier. The decorative border is not a sufficient diagram stroke: verify at least 3:1 contrast for meaningful lines against adjacent fills, and at least 4.5:1 for normal text. Keep applied diagram fills flat, with no dot grid, glow, raised hover effect or decorative motion.
 
-Charcoal text on the section surface has approximately 11.1:1 contrast; secondary text has 6.7:1. Clay on the canvas has 5.7:1, and the connector colour on the canvas has 3.5:1. Recheck actual combinations, overlays and interaction states during implementation. Preserve the existing accessible link and keyboard-focus colours; navigation controls need not adopt the example accent. Keep semantic success/warning/error colours only for genuine statuses, with text labels.
+### One permanent Method first header
 
-### Scope the complete learning example
+Use the same hierarchy on standalone, compact and accordion examples:
 
-Apply these rules to both treatments. References to the example palette mean the tokens in scope: Matte Stone by default, overridden by Method first in the two product chapters.
+1. An outlined, decorative book mark and the visible label “Worked example”. Use “Worked examples” for a group.
+2. A prominent, descriptive method or topic title in sentence case.
+3. A short, concrete learning benefit for standalone examples and main journey chapters. Compact supplements can omit this when their descriptive title and immediate content make the purpose clear.
 
-- Apply the scoped example treatment to the whole example: heading/label, disclosure summary and body, tables, captions, node fills, connectors and diagram legends. A coloured badge above a blue blueprint is not sufficient.
-- Use `.learning-example` for an explicit example wrapper; existing `.example` and `.worked-example` components adopt the same palette. Mark an applied SVG figure with `.concept-figure--example`, including when it stands outside a wrapper. These are authoring selectors to implement in the shared styles and diagram enhancer.
-- Retain `.concept-figure` as the shared accessible figure structure. The default mode explains the topic; the example modifier overrides its appearance. Do not let the shared enhancer restore blue gradients, node elevation or flow pulses inside an example figure.
-- Keep example figures still by default. A reader-controlled **Step through** action can reveal a meaningful sequence using a flat outline or fill change. Provide motion controls only when motion is actually used; honour reduced motion and print preferences.
-- Use explicit “Worked example” text in Method first or “Learning example” elsewhere, and a caption that names the application and action. Labels use descriptive names such as “Yearly declaration requirement” and “Check that retries preserve responses”, rather than pointer codes.
-- When a reference table combines general guidance and an applied row or cell, separate and label the application with the scoped example treatment. Prefer a separate example block when a mixed table would obscure the distinction.
-- AI assistance in a fictional application remains inside the example boundary, with a plain descriptive label. The teal “How AI can help” component continues to identify general delivery guidance outside that example.
+Keep the scenario name or question in the body. Identify a fictional scenario once at the case entry and retain a short fictional marker on independently readable examples and diagrams. A sourced training example keeps its source identity. “Worked example” names the teaching format; it does not establish whether the scenario is real.
 
-The scoped palette, labels, accessible text equivalents and readable boundaries also apply in print and with JavaScript disabled. Diagram fills remain flat in both treatments. Evaluate compliance on the rendered page; this specification does not imply that every existing page has already been migrated.
+Use `.learning-example-header` for the shared hierarchy and `.learning-summary` for accordion headers. Put the full header, benefit, optional step number and expand/collapse cue inside the native `summary`, so the learning purpose remains visible when closed. Supplementary groups name the subjects they cover before expansion; a count alone does not explain their purpose. Use the existing book icon and mark it decorative. Do not require JavaScript to render headers or toggle disclosures.
 
-### Method first worked examples in product chapters
+### Scope the complete example
 
-Project Discovery and Product implementation use the Method first treatment in place of Matte Stone. Use white surfaces, fine cool-silver borders, graphite text and a restrained indigo learning accent. Keep topic diagrams in their existing blue treatment and AI-help panels in teal. Scope these learning tokens to `.method-learning`; other chapters retain Matte Stone until revised.
+Apply the same palette to the whole example: header, disclosure body, tables, captions, applied diagrams and legends. Use `.learning-example` for an explicit wrapper; `.example` and `.worked-example` share the same treatment. The shared classes work on every page without an article-level opt-in. There are no chapter-specific example themes.
 
-| Scoped token | Value | Use |
-| --- | --- | --- |
-| `example-surface` / `example-card` | `#FFFFFF` | Example body, nodes and table cells |
-| `example-canvas` | `#F5F6FC` | Cool-neutral diagram canvas, caption band and table header |
-| `example-ink` | `#17233B` | Graphite titles and body text |
-| `example-secondary` | `#4B5C73` | Supporting copy and captions |
-| `example-accent` | `#4F46E5` | Indigo book icon, learning label and interaction cues |
-| `example-border` | `#CBD2E1` | Decorative panel and table separators |
+Mark applied figures with `.concept-figure--example`, including independently placed figures. Retain the shared accessible figure structure, text equivalent and descriptive caption. The diagram enhancer must preserve the example palette and still presentation. AI assistance within a fictional case remains inside its example boundary; teal panels continue to describe general delivery assistance.
 
-The silver border is decorative: it has about 1.5:1 contrast on white and 1.4:1 on the example canvas. Use a stronger colour, such as `example-secondary`, for connectors, arrowheads, node outlines or control boundaries needed to understand the diagram or operate the interface; verify at least 3:1 against adjacent fills. Do not reuse the decorative border token for those meanings.
-
-Give an example a permanent header with the existing book icon, a visible “Worked example” label and a prominent method or topic title. Include a short learning benefit for each main journey chapter. For an accordion, put the complete header inside its native `summary`, including the step number and expand/collapse cue. Keep the scenario question inside the expanded body. Standalone and supplementary examples use the same icon, label and topic hierarchy; supplementary groups identify their contents before expansion.
-
-Use `.learning-example-header` for the shared hierarchy and `.learning-summary` for accordion headers. Mark the book icon decorative; the visible label carries its meaning. Use a fine border on all sides and a restrained static panel shadow instead of Matte Stone's thick clay left rule; applied diagrams remain flat and still. Wrap text at narrow widths, retain visible keyboard focus and support native toggling without JavaScript. Direct links into collapsed content should reveal all enclosing disclosures when JavaScript is available. Print should reveal example bodies and supplements, hide expand/collapse cues and restore the reader's disclosure state afterwards. Check collapsed and expanded views on desktop and mobile, direct-link behaviour and print readability.
+Wrap header text on narrow screens and preserve native keyboard operation and visible focus. Direct links into collapsed content reveal all enclosing disclosures when JavaScript is available. Print reveals example bodies and supplements, hides expand/collapse cues and restores the reader’s disclosure state afterwards. Check standalone and compact examples, collapsed and expanded views, diagram contrast, desktop/mobile reading, no-JavaScript operation and print readability on every affected page.
 
 ## How AI can help
 
@@ -216,7 +205,7 @@ Every page across the handbook follows a unified, predictable visual order:
 | Page map (`.page-map`) | Editorial ledger with a `1.5px` top rule, `1px` bottom rule, square edges, transparent background and no shadow. Use four columns by default or three for `.page-map--branches`. Hairline dividers separate monospace slate numerals (JetBrains Mono, no pill), bold Space Grotesk headings and direct links. At a reading-container width of `680px` or less, stack items in the same order with horizontal dividers. |
 | Task entry & learning path cards (`.task-entry`, `.discovery-path-card`, `.implementation-path-card`) | Responsive card grids on white-to-alabaster surfaces (`#FFFFFF` → `#F8FAFC`) with `1px` border, subtle shadow, bold title in Space Grotesk with animated trailing arrow, and clear workflow descriptions. Learning path cards use a unified, understated cool-slate palette at rest (soft slate pill kicker, `#CBD5E1` top rule, deep navy-slate heading) that highlights to royal blue on hover/focus. |
 | Note Callout (`.callout`) | White-to-ice-blue panel (`#FFFFFF` to `#F5F8FF`) with `1px solid var(--accent-border)` and a `4px` solid `--accent` left rule. Includes a royal-blue uppercase pill label (`Note`). |
-| Learning example (`.learning-example`, `.example`, `.worked-example`) | Matte Stone by default: flat `--example-surface`, `--example-border` outline, clay left rule, charcoal text and visible “Learning example” label. Inside `.method-learning`, use the Method first tokens, fine border, book icon and “Worked example” header specified above. Scope related tables and diagrams to the same treatment. |
+| Learning example (`.learning-example`, `.example`, `.worked-example`) | Shared Method first header, pale lavender surface, fine outline, plum left rule and framed book mark. Use the same treatment across every page and related tables and applied diagrams. |
 | Applied example figure (`.concept-figure--example`) | Shared accessible figure structure with the scoped example palette; flat nodes/canvas, descriptive labels and static default presentation. Keep the application caption and illustrative status visible, with sufficient connector contrast. |
 | Source attribution notes (`.source-attribution-notes`) | Quiet white-to-alabaster panel with a fine border and restrained shadow inside the final Sources section. Use a descriptive heading and links back to the relevant sections; retain consequential caveats beside their claims. |
 | Status badge (`.status`) | Pill badge (`999px` radius) with `1px` semantic border and subtle fill: `Core` (slate dark), `HITL` (royal blue), `Planned` (amber), `Optional · Recommended` (dashed blue-slate), `One-time setup` (indigo), `Available` (emerald green). |
@@ -274,13 +263,15 @@ Target WCAG 2.2 Level AA:
   --surface-muted: #f1f5f9;
   --surface-selected: #eff6ff;
   --surface-accent-subtle: #f5f8ff;
-  --example-surface: #f3f0eb;
-  --example-canvas: #e8e3dc;
-  --example-card: #faf8f4;
-  --example-ink: #2f3437;
-  --example-secondary: #57534e;
-  --example-accent: #7a4b3a;
-  --example-border: #837569;
+  --example-surface: #f7f4fc;
+  --example-canvas: #f0eaf8;
+  --example-card: #ffffff;
+  --example-ink: #241b35;
+  --example-secondary: #5d506d;
+  --example-accent: #704699;
+  --example-border: #d9cce8;
+  --example-rule: #8056a4;
+  --example-line: #786785;
   --surface-example: var(--example-surface);
   --text-primary: #0f172a;
   --text-body: #1e293b;
@@ -319,7 +310,7 @@ Target WCAG 2.2 Level AA:
 Use this checklist for each changed page; mark items only after verification.
 
 - [ ] The existing blue theme explains general topics and processes; each figure improves understanding of the surrounding content.
-- [ ] Fictional learning panels, tables and diagrams use Method first in the two product chapters and Matte Stone elsewhere, with the corresponding visible example label.
+- [ ] All worked examples use the shared lavender Method first treatment, visible book mark and label, descriptive topic title and appropriate learning benefit; collapsed headers retain the learning purpose.
 - [ ] Method first headers retain the method/topic and main journey learning benefit when collapsed; supplementary groups preview their contents.
 - [ ] Page maps use the transparent ledger treatment, stack at narrow container widths and link to the intended destinations.
 - [ ] Decorative silver borders are not used for meaningful diagram connectors or essential control boundaries; those elements meet the contrast target.
