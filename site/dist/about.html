@@ -85,10 +85,11 @@
             <figcaption>Figure 1. How agents curate the playbook under human review.</figcaption>
             <details class="figure-reading"><summary>Read as text: the curation loop</summary>
               <ol>
-                <li>Scouts powered by Muse and Hermes assess online material for novelty, gap coverage and loss if missed. Medium- and high-priority findings enter the issue backlog.</li>
-                <li>Reviewers powered by Muse and OpenAI score existing paragraphs from 1 to 10 for naturalness, ease of understanding and accuracy. Source-monitoring agents check quoted sources, publish check dates and record changed, broken or unverified references. Both activities file findings as issues.</li>
-                <li>The OpenAI-powered writer reviews prioritised issues and assesses their value. Lower-value proposals retain a recorded decision; changes with high assessed value proceed to drafting.</li>
+                <li>Content scouting agents powered by Muse, Hermes and OpenAI assess online material for novelty, gap coverage and loss if missed. Medium- and high-priority findings enter the issue backlog.</li>
+                <li>Content peer review uses Muse and OpenAI to score existing paragraphs from 1 to 10 for naturalness, ease of understanding and accuracy. Source-monitoring agents powered by Hermes and OpenAI check quoted sources, publish check dates and record changed, broken or unverified references. Both activities file findings as issues.</li>
+                <li>The Hermes-powered writer agent reviews prioritised issues and assesses their value. Lower-value proposals retain a recorded decision; changes with high assessed value proceed to drafting.</li>
                 <li>The writer uses the issue evidence, current articles, original sources and intended reader as context. The writing and design standards guide the draft and acceptance checks. For peer-review corrections, revise the content first, then consider whether the standards also need refinement.</li>
+                <li>When evidence, scope or instructions are unclear, the writer asks a human for clarification via Telegram. The writer records the response with the issue and uses it as context before continuing the affected work. This exchange does not replace pull-request approval.</li>
                 <li>The writer prepares a feature branch and pull request. A human reviews the change and evidence; requested revisions return to the writer. Only an approved change is merged and published.</li>
                 <li>Published articles and their quoted sources return to peer review and source monitoring, continuing the maintenance loop. Proposed standard changes also require human approval.</li>
               </ol>
@@ -97,7 +98,7 @@
               <div class="figure-scroll" tabindex="0" role="region" aria-label="Site curation workflow; scroll horizontally to explore the full diagram on a narrow screen">
                 <svg viewBox="0 0 840 1120" role="img" aria-labelledby="curation-diagram-title" aria-describedby="curation-diagram-description">
                   <title id="curation-diagram-title">The site curation and maintenance loop</title>
-                  <desc id="curation-diagram-description">Scouting, paragraph reviews and dated source checks feed the issue backlog. The writer assesses value, drafts useful changes using relevant context and shared standards, and submits a feature branch and pull request for human approval. Requested revisions return to the writer. Approved updates are published and return to review and source monitoring. After correcting content, the writer also considers whether the standards need refinement.</desc>
+                  <desc id="curation-diagram-description">Content scouting agents use Muse, Hermes and OpenAI; content peer review uses Muse and OpenAI; source-monitoring agents use Hermes and OpenAI. Their findings feed the issue backlog. The Hermes writer agent assesses value and drafts useful changes using relevant context and shared standards. A two-way Telegram exchange lets the writer ask a human for clarification and receive a response before continuing affected work. The writer then submits a feature branch and pull request for human approval. Requested revisions return to the writer. Approved updates return to review and source monitoring. After correcting content, the writer also considers whether the standards need refinement.</desc>
                   <defs>
                     <marker id="curation-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
                     <marker id="curation-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
@@ -108,8 +109,8 @@
                   <text class="d-label" x="588" y="24" text-anchor="middle">Recheck published articles and quoted sources</text>
 
                   <g><rect class="d-node" x="32" y="88" width="228" height="122" rx="8"/>
-                    <text class="d-title" x="146" y="114" text-anchor="middle">Content scouting</text>
-                    <text class="d-sub" x="146" y="138" text-anchor="middle">Muse + Hermes</text>
+                    <text class="d-title" x="146" y="114" text-anchor="middle">Content scouting agents</text>
+                    <text class="d-sub" x="146" y="138" text-anchor="middle">Muse + Hermes + OpenAI</text>
                     <text class="d-sub" x="146" y="163" text-anchor="middle">Novelty · gaps · loss if missed</text>
                     <text class="d-sub" x="146" y="187" text-anchor="middle">Assess online practices</text>
                   </g>
@@ -120,8 +121,8 @@
                     <text class="d-sub" x="420" y="187" text-anchor="middle">Natural · clear · accurate</text>
                   </g>
                   <g><rect class="d-node" x="580" y="88" width="228" height="122" rx="8"/>
-                    <text class="d-title" x="694" y="114" text-anchor="middle">Monitor quoted sources</text>
-                    <text class="d-sub" x="694" y="138" text-anchor="middle">Source-monitoring agents</text>
+                    <text class="d-title" x="694" y="114" text-anchor="middle">Source-monitoring agents</text>
+                    <text class="d-sub" x="694" y="138" text-anchor="middle">Hermes + OpenAI</text>
                     <text class="d-sub" x="694" y="163" text-anchor="middle">Check links, claims, versions</text>
                     <text class="d-sub" x="694" y="187" text-anchor="middle">Publish each check date</text>
                   </g>
@@ -152,6 +153,13 @@
                   <path class="d-line d-line-accent" d="M420 502V554" marker-end="url(#curation-arrow-accent)"/>
                   <text class="d-label" x="438" y="533">High value</text>
 
+                  <g><rect class="d-node" x="580" y="414" width="228" height="102" rx="8"/>
+                    <text class="d-title" x="694" y="441" text-anchor="middle">Human clarification</text>
+                    <text class="d-sub" x="694" y="469" text-anchor="middle">Via Telegram</text>
+                    <text class="d-sub" x="694" y="494" text-anchor="middle">Questions and responses</text>
+                  </g>
+                  <path class="d-line d-dash" d="M544 578H562V458H580" marker-start="url(#curation-arrow)" marker-end="url(#curation-arrow)"/>
+
                   <g><rect class="d-node" x="32" y="554" width="228" height="112" rx="8"/>
                     <text class="d-title" x="146" y="583" text-anchor="middle">Writing + design standards</text>
                     <text class="d-sub" x="146" y="609" text-anchor="middle">writing.md + design.md</text>
@@ -159,9 +167,10 @@
                   </g>
                   <path class="d-line" d="M260 610H296" marker-end="url(#curation-arrow)"/>
                   <g><rect class="d-node d-node-accent" x="296" y="554" width="248" height="112" rx="8"/>
-                    <text class="d-title" x="420" y="583" text-anchor="middle">Writer · OpenAI</text>
-                    <text class="d-sub" x="420" y="609" text-anchor="middle">Draft or correct the article</text>
-                    <text class="d-sub" x="420" y="638" text-anchor="middle">Cite original sources; run checks</text>
+                    <text class="d-title" x="420" y="578" text-anchor="middle">Writer agent</text>
+                    <text class="d-sub" x="420" y="600" text-anchor="middle">Hermes</text>
+                    <text class="d-sub" x="420" y="624" text-anchor="middle">Draft or correct the article</text>
+                    <text class="d-sub" x="420" y="648" text-anchor="middle">Cite original sources; run checks</text>
                   </g>
                   <g><rect class="d-node" x="580" y="554" width="228" height="112" rx="8"/>
                     <text class="d-title" x="694" y="583" text-anchor="middle">Writing context</text>
@@ -194,7 +203,7 @@
                   <text class="d-sub" x="420" y="1095" text-anchor="middle">Content and standard changes both require human approval.</text>
                 </svg>
               </div>
-              <p class="diagram-key">Solid arrows show findings, context and changes moving forward. Cut-corner nodes mark decisions. Dashed arrows return published work for checks, requested revisions to the writer and content corrections for a possible standards update.</p>
+              <p class="diagram-key">Solid arrows show findings, context and changes moving forward. Cut-corner nodes mark decisions. The two-way dashed arrow shows questions and responses between the writer and a human via Telegram. Other dashed arrows show recurring checks, requested revisions and possible standards updates after content corrections.</p>
             </details>
           </figure>
         </section>
@@ -208,7 +217,11 @@
 
         <section id="standards">
           <h2>The writer follows shared standards</h2>
-          <p>An OpenAI-powered writer agent drafts and revises the articles. Its work is continually refined through source checks, peer feedback and human review. If a passage sounds robotic or unnatural, we’re sorry. Clear, natural explanations are the goal, and improving those passages is part of the maintenance work.</p>
+          <aside class="callout callout--disclaimer" aria-labelledby="ai-writing-note">
+            <p class="example-label" id="ai-writing-note">A note on AI-written content</p>
+            <p>A Hermes-powered writer agent drafts and maintains this playbook under human editorial oversight.</p>
+            <p>We apologise for any passages that sound unnatural or lack clarity. The agent will continue refining the content through source verification, peer feedback and human review to improve its clarity and natural flow.</p>
+          </aside>
           <p>The writer uses two repository standards to guide the content, its flow and the checks before a change is submitted:</p>
           <ul>
             <li><strong><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md">The writing standard (writing.md)</a></strong> starts with the reader’s task. It calls for plain British English, connected explanations, consistent terminology and concrete actions with named owners and expected results. Its editorial acceptance checklist covers evidence, coherence, attribution, useful next steps and the distinction between requirements, recommendations and examples.</li>
@@ -220,7 +233,7 @@
 
         <section id="scouting">
           <h2>Scouts assess what deserves attention</h2>
-          <p>Scouting agents powered by Muse and Hermes scan online for recent practices and materials that could improve the playbook. They compare each candidate article with the existing content using three questions:</p>
+          <p>Content scouting agents powered by Muse, Hermes and OpenAI scan online for recent practices and materials that could improve the playbook. They compare each candidate article with the existing content using three questions:</p>
           <ul>
             <li><strong>Novelty:</strong> Does it introduce relevant content that the playbook does not already cover?</li>
             <li><strong>Enrichment and gap coverage:</strong> Does it resolve an omission, deepen an explanation or provide stronger evidence for existing guidance?</li>
@@ -232,6 +245,7 @@
         <section id="changes">
           <h2>From issue to approved change</h2>
           <p>The writer scans the backlog and takes high-priority issues for review. Criticality identifies what needs attention; the writer then assesses whether the proposed change would add enough value for readers.</p>
+          <p>If the evidence, scope or instructions are unclear, the writer asks a human for clarification via Telegram. The writer records the response with the issue and uses it as context before continuing the affected work. Clarification does not replace pull-request approval.</p>
           <ol>
             <li><strong>Review the evidence and value.</strong> Read the original material, compare it with the affected pages and assess the benefit, overlap and effort of the proposed change. Record the decision and its reasons on the issue.</li>
             <li><strong>Implement changes with high assessed value.</strong> Prepare the update on a feature branch, retain direct source references and check the revised content and presentation against the shared standards.</li>
@@ -243,7 +257,7 @@
 
         <section id="reference-checks">
           <h2>Keep references current and publish check dates</h2>
-          <p>Agents are required to check all online references regularly and publish the date each reference was last checked in the article’s source notes. The date tells readers when a check happened; it does not guarantee that the source has remained unchanged since then.</p>
+          <p>Source-monitoring agents powered by Hermes and OpenAI are required to check all online references regularly and publish the date each reference was last checked in the article’s source notes. The date tells readers when a check happened; it does not guarantee that the source has remained unchanged since then.</p>
           <p>The check covers whether the destination is accessible, whether it still supports the cited claim and whether a newer version changes the guidance. The agent records the source URL, check date, result and any unresolved limitation. Broken links, changed claims and sources that cannot be verified become maintenance findings for review.</p>
           <p>A working link alone does not establish that an article is accurate. The <a href="https://github.com/eitri-edd/AI-PDLC/blob/main/site/reference-checks.json">reference-check inventory</a> retains individual source records; each reference’s recorded date matters separately from a site-wide review date.</p>
         </section>
