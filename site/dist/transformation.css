@@ -1,5 +1,6 @@
-/* Keep the worked comparison readable alongside its decision. */
+/* Keep departmental outcome comparisons readable alongside the decision. */
 .concept-article { overflow-wrap: anywhere; }
+.learning-example[id] { scroll-margin-top: 6rem; }
 .identity span { min-width: 0; overflow-wrap: anywhere; }
 .concept-article .next-step > h3:first-child { margin-top: 0; }
 #upload-results .transformation-comparison {
@@ -24,7 +25,11 @@
 }
 #delivery-reference > details[open] { padding-bottom: 1.25rem; background: white; }
 #delivery-reference > details > summary { font-weight: 650; }
+@media (min-width: 40.001rem) {
+  #upload-results .transformation-comparison:has(thead th:nth-child(4)) th:first-child { width: 28%; }
+}
 @media (max-width: 40rem) {
+  .learning-example[id] { scroll-margin-top: 9rem; }
   .transformation-comparison,
   .transformation-comparison tbody,
   .transformation-comparison tr,
