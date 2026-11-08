@@ -1089,6 +1089,18 @@
       "title": "Maybe We Shouldn't Be Reviewing All This Code",
       "method": "web reader",
       "note": "Practitioner argument for earlier judgement and deterministic checks; not a measured effectiveness claim."
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.03223",
+      "files": [
+        "ai-pdlc.html",
+        "concept.html"
+      ],
+      "checked_on": "2026-11-08",
+      "result": "retrieved",
+      "title": "Do Agents Still Follow the Rules? Benchmarking Rule Compliance under Agent Context Compaction",
+      "method": "web reader",
+      "note": "Recent preprint using a configurable agent harness. Its reported rule-compliance results are not a general guarantee that any one control prevents violations."
     }
   ],
   "additional_checked_sources": [
@@ -1104,6 +1116,6 @@
     "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
     "https://www.anthropic.com/research/demystifying-evals-for-ai-agents"
   ],
-  "final_unique_urls": 105,
+  "final_unique_urls": 106,
   "final_reference_coverage": "Every external href in the final HTML inventory has a retrieval record or is an explicitly checked additional source. Original unreadable source exceptions remain documented."
 }

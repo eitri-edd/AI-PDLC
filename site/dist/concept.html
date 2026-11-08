@@ -213,6 +213,7 @@
           <h3>Carry delivery evidence into the next task</h3>
           <p>Repository context explains how the code is organised. Delivery evidence explains what happened when a change was built, checked, released or used. Long-term memory stores records that may help later. Keep those three kinds of information distinct, then select the small, verified set needed for the next decision.</p>
           <p>Before ending a task, the developer records agreed decisions, unfinished work and unresolved questions in the repository or issue tracker. When a delivery event matters, link its commit, deployment or environment, applicable policy, accountable owner and retained evidence. Check freshness and authority before using it, and give an agent only the access needed for the task.</p>
+          <p>After a long task is summarised or compacted, re-check that its working context still includes the applicable operating rules and constraints. If something is missing, retrieve the authoritative record and restate the task boundary before continuing. Retaining a rule in context does not guarantee that an agent will follow it. <a href="#source-29" aria-label="Source 29: Zha et al., Do Agents Still Follow the Rules? Benchmarking Rule Compliance under Agent Context Compaction">[29]</a></p>
           <p>For example, a booking conflict observed in production becomes a verified issue with its trace, affected release, acceptance criteria and a regression test. The next task retrieves that evidence and checks whether it is still applicable before proposing a fix. It does not grant an agent general production access.</p>
           <figure class="concept-figure" id="fig-delivery-context">
             <figcaption id="fig-delivery-context-caption">Figure 4. Delivery evidence closes the context loop for the next task.</figcaption>
@@ -268,6 +269,7 @@
           </aside>
           <h3>Check the environment as well as the output</h3>
           <p>Provide a repeatable way to start the application, run tests and inspect failures. Enforce permissions through the tools and execution environment. Keep a reviewer responsible for acceptance; an agent’s assessment of its own work is not independent review.</p>
+          <p>Keep the distinction clear: instructions guide the agent’s judgement, while the harness enforces actions that must never happen. Configure scoped permissions, deny rules, confirmation for irreversible actions and required checks in the environment. Those controls reduce accidental actions, but do not replace backend authorisation or independent review.</p>
           <p>When failures recur, inspect the instructions, sources, tools and checks before adding more retries or access. Maintain the harness as the application changes.</p>
 
           <aside class="ai-help ai-help--inline" id="ai-help-harness" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>With scoped tools and test data, an agent can run booking checks and report failures. The developer repeats the concurrency and cancellation checks described above and compares the tool configuration with the permitted workspace and database. Keep configuration and run evidence with unresolved findings for the acceptance decision.</p></aside>
@@ -506,14 +508,14 @@
 <div class="source-attribution-notes" aria-label="Section attribution and adaptations"><h3>Section attribution and adaptations</h3><ul>
 <li><strong><a href="#intent-driven-development">Agree the goal (intent-driven development)</a>:</strong> Source: <a href="#source-1" aria-label="Source 1: Intent-Driven Development, intent-driven.dev">[1]</a>.</li>
 <li><strong><a href="#spec-driven-development">Define the behaviour (spec-driven development)</a>:</strong> Source: <a href="#source-2" aria-label="Source 2: GitHub Spec Kit, Specification-Driven Development">[2]</a>.</li>
-<li><strong><a href="#context-engineering">Supply relevant information (context engineering)</a>:</strong> Source: <a href="#source-3" aria-label="Source 3: Anthropic, Effective context engineering for AI agents">[3]</a>.</li>
-<li><strong><a href="#harness-engineering">Equip the agent (harness engineering)</a>:</strong> Sources: <a href="#source-4" aria-label="Source 4: OpenAI, Harness engineering">[4]</a>; <a href="#source-5" aria-label="Source 5: Walking Labs, What a harness actually is">[5]</a>; <a href="#source-6" aria-label="Source 6: Anthropic, Effective harnesses for long-running agents">[6]</a>.</li>
+<li><strong><a href="#context-engineering">Supply relevant information (context engineering)</a>:</strong> Sources: <a href="#source-3" aria-label="Source 3: Anthropic, Effective context engineering for AI agents">[3]</a>; <a href="#source-29" aria-label="Source 29: Zha et al., Do Agents Still Follow the Rules? Benchmarking Rule Compliance under Agent Context Compaction">[29]</a>. The preprint studies a configurable harness and does not show that re-stating a rule guarantees compliance.</li>
+<li><strong><a href="#harness-engineering">Equip the agent (harness engineering)</a>:</strong> Sources: <a href="#source-4" aria-label="Source 4: OpenAI, Harness engineering">[4]</a>; <a href="#source-5" aria-label="Source 5: Walking Labs, What a harness actually is">[5]</a>; <a href="#source-6" aria-label="Source 6: Anthropic, Effective harnesses for long-running agents">[6]</a>. Adaptation: this guide separates model-readable instructions from actions enforced by the harness.</li>
 <li><strong><a href="#loop-engineering">Use feedback (loop engineering)</a>:</strong> Source: <a href="#source-7" aria-label="Source 7: IBM, Loop engineering">[7]</a>.</li>
 <li><strong><a href="#graph-engineering">Coordinate tasks and checks (graph engineering)</a>:</strong> Sources: <a href="#source-8" aria-label="Source 8: PuppyGraph, Graph engineering">[8]</a>; <a href="#source-9" aria-label="Source 9: Anthropic, Building effective agents">[9]</a>.</li>
 <li><strong><a href="#software-factory">Connect the delivery workflow (software factories)</a>:</strong> Source: <a href="#source-10" aria-label="Source 10: Addy Osmani, Software Factories, Light and Dark, also republished by O’Reilly">[10]</a>.</li>
 <li><strong><a href="#models">Choose an AI model</a>:</strong> Illustrative basis: <a href="#source-27" aria-label="Source 27: Harness, Why AI Coding Agents Lose Context After the PR">[27]</a>; <a href="#source-28" aria-label="Source 28: Naresh Jain, Are Harnesses Worth the Cost?">[28]</a>. The reported experiment is task-specific; this guide’s comparison matrix is a recommended local evaluation design.</li>
 </ul></div>
-          <p>References checked on 6 November 2026. See the sources below for research and provider documentation.</p>
+          <p>References checked on 8 November 2026. See the sources below for research and provider documentation.</p>
           <h3 id="learning-references">Learning references</h3>
           <p>Use these courses, guides and playbooks for detailed instruction and practice. Check the implementation courses for prerequisites and tool requirements.</p>
           <ul class="source-list"><li id="learning-intent"><strong>Intent-driven development:</strong> <a href="https://circleci.com/blog/intent-driven-development/">CircleCI’s guide</a> explains how to carry outcomes, constraints and success criteria through a change.</li>
@@ -554,10 +556,11 @@
             <li id="source-26"><a href="https://arxiv.org/abs/2610.02267">Li (2026), Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses</a>. Preprint comparing Jev and Laya; reports decision-point results and limitations in routing, threshold selection and deployment accounting.</li>
             <li id="source-27"><a href="https://www.harness.io/blog/why-ai-coding-agents-lose-context-after-pr">Animesh Pathak, Why AI Coding Agents Lose Context After the PR</a> (Harness, 4 November 2026). Distinguishes repository and delivery context; its deeper two-way integration is described as planned.</li>
             <li id="source-28"><a href="https://martinfowler.com/articles/are-harnesses-worth-the-cost.html">Naresh Jain, Are Harnesses Worth the Cost?</a> (13 October 2026). Reports one API-building experiment with a shared independent evaluator; its results do not generalise to every model, harness or task.</li>
+            <li id="source-29"><a href="https://arxiv.org/abs/2611.03223">Zha et al., Do Agents Still Follow the Rules? Benchmarking Rule Compliance under Agent Context Compaction</a> (preprint, 2 November 2026). Studies compliance in a configurable agent harness under compaction and adversarial settings; the results are not a general guarantee for all agents or controls.</li>
           </ol>
           <p class="source-ref">Evaluate the exact model version and configuration you will use.</p>
         </section>
-        <p class="source-ref">Last editorial review: <time datetime="2026-11-06">6 November 2026</time>.</p>
+        <p class="source-ref">Last editorial review: <time datetime="2026-11-08">8 November 2026</time>.</p>
         <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
