@@ -1,5 +1,59 @@
 # Organisation transformation: editorial review
 
+## Issue 31 · Reader-focused restructure · 8 November 2026
+
+Revised `dist/transformation.html` locally in response to [issue 31](https://github.com/eitri-edd/AI-PDLC/issues/31). The reader is a product manager, team lead or delivery colleague familiar with planning and review who needs to commission specialist checks and make an evidence-based adoption proposal. The scope remains delivery-team and shared-service adoption of AI-assisted development.
+
+### Findings verified before editing
+
+The published page was inspected in the browser on 8 November. It already displayed three upload-example panels without expansion: planning across four areas, correction of the omitted recipient-access check, and the 60-to-20-minute drafting comparison with 90 minutes total effort in each period. The issue's crawler-based absence claim does not describe the page observed in this check; no conclusion is made about the 7 November snapshot. Several requested definitions also already existed. The actionable problem was fragmented teaching, dense specialist material in the core path and incomplete interpretation of the scorecard.
+
+Other local untracked reviews describe different chapter snapshots and audiences. They were consulted as historical context, not treated as the current chapter or overwritten by this change.
+
+### Changes and author assessment
+
+| Reader task | Change | Assessment after rereading |
+| --- | --- | --- |
+| Plan connected changes across the four areas | Retains People, Process, Culture and Technology, with four concise planning questions and a lead-action block per area. | Each block names the record to keep, how the lead uses it and the relevant specialist or existing decision authority. |
+| Follow one case without opening reference material | Six visible upload panels progress from setup and reviewer capacity through failure, correction, learning, control recheck and adoption review. | The same recipient-access rule and isolated scope recur throughout. The control setup precedes drafting; later demonstrations recheck the existing boundary. No new running example is introduced. |
+| Understand what demonstrates a correction | Shows expected denial, the original delivery failure and corrected authorised/unauthorised/unsupported-file results, with revision and review records. | Original results support the isolated acceptance decision. Functional acceptance, security findings, production release and broader adoption remain distinct. |
+| Commission technical evidence | Reframes the core Technology section as demonstrations of access, blocked progress and recovery. | The lead asks for and uses evidence rather than being instructed to configure infrastructure. AI assessment retains an explicit critical-error rule. |
+| Find specialist detail when needed | Moves unchanged role, platform and shared-ownership matrices after the pilot decision, along with permission and full measurement references. Retains all four topic diagrams, with three in the reference. | Detailed content remains available through native disclosures, section pointers and retained public anchors. |
+| Understand specialist terms | Defines harness and CI/CD in the core; explains design tokens, prompt injection, infrastructure as code and multi-agent orchestration beside their reference uses. Defines evaluation cases and separates development-tool assessment from feature tests and AI-product behaviour. | Terms describe mechanisms and use the upload scenario where applicable. Orchestration stays optional; the pilot uses one agent. |
+| Interpret research | Leads with the practical takeaway, retains causal/applicability limits beside claims and moves numerical research detail into Sources. Includes practical IMDA, OWASP and DORA summaries. | External research motivates local measurement without supplying a promised productivity gain. Existing source URLs and numbering remain. |
+| Calculate and act on results | Adds attempt/acceptance counts, periods, non-overlapping effort categories, underlying totals, quality follow-up, unknown results and a completed Keep testing decision. | Each period contains 540 human task minutes divided by six accepted changes: 90 minutes, missing the 75-minute target. The next six-attempt trial tests a stated instruction change within the same permissions and has an end date and follow-up review. |
+
+All dates, events and figures in the upload case are labelled fictional. Baseline attempts are seven (six accepted, one abandoned); trial attempts are eight (six accepted, two abandoned). The totals include abandoned work and count each person's task effort once. Waiting, shared setup and training are excluded from the 90-minute task-effort comparison and remain part of the unknown overall cost. Missing timestamps, cost allocation, live-use evidence and baseline participant feedback are not represented as zero or improvement. Four feedback respondents are named; platform feedback was not collected.
+
+The 19 October decision follows the 14-day follow-up ending 17 October. Further task attempts end 30 October, follow-up ends by 13 November and the next fictional adoption review is 16 November. A missed effort target and incomplete scorecard support a bounded further experiment, not expansion or production access. The Expand / Restrict / Stop / Keep testing options and immediate stop conditions remain.
+
+The root and site README summaries now describe the actual reading paths and supporting files. No organisational policy, staffing mandate or new approval authority was introduced.
+
+### Verification and limits
+
+- **Source checks:** balanced explicit tags, paragraph nesting, sequential headings, one page title and unique IDs passed. All 51 original IDs, three incoming chapter anchors, 104 local resource/link references and 16 distinct external URLs are preserved or resolve. The three moved matrices are textually unchanged. The final chapter has six tables; navigation includes the delivery reference. Evidence: `.preview/issue31-source-checks.json`.
+- **Arithmetic:** independently recalculated baseline 360 + 120 + 60 = 540 and trial 120 + 300 + 120 = 540; both divided by six give 90. The 40-minute drafting saving is offset by 30 additional review minutes and 10 correction minutes. The 15-minute target gives a maximum of 75 minutes per accepted change.
+- **Browser:** at 320, 375, 768, 1100 and 1440 pixels, no page-level horizontal overflow was observed with the references closed or open. The worked table fits its container and stacks with visible baseline/trial labels on phones. Six direct reference/diagram fragments revealed their target disclosures; keyboard toggling worked. No page-script errors were observed. Evidence: `.preview/issue31-browser-checks.json`, `issue31-comparison-375.png` and `issue31-comparison-1440.png`.
+- **No scripts and enlarged text:** a QA-only response omitted scripts and, separately, applied 200% root text size. The six main case panels remained outside disclosures; native keyboard expansion worked. At 375 pixels with both conditions, the table and page fit after correcting long-word wrapping. This is a root-text enlargement check, not a full browser-zoom or accessibility audit.
+- **Print/disclosure code:** a DOM fixture exercised initial deep links, reopening a closed current fragment, print expansion/restoration and malformed fragments. It also checked interaction with the shared figure-reading print handler. The page script avoids taking ownership of that shared state. Evidence: `.preview/issue31-interaction-checks.json`. Actual browser print pagination was not tested.
+- **Sources:** DORA 2025, the McKinsey survey, both METR publications and OWASP were retrieved during the proposal review on 8 November. IMDA's public search-indexed summaries were checked after its direct page returned a bot-verification response. The full IMDA framework and the unchanged Microsoft/DORA supporting references were not newly revalidated.
+- **Author reread:** checked the changed chapter, reference definitions, preserved matrices, source mappings, responsibilities and case chronology against `writing.md` and `design.md`. JavaScript syntax and `git diff --check` passed. These checks do not establish reader comprehension.
+
+### Representative-reader checks still outstanding
+
+Ask an aspiring PM or team lead to answer without corrective coaching. Record the answer, hesitation, assistance and consequential misunderstanding; revise the responsible passage and repeat where needed.
+
+| Task | Expected answer |
+| --- | --- |
+| Has the trial saved human effort or met its target? | No. Both periods use 90 human task minutes per accepted change; the target is at most 75. Faster drafting is offset by review and correction. |
+| What demonstrates that the access defect is corrected? | The same corrected revision denies unauthorised delivery, permits authorised delivery and rejects unsupported files; original failed/passing results and specialist findings are retained. |
+| Can missing cost data be treated as no additional cost? | No. Total cost is unknown, including setup, training, support allocation and incomplete tool charges. |
+| What does the lead commission from specialists? | Demonstrations of permissions, blocked required checks, stop/recovery and support, retained in a readiness record. |
+| Does isolated acceptance allow production deployment or broader agent access? | No. Those decisions retain their existing authorities and require evidence for the proposed scope. |
+| What happens next? | Keep testing six attempts of an explicit acceptance-case step, within the same permissions, to a fixed end date and follow-up review. No expansion is supported yet. |
+
+No representative-reader session, full HTML conformance audit, complete accessibility audit, browser print-pagination check, commit, push or deployment was performed. Changes remain local. Earlier entries below describe earlier snapshots and are not verification of this revision.
+
 ## Alignment with the revised writing standard · 4 November 2026
 
 Revised the chapter against the current `writing.md`, focusing on the reader’s task, connected explanations, terminology and the distinction between general guidance and implementation-specific practices.
