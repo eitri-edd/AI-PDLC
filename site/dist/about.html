@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How agents scout, write and review this playbook, follow shared standards and keep sources current, with human approval for every content change.">
+  <title>About · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article label-first-column">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><span aria-current="page">About</span></nav>
+        <header class="article-header">
+          <p class="eyebrow">About this playbook</p>
+          <h1>How this site is curated</h1>
+          <p class="lead">Agents help keep this playbook current by finding new practices, writing updates and reviewing existing articles. Every content change still needs a human to review and approve the pull request.</p>
+          <ul class="metadata-bar"><li>Maintained by EDS</li><li>Last updated <time datetime="2026-11-08">8 November 2026</time></li></ul>
+        </header>
+
+        <figure class="page-map" aria-label="Page summary">
+          <p class="page-map-title">This page at a glance</p>
+          <ol class="page-map-steps">
+            <li><a href="#curation-overview">See the curation loop</a><span>Follow scouting, reviews and source checks through to an approved update.</span></li>
+            <li><a href="#standards">How the writer works</a><span>Follow shared writing and design standards, grounded in original sources.</span></li>
+            <li><a href="#scouting">How updates are chosen</a><span>Assess new material, prioritise issues and propose valuable changes.</span></li>
+            <li><a href="#peer-review">How quality improves</a><span>Check references, review paragraphs and feed corrections into the standards.</span></li>
+          </ol>
+        </figure>
+
+        <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
+          <a href="#curation-overview">The curation loop</a>
+          <a href="#purpose">Why agents maintain it</a>
+          <a href="#standards">The writer and its standards</a>
+          <a href="#scouting">Scouting and prioritisation</a>
+          <a href="#changes">From issue to approved change</a>
+          <a href="#reference-checks">Keeping references current</a>
+          <a href="#peer-review">Peer review and improvement</a>
+          <a href="#sources">Sources and maintenance records</a>
+        </nav></details>
+
+        <section id="curation-overview">
+          <h2>The curation loop</h2>
+          <p>Scouting finds possible additions, while peer review and source monitoring identify changes to existing articles. These findings enter the same backlog. The writer assesses their value, prepares useful changes with the right context and standards, and submits them for human approval.</p>
+          <figure class="concept-figure" id="fig-curation">
+            <figcaption>Figure 1. How agents curate the playbook under human review.</figcaption>
+            <details class="figure-reading"><summary>Read as text: the curation loop</summary>
+              <ol>
+                <li>Scouts powered by Muse and Hermes assess online material for novelty, gap coverage and loss if missed. Medium- and high-priority findings enter the issue backlog.</li>
+                <li>Reviewers powered by Muse and OpenAI score existing paragraphs from 1 to 10 for naturalness, ease of understanding and accuracy. Source-monitoring agents check quoted sources, publish check dates and record changed, broken or unverified references. Both activities file findings as issues.</li>
+                <li>The OpenAI-powered writer reviews prioritised issues and assesses their value. Lower-value proposals retain a recorded decision; changes with high assessed value proceed to drafting.</li>
+                <li>The writer uses the issue evidence, current articles, original sources and intended reader as context. The writing and design standards guide the draft and acceptance checks. For peer-review corrections, revise the content first, then consider whether the standards also need refinement.</li>
+                <li>The writer prepares a feature branch and pull request. A human reviews the change and evidence; requested revisions return to the writer. Only an approved change is merged and published.</li>
+                <li>Published articles and their quoted sources return to peer review and source monitoring, continuing the maintenance loop. Proposed standard changes also require human approval.</li>
+              </ol>
+            </details>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Site curation workflow; scroll horizontally to explore the full diagram on a narrow screen">
+                <svg viewBox="0 0 840 1120" role="img" aria-labelledby="curation-diagram-title" aria-describedby="curation-diagram-description">
+                  <title id="curation-diagram-title">The site curation and maintenance loop</title>
+                  <desc id="curation-diagram-description">Scouting, paragraph reviews and dated source checks feed the issue backlog. The writer assesses value, drafts useful changes using relevant context and shared standards, and submits a feature branch and pull request for human approval. Requested revisions return to the writer. Approved updates are published and return to review and source monitoring. After correcting content, the writer also considers whether the standards need refinement.</desc>
+                  <defs>
+                    <marker id="curation-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
+                    <marker id="curation-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+                  </defs>
+
+                  <path class="d-line d-dash" d="M544 1014H824V38H420V88" marker-end="url(#curation-arrow)"/>
+                  <path class="d-line d-dash" d="M694 38V88" marker-end="url(#curation-arrow)"/>
+                  <text class="d-label" x="588" y="24" text-anchor="middle">Recheck published articles and quoted sources</text>
+
+                  <g><rect class="d-node" x="32" y="88" width="228" height="122" rx="8"/>
+                    <text class="d-title" x="146" y="114" text-anchor="middle">Content scouting</text>
+                    <text class="d-sub" x="146" y="138" text-anchor="middle">Muse + Hermes</text>
+                    <text class="d-sub" x="146" y="163" text-anchor="middle">Novelty · gaps · loss if missed</text>
+                    <text class="d-sub" x="146" y="187" text-anchor="middle">Assess online practices</text>
+                  </g>
+                  <g><rect class="d-node" x="306" y="88" width="228" height="122" rx="8"/>
+                    <text class="d-title" x="420" y="114" text-anchor="middle">Content peer review</text>
+                    <text class="d-sub" x="420" y="138" text-anchor="middle">Muse + OpenAI</text>
+                    <text class="d-sub" x="420" y="163" text-anchor="middle">Score each paragraph, 1–10</text>
+                    <text class="d-sub" x="420" y="187" text-anchor="middle">Natural · clear · accurate</text>
+                  </g>
+                  <g><rect class="d-node" x="580" y="88" width="228" height="122" rx="8"/>
+                    <text class="d-title" x="694" y="114" text-anchor="middle">Monitor quoted sources</text>
+                    <text class="d-sub" x="694" y="138" text-anchor="middle">Source-monitoring agents</text>
+                    <text class="d-sub" x="694" y="163" text-anchor="middle">Check links, claims, versions</text>
+                    <text class="d-sub" x="694" y="187" text-anchor="middle">Publish each check date</text>
+                  </g>
+
+                  <path class="d-line" d="M146 210V250H420V280" marker-end="url(#curation-arrow)"/>
+                  <path class="d-line" d="M420 210V244" marker-end="url(#curation-arrow)"/>
+                  <path class="d-line" d="M694 210V250H426" marker-end="url(#curation-arrow)"/>
+                  <circle cx="420" cy="250" r="4" fill="#64748b"/>
+                  <text class="d-label" x="146" y="233" text-anchor="middle">Medium / high priority</text>
+                  <text class="d-label" x="459" y="233">Issues</text>
+                  <text class="d-label" x="694" y="233" text-anchor="middle">Dated findings</text>
+                  <g><rect class="d-node" x="296" y="280" width="248" height="82" rx="8"/>
+                    <text class="d-title" x="420" y="310" text-anchor="middle">Issue backlog</text>
+                    <text class="d-sub" x="420" y="333" text-anchor="middle">Evidence + priority</text>
+                    <text class="d-sub" x="420" y="352" text-anchor="middle">Proposed change</text>
+                  </g>
+                  <path class="d-line" d="M420 362V414" marker-end="url(#curation-arrow)"/>
+                  <text class="d-label" x="438" y="391">Prioritised review</text>
+                  <g><polygon class="d-node d-decision" points="310,414 530,414 544,428 544,488 530,502 310,502 296,488 296,428"/>
+                    <text class="d-title" x="420" y="445" text-anchor="middle">Writer assesses value</text>
+                    <text class="d-sub" x="420" y="474" text-anchor="middle">Reader benefit · overlap · effort</text>
+                  </g>
+                  <path class="d-line" d="M296 458H260" marker-end="url(#curation-arrow)"/>
+                  <g><rect class="d-node" x="32" y="414" width="228" height="88" rx="8"/>
+                    <text class="d-title" x="146" y="445" text-anchor="middle">Record the decision</text>
+                    <text class="d-sub" x="146" y="474" text-anchor="middle">Lower value: defer the change</text>
+                  </g>
+                  <path class="d-line d-line-accent" d="M420 502V554" marker-end="url(#curation-arrow-accent)"/>
+                  <text class="d-label" x="438" y="533">High value</text>
+
+                  <g><rect class="d-node" x="32" y="554" width="228" height="112" rx="8"/>
+                    <text class="d-title" x="146" y="583" text-anchor="middle">Writing + design standards</text>
+                    <text class="d-sub" x="146" y="609" text-anchor="middle">writing.md + design.md</text>
+                    <text class="d-sub" x="146" y="638" text-anchor="middle">Guide drafts and checks</text>
+                  </g>
+                  <path class="d-line" d="M260 610H296" marker-end="url(#curation-arrow)"/>
+                  <g><rect class="d-node d-node-accent" x="296" y="554" width="248" height="112" rx="8"/>
+                    <text class="d-title" x="420" y="583" text-anchor="middle">Writer · OpenAI</text>
+                    <text class="d-sub" x="420" y="609" text-anchor="middle">Draft or correct the article</text>
+                    <text class="d-sub" x="420" y="638" text-anchor="middle">Cite original sources; run checks</text>
+                  </g>
+                  <g><rect class="d-node" x="580" y="554" width="228" height="112" rx="8"/>
+                    <text class="d-title" x="694" y="583" text-anchor="middle">Writing context</text>
+                    <text class="d-sub" x="694" y="609" text-anchor="middle">Issue evidence + intended reader</text>
+                    <text class="d-sub" x="694" y="638" text-anchor="middle">Current articles + original sources</text>
+                  </g>
+                  <path class="d-line" d="M580 610H544" marker-end="url(#curation-arrow)"/>
+                  <path class="d-line d-dash" d="M344 666V690H146V666" marker-end="url(#curation-arrow)"/>
+                  <text class="d-label" x="146" y="713" text-anchor="middle">After correcting content,</text>
+                  <text class="d-label" x="146" y="733" text-anchor="middle">consider refining the standards</text>
+
+                  <path class="d-line" d="M420 666V714" marker-end="url(#curation-arrow)"/>
+                  <g><rect class="d-node" x="296" y="714" width="248" height="64" rx="8"/>
+                    <text class="d-title" x="420" y="741" text-anchor="middle">Feature branch + pull request</text>
+                    <text class="d-sub" x="420" y="763" text-anchor="middle">Change, sources and check results</text>
+                  </g>
+                  <path class="d-line" d="M420 778V814" marker-end="url(#curation-arrow)"/>
+                  <g><polygon class="d-node d-node-accent d-decision" points="310,814 530,814 544,828 544,892 530,906 310,906 296,892 296,828"/>
+                    <text class="d-title" x="420" y="847" text-anchor="middle">Human review and approval</text>
+                    <text class="d-sub" x="420" y="877" text-anchor="middle">Review the change and its evidence</text>
+                  </g>
+                  <path class="d-line d-dash" d="M544 860H562V642H544" marker-end="url(#curation-arrow)"/>
+                  <text class="d-label" x="580" y="850">Request revisions</text>
+                  <path class="d-line d-line-accent" d="M420 906V970" marker-end="url(#curation-arrow-accent)"/>
+                  <text class="d-label" x="438" y="944">Approved changes only</text>
+                  <g><rect class="d-node d-node-accent" x="296" y="970" width="248" height="88" rx="8"/>
+                    <text class="d-title" x="420" y="1002" text-anchor="middle">Merge and publish</text>
+                    <text class="d-sub" x="420" y="1032" text-anchor="middle">Updated articles and dated sources</text>
+                  </g>
+                  <text class="d-sub" x="420" y="1095" text-anchor="middle">Content and standard changes both require human approval.</text>
+                </svg>
+              </div>
+              <p class="diagram-key">Solid arrows show findings, context and changes moving forward. Cut-corner nodes mark decisions. Dashed arrows return published work for checks, requested revisions to the writer and content corrections for a possible standards update.</p>
+            </details>
+          </figure>
+        </section>
+
+        <section id="purpose">
+          <h2>Why agents maintain this playbook</h2>
+          <p>Developing products with AI is an emerging practice. New methods, models and frameworks give teams more approaches to assess and try. Keeping a playbook useful means finding relevant developments, checking their evidence and revisiting earlier advice.</p>
+          <p>A wholly manual process takes substantial research and editorial time and can struggle to keep up. This playbook uses agents to carry out that recurring work, so people can focus their attention on the proposed changes and the evidence behind them.</p>
+          <p>The maintenance process follows a <a href="concept.html#software-factory">light factory approach</a>: agents prepare and check changes, and a person reviews them before publication. The aim is current, useful guidance with an accountable human approval decision.</p>
+        </section>
+
+        <section id="standards">
+          <h2>The writer follows shared standards</h2>
+          <p>An OpenAI-powered writer agent drafts and revises the articles. Its work is continually refined through source checks, peer feedback and human review. If a passage sounds robotic or unnatural, we’re sorry. Clear, natural explanations are the goal, and improving those passages is part of the maintenance work.</p>
+          <p>The writer uses two repository standards to guide the content, its flow and the checks before a change is submitted:</p>
+          <ul>
+            <li><strong><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md">The writing standard (writing.md)</a></strong> starts with the reader’s task. It calls for plain British English, connected explanations, consistent terminology and concrete actions with named owners and expected results. Its editorial acceptance checklist covers evidence, coherence, attribution, useful next steps and the distinction between requirements, recommendations and examples.</li>
+            <li><strong><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/design.md">The design standard (design.md)</a></strong> guides reading width, typography, navigation, page maps, tables and accessible diagrams. It distinguishes topic explanations from worked examples and includes an acceptance checklist for responsive layouts, keyboard access, contrast, reduced motion and print readability.</li>
+          </ul>
+          <p>The writer is required to research and reference established practices online. It does not invent new theories or methodologies. Every article that presents a methodology or framework must link directly to its original source and explain any adaptation made for this guide. Source notes belong in the article’s final Sources section, with precise inline links where needed to connect a claim to its evidence.</p>
+          <p>Before submitting a change, the writer rereads the affected explanation and surrounding material against the writing checklist, then checks the page against the design checklist. Review records distinguish what was checked from what remains uncertain.</p>
+        </section>
+
+        <section id="scouting">
+          <h2>Scouts assess what deserves attention</h2>
+          <p>Scouting agents powered by Muse and Hermes scan online for recent practices and materials that could improve the playbook. They compare each candidate article with the existing content using three questions:</p>
+          <ul>
+            <li><strong>Novelty:</strong> Does it introduce relevant content that the playbook does not already cover?</li>
+            <li><strong>Enrichment and gap coverage:</strong> Does it resolve an omission, deepen an explanation or provide stronger evidence for existing guidance?</li>
+            <li><strong>Loss if missed:</strong> What would readers lose if the material were not covered, and how consequential would that omission be?</li>
+          </ul>
+          <p>The assessment produces a criticality score and a low, medium or high priority, supported by the reasons for that judgement. Medium- and high-priority findings are filed as issues in the <a href="https://github.com/eitri-edd/AI-PDLC/issues">issue backlog</a> for consideration. An issue records a candidate for review; it is not a commitment to include the material.</p>
+        </section>
+
+        <section id="changes">
+          <h2>From issue to approved change</h2>
+          <p>The writer scans the backlog and takes high-priority issues for review. Criticality identifies what needs attention; the writer then assesses whether the proposed change would add enough value for readers.</p>
+          <ol>
+            <li><strong>Review the evidence and value.</strong> Read the original material, compare it with the affected pages and assess the benefit, overlap and effort of the proposed change. Record the decision and its reasons on the issue.</li>
+            <li><strong>Implement changes with high assessed value.</strong> Prepare the update on a feature branch, retain direct source references and check the revised content and presentation against the shared standards.</li>
+            <li><strong>Submit a pull request.</strong> Describe the resulting change, link the issue and sources, and report the checks performed and any unresolved questions.</li>
+            <li><strong>Obtain human approval.</strong> A human reviewer examines the change and its evidence, requests revisions where needed and decides whether to approve it. Every content change requires this approval before it is merged and published.</li>
+          </ol>
+          <p>Agent checks and peer-review scores support the human decision. They do not authorise publication.</p>
+        </section>
+
+        <section id="reference-checks">
+          <h2>Keep references current and publish check dates</h2>
+          <p>Agents are required to check all online references regularly and publish the date each reference was last checked in the article’s source notes. The date tells readers when a check happened; it does not guarantee that the source has remained unchanged since then.</p>
+          <p>The check covers whether the destination is accessible, whether it still supports the cited claim and whether a newer version changes the guidance. The agent records the source URL, check date, result and any unresolved limitation. Broken links, changed claims and sources that cannot be verified become maintenance findings for review.</p>
+          <p>A working link alone does not establish that an article is accurate. The <a href="https://github.com/eitri-edd/AI-PDLC/blob/main/site/reference-checks.json">reference-check inventory</a> retains individual source records; each reference’s recorded date matters separately from a site-wide review date.</p>
+        </section>
+
+        <section id="peer-review">
+          <h2>Peer review improves articles and standards</h2>
+          <p>A separate group of reviewer agents powered by Muse and OpenAI examines existing articles paragraph by paragraph. Each paragraph receives a score from 1 to 10 for each of three qualities: how natural it sounds, how easy it is to understand and how accurately it represents the evidence. Higher scores indicate a stronger result.</p>
+          <p>Reviewers file issues that identify the passage, explain the problem and propose an improvement. Scores help direct attention, while the explanation and source evidence give the writer something concrete to assess. An agent’s readability score does not establish that a reader has understood the article.</p>
+          <p>The writer reviews these issues and assesses the value of the proposed correction before changing the article. For an accepted improvement, the order is deliberate: <strong>correct the content first, then examine whether the standards also need refinement</strong>. A writing or design rule may itself have contributed to the problem.</p>
+          <p>The writer rechecks the corrected passage and its surrounding explanation, then considers whether a change to writing.md or design.md would help prevent the same problem elsewhere. Article corrections and any proposed standard changes go through pull requests with human approval.</p>
+        </section>
+
+        <section id="sources">
+          <h2>Sources and maintenance records</h2>
+          <p>This page describes the playbook’s editorial process. The repository holds the standards and review evidence used to maintain it:</p>
+          <ul>
+            <li><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md#editorial-acceptance-checklist">Writing standard and editorial acceptance checklist</a> — reader needs, evidence, content flow and attribution.</li>
+            <li><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/design.md#design-acceptance-checklist">Design standard and design acceptance checklist</a> — presentation, accessibility and responsive behaviour.</li>
+            <li><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/site/reference-checks.json">Reference-check inventory</a> — source URLs, individual check dates and recorded outcomes.</li>
+            <li><a href="https://github.com/eitri-edd/AI-PDLC/pulls">Pull requests</a> — proposed changes and their review history.</li>
+          </ul>
+        </section>
+
+        <aside class="next-step" aria-label="Next step"><strong>Help improve the playbook.</strong> If an explanation is awkward, unclear or out of date, <a href="https://github.com/eitri-edd/AI-PDLC/issues">raise an issue</a> with the page link, the affected passage and what would make it more useful.</aside>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+      </article>
+    </main>
+    <aside class="page-contents">
+      <nav aria-label="On this page">
+        <p>On this page</p>
+        <a href="#curation-overview">The curation loop</a>
+        <a href="#purpose">Why agents maintain it</a>
+        <a href="#standards">The writer and its standards</a>
+        <a href="#scouting">Scouting and prioritisation</a>
+        <a href="#changes">From issue to approved change</a>
+        <a href="#reference-checks">Keeping references current</a>
+        <a href="#peer-review">Peer review and improvement</a>
+        <a href="#sources">Sources and maintenance records</a>
+      </nav>
+    </aside>
+  </div>
+</body>
+</html>
