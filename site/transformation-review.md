@@ -1,5 +1,53 @@
 # Organisation transformation: editorial review
 
+## Iterative outcome evaluation · 9 November 2026 · Issue 37
+
+Reviewed against main revision `25a1af90cdcee41a71379d7b8cafbd095f366ebb` on feature branch `feature/iterative-transformation-evaluation`. Earlier entries describe historical snapshots; they do not assert the current outcome example still contains numerical tables.
+
+### Intended reader task and change
+
+An IT leader should explain how the existing department evaluates its routine-readiness trial, adjusts an unsatisfactory arrangement and reassesses governance, efficiency and full cost together. The owner requested a concise method without fabricated outcome data or additional organisations, rather than another completed numerical investment report.
+
+Replaced only [the outcome example](dist/transformation.html#upload-results), now titled “Evaluate and adjust the transformation”. The established Enterprise Systems Department, department head and specialist leads remain. Actual-record comparisons replace fabricated budgets, dates, targets and divisional tables. The example contains 275 whitespace-delimited words including its header, versus 971 before the edit, using the same extraction method.
+
+### Writing-standard assessment
+
+Reread the changed panel together with the People, Process, Culture and Technology examples, its surrounding outcome guidance, decision options and next step. Checked against the current `../writing.md`, especially actionable guidance, evidence versus claims, reader-task review, stable descriptive references and Method first learning-example rules.
+
+- **Who and inputs:** the department head and specialist leads compare actual work, cost and review records with the pre-trial baseline. Comparable tasks and periods are explicit; demand/risk differences limit interpretation.
+- **Actual checks:** the three bullets distinguish review errors and permissions, delivery time including unfinished queues/rework, and transition/operating costs including supervision/correction. Reassignment requires completed work and is not payroll saving.
+- **Judgement and limits:** the trial’s agreed outcomes and required controls set the basis for judgement. Conditional referral and missed-defect examples show different adjustments without claiming either happened. No numerical result, AI-only causal claim, new organisational policy or new approval gate is asserted.
+- **Record and next action:** the leads retain findings, original evidence links and unresolved questions. The department head records the adjustment, its owner and a bounded trial/review point. Evaluation repeats after changes, while restriction/stopping prevents indefinite testing or trading away required controls.
+- **Presentation:** British English, active verbs, sentence-case title, visible fictional label, learning benefit and the shared lavender/book-mark header remain. Parallel checks use bullets; connected interpretation remains prose. Existing Sources and their caveats are unchanged.
+
+This is a conditional evaluation walkthrough, not a completed measurement or trial result. No actual departmental outcome data was supplied or invented. It teaches the comparison, interpretation and feedback mechanism; it makes no claim that a target has already been met or that readers have demonstrated understanding. The directly affected `README.md` summary now describes this iterative method.
+
+### Corrections found during verification
+
+All four published outcome fragments remain, including the three legacy cost/delivery/reassignment anchors. Moving those anchors from subheadings to compact list content initially placed direct-link text under the sticky header. Extended the existing page-local scroll-margin selectors to those targets, then rechecked desktop and mobile positioning. No theme, script, organisational authority or other example changed.
+
+### Executed checks
+
+- A focused content/structure check failed on the unmodified example, then passed after the rewrite. It checks no fabricated outcome numbers, existing department/trial, all three balancing dimensions, iterative follow-up, evidence retention, control boundaries, concision and preserved anchors.
+- All 14 HTML pages pass explicit-tag balance and unique-ID checks; 1,159 local resource/fragment references resolve. All 70 existing transformation IDs and its external URLs remain. Source outside the selected example is byte-identical. `git diff --check` passes.
+- Browser checks at 1440, 768, 375 and 320 pixels found no page or example horizontal overflow. The visible example retains its lavender treatment. All four outcome fragments were tested at each width and reached content below the sticky header after the offset correction.
+- With scripts disabled and root text enlarged to 200%, the example remains available without opening a disclosure and fits the 375px viewport.
+- Print-media emulation keeps the example and feedback text visible. Actual print pagination was not checked.
+- A ResizeObserver notification occurred during the 320px viewport-change runs. Separate fixed-width reloads of both the unmodified main snapshot and the candidate produced no notification or overflow. Its cause was not established; this is not described as an error-free browser run or a proven baseline defect. No failed resource requests were observed in the final layout checks.
+
+Local check script/results and screenshots are under ignored `.preview/`: `check-outcome-example.py`, `outcome-source-checks.json`, `outcome-browser-checks.json`, `outcome-1440.png` and `outcome-375.png`. These are execution evidence, not new application build dependencies. No full HTML-conformance/accessibility audit or representative-reader session was performed.
+
+### Representative-reader tasks pending
+
+Ask an IT leader to answer without corrective coaching, recording their answer, hesitation and any assistance:
+
+1. What should the department compare before claiming efficiency? Expected: comparable records and periods, with unfinished queues/rework and differences in demand/risk visible.
+2. What changes if unnecessary referrals delay work, versus required defects being missed? Expected: clarify context and retest the former; restrict delegation and strengthen checks for the latter, retaining required human controls.
+3. Do reassigned hours establish a payroll saving? Expected: no; verify completed replacement work and use the full service-cost record.
+4. What closes the loop? Expected: retain evidence and uncertainty, assign an adjustment and bounded review, then reassess all three dimensions; stop/restrict an unjustified use rather than continue indefinitely.
+
+Comprehension remains unverified until an actual reader attempts these tasks. The requested deliverable is a linked issue and PR for review, not a merge or deployment.
+
 ## Natural enterprise wording · 8 November 2026
 
 Rephrased the continuing case against `writing.md` following the user's request. The reader action remains to connect each pillar to a leadership decision about enterprise IT delivery. The setting is now the fictional **Enterprise Systems Department**, with no government or public-service framing. The introductory text, independently linked case labels, research caveats, shared-platform description and both README summaries use the same setting. Official source titles, including OWASP's “Excessive Agency”, retain their published wording.
