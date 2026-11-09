@@ -20,9 +20,49 @@ Read `../writing.md` and `../design.md` before changes. Reference documents are 
 
 The authoring standards reserve blue diagrams for topic explanations and teal panels for AI assistance. Every worked example uses the shared Method first treatment: a pale lavender surface, plum left rule and framed book mark, visible “Worked example” label and descriptive topic title. Standalone examples and main journey chapters state a learning benefit; accordion headers keep their purpose visible when closed. Apply the same palette to related tables and applied diagrams. See `../design.md` and `../writing.md` for the shared specification. Preserve descriptive reference names and stable anchors, and verify the rendered result on every affected page.
 
-Confirm the content owner, applicable lifecycle version and substantive review date before publishing maintained guidance. Page status metadata is not required and should not be added to page headers or description metadata. Editorial status may be tracked in maintenance records when useful. GitHub Pages publishes `dist/` from `main` through `.github/workflows/pages.yml`; proposed changes can be reviewed in a pull request before merging.
+Confirm the content owner, applicable lifecycle version and substantive review date before publishing maintained guidance. Page status metadata is not required and should not be added to page headers or description metadata. Editorial status may be tracked in maintenance records when useful. GitHub Pages publishes `main:site/dist/` at the site root and `dev:site/dist/` under `/dev/` through `.github/workflows/pages.yml`.
 
 The Project Discovery and implementation pages were reviewed and supplemented with online sources on 28 September 2026. See `product-pages-review.md` for the source mapping, editorial changes and validation, including experiment design, AI evaluation, delivery measures and release recovery.
+
+## Production and dev deployments
+
+- **Production:** https://eitri-edd.github.io/AI-PDLC/ uses `site/dist/` from `main`.
+- **Dev:** https://eitri-edd.github.io/AI-PDLC/dev/ uses `site/dist/` from the long-lived `dev` branch. It is a public preview, not a private environment; do not publish secrets or confidential draft content.
+
+Each deployment reads both current branch tips and uploads one complete artefact. Production files stay at the root; dev files go into `dev/`. Files are copied without rewriting links or content. Keep links and asset URLs relative so navigation, styles, scripts and images stay within the selected branch's path. Reserve `main:site/dist/dev/` for the dev subtree rather than adding production content there.
+
+Relevant pushes to `main` trigger deployment directly. Relevant pushes to `dev` run the read-only **Validate Pages** workflow, which tests assembly and stages production plus candidate content without publishing. Its successful push runs trigger the deployment workflow on the default branch (`main`) through `workflow_run`. Pull request validation never deploys. Documentation-only changes outside the workflow's path filters do not republish the site.
+
+Deployment continues to use the existing main-only `github-pages` environment protection. The privileged workflow executes assembly code from `main`; it only copies static content from `dev` and does not consume its workflow artefacts. Deployments share the `pages` concurrency group and do not cancel a running deployment. Each queued run reads fresh branch tips, so a dev update cannot replace production with dev content, and a main update cannot remove the dev subtree.
+
+### Rollout and maintenance
+
+Merge the deployment PR from `dev` into `main` to publish the first combined artefact. **Keep the `dev` branch after merging.** It starts from the production revision and carries the validation workflow needed to notify `main` about subsequent dev changes. Keep `.github/workflows/pages-checks.yml` on `dev`, including its **Validate Pages** name; changing or removing that trigger stops automatic dev publishing.
+
+Commit preview content to `dev`, then use a pull request to promote approved content into `main`. After production-only fixes, merge `main` back into `dev` as needed; deployment does not synchronise branch history. To republish both current tips manually, run **Deploy site to GitHub Pages** from `main`. A manual run from another branch is intentionally skipped. Missing source indexes, symlinks, or a production `/dev/` collision fail assembly before upload, leaving the last successful deployment in place.
+
+To roll back the deployment change, revert its PR on `main`. The next successful main-only deployment removes `/dev/` and restores the former production-only layout. To roll back content on either branch, revert its content commit and let the combined deployment run again.
+
+### Local verification
+
+Run the standard-library regression tests from the repository root:
+
+```sh
+python3 -m unittest discover -s tests -v
+```
+
+To stage the real branch contents locally, use a fresh directory outside your checkout. Replace `<preview-dir>` with that directory's absolute path, and run these commands from the repository root:
+
+```sh
+git worktree add --detach <preview-dir>/main origin/main
+git worktree add --detach <preview-dir>/dev origin/dev
+python3 .github/scripts/assemble_pages.py \
+  <preview-dir>/main/site/dist <preview-dir>/dev/site/dist <preview-dir>/AI-PDLC
+python3 -m http.server 8000 --directory <preview-dir>
+```
+
+Open `http://localhost:8000/AI-PDLC/` and `http://localhost:8000/AI-PDLC/dev/`. Follow navigation links and check CSS, JavaScript and images under both prefixes. The output directory must not already exist; assembly refuses to mix new content with stale files. When finished, stop the server and remove the two detached worktrees with `git worktree remove`.
+
 
 ## Accuracy review
 
