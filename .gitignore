@@ -8,3 +8,6 @@
 
 # scratch folder
 .scratch/
+
+# Python deployment checks
+__pycache__/

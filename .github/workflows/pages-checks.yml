@@ -1,0 +1,45 @@
+name: Validate Pages
+
+on:
+  push:
+    branches: [dev]
+    paths:
+      - site/dist/**
+      - .github/workflows/pages.yml
+      - .github/workflows/pages-checks.yml
+      - .github/scripts/assemble_pages.py
+      - tests/test_pages.py
+  pull_request:
+    branches: [main]
+    paths:
+      - site/dist/**
+      - .github/workflows/pages.yml
+      - .github/workflows/pages-checks.yml
+      - .github/scripts/assemble_pages.py
+      - tests/test_pages.py
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-checks-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test Pages assembly
+        run: python3 -m unittest discover -s tests -v
+      - name: Check out current production content
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: production
+          sparse-checkout: site/dist
+          persist-credentials: false
+      - name: Assemble production and candidate content without deploying
+        run: python3 .github/scripts/assemble_pages.py production/site/dist site/dist public

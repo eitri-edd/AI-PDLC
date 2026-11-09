@@ -6,27 +6,61 @@ on:
     paths:
       - site/dist/**
       - .github/workflows/pages.yml
+      - .github/workflows/pages-checks.yml
+      - .github/scripts/assemble_pages.py
+  # This event runs the workflow from the default branch, not from dev.
+  workflow_run:
+    workflows: [Validate Pages]
+    branches: [dev]
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
   deploy:
+    # Keep the existing main-only github-pages environment protection. A PR
+    # validation or a manual run on dev must never deploy.
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name != 'workflow_run' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.event == 'push' &&
+        github.event.workflow_run.head_branch == 'dev' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    # Rejected events must not acquire the deployment lock.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      # Always read both branch tips after acquiring the deployment lock.
+      - name: Check out production and trusted deployment code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: production
+          persist-credentials: false
+      - name: Check out dev static content only
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          path: development
+          sparse-checkout: site/dist
+          persist-credentials: false
+      # Never execute dev scripts or download artefacts from its workflow.
+      - name: Assemble production root and dev subtree
+        run: python3 production/.github/scripts/assemble_pages.py production/site/dist development/site/dist public
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site/dist
+          path: public
       - id: deployment
         uses: actions/deploy-pages@v4
