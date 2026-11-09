@@ -247,17 +247,39 @@ Describe what the reader will learn from the evidence or decision, without claim
 
 Use this structure when it materially improves a long learning chapter. Do not add navigation cards or a case story to a short procedure or simple reference page. The teaching order does not alter the actual lifecycle, local approval authority or safety requirements.
 
-## Source attribution belongs at the end of each page
+<a id="source-attribution-belongs-at-the-end-of-each-page"></a>
 
-Place **all standalone source-attribution notes in the final page-level `Sources` section**, before the article footer. This includes source recaps placed at the end of content sections, framework inspiration, references supporting a table, method adaptations, and research/sources notes. A content section should not end with a separate “Source:”, “Sources:”, “Basis:”, “Supporting guidance:”, “Measurement source:” or equivalent standalone credit.
+## Standardise source listings
 
-- Keep one Sources section per page that cites external works. Preserve the established reference IDs, source names, source URLs and links. List source-to-section mappings under a descriptive “Section attribution and adaptations” subheading, with section links, without duplicating the entire numbered bibliography.
-- Preserve precise inline numbered source links next to a material claim when needed for traceability, but move standalone attribution explanations and bibliographic recaps to the Sources section.
-- **Do not separate a consequential caveat from its claim.** Research population, sample size, limitations, applicability and uncertainty affecting the reader's decision stay next to the relevant statement. Licensed-image credits or required quotation credits stay with the asset when required by the licence, with fuller reference details at the bottom.
-- An operational link or resource is not automatically attribution. Video links, training entry points, Eitri version warnings, approval requirements and actionable security cautions remain where the reader needs them even if they currently use a `source-ref` CSS class. Do not create empty Sources sections for pages with no external citations.
-- Preserve all existing HTML IDs, links, intended meaning, reference numbering and factual claims. A move is not permission to remove a source or weaken a qualification.
+Every page that cites published works or primary workflow documents has **one final section headed `Sources`**, with the stable HTML ID `sources`, before the article footer. Use **one visible ordered list** (`<ol class="source-list">`) for the complete source listing. Do not add separate attribution panels, reference bibliographies, learning-reference lists or source disclosures within or elsewhere on the page. A reference toolkit that teaches methods is instructional content, not a second bibliography; keep its source credits in the same final list.
 
-**Editorial validation:** inspect all published pages for standalone source credits before the last Sources section; distinguish source credits from instructional prose and operational links. Check section-to-source mapping, stable anchors, source URLs, meaningful caveats, navigation, chronological worked journeys and responsive presentation before merging.
+### Give each work one canonical entry
+
+- Name the author or publisher and meaningful source title, and link to the original work. Retain publication dates, editions, relevant versions and specific chapter or section pointers when they affect interpretation.
+- Put the work's scope, important evidence limits, adaptation and attribution in **that entry**, with concise links back to the content it supports, such as `Used in <a href="#six-stages">Plan, build, check and learn</a>.` Combine repeated mappings rather than duplicating the bibliography or repeating whole attribution paragraphs for every source.
+- Integrate optional learning resources into the same list and identify their learning purpose in the entry. A republication can share its original work's entry, with its own edition link and a preserved anchor. Do not list the same work again under a different heading.
+- Make source-only references near a claim link to the corresponding canonical entry. Numbered labels and accessible “Source N” labels must match the entry's displayed list number. HTML IDs are stable destinations, not a numbering scheme: preserve existing source and learning anchors, including aliases, and repair every affected citation if display numbers change.
+- Move standalone “Source:”, “Sources:”, “Basis:”, “Supporting guidance:”, “Measurement source:” and equivalent credit recaps into the relevant entries. Do not leave section-ending bibliographies or add a separate “Section attribution and adaptations” list.
+
+### Publish one reference-check date
+
+Place exactly one paragraph immediately after the Sources heading, before the list, using the class `source-check-date` and the label **“References last checked:”**. Where a completed page-wide reference-maintenance pass is recorded, display its date as “9 November 2026” in a `<time datetime="2026-11-09">` element. The date is an example of the required format, not a value to copy into every future update.
+
+- Use the last recorded **page-wide** maintenance pass, not the most recent partial check, edit, deployment or formatting change. If no page-wide check is recorded, say “References last checked: not recorded”; do not invent a date.
+- Keep individual retrieval/check dates, methods, results, historical checks and unresolved outcomes in [the reference-check inventory](site/reference-checks.json) or the relevant maintenance record. Do not repeat “checked”, “accessed”, “retrieved” or “referenced on” dates beside individual links, source entries, model examples or learning resources.
+- Retain meaningful publication dates, study periods, versions and separately labelled editorial-review metadata. They describe different events; do not relabel them as reference checks or advance them to match the source-list date.
+- A date does not imply that every claim, inaccessible document or internal implementation was verified. Preserve a specific access, scope or verification limitation in the relevant source entry and next to the claim when consequential. Do not erase an unresolved limitation merely because an accessible summary or a link passed a later check.
+- Source-monitoring updates follow this same contract: update the single page-level date only after a documented page-wide pass, retain per-source history in maintenance records, and do not recreate parallel date labels or attribution lists.
+
+### Preserve the reader's evidence and actions
+
+Keep precise citations next to material claims. **Do not separate a consequential caveat from its claim:** research population, sample size, limitations, applicability and uncertainty affecting the reader's decision stay beside the relevant statement. Licensed-image or required quotation credits stay with the asset when the licence requires it, with fuller details in the canonical entry.
+
+An operational link is not automatically attribution. Keep video access, training entry points, installation links, Eitri version warnings, approval requirements and actionable security cautions where readers need them. A page containing only orientation and navigation does not need an empty Sources section. Do not manufacture references to fill a template.
+
+Preserve source names, original URLs, stable HTML IDs, factual claims, licence obligations and material qualifications when consolidating entries. Keep mobile and desktop contents labels as `Sources`. Do not let an old source anchor disappear or lead into a collapsed, unrelated reference panel.
+
+**Editorial validation:** run `python3 -m unittest discover -s tests -v`. The source-list regression checks cover the single heading/list/date, citation numbering, duplicate IDs and local fragments; also compare the changed source URLs and anchors with the previous revision. Inspect the rendered Sources section and moved citation destinations on desktop and mobile. Distinguish these structural and presentation checks from a new external-source fact check or a representative-reader session.
 
 ## Page structures
 
@@ -371,7 +393,7 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 
 ## Editorial acceptance checklist
 
-- [ ] Standalone source credits and adaptations appear only in the final Sources section, while material caveats and operational links remain in context.
+- [ ] Each sourced page has one final Sources heading, one visible numbered list and one page-level reference-check date; adaptations belong to their canonical entries, individual check histories stay in maintenance records, and material caveats and operational links remain in context.
 - [ ] Substantial teaching chapters distinguish general guidance, the continuous case and reference material; short examples help without making the general instructions depend on the case.
 - [ ] The opening tells the intended reader what the page helps them do or understand.
 - [ ] Prerequisites match the reader’s assumed knowledge, and the page structure fits its main purpose.
@@ -403,15 +425,17 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 
 Do not mark a procedure or review activity editorially complete while readers still have to invent the checking method or infer what to record. Before accepting it, ask whether a reader unfamiliar with the topic could carry out the next action using the passage and its linked inputs. Revise the passage if they could not. This is an authoring acceptance rule, not a new organisational approval gate.
 
-## Sources for this standard
+<a id="sources-for-this-standard"></a>
 
-The following sources inform the editorial approach and terminology choices. The page structures and definitions above are adaptations for this guide.
+## Sources
 
-- [Google: Voice and tone](https://developers.google.com/style/tone) informs natural prose, varied sentence openings, useful transitions and reading difficult passages aloud.
-- [Google: Audience](https://developers.google.com/tech-writing/one/audience) informs analysis of readers’ existing knowledge, prerequisites and learning needs.
-- [Diátaxis](https://diataxis.fr/) distinguishes explanation, tutorials, how-to guides and reference by the reader’s purpose.
-- [Anthropic: Building effective agents](https://www.anthropic.com/research/building-effective-agents) informs the adopted distinction between predefined workflows and model-directed agents. Its tooling discussion dates from December 2024; check current product documentation for implementation details.
-- [AWS: Building with AI-DLC using Amazon Q Developer](https://aws.amazon.com/blogs/devops/building-with-ai-dlc-using-amazon-q-developer/) identifies the named AI-DLC methodology discussed in the terminology table.
-- [NIST SP 800-218A](https://csrc.nist.gov/pubs/sp/800/218/a/final) addresses secure development practices for AI models and systems using them. It illustrates why authors need to check a source’s scope before applying its recommendations to AI-assisted development.
+References last checked: not recorded.
+
+1. [Google: Voice and tone](https://developers.google.com/style/tone) informs natural prose, varied sentence openings, useful transitions and reading difficult passages aloud.
+2. [Google: Audience](https://developers.google.com/tech-writing/one/audience) informs analysis of readers’ existing knowledge, prerequisites and learning needs.
+3. [Diátaxis](https://diataxis.fr/) distinguishes explanation, tutorials, how-to guides and reference by the reader’s purpose. The page structures above adapt these distinctions for this guide.
+4. [Anthropic: Building effective agents](https://www.anthropic.com/research/building-effective-agents) informs the adopted distinction between predefined workflows and model-directed agents. Its tooling discussion dates from December 2024; check current product documentation for implementation details.
+5. [AWS: Building with AI-DLC using Amazon Q Developer](https://aws.amazon.com/blogs/devops/building-with-ai-dlc-using-amazon-q-developer/) identifies the named AI-DLC methodology discussed in the terminology table.
+6. [NIST SP 800-218A](https://csrc.nist.gov/pubs/sp/800/218/a/final) addresses secure development practices for AI models and systems using them. It illustrates why authors need to check a source’s scope before applying its recommendations to AI-assisted development.
 
 Use [design.md](design.md) for the presentation of this content.

@@ -54,7 +54,7 @@
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>EDS AI Workflow (Eitri Agentic Dev Workflow)</h1>
 <p class="lead">The EDS AI Workflow is how EDS teams carry out product implementation with AI agents. It runs from the product owner’s requirements, through Eitri, the agentic developer harness, to the pipeline gates before production. Use this overview to see the whole route and who owns each handoff, then open the page for the part you want to understand.</p>
-          <p>The CoreX EDS team maintains this workflow. The workflow is made of skills: packaged instructions that an AI agent runs for one task, such as writing a specification or reviewing a change. It builds on Matt Pocock’s engineering skills and adds EDS skills for scheduling, standards, compliance, validation and release readiness. For the strategy behind it, including the six-stage loop, assurance model, autonomy and measures, <a href="product-implementation.html">read Product implementation</a>.</p>
+          <p>The CoreX EDS team maintains <a href="#source-harness">this workflow</a>. The workflow is made of skills: packaged instructions that an AI agent runs for one task, such as writing a specification or reviewing a change. It builds on <a href="#source-matt">Matt Pocock’s engineering skills</a> and adds EDS skills for scheduling, standards, compliance, validation and release readiness. For the strategy behind it, including the six-stage loop, assurance model, autonomy and measures, <a href="product-implementation.html">read Product implementation</a>.</p>
           <p>Some capabilities are still planned, and the thresholds shown are defaults that a team can change; both are labelled where they appear.</p>
           <iframe
             class="overview-video"
@@ -104,7 +104,7 @@
             <a href="#context-practice">Context for agents</a>
             <a href="#harness">Diagnose failures</a>
             <a href="#workflow-health">Workflow health</a>
-
+            <a href="#sources">Sources</a>
         </nav></details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -219,7 +219,7 @@
 
         <section id="principles">
           <h2>Working principles</h2>
-          <p>Use these seven principles to operate the harness:</p>
+          <p>Use these <a href="#source-handbook">seven principles</a> to operate the harness:</p>
           <ol class="practice-steps">
             <li><strong>Provide context before important decisions.</strong> Make business goals, architecture, policy and coding constraints available early.</li>
             <li><strong>Load only what is relevant.</strong> Reveal standards progressively instead of placing the whole knowledge base in every prompt.</li>
@@ -307,9 +307,21 @@
         </section>
 
         <details id="method-under-consideration"><summary>Method under consideration: SPDD</summary>
-          <p>The Eitri training describes a direction towards <a href="https://martinfowler.com/articles/structured-prompt-driven/">Structured-Prompt-Driven Development (SPDD)</a>, developed within Thoughtworks. Confirm adoption status and ownership with the workflow owner. Before using it with Eitri, test specification artefacts, skill behaviour and review gates against the target workflow.</p>
+          <p>The <a href="#source-training">Eitri training</a> describes a direction towards <a href="#source-spdd">Structured-Prompt-Driven Development (SPDD)</a>, developed within Thoughtworks. Confirm adoption status and ownership with the workflow owner. Before using it with Eitri, test specification artefacts, skill behaviour and review gates against the target workflow.</p>
         </details>
         <p class="source-ref"><a href="#version-status">Eitri status and version: verify installed revisions and enforced controls</a>.</p>
+        <section id="sources">
+          <h2>Sources</h2>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-09">9 November 2026</time>.</p>
+          <ol class="source-list">
+            <li id="source-harness">CoreX EDS team. <cite>Eitri harness workflow — README</cite>, overview and sections 1–4; internal revision not supplied. Primary workflow source; the editorial review gives this README priority over the older operating handbook. The internal document and revision are unavailable here; the workflow owner must confirm the installed controls, availability and enforcement. The reference-check date does not verify that implementation. Used in <a href="#workflow">the route to production</a>, <a href="#status">status labels</a>, <a href="#ownership">roles and artefacts</a>.</li>
+            <li id="source-handbook">EDS. <cite>EDS operating handbook</cite>, internal edition not supplied. Retained only where it does not conflict with the higher-priority README: the seven working principles, instruction layers, harness diagnosis, workflow-health measures and fictional example. The document is unavailable in this checkout and current owner endorsement of this retained guidance is not verified; the example is illustrative, not deployment evidence. Used in <a href="#principles">Working principles</a>, <a href="#context-practice">Context for agents</a>, <a href="#harness">Diagnose failures</a>, <a href="#workflow-health">Workflow health</a>.</li>
+            <li id="source-matt">Matt Pocock. <a href="https://github.com/mattpocock/skills">Engineering skills — upstream skill set</a>, live repository; installed revision not identified. Underlying investigation, specification, slicing, implementation and review skills; the descriptions on this page explain their use or adaptation in the documented EDS workflow, not a guarantee of current upstream names or behaviour. Used in <a href="#workflow">the workflow foundations</a>.</li>
+            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. Its five-phase view and <code>/dependency-orchestrator</code> differ from the local 19-step view and <code>/project-horizon</code>; do not silently substitute one revision for the other. Used in <a href="#status">version and status guidance</a>, <a href="#method-under-consideration">the organisational SPDD direction</a>.</li>
+            <li id="source-spdd">Wei Zhang and Jessie Jie Xia, Thoughtworks. <a href="https://martinfowler.com/articles/structured-prompt-driven/">Structured-Prompt-Driven Development (SPDD)</a>. Primary author account of maintained prompt artefacts, alignment and iterative review. It does not establish EDS adoption decisions or Eitri compatibility; confirm ownership and test against the target workflow. Used in <a href="#method-under-consideration">Method under consideration: SPDD</a>.</li>
+            <li id="source-video">EDS. <cite>Eitri organisational harness overview video</cite>, publication date and revision not supplied. <a href="https://docs.google.com/videos/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/play">Open in Google Vids</a>; <a href="https://drive.google.com/file/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/preview">embedded preview</a>. Supplementary orientation retained with its original access links; access and internal implementation are not independently certified. Used in the page introduction.</li>
+          </ol>
+        </section>
           <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -323,7 +335,7 @@
             <a href="#context-practice">Context for agents</a>
             <a href="#harness">Diagnose failures</a>
             <a href="#workflow-health">Workflow health</a>
-
+            <a href="#sources">Sources</a>
     </nav></aside>
   </div>
 </body>

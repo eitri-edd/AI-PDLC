@@ -75,7 +75,7 @@
           <a href="#changes">From issue to approved change</a>
           <a href="#reference-checks">Keeping references current</a>
           <a href="#peer-review">Peer review and improvement</a>
-          <a href="#sources">Sources and maintenance records</a>
+          <a href="#sources">Sources</a>
         </nav></details>
 
         <section id="curation-overview">
@@ -224,8 +224,8 @@
           </aside>
           <p>The writer uses two repository standards to guide the content, its flow and the checks before a change is submitted:</p>
           <ul>
-            <li><strong><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md">The writing standard (writing.md)</a></strong> starts with the reader’s task. It calls for plain British English, connected explanations, consistent terminology and concrete actions with named owners and expected results. Its editorial acceptance checklist covers evidence, coherence, attribution, useful next steps and the distinction between requirements, recommendations and examples.</li>
-            <li><strong><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/design.md">The design standard (design.md)</a></strong> guides reading width, typography, navigation, page maps, tables and accessible diagrams. It distinguishes topic explanations from worked examples and includes an acceptance checklist for responsive layouts, keyboard access, contrast, reduced motion and print readability.</li>
+            <li><strong><a href="#source-1">The writing standard (writing.md)</a></strong> starts with the reader’s task. It calls for plain British English, connected explanations, consistent terminology and concrete actions with named owners and expected results. Its editorial acceptance checklist covers evidence, coherence, attribution, useful next steps and the distinction between requirements, recommendations and examples.</li>
+            <li><strong><a href="#source-2">The design standard (design.md)</a></strong> guides reading width, typography, navigation, page maps, tables and accessible diagrams. It distinguishes topic explanations from worked examples and includes an acceptance checklist for responsive layouts, keyboard access, contrast, reduced motion and print readability.</li>
           </ul>
           <p>The writer is required to research and reference established practices online. It does not invent new theories or methodologies. Every article that presents a methodology or framework must link directly to its original source and explain any adaptation made for this guide. Source notes belong in the article’s final Sources section, with precise inline links where needed to connect a claim to its evidence.</p>
           <p>Before submitting a change, the writer rereads the affected explanation and surrounding material against the writing checklist, then checks the page against the design checklist. Review records distinguish what was checked from what remains uncertain.</p>
@@ -256,10 +256,10 @@
         </section>
 
         <section id="reference-checks">
-          <h2>Keep references current and publish check dates</h2>
-          <p>Source-monitoring agents powered by Hermes and OpenAI are required to check all online references regularly and publish the date each reference was last checked in the article’s source notes. The date tells readers when a check happened; it does not guarantee that the source has remained unchanged since then.</p>
-          <p>The check covers whether the destination is accessible, whether it still supports the cited claim and whether a newer version changes the guidance. The agent records the source URL, check date, result and any unresolved limitation. Broken links, changed claims and sources that cannot be verified become maintenance findings for review.</p>
-          <p>A working link alone does not establish that an article is accurate. The <a href="https://github.com/eitri-edd/AI-PDLC/blob/main/site/reference-checks.json">reference-check inventory</a> retains individual source records; each reference’s recorded date matters separately from a site-wide review date.</p>
+          <h2>Keep references current and publish one page-wide check date</h2>
+          <p>Source-monitoring agents powered by Hermes and OpenAI are required to check all online references regularly. Each article must have one final Sources section, with exactly one page-wide “References last checked” date immediately after its Sources heading and one numbered source list. Keep per-source outcomes, check dates and history in <a href="#source-3">reference-checks.json</a>, not as competing dates in source entries. The page-wide date records the maintenance pass; it does not guarantee that sources have remained unchanged or that every claim has been verified.</p>
+          <p>The check covers whether the destination is accessible, whether it still supports the cited claim and whether a newer version changes the guidance. The agent records the source URL, check date, result, scope and any unresolved limitation in the inventory. Broken links, changed claims and sources that cannot be verified become maintenance findings for review. Retain partial or unverified scope limitations in the applicable source entry as well as in the inventory.</p>
+          <p>A working link alone does not establish that an article is accurate. Do not advance the page-wide date from a partial check: record that check’s outcome and history in the inventory, retain the existing page-wide date and publish the remaining scope limitation. A complete page maintenance pass may retain an inaccessible or unverified source, but must state that limitation rather than imply blanket verification.</p>
         </section>
 
         <section id="peer-review">
@@ -270,18 +270,19 @@
           <p>The writer rechecks the corrected passage and its surrounding explanation, then considers whether a change to writing.md or design.md would help prevent the same problem elsewhere. Article corrections and any proposed standard changes go through pull requests with human approval.</p>
         </section>
 
-        <section id="sources">
-          <h2>Sources and maintenance records</h2>
-          <p>This page describes the playbook’s editorial process. The repository holds the standards and review evidence used to maintain it:</p>
-          <ul>
-            <li><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md#editorial-acceptance-checklist">Writing standard and editorial acceptance checklist</a> — reader needs, evidence, content flow and attribution.</li>
-            <li><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/design.md#design-acceptance-checklist">Design standard and design acceptance checklist</a> — presentation, accessibility and responsive behaviour.</li>
-            <li><a href="https://github.com/eitri-edd/AI-PDLC/blob/main/site/reference-checks.json">Reference-check inventory</a> — source URLs, individual check dates and recorded outcomes.</li>
-            <li><a href="https://github.com/eitri-edd/AI-PDLC/pulls">Pull requests</a> — proposed changes and their review history.</li>
-          </ul>
-        </section>
-
         <aside class="next-step" aria-label="Next step"><strong>Help improve the playbook.</strong> If an explanation is awkward, unclear or out of date, <a href="https://github.com/eitri-edd/AI-PDLC/issues">raise an issue</a> with the page link, the affected passage and what would make it more useful.</aside>
+
+        <section id="sources">
+          <h2>Sources</h2>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-09">9 November 2026</time>.</p>
+          <ol class="source-list">
+            <li id="source-1">AI-PDLC repository, <a href="https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md">Writing standard (writing.md)</a> and its <a href="https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md#editorial-acceptance-checklist">editorial acceptance checklist</a> — reader needs, evidence, content flow and attribution. Used in <a href="#standards">The writer follows shared standards</a> and <a href="#peer-review">Peer review improves articles and standards</a>. The local repository copy was inspected for this consolidation; the linked remote revision was not independently reverified.</li>
+            <li id="source-2">AI-PDLC repository, <a href="https://github.com/eitri-edd/AI-PDLC/blob/main/design.md">Design standard (design.md)</a> and its <a href="https://github.com/eitri-edd/AI-PDLC/blob/main/design.md#design-acceptance-checklist">design acceptance checklist</a> — presentation, accessibility and responsive behaviour. Used in <a href="#standards">The writer follows shared standards</a> and <a href="#peer-review">Peer review improves articles and standards</a>. The local repository copy was inspected; the linked remote revision was not independently reverified.</li>
+            <li id="source-3">AI-PDLC repository, <a href="https://github.com/eitri-edd/AI-PDLC/blob/main/site/reference-checks.json">Reference-check inventory (reference-checks.json)</a> — source URLs, individual check dates and recorded outcomes. Used in <a href="#reference-checks">Keep references current and publish one page-wide check date</a>. The local maintenance record was inspected; its retrieval outcomes do not establish blanket verification of every claim. Per-source outcomes, scope limitations and history remain in this record, including partial or unverified checks.</li>
+            <li id="source-4">AI-PDLC repository, <a href="https://github.com/eitri-edd/AI-PDLC/pulls">Pull requests</a> — proposed changes and their review history. Used in <a href="#changes">From issue to approved change</a>. Local repository history was inspected; the remote pull-request records were not independently reverified in this consolidation.</li>
+            <li id="source-5">AI-PDLC repository, <a href="https://github.com/eitri-edd/AI-PDLC/issues">Issue backlog</a> — candidate material, maintenance findings and proposed corrections for review, not commitments to publish. Used in <a href="#scouting">Scouts assess what deserves attention</a>, <a href="#changes">From issue to approved change</a> and <a href="#peer-review">Peer review improves articles and standards</a>. The live backlog and its current findings were not independently reverified in this consolidation.</li>
+          </ol>
+        </section>
         <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -295,7 +296,7 @@
         <a href="#changes">From issue to approved change</a>
         <a href="#reference-checks">Keeping references current</a>
         <a href="#peer-review">Peer review and improvement</a>
-        <a href="#sources">Sources and maintenance records</a>
+        <a href="#sources">Sources</a>
       </nav>
     </aside>
   </div>

@@ -1659,6 +1659,8 @@ article :is(section, h3, h4)[id] { scroll-margin-top: 5rem; }
 }
 .source-list { padding-left: 1.5rem; font-size: 0.9375rem; line-height: 1.6; }
 .source-list li { scroll-margin-top: 5rem; padding: 0.2rem 0.35rem; border-radius: 0.25rem; }
+/* Source aliases and adaptation notes move with their canonical list entry. */
+.source-list [id] { scroll-margin-top: 5rem; }
 .source-list li:target { background: var(--surface-selected); }
 cite { font-style: normal; }
 
@@ -2315,6 +2317,7 @@ details[open] > .learning-summary { border-bottom: 1px solid var(--example-borde
 /* The header wraps on phones; keep every in-article anchor below it. */
 @media (max-width: 1099px) {
   article [id] { scroll-margin-top: 9rem; }
+  .source-list [id] { scroll-margin-top: 9rem; }
 }
 @media (max-width: 40rem) {
   .learning-example:not(.worked-example) { padding: 1rem; }

@@ -53,7 +53,7 @@
         <header class="article-header">
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>Skills catalogue</h1>
-<p class="lead">This catalogue lists the skills in the EDS AI Workflow (Eitri) and the Matt Pocock base set it builds on: what each does, who maintains it and whether it is available. Use it to look up a skill named on the other pages.</p>
+<p class="lead">This <a href="#source-catalogue">catalogue</a> lists the skills in the EDS AI Workflow (Eitri) and the Matt Pocock base set it builds on: what each does, who maintains it and whether it is available. Use it to look up a skill named on the other pages.</p>
           <p>A skill is a packaged set of instructions that an AI agent runs for one task. Two guide skills help a team find the right one: <code>/ask-workflow</code> covers the PO/BA and developer harnesses, and <code>/ask-matt</code> covers Matt Pocock’s skills.</p>
         </header>
         <figure class="page-map page-map--route" aria-label="Page summary">
@@ -84,7 +84,7 @@
             <a href="#mcp">MCP integrations</a>
             <a href="#path-to-production">Path to production</a>
             <a href="#additional">Additional skills</a>
-
+            <a href="#sources">Sources</a>
         </nav></details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -174,7 +174,7 @@
 
         <section id="frontend">
           <h2>Frontend quality</h2>
-          <p>The <a href="https://impeccable.style">Impeccable</a> suite by Paul Bakaus covers frontend quality in three layers.</p>
+          <p>The <a href="#source-impeccable">Impeccable</a> suite by Paul Bakaus covers frontend quality in three layers.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Impeccable frontend quality commands; scroll horizontally if needed"><table class="wide-table skills-table"><caption>Impeccable frontend quality commands</caption><thead><tr><th scope="col">Command</th><th scope="col">When to use</th><th scope="col">What it covers</th></tr></thead><tbody>
             <tr><th scope="row"><code>/impeccable audit</code></th><td>After implementing an interface slice</td><td>Accessibility, performance, theming, responsive design and common anti-patterns in generated code.</td></tr>
             <tr><th scope="row"><code>/impeccable harden</code></th><td>Before shipping a feature</td><td>Resilience: edge cases, error and empty states, text overflow and slow networks.</td></tr>
@@ -189,7 +189,7 @@
             <tr><th scope="row"><code>/spec-compliance</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Audits a specification or TRD against the policy references. Step 8.</td></tr>
             <tr><th scope="row"><code>/issue-verification</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Confirms that each issue is a true tracer bullet and that the set is consistent, before publishing. Step 10.</td></tr>
           </tbody></table></div>
-          <p>The documented Eitri policy pack contains two reference checklists: <a href="https://info.standards.tech.gov.sg">IM8</a> application security checks (36 packaged checks) and the <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a> agentic AI governance checks (88 packaged checks). <a href="eds-team-context.html#policies">Read how a team adds its own</a>.</p>
+          <p>The documented Eitri policy pack contains two reference checklists: <a href="#source-im8">IM8</a> application security checks (36 packaged checks) and the <a href="#source-arc">ARC</a> agentic AI governance checks (88 packaged checks). <a href="eds-team-context.html#policies">Read how a team adds its own</a>.</p>
         </section>
 
         <section id="implementation">
@@ -198,10 +198,10 @@
           <div class="table-scroll" tabindex="0" role="region" aria-label="Implementation skills; scroll horizontally if needed"><table class="wide-table skills-table"><caption>Implementation skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/do-work</code></th><td>CoreX EDS team, adapted from Matt Pocock’s <code>/implement</code></td><td><span class="status">Available</span></td><td>Builds one issue end to end: implement, review, validate, then commit. Step 12.</td></tr>
             <tr><th scope="row"><code>/code-reviewer</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Runs the registered quality and compliance reviews in parallel and writes one consolidated report. Used by the build loop and the pre-commit hook. Gate 2.</td></tr>
-            <tr><th scope="row"><code>/mutation-testing</code></th><td>CoreX EDS team, wrapping <a href="https://pitest.org">PIT</a>, <a href="https://stryker-mutator.io">StrykerJS</a>, mutmut and Cosmic Ray</td><td><span class="status">Available</span></td><td>Introduces deliberate faults to find weak tests and missing coverage. Gate 3.</td></tr>
+            <tr><th scope="row"><code>/mutation-testing</code></th><td>CoreX EDS team, wrapping <a href="#source-pit">PIT</a>, <a href="#source-stryker">StrykerJS</a>, mutmut and Cosmic Ray</td><td><span class="status">Available</span></td><td>Introduces deliberate faults to find weak tests and missing coverage. Gate 3.</td></tr>
             <tr><th scope="row"><code>/git-commit-skill</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Creates commits that each hold one logical change.</td></tr>
-            <tr><th scope="row"><code>/browser-test</code></th><td>CoreX EDS team, wrapping <a href="https://agent-browser.dev">agent-browser</a> by Vercel</td><td><span class="status">Available</span></td><td>Runs the issue’s acceptance scenarios in a live browser, with screenshot evidence. Step 17.</td></tr>
-            <tr><th scope="row"><code>/e2e</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Turns user stories into repeatable <a href="https://playwright.dev">Playwright</a> end-to-end tests with fresh evidence, and can repeat them to detect unstable results. Step 19.</td></tr>
+            <tr><th scope="row"><code>/browser-test</code></th><td>CoreX EDS team, wrapping <a href="#source-browser">agent-browser</a> by Vercel</td><td><span class="status">Available</span></td><td>Runs the issue’s acceptance scenarios in a live browser, with screenshot evidence. Step 17.</td></tr>
+            <tr><th scope="row"><code>/e2e</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Turns user stories into repeatable <a href="#source-playwright">Playwright</a> end-to-end tests with fresh evidence, and can repeat them to detect unstable results. Step 19.</td></tr>
             <tr><th scope="row"><code>/html-to-shadcn</code></th><td>CoreX EDS team</td><td><span class="status status-planned">Planned</span></td><td>Will convert a PO/BA HTML prototype into interface component scaffolding for the developer to complete. Step 11.</td></tr>
           </tbody></table></div>
         </section>
@@ -211,13 +211,13 @@
           <p><code>/code-reviewer</code> runs these reviewers in parallel. Each can also be run on its own.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Review skills; scroll horizontally if needed"><table class="wide-table skills-table"><caption>Review skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/build-check</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Formatting, type checks or compilation, tests, coverage thresholds and production builds for changed code. Gate 1.</td></tr>
-            <tr><th scope="row"><code>/im8-review</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Checks the code against <a href="https://info.standards.tech.gov.sg">IM8</a> application technical controls, automating what it can and flagging items for manual review.</td></tr>
-            <tr><th scope="row"><code>/semgrep</code></th><td>CoreX EDS team, wrapping <a href="https://semgrep.dev/">Semgrep</a></td><td><span class="status">Available</span></td><td>Static analysis for vulnerabilities, hard-coded secrets, injection and unsafe patterns.</td></tr>
-            <tr><th scope="row"><a href="https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md"><code>/thermo-nuclear-review</code></a></th><td>Cursor</td><td><span class="status">Available</span></td><td>A very strict maintainability review of abstraction quality, oversized files and growing complexity.</td></tr>
+            <tr><th scope="row"><code>/im8-review</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Checks the code against <a href="#source-im8">IM8</a> application technical controls, automating what it can and flagging items for manual review.</td></tr>
+            <tr><th scope="row"><code>/semgrep</code></th><td>CoreX EDS team, wrapping <a href="#source-semgrep">Semgrep</a></td><td><span class="status">Available</span></td><td>Static analysis for vulnerabilities, hard-coded secrets, injection and unsafe patterns.</td></tr>
+            <tr><th scope="row"><a href="#source-thermo"><code>/thermo-nuclear-review</code></a></th><td>Cursor</td><td><span class="status">Available</span></td><td>A very strict maintainability review of abstraction quality, oversized files and growing complexity.</td></tr>
             <tr><th scope="row"><code>/react-review</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Reviews React code for bugs, style issues and best practices.</td></tr>
             <tr><th scope="row">Seven Spring reviews</th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Review Spring applications by area: <code>/spring-core-review</code>, <code>/spring-web-review</code>, <code>/spring-data-review</code>, <code>/spring-security-review</code>, <code>/spring-logging-review</code>, <code>/spring-test-review</code> and <code>/spring-batch-review</code>. The logging review is also the observability gate at pre-production.</td></tr>
             <tr><th scope="row"><code>/spec-standards-check</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Checks a specification against the standards referenced on its issue, flagging critical gaps and warnings. Step 7.</td></tr>
-            <tr><th scope="row"><code>/sonar-review</code></th><td>CoreX EDS team, using <a href="https://www.sonarsource.com">Sonar</a></td><td><span class="status status-planned">Planned</span></td><td>Will check changed files against the team’s Sonar quality profiles and architecture constraints.</td></tr>
+            <tr><th scope="row"><code>/sonar-review</code></th><td>CoreX EDS team, using <a href="#source-sonar">Sonar</a></td><td><span class="status status-planned">Planned</span></td><td>Will check changed files against the team’s Sonar quality profiles and architecture constraints.</td></tr>
           </tbody></table></div>
 
           <aside class="ai-help ai-help--inline" id="ai-help-skill-review" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>A review skill can flag missing requirements or coding-standard violations in a supplied change. Give it the original issue or TRD and applicable rules. Reviewers inspect the cited code and reproduce findings; retain confirmed issues and reasons for dismissing unsupported findings before the next decision.</p></aside>
@@ -225,7 +225,7 @@
 
         <section id="architecture">
           <h2>Architecture linting</h2>
-          <p>These skills turn architecture decisions into runnable boundary tests, so violations fail the build. They use <a href="https://www.archunit.org">ArchUnit</a> for a JVM backend and <a href="https://github.com/sverweij/dependency-cruiser/tree/main">dependency-cruiser</a> for a JavaScript or TypeScript frontend.</p>
+          <p>These skills turn architecture decisions into runnable boundary tests, so violations fail the build. They use <a href="#source-archunit">ArchUnit</a> for a JVM backend and <a href="#source-dependency-cruiser">dependency-cruiser</a> for a JavaScript or TypeScript frontend.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Architecture linting skills; scroll horizontally if needed"><table class="wide-table skills-table"><caption>Architecture linting skills</caption><thead><tr><th scope="col">Skill</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
             <tr><th scope="row"><code>/arch-tests-plan</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Analyses the project and writes a plan of the architecture rules to test. Step 4.</td></tr>
             <tr><th scope="row"><code>/arch-tests-gen</code></th><td>CoreX EDS team, wrapping ArchUnit and dependency-cruiser</td><td><span class="status">Available</span></td><td>Generates the boundary tests from the plan. Step 4.</td></tr>
@@ -237,8 +237,8 @@
           <h2>MCP integrations</h2>
           <p>Model Context Protocol (MCP) integrations connect the agent to library documentation, coding guidelines and other sources of project context.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Model Context Protocol integrations; scroll horizontally if needed"><table class="wide-table skills-table"><caption>Model Context Protocol integrations</caption><thead><tr><th scope="col">Integration</th><th scope="col">Maintained by</th><th scope="col">Status</th><th scope="col">What it does</th></tr></thead><tbody>
-            <tr><th scope="row"><a href="https://context7.com">Context7</a></th><td>Upstash</td><td><span class="status status-planned">Planned</span></td><td>Live, version-specific library documentation, fetched when the agent needs to confirm how a library behaves. Step 3.</td></tr>
-            <tr><th scope="row"><a href="https://www.sonarsource.com">Sonar Context Augmentation</a></th><td>Sonar</td><td><span class="status status-planned">Planned</span></td><td>Coding guidelines, architectural awareness and code search, for the Sonar review and the build loop.</td></tr>
+            <tr><th scope="row"><a href="#source-context7">Context7</a></th><td>Upstash</td><td><span class="status status-planned">Planned</span></td><td>Live, version-specific library documentation, fetched when the agent needs to confirm how a library behaves. Step 3.</td></tr>
+            <tr><th scope="row"><a href="#source-sonar">Sonar Context Augmentation</a></th><td>Sonar</td><td><span class="status status-planned">Planned</span></td><td>Coding guidelines, architectural awareness and code search, for the Sonar review and the build loop.</td></tr>
           </tbody></table></div>
         </section>
 
@@ -261,7 +261,7 @@
             <tr><th scope="row"><code>/ask-workflow</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>An interactive guide that asks questions to find the skill or path that fits a situation, from requirements to development.</td></tr>
             <tr><th scope="row"><code>/backwards-mapping</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Traces requirements from business value back to entry points, to find vertical slices and protect security and architecture. For new systems or complex features.</td></tr>
             <tr><th scope="row"><code>/fry-me</code></th><td>CoreX EDS team, adapted from Matt Pocock</td><td><span class="status">Available</span></td><td>Questions a plan or decision until there is a shared understanding. Used by <code>/issue-verification</code>.</td></tr>
-            <tr><th scope="row"><code>/owasp-threat-modeling</code></th><td>CoreX EDS team, wrapping <a href="https://owasp.org/projects/threat-dragon">OWASP Threat Dragon</a></td><td><span class="status">Available</span></td><td>Produces a threat model with data-flow diagrams, identified threats and a findings report.</td></tr>
+            <tr><th scope="row"><code>/owasp-threat-modeling</code></th><td>CoreX EDS team, wrapping <a href="#source-threat-dragon">OWASP Threat Dragon</a></td><td><span class="status">Available</span></td><td>Produces a threat model with data-flow diagrams, identified threats and a findings report.</td></tr>
             <tr><th scope="row"><code>/pragmatic-reviewer</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Reviews a design, proposal or strategy, separating must-fix flaws from acceptable trade-offs.</td></tr>
             <tr><th scope="row"><code>/query-kb</code></th><td>CoreX EDS team</td><td><span class="status">Available</span></td><td>Queries an Amazon Bedrock knowledge base, for a person or for another skill.</td></tr>
             <tr><th scope="row"><code>/update-standards</code></th><td>CoreX EDS team</td><td><span class="status status-planned">Planned</span></td><td>Will review standards documents against current best practice and technology versions, apply only approved changes and keep an audit trail.</td></tr>
@@ -270,6 +270,30 @@
         </section>
 
         <p class="source-ref"><a href="eds-ai-workflow.html#version-status">Eitri status and version: verify installed revisions and enforced controls</a>.</p>
+        <section id="sources">
+          <h2>Sources</h2>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-09">9 November 2026</time>.</p>
+          <ol class="source-list">
+            <li id="source-catalogue">CoreX EDS team. <cite>Eitri skills catalogue</cite> (<code>skills-catalogue.md</code>), internal revision not supplied. Primary source for skill groups, maintainers, descriptions and Available/Planned labels; the editorial review records the two grilling skills used by the workflow but absent from the supplied catalogue. The internal document and revision are unavailable here; the workflow owner must confirm the installed controls, availability and enforcement. The reference-check date does not verify that implementation. Used in <a href="#conventions">catalogue conventions</a>, <a href="#groups">skill groups</a>, <a href="#matt-pocock">base-skill uses</a>, <a href="#additional">additional skills</a>.</li>
+            <li id="source-harness">CoreX EDS team. <cite>Eitri harness workflow — README</cite>, sections 2–4; internal revision not supplied. Primary workflow source; the editorial review gives this README priority over the older operating handbook. The internal document and revision are unavailable here; the workflow owner must confirm the installed controls, availability and enforcement. The reference-check date does not verify that implementation. Used in <a href="#planning">planning</a>, <a href="#implementation">build-loop adaptations</a>, <a href="#review">reviews</a>, <a href="#path-to-production">release gates</a>.</li>
+            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. Its five-phase view and <code>/dependency-orchestrator</code> differ from the local 19-step view and <code>/project-horizon</code>; do not silently substitute one revision for the other. The <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html">Eitri skills lesson</a> records the documented defaults and policy-pack counts. Used in <a href="#compliance">the 36/88 packaged-check split</a>.</li>
+            <li id="source-matt">Matt Pocock. <a href="https://github.com/mattpocock/skills">Engineering skills — upstream skill set</a>, live repository; installed revision not identified. Underlying investigation, specification, slicing, implementation and review skills; the descriptions on this page explain their use or adaptation in the documented EDS workflow, not a guarantee of current upstream names or behaviour. Used in <a href="#matt-pocock">base skills</a>, <a href="#implementation">the /do-work adaptation of /implement</a>, <a href="#additional">the /fry-me adaptation</a>.</li>
+            <li id="source-impeccable">Paul Bakaus. <a href="https://impeccable.style">Impeccable — frontend quality skills</a>. Underlying audit, harden and polish suite. The catalogue describes the documented workflow use; confirm the installed revision and host invocation. Used in <a href="#frontend">frontend audit, harden and polish</a>.</li>
+            <li id="source-im8">Singapore Government. <a href="https://info.standards.tech.gov.sg">Instruction Manual 8 (IM8) — ICT and Smart Systems policy framework</a>. Policy reference, not evidence of the installed application-security checklist or its enforcement. Packaged checks are a scoped selection, not a total for the entire framework; confirm the applicable policy and policy-pack versions with their owners. Used in <a href="#compliance">packaged application-security checks</a>, <a href="#review">code review</a>.</li>
+            <li id="source-arc">GovTech. <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">Agentic Risk &amp; Capability Framework (ARC)</a>. Governance framework underlying the documented TRD audit. Checklist coverage and applicable versions require owner confirmation; a document assessment does not establish executable or runtime enforcement. Used in <a href="#compliance">packaged agentic-governance checks</a>.</li>
+            <li id="source-pit">PIT project. <a href="https://pitest.org">PIT — Java mutation testing</a>. Underlying mutation-testing tool; the documented 70% harness default is configurable, not a requirement established by this tool reference. Used in <a href="#implementation">mutation testing</a>.</li>
+            <li id="source-stryker">Stryker Mutator project. <a href="https://stryker-mutator.io">StrykerJS — JavaScript and TypeScript mutation testing</a>. Underlying mutation-testing tool; the documented harness threshold and changed-file scope require the installed configuration. Used in <a href="#implementation">mutation testing</a>.</li>
+            <li id="source-browser">Vercel. <a href="https://agent-browser.dev">agent-browser — browser automation for agents</a>. Underlying tool for acceptance checks and screenshots; its public documentation does not verify the EDS wrapper, test coverage or evidence. Used in <a href="#implementation">browser testing</a>.</li>
+            <li id="source-playwright">Microsoft. <a href="https://playwright.dev">Playwright — end-to-end browser testing</a>. Underlying test framework; the EDS campaign, verifier and repeat-run behaviour are local workflow conventions, not guarantees from this reference. Used in <a href="#implementation">end-to-end testing</a>.</li>
+            <li id="source-semgrep">Semgrep. <a href="https://semgrep.dev/">Semgrep — static security analysis</a>. Underlying scanner reference, not verification of the rules, severity mapping or blocking behaviour configured in the EDS harness. Used in <a href="#review">static analysis</a>.</li>
+            <li id="source-thermo">Cursor. <a href="https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md">Thermo-nuclear code quality review — skill instructions</a>. Live main-branch skill reference for maintainability review. The EDS wrapper and installed upstream revision require confirmation; review findings are not proof of correctness. Used in <a href="#review">maintainability review</a>.</li>
+            <li id="source-sonar">Sonar. <a href="https://www.sonarsource.com">Sonar — code quality and context augmentation</a>. Product reference for the planned integration, not evidence that the EDS Sonar review or context augmentation is installed or enforced. Used in <a href="#review">planned Sonar review</a>, <a href="#mcp">planned context augmentation</a>.</li>
+            <li id="source-archunit">ArchUnit project. <a href="https://www.archunit.org">ArchUnit — Java architecture tests</a>. Underlying architecture-test tool; the project reference does not verify the generated EDS tests or their enforcement. Used in <a href="#architecture">architecture linting</a>.</li>
+            <li id="source-dependency-cruiser">Sander Verweij. <a href="https://github.com/sverweij/dependency-cruiser/tree/main">dependency-cruiser — dependency rules for JavaScript and TypeScript</a>. Live main-branch reference for architecture boundary checks; pin the version used by the repository. Used in <a href="#architecture">architecture linting</a>.</li>
+            <li id="source-context7">Upstash. <a href="https://context7.com">Context7 — version-specific library documentation</a>. Tool reference for the planned documentation integration; a public product page does not establish its installation or availability in Eitri. Used in <a href="#mcp">planned library documentation</a>.</li>
+            <li id="source-threat-dragon">OWASP. <a href="https://owasp.org/projects/threat-dragon">Threat Dragon — threat modelling</a>. Underlying tool for data-flow diagrams and threat-model artefacts. Generated models still need review; the tool reference does not establish EDS readiness gates. Used in <a href="#additional">threat modelling</a>.</li>
+          </ol>
+        </section>
           <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -287,7 +311,7 @@
             <a href="#mcp">MCP integrations</a>
             <a href="#path-to-production">Path to production</a>
             <a href="#additional">Additional skills</a>
-
+            <a href="#sources">Sources</a>
     </nav></aside>
   </div>
 </body>
