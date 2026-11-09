@@ -53,7 +53,7 @@
         <header class="article-header">
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>Path to production</h1>
-<p class="lead">Code changes pass through four pipeline stages on their way to production. Each stage widens the scope of the checks, from the developer’s staged change at commit time to the whole codebase at QA entry and before release. The same checks are reused at each scope, so enforcement stays consistent without duplicate tooling.</p>
+<p class="lead">Code changes pass through <a href="#source-harness">four pipeline stages</a> on their way to production. Each stage widens the scope of the checks, from the developer’s staged change at commit time to the whole codebase at QA entry and before release. The same checks are reused at each scope, so enforcement stays consistent without duplicate tooling.</p>
           <p>The path starts where the <a href="eds-developer-harness.html#closeout">developer harness closeout</a> ends and finishes with the consolidated report for the Tech Lead’s release sign-off.</p>
         </header>
         <figure class="page-map page-map--route" aria-label="Page summary">
@@ -78,7 +78,7 @@
             <a href="#pre-prod">4.4 Pre-production</a>
             <a href="#after-release">After readiness</a>
             <a href="#done">Definition of done</a>
-
+            <a href="#sources">Sources</a>
         </nav></details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -134,7 +134,7 @@
 
         <section id="pre-commit">
           <h2>4.1 Check each commit</h2>
-          <p>An automatic hook reviews the staged change whenever a developer commits. It is the same quality and compliance gate used inside the <a href="eds-developer-harness.html#do-work">build loop</a>, scoped to the staged change for fast feedback. It runs in parallel the review against coding standards and the specification, <a href="https://semgrep.dev/">Semgrep</a> static analysis, the <a href="https://info.standards.tech.gov.sg">IM8</a> security review, the <a href="https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md">thermo-nuclear maintainability review</a> and the framework reviews.</p>
+          <p>An automatic hook reviews the staged change whenever a developer commits. It is the same quality and compliance gate used inside the <a href="eds-developer-harness.html#do-work">build loop</a>, scoped to the staged change for fast feedback. It runs in parallel the review against coding standards and the specification, <a href="#source-semgrep">Semgrep</a> static analysis, the <a href="#source-im8">IM8</a> security review, the <a href="#source-thermo">thermo-nuclear maintainability review</a> and the framework reviews.</p>
           <p>When the hook runs, a Critical or High finding blocks the commit and its results are written to one consolidated report. Local hooks can be bypassed. Required release controls should also be enforced in the shared pipeline; follow the applicable exception process and retain the reason and follow-up evidence for any authorised bypass.</p>
           <p>The IM8 review checks application technical controls such as input validation, authentication, secrets management, session management and audit logging.</p>
 
@@ -150,11 +150,11 @@
           <h2>4.3 Scan the full codebase when merging to QA</h2>
           <p>An MR to the QA branch runs full-codebase security scans and document generators. Their outputs support threat and risk analysis and technical documentation sign-off.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Checks at the merge to QA; scroll horizontally if needed"><table class="wide-table"><caption>Checks at the merge to QA</caption><thead><tr><th scope="col">Check</th><th scope="col">What it provides</th><th scope="col">Blocking</th></tr></thead><tbody>
-            <tr><th scope="row">IM8 review</th><td>A finding for each <a href="https://info.standards.tech.gov.sg">IM8</a> application technical control, with the code location</td><td>Blocks on Critical or High</td></tr>
+            <tr><th scope="row">IM8 review</th><td>A finding for each <a href="#source-im8">IM8</a> application technical control, with the code location</td><td>Blocks on Critical or High</td></tr>
             <tr><th scope="row">Authorisation matrix</th><td>A map of each role to the endpoints and resources it can reach, with endpoints that lack authorisation flagged as potential gaps</td><td>Does not block</td></tr>
             <tr><th scope="row">Technical architecture document</th><td>System overview, module catalogue, technology decisions, database design and a dependency inventory with licences</td><td>Does not block</td></tr>
             <tr><th scope="row">Dependency vulnerability scan</th><td>Known vulnerabilities (CVEs) by severity for each package, with upgrade guidance for Critical and High findings</td><td>Blocks on Critical or High CVEs</td></tr>
-            <tr><th scope="row"><a href="https://semgrep.dev/">Semgrep</a> static analysis</th><td>Findings such as injection, weak cryptography, hard-coded secrets and unsafe input handling</td><td>Blocks on Critical or High</td></tr>
+            <tr><th scope="row"><a href="#source-semgrep">Semgrep</a> static analysis</th><td>Findings such as injection, weak cryptography, hard-coded secrets and unsafe input handling</td><td>Blocks on Critical or High</td></tr>
           </tbody></table></div>
           <p>All outputs are point-in-time and are regenerated after codebase or dependency changes.</p>
 
@@ -167,21 +167,21 @@
           <ol class="practice-steps">
             <li>Generate API documentation.</li>
             <li>Generate the authorisation matrix.</li>
-            <li>Produce the threat model for review, using <a href="https://owasp.org/projects/threat-dragon">OWASP Threat Dragon</a>.</li>
+            <li>Produce the threat model for review, using <a href="#source-threat-dragon">OWASP Threat Dragon</a>.</li>
             <li>Generate the technical architecture document, including the dependency vulnerability scan.</li>
-            <li>Check the full codebase against <a href="https://info.standards.tech.gov.sg">IM8</a> controls.</li>
+            <li>Check the full codebase against <a href="#source-im8">IM8</a> controls.</li>
             <li>Check observability readiness through a logging review.</li>
-            <li>Audit secrets and configuration with <a href="https://semgrep.dev/">Semgrep</a>.</li>
+            <li>Audit secrets and configuration with <a href="#source-semgrep">Semgrep</a>.</li>
             <li>Write the consolidated sign-off report for the Tech Lead’s review.</li>
           </ol>
           <p>Most of these gates also ran at earlier stages; here they run again to give a definitive audit at release time. Two are pre-production only:</p>
           <ul>
-            <li><strong>Threat modelling:</strong> models the system as data-flow diagrams and identifies threats with the <a href="https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats">STRIDE</a> method, which groups security threats into six categories, adding <a href="https://linddun.org">LINDDUN</a>, a privacy threat modelling framework, for privacy-sensitive features. Each threat is recorded as mitigated, not applicable or open, with a mitigation for every open item. The model is kept in version control and updated when the architecture changes.</li>
+            <li><strong>Threat modelling:</strong> models the system as data-flow diagrams and identifies threats with the <a href="#source-stride">STRIDE</a> method, which groups security threats into six categories, adding <a href="#source-linddun">LINDDUN</a>, a privacy threat modelling framework, for privacy-sensitive features. Each threat is recorded as mitigated, not applicable or open, with a mitigation for every open item. The model is kept in version control and updated when the architecture changes.</li>
             <li><strong>Observability:</strong> checks that logging is ready for production, including log levels, exception logging, leakage of sensitive or personal data, and correlation identifiers that follow a request across asynchronous work.</li>
           </ul>
           <aside class="callout" aria-label="Note on IM8 and ARC coverage">
             <p class="example-label">Note</p>
-            <p>The pre-production report covers <a href="https://info.standards.tech.gov.sg">IM8</a> controls in the code. <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">ARC</a> controls are assessed earlier, against the TRD, at the <a href="eds-developer-harness.html#check">compliance audit in Step 8</a>. Keep the TRD assessment and code-check results together for the release review.</p>
+            <p>The pre-production report covers <a href="#source-im8">IM8</a> controls in the code. <a href="#source-arc">ARC</a> controls are assessed earlier, against the TRD, at the <a href="eds-developer-harness.html#check">compliance audit in Step 8</a>. Keep the TRD assessment and code-check results together for the release review.</p>
           </aside>
 
           <aside class="ai-help ai-help--inline" id="ai-help-readiness" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>AI can help organise current gate outputs into a draft readiness summary with links to the reports and unresolved findings. The Tech Lead checks that the evidence matches the release candidate and every required result is present, then records the release decision through the existing process.</p></aside>
@@ -216,6 +216,21 @@
         </section>
 
         <p class="source-ref"><a href="eds-ai-workflow.html#version-status">Eitri status and version: verify installed revisions and enforced controls</a>.</p>
+        <section id="sources">
+          <h2>Sources</h2>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-09">9 November 2026</time>.</p>
+          <ol class="source-list">
+            <li id="source-harness">CoreX EDS team. <cite>Eitri harness workflow — README</cite>, sections 3–4; internal revision not supplied. Primary workflow source; the editorial review gives this README priority over the older operating handbook. The internal document and revision are unavailable here; the workflow owner must confirm the installed controls, availability and enforcement. The reference-check date does not verify that implementation. Used in <a href="#stages">the four-stage pipeline</a>, <a href="#pre-commit">pre-commit enforcement and bypass caveat</a>, <a href="#pre-prod">readiness gates</a>, <a href="#done">definition of done</a>.</li>
+            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. Its five-phase view and <code>/dependency-orchestrator</code> differ from the local 19-step view and <code>/project-horizon</code>; do not silently substitute one revision for the other. Used in <a href="#stages">guided workflow context</a>.</li>
+            <li id="source-semgrep">Semgrep. <a href="https://semgrep.dev/">Semgrep — static security analysis</a>. Underlying scanner reference, not verification of the rules, severity mapping or blocking behaviour configured in the EDS harness. Used in <a href="#pre-commit">pre-commit review</a>, <a href="#merge-qa">QA scans</a>, <a href="#pre-prod">secrets and configuration audit</a>.</li>
+            <li id="source-im8">Singapore Government. <a href="https://info.standards.tech.gov.sg">Instruction Manual 8 (IM8) — ICT and Smart Systems policy framework</a>. Policy reference, not evidence of the installed application-security checklist or its enforcement. Packaged checks are a scoped selection, not a total for the entire framework; confirm the applicable policy and policy-pack versions with their owners. Used in <a href="#pre-commit">staged-change review</a>, <a href="#merge-qa">full-codebase review</a>, <a href="#pre-prod">pre-production code checks</a>.</li>
+            <li id="source-thermo">Cursor. <a href="https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md">Thermo-nuclear code quality review — skill instructions</a>. Live main-branch skill reference for maintainability review. The EDS wrapper and installed upstream revision require confirmation; review findings are not proof of correctness. Used in <a href="#pre-commit">maintainability review</a>.</li>
+            <li id="source-threat-dragon">OWASP. <a href="https://owasp.org/projects/threat-dragon">Threat Dragon — threat modelling</a>. Underlying tool for data-flow diagrams and threat-model artefacts. Generated models still need review; the tool reference does not establish EDS readiness gates. Used in <a href="#pre-prod">threat modelling</a>.</li>
+            <li id="source-stride">Microsoft Learn. <a href="https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats">Threat Modeling Tool threats — STRIDE</a>. Framework reference for the six security-threat categories used in the documented threat-modelling gate, not evidence that the model is complete or enforced. Used in <a href="#pre-prod">security threat categories</a>.</li>
+            <li id="source-linddun">LINDDUN project. <a href="https://linddun.org">LINDDUN — privacy threat modelling</a>. Privacy framework used for privacy-sensitive features in the documented workflow; applicability and mitigation decisions remain subject to review. Used in <a href="#pre-prod">privacy threats</a>.</li>
+            <li id="source-arc">GovTech. <a href="https://govtech-responsibleai.github.io/agentic-risk-capability-framework/">Agentic Risk &amp; Capability Framework (ARC)</a>. Governance framework underlying the documented TRD audit. Checklist coverage and applicable versions require owner confirmation; a document assessment does not establish executable or runtime enforcement. Used in <a href="#pre-prod">the distinction between TRD assessment and code checks</a>.</li>
+          </ol>
+        </section>
           <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -227,7 +242,7 @@
             <a href="#pre-prod">4.4 Pre-production</a>
             <a href="#after-release">After readiness</a>
             <a href="#done">Definition of done</a>
-
+            <a href="#sources">Sources</a>
     </nav></aside>
   </div>
 </body>

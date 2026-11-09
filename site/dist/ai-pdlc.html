@@ -83,7 +83,7 @@
 <a href="#implementation-loop">Product implementation loop</a>
 <a href="#feedback">Feedback from use</a>
 <a href="#ai-support">AI across the lifecycle</a>
-<a href="#sources">Sources and scope</a></nav>
+<a href="#sources">Sources</a></nav>
         </details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -276,19 +276,14 @@
   
 </section>
 <section id="sources">
-  <h2>Sources and scope</h2>
-<div class="source-attribution-notes" aria-label="Section attribution and adaptations"><h3>Section attribution and adaptations</h3><ul>
-<li><strong><a href="#two-loops">One lifecycle, two connected learning loops</a>:</strong> Source: <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/tools">Tools to use</a>.</li>
-<li><strong><a href="#feedback">Use evidence to choose the next action</a>:</strong> Sources: <a href="#source-1" aria-label="Source 1: DORA, User-centric focus">[1]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/problems">Define the problem, measure the value</a> and <a href="https://defence-pp.vercel.app/#/govern">Govern and review</a>. Adaptation: the table applies the playbook’s actions to this lifecycle; escalation follows local decision authority. Investigate review queues by moving consequential judgement earlier and keeping independent acceptance. <a href="#source-4" aria-label="Source 4: Rachel Laycock, Maybe We Shouldn't Be Reviewing All This Code">[4]</a></li>
-<li><strong><a href="#ai-support">Use AI across the lifecycle</a>:</strong> Sources: <a href="#source-2" aria-label="Source 2: McKinsey, How an AI-enabled software product development life cycle will fuel innovation">[2]</a>; <a href="#source-3" aria-label="Source 3: MINDEF and DSTA, The Defence Product Playbook">[3]</a>, <a href="https://defence-pp.vercel.app/#/tools">Tools to use</a>. Adaptation: the guardrail-protection guidance adapts <a href="#source-5" aria-label="Source 5: Emmanuel Di Nicola, Made Bad Code Impossible to Merge: Guardrails for AI-written .NET">[5]</a>; the .NET tooling in that source is illustrative, and this guide states the practices without naming a specific stack.</li>
-</ul></div>
-  <p>References checked on 9 November 2026.</p>
+  <h2>Sources</h2>
+  <p class="source-check-date">References last checked: <time datetime="2026-11-09">9 November 2026</time>.</p>
   <ol class="source-list">
-    <li id="source-1"><a href="https://dora.dev/capabilities/user-centric-focus/">DORA, User-centric focus</a></li>
-    <li id="source-2"><a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation">McKinsey, How an AI-enabled software product development life cycle will fuel innovation</a></li>
-    <li id="source-3"><a href="https://defence-pp.vercel.app/#/home">MINDEF and DSTA, The Defence Product Playbook, live web edition</a></li>
-    <li id="source-4"><a href="https://martinfowler.com/rachels-ramblings/code-review.html">Rachel Laycock, Maybe We Shouldn't Be Reviewing All This Code</a> (2 September 2026). Practitioner argument for earlier design discussion, deterministic checks and review focused on consequential changes.</li>
-    <li id="source-5"><a href="https://medium.com/@manu.dinicola/make-bad-code-impossible-to-merge-guardrails-for-ai-written-net-af10025d86f5">Emmanuel Di Nicola, Made Bad Code Impossible to Merge: Guardrails for AI-written .NET</a> (3 November 2026). Practitioner account of layered build-time guardrails, agents that weaken tests to get a green build, and protecting the guardrails themselves.</li>
+    <li id="source-1"><a href="https://dora.dev/capabilities/user-centric-focus/">DORA, User-centric focus</a>. Guidance on making user feedback available and displaying user measures alongside technical measures. Used in <a href="#feedback">Use evidence to choose the next action</a>.</li>
+    <li id="source-2"><a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation">McKinsey, How an AI-enabled software product development life cycle will fuel innovation</a> (10 February 2025). Its anticipated benefits are proposals and industry perspectives, rather than proof of improvement for every team. Used in <a href="#ai-support">Use AI across the lifecycle</a>.</li>
+    <li id="source-3"><a href="https://defence-pp.vercel.app/#/home">MINDEF and DSTA, The Defence Product Playbook, live web edition</a>, especially <a href="https://defence-pp.vercel.app/#/tools">Tools to use</a>, <a href="https://defence-pp.vercel.app/#/problems">Define the problem, measure the value</a> and <a href="https://defence-pp.vercel.app/#/govern">Govern and review</a>. Used in <a href="#two-loops">One lifecycle, two connected learning loops</a>, <a href="#feedback">Use evidence to choose the next action</a> and <a href="#ai-support">Use AI across the lifecycle</a>. The feedback table applies the playbook’s actions to this lifecycle; escalation follows local decision authority. The guide adds diagnostic checks for measurement limits, changing conditions and essential maintenance before reducing investment, and applies the ProductOps Quality Model’s four layers to AI-written work.</li>
+    <li id="source-4"><a href="https://martinfowler.com/rachels-ramblings/code-review.html">Rachel Laycock, Maybe We Shouldn't Be Reviewing All This Code</a> (2 September 2026). Practitioner argument for earlier design discussion, deterministic checks and review focused on consequential changes. Used in <a href="#feedback">Use evidence to choose the next action</a>: investigate review queues by moving consequential judgement earlier and keeping independent acceptance.</li>
+    <li id="source-5"><a href="https://medium.com/@manu.dinicola/make-bad-code-impossible-to-merge-guardrails-for-ai-written-net-af10025d86f5">Emmanuel Di Nicola, Made Bad Code Impossible to Merge: Guardrails for AI-written .NET</a> (3 November 2026). Practitioner account of layered build-time guardrails, agents that weaken tests to get a green build, and protecting the guardrails themselves. Used in <a href="#ai-support">Use AI across the lifecycle</a>: the guardrail-protection guidance adapts this account; its .NET tooling is illustrative, and this guide states the practices without naming a specific stack.</li>
   </ol>
 </section>
 
@@ -302,7 +297,7 @@
 <a href="#implementation-loop">Product implementation loop</a>
 <a href="#feedback">Feedback from use</a>
 <a href="#ai-support">AI across the lifecycle</a>
-<a href="#sources">Sources and scope</a></nav>
+<a href="#sources">Sources</a></nav>
     </aside>
   </div>
 </body>

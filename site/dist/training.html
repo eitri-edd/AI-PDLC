@@ -169,7 +169,7 @@
 
         <section id="context-and-loops">
           <h2>Key concept: engineer the context and the loop</h2>
-          <p>Prompt engineering concerns the instructions you give a model. State the goal, constraints, required output and completion criteria clearly, then follow the chosen model’s prompting guidance. Asking reasoning models to reveal step-by-step reasoning is not a general best practice; <a href="https://developers.openai.com/api/docs/guides/reasoning-best-practices">OpenAI recommends simple, direct instructions</a>. Context engineering concerns the information available at each step. Long or irrelevant context can impair performance; retrieve further detail when the task needs it. <a href="concept.html#context-engineering">Read about context engineering</a>.</p>
+          <p>Prompt engineering concerns the instructions you give a model. State the goal, constraints, required output and completion criteria clearly, then follow the chosen model’s prompting guidance. Asking reasoning models to reveal step-by-step reasoning is not a general best practice; <a href="#source-7">OpenAI recommends simple, direct instructions</a>. Context engineering concerns the information available at each step. Long or irrelevant context can impair performance; retrieve further detail when the task needs it. <a href="concept.html#context-engineering">Read about context engineering</a>.</p>
           <h3>Choose how the agent gets information</h3>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Three ways to supply knowledge, as the training describes them; scroll horizontally if needed"><table class="wide-table"><caption>Three ways to supply knowledge, as the training describes them</caption><thead><tr><th scope="col">Mechanism</th><th scope="col">How it works</th><th scope="col">Best for</th></tr></thead><tbody>
             <tr><th scope="row">Retrieval-augmented generation (RAG)</th><td>Documents are split into chunks, indexed and searched on each request; the most relevant chunks are added to the context</td><td>Stable reference knowledge, such as framework guides</td></tr>
@@ -203,7 +203,7 @@
           <h3>Plan before you build</h3>
           <p>Resolve important questions and plan a bounded change before implementation. The training calls its sequence Questions, Research, Structure, Plan, Implement (QRSPI). Treat it as a workflow choice: a prototype or technical spike may be needed to resolve an unknown, and implementation evidence can reopen a design decision. Record the finding and update the plan before dependent work continues.</p>
           <h3>Package procedures as skills</h3>
-          <p>A skill packages reusable instructions in a SKILL.md file, with optional scripts and resources. Invocation depends on the host: a person may select a skill or the agent may load one when its description matches the task. See the <a href="https://agentskills.io/specification">Agent Skills specification</a>. Only each skill’s name and one-line description load at start-up; the full instructions load when the skill is used. This progressive disclosure is how Eitri adds skills without filling every session’s context.</p>
+          <p>A skill packages reusable instructions in a SKILL.md file, with optional scripts and resources. Invocation depends on the host: a person may select a skill or the agent may load one when its description matches the task. See the <a href="#source-8">Agent Skills specification</a>. Only each skill’s name and one-line description load at start-up; the full instructions load when the skill is used. This progressive disclosure is how Eitri adds skills without filling every session’s context.</p>
           
         </section>
 
@@ -365,22 +365,16 @@
 
         <section id="sources">
           <h2>Sources</h2>
-<div class="source-attribution-notes" aria-label="Section attribution and adaptations"><h3>Section attribution and adaptations</h3><ul>
-<li><strong><a href="#about-training">What the training teaches</a>:</strong> Sources: <a href="#source-1" aria-label="Source 1: Matt Pocock, skills">[1]</a>; <a href="#source-2" aria-label="Source 2: SGTechStack, Eitri Agentic Dev Workflow self-paced training">[2]</a>.</li>
-<li><strong><a href="#how-models-behave">Key concept: how language models behave</a>:</strong> Source: <a href="#source-3" aria-label="Source 3: Liu et al., Lost in the Middle: How Language Models Use Long Contexts">[3]</a>.</li>
-<li><strong><a href="#context-and-loops">Key concept: engineer the context and the loop</a>:</strong> Source: <a href="#source-4" aria-label="Source 4: Anthropic, Effective context engineering for AI agents">[4]</a>.</li>
-<li><strong><a href="#development-principles">Key concept: principles that make agent work verifiable</a>:</strong> ADR guidance: <a href="#source-5" aria-label="Source 5: Michael Nygard, Documenting architecture decisions">[5]</a>.</li>
-<li><strong><a href="#multi-agent">Key concept: multi-agent patterns</a>:</strong> Source: <a href="#source-6" aria-label="Source 6: Anthropic, Building effective agents">[6]</a>.</li>
-<li><strong><a href="#study-plan">Work through the course</a>:</strong> Source: <a href="#source-2" aria-label="Source 2: SGTechStack, Eitri Agentic Dev Workflow self-paced training">[2]</a>.</li>
-</ul></div>
-          <p>References checked on 9 November 2026.</p>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-09">9 November 2026</time>.</p>
           <ol class="source-list">
-            <li id="source-1"><a href="https://github.com/mattpocock/skills">Matt Pocock, skills</a></li>
-            <li id="source-2"><a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">SGTechStack, Eitri Agentic Dev Workflow self-paced training</a></li>
-            <li id="source-3"><a href="https://arxiv.org/abs/2307.03172">Liu et al., Lost in the Middle: How Language Models Use Long Contexts</a></li>
-            <li id="source-4"><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a></li>
-            <li id="source-5"><a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Michael Nygard, Documenting architecture decisions</a></li>
-            <li id="source-6"><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic, Building effective agents</a></li>
+            <li id="source-1"><a href="https://github.com/mattpocock/skills">Matt Pocock, skills</a>. Reusable agent skills repository. Used in <a href="#about-training">What the training teaches</a>.</li>
+            <li id="source-2"><a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">SGTechStack, Eitri Agentic Dev Workflow self-paced training</a>. Used in <a href="#about-training">What the training teaches</a> and <a href="#study-plan">Work through the course</a>. This companion summarises the training’s five-phase workflow and retains its command names, including <code>/dependency-orchestrator</code>; confirm the applicable harness revision before transferring commands to the local 19-step view and <code>/project-horizon</code> catalogue.</li>
+            <li id="source-3"><a href="https://arxiv.org/abs/2307.03172">Liu et al., Lost in the Middle: How Language Models Use Long Contexts</a>. Used in <a href="#how-models-behave">How language models behave</a>. The evidence concerns position sensitivity on the tested tasks and models, not a universal context-utilisation threshold.</li>
+            <li id="source-4"><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a>. Used in <a href="#context-and-loops">Engineer the context and the loop</a> for retrieval, compaction and durable notes.</li>
+            <li id="source-5"><a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Michael Nygard, Documenting architecture decisions</a>. Used in <a href="#development-principles">Principles that make agent work verifiable</a> for architecture decision records of context, decision and consequences.</li>
+            <li id="source-6"><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic, Building effective agents</a>. Used in <a href="#multi-agent">Multi-agent patterns</a>. Its orchestration patterns include decomposition, delegation and synthesis; this guide’s coordinator restrictions are a local practice, not a prohibition imposed by Anthropic.</li>
+            <li id="source-7"><a href="https://developers.openai.com/api/docs/guides/reasoning-best-practices">OpenAI, Reasoning best practices</a>. Used in <a href="#context-and-loops">Engineer the context and the loop</a>: simple, direct instructions are recommended for reasoning models; asking them to reveal step-by-step reasoning is not a general best practice.</li>
+            <li id="source-8"><a href="https://agentskills.io/specification">Agent Skills, Specification</a>. Used in <a href="#context-and-loops">Engineer the context and the loop</a> for skill packaging and progressive disclosure; invocation depends on the host.</li>
           </ol>
         </section>
         <footer class="article-footer"><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>

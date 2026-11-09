@@ -53,7 +53,7 @@
         <header class="article-header">
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>PO/BA harness: from business need to PRD</h1>
-<p class="lead">The PO/BA harness helps product owners (POs) and business analysts (BAs) turn a business need into a product requirements document (PRD): business-level user stories, acceptance criteria and, where useful, an HTML prototype. They choose one of three paths, then commit the results and hand them to the development team.</p>
+<p class="lead">The PO/BA harness helps product owners (POs) and business analysts (BAs) turn a business need into a product requirements document (PRD): business-level user stories, acceptance criteria and, where useful, an HTML prototype. They choose one of <a href="#source-harness">three paths</a>, then commit the results and hand them to the development team.</p>
           <p>Choose from three requirements paths based on technical experience and feature complexity. For the strategy behind the handoff, including what makes a PRD ready, <a href="product-discovery.html#handover">read the handover section in Project Discovery</a>.</p>
         </header>
         <figure class="page-map page-map--route" aria-label="Page summary">
@@ -76,7 +76,7 @@
             <a href="#path-socratic">Path 2: Socratic</a>
             <a href="#path-clara">Path 3: CLARA</a>
             <a href="#handoff">Hand off</a>
-
+            <a href="#sources">Sources</a>
         </nav></details>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
@@ -124,7 +124,7 @@
 
         <section id="path-speckit">
           <h2>Path 1: SpecKit, for simple or well-defined features</h2>
-          <p>This path fits a feature that is already understood, where the team needs clear user stories quickly. <a href="https://github.com/github/spec-kit">SpecKit</a> is GitHub’s open-source toolkit for spec-driven development.</p>
+          <p>This path fits a feature that is already understood, where the team needs clear user stories quickly. <a href="#source-speckit">SpecKit</a> is GitHub’s open-source toolkit for spec-driven development.</p>
           <ol class="practice-steps">
             <li><strong>Generate the specification.</strong> SpecKit produces a specification file with the functional requirements and core user stories.</li>
             <li><strong>Optionally, design or prototype the interface.</strong> The PO or BA validates the requirements visually with stakeholders. They can paste the user stories into <a href="https://stitch.withgoogle.com">Google Stitch</a> or <a href="https://www.figma.com/make/">Figma Make</a>, or ask the coding agent to generate a design or a standalone HTML prototype from them.</li>
@@ -136,7 +136,7 @@
 
         <section id="path-socratic">
           <h2>Path 2: Socratic workflow, for large or ambiguous features</h2>
-          <p>This path fits a feature whose full scope is unclear, where requirements cannot be written until open questions are answered. It uses Matt Pocock’s skills to map the unknowns, resolve them one at a time and record the decisions.</p>
+          <p>This path fits a feature whose full scope is unclear, where requirements cannot be written until open questions are answered. It uses <a href="#source-matt">Matt Pocock’s skills</a> to map the unknowns, resolve them one at a time and record the decisions.</p>
           <ol class="practice-steps">
             <li><strong>Map the unknowns.</strong> The agent creates a shared map of investigation tickets on the issue tracker and labels each by the kind of work it needs.</li>
             <li><strong>Resolve the tickets one at a time.</strong> Depending on its label, a ticket is settled by a structured interview with the PO or BA, a throwaway prototype, background research by an agent, or a manual task such as arranging access.</li>
@@ -149,14 +149,14 @@
 
         <section id="path-clara">
           <h2>Path 3: product research with CLARA</h2>
-          <p>This path fits a new product or complex feature, where the team needs to understand users before it can detail functional requirements. <a href="https://github.com/dsta-productops/clara">CLARA</a> is a research harness for synthesising programme knowledge and producing product artefacts. The EDS path described here uses Confluence; the upstream CLARA core also supports a Plane distribution.</p>
+          <p>This path fits a new product or complex feature, where the team needs to understand users before it can detail functional requirements. <a href="#source-clara">CLARA</a> is a research harness for synthesising programme knowledge and producing product artefacts. The EDS path described here uses Confluence; the upstream CLARA core also supports a Plane distribution.</p>
           <ol class="practice-steps">
             <li><strong>Research and discover.</strong> CLARA’s step-by-step research harness gathers and refines what is already known.</li>
             <li><strong>Work through the design-thinking stages.</strong> The team builds user personas and journey maps, defines the root-cause problem statement, generates solution ideas and converges on the best user experience.</li>
             <li><strong>Write the specification.</strong> CLARA generates the research artefacts and consolidated specification files, including the user stories.</li>
             <li><strong>Optionally, prototype the interface.</strong> An HTML prototype of the chosen experience, built with Prizm Design components, is handed off with the specification files as a visual reference.</li>
           </ol>
-          <p>CLARA can only ground its research in what it can reach. The team’s domain documentation needs to be in the Confluence spaces or knowledge bases CLARA queries; <a href="eds-team-context.html#domain">read how to add domain context</a>.</p>
+          <p>CLARA can only ground its research in what it can reach. The team’s domain documentation needs to be in the <a href="#source-context-guide">Confluence spaces or knowledge bases CLARA queries</a>; <a href="eds-team-context.html#domain">read how to add domain context</a>.</p>
 
           <aside class="ai-help ai-help--inline" id="ai-help-clara" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>CLARA can organise accessible programme knowledge into research artefacts and draft specifications. Give it relevant domain sources; the team checks generated claims, personas and journeys against those sources and actual research, then commits the reviewed artefacts with their limitations.</p></aside>
 </section>
@@ -175,6 +175,20 @@
         </section>
 
         <p class="source-ref"><a href="eds-ai-workflow.html#version-status">Eitri status and version: verify installed revisions and enforced controls</a>.</p>
+        <section id="sources">
+          <h2>Sources</h2>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-09">9 November 2026</time>.</p>
+          <ol class="source-list">
+            <li id="source-harness">CoreX EDS team. <cite>Eitri harness workflow — README</cite>, section 1; internal revision not supplied. Primary workflow source; the editorial review gives this README priority over the older operating handbook. The internal document and revision are unavailable here; the workflow owner must confirm the installed controls, availability and enforcement. The reference-check date does not verify that implementation. Used in <a href="#choose-path">the three requirements paths</a>, <a href="#handoff">the PRD handoff</a>.</li>
+            <li id="source-context-guide">CoreX EDS team. <cite>Team context ingestion guide</cite> (<code>team-context-ingestion.md</code>), section 1; internal revision not supplied. Primary context source for the local requirements paths and domain handoff. The document is unavailable in this checkout; source revision and deployed context configuration require owner confirmation. Used in <a href="#path-clara">the EDS Confluence path</a>, <a href="#handoff">domain context in the handoff</a>.</li>
+            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. Its five-phase view and <code>/dependency-orchestrator</code> differ from the local 19-step view and <code>/project-horizon</code>; do not silently substitute one revision for the other. The <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html">team-context ingestion lesson</a> describes the EDS Confluence path. Used in <a href="#path-clara">the EDS Confluence path</a>.</li>
+            <li id="source-matt">Matt Pocock. <a href="https://github.com/mattpocock/skills">Engineering skills — upstream skill set</a>, live repository; installed revision not identified. Underlying investigation, specification, slicing, implementation and review skills; the descriptions on this page explain their use or adaptation in the documented EDS workflow, not a guarantee of current upstream names or behaviour. Used in <a href="#path-socratic">the Socratic planning path</a>.</li>
+            <li id="source-speckit">GitHub. <a href="https://github.com/github/spec-kit">Spec Kit — spec-driven development toolkit</a>. Live repository for the upstream toolkit; the three-path handoff and EDS invocation conventions come from the internal workflow documents, not an upstream standard. Used in <a href="#path-speckit">Path 1</a>.</li>
+            <li id="source-stitch">Google. <a href="https://stitch.withgoogle.com">Stitch — interface design and prototyping</a>. Product reference for prototype handoff. The recorded public retrieval returned an application shell without readable content; it did not verify Eitri conversion support. Confirm the documented Stitch/HTML conversion availability with the workflow owner. Used in <a href="#path-speckit">optional prototypes</a>.</li>
+            <li id="source-figma">Figma. <a href="https://www.figma.com/make/">Figma Make — design and prototyping</a>. Optional prototyping resource; its public product description does not establish Eitri conversion or production readiness. Used in <a href="#path-speckit">optional prototypes</a>.</li>
+            <li id="source-clara">DSTA ProductOps. <a href="https://github.com/dsta-productops/clara">CLARA — shared research harness core</a>. Live upstream repository with Confluence and Plane distributions. The EDS documentation describes the Confluence path; neither this repository nor the public training certifies a particular internal deployment. Used in <a href="#path-clara">Path 3</a>.</li>
+          </ol>
+        </section>
           <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
       </article>
     </main>
@@ -184,7 +198,7 @@
             <a href="#path-socratic">Path 2: Socratic</a>
             <a href="#path-clara">Path 3: CLARA</a>
             <a href="#handoff">Hand off</a>
-
+            <a href="#sources">Sources</a>
     </nav></aside>
   </div>
 </body>

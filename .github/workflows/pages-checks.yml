@@ -8,7 +8,7 @@ on:
       - .github/workflows/pages.yml
       - .github/workflows/pages-checks.yml
       - .github/scripts/assemble_pages.py
-      - tests/test_pages.py
+      - tests/**
   pull_request:
     branches: [main]
     paths:
@@ -16,7 +16,7 @@ on:
       - .github/workflows/pages.yml
       - .github/workflows/pages-checks.yml
       - .github/scripts/assemble_pages.py
-      - tests/test_pages.py
+      - tests/**
 
 permissions:
   contents: read
