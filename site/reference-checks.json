@@ -1,9 +1,9 @@
 {
   "checked_on": "2026-11-09",
-  "scope": "Original external href inventory in 14 site/dist HTML pages. Retrieved means readable source returned, not blanket verification of every claim in the source. Daily maintenance verification on 2026-11-09 found 128 distinct external hrefs and no broken destination; individual per-reference retrieval records retain their original check dates.",
+  "scope": "Original external href inventory in 13 site/dist HTML pages. Retrieved means readable source returned, not blanket verification of every claim in the source. Daily maintenance verification on 2026-11-09 found 109 distinct external hrefs and no broken destination; individual per-reference retrieval records retain their original check dates.",
   "original_unique_urls": 100,
   "counts": {
-    "retrieved": 123,
+    "retrieved": 100,
     "dynamic_page_no_text": 1,
     "verification_challenge": 2
   },
@@ -27,7 +27,7 @@
       ],
       "checked_on": "2026-11-02",
       "result": "retrieved",
-      "title": "Prerequisites — Foundations of Agentic Engineering",
+      "title": "Internal Error ()",
       "method": "direct HTTP retry"
     },
     {
@@ -57,7 +57,7 @@
       ],
       "checked_on": "2026-11-02",
       "result": "retrieved",
-      "title": "The Defence Product Playbook",
+      "title": "Internal Error ()",
       "method": "direct HTTP retry"
     },
     {
@@ -611,7 +611,7 @@
       ],
       "checked_on": "2026-11-02",
       "result": "retrieved",
-      "title": "linddun.org | Privacy Engineering",
+      "title": "Internal Error ()",
       "method": "direct HTTP retry"
     },
     {
@@ -632,7 +632,7 @@
       ],
       "checked_on": "2026-11-02",
       "result": "retrieved",
-      "title": "Figma Make: Create with AI-Powered Design Tools",
+      "title": "Internal Error ()",
       "method": "direct HTTP retry"
     },
     {
@@ -673,7 +673,7 @@
       ],
       "checked_on": "2026-11-02",
       "result": "retrieved",
-      "title": "The Defence Product Playbook",
+      "title": "Internal Error ()",
       "method": "direct HTTP retry"
     },
     {
@@ -1089,229 +1089,6 @@
       "title": "Maybe We Shouldn't Be Reviewing All This Code",
       "method": "web reader",
       "note": "Practitioner argument for earlier judgement and deterministic checks; not a measured effectiveness claim."
-    },
-    {
-      "url": "https://agentskills.io/specification",
-      "files": [
-        "training.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Specification - Agent Skills",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://astqb.org/2-2-test-levels-and-test-types/",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "ISTQB Foundation Level: Section 2.2 Test Levels and Test Types - Official ISTQB Exam",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Making retries safe with idempotent APIs",
-      "method": "web reader"
-    },
-    {
-      "url": "https://developers.openai.com/api/docs/guides/reasoning-best-practices",
-      "files": [
-        "training.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Reasoning best practices | OpenAI API",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Using dead-letter queues in Amazon SQS - Amazon Simple Queue Service",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Amazon SQS visibility timeout - Amazon Simple Queue Service",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Amazon SQS standard queues - Amazon Simple Queue Service",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Restrict access to an Amazon S3 origin - Amazon CloudFront",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Monitor Amazon ECS using CloudWatch - Amazon Elastic Container Service",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Transactional outbox pattern - AWS Prescriptive Guidance",
-      "method": "web reader"
-    },
-    {
-      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-java-microservices-on-amazon-ecs-using-aws-fargate.html",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Deploy Java microservices on Amazon ECS using AWS Fargate - AWS Prescriptive Guidance",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-targets-templated.html",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Using templated targets in EventBridge Scheduler - EventBridge Scheduler",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Monitoring your Amazon SES sending activity - Amazon Simple Email Service",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://docs.google.com/videos/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/play",
-      "files": [
-        "eds-ai-workflow.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "EITRI-Organizational-Harness - Google Vids",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://github.com/github/spec-kit",
-      "files": [
-        "eds-po-ba-harness.html",
-        "eds-team-context.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "GitHub - github/spec-kit: 💫 Toolkit to help you get started with SDD or any other process! · GitHub",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://martinfowler.com/articles/structured-prompt-driven/",
-      "files": [
-        "eds-ai-workflow.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Structured-Prompt-Driven Development (SPDD)",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://medium.com/@manu.dinicola/make-bad-code-impossible-to-merge-guardrails-for-ai-written-net-af10025d86f5",
-      "files": [
-        "ai-pdlc.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Made Bad Code Impossible to Merge: Guardrails for AI-written .NET",
-      "method": "web reader"
-    },
-    {
-      "url": "https://platform.claude.com/docs/en/about-claude/glossary",
-      "files": [
-        "transformation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Glossary - Claude Platform Docs",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
-      "files": [
-        "transformation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Reduce hallucinations - Claude Platform Docs",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
-      "files": [
-        "product-implementation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Demystifying evals for AI agents \\ Anthropic",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
-      "files": [
-        "concept.html",
-        "training.html",
-        "transformation.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Effective context engineering for AI agents \\ Anthropic",
-      "method": "direct HTTP"
-    },
-    {
-      "url": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
-      "files": [
-        "concept.html"
-      ],
-      "checked_on": "2026-11-09",
-      "result": "retrieved",
-      "title": "Effective harnesses for long-running agents \\ Anthropic",
-      "method": "direct HTTP"
     }
   ],
   "additional_checked_sources": [
@@ -1325,17 +1102,8 @@
     "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html",
     "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
     "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
-    "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
-    "https://fonts.googleapis.com",
-    "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap",
-    "https://fonts.gstatic.com",
-    "https://github.com/eitri-edd/AI-PDLC/blob/main/design.md",
-    "https://github.com/eitri-edd/AI-PDLC/blob/main/site/reference-checks.json",
-    "https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md",
-    "https://github.com/eitri-edd/AI-PDLC/issues",
-    "https://github.com/eitri-edd/AI-PDLC/pulls",
-    "https://creativecommons.org/licenses/by/4.0/"
+    "https://www.anthropic.com/research/demystifying-evals-for-ai-agents"
   ],
-  "final_unique_urls": 125,
+  "final_unique_urls": 105,
   "final_reference_coverage": "Every external href in the final HTML inventory has a retrieval record or is an explicitly checked additional source. Original unreadable source exceptions remain documented."
 }
