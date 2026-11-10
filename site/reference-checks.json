@@ -1,9 +1,9 @@
 {
-  "checked_on": "2026-11-09",
-  "scope": "Original external href inventory in 13 site/dist HTML pages. Retrieved means readable source returned, not blanket verification of every claim in the source. Daily maintenance verification on 2026-11-09 found 109 distinct external hrefs and no broken destination; individual per-reference retrieval records retain their original check dates.",
+  "checked_on": "2026-11-10",
+  "scope": "Original external href inventory in 14 site/dist HTML pages. Retrieved means readable source returned, not blanket verification of every claim in the source. Daily maintenance verification on 2026-11-10 found 131 distinct external hrefs and no broken destination; per-reference checked_on dates are refreshed to the run date on each successful check.",
   "original_unique_urls": 100,
   "counts": {
-    "retrieved": 100,
+    "retrieved": 125,
     "dynamic_page_no_text": 1,
     "verification_challenge": 2
   },
@@ -25,9 +25,9 @@
         "training.html",
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
-      "title": "Internal Error ()",
+      "title": "Prerequisites — Foundations of Agentic Engineering",
       "method": "direct HTTP retry"
     },
     {
@@ -35,7 +35,7 @@
       "files": [
         "ai-pdlc.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "DORA | Capabilities: User-centric focus",
       "method": "web reader"
@@ -45,7 +45,7 @@
       "files": [
         "ai-pdlc.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "AI-enabled software development fuels innovation | McKinsey",
       "method": "web reader"
@@ -55,9 +55,9 @@
       "files": [
         "ai-pdlc.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
-      "title": "Internal Error ()",
+      "title": "The Defence Product Playbook",
       "method": "direct HTTP retry"
     },
     {
@@ -65,7 +65,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Intent-driven development: How to guide agents from idea to implementation - CircleCI",
       "method": "web reader"
@@ -75,7 +75,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Spec-Driven Development: A Crash Course | The AI Agent Factory",
       "method": "web reader"
@@ -85,7 +85,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "GitHub - mlnjsh/context-engineering: 🧠 The Complete Guide to Context Engineering — Research Papers, Blogs, YouTube Videos, Tools & Best Practices for LLM Context Window Optimization · GitHub",
       "method": "web reader"
@@ -95,7 +95,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Context Engineering | Spec-Driven Development | intent-driven.dev",
       "method": "web reader"
@@ -105,7 +105,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Welcome to Learn Harness Engineering | Learn Harness Engineering",
       "method": "web reader"
@@ -115,7 +115,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Harness Engineering: A Crash Course | The AI Agent Factory",
       "method": "web reader"
@@ -125,7 +125,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "The Loop Engineering Playbook - Full Access",
       "method": "web reader"
@@ -135,7 +135,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Loop Engineering: A Crash Course | The AI Agent Factory",
       "method": "web reader"
@@ -145,7 +145,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Graph Engineering: A Crash Course | The AI Agent Factory",
       "method": "web reader"
@@ -155,7 +155,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Creating a Software Factory | Vercel Academy",
       "method": "web reader"
@@ -165,7 +165,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Software Factories, Light and Dark | AddyOsmani.com",
       "method": "web reader"
@@ -175,7 +175,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Intent-Driven Development | intent-driven.dev",
       "method": "web reader"
@@ -187,7 +187,7 @@
         "product-discovery.html",
         "product-implementation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "spec-kit/spec-driven.md at main · github/spec-kit · GitHub",
       "method": "web reader"
@@ -198,7 +198,7 @@
         "concept.html",
         "training.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Effective context engineering for AI agents \\ Anthropic",
       "method": "web reader"
@@ -208,7 +208,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Harness engineering: leveraging Codex in an agent-first world | OpenAI",
       "method": "web reader"
@@ -218,7 +218,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Lecture 02. What a Harness Actually Is | Learn Harness Engineering",
       "method": "web reader"
@@ -228,7 +228,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Effective harnesses for long-running agents \\ Anthropic",
       "method": "web reader"
@@ -238,7 +238,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "What Is Loop Engineering? | IBM",
       "method": "web reader"
@@ -248,7 +248,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "What Is Graph Engineering? Definition and Patterns",
       "method": "web reader"
@@ -258,7 +258,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Building effective AI agents \\ Anthropic",
       "method": "web reader"
@@ -268,7 +268,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Software Factories, Light and Dark – O’Reilly",
       "method": "web reader"
@@ -278,7 +278,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "GPT-6 Astra Model | OpenAI API",
       "method": "web reader"
@@ -288,7 +288,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Don’t Stop Pretraining: Adapt Language Models to Domains and Tasks - ACL Anthology",
       "method": "web reader"
@@ -298,7 +298,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "[2303.17564] BloombergGPT: A Large Language Model for Finance",
       "method": "web reader"
@@ -308,7 +308,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "[2404.14219] Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
       "method": "web reader"
@@ -318,7 +318,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "[2407.06023] Distilling System 2 into System 1",
       "method": "web reader"
@@ -328,7 +328,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "GPT-6.1 Sol Model | OpenAI API",
       "method": "web reader"
@@ -338,7 +338,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Claude Fable 5.1 - Claude Platform Docs",
       "method": "web reader"
@@ -348,7 +348,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Claude Opus 5.5 - Claude Platform Docs",
       "method": "web reader"
@@ -358,7 +358,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Anthropic’s Transparency Hub \\ Anthropic",
       "method": "web reader"
@@ -368,7 +368,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Using GPT-6 | OpenAI API",
       "method": "web reader"
@@ -378,7 +378,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Introducing System One Models & Jev - TypeSafe AI Blog",
       "method": "web reader"
@@ -388,7 +388,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "System One - TypeSafe",
       "method": "web reader"
@@ -398,7 +398,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Primitives (Questions) - TypeSafe",
       "method": "web reader"
@@ -408,7 +408,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Confidence - TypeSafe",
       "method": "web reader"
@@ -418,7 +418,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "[2610.02267] Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
       "method": "web reader"
@@ -428,7 +428,7 @@
       "files": [
         "eds-ai-workflow.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Spec-driven development | Thoughtworks Singapore",
       "method": "web reader"
@@ -439,7 +439,7 @@
         "eds-developer-harness.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Context7 - Up-to-date docs for AI agents",
       "method": "web reader"
@@ -450,7 +450,7 @@
         "eds-developer-harness.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Unit test your Java architecture - ArchUnit",
       "method": "web reader"
@@ -461,7 +461,7 @@
         "eds-developer-harness.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "GitHub - sverweij/dependency-cruiser: Validate and visualize dependencies. Your rules. JavaScript, TypeScript, CoffeeScript. ES6, CommonJS, AMD. · GitHub",
       "method": "web reader"
@@ -474,7 +474,7 @@
         "eds-skills-catalogue.html",
         "eds-team-context.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Home | Singapore Government ICT&SS Policy Reform",
       "method": "web reader"
@@ -487,7 +487,7 @@
         "eds-skills-catalogue.html",
         "eds-team-context.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Agentic Risk & Capability Framework - Agentic Risk & Capability Framework",
       "method": "web reader"
@@ -498,7 +498,7 @@
         "eds-developer-harness.html",
         "eds-po-ba-harness.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "dynamic_page_no_text",
       "title": "Stitch - Design with AI",
       "method": "web reader",
@@ -511,7 +511,7 @@
         "eds-path-to-production.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Semgrep App Security Platform | AI-assisted SAST, SCA and Secrets Detection",
       "method": "web reader"
@@ -523,7 +523,7 @@
         "eds-path-to-production.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "plugins/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md at main · cursor/plugins · GitHub",
       "method": "web reader"
@@ -534,7 +534,7 @@
         "eds-developer-harness.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "AI Code Review & Verification Tools | Code Security | Sonar",
       "method": "web reader"
@@ -545,7 +545,7 @@
         "eds-developer-harness.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "PIT Mutation Testing",
       "method": "web reader"
@@ -556,7 +556,7 @@
         "eds-developer-harness.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Stryker Mutator",
       "method": "web reader"
@@ -567,7 +567,7 @@
         "eds-developer-harness.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "agent-browser | Browser Automation for AI",
       "method": "web reader"
@@ -578,7 +578,7 @@
         "eds-developer-harness.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Fast and reliable end-to-end testing for modern web apps | Playwright",
       "method": "web reader"
@@ -589,7 +589,7 @@
         "eds-path-to-production.html",
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "OWASP Threat Dragon | OWASP Foundation",
       "method": "web reader"
@@ -599,7 +599,7 @@
       "files": [
         "eds-path-to-production.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Threats - Microsoft Threat Modeling Tool - Azure | Microsoft Learn",
       "method": "web reader"
@@ -609,9 +609,9 @@
       "files": [
         "eds-path-to-production.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
-      "title": "Internal Error ()",
+      "title": "linddun.org | Privacy Engineering",
       "method": "direct HTTP retry"
     },
     {
@@ -620,7 +620,7 @@
         "eds-po-ba-harness.html",
         "eds-team-context.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Spec Kit - AI-Powered Specification-Driven Development Toolkit",
       "method": "web reader"
@@ -630,9 +630,9 @@
       "files": [
         "eds-po-ba-harness.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
-      "title": "Internal Error ()",
+      "title": "Figma Make: Create with AI-Powered Design Tools",
       "method": "direct HTTP retry"
     },
     {
@@ -641,7 +641,7 @@
         "eds-po-ba-harness.html",
         "eds-team-context.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "GitHub - dsta-productops/clara · GitHub",
       "method": "web reader"
@@ -651,7 +651,7 @@
       "files": [
         "eds-skills-catalogue.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Impeccable: The missing design vocabulary for agents",
       "method": "web reader"
@@ -661,7 +661,7 @@
       "files": [
         "eds-team-context.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "OKF — The Markdown Spec for Humans and AI Agents",
       "method": "web reader"
@@ -671,9 +671,9 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
-      "title": "Internal Error ()",
+      "title": "The Defence Product Playbook",
       "method": "direct HTTP retry"
     },
     {
@@ -681,7 +681,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "The Double Diamond - Design Council",
       "method": "web reader"
@@ -691,7 +691,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "The Four Big Risks - Silicon Valley Product Group : Silicon Valley Product Group",
       "method": "web reader"
@@ -701,7 +701,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "From Headless to Thoughtful: Why 3-in-a-Box is the Operating Model for the Agentic Era and unlocks AUX",
       "method": "web reader"
@@ -711,7 +711,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "The Definitive Guide to Product Discovery and Frameworks",
       "method": "web reader"
@@ -721,7 +721,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "The Product Experimentation Playbook for AI PMs",
       "method": "web reader"
@@ -731,7 +731,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Opportunity Solution Trees: Visualize Your Discovery to Stay Aligned and Drive Outcomes",
       "method": "web reader"
@@ -741,7 +741,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "The Lean Startup | Methodology",
       "method": "web reader"
@@ -751,7 +751,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Dual-Track Agile - Silicon Valley Product Group : Silicon Valley Product Group",
       "method": "web reader"
@@ -761,7 +761,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "The Design Sprint — GV",
       "method": "web reader"
@@ -771,7 +771,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "The Wizard of Oz Method in UX - NN/G",
       "method": "web reader"
@@ -781,7 +781,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Patterns of Trustworthy Experimentation: Pre-Experiment Stage - Microsoft Research",
       "method": "web reader"
@@ -791,7 +791,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Multivariate testing",
       "method": "web reader"
@@ -801,7 +801,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Your Guide on How to Improve Product Discovery with AI",
       "method": "web reader"
@@ -811,7 +811,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Synthetic Users: If, When, and How to Use AI-Generated “Research” - NN/G",
       "method": "web reader"
@@ -821,7 +821,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
       "method": "web reader"
@@ -831,7 +831,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Jobs to Be Done Theory - Christensen Institute",
       "method": "web reader"
@@ -841,7 +841,7 @@
       "files": [
         "product-discovery.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "",
       "method": "web reader"
@@ -851,7 +851,7 @@
       "files": [
         "product-implementation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Google SRE - Canary Release: Deployment Safety and Efficiency",
       "method": "web reader"
@@ -861,7 +861,7 @@
       "files": [
         "product-implementation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Demystifying evals for AI agents \\ Anthropic",
       "method": "web reader"
@@ -871,7 +871,7 @@
       "files": [
         "product-implementation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "DORA | DORA’s software delivery performance metrics",
       "method": "web reader"
@@ -881,7 +881,7 @@
       "files": [
         "training.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "GitHub - SGTechStack/ai-coding-workflow-d2-self-paced-training · GitHub",
       "method": "web reader"
@@ -891,7 +891,7 @@
       "files": [
         "training.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "GitHub - mattpocock/skills: Skills for Real Engineers. Straight from my .agents directory. · GitHub",
       "method": "web reader"
@@ -901,7 +901,7 @@
       "files": [
         "training.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "[2307.03172] Lost in the Middle: How Language Models Use Long Contexts",
       "method": "web reader"
@@ -911,7 +911,7 @@
       "files": [
         "training.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Documenting Architecture Decisions",
       "method": "web reader"
@@ -921,7 +921,7 @@
       "files": [
         "training.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Building effective AI agents \\ Anthropic",
       "method": "web reader"
@@ -931,7 +931,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Introducing DORA’s inaugural AI Capabilities Model | Google Cloud Blog",
       "method": "web reader"
@@ -941,7 +941,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "DORA | State of AI-assisted Software Development 2025",
       "method": "web reader"
@@ -951,7 +951,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "The State of AI: Global Survey 2025 | McKinsey",
       "method": "web reader"
@@ -961,7 +961,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity - METR",
       "method": "web reader"
@@ -971,7 +971,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "We are Changing our Developer Productivity Experiment Design - METR",
       "method": "web reader"
@@ -981,7 +981,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "verification_challenge",
       "title": "www.imda.gov.sg",
       "method": "web reader",
@@ -992,7 +992,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "verification_challenge",
       "title": "www.imda.gov.sg",
       "method": "web reader",
@@ -1003,7 +1003,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "DORA | Capabilities: Generative organizational culture",
       "method": "web reader"
@@ -1013,7 +1013,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "LLM06:2025 Excessive Agency - OWASP Gen AI Security Project",
       "method": "web reader"
@@ -1023,7 +1023,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Automation - Cloud Adoption Framework | Microsoft Learn",
       "method": "web reader"
@@ -1033,7 +1033,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Security Teams, Roles, and Functions - Cloud Adoption Framework | Microsoft Learn",
       "method": "web reader"
@@ -1043,7 +1043,7 @@
       "files": [
         "transformation.html"
       ],
-      "checked_on": "2026-11-02",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "DORA | Capabilities: Monitoring and observability",
       "method": "web reader"
@@ -1053,7 +1053,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-06",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Why AI Coding Agents Lose Context After the PR, and How to Keep It | Harness Blog",
       "method": "web reader"
@@ -1063,7 +1063,7 @@
       "files": [
         "concept.html"
       ],
-      "checked_on": "2026-11-06",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Are Harnesses Worth the Cost?",
       "method": "web reader"
@@ -1073,7 +1073,7 @@
       "files": [
         "product-implementation.html"
       ],
-      "checked_on": "2026-11-06",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Why are good developers so wary of agentic development?",
       "method": "web reader"
@@ -1084,11 +1084,257 @@
         "ai-pdlc.html",
         "product-implementation.html"
       ],
-      "checked_on": "2026-11-07",
+      "checked_on": "2026-11-10",
       "result": "retrieved",
       "title": "Maybe We Shouldn't Be Reviewing All This Code",
       "method": "web reader",
       "note": "Practitioner argument for earlier judgement and deterministic checks; not a measured effectiveness claim."
+    },
+    {
+      "url": "https://agentskills.io/specification",
+      "files": [
+        "training.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Specification - Agent Skills",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://astqb.org/2-2-test-levels-and-test-types/",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "ISTQB Foundation Level: Section 2.2 Test Levels and Test Types - Official ISTQB Exam",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Making retries safe with idempotent APIs",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/reasoning-best-practices",
+      "files": [
+        "training.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Reasoning best practices | OpenAI API",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Using dead-letter queues in Amazon SQS - Amazon Simple Queue Service",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Amazon SQS visibility timeout - Amazon Simple Queue Service",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Amazon SQS standard queues - Amazon Simple Queue Service",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Restrict access to an Amazon S3 origin - Amazon CloudFront",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Monitor Amazon ECS using CloudWatch - Amazon Elastic Container Service",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-java-microservices-on-amazon-ecs-using-aws-fargate.html",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Deploy Java microservices on Amazon ECS using AWS Fargate - AWS Prescriptive Guidance",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-targets-templated.html",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Using templated targets in EventBridge Scheduler - EventBridge Scheduler",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Monitoring your Amazon SES sending activity - Amazon Simple Email Service",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://docs.google.com/videos/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/play",
+      "files": [
+        "eds-ai-workflow.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "EITRI-Organizational-Harness - Google Vids",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://github.com/github/spec-kit",
+      "files": [
+        "eds-po-ba-harness.html",
+        "eds-team-context.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "GitHub - github/spec-kit: 💫 Toolkit to help you get started with SDD or any other process! · GitHub",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://martinfowler.com/articles/structured-prompt-driven/",
+      "files": [
+        "eds-ai-workflow.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Structured-Prompt-Driven Development (SPDD)",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://medium.com/@manu.dinicola/make-bad-code-impossible-to-merge-guardrails-for-ai-written-net-af10025d86f5",
+      "files": [
+        "ai-pdlc.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Made Bad Code Impossible to Merge: Guardrails for AI-written .NET",
+      "method": "web reader"
+    },
+    {
+      "url": "https://microservices.io/patterns/data/transactional-outbox.html",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Pattern: Transactional outbox",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/about-claude/glossary",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Glossary - Claude Platform Docs",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+      "files": [
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Reduce hallucinations - Claude Platform Docs",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html",
+      "files": [
+        "eds-developer-harness.html",
+        "eds-skills-catalogue.html",
+        "eds-team-context.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Lesson 1 — What Was Built on Top of Matt Pocock",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html",
+      "files": [
+        "eds-po-ba-harness.html",
+        "eds-team-context.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Lesson 2 — Injecting Your Team's Context",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+      "files": [
+        "product-implementation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Demystifying evals for AI agents \\ Anthropic",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "files": [
+        "concept.html",
+        "training.html",
+        "transformation.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Effective context engineering for AI agents \\ Anthropic",
+      "method": "direct HTTP"
+    },
+    {
+      "url": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
+      "files": [
+        "concept.html"
+      ],
+      "checked_on": "2026-11-10",
+      "result": "retrieved",
+      "title": "Effective harnesses for long-running agents \\ Anthropic",
+      "method": "direct HTTP"
     }
   ],
   "additional_checked_sources": [
@@ -1102,8 +1348,19 @@
     "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html",
     "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
     "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
-    "https://www.anthropic.com/research/demystifying-evals-for-ai-agents"
+    "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+    "https://fonts.googleapis.com",
+    "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap",
+    "https://fonts.gstatic.com",
+    "https://github.com/eitri-edd/AI-PDLC/blob/main/design.md",
+    "https://github.com/eitri-edd/AI-PDLC/blob/main/site/reference-checks.json",
+    "https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md",
+    "https://github.com/eitri-edd/AI-PDLC/issues",
+    "https://github.com/eitri-edd/AI-PDLC/pulls",
+    "https://creativecommons.org/licenses/by/4.0/",
+    "https://drive.google.com/file/d/1BxLFoaeKiTPLfciZ7Vr8qHABsJ9bbvrTrDWEs0OEZsk/preview",
+    "https://drive.google.com/file/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/preview"
   ],
-  "final_unique_urls": 105,
+  "final_unique_urls": 127,
   "final_reference_coverage": "Every external href in the final HTML inventory has a retrieval record or is an explicitly checked additional source. Original unreadable source exceptions remain documented."
 }
