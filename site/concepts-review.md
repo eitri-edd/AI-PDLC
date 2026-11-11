@@ -1,5 +1,26 @@
 # Concepts editorial review
 
+## Fable model lifecycle correction · 12 November 2026
+
+Reviewed issue #55 against `main` revision `f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79`, `../writing.md` and `../design.md`. The reader should be able to identify the current Fable example, follow its matching documentation and notice a consequential data-handling limit before selecting it.
+
+Opened these official model overviews with the web reader on 12 November 2026, including the full retained text where the initial response was truncated:
+
+- [Claude Fable 5.1](https://platform.claude.com/docs/en/models/fable-5-1/overview): labelled Legacy; still available, with migration to Fable 5.2 recommended. The earlier current-example wording is stale, not an intentional historical example.
+- [Claude Fable 5.2](https://platform.claude.com/docs/en/models/fable-5-2/overview): released 9 November 2026; active (latest). Supports demanding reasoning and long-horizon agentic work, text/image inputs, text output and always-on adaptive thinking controlled through effort. The overview also specifies 30-day retention and an express Anthropic authorisation exception for zero data retention.
+- [Claude Opus 5.5](https://platform.claude.com/docs/en/models/opus-5-5/overview): remains active (latest); its agentic coding/knowledge-work description, inputs, output and adaptive thinking still support the neighbouring prose.
+
+Updated the current example, all Fable accessible citation labels and the documentation URL in `dist/concept.html`. Kept stable anchor `source-18` and its existing displayed source number 17; the issue's source identifier is not its current list ordinal. The nearby data-handling paragraph carries the new example's retention restriction and exception. The canonical entry records the documentation's scope and latest lifecycle status. No Fable pricing table exists in the published site, so no prices were added. A site-wide search found no other published Fable 5.1 references; dated historical reviews and retrieval inventory remain historical records.
+
+This is a targeted source check, not a page-wide maintenance pass. The public reference-check date remains 10 November 2026 and the substantive editorial-review date remains 6 November 2026. No other sources or internal implementation claims were revalidated.
+
+Verification:
+
+- **Author reread:** checked the model example, data-handling paragraph, source entry, related-research citation and surrounding selection guidance. The revised passages retain task-based comparison and exact-version/lifecycle checks without claiming a benchmark advantage.
+- **Structural/regression:** the two new offline tests fail against the original page and pass against the candidate. The full standard-library suite passes all 43 tests. All 101 page IDs and the page-wide check date are preserved; citation numbering and local fragments pass the existing contracts. `git diff --check` passes.
+- **Browser:** headless Chromium at 1440, 768, 375 and 320 px opens the model-reference disclosure through its deep link, renders the replacement, follows citation [17] to the matching visible source entry below the sticky header, and has no page overflow or script errors. Inspected the 1440 px model passage and 320 px source screenshots. The initial Playwright default browser binary was absent; verification used an already installed Chromium executable instead. No shared CSS or JavaScript changed.
+- **Reader evidence:** no representative-reader session was performed for this scoped reference correction; comprehension remains unverified. The existing broader reader-check follow-up below remains open.
+
 ## Meeting room booking example · 6 November 2026
 
 Applied `../writing.md` to `dist/concept.html`, using the reviewed proposal as the basis for one fictional meeting room booking application across the overview and eight main concept examples. Kept the existing reading route, definitions, limits, source links and section anchors. The overview starts with a user problem and compares improving the existing calendar workflow with building an application. Intent remains available through implementation and review; user observations assess product value separately from software tests.
