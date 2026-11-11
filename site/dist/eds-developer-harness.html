@@ -180,7 +180,8 @@
           <p>The TRD then brings the decisions together without further questions. It covers the problem statement, the solution, user stories, implementation decisions, testing decisions and what is out of scope.</p>
 
           <aside class="ai-help ai-help--inline" id="ai-help-dev-plan" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>With the PRD, repository and applicable standards, agents can propose story dependencies and a story-level TRD. The developer and Tech Lead compare the proposed design with the user story, inspect dependencies and resolve assumptions; retain the reviewed plan before progressing.</p></aside>
-</section>
+<p>Current public Lesson 0 warns that /reconcile-stories has two unresolved defects: /project-horizon does not consume its reconciled files, and completed-task rounding inflates remaining-time estimates. Use it to identify completed stories, not to commit to a remaining-time forecast, until the workflow owner verifies fixes in the installed revision. <a href="#source-training">Current course and revision limits</a>.</p>
+        </section>
 
         <section id="check">
           <h2>Check the TRD and slice it (Steps 7–10)</h2>
@@ -276,7 +277,8 @@
               <div><dt>Keep as evidence</dt><dd>The scoped diff, check and review reports, unresolved findings and the issue’s implementation summary.</dd></div>
             </dl>
           </aside>
-</section>
+<p>This table retains the local build Gate 1 and quality/compliance Gate 2. Current public Lesson 1 groups build, review, security and framework checks in a parallel /code-reviewer dispatcher and keeps mutation separate. It also treats S3 architecture guardrails as continuous, rather than only one-time setup. Confirm the installed configuration before relying on either layout. <a href="#source-training">Current course and revision limits</a>.</p>
+        </section>
 
         <section id="closeout">
           <h2>Verify and close out (Steps 13–19)</h2>
@@ -295,7 +297,8 @@
           <p>Each check writes its report to the repository, so reviewers can inspect the evidence behind a decision: the dependency graph, the architecture test plan, the compliance and review reports, browser screenshots and end-to-end results.</p>
 
           <aside class="ai-help ai-help--inline" id="ai-help-dev-closeout" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Agents can propose refactoring, extend architecture tests and collect browser or end-to-end evidence where those steps are used. Reviewers check the original acceptance criteria and changed code and reproduce results before accepting the change. Keep reports and screenshots with the story.</p></aside>
-</section>
+<p>The local 19-step documentation treats E2E as optional. Current public Lesson 1 instead requires /e2e on the story’s last issue before pushing and says the final story MR cannot merge until the campaign passes. Push and merge checks differ; confirm the applicable revision and actual enforcement with the workflow owner. <a href="#source-training">Current course and revision limits</a>.</p>
+        </section>
 
         <section id="done">
           <h2>Definition of done for planning and implementation</h2>
@@ -324,10 +327,10 @@
         <p class="source-ref"><a href="eds-ai-workflow.html#version-status">Eitri status and version: verify installed revisions and enforced controls</a>.</p>
         <section id="sources">
           <h2>Sources</h2>
-          <p class="source-check-date">References last checked: <time datetime="2026-11-10">10 November 2026</time>.</p>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-12">12 November 2026</time>.</p>
           <ol class="source-list">
             <li id="source-harness">CoreX EDS team. <cite>Eitri harness workflow — README</cite>, sections 2–3; internal revision not supplied. Primary workflow source; the editorial review gives this README priority over the older operating handbook. The internal document and revision are unavailable here; the workflow owner must confirm the installed controls, availability and enforcement. The reference-check date does not verify that implementation. Used in <a href="#install">setup</a>, <a href="#steps">the 19 steps</a>, <a href="#modes">execution modes</a>, <a href="#do-work">the build loop</a>, <a href="#closeout">closeout</a>, <a href="#done">definition of done</a>.</li>
-            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. Its five-phase view and <code>/dependency-orchestrator</code> differ from the local 19-step view and <code>/project-horizon</code>; do not silently substitute one revision for the other. The <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html">Eitri skills lesson</a> records the documented defaults and policy-pack counts. Used in <a href="#do-work">the 80% coverage and 70% mutation defaults</a>.</li>
+            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. The public course contains mixed revisions. Lesson 1 now uses S1 setup, S2 planning with <code>/project-horizon</code>, S3 architecture guardrails and developer Steps 1–5; it marks its five-phase video and interactive diagram as earlier material. This guide retains the local 19-step view. Confirm the applicable harness revision and release controls with the workflow owner before transferring commands or relying on a gate. The <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html">Eitri skills lesson</a> records the documented defaults and policy-pack counts. Used in <a href="#do-work">the 80% coverage and 70% mutation defaults</a>. See <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/00-pm-ba-workflow.html">planning lesson and forecast warnings</a>.</li>
             <li id="source-matt">Matt Pocock. <a href="https://github.com/mattpocock/skills">Engineering skills — upstream skill set</a>, live repository; installed revision not identified. Underlying investigation, specification, slicing, implementation and review skills; the descriptions on this page explain their use or adaptation in the documented EDS workflow, not a guarantee of current upstream names or behaviour. Used in <a href="#install">base skills</a>, <a href="#plan">investigation and TRD planning</a>, <a href="#check">slicing</a>, <a href="#do-work">the /do-work adaptation of /implement</a>, <a href="#closeout">review and diagnosis</a>.</li>
             <li id="source-context7">Upstash. <a href="https://context7.com">Context7 — version-specific library documentation</a>. Tool reference for the planned documentation integration; a public product page does not establish its installation or availability in Eitri. Used in <a href="#plan">Step 3</a>.</li>
             <li id="source-archunit">ArchUnit project. <a href="https://www.archunit.org">ArchUnit — Java architecture tests</a>. Underlying architecture-test tool; the project reference does not verify the generated EDS tests or their enforcement. Used in <a href="#plan">Step 4</a>.</li>

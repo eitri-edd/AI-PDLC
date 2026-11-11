@@ -66,4 +66,4 @@ Open `http://localhost:8000/AI-PDLC/` and `http://localhost:8000/AI-PDLC/dev/`. 
 
 ## Accuracy review
 
-The [6 November 2026 accuracy review](accuracy-review.md) covers all 13 pages, corrections and outstanding source/version checks. The [reference inventory](reference-checks.json) records all 100 original external URLs and the additional sources used by the corrections. Public-source checks do not establish the current internal Eitri release or policy-pack version.
+The [6 November 2026 accuracy review](accuracy-review.md) records its original 13-page scope, corrections and outstanding source/version checks. The [12 November 2026 whole-site maintenance pass](reference-review-2026-11-12.md) covers the current 14 pages, source drift, access limitations and verification. The [reference inventory](reference-checks.json) separates current URL/page outcomes from retained historical records, including the original 100 external URLs. Public-source checks do not establish the current internal Eitri release or policy-pack version.

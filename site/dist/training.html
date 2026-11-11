@@ -54,7 +54,7 @@
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>Training</h1>
           <p class="lead">This page is a study guide to the self-paced training on the Eitri Agentic Dev Workflow. It explains how the course is organised, draws out the key concepts it teaches, and suggests how to work through it so you can run the workflow on your own repository.</p>
-          <p class="source-ref">This companion summarises the training’s five-phase workflow and retains its command names, including <code>/dependency-orchestrator</code>. The <a href="eds-developer-harness.html">developer harness</a> uses a 19-step view and the local catalogue names <code>/project-horizon</code>. Confirm the applicable harness revision before transferring commands between these views.</p>
+          <p class="source-ref">This companion retains an earlier five-phase course view and the earlier <code>/dependency-orchestrator</code> name. Current public Lessons 0 and 1 use <code>/project-horizon</code>; Lesson 1 now uses S1 setup, S2 planning, S3 architecture guardrails and developer Steps 1–5, while its video and interactive diagram retain earlier material. The <a href="eds-developer-harness.html">local developer harness</a> uses a 19-step view. Confirm the applicable revision before transferring commands or relying on gates.</p>
           <p>This study guide is for developers, Tech Leads and product owners using the workflow. Pair it with the course’s hands-on exercises to practise the skills, gates and checks.</p>
           <div class="page-meta"><span class="badge">Draft</span><span>Last reviewed: <time datetime="2026-11-02">2 November 2026</time></span><span>Content owner: unassigned</span><span>Lifecycle version: not yet confirmed</span></div>
         </header>
@@ -106,7 +106,7 @@
         <section id="about-training">
           <h2>What the training teaches</h2>
           <p>The Eitri Agentic Dev Workflow is a set of agent skills for turning user stories into tested, reviewed code with AI coding agents. It builds on Matt Pocock’s agentic engineering skills, which cover specification, ticket breakdown, implementation, code review and bug diagnosis. Eitri adds story sequencing, compliance review, architecture boundary tests, ticket quality checks, a self-correcting implementation loop and browser-based acceptance evidence.</p>
-          <p>The workflow uses the same skills and the same two human sign-offs as the EDS workflow described in the EDS AI Workflow guide. <a href="eds-developer-harness.html">Read the developer harness page</a> for the governed sequence; use this page to learn the concepts behind it.</p>
+          <p>The course and the local EDS guide share many skill names and two human sign-off points, but their sequences and controls are not interchangeable. Use the <a href="eds-developer-harness.html">developer harness page</a> for the local 19-step view, and confirm the installed revision and enforced gates with the workflow owner.</p>
           <aside class="callout" aria-label="Note on prerequisites">
             <p class="example-label">Note</p>
             <p>The training expects a software development background. Without experience of writing, testing and shipping code, you cannot critically review what the agent produces, and the workflow depends on that review.</p>
@@ -261,7 +261,9 @@
           <p>The training notes that the delivery report assumes full availability and excludes leave, holidays, review turnaround and release overhead. Treat its dates as a planning baseline, not a commitment.</p>
 
           <aside class="ai-help ai-help--inline" id="ai-help-learn-plan" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Use the lesson’s user stories and acceptance criteria to ask the agent for a delivery plan. The learner and Tech Lead trace dependencies and proposed work back to the stories, correct unsupported assumptions and keep the reviewed plan for the next exercise.</p></aside>
-</section>
+<p>Current public Lesson 0 warns that /reconcile-stories has two unresolved defects: /project-horizon does not consume its reconciled files, and completed-task rounding inflates remaining-time estimates. Use it to identify completed stories, not to commit to a remaining-time forecast, until the workflow owner verifies fixes in the installed revision. <a href="#source-2">Current course and revision limits</a>.</p>
+        <p>In current public Lesson 0, /project-horizon takes validated YAML stories; /convert-stories handles Markdown or spreadsheet input first. It also warns that /stories-to-issues needs its auto-generated label for reconciliation and does not deduplicate reruns. Check a dry run before creating issues. <a href="#source-2">Current course and revision limits</a>.</p>
+        </section>
 
         <section id="workflow-skills">
           <h2>Lesson 1: what the workflow adds</h2>
@@ -310,7 +312,8 @@
           </ul>
 
           <aside class="ai-help ai-help--inline" id="ai-help-learn-loop" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Take one agreed story through the lesson’s skills and inspect each generated artefact. Compare changes with the story, rerun the checks and record failures and corrections. Keep the reports and evidence for the lesson’s human sign-offs.</p></aside>
-</section>
+<p>The five-phase sequence here is the earlier course view. Current Lesson 1 uses S1/S2/S3 and Steps 1–5, and requires /e2e on the story’s last issue before pushing; the final story MR cannot merge until the campaign passes. The local 19-step guide treats E2E as optional. Confirm the target revision and actual push/merge protections with the workflow owner. <a href="#source-2">Course editions and source scope</a>.</p>
+        </section>
 
         <section id="team-context">
           <h2>Lesson 2: inject your team’s context</h2>
@@ -334,7 +337,8 @@
           </ul>
 
           <aside class="ai-help ai-help--inline" id="ai-help-learn-context" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Run the same practice story before and after adding the relevant team context. AI can generate a new plan or change using that context. The learner compares both results against the domain and coding rules, runs the same checks and records what improved, failed or remained uncertain.</p></aside>
-</section>
+<p>The course retains CONTEXT.md examples, whereas current upstream Pocock skills describe GLOSSARY.md and ADRs. Confirm the installed revision and configured document layout rather than renaming files without a migration. <a href="#source-1">Upstream skill scope</a>.</p>
+        </section>
 
         <section id="study-plan">
           <h2>Work through the course</h2>
@@ -365,14 +369,14 @@
 
         <section id="sources">
           <h2>Sources</h2>
-          <p class="source-check-date">References last checked: <time datetime="2026-11-10">10 November 2026</time>.</p>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-12">12 November 2026</time>.</p>
           <ol class="source-list">
             <li id="source-1"><a href="https://github.com/mattpocock/skills">Matt Pocock, skills</a>. Reusable agent skills repository. Used in <a href="#about-training">What the training teaches</a>.</li>
-            <li id="source-2"><a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">SGTechStack, Eitri Agentic Dev Workflow self-paced training</a>. Used in <a href="#about-training">What the training teaches</a> and <a href="#study-plan">Work through the course</a>. This companion summarises the training’s five-phase workflow and retains its command names, including <code>/dependency-orchestrator</code>; confirm the applicable harness revision before transferring commands to the local 19-step view and <code>/project-horizon</code> catalogue.</li>
+            <li id="source-2"><a href="https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training">SGTechStack, Eitri Agentic Dev Workflow self-paced training</a>. Used in <a href="#about-training">What the training teaches</a> and <a href="#study-plan">Work through the course</a>. This companion retains an earlier five-phase view. Current Lesson 1 uses S1/S2/S3 plus Steps 1–5 and /project-horizon; some video/diagram material remains earlier. Confirm the applicable revision before transferring commands to the local 19-step workflow. See <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html">current skills lesson</a>, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/00-pm-ba-workflow.html">planning lesson and forecast warnings</a>, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html">context registration lesson</a>.</li>
             <li id="source-3"><a href="https://arxiv.org/abs/2307.03172">Liu et al., Lost in the Middle: How Language Models Use Long Contexts</a>. Used in <a href="#how-models-behave">How language models behave</a>. The evidence concerns position sensitivity on the tested tasks and models, not a universal context-utilisation threshold.</li>
             <li id="source-4"><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering for AI agents</a>. Used in <a href="#context-and-loops">Engineer the context and the loop</a> for retrieval, compaction and durable notes.</li>
             <li id="source-5"><a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Michael Nygard, Documenting architecture decisions</a>. Used in <a href="#development-principles">Principles that make agent work verifiable</a> for architecture decision records of context, decision and consequences.</li>
-            <li id="source-6"><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic, Building effective agents</a>. Used in <a href="#multi-agent">Multi-agent patterns</a>. Its orchestration patterns include decomposition, delegation and synthesis; this guide’s coordinator restrictions are a local practice, not a prohibition imposed by Anthropic.</li>
+            <li id="source-6"><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic, Building effective agents</a>. Used in <a href="#multi-agent">Multi-agent patterns</a>. Its orchestration patterns include decomposition, delegation and synthesis. This guide’s review boundaries and isolation recommendations are workflow guidance, not universal restrictions or accuracy guarantees imposed by Anthropic.</li>
             <li id="source-7"><a href="https://developers.openai.com/api/docs/guides/reasoning-best-practices">OpenAI, Reasoning best practices</a>. Used in <a href="#context-and-loops">Engineer the context and the loop</a>: simple, direct instructions are recommended for reasoning models; asking them to reveal step-by-step reasoning is not a general best practice.</li>
             <li id="source-8"><a href="https://agentskills.io/specification">Agent Skills, Specification</a>. Used in <a href="#context-and-loops">Engineer the context and the loop</a> for skill packaging and progressive disclosure; invocation depends on the host.</li>
           </ol>
