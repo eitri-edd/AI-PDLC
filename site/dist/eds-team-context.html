@@ -127,7 +127,8 @@
           <p>To add its own standards, a team structures them in the OKF layout, registers their location with the harness’s story-sequencing skill and tags its stories with the standard’s key. The standard then appears in the delivery plan for each tagged story.</p>
 
           <aside class="ai-help ai-help--inline" id="ai-help-standards" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>The agent can use the story’s selected standards and recipes to propose a technical approach. Engineers check that the references are current and applicable and that no mandatory constraint is missing; retain the selected standard keys and reviewed design with the story.</p></aside>
-</section>
+<p>The local registration convention above tags stories. Current public Lesson 2 does not tag stories: it configures the standards catalogue, dependencies and concept-based node mapping in <code>skills/project-horizon/configs/standards.md</code>. Confirm the installed revision with the workflow owner before changing registration. <a href="#source-training">Current course and revision limits</a>.</p>
+        </section>
 
         <section id="knowledge-base">
           <h2>Add coding practices to the knowledge base</h2>
@@ -147,7 +148,8 @@
           <p>To include its own policies in the audit, a team writes its compliance checklist or internal security policy as a Markdown file and registers it with the harness. The audit assesses the document alongside IM8 and ARC. Enforce applicable controls through tests, access controls and pipeline checks; a written policy or model assessment alone does not enforce them.</p>
 
           <aside class="ai-help ai-help--inline" id="ai-help-policy" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>The compliance skill can compare the TRD with the registered policy references and write findings. Reviewers check the applicable policy version and reproduce the claimed gap or control evidence. Keep the checklist report and resolved findings; enforce controls through the documented technical checks.</p></aside>
-</section>
+<p>The public Eitri lessons describe an 88-check ARC policy pack, while the current ARC framework site lists 86 controls across 46 risks. These counts describe different artefacts; confirm the pack revision and control mapping with its owner rather than replacing 88 with 86. <a href="#source-training">Training scope</a>.</p>
+        </section>
 
         <section id="review-rules">
           <h2>Add review rules</h2>
@@ -159,11 +161,11 @@
 
         <section id="checklist">
           <h2>Set up your team’s context</h2>
-          <p>A new project team can work through this checklist once. When it is complete, every stage in the table above has the context it needs.</p>
+          <p>A new project team can use this checklist to prepare its context. Confirm each source’s revision and access, test that the installed skill retrieves the intended files, and verify that mandatory policies remain available at the relevant decision points.</p>
           <ol class="practice-steps">
             <li><strong>Write local coding rules.</strong> Record naming, architecture patterns and formatting expectations in the repository’s coding standards file.</li>
             <li><strong>Configure the knowledge base.</strong> Upload coding standards, library documentation and technical guidelines to the team’s knowledge base, and point the harness at it.</li>
-            <li><strong>Connect architecture standards.</strong> Structure the team’s standards in the OKF layout, register them and tag stories with their keys.</li>
+            <li><strong>Connect architecture standards.</strong> Structure the team’s standards in the OKF layout and confirm the registration convention for the installed revision; the local story-tag approach differs from current public Lesson 2’s node mapping.</li>
             <li><strong>Define security policies.</strong> Write any additional corporate security policies as Markdown and register them with the harness.</li>
             <li><strong>Declare architecture boundary tests.</strong> Let the harness scan the project and propose boundary rules, review and customise them, then generate the tests.</li>
           </ol>
@@ -173,10 +175,10 @@
         <p class="source-ref"><a href="eds-ai-workflow.html#version-status">Eitri status and version: verify installed revisions and enforced controls</a>.</p>
         <section id="sources">
           <h2>Sources</h2>
-          <p class="source-check-date">References last checked: <time datetime="2026-11-10">10 November 2026</time>.</p>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-12">12 November 2026</time>.</p>
           <ol class="source-list">
             <li id="source-context-guide">CoreX EDS team. <cite>Team context ingestion guide</cite> (<code>team-context-ingestion.md</code>), internal revision not supplied. Primary source for the context matrix, domain handoff, AppStandards registration, hosted knowledge-base guidance, policy registration and local review rules. The internal document and revision are unavailable here; the workflow owner must confirm the installed controls, availability and enforcement. The reference-check date does not verify that implementation. Used in <a href="#matrix">context by stage</a>, <a href="#domain">domain context</a>, <a href="#standards">shared standards</a>, <a href="#knowledge-base">coding practices</a>, <a href="#policies">policies</a>, <a href="#review-rules">review rules</a>, <a href="#checklist">the quick-start checklist</a>.</li>
-            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. Its five-phase view and <code>/dependency-orchestrator</code> differ from the local 19-step view and <code>/project-horizon</code>; do not silently substitute one revision for the other. The <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html">Eitri skills lesson</a> records the documented defaults and policy-pack counts. The <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html">team-context ingestion lesson</a> describes the EDS Confluence path. Used in <a href="#domain">the EDS Confluence path</a>, <a href="#policies">the documented 36/88 packaged-check split</a>.</li>
+            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. The public course contains mixed revisions. Lesson 1 now uses S1 setup, S2 planning with <code>/project-horizon</code>, S3 architecture guardrails and developer Steps 1–5; it marks its five-phase video and interactive diagram as earlier material. This guide retains the local 19-step view. Confirm the applicable harness revision and release controls with the workflow owner before transferring commands or relying on a gate. The <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html">Eitri skills lesson</a> records the documented defaults and policy-pack counts. The <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html">team-context ingestion lesson</a> describes the EDS Confluence path. Used in <a href="#domain">the EDS Confluence path</a>, <a href="#policies">the documented 36/88 packaged-check split</a>.</li>
             <li id="source-speckit">GitHub. <a href="https://github.com/github/spec-kit">Spec Kit — spec-driven development toolkit</a>. Live repository for the upstream toolkit; the three-path handoff and EDS invocation conventions come from the internal workflow documents, not an upstream standard. Used in <a href="#matrix">the requirements route</a>, <a href="#domain">Path 1</a>.</li>
             <li id="source-clara">DSTA ProductOps. <a href="https://github.com/dsta-productops/clara">CLARA — shared research harness core</a>. Live upstream repository with Confluence and Plane distributions. The EDS documentation describes the Confluence path; neither this repository nor the public training certifies a particular internal deployment. Used in <a href="#matrix">the requirements route</a>, <a href="#domain">Path 3</a>.</li>
             <li id="source-okf">Open Knowledge Format project. <a href="https://okf.md">Open Knowledge Format (OKF)</a>. Format reference for a version-controlled graph of Markdown concepts. The AppStandards mapping and team registration procedure are EDS workflow conventions; a documentation layout does not enforce standards. Used in <a href="#standards">AppStandards and team standards</a>.</li>
