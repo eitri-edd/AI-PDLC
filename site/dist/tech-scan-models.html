@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Which model runs the work, and how typed decisions fit: approved Claude and OpenAI models through Amazon Bedrock, with conditional exceptions and research-only notes.">
+  <title>Tech Scan: Models · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <div class="nav-children">
+            <a href="tech-scan.html">Tech Scan (draft)</a>
+          </div>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="concept.html">Concepts</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Tech Scan: Models</span></nav>
+        <header class="article-header">
+          <p class="eyebrow">Development guide</p>
+          <h1>Tech Scan: Models</h1>
+          <p class="lead">This page answers which model runs the work, and how typed decisions fit: approved Claude and OpenAI models through Amazon Bedrock, with the exceptions, exclusions and open gaps stated beside them.</p>
+          <p>This page is a draft. It covers model access, coding clients and typed decisions for the Concepts chapter. Its entries are research references from web sources reviewed 11–12 November 2026, not locally deployed or benchmarked options; treat vendor availability claims and public customer-reported operation as different kinds of evidence.</p>
+          <p>Read <a href="concept.html#models">Choose an AI model</a> in Concepts first. This page maps that section to products and does not repeat its explanation.</p>
+        </header>
+        <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
+          <figcaption id="page-map-caption">This page at a glance</figcaption>
+          <p id="page-map-note" class="page-map-note">Reading route: choose the model → handle the exceptions → avoid the excluded options → note the open gaps. These groups organise the explanation; they are not lifecycle stages.</p>
+
+          <ol class="page-map-nodes" role="list">
+                        <li class="page-map-node"><strong>Choose the model</strong><div class="page-map-links">
+              <a href="#purpose">Purpose</a>
+              <a href="#aws-first-default">AWS-first default</a>
+            </div></li>
+                        <li class="page-map-node"><strong>When the default does not fit</strong><div class="page-map-links">
+              <a href="#conditional-alternatives">Conditional alternatives</a>
+              <a href="#research-only">Research-only notes</a>
+            </div></li>
+                        <li class="page-map-node"><strong>What to avoid</strong><div class="page-map-links">
+              <a href="#do-not-use">Do not use</a>
+            </div></li>
+                        <li class="page-map-node"><strong>What is still open</strong><div class="page-map-links">
+              <a href="#gaps">Gaps and open questions</a>
+              <a href="#sources">Sources</a>
+            </div></li>
+          </ol>
+
+        </figure>
+        <details class="mobile-contents">
+          <summary>On this page</summary>
+          <nav aria-label="On this page"><a href="#purpose">Purpose</a>
+<a href="#aws-first-default">AWS-first default</a>
+<a href="#conditional-alternatives">Conditional alternatives</a>
+<a href="#research-only">Research-only notes</a>
+<a href="#do-not-use">Do not use</a>
+<a href="#gaps">Gaps and open questions</a>
+<a href="#sources">Sources</a></nav>
+        </details>
+        <section id="purpose">
+          <h2>Purpose</h2>
+          <p>Amazon Bedrock is the model API for this guide: approved Claude and OpenAI models are reached through Bedrock, and the coding clients that run the work connect to it there. This page records that default, the narrow exceptions to it, and the typed-decision models that are still research material rather than recommendations.</p>
+          <p>Apply hard gates first: required capability, approved data location and retention, identity and authorisation, supported model and API, security boundaries, and operational ownership. AWS preference must not override these gates. Among choices that pass the gates, prefer AWS-managed services.</p>
+          <p>Do not silently broaden the model policy through managed defaults, automatic routing, fallbacks, retrieval reasoning or evaluator models. A model that reaches the work through a default or a fallback is still a model choice, and it needs the same approval as a model chosen directly.</p>
+          <p>Offer one default and at most one justified alternative per capability in the main index. Keep further candidates in optional detail rather than presenting two complete parallel stacks; a reader choosing between two full stacks has not been given a decision.</p>
+          <p>Do not select the newest model merely because it is listed. Compare exact configurations on representative held-out tasks, and record correctness, correction effort, time, cost and control failures before choosing.<a href="#source-2" aria-label="Source 2: AI-SDLC Playbook, Concepts">[2]</a></p>
+          <p>Embedding and reranking models are approved separately from the generative models on this page. The model policy here covers large language models; extending that restriction to every model is an additional decision, not an assumption.</p>
+          <p>No option on this page has been locally deployed or benchmarked. Distinguish vendor availability claims from public customer-reported operation: a public customer case does not establish this team's performance or compliance, and a vendor availability claim does not establish that the option works for the proposed use.</p>
+        </section>
+        <section id="aws-first-default">
+          <h2>AWS-first default</h2>
+          <p>Use approved Claude and OpenAI models through Amazon Bedrock. Current official documentation includes frontier GPT models, not just GPT-OSS, and documents endpoint-specific API differences, so confirm the exact endpoint, region and features for the model you select.<a href="#source-1" aria-label="Source 1: OpenAI, Amazon Bedrock">[1]</a><a href="#source-3" aria-label="Source 3: AWS, Amazon Bedrock OpenAI model cards">[3]</a></p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="AWS-first default for models and coding clients; scroll horizontally if needed"><table><caption>AWS-first default: models and coding clients</caption><thead><tr><th scope="col">Product</th><th scope="col">What it does</th><th scope="col">Status</th><th scope="col">When to use it</th></tr></thead><tbody>
+                    <tr>
+            <td>Amazon Bedrock</td>
+            <td>Model API for approved Claude and OpenAI models</td>
+            <td>GA</td>
+            <td>Default route for model access</td>
+          </tr>
+                    <tr>
+            <td>Claude Code</td>
+            <td>Coding client with documented Bedrock integration</td>
+            <td>GA</td>
+            <td>Default coding client through Bedrock</td>
+          </tr>
+                    <tr>
+            <td>Codex</td>
+            <td>Local coding client with documented Bedrock integration</td>
+            <td>GA</td>
+            <td>Default coding client through Bedrock</td>
+          </tr>
+          </tbody></table></div>
+          <p>Claude Code and local Codex both have documented Bedrock integration.<a href="#source-5" aria-label="Source 5: Anthropic, Claude Code on Amazon Bedrock">[5]</a><a href="#source-4" aria-label="Source 4: OpenAI, Codex on Amazon Bedrock">[4]</a> Codex through Bedrock does not establish parity with Codex cloud or every hosted OpenAI feature; do not assume a feature available in the hosted service is available through Bedrock.</p>
+          <p>Managed GPT-OSS remains an OpenAI model and is not self-hosting. Omit it from the minimal shortlist if it is unnecessary, rather than saying the provider rule excludes it.</p>
+          <p>Bedrock access does not settle the qualification questions. Before adopting a selected model, qualify it in the intended account: representative task success, required model and API support, permission revocation, timeouts and retries, and full cost. These are proposed tests, not completed results.</p>
+        </section>
+        <section id="conditional-alternatives">
+          <h2>Conditional alternatives</h2>
+          <p>Direct provider APIs are exceptions, not the assumed route. Use a direct Claude or OpenAI API only for a specific capability or an approved-region gap, after reviewing egress, credentials, retention and data handling.<a href="#source-1" aria-label="Source 1: OpenAI, Amazon Bedrock">[1]</a></p>
+          <p>The exception is narrow: it covers a specific capability or an approved-region gap, not a general preference for the provider API. Record the reason for the exception beside the choice, so a later reader can tell whether it still applies.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Conditional alternatives to the Bedrock default; scroll horizontally if needed"><table><caption>Conditional alternatives to the Bedrock default</caption><thead><tr><th scope="col">Product</th><th scope="col">What it does</th><th scope="col">Status</th><th scope="col">When to use it</th></tr></thead><tbody>
+                    <tr>
+            <td>Direct Claude API</td>
+            <td>Provider API for Claude models</td>
+            <td>GA</td>
+            <td>Exception only: a specific capability or approved-region gap</td>
+          </tr>
+                    <tr>
+            <td>Direct OpenAI API</td>
+            <td>Provider API for OpenAI models</td>
+            <td>GA</td>
+            <td>Exception only: a specific capability or approved-region gap</td>
+          </tr>
+                    <tr>
+            <td>OpenAI Decisions API</td>
+            <td>Typed predicate, choice and score answers; model gpt-6-luna</td>
+            <td>GA</td>
+            <td>Conditional direct-OpenAI evaluation only</td>
+          </tr>
+                    <tr>
+            <td>Claude Platform on AWS</td>
+            <td>Claude access as a third-party offering on AWS</td>
+            <td>GA</td>
+            <td>Conditional feature route only</td>
+          </tr>
+          </tbody></table></div>
+          <p>The OpenAI Decisions API is documented as generally available with <code>gpt-6-luna</code> and native predicate, choice and score answers. No Box question is documented.<a href="#source-6" aria-label="Source 6: OpenAI, Decisions API">[6]</a> Treat it as a conditional direct-OpenAI evaluation: task accuracy, calibration, abstention and refusal handling, and application-side action checks are still required before any use.</p>
+          <p>Bedrock support for <code>/decisions</code> is not established. Availability of the same model through Responses does not prove availability of that API.<a href="#source-7" aria-label="Source 7: AWS, Amazon Bedrock models API compatibility">[7]</a></p>
+          <p>Claude Platform on AWS is a conditional feature route, not interchangeable compliance evidence for Bedrock. AWS identifies it as a third-party offering outside standard AWS compliance programmes.<a href="#source-8" aria-label="Source 8: AWS, Claude Platform on AWS feature support">[8]</a></p>
+        </section>
+        <section id="research-only">
+          <h2>Research-only notes</h2>
+          <p>Decision models are now a category, not a single missing product. TypeSafe Jev, known in Concepts as System One, stays as educational material in Concepts; a deployment shortlist need not support every model family discussed there.<a href="#source-2" aria-label="Source 2: AI-SDLC Playbook, Concepts">[2]</a> Do not present structured JSON as equivalent to a calibrated typed-decision model.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Research-only typed-decision models; scroll horizontally if needed"><table><caption>Research-only typed-decision models</caption><thead><tr><th scope="col">Product</th><th scope="col">What it is</th><th scope="col">Status</th><th scope="col">When to use it</th></tr></thead><tbody>
+                    <tr>
+            <td>TypeSafe Jev (System One)</td>
+            <td>Hosted typed-decision model: Choice, Score, Noul, Box</td>
+            <td>GA — launched 15 September 2026</td>
+            <td>Educational material only</td>
+          </tr>
+                    <tr>
+            <td>Strands Decider 2B</td>
+            <td>Open-weight typed-decision model: Choice, Score, Noul</td>
+            <td>GA</td>
+            <td>Not recommended; removed from the approved-stack recommendation</td>
+          </tr>
+          </tbody></table></div>
+          <p>Strands Decider 2B is not recommended. The Decider experiment was removed from the approved-stack recommendation, and its JevBench numbers are the repository's own table, not settled results; do not quote them as a benchmark outcome. Decider documents only Choice, Score and Noul, with no Box equivalent.<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a></p>
+          <p>Cloudflare Clef and Clef-flash are the closest open-weight multimodal candidates, with a vision encoder for images and video, but their Box support is not confirmed. They are hosted on Cloudflare Workers AI, so they are out of scope for adoption and remain a research note only.<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a></p>
+          <p>Open-weight availability alone does not qualify a model. Decider is openly licensed and available, yet it stays out of the recommendation because its typed-decision coverage is incomplete and its reported accuracy is the repository's own table, not an independent result.</p>
+          <p>Other decision models named in the same research pass include Convai Laya, Liquid AI d1, Perplexity pplx-decider and Mapika decider-2b. None is recommended here.<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a></p>
+        </section>
+        <section id="do-not-use">
+          <h2>Do not use</h2>
+          <p>These options are excluded from the recommended route. Exclusion is a decision about this guide's stack, not a judgement that the product itself is unusable elsewhere.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Options excluded from the recommended route; scroll horizontally if needed"><table><caption>Excluded from the recommended route</caption><thead><tr><th scope="col">Product</th><th scope="col">What it does</th><th scope="col">Status</th><th scope="col">When to use it</th></tr></thead><tbody>
+                    <tr>
+            <td>Self-hosted inference (vLLM, Ollama)</td>
+            <td>Serves model weights on your own infrastructure</td>
+            <td>GA</td>
+            <td>Do not use: no model-weight hosting infrastructure is needed</td>
+          </tr>
+                    <tr>
+            <td>Amazon SageMaker fine-tuning and model import</td>
+            <td>Fine-tunes or imports models on SageMaker</td>
+            <td>GA</td>
+            <td>Do not use until a concrete requirement exists</td>
+          </tr>
+                    <tr>
+            <td>Nova, Llama and Mistral generative models</td>
+            <td>Generative models outside the approved Claude and OpenAI policy</td>
+            <td>GA</td>
+            <td>Do not use on the recommended route</td>
+          </tr>
+          </tbody></table></div>
+          <p>No self-hosted inference infrastructure or non-Claude/OpenAI generative model is silently required by anything on this page. If a task appears to need one, treat that as a new decision with its own qualification, not as an implication of the recommended route. The exclusions are scoped to this guide's stack; they are not a ban on the products themselves.</p>
+        </section>
+        <section id="gaps">
+          <h2>Gaps and open questions</h2>
+          <ul>
+            <li><strong>No Box support verified anywhere.</strong> No open-weight rival has been verified to document Box, visual grounding as a typed decision, and the OpenAI Decisions API documents no Box question.<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a><a href="#source-6" aria-label="Source 6: OpenAI, Decisions API">[6]</a></li>
+            <li><strong>Bedrock support for <code>/decisions</code> is unresolved.</strong> Availability of the same model through Responses does not prove availability of that API.<a href="#source-7" aria-label="Source 7: AWS, Amazon Bedrock models API compatibility">[7]</a></li>
+            <li><strong>Claude Platform on AWS is not interchangeable compliance evidence for Bedrock.</strong> It is a third-party offering outside standard AWS compliance programmes, so a compliance case built on Bedrock cannot cite it.<a href="#source-8" aria-label="Source 8: AWS, Claude Platform on AWS feature support">[8]</a></li>
+            <li><strong>Nothing here is locally validated.</strong> Every entry is a research reference from web sources. Before adopting a selected model, qualify it in the intended account: representative task success, required model and API support, permission revocation, timeouts and retries, and full cost.</li>
+            <li><strong>Model availability changes.</strong> A model listed today may later be retired or have its endpoint changed, so re-confirm the exact endpoint, region and features at adoption time rather than relying on this page's listing.<a href="#source-3" aria-label="Source 3: AWS, Amazon Bedrock OpenAI model cards">[3]</a></li>
+          </ul>
+          <p>Publishing a clearly labelled research reference does not itself mean the infrastructure has passed those tests. Keep existing human release and approval authority: updating this page does not authorise infrastructure deployment, repository migration, implementation, or issue closure.</p>
+          <p>What would close these gaps: a verified typed-decision model that documents Box, or a Bedrock announcement of <code>/decisions</code> support. Until then, typed visual-grounding decisions stay a human judgement, not a model call.</p>
+          <p class="next-step"><strong>Next step:</strong> Compare the approved models on one representative held-out task — correctness, correction effort, time, cost and control failures — and record the result before adopting a model. The <a href="tech-scan-harness.html">Harness spoke</a> of Tech Scan covers the runtime that runs the chosen model.</p>
+        </section>
+        <section id="sources">
+          <h2>Sources</h2>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-12">12 November 2026</time>.</p>
+          <ol class="source-list">
+            <li id="source-1"><a href="https://developers.openai.com/api/docs/guides/amazon-bedrock">OpenAI, Amazon Bedrock</a>. Documents approved Claude and OpenAI models through Bedrock, including frontier GPT models, and the direct-API exception. Used in <a href="#purpose">Purpose</a>, <a href="#aws-first-default">AWS-first default</a> and <a href="#conditional-alternatives">Conditional alternatives</a>.</li>
+            <li id="source-2"><a href="https://github.com/eitri-edd/AI-PDLC/blob/f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79/site/dist/concept.html">AI-SDLC Playbook, Concepts</a>. The Concepts chapter at main revision f1ed9b1, including Choose an AI model and the System One discussion. Used in <a href="#purpose">Purpose</a> and <a href="#research-only">Research-only notes</a>.</li>
+            <li id="source-3"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html">AWS, Amazon Bedrock OpenAI model cards</a>. Documents the OpenAI models available through Bedrock and endpoint-specific API differences. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-4"><a href="https://learn.chatgpt.com/docs/amazon-bedrock">OpenAI, Codex on Amazon Bedrock</a>. Documents Codex integration with Bedrock. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-5"><a href="https://code.claude.com/docs/en/amazon-bedrock">Anthropic, Claude Code on Amazon Bedrock</a>. Documents Claude Code integration with Bedrock. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-6"><a href="https://developers.openai.com/api/docs/guides/decisions">OpenAI, Decisions API</a>. Documents the Decisions API as generally available with gpt-6-luna and native predicate, choice and score answers, with no Box question documented. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#gaps">Gaps and open questions</a>.</li>
+            <li id="source-7"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/models-api-compatibility.html">AWS, Amazon Bedrock models API compatibility</a>. Used to establish that Bedrock support for /decisions is not established. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#gaps">Gaps and open questions</a>.</li>
+            <li id="source-8"><a href="https://docs.aws.amazon.com/claude-platform/latest/userguide/feature-support.html">AWS, Claude Platform on AWS feature support</a>. Identifies Claude Platform on AWS as a third-party offering outside standard AWS compliance programmes. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#gaps">Gaps and open questions</a>.</li>
+            <li id="source-9"><a href="https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/">S5 Labs, Open decision models: Clef, d1, Jev</a>. Decision-model survey updated 23 October 2026, covering Jev, Strands Decider 2B and Cloudflare Clef. Used in <a href="#research-only">Research-only notes</a> and <a href="#gaps">Gaps and open questions</a>.</li>
+          </ol>
+        </section>
+        <p class="source-ref">Last editorial review: <time datetime="2026-11-12">12 November 2026</time>.</p>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+      </article>
+    </main>
+    <aside class="page-contents">
+      <nav aria-label="On this page"><p>On this page</p><a href="#purpose">Purpose</a>
+<a href="#aws-first-default">AWS-first default</a>
+<a href="#conditional-alternatives">Conditional alternatives</a>
+<a href="#research-only">Research-only notes</a>
+<a href="#do-not-use">Do not use</a>
+<a href="#gaps">Gaps and open questions</a>
+<a href="#sources">Sources</a></nav>
+    </aside>
+  </div>
+</body>
+</html>

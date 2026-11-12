@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-12",
-  "scope": "Complete maintenance pass across all 14 published HTML pages, including the unlinked training companion. Every exact external link and canonical source received a disposition; retrieval outcomes are separate from claim support. This is not blanket certification of source claims, reader comprehension, or internal Eitri configuration.",
+  "scope": "Complete maintenance pass across all 19 published HTML pages, including the unlinked training companion. Every exact external link and canonical source received a disposition; retrieval outcomes are separate from claim support. This is not blanket certification of source claims, reader comprehension, or internal Eitri configuration.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 138,
-  "current_unique_hrefs": 144,
+  "current_unique_urls": 190,
+  "current_unique_hrefs": 196,
   "counts": {
     "dynamic_page_no_text": 4,
     "expected_preconnect_root_response": 2,
-    "partial_reader_recovery": 6,
+    "partial_reader_recovery": 7,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 122,
+    "retrieved": 173,
     "retrieved_pdf_text": 2,
     "retrieved_with_login_banner": 1
   },
@@ -126,6 +126,46 @@
       "source_entries": 15,
       "unique_fetch_destinations": 20,
       "maintenance_record": "reference-review-2026-11-12.md"
+    },
+    "tech-scan.html": {
+      "checked_on": "2026-11-12",
+      "scope": "whole-page reference and materially cited claim review",
+      "status": "completed with explicit limitations",
+      "source_entries": 4,
+      "unique_fetch_destinations": 8,
+      "maintenance_record": "tech-scan-maintenance-2026-11-12.md"
+    },
+    "tech-scan-models.html": {
+      "checked_on": "2026-11-12",
+      "scope": "whole-page reference and materially cited claim review",
+      "status": "completed with explicit limitations",
+      "source_entries": 9,
+      "unique_fetch_destinations": 13,
+      "maintenance_record": "tech-scan-maintenance-2026-11-12.md"
+    },
+    "tech-scan-harness.html": {
+      "checked_on": "2026-11-12",
+      "scope": "whole-page reference and materially cited claim review",
+      "status": "completed with explicit limitations",
+      "source_entries": 22,
+      "unique_fetch_destinations": 26,
+      "maintenance_record": "tech-scan-maintenance-2026-11-12.md"
+    },
+    "tech-scan-gateway.html": {
+      "checked_on": "2026-11-12",
+      "scope": "whole-page reference and materially cited claim review",
+      "status": "completed with explicit limitations",
+      "source_entries": 16,
+      "unique_fetch_destinations": 20,
+      "maintenance_record": "tech-scan-maintenance-2026-11-12.md"
+    },
+    "tech-scan-sandbox.html": {
+      "checked_on": "2026-11-12",
+      "scope": "whole-page reference and materially cited claim review",
+      "status": "completed with explicit limitations",
+      "source_entries": 15,
+      "unique_fetch_destinations": 19,
+      "maintenance_record": "tech-scan-maintenance-2026-11-12.md"
     }
   },
   "references": [
@@ -394,6 +434,41 @@
       ]
     },
     {
+      "url": "https://agentopsguide.com/smithery-vs-glama-vs-official-mcp-registry/",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://agentopsguide.com/smithery-vs-glama-vs-official-mcp-registry/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://agentopsguide.com/smithery-vs-glama-vs-official-mcp-registry/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AgentsOpsGuide, Smithery vs Glama vs official MCP Registry. Registry as source of record, Glama as vetting layer, Smithery shutdown.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Smithery vs Glama vs the Official MCP Registry (2026)'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "0317a3eb1df7ba0d1d3264728abaff1252deb05599fc924e0c78db14b3622b42",
+          "format": "readable primary-source text",
+          "source_url": "https://agentopsguide.com/smithery-vs-glama-vs-official-mcp-registry/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-21"
+        }
+      ]
+    },
+    {
       "url": "https://agentskills.io/specification",
       "files": [
         "training.html"
@@ -646,6 +721,192 @@
       ]
     },
     {
+      "url": "https://automater.ai/intel/harness-engineering/",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://automater.ai/intel/harness-engineering/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://automater.ai/intel/harness-engineering/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "Automater, Harness engineering. One of the 2026 harness framings.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Harness Engineering: The Discipline Behind Better Agents | Automater Intel'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "bb79bef73c0a8f3483c16e6eadbe1eeb4545fc0bf5a2a8dbd2282f09389a732a",
+          "format": "readable primary-source text",
+          "source_url": "https://automater.ai/intel/harness-engineering/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-2"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/",
+      "files": [
+        "tech-scan-sandbox.html",
+        "tech-scan.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan.html",
+          "outcome": "supported",
+          "scope": "AWS, AWS Nitro Sandboxes for Amazon EKS, ECS and EC2. 9 November 2026. Announces hardware-isolated Firecracker microVMs per EKS pod, ECS task or EC2 workload, at no extra charge, in all commercial regions, explicitly for LLM-generated code.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Introducing AWS Nitro Sandboxes on Amazon EKS, ECS and EC2 for hardware isolated pods, tasks and VMs - AWS'."
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS, AWS Nitro Sandboxes for Amazon EKS, Amazon ECS, and Amazon EC2. What's New, 9 November 2026.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Introducing AWS Nitro Sandboxes on Amazon EKS, ECS and EC2 for hardware isolated pods, tasks and VMs - AWS'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "44c320704734d3e7884ea27a7ff3f3355482c7966c1ec51226feb707b8364717",
+          "format": "readable primary-source text",
+          "source_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan.html",
+          "id": "source-3"
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-1"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS News Blog, Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs. Launch announcement, 22 June 2026: ARM64 architecture, five launch regions, up to 16 vCPUs and 32 GB of memory and disk per MicroVM.",
+          "evidence_summary": "Direct GET returned 200; launch post dated 22 June 2026 states ARM64 architecture and five launch regions (US East N. Virginia and Ohio, US West Oregon, Europe Ireland, Asia Pacific Tokyo)."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "3bfe54ce68bb707fde5224b953fab7a38f5ad9eacfdbe69b3171d28efb43335f",
+          "format": "readable primary-source text",
+          "source_url": "https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-14"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks/",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS Containers Blog, AWS Nitro Sandboxes: hardware-enforced workload isolation on Amazon EKS. 9 November 2026.",
+          "evidence_summary": "Direct GET returned 200; page title: 'AWS Nitro Sandboxes: Hardware-enforced workload isolation on Amazon EKS | Containers'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "9dfef8c969d4a011e946dfafe095e06cf18c68ea3388ff607bb47d3ec3ba6e75",
+          "format": "readable primary-source text",
+          "source_url": "https://aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-2"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-thomson-reuters-built-an-agentic-platform-engineering-hub-with-amazon-bedrock-agentcore",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/machine-learning/how-thomson-reuters-built-an-agentic-platform-engineering-hub-with-amazon-bedrock-agentcore"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/machine-learning/how-thomson-reuters-built-an-agentic-platform-engineering-hub-with-amazon-bedrock-agentcore/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS Machine Learning Blog, How Thomson Reuters built an agentic platform engineering hub with Amazon Bedrock AgentCore. Customer-coauthored operational case; reported customer evidence, not an independently audited benchmark.",
+          "evidence_summary": "Direct GET returned 200; page title: 'How Thomson Reuters built an Agentic Platform Engineering Hub with Amazon Bedrock AgentCore | Artificial Intelligence'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "f9810c211cffe91412f36f8999a2b9f9495a953470385d0b10c97a7a732abbf6",
+          "format": "readable primary-source text",
+          "source_url": "https://aws.amazon.com/blogs/machine-learning/how-thomson-reuters-built-an-agentic-platform-engineering-hub-with-amazon-bedrock-agentcore"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-14"
+        }
+      ]
+    },
+    {
       "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
       "files": [
         "product-implementation.html"
@@ -678,6 +939,76 @@
         {
           "file": "product-implementation.html",
           "id": "source-6"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/security/security-bulletins/2026-065-aws/",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/security/security-bulletins/2026-065-aws/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/security/security-bulletins/2026-065-aws/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS, Security Bulletin 2026-065. July 2026.",
+          "evidence_summary": "Direct GET returned 200; page title: 'CVE-2026-16796 - Improper neutralization of argument delimiters in AWS Bedrock AgentCore Python SDK install_packages()'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "9d4e17452f64fe40704936b7b82de2e7491a95afb8e48eb426737340f87045a2",
+          "format": "readable primary-source text",
+          "source_url": "https://aws.amazon.com/security/security-bulletins/2026-065-aws/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-6"
+        }
+      ]
+    },
+    {
+      "url": "https://builder.aws.com/content/3LmNG2STjfdIrh1BIvWkHHDZpsi",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://builder.aws.com/content/3LmNG2STjfdIrh1BIvWkHHDZpsi"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://builder.aws.com/content/3LmNG2STjfdIrh1BIvWkHHDZpsi",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS Builder Center, Lambda Now Comes in Three Shapes. Published 7 November 2026: MicroVMs launched in five regions in June 2026, grew to 14 regions, and AWS added x86_64 support on 5 November 2026.",
+          "evidence_summary": "Direct GET returned 200; article published 7 November 2026 states MicroVMs launched in five regions in June 2026, grew to 14 regions, and AWS added x86_64 support on 5 November 2026."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "624a27c925c6a70b7a73ef0fcc370c003d4316e89bd2e9658f14d0c9fc16e73a",
+          "format": "readable primary-source text",
+          "source_url": "https://builder.aws.com/content/3LmNG2STjfdIrh1BIvWkHHDZpsi"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-15"
         }
       ]
     },
@@ -750,6 +1081,41 @@
         {
           "file": "transformation.html",
           "id": "source-8"
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/amazon-bedrock",
+      "files": [
+        "tech-scan-models.html"
+      ],
+      "hrefs": [
+        "https://code.claude.com/docs/en/amazon-bedrock"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://code.claude.com/docs/en/amazon-bedrock",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "Anthropic, Claude Code on Amazon Bedrock. Documents Claude Code integration with Bedrock.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Claude Code on Amazon Bedrock - Claude Code Docs'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "f5201d94dcf3bcce0a5f6048cca26771858188507c17bb14616d352865f74897",
+          "format": "readable primary-source text",
+          "source_url": "https://code.claude.com/docs/en/amazon-bedrock"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-models.html",
+          "id": "source-5"
         }
       ]
     },
@@ -963,6 +1329,87 @@
       ]
     },
     {
+      "url": "https://developers.openai.com/api/docs/guides/amazon-bedrock",
+      "files": [
+        "tech-scan-gateway.html",
+        "tech-scan-models.html"
+      ],
+      "hrefs": [
+        "https://developers.openai.com/api/docs/guides/amazon-bedrock"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://developers.openai.com/api/docs/guides/amazon-bedrock",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "OpenAI, Amazon Bedrock. Documents approved Claude and OpenAI models through Bedrock, including frontier GPT models, and the direct-API exception.",
+          "evidence_summary": "Direct GET returned 200; page title: 'OpenAI on Amazon Bedrock'."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "OpenAI, Amazon Bedrock guide. Documents reaching OpenAI models through Bedrock.",
+          "evidence_summary": "Direct GET returned 200; page title: 'OpenAI on Amazon Bedrock'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "3f64fa371a3823d3ce482f02da7037c953e2a6d7fbf57ab0a11abacbfd5f74db",
+          "format": "readable primary-source text",
+          "source_url": "https://developers.openai.com/api/docs/guides/amazon-bedrock"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-models.html",
+          "id": "source-1"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-4"
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "files": [
+        "tech-scan-models.html"
+      ],
+      "hrefs": [
+        "https://developers.openai.com/api/docs/guides/decisions"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://developers.openai.com/api/docs/guides/decisions",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "OpenAI, Decisions API. Documents the Decisions API as generally available with gpt-6-luna and native predicate, choice and score answers, with no Box question documented.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Decisions | OpenAI API'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "6239fe9c3a8e2212ab6c120926ae19121478bd22ce0dcced046d1398e1261418",
+          "format": "readable primary-source text",
+          "source_url": "https://developers.openai.com/api/docs/guides/decisions"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-models.html",
+          "id": "source-6"
+        }
+      ]
+    },
+    {
       "url": "https://developers.openai.com/api/docs/guides/latest-model",
       "files": [
         "concept.html"
@@ -1103,6 +1550,41 @@
         {
           "file": "concept.html",
           "id": "source-17"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "AWS, CloudFormation Guard. Documents Guard checks on structured data.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Validate templates with Guard - AWS CloudFormation'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "ba6e55fe9ea6c7eb7ea1552844dc3953179b176f573f065dd98768839c0cf5fa",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-10"
         }
       ]
     },
@@ -1251,6 +1733,41 @@
       ]
     },
     {
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/coding-agents-insights.html",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/coding-agents-insights.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/coding-agents-insights.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon CloudWatch user guide: Coding Agent Insights. Ready-made dashboards for Claude Code and Codex, dependent on expected telemetry names and resource attributes.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Monitor AI coding agents with Amazon CloudWatch Coding Agent Insights - Amazon CloudWatch'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "43fef4840cdf50a5dc64dddbfe3427023182e9668cdf461fca01b8a084c42657",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/coding-agents-insights.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-17"
+        }
+      ]
+    },
+    {
       "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html",
       "files": [
         "product-implementation.html"
@@ -1283,6 +1800,619 @@
         {
           "file": "product-implementation.html",
           "id": "source-15"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-vpc.html",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-vpc.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-vpc.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS, Bedrock AgentCore VPC documentation. ",
+          "evidence_summary": "Direct GET returned 200; page title: 'Configure Amazon Bedrock AgentCore Runtime and tools for VPC - Amazon Bedrock AgentCore'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "d3918ebf78484f5edf63a202ba07741eb81e26d1cc7d986e67c89aab93924256",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-vpc.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-8"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-managed-kb.md",
+      "files": [
+        "tech-scan-gateway.html",
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-managed-kb.md"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-managed-kb.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore developer guide: Gateway target connector, managed knowledge base. Bedrock Knowledge Bases exposed through AgentCore Gateway.",
+          "evidence_summary": "Direct GET returned 200; Markdown source retrieved."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore: Gateway target connector, Managed Knowledge Base. Documents exposing a Managed Knowledge Base through AgentCore Gateway.",
+          "evidence_summary": "Direct GET returned 200; Markdown source retrieved."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "b85dab52aa642f4548226dfe6926d00e70c1f7d44ae3c7257052911d662395d8",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-managed-kb.md"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-13"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-6"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-models.html",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-models.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-models.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore developer guide: Harness models. Approved-model configuration for the managed harness.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Models and instructions - Amazon Bedrock AgentCore'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "a6f851644abf333b71ab30c2d9da11987e1c8f9315caaf825ada7499f2bd44a9",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-models.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-operations.html",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-operations.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-operations.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore developer guide: Harness operations. Harness observability and operations.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Observability and cost controls - Amazon Bedrock AgentCore'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "fb8931a8dcc6c45416dfd6e8b10643bcd6355ed9afbe74a7a12d483c908e35b4",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-operations.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-16"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-security.html",
+      "files": [
+        "tech-scan-gateway.html",
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-security.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-security.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore developer guide: Harness security. Trust boundaries, Gateway policy scope and VPC attachment limits.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Security and access controls - Amazon Bedrock AgentCore'."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore: Harness security. Documents the security boundary, including that Gateway policy governs traffic through the Gateway.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Security and access controls - Amazon Bedrock AgentCore'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "acb12436636c3eb0ec423effbad1a9d862bdbb1e463136198a9a0b5a7efe8728",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-security.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-7"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-3"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md",
+      "files": [
+        "tech-scan-gateway.html",
+        "tech-scan-harness.html",
+        "tech-scan.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan.html",
+          "outcome": "supported",
+          "scope": "AWS, Bedrock AgentCore Harness documentation. Documents the config-based, Strands-powered managed harness.",
+          "evidence_summary": "Direct GET returned 200; Markdown source retrieved."
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore developer guide: Harness. Config-based, Strands-powered managed harness.",
+          "evidence_summary": "Direct GET returned 200; Markdown source retrieved."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore: Harness. Documents the managed harness, including the Gateway.",
+          "evidence_summary": "Direct GET returned 200; Markdown source retrieved."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "c3687bfb5a6f3e6041c353f8537e821450aee115a647eaf524225c2fa24078b9",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan.html",
+          "id": "source-4"
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-4"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-1"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html",
+      "files": [
+        "tech-scan-gateway.html",
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore developer guide: Policy. Cedar policy for Gateway tool authorisation.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Policy in Amazon Bedrock AgentCore: Control Agent Interactions - Amazon Bedrock AgentCore'."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore: Policy. Documents Cedar policy for Gateway authorisation.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Policy in Amazon Bedrock AgentCore: Control Agent Interactions - Amazon Bedrock AgentCore'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "98caa647e2cc91b5998187d0d642605607b01fc7c2bd86f1b4b618243f4a2522",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-11"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-2"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.md",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.md"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore developer guide: Release notes. Records the managed harness general availability in July 2026.",
+          "evidence_summary": "Direct GET returned 200; Markdown source retrieved."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "e5d2f820cb7c74534508d3bbefa1947006b5aeb3644c9ae35987f9c9371ecf3b",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.md"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-6"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-instances-security.md",
+      "files": [
+        "tech-scan-harness.html",
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-instances-security.md"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-instances-security.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock AgentCore developer guide: Runtime Instances security. Co-resident agents in an Instances session share a filesystem and execution-role credentials.",
+          "evidence_summary": "Direct GET returned 200; Markdown source retrieved."
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS, Bedrock AgentCore Runtime Instances security. ",
+          "evidence_summary": "Direct GET returned 200; Markdown source retrieved."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "dbfa99474341a67603bfee9782d0064f8fd672555b206f366776bc876f27c694",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-instances-security.md"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-8"
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-12"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-acl.md",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-acl.md"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-acl.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock: Managed Knowledge Bases, ACL-aware retrieval. Documents ACL-aware retrieval, and that the managed service does not authenticate the end user.",
+          "evidence_summary": "Direct GET returned 200; Markdown source retrieved."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "3acf1ce93ffb64f8f30297018ee598ae02ba996e7d9c87624eb5415cc556ad35",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-acl.md"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-8"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.md",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.md"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock: Knowledge Bases, supported features. Documents supported models and features for Knowledge Bases, including embeddings and reranking.",
+          "evidence_summary": "Direct GET returned 200; Markdown source retrieved."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "cad3a14de6499596837fb130f0eb642c57f416c275e2b62d38853aa925d249b5",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.md"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-9"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html",
+      "files": [
+        "tech-scan-gateway.html",
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock user guide: Knowledge bases. Managed retrieval for context assembly.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Retrieve data and generate AI responses with Amazon Bedrock Knowledge Bases - Amazon Bedrock'."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock: Knowledge Bases. Documents Bedrock Knowledge Bases.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Retrieve data and generate AI responses with Amazon Bedrock Knowledge Bases - Amazon Bedrock'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "78c4fede4ef3efbcf45d03b23715fd769a4436750513443820c857e024412fa8",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-12"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-7"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html",
+      "files": [
+        "tech-scan-gateway.html",
+        "tech-scan-models.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock OpenAI model cards. Documents the OpenAI models available through Bedrock and endpoint-specific API differences.",
+          "evidence_summary": "Direct GET returned 200; page title: 'OpenAI - Amazon Bedrock'."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock: OpenAI model cards. Documents the OpenAI models available through Bedrock.",
+          "evidence_summary": "Direct GET returned 200; page title: 'OpenAI - Amazon Bedrock'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "1cfc85bc4ec7db8fc96d1e01fd05be9be16da621ae331a4fd23fb0b864770544",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-models.html",
+          "id": "source-3"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-api-compatibility.html",
+      "files": [
+        "tech-scan-models.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/models-api-compatibility.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-api-compatibility.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "AWS, Amazon Bedrock models API compatibility. Used to establish that Bedrock support for /decisions is not established.",
+          "evidence_summary": "Direct GET returned 200; page title: 'API compatibility - Amazon Bedrock'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "e63f48b6263dcd00f0dd4eeeb5201ed004084a1a36e13878fcc59b05c1763abf",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-api-compatibility.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-models.html",
+          "id": "source-7"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/claude-platform/latest/userguide/feature-support.html",
+      "files": [
+        "tech-scan-models.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/claude-platform/latest/userguide/feature-support.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/claude-platform/latest/userguide/feature-support.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "AWS, Claude Platform on AWS feature support. Identifies Claude Platform on AWS as a third-party offering outside standard AWS compliance programmes.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Feature support - Claude Platform on AWS'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "b444cce61b33f56121adcde5c97b7be41b650d236d8bf38681acfa48ec95e6fb",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/claude-platform/latest/userguide/feature-support.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-models.html",
+          "id": "source-8"
         }
       ]
     },
@@ -1391,6 +2521,76 @@
         {
           "file": "product-implementation.html",
           "id": "source-13"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrockagentcore.html",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrockagentcore.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrockagentcore.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Step Functions developer guide: Connect to Amazon Bedrock AgentCore. Outer workflow sequencing and the InvokeHarness task.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Invoke Amazon Bedrock AgentCore harness with Step Functions - AWS Step Functions'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "13bc7cebe640d0df5d7f1bf4749d51485c88b85d714ee107483bba4c4902aaaa",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrockagentcore.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-9"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AWS, Step Functions developer guide: Connect to resources. Service-integration behaviour behind the InvokeHarness limits.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Discover service integration patterns in Step Functions - AWS Step Functions'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "1a151d69e723adca46eae2bad0b0374c802a6bf8e5b419ba8626c329d1cf1337",
+          "format": "readable primary-source text",
+          "source_url": "https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-10"
         }
       ]
     },
@@ -1800,6 +3000,11 @@
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
+        "tech-scan-gateway.html",
+        "tech-scan-harness.html",
+        "tech-scan-models.html",
+        "tech-scan-sandbox.html",
+        "tech-scan.html",
         "training.html",
         "transformation.html"
       ],
@@ -1909,6 +3114,41 @@
           "scope": "Operational preconnect hint for Google Fonts, not a cited document.",
           "evidence_summary": "Local HTML uses this origin in rel=preconnect; the actual CSS resource returns font-face rules. An HTTP 404 at the bare origin is not failure of a preconnect hint.",
           "limitation": "No claim that the origin root serves an article. Font rendering, CSP/privacy policy and downstream font-file fetching were not browser-tested."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
+        },
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
+        },
+        {
+          "file": "tech-scan.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
         }
       ],
       "evidence_digests": [
@@ -1935,6 +3175,11 @@
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
+        "tech-scan-gateway.html",
+        "tech-scan-harness.html",
+        "tech-scan-models.html",
+        "tech-scan-sandbox.html",
+        "tech-scan.html",
         "training.html",
         "transformation.html"
       ],
@@ -2044,6 +3289,41 @@
           "scope": "Operational stylesheet requesting Inter, JetBrains Mono and Space Grotesk.",
           "evidence_summary": "The exact CSS URL returned font-face declarations with font-display swap and gstatic font URLs for the requested families.",
           "limitation": "Checks resource content and purpose, not visual rendering or availability of every font binary."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Operational stylesheet requests Inter, JetBrains Mono and Space Grotesk with display=swap.",
+          "evidence_summary": "The current stylesheet returns 200 and declares the requested font families with Google-hosted font URLs.",
+          "limitation": "CSS retrieval does not establish all binary font fetches, privacy approval or rendered font availability."
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "Operational stylesheet requests Inter, JetBrains Mono and Space Grotesk with display=swap.",
+          "evidence_summary": "The current stylesheet returns 200 and declares the requested font families with Google-hosted font URLs.",
+          "limitation": "CSS retrieval does not establish all binary font fetches, privacy approval or rendered font availability."
+        },
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "Operational stylesheet requests Inter, JetBrains Mono and Space Grotesk with display=swap.",
+          "evidence_summary": "The current stylesheet returns 200 and declares the requested font families with Google-hosted font URLs.",
+          "limitation": "CSS retrieval does not establish all binary font fetches, privacy approval or rendered font availability."
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "Operational stylesheet requests Inter, JetBrains Mono and Space Grotesk with display=swap.",
+          "evidence_summary": "The current stylesheet returns 200 and declares the requested font families with Google-hosted font URLs.",
+          "limitation": "CSS retrieval does not establish all binary font fetches, privacy approval or rendered font availability."
+        },
+        {
+          "file": "tech-scan.html",
+          "outcome": "supported",
+          "scope": "Operational stylesheet requests Inter, JetBrains Mono and Space Grotesk with display=swap.",
+          "evidence_summary": "The current stylesheet returns 200 and declares the requested font families with Google-hosted font URLs.",
+          "limitation": "CSS retrieval does not establish all binary font fetches, privacy approval or rendered font availability."
         }
       ],
       "evidence_digests": [
@@ -2070,6 +3350,11 @@
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
+        "tech-scan-gateway.html",
+        "tech-scan-harness.html",
+        "tech-scan-models.html",
+        "tech-scan-sandbox.html",
+        "tech-scan.html",
         "training.html",
         "transformation.html"
       ],
@@ -2179,6 +3464,41 @@
           "scope": "Operational preconnect hint for font assets, not an article.",
           "evidence_summary": "Local HTML preconnects to the font asset origin; retrieved CSS references fonts on this origin. Bare-origin 404 is not a broken navigation/source link.",
           "limitation": "Individual binary font files and rendered typography were not tested."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
+        },
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
+        },
+        {
+          "file": "tech-scan.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
         }
       ],
       "evidence_digests": [
@@ -2227,6 +3547,41 @@
       ]
     },
     {
+      "url": "https://github.com/All-Hands-AI/OpenHands",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://github.com/All-Hands-AI/OpenHands"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/OpenHands/OpenHands",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "All-Hands AI, OpenHands. Open-source coding-agent repository.",
+          "evidence_summary": "Direct GET returned 200; page title: 'GitHub - OpenHands/OpenHands: 🙌 OpenHands: AI-Driven Development · GitHub'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "fad438f707d26a718779eb9715d6746504f4cf6886f13921c3ebceb177a862f5",
+          "format": "readable primary-source text",
+          "source_url": "https://github.com/All-Hands-AI/OpenHands"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-15"
+        }
+      ]
+    },
+    {
       "url": "https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training",
       "files": [
         "training.html"
@@ -2259,6 +3614,41 @@
         {
           "file": "training.html",
           "id": "source-2"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/aws-samples/sample-eks-nitro-sandbox",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://github.com/aws-samples/sample-eks-nitro-sandbox"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/aws-samples/sample-eks-nitro-sandbox",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS Samples, sample-eks-nitro-sandbox. Sample repository for a Claude Code agent working inside a Nitro Sandbox.",
+          "evidence_summary": "Direct GET returned 200; page title: 'GitHub - aws-samples/sample-eks-nitro-sandbox: AWS Nitro Sandbox on EKS Blueprints · GitHub'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "e41b90c4d5e865143b03884874fd5f291135d3ecbaac1839ed44fa4fe98b9cf2",
+          "format": "readable primary-source text",
+          "source_url": "https://github.com/aws-samples/sample-eks-nitro-sandbox"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-3"
         }
       ]
     },
@@ -2367,6 +3757,52 @@
         {
           "file": "eds-team-context.html",
           "id": "source-clara"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eitri-edd/AI-PDLC/blob/f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79/site/dist/concept.html",
+      "files": [
+        "tech-scan-harness.html",
+        "tech-scan-models.html"
+      ],
+      "hrefs": [
+        "https://github.com/eitri-edd/AI-PDLC/blob/f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79/site/dist/concept.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/eitri-edd/AI-PDLC/blob/f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79/site/dist/concept.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "AI-SDLC Playbook, Concepts. The Concepts chapter at main revision f1ed9b1, including Choose an AI model and the System One discussion.",
+          "evidence_summary": "Direct GET returned 200; page title: 'AI-PDLC/site/dist/concept.html at f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79 · eitri-edd/AI-PDLC · GitHub'."
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "Eitri EDD, AI-SDLC Playbook: Concepts. Revision f1ed9b1; the guide's six-part harness grouping.",
+          "evidence_summary": "Direct GET returned 200; page title: 'AI-PDLC/site/dist/concept.html at f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79 · eitri-edd/AI-PDLC · GitHub'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "7c44bb51e9a003eef45113224bd195e8d6b0cc4a76d652ad21df2716d76c23c2",
+          "format": "readable primary-source text",
+          "source_url": "https://github.com/eitri-edd/AI-PDLC/blob/f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79/site/dist/concept.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-models.html",
+          "id": "source-2"
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-1"
         }
       ]
     },
@@ -2567,6 +4003,102 @@
       ]
     },
     {
+      "url": "https://github.com/eitri-edd/AI-PDLC/issues/54",
+      "files": [
+        "tech-scan-harness.html",
+        "tech-scan-sandbox.html",
+        "tech-scan.html"
+      ],
+      "hrefs": [
+        "https://github.com/eitri-edd/AI-PDLC/issues/54"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/eitri-edd/AI-PDLC/issues/54",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan.html",
+          "outcome": "supported",
+          "scope": "GitHub issue 54, Add an AWS-first Tech Scan under Concepts. The Tech Scan proposal: AWS-first capability shortlist, assessment criteria, typed-decision boundaries and evidence requirements.",
+          "evidence_summary": "Direct GET returned 200; page title: '[AI-SDLC Playbook] Add an AWS-first Tech Scan under Concepts — managed Claude/OpenAI and evidence-backed alternatives · Issue #54 · eitri-edd/AI-PDLC · GitHub'.",
+          "limitation": "Issue text is living content; this record captures it as retrieved on 12 November 2026."
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "GitHub issue 54, Tech Scan proposal and deep-research update. The research the spokes are written from, including the framework table and the LangChain survey figures.",
+          "evidence_summary": "Direct GET returned 200; page title: '[AI-SDLC Playbook] Add an AWS-first Tech Scan under Concepts — managed Claude/OpenAI and evidence-backed alternatives · Issue #54 · eitri-edd/AI-PDLC · GitHub'.",
+          "limitation": "Issue text is living content; this record captures it as retrieved on 12 November 2026."
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "GitHub issue 54, Tech Scan proposal and deep-research update. The research the spokes are written from, including the sandbox do-not-use entries and the red-team finding.",
+          "evidence_summary": "Direct GET returned 200; page title: '[AI-SDLC Playbook] Add an AWS-first Tech Scan under Concepts — managed Claude/OpenAI and evidence-backed alternatives · Issue #54 · eitri-edd/AI-PDLC · GitHub'.",
+          "limitation": "Issue text is living content; this record captures it as retrieved on 12 November 2026."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "86447b7c2d6463c40fd532fbd533771c0499b3d52039094d6a0163e374ed9958",
+          "format": "readable primary-source text",
+          "source_url": "https://github.com/eitri-edd/AI-PDLC/issues/54"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan.html",
+          "id": "source-1"
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-22"
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-13"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eitri-edd/AI-PDLC/issues/59",
+      "files": [
+        "tech-scan.html"
+      ],
+      "hrefs": [
+        "https://github.com/eitri-edd/AI-PDLC/issues/59"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/eitri-edd/AI-PDLC/issues/59",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan.html",
+          "outcome": "supported",
+          "scope": "GitHub issue 59, Tech Scan as a hub-and-spoke section under Concepts. The section concept: hub-and-spoke structure, languages and cloud as cross-cutting views, plain-text draft labelling, and phased build in three waves.",
+          "evidence_summary": "Direct GET returned 200; page title: '[AI-SDLC Playbook] Tech Scan as a hub-and-spoke section under Concepts — scalable structure, draft labelling, phased build · Issue #59 · eitri-edd/AI-PDLC · GitHub'.",
+          "limitation": "Issue text is living content; this record captures it as retrieved on 12 November 2026."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "f04130da5d58b67a492b306a66592e734605feea04fec9188111d1ebd3213081",
+          "format": "readable primary-source text",
+          "source_url": "https://github.com/eitri-edd/AI-PDLC/issues/59"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan.html",
+          "id": "source-2"
+        }
+      ]
+    },
+    {
       "url": "https://github.com/eitri-edd/AI-PDLC/pulls",
       "files": [
         "about.html"
@@ -2736,6 +4268,41 @@
       ]
     },
     {
+      "url": "https://github.com/langfuse/langfuse-terraform-aws",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://github.com/langfuse/langfuse-terraform-aws"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/langfuse/langfuse-terraform-aws",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "Langfuse, langfuse-terraform-aws. Official Terraform module; provisions EKS/Fargate.",
+          "evidence_summary": "Direct GET returned 200; page title: 'GitHub - langfuse/langfuse-terraform-aws: 🪢 Terraform module to deploy Langfuse on AWS · GitHub'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "3c7bf0f16e2902ff4cd72ba6d8e9487cadbccbf6c74335b20b5167211c18b1c4",
+          "format": "readable primary-source text",
+          "source_url": "https://github.com/langfuse/langfuse-terraform-aws"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-19"
+        }
+      ]
+    },
+    {
       "url": "https://github.com/mattpocock/skills",
       "files": [
         "eds-ai-workflow.html",
@@ -2852,6 +4419,41 @@
         {
           "file": "concept.html",
           "id": "learning-context"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/perplexityai/SPACE",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://github.com/perplexityai/SPACE"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/perplexityai/SPACE",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "Perplexity, SPACE repository. Open-sourced 15 October 2026.",
+          "evidence_summary": "Direct GET returned 200; page title: 'GitHub - perplexityai/SPACE: Sandboxed Platform for Agentic Code Execution: pluggable-runtime sandboxes for running agent and user code in isolation. · GitHub'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "9e3f13d4162c0751eeca5b7f06d1bef55d4b46348c92e2c25119787d7e4f39ba",
+          "format": "readable primary-source text",
+          "source_url": "https://github.com/perplexityai/SPACE"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-9"
         }
       ]
     },
@@ -3225,6 +4827,192 @@
         {
           "file": "product-implementation.html",
           "id": "source-7"
+        }
+      ]
+    },
+    {
+      "url": "https://kiro.dev/docs/enterprise/governance/model",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/enterprise/governance/model"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://kiro.dev/docs/enterprise/governance/model/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Kiro, Model governance. Documents model governance, including Auto routing outside the approved list.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Models - Governance - Enterprise - Docs - Kiro'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "fc39d0d62f7cdbacd2fc60ad95c455549080db67971718ba7e1e906d0356b85a",
+          "format": "readable primary-source text",
+          "source_url": "https://kiro.dev/docs/enterprise/governance/model"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-15"
+        }
+      ]
+    },
+    {
+      "url": "https://kiro.dev/docs/models/available-models",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/models/available-models"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://kiro.dev/docs/models/available-models/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Kiro, Available models. Documents the models Kiro can route to.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Available models - Models - Docs - Kiro'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "ea73c94083c463863cf24c6c402f458506708240b5677172fc847f19dfd985c5",
+          "format": "readable primary-source text",
+          "source_url": "https://kiro.dev/docs/models/available-models"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-14"
+        }
+      ]
+    },
+    {
+      "url": "https://langfuse.com/handbook/product-engineering/infrastructure/ecs",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://langfuse.com/handbook/product-engineering/infrastructure/ecs"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://langfuse.com/handbook/product-engineering/infrastructure/ecs",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "Langfuse, Handbook: Infrastructure on ECS. The vendor's report of using ECS Fargate for its own application.",
+          "evidence_summary": "Direct GET returned 200; page title: 'AWS ECS Fargate - Langfuse'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "46126fca2ccd2adabfc895b1b1eb3a10af3472cf67b35de81ffcb78c0009c902",
+          "format": "readable primary-source text",
+          "source_url": "https://langfuse.com/handbook/product-engineering/infrastructure/ecs"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-20"
+        }
+      ]
+    },
+    {
+      "url": "https://langfuse.com/self-hosting/deployment/aws",
+      "files": [
+        "tech-scan-gateway.html",
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://langfuse.com/self-hosting/deployment/aws"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://langfuse.com/self-hosting/deployment/aws",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "Langfuse, Self-hosting: Deploy on AWS. Official AWS deployment documentation.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Deploy Langfuse on AWS with Terraform - Langfuse'."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Langfuse, Self-hosting on AWS. Documents Langfuse deployment on AWS; Langfuse is observability, not a gateway.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Deploy Langfuse on AWS with Terraform - Langfuse'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "0fcb6be7b23f0bfa744afcb5e3cce0d9a73b6a4a40e4558d0947ddf98736fe10",
+          "format": "readable primary-source text",
+          "source_url": "https://langfuse.com/self-hosting/deployment/aws"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-18"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-13"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/amazon-bedrock",
+      "files": [
+        "tech-scan-models.html"
+      ],
+      "hrefs": [
+        "https://learn.chatgpt.com/docs/amazon-bedrock"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://learn.chatgpt.com/docs/amazon-bedrock",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "OpenAI, Codex on Amazon Bedrock. Documents Codex integration with Bedrock.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Use ChatGPT Work and Codex with Amazon Bedrock | ChatGPT Learn'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "c224a349a3915cfd0ea5150e5d15bba560b82309710d17ad2bc5c2c012c9dcf4",
+          "format": "readable primary-source text",
+          "source_url": "https://learn.chatgpt.com/docs/amazon-bedrock"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-models.html",
+          "id": "source-4"
         }
       ]
     },
@@ -4084,6 +5872,41 @@
       ]
     },
     {
+      "url": "https://prized.dev/docs/sandboxes-vs-aws-nitro-sandboxes-lambda-microvms",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://prized.dev/docs/sandboxes-vs-aws-nitro-sandboxes-lambda-microvms"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://prized.dev/docs/sandboxes-vs-aws-nitro-sandboxes-lambda-microvms",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "Prized, Sandboxes vs AWS Nitro Sandboxes and Lambda MicroVMs. ",
+          "evidence_summary": "Direct GET returned 200; page title: 'Prized vs AWS Nitro Sandboxes and Lambda MicroVMs - Prized docs'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "26faa9cf30b9d44d8572ee0f4ae064b70c152f6ab9ff3567874eb6570117e37f",
+          "format": "readable primary-source text",
+          "source_url": "https://prized.dev/docs/sandboxes-vs-aws-nitro-sandboxes-lambda-microvms"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-11"
+        }
+      ]
+    },
+    {
       "url": "https://productschool.com/blog/artificial-intelligence/how-improve-product-discovery-with-ai",
       "files": [
         "product-discovery.html"
@@ -4228,6 +6051,77 @@
       ]
     },
     {
+      "url": "https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/",
+      "files": [
+        "tech-scan-models.html"
+      ],
+      "hrefs": [
+        "https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "S5 Labs, Open decision models: Clef, d1, Jev. Decision-model survey updated 23 October 2026, covering Jev, Strands Decider 2B and Cloudflare Clef.",
+          "evidence_summary": "Direct GET returned 200. The survey documents choice, score and noul decision types for Jev, Clef and d1; it does not mention Box.",
+          "limitation": "The page's Box absence claims rest on the research pass and the Decider README check, not on this survey alone; the survey itself never mentions Box."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "2520bbec9d27cf3122c8f5a15d27cd057104ce71e12d815a21aa85d19fd438bb",
+          "format": "readable primary-source text",
+          "source_url": "https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-models.html",
+          "id": "source-9"
+        }
+      ]
+    },
+    {
+      "url": "https://schristoph.online/blog/aws-lambda-microvms/",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://schristoph.online/blog/aws-lambda-microvms/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://schristoph.online/blog/aws-lambda-microvms/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "Christoph Schmol, AWS Lambda MicroVMs field report. 17 August 2026.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Give Every Agent Its Own Computer: AWS Lambda MicroVMs | schristoph.online'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "eb9070dce81670a4a7b706a98f1bf22d79b329013497ad1d8dad0b1094750e28",
+          "format": "readable primary-source text",
+          "source_url": "https://schristoph.online/blog/aws-lambda-microvms/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-10"
+        }
+      ]
+    },
+    {
       "url": "https://semgrep.dev/",
       "files": [
         "eds-developer-harness.html",
@@ -4302,6 +6196,11 @@
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
+        "tech-scan-gateway.html",
+        "tech-scan-harness.html",
+        "tech-scan-models.html",
+        "tech-scan-sandbox.html",
+        "tech-scan.html",
         "training.html",
         "transformation.html"
       ],
@@ -4418,6 +6317,41 @@
           "scope": "Operational training entry point in site navigation.",
           "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
           "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+        },
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+        },
+        {
+          "file": "tech-scan.html",
+          "outcome": "supported",
+          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
         }
       ],
       "evidence_digests": [
@@ -4807,6 +6741,41 @@
       ]
     },
     {
+      "url": "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Stripe, Stripe agrees to acquire OpenRouter. Newsroom announcement, 19 August 2026: Stripe has agreed to acquire OpenRouter, subject to customary closing conditions.",
+          "evidence_summary": "Direct GET returned 200; newsroom announcement dated 19 August 2026 states Stripe has agreed to acquire OpenRouter."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "09dd01d1626dd5b94dc273c061a78aee0163e9f23969a22b2de01d02adf7e586",
+          "format": "readable primary-source text",
+          "source_url": "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-16"
+        }
+      ]
+    },
+    {
       "url": "https://stryker-mutator.io",
       "files": [
         "eds-developer-harness.html",
@@ -4927,6 +6896,41 @@
       ]
     },
     {
+      "url": "https://vdf.ai/blog/ai-gateway-comparison/",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://vdf.ai/blog/ai-gateway-comparison/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://vdf.ai/blog/ai-gateway-comparison/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "VDF, AI gateway comparison. Gateway comparison used for the conditional alternatives.",
+          "evidence_summary": "Direct GET returned 200; page title: 'AI Gateway Comparison 2026: 9 LLM Gateways Compared'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "1fa728d2b8afa3c4c19edb2665684437447cc78112c54051f9f0476081e1e246",
+          "format": "readable primary-source text",
+          "source_url": "https://vdf.ai/blog/ai-gateway-comparison/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-12"
+        }
+      ]
+    },
+    {
       "url": "https://vercel.com/academy/creating-a-software-factory",
       "files": [
         "concept.html"
@@ -5030,6 +7034,41 @@
       "source_entries": [
         {
           "file": "concept.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://waveo.io/insights/signal-noise-2026-11-09/",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://waveo.io/insights/signal-noise-2026-11-09/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://waveo.io/insights/signal-noise-2026-11-09/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "Waveo, Signal and Noise, 9 November 2026. Coverage of the Nitro Sandboxes launch.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Signal / Noise Nov 9: Nitro Sandboxes, Chainalysis | Waveo'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "bfee3ce092ec5fd771210ef47cf7505e1f79ace44f4ed0b24d1c7a951709cf45",
+          "format": "readable primary-source text",
+          "source_url": "https://waveo.io/insights/signal-noise-2026-11-09/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
           "id": "source-5"
         }
       ]
@@ -5252,6 +7291,41 @@
       ]
     },
     {
+      "url": "https://www.arcbeta.com/Blog/llm-gateway-pricing-litellm-openrouter-portkey-2026",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://www.arcbeta.com/Blog/llm-gateway-pricing-litellm-openrouter-portkey-2026"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.arcbeta.com/Blog/llm-gateway-pricing-litellm-openrouter-portkey-2026",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "ArcBeta, LLM gateway pricing: LiteLLM, OpenRouter, Portkey. 2026 gateway comparison covering LiteLLM, OpenRouter and Portkey.",
+          "evidence_summary": "Direct GET returned 200. The page states malicious PyPI versions 1.82.7/1.82.8 in March and 1.107.0 in October 2026, and Palo Alto Networks closing its Portkey acquisition on 29 May 2026."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "cc86d81f047b691dadf42ccae11289998bae1a4ad25248d31b96b19f9a381ecf",
+          "format": "readable primary-source text",
+          "source_url": "https://www.arcbeta.com/Blog/llm-gateway-pricing-litellm-openrouter-portkey-2026"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-11"
+        }
+      ]
+    },
+    {
       "url": "https://www.archunit.org",
       "files": [
         "eds-developer-harness.html",
@@ -5296,6 +7370,35 @@
         {
           "file": "eds-skills-catalogue.html",
           "id": "source-archunit"
+        }
+      ]
+    },
+    {
+      "url": "https://www.beyondtrust.com/blog/entry/amazon-bedrock-agentcore-python-sdk-rce-cves",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://www.beyondtrust.com/blog/entry/amazon-bedrock-agentcore-python-sdk-rce-cves"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "partial_reader_recovery",
+      "http_status": 403,
+      "final_url": "https://www.beyondtrust.com/blog/entry/amazon-bedrock-agentcore-python-sdk-rce-cves",
+      "method": "direct HTTP GET; partial live reader recovery",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "limited",
+          "scope": "BeyondTrust, Amazon Bedrock AgentCore Python SDK RCE CVEs. Write-up of the AgentCore SDK advisories.",
+          "evidence_summary": "Direct GET returned 403; live reader recovery returned the article's key findings and both CVE sections (CVE-2026-12530 newline injection, CVE-2026-16796 pip-extras bypass, both fixed in bedrock-agentcore v1.18.1).",
+          "limitation": "Direct fetch is blocked by the site's bot protection (403); the recovery is the reader's text, not a direct GET of the full page."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-7"
         }
       ]
     },
@@ -5476,6 +7579,41 @@
         {
           "file": "concept.html",
           "id": "source-27"
+        }
+      ]
+    },
+    {
+      "url": "https://www.heyuan110.com/posts/ai/2026-04-18-harness-six-layers-reverse-build/",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://www.heyuan110.com/posts/ai/2026-04-18-harness-six-layers-reverse-build/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.heyuan110.com/posts/ai/2026-04-18-harness-six-layers-reverse-build/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "heyuan110.com, Harness six layers (reverse build). One of the 2026 harness framings.",
+          "evidence_summary": "Direct GET returned 200; page title: 'Harness Engineering: Build the 6 Layers Backwards (6 to 1)'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "749e14ecf8b23b3a248a1119525241b3166b81b0acbd19b9fbb173b396a83dd8",
+          "format": "readable primary-source text",
+          "source_url": "https://www.heyuan110.com/posts/ai/2026-04-18-harness-six-layers-reverse-build/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-3"
         }
       ]
     },
@@ -6028,6 +8166,41 @@
         {
           "file": "concept.html",
           "id": "source-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.qovery.com/blog/aws-nitro-sandboxes-eks-vs-daytona-e2b",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://www.qovery.com/blog/aws-nitro-sandboxes-eks-vs-daytona-e2b"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.qovery.com/blog/aws-nitro-sandboxes-eks-vs-daytona-e2b",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "Qovery, AWS Nitro Sandboxes EKS vs Daytona and E2B. 10 November 2026.",
+          "evidence_summary": "Direct GET returned 200; page title: 'AWS Nitro Sandboxes on EKS vs. Daytona, E2B and Modal: Which Agent Sandbox to Pick - Qovery Blog'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "9380c1a907a0bd360fa53c6509fb638874cc9a6dddf71d30cd63586c009352cc",
+          "format": "readable primary-source text",
+          "source_url": "https://www.qovery.com/blog/aws-nitro-sandboxes-eks-vs-daytona-e2b"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-4"
         }
       ]
     },
