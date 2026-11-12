@@ -1,5 +1,7 @@
 # Tech Scan link-verification pass · 12 November 2026
 
+This is the historical initial pass. The later [Tech Scan refinement review](tech-scan-refinement-review-2026-11-12.md) records corrections to gateway capabilities, feature maturity, execution choices, security wording and the diagram adaptation. The original outcomes below are retained as history, not current blanket verification.
+
 ## Scope
 
 Verifies the five new Tech Scan pages (hub plus Wave 1 spokes Models, Harness,

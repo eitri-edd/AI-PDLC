@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="What untrusted agent-written code runs in: AWS Nitro Sandboxes as the default, the four AWS sandbox primitives, and what not to build on.">
+  <meta name="description" content="Choose an AWS execution boundary for agent-written code, then check network access, credentials, lifecycle and release approval.">
   <title>Tech Scan: Sandbox · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,59 +60,69 @@
         <header class="article-header">
           <p class="eyebrow">Development guide</p>
           <h1>Tech Scan: Sandbox</h1>
-          <p class="lead">What untrusted code written by an agent runs in — and what stops it reaching the host, the network or your credentials.</p>
-          <p>This page is a draft. It covers the AWS-first sandbox default, the self-hosted alternatives that layer around it, and what not to build on. Entries are research references from web sources reviewed 11–12 November 2026, not locally deployed or benchmarked options.</p>
-          <p>Read the harness section of <a href="concept.html#harness-engineering">Concepts</a> first: the sandbox is the runtime under the harness, not a replacement for it. The gates a sandboxed change must still pass before release are in <a href="eds-path-to-production.html">Path to production</a>.</p>
+          <p class="lead">Where should agent-written code run, and which resources could it reach? Choose an execution route for the task, then check its network, credential and approval boundaries.</p>
+          <p id="tech-scan-note">Draft research reference from web sources reviewed 11–12 November 2026; not locally deployed or benchmarked. For the underlying explanation, read <a href="concept.html#harness-engineering">Concepts: harness engineering</a> and <a href="eds-path-to-production.html">Path to production</a>.</p>
         </header>
-        <aside class="callout callout--disclaimer" aria-labelledby="tech-scan-note">
-          <p class="example-label" id="tech-scan-note">A note on Tech Scan</p>
-          <p>Tech Scan is an early exploration of emerging agentic technologies that support the key areas of the AI-SDLC. It is still in its early stages: entries are research references, not settled recommendations, and they may not reflect the latest products or releases. Use your own judgement and do your own research before adopting anything listed here.</p>
-        </aside>
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
           <p id="page-map-note" class="page-map-note">Reading route: what a sandbox is and what it must enforce → the AWS default and its limits → alternatives, what to avoid, and what is still unproven.</p>
           <ol class="page-map-nodes" role="list">
-            <li class="page-map-node"><strong>What it is</strong><div class="page-map-links"><a href="#purpose">Purpose</a></div></li>
-            <li class="page-map-node"><strong>The recommended route</strong><div class="page-map-links"><a href="#aws-first-default">AWS-first default</a><a href="#conditional-alternatives">Conditional alternatives</a></div></li>
-            <li class="page-map-node"><strong>Build or avoid</strong><div class="page-map-links"><a href="#research-only">Research-only notes</a><a href="#do-not-use">Do not use</a></div></li>
-            <li class="page-map-node"><strong>Limits</strong><div class="page-map-links"><a href="#gaps">Gaps and open questions</a><a href="#sources">Sources</a></div></li>
+            <li class="page-map-node"><strong>What it is</strong><div class="page-map-links"><a href="#purpose">Choose the execution boundary</a></div></li>
+            <li class="page-map-node"><strong>The recommended route</strong><div class="page-map-links"><a href="#aws-first-default">Match the AWS starting point to the task</a><a href="#conditional-alternatives">When the starting point lacks a required capability</a></div></li>
+            <li class="page-map-node"><strong>Build or avoid</strong><div class="page-map-links"><a href="#research-only">If building the execution layer directly</a><a href="#do-not-use">Exclude the wrong execution boundary</a></div></li>
+            <li class="page-map-node"><strong>Limits</strong><div class="page-map-links"><a href="#gaps">Evidence to collect before relying on the boundary</a><a href="#sources">Sources</a></div></li>
           </ol>
         </figure>
         <!-- PAGE MAP END -->
         <details class="mobile-contents">
           <summary>On this page</summary>
-          <nav aria-label="On this page"><a href="#purpose">Purpose</a>
-<a href="#aws-first-default">AWS-first default</a>
-<a href="#conditional-alternatives">Conditional alternatives</a>
-<a href="#research-only">Research-only notes</a>
-<a href="#do-not-use">Do not use</a>
-<a href="#gaps">Gaps and open questions</a>
+          <nav aria-label="On this page"><a href="#purpose">Choose the execution boundary</a>
+<a href="#aws-first-default">Match the AWS starting point to the task</a>
+<a href="#conditional-alternatives">When the starting point lacks a required capability</a>
+<a href="#research-only">If building the execution layer directly</a>
+<a href="#do-not-use">Exclude the wrong execution boundary</a>
+<a href="#gaps">Evidence to collect before relying on the boundary</a>
 <a href="#sources">Sources</a></nav>
         </details>
         <section id="purpose">
-          <h2>Purpose</h2>
-          <p>A sandbox is OS-enforced isolation for code an agent writes and runs.
-            Use this test: if the agent's code escapes its container, the escape must land in a throwaway guest kernel, never the host kernel.
-            A container on a shared kernel cannot pass that test — containers are not a sandbox.</p>
-          <p>Isolation alone is not enough.
-            The sandbox must hold six trust rules:</p>
-          <ul>
-            <li>Separate trust domains</li>
-            <li>Minimal execution roles</li>
-            <li>Explicit outbound enforcement</li>
-            <li>Approved dependencies</li>
-            <li>Protected credentials</li>
-            <li>Authenticated session ownership</li>
-          </ul>
-          <p>A sandbox that lets agent code reach the package registry without an allowlist, or read the credentials of the session that launched it, has failed even if no container ever escapes.</p>
-          <p>Start from the managed harness with Code Interpreter for coding work. Add the Browser tool only for a specific task; do not add it merely because it exists.
-            Gateway policy governs traffic through the Gateway, not arbitrary shell networking. Attaching a VPC alone is not evidence of package-only egress — network access limited to approved package registries — or secret denial. The egress and credential rules on this page are settings you add yourself, not defaults you inherit.</p>
-          <p>This page does not choose the agent, the model or the delivery pipeline. It answers one question only: what the agent's code runs in, and what stops that code reaching further than it should.</p>
+          <h2>Choose the execution boundary</h2>
+          <p>Where will agent-written code run, and which resources could it reach? Choose an execution boundary for that task before adding tools. For this guide's untrusted-code use case, plain shared-kernel containers alone do not meet the stronger boundary sought here. Isolation reduces risk; it is not a guarantee against escape or misuse of an allowed credential. A separate guest kernel is one approach; a userspace application kernel is another, with different compatibility and security properties.<a href="#source-19" aria-label="Source 19: gVisor, Architecture guide: Introduction">[19]</a></p>
+          <p>Gateway policy governs calls through the Gateway, not arbitrary shell networking. VPC attachment alone does not establish package-only egress or secret denial. Check allowed destinations, dependency sources, role permissions, credentials and session ownership separately from the isolation mechanism.<a href="#source-22" aria-label="Source 22: AWS, Harness security">[22]</a> Runtime Instances is not per-session microVM isolation: co-resident agents in an Instances session share a filesystem and can access each other's execution-role credentials.<a href="#source-12" aria-label="Source 12: AWS, Bedrock AgentCore Runtime Instances security">[12]</a></p>
+          <p>For the surrounding loop and tools, use <a href="tech-scan-harness.html">Tech Scan: Harness</a>. This page compares execution choices and controls; the model and release pipeline remain separate decisions.</p>
         </section>
         <section id="aws-first-default">
-          <h2>AWS-first default</h2>
-          <p>The default is <strong>AWS Nitro Sandboxes</strong>, announced 9 November 2026: a hardware-isolated lightweight virtual machine per EKS pod, ECS task or EC2 workload, managed by the Nitro Hypervisor, at no extra charge beyond the instance, in all commercial regions, explicitly positioned for LLM-generated code and AI agents.<a href="#source-1" aria-label="Source 1: AWS, AWS Nitro Sandboxes">[1]</a><a href="#source-2" aria-label="Source 2: AWS Containers Blog, AWS Nitro Sandboxes">[2]</a> On EKS and ECS the sandbox is a Firecracker microVM running on Nitro instead of KVM, so each pod gets its own operating system and kernel.</p>
+          <h2>Match the AWS starting point to the task</h2>
+          <p>These are alternatives for different tasks and deployment responsibilities, not a prescription to deploy them together. Start with the managed harness for repository coding; choose additional execution services only when the task needs them.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Task-dependent execution choices">
+            <table>
+              <caption>A minimal starting point for each execution task</caption>
+              <thead><tr><th scope="col">Task</th><th scope="col">Starting point</th><th scope="col">Boundary to qualify</th></tr></thead>
+              <tbody>
+                <tr><td>Repository coding</td><td>Managed harness with built-in shell and filesystem tools</td><td>Prepare the repository, dependencies and tests in the harness environment; do not add Code Interpreter merely to obtain a shell.<a href="#source-20" aria-label="Source 20: AWS, Harness tools">[20]</a><a href="#source-21" aria-label="Source 21: AWS, Harness environment and filesystem">[21]</a></td></tr>
+                <tr><td>Data analysis or computation</td><td>Optional AgentCore Code Interpreter</td><td>Python, JavaScript or TypeScript computation; review its execution role and networking separately. Browser is another optional tool for a specific browsing task.<a href="#source-20" aria-label="Source 20: AWS, Harness tools">[20]</a></td></tr>
+                <tr><td>Own EKS or ECS container infrastructure</td><td>Investigate Nitro Sandboxes</td><td>A VM boundary for supported workloads; the team still operates its cluster, images and network controls. The launch announcement dates from 9 November 2026.<a href="#source-1" aria-label="Source 1: AWS, AWS Nitro Sandboxes">[1]</a><a href="#source-2" aria-label="Source 2: AWS Containers Blog, AWS Nitro Sandboxes">[2]</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Controls the isolation mechanism does not replace</h3>
+          <p>Keep these checks visible whichever execution route you choose. Apply Kubernetes-specific controls only to a Kubernetes deployment; they are not a universal AgentCore configuration.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Execution controls and their limits">
+            <table>
+              <caption>Separate access controls from the execution boundary</caption>
+              <thead><tr><th scope="col">Control</th><th scope="col">Action</th><th scope="col">Limit to retain</th></tr></thead>
+              <tbody>
+                <tr><td>Egress</td><td>Configure and test allowed destinations for the selected execution route</td><td>Gateway policy is not a shell-network control; VPC attachment is not an allowlist. Network mode and routing need explicit verification.<a href="#source-8" aria-label="Source 8: AWS, Bedrock AgentCore VPC documentation">[8]</a><a href="#source-22" aria-label="Source 22: AWS, Harness security">[22]</a></td></tr>
+                <tr><td>Identity</td><td>Use a minimal execution role and short-lived, task-scoped credentials</td><td>Code allowed to use a credential may misuse it; isolation does not make an overpowered role safe.<a href="#source-22" aria-label="Source 22: AWS, Harness security">[22]</a></td></tr>
+                <tr><td>Secrets</td><td>CSI mounts without sync avoid creating a Kubernetes Secret for that mount. ESO creates Kubernetes Secret objects; CSI also offers optional sync to those objects.<a href="#source-16" aria-label="Source 16: External Secrets Operator, Overview">[16]</a><a href="#source-17" aria-label="Source 17: Secrets Store CSI Driver, Sync as Kubernetes Secret">[17]</a></td><td>Kubernetes Secrets are stored in etcd. If using ESO or CSI sync, apply encryption at rest, restrict RBAC and control which workloads can mount the Secret. Mounted credentials remain accessible to authorised workload code; avoiding etcd is not zero-risk credential protection.<a href="#source-18" aria-label="Source 18: Kubernetes, Secrets">[18]</a></td></tr>
+                <tr><td>Admission and approval</td><td>For Kubernetes, map applicable machine-verifiable <a href="eds-developer-harness.html#source-im8">IM8</a> and <a href="eds-developer-harness.html#source-arc">ARC</a> controls to admission constraints</td><td>Retain reviewed evidence and manual approval for the remainder. An admitted workload and a sandboxed code output still need the separate delivery decision.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <details>
+            <summary>Nitro deployment mechanics and the AWS execution catalogue</summary>
+            <p>Open this after choosing to operate the infrastructure. The launch material below describes specific deployment modes, not settings inherited by every managed harness. Recheck supported versions, regions and operating limits before deployment.</p>
+          <p>For teams operating their own supported container infrastructure, investigate <strong>AWS Nitro Sandboxes</strong>, announced 9 November 2026: a hardware-isolated lightweight virtual machine per EKS pod, ECS task or EC2 workload, managed by the Nitro Hypervisor, at no extra charge beyond the instance, in all commercial regions, explicitly positioned for LLM-generated code and AI agents.<a href="#source-1" aria-label="Source 1: AWS, AWS Nitro Sandboxes">[1]</a><a href="#source-2" aria-label="Source 2: AWS Containers Blog, AWS Nitro Sandboxes">[2]</a> On EKS and ECS the sandbox is a Firecracker microVM running on Nitro instead of KVM, so each pod gets its own operating system and kernel.</p>
           <p>Opting in takes one field on EKS: <code>runtimeClassName: isolated-sandbox</code> or <code>confidential-sandbox</code>.
             The runtime classes ship with every EKS Auto Mode cluster; standard EKS needs a sandbox-enabled node AMI (Amazon Machine Image).
             On ECS the equivalent is <code>trustedExecutionConfiguration</code> on Managed Instances only.
@@ -131,7 +141,7 @@
             A per-pod Cedar policy decides which images may load, which containers start, and whether exec, log streaming and mounts are allowed.
             Encrypted OCI layers are decrypted inside the sandbox with KMS, and AWS Signer-signed images are verifiable before they run.
             Pod Identity, VPC networking, EBS, EFS and S3 storage, and CloudWatch all keep working, and <code>kubectl exec</code>, <code>logs</code> and <code>port-forward</code> work identically in isolated mode.</p>
-          <p>AWS's own example runs a Claude Code agent via Bedrock inside one sandbox. The agent:</p>
+          <p>Vendor example, not a local trial: AWS's sample runs a Claude Code agent via Bedrock inside one sandbox. The agent:</p>
           <ol>
             <li>Reads a GitHub issue.</li>
             <li>Reproduces it with a failing test.</li>
@@ -150,7 +160,7 @@
             <li>No snapshot, pause and resume with memory, live migration, or in-place resize</li>
             <li>No published cold-start numbers, performance figures or service-level agreement (SLA)</li>
           </ul>
-          <p>Warm pools hide cold start — the Kubernetes Special Interest Group (SIG) <code>agent-sandbox</code> project claims around 2 seconds, validated by AWS.</p>
+          <p>The initial research reports an approximately two-second warm-pool start for the Kubernetes Special Interest Group (SIG) <code>agent-sandbox</code> project. Treat that as a reported example, not an independent or local performance measurement.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="The four AWS sandbox primitives">
             <table>
               <caption>The four AWS sandbox primitives — do not confuse them</caption>
@@ -171,132 +181,101 @@
             Lambda MicroVMs were announced 22 June 2026 on the ARM64 architecture, in five regions without Singapore.<a href="#source-10" aria-label="Source 10: Christoph Schmol, AWS Lambda MicroVMs field report">[10]</a><a href="#source-11" aria-label="Source 11: Prized, Sandboxes vs AWS Nitro Sandboxes and Lambda MicroVMs">[11]</a><a href="#source-14" aria-label="Source 14: AWS News Blog, Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs">[14]</a> AWS added x86_64 support on 5 November 2026 and has since expanded regions, so check the current architectures and regions before recommending them.<a href="#source-15" aria-label="Source 15: AWS Builder Center, Lambda Now Comes in Three Shapes">[15]</a></p>
           <p>Runtime Instances is not per-session microVM compute: co-resident agents in an Instances session share a filesystem and can access each other's execution-role credentials.
             Do not treat it as an isolation boundary for untrusted code.<a href="#source-12" aria-label="Source 12: AWS, Bedrock AgentCore Runtime Instances security">[12]</a></p>
+          </details>
+          <details>
+            <summary>Code Interpreter package-installation advisories</summary>
           <h3>AgentCore advisories</h3>
-          <p>All five AgentCore CVEs from March to August 2026 were in the SDK and CLI toolchain around the sandbox, not a microVM escape — and the <code>install_packages()</code> one recurred after the first fix.
+          <p>The cited package-installation advisories concern the SDK around Code Interpreter, not a demonstrated microVM escape.
             CVE-2026-12530 (June 2026, fixed in 1.6.1) and CVE-2026-16796 with AWS Security Bulletin 2026-065 (July 2026, fixed in 1.18.1) work the same way: crafted package names lead to remote code execution <em>inside</em> the Code Interpreter sandbox, and from there to reading the attached execution role's credentials from the in-sandbox metadata service. This is package-argument injection inside the sandbox, not a host escape.<a href="#source-6" aria-label="Source 6: AWS, Security Bulletin 2026-065">[6]</a><a href="#source-7" aria-label="Source 7: BeyondTrust, Amazon Bedrock AgentCore Python SDK RCE CVEs">[7]</a></p>
           <p>Controls:</p>
           <ul>
-            <li>Pin <code>bedrock-agentcore</code> to 1.18.1 or later.</li>
+            <li>The cited July 2026 bulletin names a fix in <code>bedrock-agentcore</code> 1.18.1; check current security bulletins and pin a supported, patched release.</li>
             <li>Never pass raw model output as package names.</li>
-            <li>Attach least-privilege execution roles — or none, since the default <code>aws.codeinterpreter.v1</code> interpreter has no execution role and therefore no credentials to steal.</li>
+            <li>Attach least-privilege execution roles and omit them when unnecessary. Absence of an execution role does not prove that workload inputs contain no other credentials.</li>
             <li>Watch for metadata-service access (<code>169.254.169.254</code>) from inside sandboxes.</li>
           </ul>
-          <h3>Augmentation stack</h3>
-          <p>Layer this around Nitro Sandboxes.
-            The default, AWS-managed and least to operate: Nitro Sandboxes on EKS Auto Mode (<code>isolated-sandbox</code>; <code>confidential-sandbox</code> with KMS attestation where secrets are involved), plus AgentCore Code Interpreter in <code>SANDBOX</code> network mode — no internet, only internal AWS resources — for calculation, and Browser for browsing.</p>
-          <p>The controls below layer around Nitro Sandboxes. Each row names the AWS-managed control and the limit that decides whether it is enough.<a href="#source-8" aria-label="Source 8: AWS, Bedrock AgentCore VPC documentation">[8]</a></p>
-          <div class="table-scroll" tabindex="0" role="region" aria-label="Augmentation stack around Nitro Sandboxes">
-            <table>
-              <caption>Augmentation stack — what to layer around Nitro Sandboxes</caption>
-              <thead>
-                <tr><th scope="col">Layer</th><th scope="col">Control</th><th scope="col">Limit to respect</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Egress</td><td>VPC CNI <code>ApplicationNetworkPolicy</code>, a hostname-aware allowlist covering Bedrock, the Git host and registries, backed by Network Firewall and Route 53 DNS Firewall at the VPC edge</td><td>Standard NetworkPolicy cannot match hostnames; DNS Firewall stops the DNS channel, Network Firewall stops bare-IP egress; neither alone is enough</td></tr>
-                <tr><td>Identity</td><td>EKS Pod Identity per session, scoped to <code>bedrock:InvokeModel*</code> only, with IMDSv2 and a hop limit of 1</td><td>No long-lived keys; a compromised pod cannot steal the node role</td></tr>
-                <tr><td>Secrets</td><td>Secrets Manager and KMS, mounted with the Secrets Store CSI driver or the External Secrets Operator</td><td>Never stored in etcd (the cluster's configuration store)</td></tr>
-                <tr><td>Admission</td><td>Kyverno (YAML) or OPA Gatekeeper (Rego); Pod Security Standards Restricted; user namespaces (<code>hostUsers: false</code>, stable in Kubernetes 1.36)</td><td>Map the machine-verifiable <a href="eds-developer-harness.html#source-im8">Instruction Manual 8 (IM8)</a> and <a href="eds-developer-harness.html#source-arc">Agentic Risk &amp; Capability Framework (ARC)</a> controls to constraints; retain reviewed evidence and manual approval for the remainder</td></tr>
-                <tr><td>Detection</td><td>GuardDuty EKS Protection with Runtime Monitoring, plus Falco for eBPF detection or Tetragon for eBPF prevention</td><td>Falco is detection; Tetragon is prevention</td></tr>
-                <tr><td>Orchestration</td><td>Temporal, or Step Functions with the AgentCore Harness</td><td>Orchestrates the outer workflow, not the sandbox itself</td></tr>
-              </tbody>
-            </table>
-          </div>
+          </details>
         </section>
         <section id="conditional-alternatives">
-          <h2>Conditional alternatives</h2>
-          <p>Use a self-hosted sandbox platform only when you need a capability Nitro Sandboxes does not yet offer:</p>
-          <ul>
-            <li>A sandbox API</li>
-            <li>Templates</li>
-            <li>Pause and resume</li>
-          </ul>
-          <p>The platform gives you the API; the microVM still gives you the boundary, so run it <em>inside</em> Nitro Sandbox pods or Kata and gVisor RuntimeClasses, not instead of them.</p>
-          <div class="table-scroll" tabindex="0" role="region" aria-label="Self-hosted sandbox platforms">
-            <table>
-              <caption>Self-hosted sandbox platforms, run inside a microVM boundary</caption>
-              <thead>
-                <tr><th scope="col">Product</th><th scope="col">What it does</th><th scope="col">Status</th><th scope="col">When to use it</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>E2B</td><td>Self-hosted sandbox API via Terraform</td><td>GA; Apache-2.0; AWS support beta</td><td>When you need a sandbox API and templates</td></tr>
-                <tr><td>Perplexity SPACE</td><td>Self-hosted sandbox platform with an E2B-compatible API, per-sandbox egress gateway, and secrets kept out of guest kernels and injected at the network layer</td><td>GA; Apache-2.0; v0.8.0, open-sourced 15 October 2026</td><td>When you need a sandbox API with a reference AWS EKS deployment</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p>Perplexity SPACE is young — version 0.8.0, with no production track record outside Perplexity — so treat it as a conditional alternative, not a default.<a href="#source-9" aria-label="Source 9: Perplexity, SPACE repository">[9]</a><a href="#source-4" aria-label="Source 4: Qovery, AWS Nitro Sandboxes vs Daytona and E2B">[4]</a> Standardise the lifecycle with the Kubernetes SIG <code>agent-sandbox</code> custom resources — <code>Sandbox</code>, <code>SandboxTemplate</code>, <code>SandboxClaim</code> and <code>SandboxWarmPool</code>, version 1.0 from August 2026 — whichever platform you choose.</p>
+          <h2>When the starting point lacks a required capability</h2>
+          <p>Investigate a self-hosted sandbox platform when the chosen AWS route cannot provide a required sandbox API, reusable environment template or pause-and-resume behaviour. Name that requirement first; these candidates are not additional layers to install by default.</p>
+          <p>Evaluate each platform against its documented deployment contract: required host capabilities, isolation implementation, supported AWS deployment and network and secret controls. Do not assume that E2B or another sandbox platform can be nested into Nitro, Kata or gVisor merely because those names describe isolation options. gVisor is a userspace application kernel, not a microVM; its security and syscall-compatibility trade-offs need their own assessment.<a href="#source-19" aria-label="Source 19: gVisor, Architecture guide: Introduction">[19]</a></p>
+          <details>
+            <summary>Sandbox-platform candidates from the initial research</summary>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Sandbox-platform investigation list">
+              <table>
+                <caption>Verify the deployment contract before choosing a platform</caption>
+                <thead><tr><th scope="col">Candidate</th><th scope="col">Research lead</th><th scope="col">What remains to establish</th></tr></thead>
+                <tbody>
+                  <tr><td>E2B</td><td>A sandbox API and reusable templates, named in the earlier comparison.<a href="#source-4" aria-label="Source 4: Qovery, AWS Nitro Sandboxes vs Daytona and E2B">[4]</a></td><td>Current primary self-hosting instructions, AWS support status, licence and supported isolation deployment; a comparison article does not prove a nesting contract.</td></tr>
+                  <tr><td>Perplexity SPACE</td><td>The repository is the starting point for an AWS deployment and API review; the initial research records its open-source publication on 15 October 2026.<a href="#source-9" aria-label="Source 9: Perplexity, SPACE repository">[9]</a></td><td>Current release and licence, lifecycle operations, egress enforcement and credential handling in the selected deployment; publication is not independent operating evidence.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>The initial research also named Kubernetes SIG <code>agent-sandbox</code> resources for lifecycle management. Compare their current API and runtime compatibility with the selected platform before standardising on them; this page does not prescribe that controller for every deployment.<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a></p>
+          </details>
         </section>
         <section id="research-only">
-          <h2>Research-only notes</h2>
-          <p>These are the primitives underneath a sandbox, for teams building their own sandbox. They are isolation building blocks, not a sandbox product: none of them on its own gives you:</p>
-          <ul>
-            <li>A sandbox API</li>
-            <li>Templates</li>
-            <li>Lifecycle management</li>
-            <li>An egress policy</li>
-          </ul>
-          <div class="table-scroll" tabindex="0" role="region" aria-label="Sandbox primitives for direct builds">
-            <table>
-              <caption>Isolation primitives, if you build direct</caption>
-              <thead>
-                <tr><th scope="col">Product</th><th scope="col">What it does</th><th scope="col">Status</th><th scope="col">When to use it</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Firecracker with firecracker-containerd</td><td>MicroVM runtime and containerd integration</td><td>GA; Apache-2.0</td><td>Building a microVM sandbox layer yourself</td></tr>
-                <tr><td>Kata Containers</td><td>Container runtime with a VM boundary per pod</td><td>GA; Apache-2.0</td><td>When a RuntimeClass boundary is needed without Nitro Sandboxes</td></tr>
-                <tr><td>gVisor (runsc)</td><td>Userspace kernel intercepting syscalls</td><td>GA; Apache-2.0; CNCF accepted September 2026</td><td>Moderate-trust work; syscall-compat gaps remain</td></tr>
-                <tr><td>Bottlerocket OS</td><td>AWS-managed host OS: SELinux enforcing, read-only root, no SSH</td><td>GA; AWS-managed; mandatory in EKS Auto Mode</td><td>As the host OS under sandbox RuntimeClasses</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p>EC2 nested virtualization is GA since February 2026, so Kata no longer needs <code>*.metal</code> bare-metal instances.
-            That removes a cost barrier to the Kata route, but it does not make a direct build the recommendation — the default remains a managed sandbox with a self-hosted platform inside it.</p>
+          <h2>If building the execution layer directly</h2>
+          <p>First establish why a managed execution route cannot meet the task. A runtime boundary does not by itself provide the sandbox API, templates, lifecycle or destination policy.</p>
+          <details>
+            <summary>Isolation primitives and host software to investigate</summary>
+            <p>The initial research named Firecracker with firecracker-containerd, Kata Containers, gVisor (runsc) and Bottlerocket OS.<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a> Separate a VM runtime from an application kernel and a hardened host OS; they solve different parts of the problem. gVisor documents its application-kernel boundary and residual limits directly.<a href="#source-19" aria-label="Source 19: gVisor, Architecture guide: Introduction">[19]</a></p>
+            <p>Check each project's current licence, supported host and syscall or device requirements. Do not infer Kata compatibility from general EC2 nested-virtualisation availability, or classify a host OS as a per-task execution boundary.</p>
+          </details>
         </section>
         <section id="do-not-use">
-          <h2>Do not use</h2>
-          <div class="table-scroll" tabindex="0" role="region" aria-label="Sandbox options not to use">
-            <table>
-              <caption>Do not build on these for untrusted agent code</caption>
-              <thead>
-                <tr><th scope="col">Product</th><th scope="col">Why not</th><th scope="col">Status</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Plain Docker or runc alone</td><td>Shared kernel — containers are not a sandbox</td><td>GA; not an isolation boundary</td></tr>
-                <tr><td>Daytona OSS</td><td>Public repository archived and frozen at v0.190.0, relicensed AGPL-3.0; core development moved to a private codebase in June 2026; the community fork Nightona is still early-stage<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a></td><td>Archived</td></tr>
-                <tr><td>Sysbox</td><td>Last release May 2025; does not install on containerd 2.x or Kubernetes 1.34 and later — treat as legacy; Kata is the replacement</td><td>Retired</td></tr>
-                <tr><td>Runtime Instances for untrusted code</td><td>Co-resident agents share a filesystem and can access each other's execution-role credentials</td><td>GA; not a per-session boundary</td></tr>
-                <tr><td>Modal, Deno, Fly, Vercel or Cloudflare sandboxes</td><td>Non-AWS sandboxes, out of scope under the AWS-only rule</td><td>GA; out of scope</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p>Perplexity's September 2026 red-team report found network-policy bypasses in 7 of 9 platforms tested.<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a> Treat that as a warning for the whole category: test the egress policy, do not assume it.</p>
+          <h2>Exclude the wrong execution boundary</h2>
+          <ul>
+            <li><strong>Plain Docker or runc alone:</strong> shared-kernel isolation alone does not meet this guide's stronger boundary for untrusted agent code; this is a scoped selection rule, not a claim that containers provide no isolation.</li>
+            <li><strong>Runtime Instances as a per-session boundary:</strong> co-resident agents share a filesystem and can access each other's execution-role credentials.<a href="#source-12" aria-label="Source 12: AWS, Bedrock AgentCore Runtime Instances security">[12]</a></li>
+            <li><strong>Non-AWS cloud compute:</strong> hosted sandboxes from Modal, Deno, Fly, Vercel or Cloudflare are outside the agreed scope of this scan. That does not turn an SDK library into a cloud deployment or establish that any managed SaaS is approved.</li>
+          </ul>
+          <details>
+            <summary>Historical lifecycle warnings to recheck</summary>
+            <p>The initial research flagged Daytona OSS and Sysbox, reporting archive, licence or compatibility concerns.<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a> Those reports are not sufficient current primary-source evidence for a blanket retirement label. Check the exact repository, version, licence and support notice before extending an inherited deployment.</p>
+            <p>The same issue reports a September 2026 red-team comparison finding network-policy bypasses in 7 of 9 tested platforms. Without its primary report and deployment conditions, treat it as an investigation lead, not an established failure rate for the category.<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a></p>
+          </details>
         </section>
         <section id="gaps">
-          <h2>Gaps and open questions</h2>
-          <p>At the time of writing, Nitro Sandboxes are three days old: no independent benchmarks, no published cold-start numbers, no service-level agreement (SLA) and no GPU path.
-            Treat them as promising and verify in a pilot before relying on them.
-            The warm-pool cold-start figure is the SIG project's own claim, validated by AWS — not an independent measurement.</p>
-          <p>Lambda MicroVMs Singapore availability is unresolved: five regions at launch, no Singapore, and a November 2026 builder article reports 14 regions without naming them. Check the current regions before recommending them for a Singapore workload.<a href="#source-15" aria-label="Source 15: AWS Builder Center, Lambda Now Comes in Three Shapes">[15]</a></p>
+          <h2>Evidence to collect before relying on the boundary</h2>
+          <p>Ask the implementing engineer to exercise the selected route in the intended account. Record the exact runtime, image, region, execution role and policy revision, then retain expected and observed results for:</p>
+          <ul>
+            <li>An allowed dependency fetch and a denied network destination, including a bare-IP attempt where relevant.</li>
+            <li>Allowed and denied credential access, session separation and permission revocation.</li>
+            <li>Timeout, cancellation and cleanup, including files, credentials and any persistent resources left behind.</li>
+          </ul>
+          <p>Unresolved denials, leaked credentials or incomplete cleanup leave the boundary unqualified. Keep startup and task timings separate from security results; a fast run is not evidence that the controls held.</p>
+          <p>The 9 November 2026 Nitro launch sources describe availability and mechanisms, not this account's results.<a href="#source-1" aria-label="Source 1: AWS, AWS Nitro Sandboxes">[1]</a><a href="#source-2" aria-label="Source 2: AWS Containers Blog, AWS Nitro Sandboxes">[2]</a> The initial research did not establish independent startup benchmarks, an SLA or a supported GPU path; recheck those requirements rather than assuming their absence or availability.</p>
+          <p>Lambda MicroVMs Singapore availability remains unresolved in the retained research: the 22 June 2026 launch covered five regions, while the 7 November 2026 builder article reports 14 without naming them. Confirm current regional availability before selecting it for a Singapore workload.<a href="#source-14" aria-label="Source 14: AWS News Blog, Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs">[14]</a><a href="#source-15" aria-label="Source 15: AWS Builder Center, Lambda Now Comes in Three Shapes">[15]</a></p>
           <p class="next-step">Next, read <a href="eds-path-to-production.html">Path to production</a> for the gates a sandboxed change must still pass — the sandbox bounds what agent code can do, it does not approve the change.</p>
         </section>
         <section id="sources">
           <h2>Sources</h2>
           <p class="source-check-date">References last checked: <time datetime="2026-11-12">12 November 2026</time>.</p>
           <ol class="source-list">
-            <li id="source-1"><a href="https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/">AWS, AWS Nitro Sandboxes for Amazon EKS, Amazon ECS, and Amazon EC2</a>. What's New, 9 November 2026. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-2"><a href="https://aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks/">AWS Containers Blog, AWS Nitro Sandboxes: hardware-enforced workload isolation on Amazon EKS</a>. 9 November 2026. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-3"><a href="https://github.com/aws-samples/sample-eks-nitro-sandbox">AWS Samples, sample-eks-nitro-sandbox</a>. Sample repository for a Claude Code agent working inside a Nitro Sandbox. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-4"><a href="https://www.qovery.com/blog/aws-nitro-sandboxes-eks-vs-daytona-e2b">Qovery, AWS Nitro Sandboxes EKS vs Daytona and E2B</a>. 10 November 2026. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#do-not-use">Do not use</a>.</li>
-            <li id="source-5"><a href="https://waveo.io/insights/signal-noise-2026-11-09/">Waveo, Signal and Noise, 9 November 2026</a>. Coverage of the Nitro Sandboxes launch. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-6"><a href="https://aws.amazon.com/security/security-bulletins/2026-065-aws/">AWS, Security Bulletin 2026-065</a>. July 2026. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-7"><a href="https://www.beyondtrust.com/blog/entry/amazon-bedrock-agentcore-python-sdk-rce-cves">BeyondTrust, Amazon Bedrock AgentCore Python SDK RCE CVEs</a>. Write-up of the AgentCore SDK advisories. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-8"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-vpc.html">AWS, Bedrock AgentCore VPC documentation</a>. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-9"><a href="https://github.com/perplexityai/SPACE">Perplexity, SPACE repository</a>. Open-sourced 15 October 2026. Used in <a href="#conditional-alternatives">Conditional alternatives</a>.</li>
-            <li id="source-10"><a href="https://schristoph.online/blog/aws-lambda-microvms/">Christoph Schmol, AWS Lambda MicroVMs field report</a>. 17 August 2026. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-11"><a href="https://prized.dev/docs/sandboxes-vs-aws-nitro-sandboxes-lambda-microvms">Prized, Sandboxes vs AWS Nitro Sandboxes and Lambda MicroVMs</a>. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-12"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-instances-security.md">AWS, Bedrock AgentCore Runtime Instances security</a>. Used in <a href="#purpose">Purpose</a> and <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-13"><a href="https://github.com/eitri-edd/AI-PDLC/issues/54">GitHub issue 54, Tech Scan proposal and deep-research update</a>. The research the spokes are written from, including the sandbox do-not-use entries and the red-team finding. Used in <a href="#do-not-use">Do not use</a>.</li>
-            <li id="source-14"><a href="https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/">AWS News Blog, Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs</a>. Launch announcement, 22 June 2026: ARM64 architecture, five launch regions, up to 16 vCPUs and 32 GB of memory and disk per MicroVM. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-15"><a href="https://builder.aws.com/content/3LmNG2STjfdIrh1BIvWkHHDZpsi">AWS Builder Center, Lambda Now Comes in Three Shapes</a>. Published 7 November 2026: MicroVMs launched in five regions in June 2026, grew to 14 regions, and AWS added x86_64 support on 5 November 2026. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-1"><a href="https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/">AWS, AWS Nitro Sandboxes for Amazon EKS, Amazon ECS, and Amazon EC2</a>. What's New, 9 November 2026. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-2"><a href="https://aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks/">AWS Containers Blog, AWS Nitro Sandboxes: hardware-enforced workload isolation on Amazon EKS</a>. 9 November 2026. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-3"><a href="https://github.com/aws-samples/sample-eks-nitro-sandbox">AWS Samples, sample-eks-nitro-sandbox</a>. Sample repository for a Claude Code agent working inside a Nitro Sandbox. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-4"><a href="https://www.qovery.com/blog/aws-nitro-sandboxes-eks-vs-daytona-e2b">Qovery, AWS Nitro Sandboxes EKS vs Daytona and E2B</a>. 10 November 2026. Used in <a href="#conditional-alternatives">When the starting point lacks a required capability</a> and <a href="#do-not-use">Exclude the wrong execution boundary</a>.</li>
+            <li id="source-5"><a href="https://waveo.io/insights/signal-noise-2026-11-09/">Waveo, Signal and Noise, 9 November 2026</a>. Coverage of the Nitro Sandboxes launch. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-6"><a href="https://aws.amazon.com/security/security-bulletins/2026-065-aws/">AWS, Security Bulletin 2026-065</a>. July 2026. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-7"><a href="https://www.beyondtrust.com/blog/entry/amazon-bedrock-agentcore-python-sdk-rce-cves">BeyondTrust, Amazon Bedrock AgentCore Python SDK RCE CVEs</a>. Write-up of the AgentCore SDK advisories. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-8"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-vpc.html">AWS, Bedrock AgentCore VPC documentation</a>. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-9"><a href="https://github.com/perplexityai/SPACE">Perplexity, SPACE repository</a>. Open-sourced 15 October 2026. Used in <a href="#conditional-alternatives">When the starting point lacks a required capability</a>.</li>
+            <li id="source-10"><a href="https://schristoph.online/blog/aws-lambda-microvms/">Christoph Schmol, AWS Lambda MicroVMs field report</a>. 17 August 2026. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-11"><a href="https://prized.dev/docs/sandboxes-vs-aws-nitro-sandboxes-lambda-microvms">Prized, Sandboxes vs AWS Nitro Sandboxes and Lambda MicroVMs</a>. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-12"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-instances-security.md">AWS, Bedrock AgentCore Runtime Instances security</a>. Used in <a href="#purpose">Choose the execution boundary</a> and <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-13"><a href="https://github.com/eitri-edd/AI-PDLC/issues/54">GitHub issue 54, Tech Scan proposal and deep-research update</a>. The research the spokes are written from, including the sandbox do-not-use entries and the red-team finding. Used in <a href="#do-not-use">Exclude the wrong execution boundary</a>.</li>
+            <li id="source-14"><a href="https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/">AWS News Blog, Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs</a>. Launch announcement, 22 June 2026: ARM64 architecture, five launch regions, up to 16 vCPUs and 32 GB of memory and disk per MicroVM. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-15"><a href="https://builder.aws.com/content/3LmNG2STjfdIrh1BIvWkHHDZpsi">AWS Builder Center, Lambda Now Comes in Three Shapes</a>. Published 7 November 2026: MicroVMs launched in five regions in June 2026, grew to 14 regions, and AWS added x86_64 support on 5 November 2026. Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+            <li id="source-16"><a href="https://external-secrets.io/latest/introduction/overview/">External Secrets Operator, Overview</a>. Synchronises external secret values into Kubernetes Secret objects.</li>
+            <li id="source-17"><a href="https://secrets-store-csi-driver.sigs.k8s.io/topics/sync-as-kubernetes-secret">Secrets Store CSI Driver, Sync as Kubernetes Secret</a>. Optional sync is distinct from mounting secret values.</li>
+            <li id="source-18"><a href="https://kubernetes.io/docs/concepts/configuration/secret/">Kubernetes, Secrets</a>. Storage in etcd, encryption at rest, RBAC and workload access cautions.</li>
+            <li id="source-19"><a href="https://gvisor.dev/docs/architecture_guide/intro/">gVisor, Architecture guide: Introduction</a>. Application-kernel isolation, differences from VMs and Linux kernel security primitives, and residual threat-model limits.</li>
+            <li id="source-20"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-tools.html">AWS, Harness tools</a>. Built-in repository tools, optional Code Interpreter and Browser capabilities.</li>
+            <li id="source-21"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-environment.html">AWS, Harness environment and filesystem</a>. Repository preparation, direct commands, tests and custom environments.</li>
+            <li id="source-22"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-security.html">AWS, Harness security</a>. Trust domains, execution roles, outbound enforcement and credential boundaries.</li>
           </ol>
         </section>
         <p class="source-ref">Last editorial review: <time datetime="2026-11-12">12 November 2026</time>.</p>
@@ -304,12 +283,12 @@
       </article>
     </main>
     <aside class="page-contents">
-      <nav aria-label="On this page"><p>On this page</p><a href="#purpose">Purpose</a>
-<a href="#aws-first-default">AWS-first default</a>
-<a href="#conditional-alternatives">Conditional alternatives</a>
-<a href="#research-only">Research-only notes</a>
-<a href="#do-not-use">Do not use</a>
-<a href="#gaps">Gaps and open questions</a>
+      <nav aria-label="On this page"><p>On this page</p><a href="#purpose">Choose the execution boundary</a>
+<a href="#aws-first-default">Match the AWS starting point to the task</a>
+<a href="#conditional-alternatives">When the starting point lacks a required capability</a>
+<a href="#research-only">If building the execution layer directly</a>
+<a href="#do-not-use">Exclude the wrong execution boundary</a>
+<a href="#gaps">Evidence to collect before relying on the boundary</a>
 <a href="#sources">Sources</a></nav>
     </aside>
   </div>
