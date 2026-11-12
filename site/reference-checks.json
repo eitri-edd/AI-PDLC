@@ -3,15 +3,15 @@
   "scope": "Complete maintenance pass across all 19 published HTML pages, including the unlinked training companion. Every exact external link and canonical source received a disposition; retrieval outcomes are separate from claim support. This is not blanket certification of source claims, reader comprehension, or internal Eitri configuration.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 192,
-  "current_unique_hrefs": 198,
+  "current_unique_urls": 193,
+  "current_unique_hrefs": 199,
   "counts": {
     "dynamic_page_no_text": 4,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 7,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 175,
-    "retrieved_pdf_text": 2,
+    "retrieved": 176,
+    "retrieved_pdf_text": 3,
     "retrieved_with_login_banner": 1
   },
   "page_passes": {
@@ -131,8 +131,8 @@
       "checked_on": "2026-11-12",
       "scope": "whole-page reference and materially cited claim review",
       "status": "completed with explicit limitations",
-      "source_entries": 4,
-      "unique_fetch_destinations": 8,
+      "source_entries": 5,
+      "unique_fetch_destinations": 9,
       "maintenance_record": "tech-scan-maintenance-2026-11-12.md"
     },
     "tech-scan-models.html": {
@@ -1270,6 +1270,41 @@
         }
       ],
       "source_entries": []
+    },
+    {
+      "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/solutions/approved/documents/architecture-diagrams/building-agentic-ai-foundation-solutions-on-aws.pdf",
+      "files": [
+        "tech-scan.html"
+      ],
+      "hrefs": [
+        "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/solutions/approved/documents/architecture-diagrams/building-agentic-ai-foundation-solutions-on-aws.pdf"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved_pdf_text",
+      "http_status": 200,
+      "final_url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/solutions/approved/documents/architecture-diagrams/building-agentic-ai-foundation-solutions-on-aws.pdf",
+      "method": "direct HTTP GET; PDF text-layer extraction",
+      "claim_reviews": [
+        {
+          "file": "tech-scan.html",
+          "outcome": "supported",
+          "scope": "AWS, Guidance for Building Agentic AI Foundation Solutions on AWS. AWS reference architecture, reviewed for technical accuracy 29 January 2026. Its numbered request flow is the step order for the chain in Purpose and scope.",
+          "evidence_summary": "PDF text retrieved (4 pages); title 'Guidance for Building Agentic AI Foundation Solutions on AWS'; numbered flow: authenticated user via Cognito, AgentCore Runtime, Identity and Guardrails, LangGraph Agent, Memory, Gateway, tools and Knowledge Base, Bedrock Models, then the answer back; Observability and CloudWatch throughout."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "04a3bdeb8b876abe1636a372bffa10c1fbb481f6550e3b6b74e139e2d621e66a",
+          "format": "PDF bytes as retrieved",
+          "source_url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/solutions/approved/documents/architecture-diagrams/building-agentic-ai-foundation-solutions-on-aws.pdf"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan.html",
+          "id": "source-5"
+        }
+      ]
     },
     {
       "url": "https://defence-pp.vercel.app/",
