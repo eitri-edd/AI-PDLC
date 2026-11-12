@@ -3,14 +3,14 @@
   "scope": "Current publication census with retained 12 November page-wide passes and targeted Tech Scan follow-up; not a new whole-site claim review.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 214,
-  "current_unique_hrefs": 220,
+  "current_unique_urls": 215,
+  "current_unique_hrefs": 221,
   "counts": {
     "dynamic_page_no_text": 4,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 7,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 196,
+    "retrieved": 197,
     "retrieved_pdf_text": 3,
     "retrieved_with_login_banner": 1
   },
@@ -158,8 +158,8 @@
       "checked_on": "2026-11-12",
       "scope": "whole-page reference and materially cited claim review",
       "status": "completed with explicit limitations",
-      "source_entries": 20,
-      "unique_fetch_destinations": 24,
+      "source_entries": 21,
+      "unique_fetch_destinations": 25,
       "maintenance_record": "tech-scan-refinement-review-2026-11-12.md",
       "followup_scope": "Original page-wide date retained; targeted primary-source refinement and inherited-source limitations recorded separately."
     },
@@ -9384,6 +9384,43 @@
         {
           "file": "product-discovery.html",
           "id": "source-3"
+        }
+      ]
+    },
+    {
+      "url": "https://www.unkey.com/docs/platform/index",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://www.unkey.com/docs/platform/index"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.unkey.com/docs/platform/index",
+      "method": "requests.get; raw HTML and readable text via existing stdlib HTML parser; scripts/styles omitted for readable evidence",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Unkey's current licence is FSL-1.1-ALv2 (source-available); each version additionally becomes Apache 2.0 on its second anniversary; no AGPLv3 licence applies.",
+          "evidence_summary": "Self-hosting section: the source is public, and most of it is licensed under FSL-1.1-ALv2, so you can fork and run it under those terms.",
+          "limitation": "The second-anniversary Apache 2.0 conversion is the FSL-1.1-ALv2 mechanism as defined by the licence steward (fsl.software), not stated on the Unkey page itself. The GitHub LICENSE link on the Unkey page returned 404 when checked live on 12 November 2026, so it is not cited.",
+          "review_kind": "targeted primary-source follow-up"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "85536c84d2ec25616b7c18f81d113959bf992b8c299cd0aef6def1f0f7b27519",
+          "format": "primary-source response capture",
+          "source_url": "https://www.unkey.com/docs/platform/index"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-21"
         }
       ]
     },
@@ -19267,8 +19304,8 @@
       "tech-scan.html"
     ],
     "scope": "Approved issue #54/#59 factual and natural-prose refinements; primary passages inspected for changed/new claims. Inherited sources not fully re-fetched.",
-    "new_fetch_destinations": 21,
-    "primary_page_source_checks": 29,
+    "new_fetch_destinations": 22,
+    "primary_page_source_checks": 30,
     "record": "tech-scan-refinement-review-2026-11-12.md",
     "locally_deployed": false,
     "representative_reader_session": "not performed"
