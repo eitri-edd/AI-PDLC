@@ -106,6 +106,9 @@ function enhanceDiagrams() {
     if (!svg || svg.dataset.enhanced === 'true') return;
     svg.dataset.enhanced = 'true';
 
+    // Relationship maps have no playback order; retain native SVG links and text.
+    if (figure.dataset.diagram === 'static') return;
+
     // Worked application diagrams retain their static matte presentation.
     if (figure.matches('.concept-figure--example') || figure.closest('.learning-example, .example, .worked-example')) {
       figure.classList.add('concept-figure--example');
