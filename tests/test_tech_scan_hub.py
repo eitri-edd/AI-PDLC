@@ -75,6 +75,26 @@ class TechScanHubTests(unittest.TestCase):
         design = (ROOT / "design.md").read_text()
         self.assertTrue("Tech Scan hub lookup exception" in design, "Record the scoped map exception")
 
+    def test_hub_disclaimer_uses_about_style_without_duplicate_draft_notice(self):
+        document = self.document()
+        article = next(document.root.elements("article"))
+        callouts = [n for n in article.elements("aside") if n.has_class("callout--disclaimer")]
+        self.assertEqual(len(callouts), 1, "Keep one visible hub disclaimer")
+        about = Document((ROOT / "site/dist/about.html").read_text())
+        about_callout = next(n for n in about.root.elements("aside") if n.has_class("callout--disclaimer"))
+        callout = callouts[0]
+        self.assertEqual(callout.attrs.get("class"), about_callout.attrs.get("class"))
+        label = by_id(document, callout.attrs["aria-labelledby"])
+        self.assertEqual(label.attrs.get("id"), "tech-scan-note")
+        self.assertTrue(label.has_class("example-label"))
+        notice = normalise(callout.text())
+        self.assertIn("still a draft", notice)
+        self.assertIn("may not reflect the latest technologies or releases", notice)
+        self.assertIn("Carry out your own research before adopting any option.", notice)
+        self.assertIn("not local deployment tests", notice)
+        header = next(n for n in article.elements("header") if n.has_class("article-header"))
+        self.assertFalse(any(n.attrs.get("id") == "tech-scan-note" for n in header.elements()))
+
     def test_writing_standard_records_the_narrow_research_reference_allowance(self):
         writing = (ROOT / "writing.md").read_text()
         self.assertTrue("Tech Scan research-reference exception" in writing, "Missing narrow Tech Scan status exception")
