@@ -35,7 +35,7 @@
             <a href="tech-scan.html#how-to-read">How to read an entry</a>
             <a href="tech-scan.html#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a>
             <a href="tech-scan.html#planned-spokes">Waves 2 and 3</a>
-            <a href="tech-scan.html#spines-and-seams">Spines and portable seams</a>
+            <a href="tech-scan.html#cross-cutting-views">Cross-cutting views</a>
             <a href="tech-scan.html#gaps">Gaps stated plainly</a>
             <a href="tech-scan.html#layer-map">Where each layer lives</a>
             <a href="tech-scan.html#sources">Sources</a>
@@ -104,7 +104,7 @@
         <header class="article-header">
           <p class="eyebrow">Development guide</p>
           <h1>Tech Scan: Models</h1>
-          <p class="lead">This page answers which model runs the work, and how typed decisions fit: approved Claude and OpenAI models through Amazon Bedrock, with the exceptions, exclusions and open gaps stated beside them.</p>
+          <p class="lead">This page answers which model runs the work, and how typed decisions fit. A typed decision is an answer a model returns in a fixed form the team can check mechanically, such as a choice, a score, a yes/no question or a visual grounding box. The page covers approved Claude and OpenAI models through Amazon Bedrock, with the exceptions, exclusions and open gaps stated beside them.</p>
           <p>This page is a draft. It covers model access, coding clients and typed decisions for the Concepts chapter. Its entries are research references from web sources reviewed 11–12 November 2026, not locally deployed or benchmarked options; treat vendor availability claims and public customer-reported operation as different kinds of evidence.</p>
           <p>Read <a href="concept.html#models">Choose an AI model</a> in Concepts first. This page maps that section to products and does not repeat its explanation.</p>
         </header>
@@ -144,10 +144,25 @@
         <section id="purpose">
           <h2>Purpose</h2>
           <p>Amazon Bedrock is the model API for this guide: approved Claude and OpenAI models are reached through Bedrock, and the coding clients that run the work connect to it there. This page records that default, the narrow exceptions to it, and the typed-decision models that are still research material rather than recommendations.</p>
-          <p>Apply hard gates first: required capability, approved data location and retention, identity and authorisation, supported model and API, security boundaries, and operational ownership. AWS preference must not override these gates. Among choices that pass the gates, prefer AWS-managed services.</p>
-          <p>Do not silently broaden the model policy through managed defaults, automatic routing, fallbacks, retrieval reasoning or evaluator models. A model that reaches the work through a default or a fallback is still a model choice, and it needs the same approval as a model chosen directly.</p>
+          <p>Apply the hard gates first. AWS preference must not override these gates. Among choices that pass the gates, prefer AWS-managed services.</p>
+          <ul>
+            <li>Required capability</li>
+            <li>Approved data location and retention</li>
+            <li>Identity and authorisation</li>
+            <li>Supported model and API</li>
+            <li>Security boundaries</li>
+            <li>Operational ownership</li>
+          </ul>
+          <p>Do not silently broaden the model policy through any of these routes. A model that reaches the work through a default or a fallback is still a model choice, and it needs the same approval as a model chosen directly.</p>
+          <ul>
+            <li>Managed defaults</li>
+            <li>Automatic routing</li>
+            <li>Fallbacks</li>
+            <li>Retrieval reasoning</li>
+            <li>Evaluator models</li>
+          </ul>
           <p>Offer one default and at most one justified alternative per capability in the main index. Keep further candidates in optional detail rather than presenting two complete parallel stacks; a reader choosing between two full stacks has not been given a decision.</p>
-          <p>Do not select the newest model merely because it is listed. Compare exact configurations on representative held-out tasks, and record correctness, correction effort, time, cost and control failures before choosing.<a href="#source-2" aria-label="Source 2: AI-SDLC Playbook, Concepts">[2]</a></p>
+          <p>Do not select the newest model merely because it is listed. Compare exact configurations on representative held-out tasks — tasks kept aside for testing, not used to tune the model — and record correctness, correction effort, time, cost and control failures before choosing.<a href="#source-2" aria-label="Source 2: AI-SDLC Playbook, Concepts">[2]</a></p>
           <p>Embedding and reranking models are approved separately from the generative models on this page. The model policy here covers large language models; extending that restriction to every model is an additional decision, not an assumption.</p>
           <p>No option on this page has been locally deployed or benchmarked. Distinguish vendor availability claims from public customer-reported operation: a public customer case does not establish this team's performance or compliance, and a vendor availability claim does not establish that the option works for the proposed use.</p>
         </section>
@@ -176,7 +191,15 @@
           </tbody></table></div>
           <p>Claude Code and local Codex both have documented Bedrock integration.<a href="#source-5" aria-label="Source 5: Anthropic, Claude Code on Amazon Bedrock">[5]</a><a href="#source-4" aria-label="Source 4: OpenAI, Codex on Amazon Bedrock">[4]</a> Codex through Bedrock does not establish parity with Codex cloud or every hosted OpenAI feature; do not assume a feature available in the hosted service is available through Bedrock.</p>
           <p>Managed GPT-OSS remains an OpenAI model and is not self-hosting. Omit it from the minimal shortlist if it is unnecessary, rather than saying the provider rule excludes it.</p>
-          <p>Bedrock access does not settle the qualification questions. Before adopting a selected model, qualify it in the intended account: representative task success, required model and API support, permission revocation, timeouts and retries, and full cost. These are proposed tests, not completed results.</p>
+          <p>Bedrock access does not settle the qualification questions. Before adopting a selected model, qualify it in the intended account:</p>
+          <ul>
+            <li>Representative task success</li>
+            <li>Required model and API support</li>
+            <li>Permission revocation</li>
+            <li>Timeouts and retries</li>
+            <li>Full cost</li>
+          </ul>
+          <p>These are proposed tests, not completed results.</p>
         </section>
         <section id="conditional-alternatives">
           <h2>Conditional alternatives</h2>
@@ -208,13 +231,26 @@
             <td>Conditional feature route only</td>
           </tr>
           </tbody></table></div>
-          <p>The OpenAI Decisions API is documented as generally available with <code>gpt-6-luna</code> and native predicate, choice and score answers. No Box question is documented.<a href="#source-6" aria-label="Source 6: OpenAI, Decisions API">[6]</a> Treat it as a conditional direct-OpenAI evaluation: task accuracy, calibration, abstention and refusal handling, and application-side action checks are still required before any use.</p>
+          <p>The OpenAI Decisions API is documented as generally available with <code>gpt-6-luna</code> and native predicate (yes/no), choice and score answers. No Box question is documented.<a href="#source-6" aria-label="Source 6: OpenAI, Decisions API">[6]</a><a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a> Treat it as a conditional direct-OpenAI evaluation. These checks are still required before any use:</p>
+          <ul>
+            <li>Task accuracy</li>
+            <li>Calibration</li>
+            <li>Abstention and refusal handling</li>
+            <li>Application-side action checks</li>
+          </ul>
           <p>Bedrock support for <code>/decisions</code> is not established. Availability of the same model through Responses does not prove availability of that API.<a href="#source-7" aria-label="Source 7: AWS, Amazon Bedrock models API compatibility">[7]</a></p>
           <p>Claude Platform on AWS is a conditional feature route, not interchangeable compliance evidence for Bedrock. AWS identifies it as a third-party offering outside standard AWS compliance programmes.<a href="#source-8" aria-label="Source 8: AWS, Claude Platform on AWS feature support">[8]</a></p>
         </section>
         <section id="research-only">
           <h2>Research-only notes</h2>
           <p>Decision models are now a category, not a single missing product. TypeSafe Jev, known in Concepts as System One, stays as educational material in Concepts; a deployment shortlist need not support every model family discussed there.<a href="#source-2" aria-label="Source 2: AI-SDLC Playbook, Concepts">[2]</a> Do not present structured JSON as equivalent to a calibrated typed-decision model.</p>
+          <p>The four question types are:<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a></p>
+          <ul>
+            <li><strong>Choice:</strong> pick one option from a labelled set.</li>
+            <li><strong>Score:</strong> place the input on an ordered scale.</li>
+            <li><strong>Noul:</strong> a yes/no question. OpenAI calls the same type <em>predicate</em>.</li>
+            <li><strong>Box:</strong> visual grounding, locating something in an image.</li>
+          </ul>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Research-only typed-decision models; scroll horizontally if needed"><table><caption>Research-only typed-decision models</caption><thead><tr><th scope="col">Product</th><th scope="col">What it is</th><th scope="col">Status</th><th scope="col">When to use it</th></tr></thead><tbody>
                     <tr>
             <td>TypeSafe Jev (System One)</td>
@@ -232,7 +268,7 @@
           <p>Strands Decider 2B is not recommended. The Decider experiment was removed from the approved-stack recommendation, and its JevBench numbers are the repository's own table, not settled results; do not quote them as a benchmark outcome. Decider documents only Choice, Score and Noul, with no Box equivalent.<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a></p>
           <p>Cloudflare Clef and Clef-flash are the closest open-weight multimodal candidates, with a vision encoder for images and video, but their Box support is not confirmed. They are hosted on Cloudflare Workers AI, so they are out of scope for adoption and remain a research note only.<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a></p>
           <p>Open-weight availability alone does not qualify a model. Decider is openly licensed and available, yet it stays out of the recommendation because its typed-decision coverage is incomplete and its reported accuracy is the repository's own table, not an independent result.</p>
-          <p>Other decision models named in the same research pass include Convai Laya, Liquid AI d1, Perplexity pplx-decider and Mapika decider-2b. None is recommended here.<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a></p>
+          <p>Other decision models in the same survey include Convai Laya, Liquid AI d1, Perplexity pplx-decider and Mapika decider-2b. None is recommended here.<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a></p>
         </section>
         <section id="do-not-use">
           <h2>Do not use</h2>
@@ -265,10 +301,17 @@
             <li><strong>No Box support verified anywhere.</strong> No open-weight rival has been verified to document Box, visual grounding as a typed decision, and the OpenAI Decisions API documents no Box question.<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a><a href="#source-6" aria-label="Source 6: OpenAI, Decisions API">[6]</a></li>
             <li><strong>Bedrock support for <code>/decisions</code> is unresolved.</strong> Availability of the same model through Responses does not prove availability of that API.<a href="#source-7" aria-label="Source 7: AWS, Amazon Bedrock models API compatibility">[7]</a></li>
             <li><strong>Claude Platform on AWS is not interchangeable compliance evidence for Bedrock.</strong> It is a third-party offering outside standard AWS compliance programmes, so a compliance case built on Bedrock cannot cite it.<a href="#source-8" aria-label="Source 8: AWS, Claude Platform on AWS feature support">[8]</a></li>
-            <li><strong>Nothing here is locally validated.</strong> Every entry is a research reference from web sources. Before adopting a selected model, qualify it in the intended account: representative task success, required model and API support, permission revocation, timeouts and retries, and full cost.</li>
+            <li><strong>Nothing here is locally validated.</strong> Every entry is a research reference from web sources. Before adopting a selected model, qualify it in the intended account:
+          <ul>
+            <li>Representative task success</li>
+            <li>Required model and API support</li>
+            <li>Permission revocation</li>
+            <li>Timeouts and retries</li>
+            <li>Full cost</li>
+          </ul></li>
             <li><strong>Model availability changes.</strong> A model listed today may later be retired or have its endpoint changed, so re-confirm the exact endpoint, region and features at adoption time rather than relying on this page's listing.<a href="#source-3" aria-label="Source 3: AWS, Amazon Bedrock OpenAI model cards">[3]</a></li>
           </ul>
-          <p>Publishing a clearly labelled research reference does not itself mean the infrastructure has passed those tests. Keep existing human release and approval authority: updating this page does not authorise infrastructure deployment, repository migration, implementation, or issue closure.</p>
+          <p>Updating this page does not authorise deployment, migration or implementation; existing release and approval authority still applies.</p>
           <p>What would close these gaps: a verified typed-decision model that documents Box, or a Bedrock announcement of <code>/decisions</code> support. Until then, typed visual-grounding decisions stay a human judgement, not a model call.</p>
           <p class="next-step"><strong>Next step:</strong> Compare the approved models on one representative held-out task — correctness, correction effort, time, cost and control failures — and record the result before adopting a model. The <a href="tech-scan-harness.html">Harness spoke</a> of Tech Scan covers the runtime that runs the chosen model.</p>
         </section>
@@ -281,10 +324,10 @@
             <li id="source-3"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html">AWS, Amazon Bedrock OpenAI model cards</a>. Documents the OpenAI models available through Bedrock and endpoint-specific API differences. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
             <li id="source-4"><a href="https://learn.chatgpt.com/docs/amazon-bedrock">OpenAI, Codex on Amazon Bedrock</a>. Documents Codex integration with Bedrock. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
             <li id="source-5"><a href="https://code.claude.com/docs/en/amazon-bedrock">Anthropic, Claude Code on Amazon Bedrock</a>. Documents Claude Code integration with Bedrock. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
-            <li id="source-6"><a href="https://developers.openai.com/api/docs/guides/decisions">OpenAI, Decisions API</a>. Documents the Decisions API as generally available with gpt-6-luna and native predicate, choice and score answers, with no Box question documented. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#gaps">Gaps and open questions</a>.</li>
+            <li id="source-6"><a href="https://developers.openai.com/api/docs/guides/decisions">OpenAI, Decisions API</a>. Documents the Decisions API as generally available with gpt-6-luna and native predicate, choice and score answers, with no Box question documented. The predicate naming is explained in source 9. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#gaps">Gaps and open questions</a>.</li>
             <li id="source-7"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/models-api-compatibility.html">AWS, Amazon Bedrock models API compatibility</a>. Used to establish that Bedrock support for /decisions is not established. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#gaps">Gaps and open questions</a>.</li>
             <li id="source-8"><a href="https://docs.aws.amazon.com/claude-platform/latest/userguide/feature-support.html">AWS, Claude Platform on AWS feature support</a>. Identifies Claude Platform on AWS as a third-party offering outside standard AWS compliance programmes. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#gaps">Gaps and open questions</a>.</li>
-            <li id="source-9"><a href="https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/">S5 Labs, Open decision models: Clef, d1, Jev</a>. Decision-model survey updated 23 October 2026, covering Jev, Strands Decider 2B and Cloudflare Clef. Used in <a href="#research-only">Research-only notes</a> and <a href="#gaps">Gaps and open questions</a>.</li>
+            <li id="source-9"><a href="https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/">S5 Labs, Open decision models: Clef, d1, Jev</a>. Decision-model survey updated 23 October 2026, covering Jev, Strands Decider 2B and Cloudflare Clef. Used in <a href="#conditional-alternatives">Conditional alternatives</a>, <a href="#research-only">Research-only notes</a> and <a href="#gaps">Gaps and open questions</a>.</li>
           </ol>
         </section>
         <p class="source-ref">Last editorial review: <time datetime="2026-11-12">12 November 2026</time>.</p>

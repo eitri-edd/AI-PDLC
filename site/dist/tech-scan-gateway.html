@@ -35,7 +35,7 @@
             <a href="tech-scan.html#how-to-read">How to read an entry</a>
             <a href="tech-scan.html#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a>
             <a href="tech-scan.html#planned-spokes">Waves 2 and 3</a>
-            <a href="tech-scan.html#spines-and-seams">Spines and portable seams</a>
+            <a href="tech-scan.html#cross-cutting-views">Cross-cutting views</a>
             <a href="tech-scan.html#gaps">Gaps stated plainly</a>
             <a href="tech-scan.html#layer-map">Where each layer lives</a>
             <a href="tech-scan.html#sources">Sources</a>
@@ -157,10 +157,12 @@
           </ul>
           <p>This page covers the gateway as a routing and control point. The <a href="tech-scan-harness.html">harness spoke</a> covers the
           agent loop itself, and the context spoke covers what is retrieved.</p>
-          <p>Three kinds of traffic pass through a gateway: model calls, tool calls, and retrieval. Model
-          calls go to the approved model through Bedrock. Tool calls go to approved tools and MCP
-          servers through AgentCore Gateway. Retrieval reaches Bedrock Managed Knowledge Bases through
-          the Gateway as well, so retrieval shares the same control point as tool calls.</p>
+          <p>Three kinds of traffic pass through a gateway:</p>
+          <ul>
+            <li><strong>Model calls</strong> go to the approved model through Bedrock.</li>
+            <li><strong>Tool calls</strong> go to approved tools and MCP servers through AgentCore Gateway.</li>
+            <li><strong>Retrieval</strong> reaches Bedrock Managed Knowledge Bases through the Gateway as well, so retrieval shares the same control point as tool calls.</li>
+          </ul>
         </section>
         <section id="aws-first-default">
           <h2>AWS-first default</h2>
@@ -189,13 +191,18 @@
           controls.</p>
           <p>The Gateway also fronts retrieval. Bedrock Managed Knowledge Bases are exposed through
           AgentCore Gateway,<a href="#source-6" aria-label="Source 6: AWS, Amazon Bedrock AgentCore: Gateway target connector, Managed Knowledge Base">[6]</a> so the agent reaches them through the same control point as its tools.
-          Begin with Retrieve plus the approved outer model,<a href="#source-7" aria-label="Source 7: AWS, Amazon Bedrock: Knowledge Bases">[7]</a> and approve embeddings and reranking
-          separately.<a href="#source-9" aria-label="Source 9: AWS, Amazon Bedrock: Knowledge Bases, supported features">[9]</a> Managed knowledge bases support ACL-aware retrieval,<a href="#source-8" aria-label="Source 8: AWS, Amazon Bedrock: Managed Knowledge Bases, ACL-aware retrieval">[8]</a> but they do not authenticate
-          the end user — the application must supply verified identity.</p>
-          <p>Map each control to its actual enforcement point: IAM and resource boundaries; Cedar and
-          AgentCore Policy for Gateway tool authorisation<a href="#source-2" aria-label="Source 2: AWS, Amazon Bedrock AgentCore: Policy">[2]</a>; Guard for structured-data checks<a href="#source-10" aria-label="Source 10: AWS, CloudFormation Guard">[10]</a>; content
-          guardrails; and retained human decisions. Guard checks structured data and Cedar governs
-          configured Gateway requests; neither implies complete policy-framework coverage.</p>
+          Begin with the Retrieve operation plus an approved Claude or OpenAI model for generation,<a href="#source-7" aria-label="Source 7: AWS, Amazon Bedrock: Knowledge Bases">[7]</a> and approve embeddings and reranking
+          separately.<a href="#source-9" aria-label="Source 9: AWS, Amazon Bedrock: Knowledge Bases, supported features">[9]</a> Managed knowledge bases support retrieval that respects access control lists (ACL-aware retrieval),<a href="#source-8" aria-label="Source 8: AWS, Amazon Bedrock: Managed Knowledge Bases, ACL-aware retrieval">[8]</a> but they do not authenticate
+          the end user — the application needs to supply verified identity.</p>
+          <p>Map each control to its actual enforcement point:</p>
+          <ul>
+            <li><strong>IAM and resource boundaries</strong></li>
+            <li><strong>Cedar</strong> (the policy language) <strong>and AgentCore Policy</strong> for Gateway tool authorisation<a href="#source-2" aria-label="Source 2: AWS, Amazon Bedrock AgentCore: Policy">[2]</a></li>
+            <li><strong>CloudFormation Guard</strong> for structured-data checks<a href="#source-10" aria-label="Source 10: AWS, CloudFormation Guard">[10]</a></li>
+            <li><strong>Content guardrails</strong></li>
+            <li><strong>Retained human decisions</strong></li>
+          </ul>
+          <p>CloudFormation Guard checks structured data and Cedar governs configured Gateway requests; neither implies complete policy-framework coverage.</p>
           <p>The model policy still applies. Use managed Claude or OpenAI models only, Bedrock preferred;
           direct provider APIs are exceptions for a specific capability or approved-region gap, after
           reviewing egress, credentials, retention and data handling.</p>
@@ -204,9 +211,15 @@
           <h2>Conditional alternatives</h2>
           <p>Use an alternative only when its trigger applies. Each one below is conditional on the
           situation in its verdict, not a second default.</p>
-          <p>Apply the hard gates before choosing. A gateway must pass the required-capability, approved
-          data location and retention, identity and authorisation, supported model and API, security
-          boundary and operational-ownership gates first. AWS preference must not override these gates.</p>
+          <p>Apply the hard gates before choosing. A gateway must pass these gates first. AWS preference must not override these gates.</p>
+          <ul>
+            <li>Required capability</li>
+            <li>Approved data location and retention</li>
+            <li>Identity and authorisation</li>
+            <li>Supported model and API</li>
+            <li>Security boundaries</li>
+            <li>Operational ownership</li>
+          </ul>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Conditional gateway alternatives">
             <table>
               <caption>Conditional gateway alternatives</caption>

@@ -3,14 +3,14 @@
   "scope": "Complete maintenance pass across all 19 published HTML pages, including the unlinked training companion. Every exact external link and canonical source received a disposition; retrieval outcomes are separate from claim support. This is not blanket certification of source claims, reader comprehension, or internal Eitri configuration.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 190,
-  "current_unique_hrefs": 196,
+  "current_unique_urls": 192,
+  "current_unique_hrefs": 198,
   "counts": {
     "dynamic_page_no_text": 4,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 7,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 173,
+    "retrieved": 175,
     "retrieved_pdf_text": 2,
     "retrieved_with_login_banner": 1
   },
@@ -147,8 +147,8 @@
       "checked_on": "2026-11-12",
       "scope": "whole-page reference and materially cited claim review",
       "status": "completed with explicit limitations",
-      "source_entries": 22,
-      "unique_fetch_destinations": 26,
+      "source_entries": 24,
+      "unique_fetch_destinations": 28,
       "maintenance_record": "tech-scan-maintenance-2026-11-12.md"
     },
     "tech-scan-gateway.html": {
@@ -6824,6 +6824,36 @@
       ]
     },
     {
+      "url": "https://theainewsreport.com/2026-11-02-trigger-dev-env-vars-exposure-explained.html",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://theainewsreport.com/2026-11-02-trigger-dev-env-vars-exposure-explained.html"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://theainewsreport.com/2026-11-02-trigger-dev-env-vars-exposure-explained.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "Trigger.dev disclosed on 1 November 2026 that an attacker gained unauthorised access to environment variables for a subset of customer organisations on its hosted tier.",
+          "evidence_summary": "2 November 2026 explainer quotes Trigger.dev's disclosure signed by CTO Eric Allam, dated 1 November 2026, and the status page marking the incident resolved at 22:50 UTC on 1 November.",
+          "limitation": "Secondary report of the vendor disclosure; the vendor has not stated how the attacker got in, how many organisations were affected, or whether values were used."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-24"
+        }
+      ]
+    },
+    {
       "url": "https://theleanstartup.com/principles",
       "files": [
         "product-discovery.html"
@@ -7507,6 +7537,35 @@
         {
           "file": "eds-po-ba-harness.html",
           "id": "source-figma"
+        }
+      ]
+    },
+    {
+      "url": "https://www.getzep.com/blog/announcing-a-new-direction-for-zeps-open-source-strategy/",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://www.getzep.com/blog/announcing-a-new-direction-for-zeps-open-source-strategy/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.getzep.com/blog/announcing-a-new-direction-for-zeps-open-source-strategy/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "Zep stopped maintaining its open-source Community Edition to focus its open-source effort on Graphiti.",
+          "evidence_summary": "Zep's own blog post, dated 2 April 2025, states 'we've decided to stop maintaining and releasing Zep Community Edition' and that open-source efforts will concentrate on Graphiti."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-23"
         }
       ]
     },

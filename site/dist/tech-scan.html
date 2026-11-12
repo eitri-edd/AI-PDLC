@@ -35,7 +35,7 @@
             <a href="tech-scan.html#how-to-read">How to read an entry</a>
             <a href="tech-scan.html#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a>
             <a href="tech-scan.html#planned-spokes">Waves 2 and 3</a>
-            <a href="tech-scan.html#spines-and-seams">Spines and portable seams</a>
+            <a href="tech-scan.html#cross-cutting-views">Cross-cutting views</a>
             <a href="tech-scan.html#gaps">Gaps stated plainly</a>
             <a href="tech-scan.html#layer-map">Where each layer lives</a>
             <a href="tech-scan.html#sources">Sources</a>
@@ -115,7 +115,7 @@
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>Start here</strong><div class="page-map-links"><a href="#purpose">Purpose and scope</a><a href="#how-to-read">How to read an entry</a></div></li>
             <li class="page-map-node"><strong>Published spokes</strong><div class="page-map-links"><a href="#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a></div></li>
-            <li class="page-map-node"><strong>Planned spokes</strong><div class="page-map-links"><a href="#planned-spokes">Waves 2 and 3</a><a href="#spines-and-seams">Spines and portable seams</a></div></li>
+            <li class="page-map-node"><strong>Planned spokes</strong><div class="page-map-links"><a href="#planned-spokes">Waves 2 and 3</a><a href="#cross-cutting-views">Cross-cutting views</a></div></li>
             <li class="page-map-node"><strong>Gaps and mapping</strong><div class="page-map-links"><a href="#gaps">Gaps stated plainly</a><a href="#layer-map">Where each layer lives</a></div></li>
           </ol>
         </figure>
@@ -126,7 +126,7 @@
 <a href="#how-to-read">How to read an entry</a>
 <a href="#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a>
 <a href="#planned-spokes">Waves 2 and 3</a>
-<a href="#spines-and-seams">Spines and portable seams</a>
+<a href="#cross-cutting-views">Cross-cutting views</a>
 <a href="#gaps">Gaps stated plainly</a>
 <a href="#layer-map">Where each layer lives</a>
 <a href="#sources">Sources</a></nav>
@@ -135,7 +135,7 @@
           <h2>Purpose and scope</h2>
           <p>Concepts explains what the playbook's ideas are: intent, specification, context, harness, loop, graph, software factories and model selection. It names a few tools, but a team choosing a stack still has to map each concept to a concrete product. Tech Scan is that map. <a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">[1]</a></p>
           <p>Use it when the team has agreed what it needs and must choose what implements it. Start from the concept, follow its link to the spoke, and compare the default with the alternative trigger before adopting either. A product that cannot name the concept it implements does not belong in Tech Scan.</p>
-          <p>Tech Scan is a reference section, not a lifecycle stage. It does not change the lifecycle, and it does not rewrite Concepts into an AWS product manual. Each spoke links back to the concept anchor it implements. <a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">[1]</a></p>
+          <p>Tech Scan is a reference section, not a lifecycle stage. It does not change the lifecycle, and it does not rewrite Concepts into an AWS product manual. Each spoke links back to the Concepts section it implements. <a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">[1]</a></p>
           <h3>What Tech Scan does not do</h3>
           <ul>
             <li><strong>Recommend a vendor.</strong> An AWS-first default is a starting point for a team on AWS, not an endorsement. A conditional alternative is offered only with its trigger.</li>
@@ -146,9 +146,9 @@
         </section>
         <section id="how-to-read">
           <h2>How to read an entry</h2>
-          <p>Every spoke follows the same shape, so a reader can compare entries without relearning the layout. The spoke states its purpose and concept anchor, then gives the AWS-first default, the conditional alternative with its trigger, research-only notes, a list of products not to use, and the gaps that remain. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
+          <p>Every spoke follows the same shape, so a reader can compare entries without relearning the layout. The spoke states its purpose and the Concepts section it implements, then gives the AWS-first default, the conditional alternative with its trigger, research-only notes, a list of products not to use, and the gaps that remain. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="How to read a Tech Scan entry; scroll horizontally if needed"><table><caption>How to read a Tech Scan entry</caption><thead><tr><th scope="col">Label</th><th scope="col">What it means</th></tr></thead><tbody>
-            <tr><th scope="row">AWS-first default</th><td>The starting point for a team on AWS. It must still pass the hard gates: required capability, approved data location and retention, identity and authorisation, supported model and API, security boundaries and operational ownership.</td></tr>
+            <tr><th scope="row">AWS-first default</th><td>The starting point for a team on AWS. It must still pass the hard gates:<ul><li>Required capability</li><li>Approved data location and retention</li><li>Identity and authorisation</li><li>Supported model and API</li><li>Security boundaries</li><li>Operational ownership</li></ul></td></tr>
             <tr><th scope="row">Conditional alternative</th><td>Use it only when its stated trigger applies, such as a capability the default cannot express. Compatibility claims alone do not qualify an alternative.</td></tr>
             <tr><th scope="row">Research-only note</th><td>Interesting, not recommended. Read it to understand the option, not to adopt it.</td></tr>
             <tr><th scope="row">Do not use</th><td>Retired, archived, shut down or superseded. This list matters as much as the recommendations: products in it are still named in older guides.</td></tr>
@@ -165,11 +165,10 @@
             <tr><th scope="row"><a href="tech-scan-gateway.html">AI gateway</a></th><td>How model and tool calls are routed, guarded and paid for.</td><td>Draft</td><td>12 November 2026</td><td>TBD</td></tr>
             <tr><th scope="row"><a href="tech-scan-sandbox.html">Sandbox</a></th><td>What untrusted agent-written code runs in.</td><td>Draft</td><td>12 November 2026</td><td>TBD</td></tr>
           </tbody></table></div>
-          <p>The draft label comes off the section when all four Wave 1 spokes are published, one page-wide reference pass covers the hub and the four spokes, the hub passes a readability check for the aspiring product manager reader, no unresolved verification flags remain on Wave 1 pages, and a content owner and review date are recorded for the hub. Removing the label means editing the navigation on every page, because the navigation is copied into each page by hand. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
         </section>
         <section id="planned-spokes">
           <h2>Waves 2 and 3</h2>
-          <p>The remaining spokes are planned, not written. They appear here so the reader can see the whole section before it exists, and so a new spoke is added to a known place instead of inventing a new structure. A planned spoke has no page yet; do not treat its name as a recommendation. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
+          <p>The remaining spokes are planned, not written. They appear here so the reader can see the whole section before it exists. A planned spoke has no page yet; do not treat its name as a recommendation. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Planned Tech Scan spokes; scroll horizontally if needed"><table><caption>Planned Tech Scan spokes</caption><thead><tr><th scope="col">Spoke</th><th scope="col">What it will answer</th><th scope="col">Wave</th><th scope="col">Status</th></tr></thead><tbody>
             <tr><th scope="row">Workflows</th><td>How work is specified: spec-driven methods and skill packs.</td><td>2</td><td>Planned</td></tr>
             <tr><th scope="row">Factories</th><td>How an issue becomes a pull request on its own.</td><td>2</td><td>Planned</td></tr>
@@ -178,15 +177,23 @@
             <tr><th scope="row">Verification</th><td>How the team knows a change is good.</td><td>3</td><td>Planned</td></tr>
             <tr><th scope="row">Delivery</th><td>How a change reaches production safely, and how it is watched.</td><td>3</td><td>Planned</td></tr>
             <tr><th scope="row">Languages</th><td>What the playbook's gates look like in each stack: Java, TypeScript with React, Python.</td><td>3</td><td>Planned</td></tr>
-            <tr><th scope="row">AWS spine</th><td>What the AWS services look like as a whole: regions, status, guardrails.</td><td>3</td><td>Planned</td></tr>
+            <tr><th scope="row">AWS platform</th><td>What the AWS services look like as a whole: regions, status, guardrails.</td><td>3</td><td>Planned</td></tr>
           </tbody></table></div>
-          <p>Wave 2 covers Workflows, Factories and Agents. Wave 3 covers Context, Verification, Delivery, Languages and the AWS spine. Languages and the AWS spine come last on purpose: they are indexes over the layer spokes, and building them first would duplicate rows that later move. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
+          <p>Wave 2 covers Workflows, Factories and Agents. Wave 3 covers Context, Verification, Delivery, Languages and the AWS platform. Languages and the AWS platform come last on purpose: they are indexes over the layer spokes, and building them first would duplicate rows that later move. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
         </section>
-        <section id="spines-and-seams">
-          <h2>Spines and portable seams</h2>
-          <p>Two views cut across every layer, so they are not layers themselves. The <strong>AWS spine</strong> is the AWS services as a whole: the service map across layers, Singapore availability, GA versus preview status, retired services to avoid, and the account, identity and network guardrails that apply everywhere. The <strong>languages view</strong> shows what the playbook's gates look like in each stack — Java, TypeScript with React, Python — and links to the layer rows instead of copying them. React is a framework, not a language, and the languages page says so. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
-          <p>One rule keeps the section scalable: each product row lives on exactly one spoke. Language pages and the AWS spine link to it; they never copy it. A product that is archived or renamed is corrected in one place. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
-          <p>The portable seams are the same on every spoke: MCP for tools and documentation, OpenTelemetry for traces, metrics and logs, Spec Kit with OKF Markdown for specifications and standards, GitLab or GitHub as the source of truth for issues and merge requests, and SARIF or JSON for scanner findings. A spoke that needs a seam states which one; a product that breaks a seam is a worse fit, even when it is the default. <a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">[1]</a></p>
+        <section id="cross-cutting-views">
+          <h2>Cross-cutting views</h2>
+          <p>Two views cut across every layer, so they are not layers themselves. The <strong>AWS platform</strong> view covers the AWS services as a whole: the service map across layers, Singapore availability, GA versus preview status, retired services to avoid, and the account, identity and network guardrails that apply everywhere. The <strong>language view</strong> shows what the playbook's gates look like in each stack — Java, TypeScript with React, Python — and links to the layer rows instead of copying them. React is a framework, not a language, and the languages page says so. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
+          <p>One rule keeps the section scalable: each product row lives on exactly one spoke. Language pages and the AWS platform link to it; they never copy it. A product that is archived or renamed is corrected in one place. <a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
+          <p>The shared integration standards are the same on every spoke:</p>
+          <ul>
+            <li><strong>MCP (Model Context Protocol)</strong> for tools and documentation.</li>
+            <li><strong>OpenTelemetry</strong> for traces, metrics and logs.</li>
+            <li><strong>Spec Kit with OKF</strong> (the Open Knowledge Format, a Markdown format) for specifications and standards.</li>
+            <li><strong>GitLab or GitHub</strong> as the source of truth for issues and merge requests.</li>
+            <li><strong>SARIF (Static Analysis Results Interchange Format) or JSON</strong> for scanner findings.</li>
+          </ul>
+          <p>A spoke that needs a standard states which one; a product that breaks a standard is a worse fit, even when it is the default. <a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">[1]</a></p>
         </section>
         <section id="gaps">
           <h2>Gaps stated plainly</h2>
@@ -195,8 +202,8 @@
             <li><strong>Issue tracking.</strong> AWS has no managed issue tracker in this stack. The tracker stays in GitHub or GitLab, and AWS-first does not require repository migration.</li>
             <li><strong>Dynamic testing.</strong> AWS Security Agent on-demand penetration testing is generally available, while its documented CI/CD integration remains in preview. It is a managed dynamic-security option, not a one-for-one replacement for repeatable OWASP ZAP checks. Authorised pre-production scope, credentials, bounded waits and fail-closed behaviour are required before adoption.</li>
             <li><strong>Threat modelling, DORA measurement, mutation and architecture testing.</strong> No AWS managed service covers these. They run as self-hosted tools on the team's own infrastructure even in the AWS stack.</li>
-            <li><strong>Typed decisions: Box.</strong> The remaining gap is specifically Box, visual grounding as a typed decision. No open-weight rival has been verified to document it, and the Decider evaluation stopped before its local test, so Decider is not adopted and its reported numbers are not settled.</li>
-            <li><strong>Policy packs.</strong> The IM8 and ARC packs are harness content, not a product. The gap on both stacks is encoding the machine-verifiable controls as checks and protecting guardrail files, then retaining reviewed evidence and manual approval for the remainder.</li>
+            <li><strong>Typed decisions: Box.</strong> A typed decision is an answer a model returns in a fixed form the team can check mechanically, such as a choice, a score, a yes/no question or a visual grounding box. The remaining gap is specifically Box, visual grounding as a typed decision; see <a href="tech-scan-models.html#research-only">Tech Scan: Models</a> for the four types. No open-weight rival has been verified to document it, and the Decider evaluation stopped before its local test, so Decider is not adopted and its reported numbers are not settled.</li>
+            <li><strong>Policy packs.</strong> The <a href="eds-developer-harness.html#source-im8">Instruction Manual 8 (IM8)</a> and <a href="eds-developer-harness.html#source-arc">Agentic Risk &amp; Capability Framework (ARC)</a> policy packs are harness content, not a product. The gap on both stacks is encoding the machine-verifiable controls as checks and protecting guardrail files, then retaining reviewed evidence and manual approval for the remainder.</li>
           </ul>
         </section>
         <section id="layer-map">
@@ -216,7 +223,7 @@
             <tr><th scope="row">AI gateway (new capability)</th><td><a href="tech-scan-gateway.html">AI gateway</a> (Wave 1). No AWS product is a multi-provider LLM router.</td></tr>
             <tr><th scope="row">Spec-driven workflows and software factories</th><td>Workflows and Factories spokes (Wave 2, planned).</td></tr>
             <tr><th scope="row">Coding agents and orchestrators</th><td>Agents spoke (Wave 2, planned).</td></tr>
-            <tr><th scope="row">Languages and AWS spine</th><td>Languages and AWS spine (Wave 3, planned). Cross-cutting views, not layers.</td></tr>
+            <tr><th scope="row">Languages and AWS platform</th><td>Languages and AWS platform (Wave 3, planned). Cross-cutting views, not layers.</td></tr>
           </tbody></table></div>
           <p class="next-step"><strong>Next step:</strong> Choose the question you need answered and open its spoke. Start with <a href="tech-scan-models.html">Models</a> when the choice is which model runs the work, or <a href="tech-scan-sandbox.html">Sandbox</a> when untrusted agent code needs somewhere safe to run.</p>
         </section>
@@ -224,8 +231,8 @@
           <h2>Sources</h2>
           <p class="source-check-date">References last checked: <time datetime="2026-11-12">12 November 2026</time>.</p>
           <ol class="source-list">
-            <li id="source-1"><a href="https://github.com/eitri-edd/AI-PDLC/issues/54">GitHub issue 54, Add an AWS-first Tech Scan under Concepts</a>. The Tech Scan proposal: AWS-first capability shortlist, assessment criteria, typed-decision boundaries and evidence requirements. Used in <a href="#purpose">Purpose and scope</a>, <a href="#how-to-read">How to read an entry</a>, <a href="#spines-and-seams">Spines and portable seams</a>, <a href="#gaps">Gaps stated plainly</a> and <a href="#layer-map">Where each layer lives</a>.</li>
-            <li id="source-2"><a href="https://github.com/eitri-edd/AI-PDLC/issues/59">GitHub issue 59, Tech Scan as a hub-and-spoke section under Concepts</a>. The section concept: hub-and-spoke structure, languages and cloud as cross-cutting views, plain-text draft labelling, and phased build in three waves. Used in <a href="#purpose">Purpose and scope</a>, <a href="#how-to-read">How to read an entry</a>, <a href="#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a> and <a href="#planned-spokes">Waves 2 and 3</a>.</li>
+            <li id="source-1"><a href="https://github.com/eitri-edd/AI-PDLC/issues/54">GitHub issue 54, Add an AWS-first Tech Scan under Concepts</a>. The Tech Scan proposal: AWS-first capability shortlist, assessment criteria, typed-decision boundaries and evidence requirements. Used in <a href="#purpose">Purpose and scope</a>, <a href="#how-to-read">How to read an entry</a>, <a href="#cross-cutting-views">Cross-cutting views</a>, <a href="#gaps">Gaps stated plainly</a> and <a href="#layer-map">Where each layer lives</a>.</li>
+            <li id="source-2"><a href="https://github.com/eitri-edd/AI-PDLC/issues/59">GitHub issue 59, Tech Scan as a hub-and-spoke section under Concepts</a>. The section concept: hub-and-spoke structure, languages and cloud as cross-cutting views, plain-text draft labelling, and phased build in three waves. Used in <a href="#purpose">Purpose and scope</a>, <a href="#how-to-read">How to read an entry</a>, <a href="#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a> and <a href="#planned-spokes">Waves 2 and 3</a> and <a href="#cross-cutting-views">Cross-cutting views</a>.</li>
             <li id="source-3"><a href="https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/">AWS, AWS Nitro Sandboxes for Amazon EKS, ECS and EC2</a>, 9 November 2026. Announces hardware-isolated Firecracker microVMs per EKS pod, ECS task or EC2 workload, at no extra charge, in all commercial regions, explicitly for LLM-generated code. Used in <a href="#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a>.</li>
             <li id="source-4"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md">AWS, Bedrock AgentCore Harness documentation</a>. Documents the config-based, Strands-powered managed harness. Used in <a href="#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a>.</li>
           </ol>
@@ -239,7 +246,7 @@
 <a href="#how-to-read">How to read an entry</a>
 <a href="#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a>
 <a href="#planned-spokes">Waves 2 and 3</a>
-<a href="#spines-and-seams">Spines and portable seams</a>
+<a href="#cross-cutting-views">Cross-cutting views</a>
 <a href="#gaps">Gaps stated plainly</a>
 <a href="#layer-map">Where each layer lives</a>
 <a href="#sources">Sources</a></nav>

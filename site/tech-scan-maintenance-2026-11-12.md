@@ -67,3 +67,15 @@ every cited source, reader comprehension, live Eitri execution or
 organisational policy compliance. The Tech Scan pages are labelled drafts;
 their entries are research references from web sources reviewed 11–12
 November 2026, not locally deployed or benchmarked options.
+
+## Terminology and writing.md review — 12 November 2026
+
+Reviewed the five Tech Scan pages against writing.md (441 lines at main ee8ebb9) and checked every invented or internal term against industry usage.
+
+Renamed: "AWS spine" to "AWS platform" (spine is not an industry term for a cloud-platform view); "Spines and portable seams" to "Cross-cutting views"; "portable seams" to "shared integration standards" (MCP, OpenTelemetry, Spec Kit with OKF, GitLab/GitHub, SARIF/JSON); "concept anchor" to "Concepts section". Removed the misattribution "Orange ITS": the pillar names come from Automater alone (context assembly, tool design, permissions, memory, evals, observability); the heyuan110 framing names a different six and is the source of the "about 80% of agent stability" figure, now attributed to that one 60-day production report. Dropped the count "three 2026 framings" (only two are cited) and "the brief's list" (now "the proposal's list"). Dropped "Mode 3" (undefined) and the unverified "Temporal, validated by AWS as a Nitro Sandbox driver".
+
+Defined at first use: typed decision and its four types (Choice, Score, Noul as a yes/no question, Box as visual grounding); OKF (Open Knowledge Format); IM8 (Instruction Manual 8) and ARC (Agentic Risk & Capability Framework), linked to the definitions in eds-developer-harness.html; Cedar (policy language); CloudFormation Guard; ACL-aware retrieval; NSM (Nitro Security Module); SIG (Special Interest Group); SLA; AMI. Corrected two dates: Zep stopped maintaining Community Edition in April 2025, not 2026 (source 23, Zep's own blog); the Lambda MicroVMs 14-region figure comes from a November 2026 builder article, not October. Added source 24 for the Trigger.dev 1 November 2026 environment-variable disclosure (verified against the vendor disclosure as reported 2 November 2026).
+
+Writing.md fixes: parallel items of three or more (hard gates, trust rules, integration standards, qualification checks, broadening routes, control mappings) are now bullet lists; long sentences split; author-facing notes moved here (draft-label removal conditions; "rename the pillars if a later framing settles"); the draft-label conditions paragraph and the "rename the pillars" instruction were removed from the hub and harness pages. "Must" kept only for the hard-gate and trust-rule statements; other necessities reworded ("needs to", "needs to design"). Kept "spoke" (standard hub-and-spoke vocabulary) and "primitive" (defined on the page as "isolation building blocks").
+
+Editorial note: writing.md is 441 lines at main ee8ebb9 (the 883-line figure in earlier notes was a miscount; the file on disk is 441 lines, 53,709 characters).

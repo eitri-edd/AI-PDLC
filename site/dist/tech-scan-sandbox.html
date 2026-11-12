@@ -35,7 +35,7 @@
             <a href="tech-scan.html#how-to-read">How to read an entry</a>
             <a href="tech-scan.html#published-spokes">Wave 1: Models, Harness, Gateway, Sandbox</a>
             <a href="tech-scan.html#planned-spokes">Waves 2 and 3</a>
-            <a href="tech-scan.html#spines-and-seams">Spines and portable seams</a>
+            <a href="tech-scan.html#cross-cutting-views">Cross-cutting views</a>
             <a href="tech-scan.html#gaps">Gaps stated plainly</a>
             <a href="tech-scan.html#layer-map">Where each layer lives</a>
             <a href="tech-scan.html#sources">Sources</a>
@@ -133,37 +133,64 @@
         <section id="purpose">
           <h2>Purpose</h2>
           <p>A sandbox is OS-enforced isolation for code an agent writes and runs.
-            The test is simple: if the agent's code escapes its container, the escape must land in a throwaway guest kernel, never the host kernel.
+            Use this test: if the agent's code escapes its container, the escape must land in a throwaway guest kernel, never the host kernel.
             A container on a shared kernel cannot pass that test — containers are not a sandbox.</p>
           <p>Isolation alone is not enough.
-            The sandbox must hold six trust rules: separate trust domains, minimal execution roles, explicit outbound enforcement, approved dependencies, protected credentials, and authenticated session ownership.
-            A sandbox that lets agent code reach the package registry without an allowlist, or read the credentials of the session that launched it, has failed even if no container ever escapes.</p>
-          <p>Start from the managed harness Runtime shell and filesystem for coding, and add Browser or Code Interpreter only for a specific task.
-            Do not deploy all three merely because they exist.
-            Gateway policy governs traffic through the Gateway, not arbitrary shell networking, and attaching a VPC alone is not evidence of package-only egress or secret denial — the egress and credential rules on this page are configuration you must add, not defaults you inherit.</p>
+            The sandbox must hold six trust rules:</p>
+          <ul>
+            <li>Separate trust domains</li>
+            <li>Minimal execution roles</li>
+            <li>Explicit outbound enforcement</li>
+            <li>Approved dependencies</li>
+            <li>Protected credentials</li>
+            <li>Authenticated session ownership</li>
+          </ul>
+          <p>A sandbox that lets agent code reach the package registry without an allowlist, or read the credentials of the session that launched it, has failed even if no container ever escapes.</p>
+          <p>Start from the managed harness with Code Interpreter for coding work. Add the Browser tool only for a specific task; do not add it merely because it exists.
+            Gateway policy governs traffic through the Gateway, not arbitrary shell networking. Attaching a VPC alone is not evidence of package-only egress — network access limited to approved package registries — or secret denial. The egress and credential rules on this page are settings you add yourself, not defaults you inherit.</p>
           <p>This page does not choose the agent, the model or the delivery pipeline. It answers one question only: what the agent's code runs in, and what stops that code reaching further than it should.</p>
         </section>
         <section id="aws-first-default">
           <h2>AWS-first default</h2>
           <p>The default is <strong>AWS Nitro Sandboxes</strong>, announced 9 November 2026: a hardware-isolated lightweight virtual machine per EKS pod, ECS task or EC2 workload, managed by the Nitro Hypervisor, at no extra charge beyond the instance, in all commercial regions, explicitly positioned for LLM-generated code and AI agents.<a href="#source-1" aria-label="Source 1: AWS, AWS Nitro Sandboxes">[1]</a><a href="#source-2" aria-label="Source 2: AWS Containers Blog, AWS Nitro Sandboxes">[2]</a> On EKS and ECS the sandbox is a Firecracker microVM running on Nitro instead of KVM, so each pod gets its own operating system and kernel.</p>
           <p>Opting in takes one field on EKS: <code>runtimeClassName: isolated-sandbox</code> or <code>confidential-sandbox</code>.
-            The runtime classes ship with every EKS Auto Mode cluster; standard EKS needs a sandbox-enabled node AMI.
+            The runtime classes ship with every EKS Auto Mode cluster; standard EKS needs a sandbox-enabled node AMI (Amazon Machine Image).
             On ECS the equivalent is <code>trustedExecutionConfiguration</code> on Managed Instances only.
             On EC2, launch with <code>--enclave-options Enabled=true</code>, then run Firecracker from your own orchestrator or AMI.</p>
           <p>There are two modes.
             <strong>Isolated</strong> protects the host and neighbour pods from the pod — the mode for agent-generated code, continuous integration and multi-tenant work.
-            <strong>Confidential</strong> treats even the machine operator as untrusted: memory is moved out of the parent's reach, <code>exec</code> and <code>stdin</code> are denied, NSM attestation covers the image and the Cedar policy, and KMS releases secrets only to a sandbox whose measurements match.
-            One caveat: without a KMS key policy verifying measurements, the measurement is recorded but never verified.</p>
-          <p>For networking, the annotation <code>sandbox.amazonaws.com/network-isolated: "true"</code> boots the virtual machine with loopback only.
+            <strong>Confidential</strong> treats even the machine operator as untrusted:</p>
+          <ul>
+            <li>Memory is moved out of the parent's reach.</li>
+            <li>Exec and stdin are denied.</li>
+            <li>Nitro Security Module (NSM) attestation covers the image and the Cedar policy.</li>
+            <li>KMS releases secrets only to a sandbox whose measurements match.</li>
+          </ul>
+          <p>One caveat: without a KMS key policy verifying measurements, the measurement is recorded but never verified.</p>
+          <p>For networking, the annotation <code>sandbox.amazonaws.com/network-isolated: "true"</code> boots the virtual machine with loopback-only networking (no network access except to itself).
             A per-pod Cedar policy decides which images may load, which containers start, and whether exec, log streaming and mounts are allowed.
             Encrypted OCI layers are decrypted inside the sandbox with KMS, and AWS Signer-signed images are verifiable before they run.
-            Pod Identity, VPC CNI, EBS, EFS, S3 and CloudWatch all keep working, and <code>kubectl exec</code>, <code>logs</code> and <code>port-forward</code> work identically in isolated mode.</p>
-          <p>AWS's own example runs a Claude Code agent via Bedrock inside one sandbox: it reads a GitHub issue, reproduces it with a failing test, fixes it, runs the suite, pushes a branch and opens a pull request.
-            Egress is locked by an EKS <code>ApplicationNetworkPolicy</code> to CoreDNS and HTTPS to Bedrock and GitHub hostnames only; model access runs through Pod Identity scoped to <code>bedrock:InvokeModel*</code>; the agent holds one short-lived fine-grained GitHub token.
+            Pod Identity, VPC networking, EBS, EFS and S3 storage, and CloudWatch all keep working, and <code>kubectl exec</code>, <code>logs</code> and <code>port-forward</code> work identically in isolated mode.</p>
+          <p>AWS's own example runs a Claude Code agent via Bedrock inside one sandbox. The agent:</p>
+          <ol>
+            <li>Reads a GitHub issue.</li>
+            <li>Reproduces it with a failing test.</li>
+            <li>Fixes it.</li>
+            <li>Runs the suite.</li>
+            <li>Pushes a branch.</li>
+            <li>Opens a pull request.</li>
+          </ol>
+          <p>Egress is locked by an EKS <code>ApplicationNetworkPolicy</code>: CoreDNS and HTTPS to Bedrock and GitHub hostnames only. Model access runs through Pod Identity scoped to <code>bedrock:InvokeModel*</code>, and the agent holds one short-lived fine-grained GitHub token.
             A prompt-injection test that pipes a remote script into a shell never opens a connection, and when the pod exits the virtual machine is destroyed.
             A sample repository is listed in the sources.<a href="#source-3" aria-label="Source 3: AWS Samples, sample-eks-nitro-sandbox">[3]</a></p>
-          <p>The limits, stated plainly: Kubernetes 1.36 or later; no GPU passthrough; no snapshot, pause and resume with memory, live migration, or in-place resize; no published cold-start numbers, performance figures or SLA.
-            Warm pools hide cold start — the Kubernetes SIG <code>agent-sandbox</code> project claims around 2 seconds, validated by AWS.</p>
+          <p>The limits, stated plainly:</p>
+          <ul>
+            <li>Kubernetes 1.36 or later</li>
+            <li>No GPU passthrough</li>
+            <li>No snapshot, pause and resume with memory, live migration, or in-place resize</li>
+            <li>No published cold-start numbers, performance figures or service-level agreement (SLA)</li>
+          </ul>
+          <p>Warm pools hide cold start — the Kubernetes Special Interest Group (SIG) <code>agent-sandbox</code> project claims around 2 seconds, validated by AWS.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="The four AWS sandbox primitives">
             <table>
               <caption>The four AWS sandbox primitives — do not confuse them</caption>
@@ -180,18 +207,23 @@
           </div>
           <p>Nitro Sandboxes were announced 9 November 2026.<a href="#source-5" aria-label="Source 5: Waveo, Signal and Noise, 9 November 2026">[5]</a>
             Nitro Enclaves are GA since 2020, and there is no EKS-native enclave feature — the pattern is a pod on an enclave-enabled node driving <code>nitro-cli</code>.
-            Bedrock AgentCore is GA since 13 October 2025, including Singapore.
-            Lambda MicroVMs were announced 22 June 2026 on the ARM64 architecture, in five regions without Singapore.<a href="#source-10" aria-label="Source 10: Christoph Schmol, AWS Lambda MicroVMs field report">[10]</a><a href="#source-11" aria-label="Source 11: Prized, Sandboxes vs AWS Nitro Sandboxes and Lambda MicroVMs">[11]</a><a href="#source-14" aria-label="Source 14: AWS News Blog, Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs">[14]</a> AWS added x86_64 support on 5 November 2026 and has since expanded regions, so review current architectures and regions in the AWS region table before recommending them.<a href="#source-15" aria-label="Source 15: AWS Builder Center, Lambda Now Comes in Three Shapes">[15]</a></p>
+            Bedrock AgentCore is GA since 13 October 2025, including in the Singapore region.
+            Lambda MicroVMs were announced 22 June 2026 on the ARM64 architecture, in five regions without Singapore.<a href="#source-10" aria-label="Source 10: Christoph Schmol, AWS Lambda MicroVMs field report">[10]</a><a href="#source-11" aria-label="Source 11: Prized, Sandboxes vs AWS Nitro Sandboxes and Lambda MicroVMs">[11]</a><a href="#source-14" aria-label="Source 14: AWS News Blog, Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs">[14]</a> AWS added x86_64 support on 5 November 2026 and has since expanded regions, so check the current architectures and regions before recommending them.<a href="#source-15" aria-label="Source 15: AWS Builder Center, Lambda Now Comes in Three Shapes">[15]</a></p>
           <p>Runtime Instances is not per-session microVM compute: co-resident agents in an Instances session share a filesystem and can access each other's execution-role credentials.
             Do not treat it as an isolation boundary for untrusted code.<a href="#source-12" aria-label="Source 12: AWS, Bedrock AgentCore Runtime Instances security">[12]</a></p>
           <h3>AgentCore advisories</h3>
           <p>All five AgentCore CVEs from March to August 2026 were in the SDK and CLI toolchain around the sandbox, not a microVM escape — and the <code>install_packages()</code> one recurred after the first fix.
-            CVE-2026-12530 (June 2026, fixed in 1.6.1) and CVE-2026-16796 with AWS Security Bulletin 2026-065 (July 2026, fixed in 1.18.1) work the same way: crafted package names lead to remote code execution <em>inside</em> the Code Interpreter sandbox, and from there to reading the attached execution role's credentials from the in-sandbox metadata service.
-            This is package-argument injection inside the sandbox, not a host escape, and any remark about a generic sandbox bypass should be replaced with this precisely sourced advisory.<a href="#source-6" aria-label="Source 6: AWS, Security Bulletin 2026-065">[6]</a><a href="#source-7" aria-label="Source 7: BeyondTrust, Amazon Bedrock AgentCore Python SDK RCE CVEs">[7]</a></p>
-          <p>Controls: pin <code>bedrock-agentcore</code> to 1.18.1 or later; never pass raw model output as package names; attach least-privilege execution roles — or none, since the default <code>aws.codeinterpreter.v1</code> interpreter has no execution role and therefore no credentials to steal; and watch for metadata-service access (<code>169.254.169.254</code>) from inside sandboxes.</p>
+            CVE-2026-12530 (June 2026, fixed in 1.6.1) and CVE-2026-16796 with AWS Security Bulletin 2026-065 (July 2026, fixed in 1.18.1) work the same way: crafted package names lead to remote code execution <em>inside</em> the Code Interpreter sandbox, and from there to reading the attached execution role's credentials from the in-sandbox metadata service. This is package-argument injection inside the sandbox, not a host escape.<a href="#source-6" aria-label="Source 6: AWS, Security Bulletin 2026-065">[6]</a><a href="#source-7" aria-label="Source 7: BeyondTrust, Amazon Bedrock AgentCore Python SDK RCE CVEs">[7]</a></p>
+          <p>Controls:</p>
+          <ul>
+            <li>Pin <code>bedrock-agentcore</code> to 1.18.1 or later.</li>
+            <li>Never pass raw model output as package names.</li>
+            <li>Attach least-privilege execution roles — or none, since the default <code>aws.codeinterpreter.v1</code> interpreter has no execution role and therefore no credentials to steal.</li>
+            <li>Watch for metadata-service access (<code>169.254.169.254</code>) from inside sandboxes.</li>
+          </ul>
           <h3>Augmentation stack</h3>
           <p>Layer this around Nitro Sandboxes.
-            The default, AWS-managed and least to operate: Nitro Sandboxes on EKS Auto Mode (<code>isolated-sandbox</code>; <code>confidential-sandbox</code> with KMS attestation where secrets are involved), plus AgentCore Code Interpreter in <code>SANDBOX</code> network mode — no internet, only internal AWS resources — and Browser for the agent's calculate and browse steps.</p>
+            The default, AWS-managed and least to operate: Nitro Sandboxes on EKS Auto Mode (<code>isolated-sandbox</code>; <code>confidential-sandbox</code> with KMS attestation where secrets are involved), plus AgentCore Code Interpreter in <code>SANDBOX</code> network mode — no internet, only internal AWS resources — for calculation, and Browser for browsing.</p>
           <p>The controls below layer around Nitro Sandboxes. Each row names the AWS-managed control and the limit that decides whether it is enough.<a href="#source-8" aria-label="Source 8: AWS, Bedrock AgentCore VPC documentation">[8]</a></p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Augmentation stack around Nitro Sandboxes">
             <table>
@@ -202,18 +234,23 @@
               <tbody>
                 <tr><td>Egress</td><td>VPC CNI <code>ApplicationNetworkPolicy</code>, a hostname-aware allowlist covering Bedrock, the Git host and registries, backed by Network Firewall and Route 53 DNS Firewall at the VPC edge</td><td>Standard NetworkPolicy cannot match hostnames; DNS Firewall stops the DNS channel, Network Firewall stops bare-IP egress; neither alone is enough</td></tr>
                 <tr><td>Identity</td><td>EKS Pod Identity per session, scoped to <code>bedrock:InvokeModel*</code> only, with IMDSv2 and a hop limit of 1</td><td>No long-lived keys; a compromised pod cannot steal the node role</td></tr>
-                <tr><td>Secrets</td><td>Secrets Manager and KMS, mounted with the Secrets Store CSI driver or the External Secrets Operator</td><td>Never stored in etcd</td></tr>
-                <tr><td>Admission</td><td>Kyverno (YAML) or OPA Gatekeeper (Rego); Pod Security Standards Restricted; user namespaces (<code>hostUsers: false</code>, stable in Kubernetes 1.36)</td><td>Map the machine-verifiable IM8 and ARC controls to constraints; retain reviewed evidence and manual approval for the remainder</td></tr>
+                <tr><td>Secrets</td><td>Secrets Manager and KMS, mounted with the Secrets Store CSI driver or the External Secrets Operator</td><td>Never stored in etcd (the cluster's configuration store)</td></tr>
+                <tr><td>Admission</td><td>Kyverno (YAML) or OPA Gatekeeper (Rego); Pod Security Standards Restricted; user namespaces (<code>hostUsers: false</code>, stable in Kubernetes 1.36)</td><td>Map the machine-verifiable <a href="eds-developer-harness.html#source-im8">Instruction Manual 8 (IM8)</a> and <a href="eds-developer-harness.html#source-arc">Agentic Risk &amp; Capability Framework (ARC)</a> controls to constraints; retain reviewed evidence and manual approval for the remainder</td></tr>
                 <tr><td>Detection</td><td>GuardDuty EKS Protection with Runtime Monitoring, plus Falco for eBPF detection or Tetragon for eBPF prevention</td><td>Falco is detection; Tetragon is prevention</td></tr>
-                <tr><td>Orchestration</td><td>Temporal, validated by AWS as a Nitro Sandbox driver, or Step Functions with the AgentCore Harness</td><td>Orchestrates the outer workflow, not the sandbox itself</td></tr>
+                <tr><td>Orchestration</td><td>Temporal, or Step Functions with the AgentCore Harness</td><td>Orchestrates the outer workflow, not the sandbox itself</td></tr>
               </tbody>
             </table>
           </div>
         </section>
         <section id="conditional-alternatives">
           <h2>Conditional alternatives</h2>
-          <p>Use a self-hosted sandbox platform only when you need a sandbox API, templates, or pause and resume — the capabilities Nitro Sandboxes does not yet offer.
-            The platform gives you the API; the microVM still gives you the boundary, so run it <em>inside</em> Nitro Sandbox pods or Kata and gVisor RuntimeClasses, not instead of them.</p>
+          <p>Use a self-hosted sandbox platform only when you need a capability Nitro Sandboxes does not yet offer:</p>
+          <ul>
+            <li>A sandbox API</li>
+            <li>Templates</li>
+            <li>Pause and resume</li>
+          </ul>
+          <p>The platform gives you the API; the microVM still gives you the boundary, so run it <em>inside</em> Nitro Sandbox pods or Kata and gVisor RuntimeClasses, not instead of them.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Self-hosted sandbox platforms">
             <table>
               <caption>Self-hosted sandbox platforms, run inside a microVM boundary</caption>
@@ -230,7 +267,13 @@
         </section>
         <section id="research-only">
           <h2>Research-only notes</h2>
-          <p>These are the primitives underneath a sandbox, for teams building direct. They are isolation building blocks, not a sandbox product: none of them on its own gives you a sandbox API, templates, lifecycle management or an egress policy.</p>
+          <p>These are the primitives underneath a sandbox, for teams building their own sandbox. They are isolation building blocks, not a sandbox product: none of them on its own gives you:</p>
+          <ul>
+            <li>A sandbox API</li>
+            <li>Templates</li>
+            <li>Lifecycle management</li>
+            <li>An egress policy</li>
+          </ul>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Sandbox primitives for direct builds">
             <table>
               <caption>Isolation primitives, if you build direct</caption>
@@ -258,7 +301,7 @@
               </thead>
               <tbody>
                 <tr><td>Plain Docker or runc alone</td><td>Shared kernel — containers are not a sandbox</td><td>GA; not an isolation boundary</td></tr>
-                <tr><td>Daytona OSS</td><td>Public repository archived and frozen at v0.190.0, relicensed AGPL-3.0; core development moved to a private codebase in June 2026; the community fork Nightona is bootstrap-phase only<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a></td><td>Archived</td></tr>
+                <tr><td>Daytona OSS</td><td>Public repository archived and frozen at v0.190.0, relicensed AGPL-3.0; core development moved to a private codebase in June 2026; the community fork Nightona is still early-stage<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a></td><td>Archived</td></tr>
                 <tr><td>Sysbox</td><td>Last release May 2025; does not install on containerd 2.x or Kubernetes 1.34 and later — treat as legacy; Kata is the replacement</td><td>Retired</td></tr>
                 <tr><td>Runtime Instances for untrusted code</td><td>Co-resident agents share a filesystem and can access each other's execution-role credentials</td><td>GA; not a per-session boundary</td></tr>
                 <tr><td>Modal, Deno, Fly, Vercel or Cloudflare sandboxes</td><td>Non-AWS sandboxes, out of scope under the AWS-only rule</td><td>GA; out of scope</td></tr>
@@ -269,10 +312,10 @@
         </section>
         <section id="gaps">
           <h2>Gaps and open questions</h2>
-          <p>At the time of writing, Nitro Sandboxes are three days old: no independent benchmarks, no published cold-start numbers, no SLA and no GPU path.
-            Treat them as promising and verify in a pilot, and review the EKS User Guide sandboxing pages before relying on them.
+          <p>At the time of writing, Nitro Sandboxes are three days old: no independent benchmarks, no published cold-start numbers, no service-level agreement (SLA) and no GPU path.
+            Treat them as promising and verify in a pilot before relying on them.
             The warm-pool cold-start figure is the SIG project's own claim, validated by AWS — not an independent measurement.</p>
-          <p>Lambda MicroVMs Singapore availability is unresolved: five regions at launch, no Singapore, and one source claims 14 regions by October 2026. Review the AWS region table before recommending them for a Singapore workload.</p>
+          <p>Lambda MicroVMs Singapore availability is unresolved: five regions at launch, no Singapore, and a November 2026 builder article reports 14 regions without naming them. Check the current regions before recommending them for a Singapore workload.<a href="#source-15" aria-label="Source 15: AWS Builder Center, Lambda Now Comes in Three Shapes">[15]</a></p>
           <p class="next-step">Next, read <a href="eds-path-to-production.html">Path to production</a> for the gates a sandboxed change must still pass — the sandbox bounds what agent code can do, it does not approve the change.</p>
         </section>
         <section id="sources">
