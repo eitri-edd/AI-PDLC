@@ -23,6 +23,10 @@
     @media (max-width: 1099px) {
       #fig-task-chain, [id^="fig-waves"], #page-map-caption, #page-map-note { scroll-margin-top: 9rem; }
     }
+    #fig-waves svg { min-width: 47.5rem; }
+    #fig-waves > p { margin: 0; padding: 0.75rem 1.25rem; }
+    #fig-waves [data-wave="1"] .d-node { fill: url(#d-grad-accent); stroke: #1d4ed8; }
+    #fig-waves a:focus-visible rect { stroke: #0f172a; stroke-width: 3; }
   </style>
   <script src="site.js" defer></script>
 </head>
@@ -182,10 +186,155 @@
           <p>References for workflows, coding agents, software factories, context, verification and delivery are planned. They do not yet supply a complete implementation shortlist. Language-stack and AWS-platform views will link across those references rather than repeat their product entries.<a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
           <details class="concept-reference">
             <summary>Publication plan (optional)</summary>
-            <div id="fig-waves">
-              <p id="fig-waves-title-caption"><strong id="fig-waves-title">Coverage in three waves</strong></p>
-              <p id="fig-waves-title-desc">Wave 1 contains the four published references above. Wave 2 adds Workflows, Factories and Agents. Wave 3 adds Context, Verification and Delivery, followed by the cross-cutting Languages and AWS platform views. This is the writing order, not a delivery workflow.</p>
-            </div>
+            <figure class="concept-figure" id="fig-waves" data-diagram="static">
+              <figcaption id="fig-waves-title-caption"><span id="fig-waves-title">Figure 2. Tech Scan components across Waves 1, 2 and 3.</span></figcaption>
+              <p id="fig-waves-title-desc">Wave 1 covers Models, Harness, AI gateway and Sandbox. Wave 2 adds Workflows, Factories and Coding agents. Wave 3 adds Context, Verification and Delivery, plus the Languages and AWS platform views. Waves describe publication order, not a runtime sequence.</p>
+              <details class="figure-reading"><summary>Read as text: all three waves</summary>
+                <ul>
+                  <li>Workflows defines specifications and work tracking. Factories coordinates coding agents and submits changes for Verification.</li>
+                  <li>Coding agents use or embed a Harness. Context supplies information to the harness. The harness calls Models directly or via an optional gateway; the AI gateway can also mediate tool access. Code tools run in a Sandbox when needed.</li>
+                  <li>Verification supplies evidence for Delivery's existing review and release gates; it does not automatically authorise a release.</li>
+                  <li>The Languages and AWS platform views link across all ten component references. They are indexes, not runtime services. Published references are linked; planned pages are not yet available.</li>
+                </ul>
+              </details>
+              <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand the component map</span></summary>
+                <div class="figure-scroll" tabindex="0" role="region" aria-label="Tech Scan component map across three waves; scroll horizontally to explore">
+                  <svg viewBox="0 0 760 980" role="img" aria-labelledby="coverage-map-title" aria-describedby="coverage-map-description">
+                    <title id="coverage-map-title">Tech Scan component coverage across three publication waves</title>
+                    <desc id="coverage-map-description">Workflows specifies work for Factories, which delegates coding to Coding agents and submits changes for Verification. Verification supplies evidence to Delivery. Coding agents use a Harness; Context supplies information to it. The harness calls Models directly or through an optional AI gateway, and code tools execute in a Sandbox when needed. Languages and AWS platform are cross-cutting views over all ten component references, not extra runtime services. Wave 1 is published; Waves 2 and 3 are planned. This is an illustrative responsibility map, not a deployment topology or mandatory execution sequence.</desc>
+                    <g data-from="workflows" data-to="factories">
+                      <path class="d-line" d="M220 110H280" marker-end="url(#arrow)"/>
+                      <text class="d-label" x="250" y="96" text-anchor="middle">specs</text>
+                    </g>
+                    <g data-from="factories" data-to="verification">
+                      <path class="d-line" d="M480 110H540" marker-end="url(#arrow)"/>
+                      <text class="d-label" x="510" y="96" text-anchor="middle">change</text>
+                    </g>
+                    <g data-from="verification" data-to="delivery">
+                      <path class="d-line" d="M640 160V250" marker-end="url(#arrow)"/>
+                      <text class="d-label" x="690" y="207" text-anchor="middle">evidence</text>
+                    </g>
+                    <g data-from="factories" data-to="agents">
+                      <path class="d-line" d="M380 160V250" marker-end="url(#arrow)"/>
+                      <text class="d-label" x="428" y="207" text-anchor="middle">delegates</text>
+                    </g>
+                    <g data-from="agents" data-to="harness">
+                      <path class="d-line" d="M380 350V440" marker-end="url(#arrow)"/>
+                      <text class="d-label" x="427" y="397" text-anchor="middle">uses loop</text>
+                    </g>
+                    <g data-from="context" data-to="harness">
+                      <path class="d-line" d="M220 490H280" marker-end="url(#arrow)"/>
+                      <text class="d-label" x="250" y="477" text-anchor="middle">context</text>
+                    </g>
+                    <g data-from="harness" data-to="gateway">
+                      <path class="d-line" d="M480 490H540" marker-end="url(#arrow)"/>
+                      <text class="d-label" x="510" y="464" text-anchor="middle">optional</text>
+                      <text class="d-label" x="510" y="479" text-anchor="middle">gateway</text>
+                    </g>
+                    <g data-from="gateway" data-to="models">
+                      <path class="d-line" d="M640 540V630" marker-end="url(#arrow)"/>
+                      <text class="d-label" x="683" y="581" text-anchor="middle">model</text>
+                      <text class="d-label" x="683" y="598" text-anchor="middle">calls</text>
+                    </g>
+                    <g data-from="harness" data-to="models">
+                      <path class="d-line" d="M480 510H510V680H540" marker-end="url(#arrow)"/>
+                      <text class="d-label" x="456" y="582" text-anchor="middle">direct model</text>
+                      <text class="d-label" x="456" y="600" text-anchor="middle">access</text>
+                    </g>
+                    <g data-from="harness" data-to="sandbox">
+                      <path class="d-line" d="M330 540V680H220" marker-end="url(#arrow)"/>
+                      <text class="d-label" x="285" y="590" text-anchor="middle">code tools</text>
+                    </g>
+                    <path class="d-line" d="M20 760V780H740V760" aria-hidden="true"/>
+                    <text class="d-label" x="380" y="770" text-anchor="middle">Both views link across the ten component references</text>
+                    <rect class="d-group" x="20" y="800" width="720" height="174" rx="10"/>
+                    <text class="d-title" x="380" y="824" text-anchor="middle">Cross-cutting views · Wave 3 planned</text>
+                    <text class="d-sub" x="380" y="846" text-anchor="middle">Link across all ten references above; do not duplicate product entries</text>
+                  <g id="coverage-workflows" data-component="workflows" data-wave="2" data-publication="planned" data-role="component">
+                    <rect class="d-planned" x="20" y="60" width="200" height="100" rx="8"/>
+                      <text class="d-title" x="120" y="89" text-anchor="middle">Workflows</text>
+                      <text class="d-sub" x="120" y="113" text-anchor="middle">Specs and work tracking</text>
+                      <text class="d-sub" x="120" y="136" text-anchor="middle">Wave 2 · planned</text>
+                  </g>
+                  <g id="coverage-factories" data-component="factories" data-wave="2" data-publication="planned" data-role="component">
+                    <rect class="d-planned" x="280" y="60" width="200" height="100" rx="8"/>
+                      <text class="d-title" x="380" y="89" text-anchor="middle">Factories</text>
+                      <text class="d-sub" x="380" y="113" text-anchor="middle">Issue-to-PR automation</text>
+                      <text class="d-sub" x="380" y="136" text-anchor="middle">Wave 2 · planned</text>
+                  </g>
+                  <g id="coverage-verification" data-component="verification" data-wave="3" data-publication="planned" data-role="component">
+                    <rect class="d-planned" x="540" y="60" width="200" height="100" rx="8"/>
+                      <text class="d-title" x="640" y="89" text-anchor="middle">Verification</text>
+                      <text class="d-sub" x="640" y="113" text-anchor="middle">Tests and evaluation</text>
+                      <text class="d-sub" x="640" y="136" text-anchor="middle">Wave 3 · planned</text>
+                  </g>
+                  <g id="coverage-delivery" data-component="delivery" data-wave="3" data-publication="planned" data-role="component">
+                    <rect class="d-planned" x="540" y="250" width="200" height="100" rx="8"/>
+                      <text class="d-title" x="640" y="279" text-anchor="middle">Delivery</text>
+                      <text class="d-sub" x="640" y="303" text-anchor="middle">Release gates and operations</text>
+                      <text class="d-sub" x="640" y="326" text-anchor="middle">Wave 3 · planned</text>
+                  </g>
+                  <g id="coverage-agents" data-component="agents" data-wave="2" data-publication="planned" data-role="component">
+                    <rect class="d-planned" x="280" y="250" width="200" height="100" rx="8"/>
+                      <text class="d-title" x="380" y="279" text-anchor="middle">Coding agents</text>
+                      <text class="d-sub" x="380" y="303" text-anchor="middle">Developer tools and coding</text>
+                      <text class="d-sub" x="380" y="326" text-anchor="middle">Wave 2 · planned</text>
+                  </g>
+                  <g id="coverage-harness" data-component="harness" data-wave="1" data-publication="published" data-role="component">
+                    <a href="tech-scan-harness.html" aria-label="Open the published Harness reference">
+                      <rect class="d-node" x="280" y="440" width="200" height="100" rx="8"/>
+                      <text class="d-title" x="380" y="469" text-anchor="middle">Harness</text>
+                      <text class="d-sub" x="380" y="493" text-anchor="middle">Agent loop and state</text>
+                      <text class="d-sub" x="380" y="516" text-anchor="middle">Wave 1 · published</text>
+                    </a>
+                  </g>
+                  <g id="coverage-context" data-component="context" data-wave="3" data-publication="planned" data-role="component">
+                    <rect class="d-planned" x="20" y="440" width="200" height="100" rx="8"/>
+                      <text class="d-title" x="120" y="469" text-anchor="middle">Context</text>
+                      <text class="d-sub" x="120" y="493" text-anchor="middle">Retrieval and source access</text>
+                      <text class="d-sub" x="120" y="516" text-anchor="middle">Wave 3 · planned</text>
+                  </g>
+                  <g id="coverage-gateway" data-component="gateway" data-wave="1" data-publication="published" data-role="component">
+                    <a href="tech-scan-gateway.html" aria-label="Open the published AI gateway reference">
+                      <rect class="d-node" x="540" y="440" width="200" height="100" rx="8"/>
+                      <text class="d-title" x="640" y="469" text-anchor="middle">AI gateway</text>
+                      <text class="d-sub" x="640" y="493" text-anchor="middle">Model and tool mediation</text>
+                      <text class="d-sub" x="640" y="516" text-anchor="middle">Wave 1 · published</text>
+                    </a>
+                  </g>
+                  <g id="coverage-sandbox" data-component="sandbox" data-wave="1" data-publication="published" data-role="component">
+                    <a href="tech-scan-sandbox.html" aria-label="Open the published Sandbox reference">
+                      <rect class="d-node" x="20" y="630" width="200" height="100" rx="8"/>
+                      <text class="d-title" x="120" y="659" text-anchor="middle">Sandbox</text>
+                      <text class="d-sub" x="120" y="683" text-anchor="middle">Code execution boundary</text>
+                      <text class="d-sub" x="120" y="706" text-anchor="middle">Wave 1 · published</text>
+                    </a>
+                  </g>
+                  <g id="coverage-models" data-component="models" data-wave="1" data-publication="published" data-role="component">
+                    <a href="tech-scan-models.html" aria-label="Open the published Models reference">
+                      <rect class="d-node" x="540" y="630" width="200" height="100" rx="8"/>
+                      <text class="d-title" x="640" y="659" text-anchor="middle">Models</text>
+                      <text class="d-sub" x="640" y="683" text-anchor="middle">Capabilities and access</text>
+                      <text class="d-sub" x="640" y="706" text-anchor="middle">Wave 1 · published</text>
+                    </a>
+                  </g>
+                  <g id="coverage-languages" data-component="languages" data-wave="3" data-publication="planned" data-role="view" data-references="models harness gateway sandbox workflows factories agents context verification delivery">
+                    <rect class="d-boundary" x="40" y="866" width="320" height="88" rx="8"/>
+                      <text class="d-title" x="200" y="895" text-anchor="middle">Languages</text>
+                      <text class="d-sub" x="200" y="919" text-anchor="middle">Java · TypeScript/React · Python</text>
+                      <text class="d-sub" x="200" y="942" text-anchor="middle">Wave 3 · planned</text>
+                  </g>
+                  <g id="coverage-aws-platform" data-component="aws-platform" data-wave="3" data-publication="planned" data-role="view" data-references="models harness gateway sandbox workflows factories agents context verification delivery">
+                    <rect class="d-boundary" x="400" y="866" width="320" height="88" rx="8"/>
+                      <text class="d-title" x="560" y="895" text-anchor="middle">AWS platform</text>
+                      <text class="d-sub" x="560" y="919" text-anchor="middle">Services · identity · Regions</text>
+                      <text class="d-sub" x="560" y="942" text-anchor="middle">Wave 3 · planned</text>
+                  </g>
+                  </svg>
+                </div>
+                <p class="diagram-key">Wave labels show publication coverage, not product maturity. Blue nodes link to the four published references; amber nodes are planned. The two outlined views are indexes, not runtime services. Arrows show illustrative responsibility links, not request order or a requirement to deploy every component as a separate service.</p>
+              </details>
+            </figure>
           </details>
         </section>
         <section id="cross-cutting-views">
