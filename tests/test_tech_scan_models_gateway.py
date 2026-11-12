@@ -82,7 +82,7 @@ class ModelsGatewayTests(unittest.TestCase):
         research = by_id(doc, "research-only")
         claim = paragraph(research, "Box is opt-in and not production-ready.")
         self.assert_cited(claim, 10)
-        self.assertIn("Product GA does not make this feature production-ready.",
+        self.assertIn("Jev itself is in public beta, not GA, and Box is a preview feature on top of that: neither the product's status nor the feature's status makes Box production-ready.",
                       normalise(claim.text()))
         source = by_id(doc, "source-10")
         self.assertEqual(next(source.elements("a")).attrs["href"],
@@ -243,7 +243,7 @@ class ModelsGatewayTests(unittest.TestCase):
                 self.assert_inherited_contract("models", broken)
 
     def test_sources_stay_final_visible_and_citation_numbers_follow_list_order(self):
-        for page, count in [("models", 10), ("gateway", 20)]:
+        for page, count in [("models", 10), ("gateway", 21)]:
             with self.subTest(page=page):
                 doc = document(page)
                 source = by_id(doc, "sources")

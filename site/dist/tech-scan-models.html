@@ -181,7 +181,7 @@
         <section id="research-only">
           <h2>Research-only notes</h2>
           <p>A typed decision returns an answer in a fixed form that software can check. A fixed output shape does not establish accuracy or calibrated confidence. TypeSafe Jev, discussed as System One in Concepts, remains educational material rather than an approved deployment choice.<a href="#source-2" aria-label="Source 2: AI-SDLC Playbook, Concepts">[2]</a></p>
-          <p>TypeSafe's Box is opt-in and not production-ready. Product GA does not make this feature production-ready. The current documentation calls images and Box “Dreamer-ready” and requires the <code>TypeSafe-Danger-Zone-Images: true</code> header; request formats, limits and accuracy can change.<a href="#source-10" aria-label="Source 10: TypeSafe, Box">[10]</a></p>
+          <p>TypeSafe's Box is opt-in and not production-ready. Jev itself is in public beta, not GA, and Box is a preview feature on top of that: neither the product's status nor the feature's status makes Box production-ready. The current documentation calls images and Box “Dreamer-ready” and requires the <code>TypeSafe-Danger-Zone-Images: true</code> header; request formats, limits and accuracy can change.<a href="#source-10" aria-label="Source 10: TypeSafe, Box">[10]</a></p>
           <p>Choice, Score, Noul and Box are TypeSafe's question names, not a universal API vocabulary. The survey uses them to compare decision models:<a href="#source-9" aria-label="Source 9: S5 Labs, Open decision models: Clef, d1, Jev">[9]</a></p>
           <ul>
             <li><strong>Choice:</strong> pick one option from a labelled set.</li>
@@ -196,7 +196,7 @@
                     <tr>
             <td>TypeSafe Jev (System One)</td>
             <td>Hosted typed-decision model: Choice, Score, Noul, Box</td>
-            <td>Product launched 15 September 2026; Box is not production-ready</td>
+            <td>Launched 15 September 2026 in early access / public beta — no GA, no public SLA. Box arrived in Jev 1.14 (14 October 2026), 1.14-only, behind the <code>TypeSafe-Danger-Zone-Images: true</code> header; preview, not production-ready. A Box answer is always a box (no “not found”), so pair a Box question with a Noul existence check and ignore the box when the Noul answer is low.</td>
             <td>Educational material only</td>
           </tr>
                     <tr>
@@ -224,8 +224,8 @@
                     <tr>
             <td>Self-hosted inference (vLLM, Ollama)</td>
             <td>Serves model weights on your own infrastructure</td>
-            <td>GA</td>
-            <td>Do not use: no model-weight hosting infrastructure is needed</td>
+            <td>Open-source projects (versioned releases) — no GA service</td>
+            <td>Do not use on this route: no model-weight hosting infrastructure is needed, and self-hosting is a separate decision with its own qualification.</td>
           </tr>
                     <tr>
             <td>Amazon SageMaker fine-tuning and model import</td>
@@ -252,7 +252,7 @@
             <li><strong>Model availability changes.</strong> A model listed today may later be retired or have its endpoint changed, so re-confirm the exact endpoint, region and features at adoption time rather than relying on this page's listing.<a href="#source-3" aria-label="Source 3: AWS, Amazon Bedrock OpenAI model cards">[3]</a></li>
           </ul>
 
-          <p>To close the typed-decision gap, establish the required API and feature maturity on an approved route, then assess it on the intended task. This gap does not mean approved multimodal models cannot locate objects; it concerns a suitable typed-decision interface, not visual grounding as a whole.</p>
+          <p>To close the typed-decision gap, establish a production-ready, qualified Box model on an approved (Bedrock) route, or Bedrock support for <code>/decisions</code>, then assess it on the intended task. This gap does not mean approved multimodal models cannot locate objects; it concerns a suitable typed-decision interface, not visual grounding as a whole.</p>
           <p class="next-step"><strong>Next step:</strong> Record the chosen model, endpoint, task results and unresolved failures before adoption. Use the <a href="tech-scan-harness.html">Harness reference</a> to choose how the agent runs; existing approval and release authority still applies.</p>
         </section>
         <section id="sources">
@@ -267,7 +267,7 @@
             <li id="source-6"><a href="https://developers.openai.com/api/docs/guides/decisions">OpenAI, Decisions API</a>. Documents the Decisions API as generally available with gpt-6-luna and native predicate, choice and score answers, with no Box question documented. The predicate naming is explained in source 9. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#gaps">Gaps and open questions</a>.</li>
             <li id="source-7"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/models-api-compatibility.html">AWS, Amazon Bedrock models API compatibility</a>. Used to establish that Bedrock support for /decisions is not established. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#gaps">Gaps and open questions</a>.</li>
             <li id="source-8"><a href="https://docs.aws.amazon.com/claude-platform/latest/userguide/feature-support.html">AWS, Claude Platform on AWS feature support</a>. Identifies Claude Platform on AWS as a third-party offering outside standard AWS compliance programmes. Used in <a href="#conditional-alternatives">Conditional alternatives</a> and <a href="#gaps">Gaps and open questions</a>.</li>
-            <li id="source-9"><a href="https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/">S5 Labs, Open decision models: Clef, d1, Jev</a>. Decision-model survey updated 23 October 2026, covering Jev, Strands Decider 2B and Cloudflare Clef. Used in <a href="#conditional-alternatives">Conditional alternatives</a>, <a href="#research-only">Research-only notes</a> and <a href="#gaps">Gaps and open questions</a>.</li>
+            <li id="source-9"><a href="https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/">S5 Labs, Open decision models: Clef, d1, Jev</a>. Decision-model survey updated 23 October 2026, covering Jev, Cloudflare Clef/Clef-flash, Liquid d1-3B and OpenAI Decisions, plus the 23 October update (vLLM d3, Perplexity pplx-decider). Strands Decider 2B is not covered. Used in <a href="#conditional-alternatives">Conditional alternatives</a>, <a href="#research-only">Research-only notes</a> and <a href="#gaps">Gaps and open questions</a>.</li>
             <li id="source-10"><a href="https://docs.typesafe.ai/primitives/box">TypeSafe, Box</a>. Documents visual-grounding answers and the opt-in images header. Box and images are labelled “Dreamer-ready”, not ready for production; formats, limits and accuracy can change. Used in <a href="#research-only">Research-only notes</a> and <a href="#gaps">Gaps and open questions</a>.</li>
           </ol>
         </section>

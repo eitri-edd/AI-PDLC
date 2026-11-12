@@ -160,7 +160,7 @@
             <li>No snapshot, pause and resume with memory, live migration, or in-place resize</li>
             <li>No published cold-start numbers, performance figures or service-level agreement (SLA)</li>
           </ul>
-          <p>The initial research reports an approximately two-second warm-pool start for the Kubernetes Special Interest Group (SIG) <code>agent-sandbox</code> project. Treat that as a reported example, not an independent or local performance measurement.</p>
+          <p>AWS's Nitro Sandboxes launch blog (9 November 2026) says a warm pool built on the Kubernetes Special Interest Group (SIG) <code>agent-sandbox</code> project keeps pre-booted VMs ready to claim in about two seconds;<a href="#source-2" aria-label="Source 2: AWS Containers Blog, AWS Nitro Sandboxes">[2]</a> the SIG project's own announcement claims warm-pool claims reduce cold start to less than one second. Treat both as vendor or project claims, not a local measurement.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="The four AWS sandbox primitives">
             <table>
               <caption>The four AWS sandbox primitives — do not confuse them</caption>
@@ -208,7 +208,7 @@
                 <thead><tr><th scope="col">Candidate</th><th scope="col">Research lead</th><th scope="col">What remains to establish</th></tr></thead>
                 <tbody>
                   <tr><td>E2B</td><td>A sandbox API and reusable templates, named in the earlier comparison.<a href="#source-4" aria-label="Source 4: Qovery, AWS Nitro Sandboxes vs Daytona and E2B">[4]</a></td><td>Current primary self-hosting instructions, AWS support status, licence and supported isolation deployment; a comparison article does not prove a nesting contract.</td></tr>
-                  <tr><td>Perplexity SPACE</td><td>The repository is the starting point for an AWS deployment and API review; the initial research records its open-source publication on 15 October 2026.<a href="#source-9" aria-label="Source 9: Perplexity, SPACE repository">[9]</a></td><td>Current release and licence, lifecycle operations, egress enforcement and credential handling in the selected deployment; publication is not independent operating evidence.</td></tr>
+                  <tr><td>Perplexity SPACE</td><td>Pre-1.0 (v0.8.0 public baseline per <code>docs/versioning.md</code>; 0.9.0 planned as the last breaking release before 1.0; no tagged release as of October 2026). Apache-2.0; open-sourced 15 October 2026. The repository is the starting point for an AWS deployment and API review.<a href="#source-9" aria-label="Source 9: Perplexity, SPACE repository">[9]</a></td><td>Current release and licence, lifecycle operations, egress enforcement and credential handling in the selected deployment; publication is not independent operating evidence.</td></tr>
                 </tbody>
               </table>
             </div>
@@ -233,7 +233,8 @@
           </ul>
           <details>
             <summary>Historical lifecycle warnings to recheck</summary>
-            <p>The initial research flagged Daytona OSS and Sysbox, reporting archive, licence or compatibility concerns.<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a> Those reports are not sufficient current primary-source evidence for a blanket retirement label. Check the exact repository, version, licence and support notice before extending an inherited deployment.</p>
+            <p>Sysbox is slow-moving and community-maintained, not retired: v0.7.1 shipped 28 July 2026, adding support on Ubuntu 24.04 with kernel 6.8+ under containerd 2.x (v0.7.0, 2 March 2025, already added Kubernetes 1.33–1.35 and containerd 2.0.5+). Check the current release before extending an inherited deployment.</p>
+            <p>The initial research flagged Daytona OSS; it was archived (frozen at v0.190.0, AGPL-3.0), so do not build on it.</p>
             <p>The same issue reports a September 2026 red-team comparison finding network-policy bypasses in 7 of 9 tested platforms. Without its primary report and deployment conditions, treat it as an investigation lead, not an established failure rate for the category.<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a></p>
           </details>
         </section>
