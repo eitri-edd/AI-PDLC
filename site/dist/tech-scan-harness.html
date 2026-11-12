@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="What runs the agent: the managed harness, the loop frameworks, memory, durable execution and observability around it.">
+  <title>Tech Scan: Harness · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
+          <div class="nav-children">
+            <a href="tech-scan-models.html">Models</a>
+            <a href="tech-scan-harness.html" aria-current="page">Harness</a>
+            <a href="tech-scan-gateway.html">AI gateway</a>
+            <a href="tech-scan-sandbox.html">Sandbox</a>
+          </div>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Tech Scan: Harness</span></nav>
+        <header class="article-header">
+          <p class="eyebrow">Development guide</p>
+          <h1>Tech Scan: Harness</h1>
+          <p class="lead">What should carry a task between model calls, and when does it need more than the managed harness? Compare the loop, tools, memory and checks without assembling an unnecessary stack.</p>
+          <p id="tech-scan-note">Draft research reference from web sources reviewed 11–12 November 2026; not locally deployed or benchmarked. For the underlying explanation, read <a href="concept.html#harness-engineering">Concepts: harness engineering</a>.</p>
+        </header>
+
+        <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
+          <figcaption id="page-map-caption">This page at a glance</figcaption>
+          <p id="page-map-note" class="page-map-note">Start with the managed default, then the alternatives for behaviour it cannot express, and finish with what not to use and what is still open.</p>
+          <ol class="page-map-nodes" role="list">
+            <li class="page-map-node"><strong>Start here</strong><div class="page-map-links"><a href="#purpose">What needs to run the agent?</a></div></li>
+            <li class="page-map-node"><strong>The default</strong><div class="page-map-links"><a href="#aws-first-default">Start with the managed harness</a></div></li>
+            <li class="page-map-node"><strong>Alternatives</strong><div class="page-map-links"><a href="#conditional-alternatives">When configuration is not enough</a><a href="#research-only">Separate discovery from permission</a></div></li>
+            <li class="page-map-node"><strong>Limits</strong><div class="page-map-links"><a href="#do-not-use">Check inherited integrations before extending them</a><a href="#gaps">What to establish before adoption</a></div></li>
+          </ol>
+        </figure>
+        <details class="mobile-contents">
+          <summary>On this page</summary>
+          <nav aria-label="On this page"><a href="#purpose">What needs to run the agent?</a>
+<a href="#aws-first-default">Start with the managed harness</a>
+<a href="#conditional-alternatives">When configuration is not enough</a>
+<a href="#research-only">Separate discovery from permission</a>
+<a href="#do-not-use">Check inherited integrations before extending them</a>
+<a href="#gaps">What to establish before adoption</a>
+<a href="#sources">Sources</a></nav>
+        </details>
+        <section id="purpose">
+          <h2>What needs to run the agent?</h2>
+          <p>Choose the software that carries a task between model calls, supplies tools and checks the result. For an AWS workload, begin with the managed harness and add a separate component only for a requirement it cannot meet. The <a href="concept.html#harness-engineering">harness explanation in Concepts</a> describes how these responsibilities fit together.<a href="#source-1" aria-label="Source 1: Eitri EDD, AI-SDLC Playbook: Concepts">[1]</a></p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Harness responsibilities table">
+            <table>
+              <caption>Responsibilities to check before adding another product</caption>
+              <thead><tr><th scope="col">Responsibility</th><th scope="col">Starting point on AWS</th><th scope="col">Reason to investigate more</th></tr></thead>
+              <tbody>
+                <tr><td>State and loop</td><td>AgentCore managed harness</td><td>A required pause, transition or recovery path cannot be configured</td></tr>
+                <tr><td>Tools and authorisation</td><td>Explicit tool selectors; AgentCore Gateway and Policy for calls routed through it</td><td>A tool needs custom execution or an authorisation integration</td></tr>
+                <tr><td>Context</td><td>Task instructions and repository files; Bedrock Knowledge Bases when retrieval is needed</td><td>The task needs information absent from its supplied context</td></tr>
+                <tr><td>Memory</td><td>Session state; investigate AgentCore Memory for retained recall</td><td>A defined recall and retention requirement exceeds session state</td></tr>
+                <tr><td>Evaluation</td><td>Task-specific test cases; assess AgentCore Evaluations</td><td>The scoring or review workflow needs another implementation</td></tr>
+                <tr><td>Observability</td><td>CloudWatch and AgentCore Observability</td><td>Required traces, cost attribution or investigation workflows are missing</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The managed harness supplies the loop and tools; its configuration still needs explicit boundaries.<a href="#source-4" aria-label="Source 4: AWS, Amazon Bedrock AgentCore developer guide: Harness">[4]</a><a href="#source-25" aria-label="Source 25: AWS, Harness tools">[25]</a> Retrieval can use Bedrock Knowledge Bases through an AgentCore Gateway connector when needed, rather than becoming a compulsory component of every harness.<a href="#source-12" aria-label="Source 12: AWS, Amazon Bedrock user guide: Knowledge bases">[12]</a><a href="#source-13" aria-label="Source 13: AWS, Amazon Bedrock AgentCore developer guide: Gateway target connector, managed knowledge base">[13]</a></p>
+          <p>The MCP Registry supplies discovery metadata, not a replacement for AgentCore Gateway: finding a server does not execute or authorise its tools.<a href="#source-27" aria-label="Source 27: Model Context Protocol, About the MCP Registry">[27]</a> Gateway Policy governs calls through that gateway.<a href="#source-11" aria-label="Source 11: AWS, Amazon Bedrock AgentCore developer guide: Policy">[11]</a> OPA needs an enforcement integration for runtime decisions; Conftest tests structured configuration. Neither is a drop-in Gateway Policy replacement.<a href="#source-30" aria-label="Source 30: Open Policy Agent, Integrating OPA">[30]</a><a href="#source-31" aria-label="Source 31: Conftest, Overview">[31]</a></p>
+          <p>What this page does not cover:</p>
+          <ul>
+            <li>Model choice (<a href="tech-scan-models.html">Tech Scan: Models</a>)</li>
+            <li>Retrieval detail (Tech Scan: Context, planned)</li>
+            <li>The execution sandbox (<a href="tech-scan-sandbox.html">Tech Scan: Sandbox</a>)</li>
+            <li>Gateway routing (<a href="tech-scan-gateway.html">Tech Scan: Gateway</a>)</li>
+          </ul>
+          <p>Each is a separate spoke.</p>
+        </section>
+        <section id="aws-first-default">
+          <h2>Start with the managed harness</h2>
+          <p>Start with the AgentCore managed harness: a config-based, Strands-powered harness with an explicit approved model, individually allowed tools and bounded execution.<a href="#source-4" aria-label="Source 4: AWS, Amazon Bedrock AgentCore developer guide: Harness">[4]</a><a href="#source-5" aria-label="Source 5: AWS, Amazon Bedrock AgentCore developer guide: Harness models">[5]</a> AWS records its general availability in July 2026.<a href="#source-6" aria-label="Source 6: AWS, Amazon Bedrock AgentCore developer guide: Release notes">[6]</a> Use managed Claude or OpenAI models through Bedrock; direct provider APIs are exceptions for a specific capability or approved-region gap, not the assumed route. Managed defaults can evolve, so default behaviour is not an immutable model or tool policy — record the exact model, tools and permissions you approved, and review them when the default changes.</p>
+          <p>For repository coding, use the managed harness's built-in shell and filesystem tools to read, write and edit files. Prepare the environment to clone a repository, run tests and commit changes; install tools such as git or use a custom image when required.<a href="#source-25" aria-label="Source 25: AWS, Harness tools">[25]</a><a href="#source-26" aria-label="Source 26: AWS, Harness environment and filesystem">[26]</a> Code Interpreter is optional for Python, JavaScript or TypeScript data analysis and computation. Add Browser only for a specific browsing task.<a href="#source-25" aria-label="Source 25: AWS, Harness tools">[25]</a> The sandbox must hold six trust rules:<a href="#source-7" aria-label="Source 7: AWS, Amazon Bedrock AgentCore developer guide: Harness security">[7]</a></p>
+          <ul>
+            <li>Separate trust domains</li>
+            <li>Minimal execution roles</li>
+            <li>Explicit outbound enforcement</li>
+            <li>Approved dependencies</li>
+            <li>Protected credentials</li>
+            <li>Authenticated session ownership</li>
+          </ul>
+          <p>Runtime Instances are not equivalent to per-session microVM compute: co-resident agents in an Instances session share a filesystem and can access each other's execution-role credentials.<a href="#source-8" aria-label="Source 8: AWS, Amazon Bedrock AgentCore developer guide: Runtime Instances security">[8]</a> Gateway policy governs traffic through the Gateway, not arbitrary shell networking. VPC attachment alone is not evidence of package-only egress — network access limited to approved package registries — or secret denial.<a href="#source-7" aria-label="Source 7: AWS, Amazon Bedrock AgentCore developer guide: Harness security">[7]</a></p>
+          <p>Use Step Functions when an outer workflow needs any of these:<a href="#source-9" aria-label="Source 9: AWS, Step Functions developer guide: Connect to Amazon Bedrock AgentCore">[9]</a></p>
+          <ul>
+            <li>Explicit sequencing</li>
+            <li>Retries</li>
+            <li>Parallel checks</li>
+            <li>Independently authorised human decisions</li>
+          </ul>
+          <p>Keep that workflow separate from the model's per-turn tool loop. A framework implements that loop in application code; AgentCore Runtime is hosting for agent code, not a model-serving endpoint. The managed harness supplies an implementation so you need not start by assembling a framework.<a href="#source-4" aria-label="Source 4: AWS, Amazon Bedrock AgentCore developer guide: Harness">[4]</a></p>
+          <p>The optimised Step Functions InvokeHarness task is request/response only, has a 15-minute task limit and does not support task-token callbacks; a timeout does not automatically cancel the harness.<a href="#source-9" aria-label="Source 9: AWS, Step Functions developer guide: Connect to Amazon Bedrock AgentCore">[9]</a><a href="#source-10" aria-label="Source 10: AWS, Step Functions developer guide: Connect to resources">[10]</a> This is an integration limit, not a general absence of AgentCore approval support. Inline functions provide a human-in-the-loop pattern: the harness pauses at the tool call, returns it to client code and waits for a result. The application still implements the authorised decision and resume path.<a href="#source-25" aria-label="Source 25: AWS, Harness tools">[25]</a></p>
+        </section>
+        <section id="conditional-alternatives">
+          <h2>When configuration is not enough</h2>
+          <p>Write down the missing behaviour before choosing a framework. Compare the same task, approval boundary and recovery case with the managed harness; a language preference alone does not establish that another runtime is needed.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Framework investigation choices">
+            <table>
+              <caption>Different reasons to investigate application code</caption>
+              <thead><tr><th scope="col">Candidate and responsibility</th><th scope="col">Trigger</th><th scope="col">Evidence and limit</th></tr></thead>
+              <tbody>
+                <tr><td>LangGraph — stateful orchestration</td><td>A required graph transition or recovery path cannot be configured</td><td>Thomson Reuters reports a LangGraph orchestrator using AgentCore; a customer-coauthored case, not an independent benchmark.<a href="#source-14" aria-label="Source 14: AWS Machine Learning Blog, How Thomson Reuters built an agentic platform engineering hub with Amazon Bedrock AgentCore">[14]</a></td></tr>
+                <tr><td>AI SDK — TypeScript agent loop</td><td>The application needs code-level loop and context control in TypeScript</td><td>ToolLoopAgent supports tool loops, context management and server-side state; assess persistence and recovery for the intended task.<a href="#source-28" aria-label="Source 28: AI SDK, Agents overview">[28]</a></td></tr>
+                <tr><td>OpenHands — coding-agent application</td><td>The requirement is an existing coding-agent workflow rather than a loop library</td><td>The upstream repository describes the application; deployment and tool permissions still need qualification.<a href="#source-15" aria-label="Source 15: All-Hands AI, OpenHands">[15]</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Using the AI SDK library does not require Vercel hosting. Its Amazon Bedrock provider can call Bedrock from the application's AWS environment; this library choice does not add a non-AWS cloud route.<a href="#source-29" aria-label="Source 29: AI SDK, Amazon Bedrock provider">[29]</a> Keep the approved model and individually allowed tools explicit whichever library supplies the loop.</p>
+          <p>Keep evaluation separate from telemetry. Define representative task cases and expected outcomes, then check whether the managed evaluation workflow fits them. For tracing, begin with CloudWatch and AgentCore Observability; Coding Agent Insights dashboards depend on expected telemetry names and resource attributes.<a href="#source-16" aria-label="Source 16: AWS, Amazon Bedrock AgentCore developer guide: Harness operations">[16]</a><a href="#source-17" aria-label="Source 17: AWS, Amazon CloudWatch user guide: Coding Agent Insights">[17]</a></p>
+          <details>
+            <summary>Additional candidates: open after identifying a missing responsibility</summary>
+            <p>The initial research named the following candidates. They are a shortlist for further research, not distinct recommendations: the evidence does not discriminate between products with the same trigger. Verify the current licence, release, deployment contract and AWS operating model before selecting a candidate.<a href="#source-22" aria-label="Source 22: GitHub issue 54, Tech Scan proposal and deep-research update">[22]</a></p>
+            <ul>
+              <li><strong>Loop libraries and frameworks:</strong> Strands Agents, CrewAI, Mastra, Pydantic AI, SmolAgents, Agno and LlamaIndex Workflows. Compare the required language, tool execution and state transitions rather than unmeasured speed or size rankings.</li>
+              <li><strong>Memory:</strong> Mem0, Letta and Graphiti. Specify what is retained, how time affects recall, deletion and tenant separation before comparing them with AgentCore Memory.</li>
+              <li><strong>Durable execution:</strong> Temporal, Inngest, Trigger.dev, Hatchet, Restate, DBOS and Prefect. Compare restart, duplicate-delivery, cancellation and approval-resume behaviour; a shared promise of long-running work is not a selection criterion.</li>
+              <li><strong>Evaluation and observability:</strong> Langfuse, Braintrust, Maxim AI and Arize Phoenix. Compare scoring, trace export, access controls and retention against the missing workflow.</li>
+            </ul>
+            <p>Langfuse supplies AWS deployment documentation and reports an ECS Fargate deployment for its own application.<a href="#source-18" aria-label="Source 18: Langfuse, Self-hosting: Deploy on AWS">[18]</a><a href="#source-20" aria-label="Source 20: Langfuse, Handbook: Infrastructure on ECS">[20]</a> Its official Terraform module describes EKS/Fargate, a different deployment path.<a href="#source-19" aria-label="Source 19: Langfuse, langfuse-terraform-aws">[19]</a> Self-hosted software, a vendor's managed service and its own infrastructure are different evidence; none establishes the intended account's operating results.</p>
+            <p>Zep's 2 April 2025 announcement explains its shift from Community Edition to Graphiti; it is a migration context, not proof that Graphiti meets a new workload.<a href="#source-23" aria-label="Source 23: Zep, Announcing a New Direction for Zep's Open Source Strategy">[23]</a> A secondary report about Trigger.dev's hosted tier is retained in its source entry; obtain the vendor's current advisory before using it for an adoption decision.<a href="#source-24" aria-label="Source 24: The AI News Report, Trigger.dev's environment variable exposure, explained">[24]</a></p>
+          </details>
+        </section>
+        <section id="research-only">
+          <h2>Separate discovery from permission</h2>
+          <p>Use the official MCP Registry to find server metadata, then review the actual server, tool schemas, authentication and deployment. Its current documentation labels the registry preview and warns of breaking changes or data resets before general availability. Listing a server does not make its tools trusted or approved.<a href="#source-27" aria-label="Source 27: Model Context Protocol, About the MCP Registry">[27]</a> The earlier third-party comparison of Glama, Smithery and Mintlify is retained as research history, not a required vetting layer or an automatic migration instruction.<a href="#source-21" aria-label="Source 21: AgentsOpsGuide, Smithery vs Glama vs official MCP Registry">[21]</a></p>
+        </section>
+        <section id="do-not-use">
+          <h2>Check inherited integrations before extending them</h2>
+          <p>The initial research flagged AutoGen, Semantic Kernel, OpenAI Assistants API and LangChain AgentExecutor for lifecycle review.<a href="#source-22" aria-label="Source 22: GitHub issue 54, Tech Scan proposal and deep-research update">[22]</a> Those issue-level reports are not current primary-source lifecycle evidence. Before extending an inherited integration, check its upstream support notice, supported replacement and migration constraints; do not infer that every product in the group is retired.</p>
+        </section>
+        <section id="gaps">
+          <h2>What to establish before adoption</h2>
+          <p>Ask the implementing engineer to run a representative repository task in the intended account. Retain the exact model, tool selectors, role permissions, environment image, task result, traces and full cost. Recheck those boundaries when a managed default changes.</p>
+          <ul>
+            <li>Revoke a permission and confirm that the prohibited tool action fails.</li>
+            <li>Exercise a timeout, retry and restart; inspect duplicate side effects and cancellation.</li>
+            <li>Pause for an authorised human decision and confirm that denial does not resume the action.</li>
+          </ul>
+          <p>For work beyond the InvokeHarness task limit, define how the outer workflow starts, observes and cancels the job. Exercise an inline-function approval separately from a Step Functions callback; the two resume paths are not interchangeable.</p>
+          <p class="next-step">Next, compare the recorded results with the task's requirements and unresolved failures. Use <a href="tech-scan-sandbox.html">Tech Scan: Sandbox</a> to qualify execution boundaries; a functioning harness does not authorise release.</p>
+        </section>
+        <section id="sources">
+          <h2>Sources</h2>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-12">12 November 2026</time>.</p>
+          <ol class="source-list">
+            <li id="source-1"><a href="https://github.com/eitri-edd/AI-PDLC/blob/f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79/site/dist/concept.html">Eitri EDD, AI-SDLC Playbook: Concepts</a>. Revision f1ed9b1; the guide's six-part harness grouping. Used in <a href="#purpose">What needs to run the agent?</a>.</li>
+            <li id="source-2"><a href="https://automater.ai/intel/harness-engineering/">Automater, Harness engineering</a>. Earlier taxonomy reference. This page compares responsibilities rather than adopting a fixed six-pillar standard.</li>
+            <li id="source-3"><a href="https://www.heyuan110.com/posts/ai/2026-04-18-harness-six-layers-reverse-build/">heyuan110.com, Harness six layers (reverse build)</a>. Earlier six-layer framing and a reported 60-day stability claim; not a benchmark or the basis of the current product choices.</li>
+            <li id="source-4"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md">AWS, Amazon Bedrock AgentCore developer guide: Harness</a>. Config-based, Strands-powered managed harness. Used in <a href="#aws-first-default">Start with the managed harness</a> and <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-5"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-models.html">AWS, Amazon Bedrock AgentCore developer guide: Harness models</a>. Approved-model configuration for the managed harness. Used in <a href="#aws-first-default">Start with the managed harness</a>.</li>
+            <li id="source-6"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.md">AWS, Amazon Bedrock AgentCore developer guide: Release notes</a>. Records the managed harness general availability in July 2026. Used in <a href="#aws-first-default">Start with the managed harness</a>.</li>
+            <li id="source-7"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-security.html">AWS, Amazon Bedrock AgentCore developer guide: Harness security</a>. Trust boundaries, Gateway policy scope and VPC attachment limits. Used in <a href="#aws-first-default">Start with the managed harness</a>.</li>
+            <li id="source-8"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-instances-security.md">AWS, Amazon Bedrock AgentCore developer guide: Runtime Instances security</a>. Co-resident agents in an Instances session share a filesystem and execution-role credentials. Used in <a href="#aws-first-default">Start with the managed harness</a>.</li>
+            <li id="source-9"><a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrockagentcore.html">AWS, Step Functions developer guide: Connect to Amazon Bedrock AgentCore</a>. Outer workflow sequencing and the InvokeHarness task. Used in <a href="#aws-first-default">Start with the managed harness</a>.</li>
+            <li id="source-10"><a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html">AWS, Step Functions developer guide: Connect to resources</a>. Service-integration behaviour behind the InvokeHarness limits. Used in <a href="#aws-first-default">Start with the managed harness</a>.</li>
+            <li id="source-11"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html">AWS, Amazon Bedrock AgentCore developer guide: Policy</a>. Cedar policy for Gateway tool authorisation. Used in <a href="#purpose">What needs to run the agent?</a> and <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-12"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html">AWS, Amazon Bedrock user guide: Knowledge bases</a>. Managed retrieval for context assembly. Used in <a href="#purpose">What needs to run the agent?</a>.</li>
+            <li id="source-13"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-managed-kb.md">AWS, Amazon Bedrock AgentCore developer guide: Gateway target connector, managed knowledge base</a>. Bedrock Knowledge Bases exposed through AgentCore Gateway. Used in <a href="#purpose">What needs to run the agent?</a>.</li>
+            <li id="source-14"><a href="https://aws.amazon.com/blogs/machine-learning/how-thomson-reuters-built-an-agentic-platform-engineering-hub-with-amazon-bedrock-agentcore">AWS Machine Learning Blog, How Thomson Reuters built an agentic platform engineering hub with Amazon Bedrock AgentCore</a>. Customer-coauthored operational case; reported customer evidence, not an independently audited benchmark. Used in <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-15"><a href="https://github.com/All-Hands-AI/OpenHands">All-Hands AI, OpenHands</a>. Open-source coding-agent repository. Used in <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-16"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-operations.html">AWS, Amazon Bedrock AgentCore developer guide: Harness operations</a>. Harness observability and operations. Used in <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-17"><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/coding-agents-insights.html">AWS, Amazon CloudWatch user guide: Coding Agent Insights</a>. Ready-made dashboards for Claude Code and Codex, dependent on expected telemetry names and resource attributes. Used in <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-18"><a href="https://langfuse.com/self-hosting/deployment/aws">Langfuse, Self-hosting: Deploy on AWS</a>. Official AWS deployment documentation. Used in <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-19"><a href="https://github.com/langfuse/langfuse-terraform-aws">Langfuse, langfuse-terraform-aws</a>. Official Terraform module; provisions EKS/Fargate. Used in <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-20"><a href="https://langfuse.com/handbook/product-engineering/infrastructure/ecs">Langfuse, Handbook: Infrastructure on ECS</a>. The vendor's report of using ECS Fargate for its own application. Used in <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-21"><a href="https://agentopsguide.com/smithery-vs-glama-vs-official-mcp-registry/">AgentsOpsGuide, Smithery vs Glama vs official MCP Registry</a>. Third-party registry comparison retained as research history; lifecycle and vetting claims need current primary-source checks.</li>
+            <li id="source-22"><a href="https://github.com/eitri-edd/AI-PDLC/issues/54">GitHub issue 54, Tech Scan proposal and deep-research update</a>. Origin proposal and initial research, not primary capability or lifecycle documentation. Candidate names are retained for further investigation.</li>
+            <li id="source-23"><a href="https://www.getzep.com/blog/announcing-a-new-direction-for-zeps-open-source-strategy/">Zep, Announcing a New Direction for Zep's Open Source Strategy</a>, 2 April 2025. Zep stopped maintaining its open-source Community Edition to focus its open-source effort on Graphiti. Used in <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-24"><a href="https://theainewsreport.com/2026-11-02-trigger-dev-env-vars-exposure-explained.html">The AI News Report, Trigger.dev's environment variable exposure, explained</a>, 2 November 2026. Reports Trigger.dev's 1 November 2026 disclosure that an attacker gained unauthorised access to environment variables for a subset of customer organisations; the vendor has not stated how the attacker got in or how many organisations were affected. Used in <a href="#conditional-alternatives">When configuration is not enough</a>.</li>
+            <li id="source-25"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-tools.html">AWS, Harness tools</a>. Built-in shell and file operations, optional computation tools, tool selection limits and inline-function approvals.</li>
+            <li id="source-26"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-environment.html">AWS, Harness environment and filesystem</a>. Repository preparation, deterministic tests and commits, and custom execution environments.</li>
+            <li id="source-27"><a href="https://modelcontextprotocol.io/registry/about">Model Context Protocol, About the MCP Registry</a>. Official server-discovery metadata repository, currently labelled preview with possible breaking changes or data resets; discovery is distinct from tool execution and policy enforcement.</li>
+            <li id="source-28"><a href="https://ai-sdk.dev/docs/agents/overview">AI SDK, Agents overview</a>. ToolLoopAgent, context management and server-side state. A library capability, not a deployment mandate.</li>
+            <li id="source-29"><a href="https://ai-sdk.dev/providers/ai-sdk-providers/amazon-bedrock">AI SDK, Amazon Bedrock provider</a>. Direct Bedrock provider configuration and AWS authentication.</li>
+            <li id="source-30"><a href="https://www.openpolicyagent.org/docs/integration">Open Policy Agent, Integrating OPA</a>. Applications integrate policy decisions with enforcement.</li>
+            <li id="source-31"><a href="https://www.conftest.dev/">Conftest, Overview</a>. Rego tests for structured configuration data, not a live tool gateway.</li>
+          </ol>
+        </section>
+        <p class="source-ref">Last editorial review: <time datetime="2026-11-12">12 November 2026</time>.</p>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+      </article>
+    </main>
+    <aside class="page-contents">
+      <nav aria-label="On this page"><p>On this page</p><a href="#purpose">What needs to run the agent?</a>
+<a href="#aws-first-default">Start with the managed harness</a>
+<a href="#conditional-alternatives">When configuration is not enough</a>
+<a href="#research-only">Separate discovery from permission</a>
+<a href="#do-not-use">Check inherited integrations before extending them</a>
+<a href="#gaps">What to establish before adoption</a>
+<a href="#sources">Sources</a></nav>
+    </aside>
+  </div>
+</body>
+</html>

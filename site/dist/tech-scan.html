@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An AWS-first implementation reference for model access, agent harnesses, gateways and isolated code execution, with conditional alternatives and evidence limits.">
+  <title>Tech Scan · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Preserve legacy topic links below the shared sticky header. */
+    #fig-task-chain, [id^="fig-waves"], #page-map-caption, #page-map-note { scroll-margin-top: 5rem; }
+    /* Keep each question beside its destination on narrow lookup screens. */
+    #published-spokes table { min-width: 0; table-layout: fixed; }
+    #published-spokes :is(th, td) { min-width: 0; white-space: normal; }
+    #published-spokes th:first-child { width: 48%; }
+    @media (max-width: 40rem) {
+      #published-spokes :is(th, td) { padding: 0.75rem; }
+    }
+    @media (max-width: 1099px) {
+      #fig-task-chain, [id^="fig-waves"], #page-map-caption, #page-map-note { scroll-margin-top: 9rem; }
+    }
+  </style>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="tech-scan.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
+          <div class="nav-children">
+            <a href="tech-scan-models.html">Models</a>
+            <a href="tech-scan-harness.html">Harness</a>
+            <a href="tech-scan-gateway.html">AI gateway</a>
+            <a href="tech-scan-sandbox.html">Sandbox</a>
+          </div>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><span aria-current="page">Tech Scan</span></nav>
+        <header class="article-header">
+          <p class="eyebrow">Development guide</p>
+          <h1>Tech Scan</h1>
+          <p class="lead">An agent stack needs model access, tools, relevant information and somewhere to run code. Tech Scan helps you match those jobs to products for an AWS-based setup.</p>
+        </header>
+        <aside class="callout callout--disclaimer" aria-labelledby="tech-scan-note">
+          <p class="example-label" id="tech-scan-note">A note on Tech Scan</p>
+          <p>This page is still a draft and may not reflect the latest technologies or releases.</p>
+          <p>The entries are based on published documentation, not local deployment tests. Carry out your own research before adopting any option.</p>
+        </aside>
+        <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
+            <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+            <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f8fafc"/>
+            </linearGradient>
+            <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#eff6ff"/>
+              <stop offset="100%" stop-color="#dbeafe"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <details class="mobile-contents">
+          <summary>On this page</summary>
+          <nav aria-label="On this page"><a href="#published-spokes">Choose a component</a>
+<a href="#purpose">How the parts work together</a>
+<a href="#how-to-read">Read the evidence</a>
+<a href="#planned-spokes">Planned coverage</a>
+<a href="#cross-cutting-views">Shared interfaces and stack views</a>
+<a href="#gaps">Limits before adoption</a>
+<a href="#layer-map">Other delivery responsibilities</a>
+<a href="#sources">Sources</a></nav>
+        </details>
+        <section id="published-spokes">
+          <h2 id="page-map-caption">Choose a component</h2>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Choose a Tech Scan component; scroll horizontally if needed"><table><caption id="page-map-note">Start with the decision you need to make</caption><thead><tr><th scope="col">Your question</th><th scope="col">Open this reference</th></tr></thead><tbody>
+            <tr><th scope="row">Which model and access route fit the task?</th><td><a href="tech-scan-models.html">Models</a>: approved routes, coding clients and typed-decision limits.</td></tr>
+            <tr><th scope="row">What coordinates the agent?</th><td><a href="tech-scan-harness.html">Harness</a>: the loop, tools, retained state and supporting services.</td></tr>
+            <tr><th scope="row">How are model and tool calls controlled?</th><td><a href="tech-scan-gateway.html">AI gateway</a>: inference routing, tool connections and their different controls.</td></tr>
+            <tr><th scope="row">Where does untrusted code run?</th><td><a href="tech-scan-sandbox.html">Sandbox</a>: execution choices and isolation boundaries.</td></tr>
+          </tbody></table></div>
+        </section>
+        <section id="purpose">
+          <h2>How the parts work together</h2>
+          <p>The harness coordinates the agent's work. It prepares information for the model, handles requested tools and decides when to continue or return a result. A gateway can control selected model or tool traffic; an execution environment bounds the code a tool runs. Follow the links in the illustration for the product choices behind each responsibility.</p>
+          <p><strong>For this scan,</strong> cloud deployment is scoped to AWS and the generative-model route is managed Claude or OpenAI, preferably through Amazon Bedrock. A direct provider API remains an exception for a documented capability or approved-region gap. These are the scan's selection assumptions, not a new organisation-wide policy.<a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">[1]</a></p>
+          <p>A library or self-hosted tool can be assessed for an AWS deployment regardless of its vendor's name. A listed third-party managed service is not automatically within that scope: its hosting, data paths and any required exception still need an explicit decision. The <a href="concept.html">Concepts chapter</a> explains the underlying ideas when you need more background.</p>
+          <p>The illustration separates model access from tool use. It adapts the responsibilities in the AWS reference architecture rather than reproducing its numbered sequence; the optional code-execution branch is added for this guide. <a href="#source-5" aria-label="Source 5: AWS, Guidance for Building Agentic AI Foundation Solutions on AWS">[5]</a></p>
+          <figure class="concept-figure" id="fig-task-chain">
+            <figcaption id="fig-task-chain-title-caption">Figure 1. Illustrative task flow: the harness coordinates model requests and optional tool calls. This is not a deployment architecture.</figcaption>
+            <details class="figure-reading"><summary>Read as text: Model and tool paths</summary>
+              <ol>
+                <li>A user request, issue or scheduled run supplies the task to the <a href="tech-scan-harness.html#purpose">harness</a>.</li>
+                <li>The harness prepares context and sends <a href="tech-scan-models.html#purpose">model requests</a> through the selected model endpoint or inference gateway. The model can return an answer or request a tool.</li>
+                <li>For optional <a href="tech-scan-gateway.html#purpose">tool calls</a>, the harness uses the configured tool connection and access controls. Retrieval is one kind of tool operation; it can supply context before or during the loop.</li>
+                <li>If a tool executes code, it uses the selected <a href="tech-scan-sandbox.html#purpose">execution environment</a>. A repository shell and a calculation tool need not use the same environment.</li>
+                <li>Model and tool results return to the harness. It updates the context and either continues the loop or returns the answer and evidence to the user.</li>
+              </ol>
+            </details>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Illustrative agent task flow; scroll horizontally if needed">
+                <svg viewBox="0 0 680 690" role="img" aria-labelledby="fig-task-chain-title" aria-describedby="fig-task-chain-title-desc">
+                  <title id="fig-task-chain-title">Illustrative model and tool paths</title>
+                  <desc id="fig-task-chain-title-desc">A task reaches the harness. Model requests and responses use a model endpoint or inference gateway. Optional tool calls use configured tool connections and access controls; retrieval can supply context before or during the loop. A tool that executes code uses the chosen execution environment. Model and tool results return to the harness, which updates context and continues the loop or returns an answer with evidence. The model and tool paths are separate, not a fixed sequence through every component.</desc>
+                  <rect class="d-node" x="200" y="16" width="280" height="62" rx="7"/>
+                  <text class="d-title" x="340" y="42" text-anchor="middle">Task arrives</text><text class="d-sub" x="340" y="62" text-anchor="middle">User request, issue or scheduled run</text>
+                  <path class="d-line" d="M340 78V145" marker-end="url(#arrow)"/>
+                  <rect class="d-node d-node-accent" x="170" y="145" width="340" height="100" rx="7"/>
+                  <text class="d-title" x="340" y="175" text-anchor="middle">Harness coordinates the work</text><text class="d-sub" x="340" y="199" text-anchor="middle">Context, state and the agent loop</text><text class="d-sub" x="340" y="223" text-anchor="middle">Continue, stop or return an answer</text>
+                  <path class="d-line" d="M250 245V285H165V335" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+                  <text class="d-label" x="144" y="278" text-anchor="middle">Model requests</text><text class="d-label" x="144" y="300" text-anchor="middle">and responses</text>
+                  <path class="d-line d-dash" d="M430 245V285H515V335" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+                  <text class="d-label" x="538" y="278" text-anchor="middle">Optional tool calls</text><text class="d-label" x="538" y="300" text-anchor="middle">and results</text>
+                  <rect class="d-node" x="12" y="335" width="306" height="110" rx="7"/>
+                  <text class="d-title" x="165" y="365" text-anchor="middle">Model access</text><text class="d-sub" x="165" y="391" text-anchor="middle">Approved model and endpoint</text><text class="d-sub" x="165" y="417" text-anchor="middle">Inference gateway if selected</text>
+                  <rect class="d-node" x="362" y="335" width="306" height="110" rx="7"/>
+                  <text class="d-title" x="515" y="365" text-anchor="middle">Tools and retrieval</text><text class="d-sub" x="515" y="391" text-anchor="middle">Configured connection and permissions</text><text class="d-sub" x="515" y="417" text-anchor="middle">Tool gateway where selected</text>
+                  <path class="d-line d-dash" d="M515 445V510" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+                  <text class="d-label" x="515" y="482" text-anchor="middle">If the tool runs code</text>
+                  <rect class="d-node" x="362" y="510" width="306" height="96" rx="7"/>
+                  <text class="d-title" x="515" y="540" text-anchor="middle">Execution environment</text><text class="d-sub" x="515" y="566" text-anchor="middle">Repository shell or calculation tool</text><text class="d-sub" x="515" y="590" text-anchor="middle">Isolation, egress and credential controls</text>
+                  <path class="d-line" d="M170 195H5V558H12" marker-end="url(#arrow)"/>
+                  <rect class="d-node" x="12" y="510" width="306" height="96" rx="7"/>
+                  <text class="d-title" x="165" y="540" text-anchor="middle">Answer and evidence</text><text class="d-sub" x="165" y="566" text-anchor="middle">Returned when the harness finishes</text><text class="d-sub" x="165" y="590" text-anchor="middle">Existing review and release gates remain</text>
+                  <rect class="d-boundary" x="12" y="635" width="656" height="38" rx="7"/><text class="d-sub" x="340" y="659" text-anchor="middle">Record model choices, tool actions and results throughout</text>
+                </svg>
+              </div>
+              <p class="diagram-key">Paired arrowheads show requests and returned results. Dashed paths are optional, not planned features. Results return to the harness before it continues or finishes the task.</p>
+            </details>
+          </figure>
+        </section>
+        <section id="how-to-read">
+          <h2>Read the evidence</h2>
+          <p>A starting choice is a candidate to assess, not an approved deployment. Compare the requirement it meets, the reason to use an alternative and the boundary it does not cover. Extra candidates belong to further research when the evidence cannot yet distinguish them.<a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">[1]</a></p>
+          <p>Before adopting a choice, ask the engineer or platform specialist to confirm its suitability for the intended workload:</p>
+          <ul>
+            <li>Does the exact model, API, region and product version provide the required capability?</li>
+            <li>Do data handling, identity, isolation and outbound-access controls meet the applicable requirements?</li>
+            <li>Who will operate it, and what will the full cost and failure-recovery behaviour be?</li>
+          </ul>
+          <p>Keep the chosen configuration, the supporting evidence and any unresolved condition in the team's decision record. A failed required condition rules out that configuration; AWS preference does not override it.</p>
+          <p>The existing evidence classes describe different kinds of support: <strong>vendor availability claim</strong>, <strong>AWS or vendor reference deployment</strong>, <strong>public customer-reported operation</strong> and <strong>locally validated</strong>. A reference deployment shows a documented implementation path; it does not establish this team's performance or compliance. The entries here are not locally validated.<a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">[1]</a></p>
+          <p>Read availability at feature level. A generally available product can contain a preview or experimental capability. The single date under Sources records the page's reference-maintenance pass, not a guarantee that every feature is production-ready.</p>
+        </section>
+        <section id="planned-spokes">
+          <h2>Planned coverage</h2>
+          <p>References for workflows, coding agents, software factories, context, verification and delivery are planned. They do not yet supply a complete implementation shortlist. Language-stack and AWS-platform views will link across those references rather than repeat their product entries.<a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
+          <details class="concept-reference">
+            <summary>Publication plan (optional)</summary>
+            <div id="fig-waves">
+              <p id="fig-waves-title-caption"><strong id="fig-waves-title">Coverage in three waves</strong></p>
+              <p id="fig-waves-title-desc">Wave 1 contains the four published references above. Wave 2 adds Workflows, Factories and Agents. Wave 3 adds Context, Verification and Delivery, followed by the cross-cutting Languages and AWS platform views. This is the writing order, not a delivery workflow.</p>
+            </div>
+          </details>
+        </section>
+        <section id="cross-cutting-views">
+          <h2>Shared interfaces and stack views</h2>
+          <p>The planned stack views will show how the choices fit Java, TypeScript with React, or Python, and how the AWS services fit together. React is a JavaScript UI library, not a language.<a href="#source-6" aria-label="Source 6: React, Describing the UI">[6]</a> Each view will link to the maintained product entry instead of duplicating it.<a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
+          <details class="concept-reference">
+            <summary>Protocols, tools and local conventions</summary>
+            <p>These names describe different things; they are not interchangeable standards or evidence that an integration is authorised:</p>
+            <ul>
+              <li><strong>MCP (Model Context Protocol)</strong> connects AI applications with external tools and information.<a href="#source-9" aria-label="Source 9: Model Context Protocol, Introduction">[9]</a></li>
+              <li><strong>OpenTelemetry</strong> is an observability framework and toolkit for telemetry such as traces, metrics and logs, not the storage or dashboard backend.<a href="#source-7" aria-label="Source 7: OpenTelemetry, What is OpenTelemetry">[7]</a></li>
+              <li><strong>Spec Kit</strong> is a toolkit for structured development processes, not an industry-wide specification format.<a href="#source-8" aria-label="Source 8: GitHub, Spec Kit README">[8]</a> OKF (Open Knowledge Format) is the Markdown content convention named in this proposal.<a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">[1]</a></li>
+              <li><strong>SARIF (Static Analysis Results Interchange Format)</strong> is a standard format for analysis results. JSON alone does not define the meaning of scanner findings.<a href="#source-10" aria-label="Source 10: OASIS, SARIF Version 2.1.0">[10]</a></li>
+              <li><strong>GitHub or GitLab</strong> remains the existing source and issue system; AWS-first does not require moving it.<a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">[1]</a></li>
+            </ul>
+          </details>
+        </section>
+        <section id="gaps">
+          <h2>Limits before adoption</h2>
+          <p>The four references do not yet form a complete delivery platform. In particular:</p>
+          <ul>
+            <li><strong>Verification and release.</strong> Keep the existing tests, independent review and authorised release decisions. A model route or sandbox does not approve a change. The <a href="eds-path-to-production.html">Path to production</a> page describes the retained local gates.</li>
+            <li><strong>Typed visual grounding.</strong> The scan has not established a suitable approved production route. The <a href="tech-scan-models.html#gaps">Models reference</a> distinguishes experimental Box output from the required qualification evidence.</li>
+            <li><strong>Policy enforcement.</strong> Instruction Manual 8 (IM8) and Agentic Risk &amp; Capability Framework (ARC) content needs confirmed applicability. Map machine-checkable controls to their actual enforcement point; retain reviewed evidence and authorised human decisions for the rest. See the <a href="eds-developer-harness.html#source-im8">IM8</a> and <a href="eds-developer-harness.html#source-arc">ARC</a> source notes.</li>
+          </ul>
+          <p>For a product decision, compare the exact configuration with the task and retain the unresolved findings. Do not substitute a vendor benchmark or a successful link check for that evidence.</p>
+        </section>
+        <section id="layer-map">
+          <h2>Other delivery responsibilities</h2>
+          <details class="concept-reference">
+            <summary>What the remaining references need to cover</summary>
+            <p>Context covers retrieval and source permissions. Workflows covers specifications and work tracking. Verification covers build-loop tests, security scans and quality gates. Delivery covers CI/CD, governance, operational observability and outcome measurement. Factories and Agents cover coding tools and coordination across tasks. The original ten-layer crosswalk and publication sequencing remain in the maintenance record; the <a href="#source-1" aria-label="Source 1: GitHub issue 54, Tech Scan proposal">proposal</a> retains the source requirements.</p>
+          </details>
+          <p class="next-step"><strong>Next step:</strong> Open the <a href="#published-spokes">reference for your decision</a>. Record why its starting choice fits, or which specific unmet requirement justifies an alternative.</p>
+        </section>
+        <section id="sources">
+          <h2>Sources</h2>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-12">12 November 2026</time>.</p>
+          <ol class="source-list">
+            <li id="source-1"><a href="https://github.com/eitri-edd/AI-PDLC/issues/54">GitHub issue 54, Add an AWS-first Tech Scan under Concepts</a>. The Tech Scan proposal: AWS-first capability shortlist, assessment criteria, typed-decision boundaries and evidence requirements. Used in <a href="#purpose">How the parts work together</a>, <a href="#how-to-read">Read the evidence</a>, <a href="#cross-cutting-views">Shared interfaces and stack views</a>, <a href="#gaps">Limits before adoption</a> and <a href="#layer-map">Other delivery responsibilities</a>.</li>
+            <li id="source-2"><a href="https://github.com/eitri-edd/AI-PDLC/issues/59">GitHub issue 59, Tech Scan as a hub-and-spoke section under Concepts</a>. The section concept: hub-and-spoke structure, languages and cloud as cross-cutting views, plain-text draft labelling, and phased build in three waves. Used in <a href="#purpose">How the parts work together</a>, <a href="#how-to-read">Read the evidence</a>, <a href="#published-spokes">Choose a component</a> and <a href="#planned-spokes">Planned coverage</a> and <a href="#cross-cutting-views">Shared interfaces and stack views</a>.</li>
+            <li id="source-3"><a href="https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/">AWS, AWS Nitro Sandboxes for Amazon EKS, ECS and EC2</a>, 9 November 2026. Launch announcement behind the initial execution shortlist; retained for provenance. It does not establish independent performance or suitability for this team's workload. See <a href="tech-scan-sandbox.html">Sandbox</a> for the conditional choices.</li>
+            <li id="source-4"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md">AWS, Bedrock AgentCore Harness documentation</a>. Managed-harness background for the initial shortlist. See <a href="tech-scan-harness.html">Harness</a> for the distinction between the agent loop, its hosting runtime and optional tools.</li>
+            <li id="source-5"><a href="https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/solutions/approved/documents/architecture-diagrams/building-agentic-ai-foundation-solutions-on-aws.pdf">AWS, Guidance for Building Agentic AI Foundation Solutions on AWS (PDF)</a>. Reference architecture reviewed for technical accuracy 29 January 2026. It separates the AgentCore tool gateway from a LiteLLM inference gateway. Figure 1 adapts those responsibilities: it omits deployment components, does not reproduce the numbered request sequence, and adds an optional code-execution branch. Used in <a href="#purpose">How the parts work together</a>.</li>
+            <li id="source-6"><a href="https://react.dev/learn/describing-the-ui">React, Describing the UI</a>. Defines React as a JavaScript UI library. Used in <a href="#cross-cutting-views">Shared interfaces and stack views</a>.</li>
+            <li id="source-7"><a href="https://opentelemetry.io/docs/what-is-opentelemetry/">OpenTelemetry, What is OpenTelemetry?</a>. Defines the observability framework and toolkit and distinguishes it from a backend. Used in <a href="#cross-cutting-views">Shared interfaces and stack views</a>.</li>
+            <li id="source-8"><a href="https://raw.githubusercontent.com/github/spec-kit/main/README.md">GitHub, Spec Kit README</a>. Describes an open-source toolkit for structured development processes. Used in <a href="#cross-cutting-views">Shared interfaces and stack views</a>.</li>
+            <li id="source-9"><a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol, Introduction</a>. Describes connections between AI applications, data sources and tools. The unversioned URL currently redirects to the dated protocol documentation; it is not proof of runtime access authorisation. Used in <a href="#cross-cutting-views">Shared interfaces and stack views</a>.</li>
+            <li id="source-10"><a href="https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html">OASIS, Static Analysis Results Interchange Format (SARIF) Version 2.1.0</a>. Specifies the analysis-results format; JSON is its representation, not a substitute for the schema and meaning. Used in <a href="#cross-cutting-views">Shared interfaces and stack views</a>.</li>
+          </ol>
+        </section>
+        <p class="source-ref">Last editorial review: <time datetime="2026-11-12">12 November 2026</time>.</p>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+      </article>
+    </main>
+    <aside class="page-contents">
+      <nav aria-label="On this page"><p>On this page</p><a href="#published-spokes">Choose a component</a>
+<a href="#purpose">How the parts work together</a>
+<a href="#how-to-read">Read the evidence</a>
+<a href="#planned-spokes">Planned coverage</a>
+<a href="#cross-cutting-views">Shared interfaces and stack views</a>
+<a href="#gaps">Limits before adoption</a>
+<a href="#layer-map">Other delivery responsibilities</a>
+<a href="#sources">Sources</a></nav>
+    </aside>
+  </div>
+</body>
+</html>

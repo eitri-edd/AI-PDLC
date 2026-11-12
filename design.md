@@ -195,6 +195,8 @@ Every page across the handbook follows a unified, predictable visual order:
 5. **Article sections** (`section`) with crisp `h2` dividers, structured `.table-scroll` tables, interactive `.concept-figure` SVG diagrams, and distinct `.callout` (Note) and `.example` (Worked example) panels.
 6. **Next-step action card** (`.next-step`) and a consistent **Article footer** (`.article-footer`).
 
+**Tech Scan hub lookup exception:** `tech-scan.html` may replace the separate at-a-glance Page map with its question-led component index immediately after the header and compact mobile contents. Keep direct links to the four component references, the local contents navigation and existing deep-link IDs. This avoids repeating the same route before readers reach the actual choices. Retain page maps on component pages where they organise several decisions; this is not a general exemption for lifecycle or learning pages. Check desktop and mobile reading, keyboard links and preserved fragment positions before accepting the exception.
+
 ## Component specifications
 
 | Component | Appearance and behaviour |

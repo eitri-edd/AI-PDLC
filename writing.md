@@ -304,6 +304,10 @@ State what the reader will learn, the experience assumed and the starting materi
 
 Organise definitions, fields, commands or specifications for quick lookup. Use consistent entries with precise meanings, applicable versions or scope, and examples where needed. Link to explanations and procedures instead of embedding a tutorial in each entry.
 
+For product references such as Tech Scan, use consistent comparison fields, not identical section headings. Explain what an option does, when it fits, its consequential limit, the supporting evidence and what still needs checking. Tailor headings to distinguish retired products, out-of-scope choices and configuration mistakes. Give a brief local definition where needed; do not require readers to leave the page merely to understand the component's role. Keep extended catalogues and taxonomy discussions optional without hiding a condition needed for the current decision.
+
+For changing product capabilities, recheck categorical negatives against current first-party documentation. A product's general availability does not establish that every feature is production-ready. An issue proposal or successful HTTP request is not independent support for a vendor capability or lifecycle claim.
+
 ### Lifecycle stage page
 
 Use a consistent set of questions across stages:
@@ -388,6 +392,8 @@ The revised passage explains the relationships before introducing specialist lab
 ## Page metadata
 
 Record a content owner, last-reviewed date and applicable lifecycle version for maintained guidance. Page status metadata is not required. Do not add editorial status fields or badges to page headers or description metadata. Editorial status may be tracked in maintenance records when useful.
+
+**Tech Scan research-reference exception:** the hub and independently linked Tech Scan pages may include one draft qualification explaining that the options are based on published sources rather than local deployment tests. On the hub, use the About page's existing `callout callout--disclaimer` treatment immediately after the introduction, with its `example-label` heading. State that the page is still a draft, may not reflect the latest technologies or releases, and requires readers to carry out their own research before adoption; retain the published-documentation versus local-testing distinction. Component pages may retain a plain-text “Draft research reference” statement. Keep “Tech Scan (draft)” as plain navigation text while that qualification applies. Do not add a status pill, repeat the generic disclaimer elsewhere on the page, or place draft status in description metadata. Keep feature-specific maturity, verification limits and safety boundaries beside the affected choice. Record ownership, pending reader validation and the conditions for removing the label in the maintenance record; source and accessibility requirements remain unchanged.
 
 Display dates as “27 September 2026”. Store machine-readable dates as `2026-09-27`. Change the review date after a substantive review, not automatically on every site build.
 

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How model and tool calls are routed, guarded and paid for: the AWS-first gateway answer and its conditional alternatives.">
+  <title>Tech Scan: AI gateway · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
+          <div class="nav-children">
+            <a href="tech-scan-models.html">Models</a>
+            <a href="tech-scan-harness.html">Harness</a>
+            <a href="tech-scan-gateway.html" aria-current="page">AI gateway</a>
+            <a href="tech-scan-sandbox.html">Sandbox</a>
+          </div>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Tech Scan: AI gateway</span></nav>
+        <header class="article-header">
+          <p class="eyebrow">Development guide</p>
+          <h1>Tech Scan: AI gateway</h1>
+          <p class="lead">When several agents call models or tools, a gateway can give the team a shared place to route requests and apply controls. Choose the missing capability first: model routing, tool access and usage reporting are related, but they are not interchangeable.</p>
+          <p id="tech-scan-note">Draft research reference. Based on published documentation, not local deployment tests.</p>
+          <p>For the surrounding concepts, read <a href="concept.html#harness-engineering">Equip the agent</a> and <a href="concept.html#context-engineering">Supply relevant information</a>.</p>
+        </header>
+        <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
+          <figcaption id="page-map-caption">This page at a glance</figcaption>
+          <p id="page-map-note" class="page-map-note">Reading route: what a gateway is → the AWS-first
+          answer → alternatives and the decision rule →
+          limits. These groups organise the page; they are not
+          lifecycle stages.</p>
+          <ol class="page-map-nodes" role="list">
+            <li class="page-map-node"><strong>What a gateway is</strong><div class="page-map-links"><a
+            href="#purpose">Separate model routing from tool access</a></div></li>
+            <li class="page-map-node"><strong>The AWS-first answer</strong><div class="page-map-links"><a
+            href="#aws-first-default">AWS-first default</a></div></li>
+            <li class="page-map-node"><strong>Alternatives and the decision rule</strong><div
+            class="page-map-links"><a
+            href="#conditional-alternatives">Conditional alternatives</a><a
+            href="#research-only">Research-only notes</a></div></li>
+            <li class="page-map-node"><strong>Limits</strong><div class="page-map-links"><a
+            href="#do-not-use">Controls and common mistakes</a><a href="#gaps">Gaps and open
+            questions</a></div></li>
+          </ol>
+        </figure>
+        <details class="mobile-contents">
+          <summary>On this page</summary>
+          <nav aria-label="On this page"><a href="#purpose">Separate model routing from tool access</a><a href="#aws-first-default">AWS-first default</a><a href="#conditional-alternatives">Conditional alternatives</a><a href="#research-only">Research-only notes</a><a href="#do-not-use">Controls and common mistakes</a><a href="#gaps">Gaps and open questions</a><a href="#sources">Sources</a></nav>
+        </details>
+        <section id="purpose">
+          <h2>Separate model routing from tool access</h2>
+          <p>A gateway centralises controls for requests that pass through it, such as provider credentials, routing and usage limits. IAM and client configuration can also restrict model access without a gateway; the benefit is a shared enforcement point, not the creation of model policy.</p>
+          <p>Separate the two responsibilities before choosing a product. One product may support both:</p>
+          <ul>
+            <li><strong>A large language model (LLM) router</strong> sends model calls to configured providers and models. Depending on the product, it can also manage credentials, fallback and usage limits.</li>
+            <li><strong>A tool/MCP gateway</strong> routes tool calls. It exposes approved tools —
+            including MCP servers and knowledge bases — to the agent under policy, and records which
+            tools were called.</li>
+          </ul>
+          <p>The <a href="tech-scan-harness.html">Harness reference</a> covers the agent loop that makes these calls. For the AWS-first route, distinguish the traffic it sends:</p>
+          <ul>
+            <li><strong>Model calls</strong> reach approved models through Bedrock, directly or through a configured inference proxy.</li>
+            <li><strong>Tool calls</strong> can reach approved tools and MCP servers through AgentCore Gateway.</li>
+            <li><strong>Retrieval</strong> can use a Managed Knowledge Base exposed as a Gateway target.</li>
+          </ul>
+        </section>
+        <section id="aws-first-default">
+          <h2>AWS-first default</h2>
+          <p>Keep approved Claude and OpenAI access through Bedrock as the baseline.<a href="#source-4" aria-label="Source 4: OpenAI, Amazon Bedrock guide">[4]</a><a href="#source-5" aria-label="Source 5: AWS, Amazon Bedrock: OpenAI model cards">[5]</a> Add a gateway where shared routing or control is needed, rather than treating every model call as a reason to build a larger stack.</p>
+          <p>AgentCore Gateway inference targets provide a unified LLM proxy for Amazon Bedrock, OpenAI and Anthropic, alongside other OpenAI-compatible services.<a href="#source-17" aria-label="Source 17: AWS, AgentCore Gateway inference targets">[17]</a> These model targets are distinct from the Gateway's MCP and tool targets. Provider support does not approve a direct-provider route or establish feature parity.</p>
+          <p>Gateway rules configure model routing and fallback for inference targets.<a href="#source-18" aria-label="Source 18: AWS, AgentCore Gateway model routing and fallback">[18]</a> Every fallback destination still needs approval. Check the selected region, model, operation and API dialect before relying on the route; one supported endpoint does not establish support for every API.</p>
+          <p>Add only the controls the use case needs. The components have different responsibilities:</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="AWS-first gateway components">
+            <table>
+              <caption>AWS-first gateway components</caption>
+              <thead>
+                <tr><th scope="col">Component</th><th scope="col">What it does</th><th scope="col">What it does not do</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Amazon Bedrock</td><td>Model API for approved Claude and OpenAI models</td><td>Provide every gateway control by itself</td></tr>
+                <tr><td>AgentCore Gateway inference targets</td><td>Proxy model calls; rules can route and fall back across targets</td><td>Approve a provider or model on the team's behalf</td></tr>
+                <tr><td>AgentCore Gateway tool/MCP targets</td><td>Expose configured tools to the agent</td><td>Control traffic that bypasses the Gateway</td></tr>
+                <tr><td>Bedrock Guardrails</td><td>Content guardrails on model calls</td><td>Authorise tool calls</td></tr>
+                <tr><td>AgentCore Policy (Cedar)</td><td>Authorises configured Gateway requests</td><td>Govern arbitrary shell networking</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Gateway policy governs traffic through the Gateway, not arbitrary shell networking.<a href="#source-3" aria-label="Source 3: AWS, Amazon Bedrock AgentCore: Harness security">[3]</a> VPC attachment alone is not evidence of package-only egress or secret denial:
+          outbound enforcement, approved dependencies and credential protection still need their own
+          controls.</p>
+          <p>A Bedrock Managed Knowledge Base can be exposed through AgentCore Gateway.<a href="#source-6" aria-label="Source 6: AWS, Amazon Bedrock AgentCore: Gateway target connector, Managed Knowledge Base">[6]</a> Begin with Retrieve plus an approved Claude or OpenAI model for generation,<a href="#source-7" aria-label="Source 7: AWS, Amazon Bedrock: Knowledge Bases">[7]</a> with embeddings and reranking approved separately.<a href="#source-9" aria-label="Source 9: AWS, Amazon Bedrock: Knowledge Bases, supported features">[9]</a></p>
+          <p>ACL-aware retrieval respects access control lists, but the managed service does not authenticate the end user: the application supplies verified identity.<a href="#source-8" aria-label="Source 8: AWS, Amazon Bedrock: Managed Knowledge Bases, ACL-aware retrieval">[8]</a> A shared retrieval endpoint cannot replace that identity check.</p>
+          <details>
+            <summary>Match other controls to their enforcement points</summary>
+            <p>The AgentCore harness can use these managed components,<a href="#source-1" aria-label="Source 1: AWS, Amazon Bedrock AgentCore: Harness">[1]</a> but each control needs its own scope. IAM sets identity and resource boundaries; AgentCore Policy uses Cedar for configured Gateway authorisation.<a href="#source-2" aria-label="Source 2: AWS, Amazon Bedrock AgentCore: Policy">[2]</a></p>
+            <p>CloudFormation Guard checks structured data.<a href="#source-10" aria-label="Source 10: AWS, CloudFormation Guard">[10]</a> It is not interchangeable with request authorisation or content guardrails. None of these components implies complete policy-framework coverage or replaces retained human decisions.</p>
+          </details>
+        </section>
+        <section id="conditional-alternatives">
+          <h2>Conditional alternatives</h2>
+          <p>First name the capability the Bedrock and AgentCore baseline cannot meet. Then consider existing infrastructure and who will operate the alternative. Being on AWS, Kubernetes or a managed service does not by itself decide the gateway.</p>
+          <p>Consider LiteLLM proxy when the required routing behaviour is missing from the baseline and the team can operate another service. LiteLLM documents load balancing, fallbacks, timeouts and retries across deployments and providers.<a href="#source-20" aria-label="Source 20: LiteLLM, Router - Load Balancing">[20]</a> Compare the exact configuration and operating cost, not just the provider count.</p>
+          <p>Any alternative still needs the required API, approved data location and retention, identity, security boundaries and an operational owner. A hosted gateway's supported-model catalogue is not the team's approved list; restrict every primary and fallback route accordingly.</p>
+          <details>
+            <summary>Explore other gateway candidates and earlier comparison notes</summary>
+            <p>The earlier secondary comparisons retain useful research leads, but their packaging, licensing and product-history claims are not independently verified in this refinement.<a href="#source-11" aria-label="Source 11: ArcBeta, LLM gateway pricing: LiteLLM, OpenRouter, Portkey">[11]</a><a href="#source-12" aria-label="Source 12: VDF, AI gateway comparison">[12]</a> Licensing, incident and lifecycle claims need current first-party terms, advisories or announcements before they inform adoption.</p>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Additional gateway candidates and evidence limits">
+              <table>
+                <caption>Research leads from the earlier comparison</caption>
+                <thead><tr><th scope="col">Candidate</th><th scope="col">Reported capability and packaging</th><th scope="col">When to investigate</th></tr></thead>
+                <tbody>
+                  <tr><td>LiteLLM proxy</td><td>The comparison reports an MIT core, paid enterprise features, self-hosting or Cloud, virtual keys, budgets and conditional routing across 100+ providers.</td><td>Check exact edition and controls for the missing capability. The comparison's March and October 2026 PyPI incident reports need primary advisories before being treated as verified history.<a href="#source-11" aria-label="Source 11: ArcBeta, LLM gateway pricing: LiteLLM, OpenRouter, Portkey">[11]</a></td></tr>
+                  <tr><td>OpenRouter</td><td>The comparison describes a proprietary managed service with one key, routing and fallback across 380+ models; that is not a verified current count.</td><td>A managed alternative when it meets the missing requirement and the endpoint/data route is approved. Stripe's 19 August 2026 agreement to acquire OpenRouter is an announcement, not proof the transaction has closed.<a href="#source-16" aria-label="Source 16: Stripe, Stripe agrees to acquire OpenRouter">[16]</a></td></tr>
+                  <tr><td>Portkey</td><td>The comparison reports an MIT core, hosted commercial service, self-hosting, routing, fallbacks, load balancing, semantic caching and guardrails.</td><td>Investigate if those controls close the identified gap. Its reported acquisition by Palo Alto Networks on 29 May 2026 needs primary confirmation; check current terms.<a href="#source-11" aria-label="Source 11: ArcBeta, LLM gateway pricing: LiteLLM, OpenRouter, Portkey">[11]</a></td></tr>
+                  <tr><td>Kong AI Gateway</td><td>The comparison describes an Apache-2.0 core, tiered AI features, Enterprise-only multi-target failover and self-hosted or Konnect deployment.</td><td>If the team already operates Kong, check whether its licensed edition closes the gap before adding another gateway.<a href="#source-12" aria-label="Source 12: VDF, AI gateway comparison">[12]</a></td></tr>
+                  <tr><td>Envoy AI Gateway / Agent Router</td><td>The comparison reports Apache-2.0 licensing, Kubernetes deployment, route-level fallback and InferencePool. It dates the Agent Router rename and Agentic AI Foundation move to 10 September 2026; these lifecycle claims need primary confirmation.</td><td>Investigate when a Kubernetes platform team can own it and its routing meets the missing requirement, not merely because Kubernetes is present.<a href="#source-12" aria-label="Source 12: VDF, AI gateway comparison">[12]</a></td></tr>
+                  <tr><td>Unkey</td><td>The inherited comparison describes a key/quota layer, managed or self-hosted, and conflicting licence reports (AGPLv3 versus FSL-1.1-ALv2).</td><td>Investigate a key-management gap separately. Neither its current licence nor replacement of an LLM router is established by that comparison.<a href="#source-12" aria-label="Source 12: VDF, AI gateway comparison">[12]</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+        <section id="research-only">
+          <h2>Research-only notes</h2>
+          <p>Langfuse now documents a separate AI Gateway in public beta. It proxies OpenAI and Anthropic requests, centralises provider keys, records usage and supports central model approval.<a href="#source-19" aria-label="Source 19: Langfuse, AI Gateway overview">[19]</a> This is a different capability from its existing observability deployment on AWS.<a href="#source-13" aria-label="Source 13: Langfuse, Self-hosting on AWS">[13]</a></p>
+          <p>Provider fallbacks, hard spend caps and automatic task-based model routing are roadmap items, not implemented features.<a href="#source-19" aria-label="Source 19: Langfuse, AI Gateway overview">[19]</a> Keep this option research-only until its available features meet the requirement and the provider route passes the same data, identity and model-policy checks as any other alternative. Langfuse observability on AWS does not establish a Bedrock route through this beta gateway.</p>
+        </section>
+        <section id="do-not-use">
+          <h2>Controls and common mistakes</h2>
+          <p>Direct provider APIs remain exceptions for a specific capability or approved-region gap, after reviewing egress, credentials, retention and data handling. A gateway's provider support does not grant that exception.</p>
+          <ul>
+            <li>Do not present any gateway as a substitute for the model policy. The policy is managed
+            Claude or OpenAI models only; a gateway does not change which models are approved.</li>
+            <li>Keep primary calls, fallback, managed defaults, retrieval reasoning and evaluator models inside the approved list. Automatic routing cannot silently broaden it.</li>
+            <li>Distinguish Bedrock's model API from AgentCore Gateway's inference routing. Compare routing products against the required controls, not the vendor name alone.</li>
+            <li>Check routing and authorisation separately from key management; a key/quota layer alone is not evidence that either is covered.</li>
+            <li>Do not rely on Gateway policy to control shell networking. It governs traffic through the
+            Gateway only.</li>
+          </ul>
+        </section>
+        <section id="gaps">
+          <h2>Gaps and open questions</h2>
+          <ul>
+            <li>AgentCore inference routing is documented, but the required region, API operations and control behaviour still need qualification for the selected configuration.<a href="#source-17" aria-label="Source 17: AWS, AgentCore Gateway inference targets">[17]</a></li>
+            <li>Gateway failover must not silently broaden the approved-model policy. No automatic
+            routing to unapproved models is acceptable as a fallback. Kiro's Auto routing is the
+            cautionary example: current documentation says Auto can route to active models outside
+            the administrator's approved list.<a href="#source-14" aria-label="Source 14: Kiro, Available models">[14]</a><a href="#source-15" aria-label="Source 15: Kiro, Model governance">[15]</a></li>
+            <li>Qualification needs the intended account and configuration: check denied models, fallback destinations, permission revocation, timeouts, costs and retained identity before adoption.</li>
+          </ul>
+          <p class="next-step">Next, record the team's approved-model list and the fallback behaviour it
+          accepts — fail closed, or queue and retry — before adopting any gateway,
+          then read the <a href="tech-scan-harness.html">harness spoke</a> for the managed harness this gateway sits
+          beside.</p>
+        </section>
+        <section id="sources">
+          <h2>Sources</h2>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-12">12 November 2026</time>.</p>
+          <ol class="source-list">
+            <li id="source-1"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md">AWS, Amazon Bedrock AgentCore: Harness</a>. Documents the managed harness, including the Gateway. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-2"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html">AWS, Amazon Bedrock AgentCore: Policy</a>. Documents Cedar policy for Gateway authorisation. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-3"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-security.html">AWS, Amazon Bedrock AgentCore: Harness security</a>. Documents the security boundary, including that Gateway policy governs traffic through the Gateway. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-4"><a href="https://developers.openai.com/api/docs/guides/amazon-bedrock">OpenAI, Amazon Bedrock guide</a>. Documents reaching OpenAI models through Bedrock. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-5"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html">AWS, Amazon Bedrock: OpenAI model cards</a>. Documents the OpenAI models available through Bedrock. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-6"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-managed-kb.md">AWS, Amazon Bedrock AgentCore: Gateway target connector, Managed Knowledge Base</a>. Documents exposing a Managed Knowledge Base through AgentCore Gateway. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-7"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html">AWS, Amazon Bedrock: Knowledge Bases</a>. Documents Bedrock Knowledge Bases. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-8"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-acl.md">AWS, Amazon Bedrock: Managed Knowledge Bases, ACL-aware retrieval</a>. Documents ACL-aware retrieval, and that the managed service does not authenticate the end user. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-9"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.md">AWS, Amazon Bedrock: Knowledge Bases, supported features</a>. Documents supported models and features for Knowledge Bases, including embeddings and reranking. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-10"><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html">AWS, CloudFormation Guard</a>. Documents Guard checks on structured data. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-11"><a href="https://www.arcbeta.com/Blog/llm-gateway-pricing-litellm-openrouter-portkey-2026">ArcBeta, LLM gateway pricing: LiteLLM, OpenRouter, Portkey</a>. Secondary 2026 comparison retained as research provenance, not current first-party confirmation of licensing, incident reports, acquisition history or feature tiers. Used in the optional notes under <a href="#conditional-alternatives">Conditional alternatives</a>.</li>
+            <li id="source-12"><a href="https://vdf.ai/blog/ai-gateway-comparison/">VDF, AI gateway comparison</a>. Secondary comparison retained for the earlier candidate set. Product naming, foundation membership, licence and feature-tier claims need primary confirmation before adoption. Used in the optional notes under <a href="#conditional-alternatives">Conditional alternatives</a>.</li>
+            <li id="source-13"><a href="https://langfuse.com/self-hosting/deployment/aws">Langfuse, Self-hosting on AWS</a>. Documents the observability platform's AWS deployment, not the separate AI Gateway's provider coverage or maturity. Used in <a href="#research-only">Research-only notes</a>.</li>
+            <li id="source-14"><a href="https://kiro.dev/docs/models/available-models">Kiro, Available models</a>. Documents the models Kiro can route to. Used in <a href="#gaps">Gaps and open questions</a>.</li>
+            <li id="source-15"><a href="https://kiro.dev/docs/enterprise/governance/model">Kiro, Model governance</a>. Documents model governance, including Auto routing outside the approved list. Used in <a href="#gaps">Gaps and open questions</a>.</li>
+            <li id="source-16"><a href="https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter">Stripe, Stripe agrees to acquire OpenRouter</a>. Newsroom announcement, 19 August 2026: Stripe has agreed to acquire OpenRouter, subject to customary closing conditions. Used in <a href="#conditional-alternatives">Conditional alternatives</a>.</li>
+            <li id="source-17"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-targets-inference.html">AWS, AgentCore Gateway inference targets</a>. Documents a unified LLM proxy for Bedrock, OpenAI, Anthropic and other OpenAI-compatible providers. Provider coverage is not evidence of regional or API-feature parity. Used in <a href="#aws-first-default">AWS-first default</a> and <a href="#gaps">Gaps and open questions</a>.</li>
+            <li id="source-18"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-rules-fallback.html">AWS, AgentCore Gateway model routing and fallback</a>. Documents routing rules and ordered fallback destinations for inference targets. Used in <a href="#aws-first-default">AWS-first default</a>.</li>
+            <li id="source-19"><a href="https://langfuse.com/docs/gateway/overview">Langfuse, AI Gateway overview</a>. Documents the separate public-beta gateway and its current capabilities. Provider fallbacks, hard spend caps and automatic task-based model routing appear on its roadmap. Used in <a href="#research-only">Research-only notes</a>.</li>
+            <li id="source-20"><a href="https://docs.litellm.ai/docs/routing">LiteLLM, Router - Load Balancing</a>. First-party documentation for routing, load balancing, fallback, timeouts and retries across deployments/providers; not evidence for the inherited licensing or incident claims. Used in <a href="#conditional-alternatives">Conditional alternatives</a>.</li>
+          </ol>
+        </section>
+        <p class="source-ref">Last editorial review: <time datetime="2026-11-12">12 November 2026</time>.</p>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+      </article>
+    </main>
+    <aside class="page-contents">
+      <nav aria-label="On this page"><p>On this page</p><a href="#purpose">Separate model routing from tool access</a><a href="#aws-first-default">AWS-first default</a><a href="#conditional-alternatives">Conditional alternatives</a><a href="#research-only">Research-only notes</a><a href="#do-not-use">Controls and common mistakes</a><a href="#gaps">Gaps and open questions</a><a href="#sources">Sources</a>
+</nav>
+    </aside>
+  </div>
+</body>
+</html>
