@@ -46,7 +46,8 @@ class ReferenceMaintenanceTests(unittest.TestCase):
         self.assertEqual(set(passes), set(self.pages))
         for page, document in self.pages.items():
             with self.subTest(page=page):
-                self.assertEqual(passes[page]["checked_on"], checked_on)
+                page_date = date.fromisoformat(passes[page]["checked_on"]).isoformat()
+                self.assertGreaterEqual(page_date, checked_on)
                 paragraphs = [node for node in document.root.elements("p")
                               if node.has_class("source-check-date")]
                 if page == "index.html":
@@ -54,13 +55,15 @@ class ReferenceMaintenanceTests(unittest.TestCase):
                     self.assertEqual(passes[page]["scope"], "orientation-only operational links")
                 else:
                     self.assertEqual(len(paragraphs), 1)
-                    self.assertEqual(next(paragraphs[0].elements("time")).attrs["datetime"], checked_on)
+                    self.assertEqual(next(paragraphs[0].elements("time")).attrs["datetime"], page_date)
 
     def test_each_current_url_has_dated_outcomes_and_prior_history_is_retained(self):
         outcomes = {"supported", "limited", "changed", "inaccessible", "operational", "unverified"}
         for record in self.inventory["references"]:
             with self.subTest(url=record["url"]):
-                self.assertEqual(record["checked_on"], self.inventory["checked_on"])
+                record_date = date.fromisoformat(record["checked_on"]).isoformat()
+                self.assertGreaterEqual(record_date, self.inventory["checked_on"])
+                self.assertLessEqual(record_date, max(p["checked_on"] for p in self.inventory["page_passes"].values()))
                 self.assertTrue(record.get("method"))
                 self.assertTrue(record.get("result"))
                 reviews = record.get("claim_reviews", [])
@@ -73,6 +76,15 @@ class ReferenceMaintenanceTests(unittest.TestCase):
         history = self.inventory.get("history", [])
         self.assertTrue(history, "Keep the previous retrieval records, not only the new date")
         self.assertTrue(all("references" in run and "checked_on" in run for run in history))
+
+    def test_wave2_provenance_does_not_depend_on_ephemeral_extracts(self):
+        for record in self.inventory["references"]:
+            for review in record.get("claim_reviews", []):
+                if review.get("file") in {"tech-scan-agents.html", "tech-scan-workflows-factories.html"}:
+                    with self.subTest(url=record["url"], page=review["file"]):
+                        self.assertNotIn("/root/", json.dumps(review))
+        record = (ROOT / "site/tech-scan-wave2-review-2026-11-13.md").read_text()
+        self.assertNotRegex(record, r"\b(?:\d+(?:-browser)?|security-md)\.txt:\d+")
 
 
 if __name__ == "__main__":

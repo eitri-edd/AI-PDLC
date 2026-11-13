@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare coding agents, model routes and coordination patterns, with controls and a pilot approach.">
+  <title>Tech Scan: Coding agents and coordination · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
+          <div class="nav-children">
+            <a href="tech-scan-models.html">Models &amp; access</a>
+            <a href="tech-scan-harness.html">Harness &amp; execution</a>
+            <a href="tech-scan-agents.html" aria-current="page">Coding agents &amp; coordination</a>
+            <a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a>
+          </div>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1"><article class="concept-article">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Coding agents and coordination</span></nav>
+<header class="article-header"><p class="eyebrow">Development guide</p><h1>Tech Scan: Coding agents and coordination</h1><p class="lead">Choose where a developer works, how the coding agent reaches a model and, when necessary, who coordinates several agents.</p><p>Draft research reference: vendor documentation, not locally deployed or benchmarked. Availability is not evidence that a configuration meets your organisation’s needs.</p></header>
+<figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
+  <figcaption id="page-map-caption">This page at a glance</figcaption>
+  <p id="page-map-note" class="page-map-note">Reading route: check the decision gates, compare agent routes, consider coordination, then review controls and evidence.</p>
+  <ol class="page-map-nodes" role="list">
+    <li class="page-map-node"><strong>Decision gates</strong><div class="page-map-links"><a href="#decision">Check the decision gates</a></div></li>
+    <li class="page-map-node"><strong>Agent routes</strong><div class="page-map-links"><a href="#routes">Choose the agent and model route</a></div></li>
+    <li class="page-map-node"><strong>Coordination</strong><div class="page-map-links"><a href="#coordination">Decide when to coordinate agents</a></div></li>
+    <li class="page-map-node"><strong>Controls and evidence</strong><div class="page-map-links"><a href="#controls">Control access and run a pilot</a><a href="#sources">Sources</a></div></li>
+  </ol>
+</figure>
+<details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page"><a href="#decision">Decision gates</a>
+<a href="#routes">Agents and model routes</a>
+<a href="#coordination">Coordination</a>
+<a href="#controls">Controls and pilot</a>
+<a href="#sources">Sources</a></nav></details>
+<section id="decision"><h2>Start with the decision gates</h2>
+<p>A coding agent can read a task, propose changes and use permitted tools. An editor is the developer’s interface; the agent may run in that editor, a terminal or a remote service. The model generates responses; the host runs the agent and its tools. Choosing one does not settle the others.</p>
+<p>This scan starts with AWS hosting and managed Claude or OpenAI models through Amazon Bedrock. Treat direct provider APIs or another managed service as exceptions to assess, not as interchangeable Bedrock routes. These are scan assumptions, not newly established organisational policy.</p>
+<ol><li><strong>Capability:</strong> identify the task, editor, tool actions and features required on the exact route.</li><li><strong>Data:</strong> compare code sensitivity, processing geography, storage, retention and contractual terms against the approved requirements.</li><li><strong>Identity and authorisation:</strong> check user access, model access, repository permissions and service roles.</li><li><strong>Boundary:</strong> identify the agent host, execution environment, network egress, secrets and model endpoint, including fallback destinations.</li><li><strong>Ownership:</strong> name an operator, support and cost owner; establish monitoring, update, incident and exit arrangements.</li></ol>
+<p>The engineering lead records the version, configuration, evidence and unresolved conditions with the decision owner. A failed required gate rules out that configuration, even if it is AWS-first; obtain the applicable exception before evaluating a different route with real data.</p></section>
+<section id="routes"><h2>Choose the agent and its model route</h2>
+<p>For a team already working in a terminal or supported editor, compare Claude Code and Codex with Bedrock as starting candidates. Kiro is another AWS-first candidate when its experience and governance satisfy the gates. Select a route for a representative task rather than declaring a universal winner.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Coding agent route comparison"><table><caption>Document the product, host and endpoint separately</caption><thead><tr><th scope="col">Candidate and trigger</th><th scope="col">Route and material limit</th></tr></thead><tbody>
+<tr><th scope="row">Claude Code on Bedrock</th><td>Use the documented Bedrock configuration for Claude models; identify Invoke API or Mantle, model ID and region. Claude Code’s Bedrock route does not provide its web search or subscription-dependent cloud sessions; confirm the feature table for the selected workflow.<a href="#source-1" aria-label="Source 1: Anthropic, Claude Code on Amazon Bedrock">[1]</a><a href="#source-2" aria-label="Source 2: Anthropic, Feature availability">[2]</a></td></tr>
+<tr><th scope="row">Codex on Bedrock</th><td>OpenAI documents local Codex workflows on Bedrock. Codex cloud is not available on that configuration. Runtime and Mantle differ: in the Responses API, hosted web search and background mode are not available on Runtime; background mode on Mantle is subject to retention settings. Check whether the client exposes the API feature you need.<a href="#source-3" aria-label="Source 3: OpenAI, Use ChatGPT Work and Codex with Amazon Bedrock">[3]</a><a href="#source-4" aria-label="Source 4: OpenAI, OpenAI on Amazon Bedrock">[4]</a></td></tr>
+<tr><th scope="row">Kiro</th><td>Consider its editor or CLI when its workflow fits. Kiro documents Bedrock-backed cross-region inference and a choice beyond Claude and OpenAI.<a href="#source-11" aria-label="Source 11: Kiro, Data protection">[11]</a> Enable model access management and select approved named models. Kiro says Auto can route to active models outside the approved list; exclude Auto when exact model choice is required, and test enforcement and inference geography in the intended enterprise configuration.<a href="#source-5" aria-label="Source 5: Kiro, Models">[5]</a><a href="#source-6" aria-label="Source 6: Kiro, Model governance">[6]</a></td></tr>
+</tbody></table></div>
+<p><strong>Conditional editor alternative:</strong> Zed is worth assessing when the team needs a separate editor with external coding agents. Zed documents both Amazon Bedrock as a gateway and external agents, but the latter usually own their own authentication and model configuration. Verify each agent’s actual route, identity and data terms; choosing an editor does not force every agent through Bedrock.<a href="#source-7" aria-label="Source 7: Zed, AI Quick Start">[7]</a></p>
+<p>For every candidate record the endpoint, model or inference profile, region and potential cross-region processing. Check the data path for prompts, repository contents, logs and external tools separately. Do not assume a gateway or fallback stays within the approved boundary; inspect every destination and disable or obtain approval for direct-provider paths. See <a href="tech-scan-models.html">Models</a> and <a href="tech-scan-gateway.html">AI gateway</a>.</p></section>
+<section id="coordination"><h2>Start with one agent; coordinate only when needed</h2>
+<p>Start with a single agent and a bounded task. A developer reviews its diff and test evidence. Add agents only if a task has separable work or a distinct expertise and the handoff is worth its extra cost, delay and failure modes.</p>
+<p>For example, a coding agent changes a function and a specialist independently checks tests. The coordinator passes the task and relevant evidence, collects the result and returns the diff to the developer. The specialist’s answer is not proof of correctness or authority to merge.</p>
+<ul><li><strong>Manager and specialists:</strong> a coordinator calls a specialist as a tool and receives its result. Strands documents this pattern; assess it first when central control and bounded delegation suffice.<a href="#source-8" aria-label="Source 8: Strands Agents, Coordinate multiple agents">[8]</a></li>
+<li><strong>Graph or fixed workflow:</strong> use explicit nodes and edges when the task needs defined branches, dependencies or review stops. Strands documents graphs and fixed task workflows; LangGraph offers stateful graph orchestration. A graph can have conditional paths; specify which conditions are model-driven and which are defined in code. Test persistence and recovery in the chosen deployment rather than assuming them.<a href="#source-8" aria-label="Source 8: Strands Agents, Coordinate multiple agents">[8]</a><a href="#source-9" aria-label="Source 9: LangChain, LangGraph overview">[9]</a></li>
+<li><strong>Peer handoffs:</strong> a swarm can let specialists choose the next agent; investigate it only if that flexibility is needed and the team can bound and audit the route.<a href="#source-8" aria-label="Source 8: Strands Agents, Coordinate multiple agents">[8]</a></li></ul>
+<p>Set delegation limits, timeouts, budgets and a failure route; record task inputs, handoffs, tool calls and outcomes without exposing secrets. A human reviews changes before merge and the existing release authority remains separate. For one agent’s loop, tools and memory see <a href="tech-scan-harness.html">Harness</a>; for code execution boundaries see <a href="tech-scan-sandbox.html">Sandbox</a>.</p></section>
+<section id="controls"><h2>Control access and run a pilot</h2>
+<p>Repository files, fetched pages, tool output and agent instructions can contain hostile instructions. Treat them as untrusted data. Use a scoped identity, least-privilege repository and cloud permissions, restricted outbound access and an isolated execution environment. Review instructions, hooks and tool servers before enabling them; protect the agent’s own permissions and trust configuration from unauthorised edits. Avoid blanket approval of shell commands and never put secrets in prompts or commands. Anthropic’s security guidance describes prompt-injection and permission risks for Claude Code; the exact controls differ by product.<a href="#source-10" aria-label="Source 10: Anthropic, Security">[10]</a></p>
+<p>For a pilot, the engineering lead selects the same representative change and acceptance tests for each candidate, with non-sensitive data and an approved sandbox. Record task completion, human correction, elapsed time, cost, permissions, route and failure recovery. Attempt a denied action and confirm it is denied; inspect logs and outbound destinations. The decision owner compares the results with the gates, records gaps and either authorises a wider trial under the applicable process or stops. No local pilot, security test or comparison has been performed for this page.</p>
+<p>Before adoption, confirm current feature availability, model IDs, retention and regional processing with the providers and your agreement. Product documentation is evidence of a stated capability, not local performance, compliance or a guarantee against prompt injection.</p></section>
+<section id="sources"><h2>Sources</h2><p class="source-check-date">References last checked: <time datetime="2026-11-13">13 November 2026</time>.</p><ol class="source-list">
+<li id="source-1"><a href="https://code.claude.com/docs/en/amazon-bedrock">Anthropic, Claude Code on Amazon Bedrock</a> — setup and endpoint configuration.</li>
+<li id="source-2"><a href="https://code.claude.com/docs/en/feature-availability">Anthropic, Feature availability</a> — Bedrock feature restrictions.</li>
+<li id="source-3"><a href="https://learn.chatgpt.com/docs/amazon-bedrock">OpenAI, Use ChatGPT Work and Codex with Amazon Bedrock</a> — supported local workflows and unavailable cloud features.</li>
+<li id="source-4"><a href="https://developers.openai.com/api/docs/guides/amazon-bedrock">OpenAI, OpenAI on Amazon Bedrock</a> — Runtime and Mantle differences.</li>
+<li id="source-5"><a href="https://kiro.dev/docs/models/">Kiro, Models</a> — model choices and inference geography.</li>
+<li id="source-6"><a href="https://kiro.dev/docs/enterprise/governance/model/">Kiro, Model governance</a> — enterprise model availability settings. Its <a href="https://kiro.dev/docs/models/available-models/">available models guidance</a> describes the Auto routing exception; test enforcement locally.</li>
+<li id="source-7"><a href="https://zed.dev/docs/ai/quick-start">Zed, AI Quick Start</a> — external agents and gateway options.</li>
+<li id="source-8"><a href="https://strandsagents.com/docs/user-guide/sdk/multi-agent/multi-agent-patterns/">Strands Agents, Coordinate multiple agents</a> — coordination patterns and execution paths.</li>
+<li id="source-9"><a href="https://docs.langchain.com/oss/python/langgraph/overview">LangChain, LangGraph overview</a> — graph orchestration and state.</li>
+<li id="source-10"><a href="https://code.claude.com/docs/en/security">Anthropic, Security</a> — permission and prompt-injection considerations.</li>
+<li id="source-11"><a href="https://kiro.dev/docs/privacy-and-security/data-protection/">Kiro, Data protection</a> — Bedrock inference and cross-region processing.</li>
+</ol></section>
+
+<footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer></article></main>
+<aside class="page-contents"><nav aria-label="On this page"><p>On this page</p><a href="#decision">Decision gates</a>
+<a href="#routes">Agents and model routes</a>
+<a href="#coordination">Coordination</a>
+<a href="#controls">Controls and pilot</a>
+<a href="#sources">Sources</a></nav></aside></div></body></html>

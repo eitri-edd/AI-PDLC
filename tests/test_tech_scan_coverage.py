@@ -38,12 +38,13 @@ class TechScanCoverageTests(unittest.TestCase):
             wave = WAVES[name]
             text = normalise(node.text()).casefold()
             self.assertIn("wave " + wave, text, name)
-            state = "published" if wave == "1" else "planned"
+            state = "published" if wave in ("1", "2") else "planned"
             self.assertEqual(node.attrs.get("data-publication"), state, name)
             self.assertIn(state, text, name)
             links = list(node.elements("a"))
-            if wave == "1":
-                self.assertEqual([a.attrs.get("href") for a in links], [f"tech-scan-{name}.html"], name)
+            if wave in ("1", "2"):
+                target = {"workflows": "workflows-factories", "factories": "workflows-factories"}.get(name, name)
+                self.assertEqual([a.attrs.get("href") for a in links], [f"tech-scan-{target}.html"], name)
             else:
                 self.assertEqual(links, [], "Do not link to unpublished pages: " + name)
             self.assertEqual(node.attrs.get("data-role"),
