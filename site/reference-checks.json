@@ -3,14 +3,14 @@
   "scope": "Current publication census with retained 12 November page-wide passes and targeted Tech Scan follow-up; not a new whole-site claim review.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 215,
-  "current_unique_hrefs": 221,
+  "current_unique_urls": 217,
+  "current_unique_hrefs": 223,
   "counts": {
     "dynamic_page_no_text": 4,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 7,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 197,
+    "retrieved": 199,
     "retrieved_pdf_text": 3,
     "retrieved_with_login_banner": 1
   },
@@ -35,8 +35,8 @@
       "checked_on": "2026-11-12",
       "scope": "whole-page reference and materially cited claim review",
       "status": "completed with explicit limitations",
-      "source_entries": 37,
-      "unique_fetch_destinations": 42,
+      "source_entries": 39,
+      "unique_fetch_destinations": 44,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "eds-ai-workflow.html": {
@@ -107,8 +107,8 @@
       "checked_on": "2026-11-12",
       "scope": "whole-page reference and materially cited claim review",
       "status": "completed with explicit limitations",
-      "source_entries": 16,
-      "unique_fetch_destinations": 22,
+      "source_entries": 17,
+      "unique_fetch_destinations": 23,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "training.html": {
@@ -123,8 +123,8 @@
       "checked_on": "2026-11-12",
       "scope": "whole-page reference and materially cited claim review",
       "status": "completed with explicit limitations",
-      "source_entries": 15,
-      "unique_fetch_destinations": 20,
+      "source_entries": 16,
+      "unique_fetch_destinations": 21,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "tech-scan.html": {
@@ -764,6 +764,54 @@
       ]
     },
     {
+      "url": "https://arxiv.org/abs/2611.10058",
+      "files": [
+        "concept.html",
+        "transformation.html"
+      ],
+      "hrefs": [
+        "https://arxiv.org/abs/2611.10058"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://arxiv.org/abs/2611.10058",
+      "method": "Direct HTTP GET and browser text fetch; readable page text reviewed",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Action approval is distinct from code review; 61% of careful code reviewers still often approved at least one action type without close review.",
+          "evidence_summary": "The abstract reports a survey of 203 developers who use AI coding agents; 61% of developers who carefully reviewed most or all generated code still often approved at least one type of agent action without close review.",
+          "limitation": "Self-reported survey evidence; it does not measure exploit incidence."
+        },
+        {
+          "file": "transformation.html",
+          "outcome": "supported",
+          "scope": "Approving an agent's actions is a separate decision from approving its output.",
+          "evidence_summary": "The abstract distinguishes delegating work and approving agent actions from reviewing generated code, and reports the 61% finding above.",
+          "limitation": "Self-reported survey evidence; it does not measure exploit incidence."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "92e2dacba46353ff520d645449e97295e3de1def387fc6df0055a8a079a3bc71",
+          "format": "primary-source response capture",
+          "source_url": "https://arxiv.org/abs/2611.10058"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-30"
+        },
+        {
+          "file": "transformation.html",
+          "id": "source-16"
+        }
+      ]
+    },
+    {
       "url": "https://astqb.org/2-2-test-levels-and-test-types/",
       "files": [
         "product-implementation.html"
@@ -1004,6 +1052,54 @@
         {
           "file": "tech-scan-harness.html",
           "id": "source-14"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/security/help-defend-against-memory-poisoning-in-amazon-bedrock-agentcore-with-multi-layer-write-validation/",
+      "files": [
+        "concept.html",
+        "product-implementation.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/security/help-defend-against-memory-poisoning-in-amazon-bedrock-agentcore-with-multi-layer-write-validation/"
+      ],
+      "checked_on": "2026-11-12",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/security/help-defend-against-memory-poisoning-in-amazon-bedrock-agentcore-with-multi-layer-write-validation/",
+      "method": "Direct HTTP GET and browser text fetch; readable page text reviewed",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Namespace isolation, write-time validation and quarantine or deny routes for persistent agent memory; direct SDK writes bypass a gateway interceptor.",
+          "evidence_summary": "The post describes IAM namespace conditions, Cedar policies, custom memory-strategy consolidation prompts and ApplyGuardrail, plus a composable scoring layer (ALLOW below 35, QUARANTINE 35-60, DENY above 60) and namespace tiers system, user, shared and quarantine; it states direct SDK writes bypass the gateway interceptor.",
+          "limitation": "Demo of 11 simulated cases uses a local keyword-overlap approximation, not Titan embeddings; thresholds and scores are illustrative, not field accuracy."
+        },
+        {
+          "file": "product-implementation.html",
+          "outcome": "supported",
+          "scope": "Persistent-memory write controls apply at every write route, including direct API or SDK writes.",
+          "evidence_summary": "The post's write-time validation, namespace tiers and direct-SDK bypass note support applying the same controls to every memory write route.",
+          "limitation": "Demo of 11 simulated cases uses a local keyword-overlap approximation, not Titan embeddings; thresholds and scores are illustrative, not field accuracy."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "ebf34dd658ab9c2e23e4c2f4ee083bd7242a77e2047d5f55c55c0f8ff0c583ae",
+          "format": "primary-source response capture",
+          "source_url": "https://aws.amazon.com/blogs/security/help-defend-against-memory-poisoning-in-amazon-bedrock-agentcore-with-multi-layer-write-validation/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-29"
+        },
+        {
+          "file": "product-implementation.html",
+          "id": "source-17"
         }
       ]
     },
