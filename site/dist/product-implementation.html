@@ -371,7 +371,7 @@
 <section id="factory-platform"><p class="implementation-section-type">Reference toolkit · Optional</p><h2>Provide tools, context and execution controls</h2>
           <p>Choose platform capabilities to match the tasks, data and permissions involved; a separate service for every capability is unnecessary. It gives people and agents consistent access to authorised context, reusable procedures, tools, realistic dependencies and standard commands, and keeps the evidence needed to reconstruct each action.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Platform capabilities to consider for the implementation loop; scroll horizontally if needed"><table class="wide-table"><caption>Platform capabilities to consider for the implementation loop</caption><thead><tr><th scope="col">Capability</th><th scope="col">What it provides and controls</th></tr></thead><tbody>
-            <tr><th scope="row">Context platform</th><td>Current organisational, architecture, domain, policy, security and technical context, with source, version, owner, freshness and access control</td></tr>
+            <tr><th scope="row">Context platform</th><td>Current organisational, architecture, domain, policy, security and technical context, with source, version, owner, freshness, access control and persistent-memory write controls</td></tr>
             <tr><th scope="row">Skills registry</th><td>Tested, reusable procedures, each with a version, an owner, dependencies, evaluations and a retirement status</td></tr>
             <tr><th scope="row">Tool gateway</th><td>Governed access to tools, data and services through Model Context Protocol (MCP), a standard way to connect AI applications to tools and data, or a similar interface, with identity, allow-lists, rate limits, audit trails and data boundaries</td></tr>
             <tr><th scope="row">Test containers</th><td>Reproducible dependencies such as databases, queues, browsers, services and models, with pinned versions and isolated data</td></tr>
@@ -387,6 +387,8 @@
             <li><strong>Readable evidence:</strong> produce quality reports that accountable people can understand and challenge.</li>
             <li><strong>Replaceable parts:</strong> put context, skills, models, scanners and tool providers behind stable contracts.</li>
           </ul>
+          <p>Persistent memory needs the same controls at write time as at retrieval. Apply the namespace, validation, quarantine and provenance controls in <a href="concept.html#context-engineering">Concepts: Supply relevant information</a> to every memory write route, including direct API or SDK writes. <a href="#source-17" aria-label="Source 17: Tarun Kumar, AWS, Help defend against memory poisoning in Amazon Bedrock AgentCore with multi-layer write validation">[17]</a></p>
+          <p>For example, a stored incident summary contains a hidden instruction to disable an asset-verification access check. The note is quarantined and does not become trusted guidance in the next task.</p>
 
         
 </section>
@@ -478,6 +480,7 @@
             <li id="source-14"><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html">Amazon CloudFront, Restrict access to an Amazon S3 origin</a>. Used in <a href="#implementation-engineering-detail">engineering example detail</a> as a service reference.</li>
             <li id="source-15"><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html">Amazon ECS, Monitor Amazon ECS using CloudWatch</a>. Used in <a href="#implementation-engineering-detail">engineering example detail</a> as a service reference.</li>
             <li id="source-16"><a href="https://martinfowler.com/rachels-ramblings/code-review.html">Rachel Laycock, Maybe We Shouldn't Be Reviewing All This Code</a> (2 September 2026). Practitioner argument for moving design discussion and deterministic checks earlier, while reserving human review for consequential changes. Used in <a href="#gates-and-assurance">gates and assurance</a> as an adaptation of that review approach.</li>
+            <li id="source-17"><a href="https://aws.amazon.com/blogs/security/help-defend-against-memory-poisoning-in-amazon-bedrock-agentcore-with-multi-layer-write-validation/">Tarun Kumar, Help defend against memory poisoning in Amazon Bedrock AgentCore with multi-layer write validation</a> (AWS Security Blog, 9 November 2026). Describes namespace isolation, write-time validation and quarantine or deny routes for persistent agent memory. The example is an illustrative pattern, not a validated detection rate: its demo classifies 11 simulated cases, three benign and eight attack, and returns the expected decision for all 11, using a local keyword-overlap approximation of semantic similarity instead of Amazon Titan Text Embeddings V2. Used in <a href="#factory-platform">Provide tools, context and execution controls</a>.</li>
           </ol>
         </section>
 
