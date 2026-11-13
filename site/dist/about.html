@@ -94,7 +94,7 @@
             <figcaption>Figure 1. How agents curate the playbook under human review.</figcaption>
             <details class="figure-reading"><summary>Read as text: the curation loop</summary>
               <ol>
-                <li>Content scouting agents powered by Muse, Hermes and OpenAI assess online material for novelty, gap coverage and loss if missed. Medium- and high-priority findings enter the issue backlog.</li>
+                <li>Content scouting agents powered by Muse, Hermes and OpenAI assess online material for novelty, gap coverage and loss if missed, with Grok Bot supplying X-post leads. Medium- and high-priority findings enter the issue backlog.</li>
                 <li>Content peer review uses Muse and OpenAI to score existing paragraphs from 1 to 10 for naturalness, ease of understanding and accuracy. Source-monitoring agents powered by Hermes and OpenAI check quoted sources, publish check dates and record changed, broken or unverified references. Both activities file findings as issues.</li>
                 <li>The Hermes-powered writer agent reviews prioritised issues and assesses their value. Lower-value proposals retain a recorded decision; changes with high assessed value proceed to drafting.</li>
                 <li>The writer uses the issue evidence, current articles, original sources and intended reader as context. The writing and design standards guide the draft and acceptance checks. For peer-review corrections, revise the content first, then consider whether the standards also need refinement.</li>
@@ -107,7 +107,7 @@
               <div class="figure-scroll" tabindex="0" role="region" aria-label="Site curation workflow; scroll horizontally to explore the full diagram on a narrow screen">
                 <svg viewBox="0 0 840 1120" role="img" aria-labelledby="curation-diagram-title" aria-describedby="curation-diagram-description">
                   <title id="curation-diagram-title">The site curation and maintenance loop</title>
-                  <desc id="curation-diagram-description">Content scouting agents use Muse, Hermes and OpenAI; content peer review uses Muse and OpenAI; source-monitoring agents use Hermes and OpenAI. Their findings feed the issue backlog. The Hermes writer agent assesses value and drafts useful changes using relevant context and shared standards. A two-way Telegram exchange lets the writer ask a human for clarification and receive a response before continuing affected work. The writer then submits a feature branch and pull request for human approval. Requested revisions return to the writer. Approved updates return to review and source monitoring. After correcting content, the writer also considers whether the standards need refinement.</desc>
+                  <desc id="curation-diagram-description">Content scouting agents use Muse, Hermes and OpenAI, with Grok Bot supplying X-post leads; content peer review uses Muse and OpenAI; source-monitoring agents use Hermes and OpenAI. Their findings feed the issue backlog. The Hermes writer agent assesses value and drafts useful changes using relevant context and shared standards. A two-way Telegram exchange lets the writer ask a human for clarification and receive a response before continuing affected work. The writer then submits a feature branch and pull request for human approval. Requested revisions return to the writer. Approved updates return to review and source monitoring. After correcting content, the writer also considers whether the standards need refinement.</desc>
                   <defs>
                     <marker id="curation-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
                     <marker id="curation-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
@@ -120,8 +120,8 @@
                   <g><rect class="d-node" x="32" y="88" width="228" height="122" rx="8"/>
                     <text class="d-title" x="146" y="114" text-anchor="middle">Content scouting agents</text>
                     <text class="d-sub" x="146" y="138" text-anchor="middle">Muse + Hermes + OpenAI</text>
-                    <text class="d-sub" x="146" y="163" text-anchor="middle">Novelty · gaps · loss if missed</text>
-                    <text class="d-sub" x="146" y="187" text-anchor="middle">Assess online practices</text>
+                    <text class="d-sub" x="146" y="163" text-anchor="middle">Grok Bot: X posts + leads</text>
+                    <text class="d-sub" x="146" y="187" text-anchor="middle">Novelty · gaps · loss if missed</text>
                   </g>
                   <g><rect class="d-node" x="306" y="88" width="228" height="122" rx="8"/>
                     <text class="d-title" x="420" y="114" text-anchor="middle">Content peer review</text>

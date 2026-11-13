@@ -21,6 +21,19 @@ class AboutGrokTests(unittest.TestCase):
         self.assertIn('href="#source-6"', scouting)
         self.assertRegex(html, r'<li id="source-6">.*x\.ai/news/grok-bot-and-x.*href="#scouting"')
 
+    def test_curation_diagram_names_grok_bot_as_scouting_lead_source(self):
+        html = ABOUT.read_text(encoding="utf-8")
+        match = re.search(
+            r'<figure class="concept-figure" id="fig-curation">(.*?)</figure>',
+            html,
+            re.S,
+        )
+        self.assertIsNotNone(match)
+        figure = match.group(1)
+        self.assertIn('Grok Bot: X posts + leads', figure)
+        self.assertIn('Grok Bot supplying X-post leads', figure)
+        self.assertNotIn('Assess online practices', figure)
+
 
 if __name__ == "__main__":
     unittest.main()
