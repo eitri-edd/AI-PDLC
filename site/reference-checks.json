@@ -3,14 +3,14 @@
   "scope": "Current publication census with retained 12 November page-wide passes and targeted 13 November Tech Scan reviews; Wave 2 cited-source reviews completed with limitations, not a new whole-site claim review. Issue #73 adds a targeted census and claim checks, not a new page-wide pass.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 257,
-  "current_unique_hrefs": 263,
+  "current_unique_urls": 260,
+  "current_unique_hrefs": 266,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 10,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 235,
+    "retrieved": 238,
     "retrieved_pdf_text": 3,
     "retrieved_with_login_banner": 1
   },
@@ -155,13 +155,13 @@
       "followup_scope": "Original page-wide date retained; targeted primary-source refinement and inherited-source limitations recorded separately."
     },
     "tech-scan-gateway.html": {
-      "checked_on": "2026-11-12",
+      "checked_on": "2026-11-13",
       "scope": "whole-page reference and materially cited claim review",
       "status": "completed with explicit limitations",
-      "source_entries": 21,
-      "unique_fetch_destinations": 25,
-      "maintenance_record": "tech-scan-refinement-review-2026-11-12.md",
-      "followup_scope": "Original page-wide date retained; targeted primary-source refinement and inherited-source limitations recorded separately."
+      "source_entries": 24,
+      "unique_fetch_destinations": 28,
+      "maintenance_record": "reference-review-2026-11-13-issue-81.md",
+      "followup_scope": "Targeted primary-source refinement 13 November 2026 (issue #81): dead ArcBeta comparison replaced by Palo Alto Networks, LiteLLM and OpenRouter first-party sources; page check and editorial dates moved to 13 November 2026."
     },
     "tech-scan-sandbox.html": {
       "checked_on": "2026-11-12",
@@ -9167,43 +9167,6 @@
       ]
     },
     {
-      "url": "https://www.arcbeta.com/Blog/llm-gateway-pricing-litellm-openrouter-portkey-2026",
-      "files": [
-        "tech-scan-gateway.html"
-      ],
-      "hrefs": [
-        "https://www.arcbeta.com/Blog/llm-gateway-pricing-litellm-openrouter-portkey-2026"
-      ],
-      "checked_on": "2026-11-12",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://www.arcbeta.com/Blog/llm-gateway-pricing-litellm-openrouter-portkey-2026",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-gateway.html",
-          "outcome": "limited",
-          "scope": "ArcBeta, LLM gateway pricing: LiteLLM, OpenRouter, Portkey . Secondary 2026 comparison retained as research provenance, not current first-party confirmation of licensing, incident reports, acquisition history or feature tiers. Used in the optional notes under Conditional alternatives .",
-          "evidence_summary": "Direct GET returned 200. The page states malicious PyPI versions 1.82.7/1.82.8 in March and 1.107.0 in October 2026, and Palo Alto Networks closing its Portkey acquisition on 29 May 2026.",
-          "review_kind": "inherited source pass; citation scope reconciled",
-          "limitation": "The prior source pass is retained; this targeted refinement did not re-fetch and verify every inherited claim."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "cc86d81f047b691dadf42ccae11289998bae1a4ad25248d31b96b19f9a381ecf",
-          "format": "readable primary-source text",
-          "source_url": "https://www.arcbeta.com/Blog/llm-gateway-pricing-litellm-openrouter-portkey-2026"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-gateway.html",
-          "id": "source-11"
-        }
-      ]
-    },
-    {
       "url": "https://www.archunit.org",
       "files": [
         "eds-developer-harness.html",
@@ -11018,6 +10981,118 @@
         {
           "file": "concept.html",
           "id": "source-31"
+        }
+      ]
+    },
+    {
+      "url": "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Palo Alto Networks, Palo Alto Networks Completes Acquisition of Portkey to Secure AI Agents. Press release, 29 May 2026: Palo Alto Networks has closed the acquisition of Portkey, making Portkey the core AI Gateway for Prisma AIRS. Used in the optional notes under Conditional alternatives.",
+          "evidence_summary": "Direct GET returned 200. The release states Palo Alto Networks has closed the acquisition of Portkey and that Portkey becomes the core AI Gateway for Prisma AIRS."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-11"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.litellm.ai/blog/security-update-march-2026",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://docs.litellm.ai/blog/security-update-march-2026"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.litellm.ai/blog/security-update-march-2026",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "LiteLLM, Security Update: Suspected Supply Chain Incident. First-party advisory, March 2026: malicious PyPI releases litellm==1.82.7 and litellm==1.82.8 were live on 24 March 2026 for about 40 minutes before PyPI quarantined them. Used in the optional notes under Conditional alternatives.",
+          "evidence_summary": "Direct GET returned 200. The advisory states the compromised PyPI packages were litellm==1.82.7 and litellm==1.82.8, live on 24 March 2026 from 10:39 UTC for about 40 minutes before being quarantined by PyPI."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-22"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "LiteLLM, The attack chain behind the v1.107.0 LiteLLM release. First-party root-cause analysis, 23 October 2026: a compromised litellm==1.107.0 was published to PyPI on 21 October 2026 and quarantined the same day. Used in the optional notes under Conditional alternatives.",
+          "evidence_summary": "Direct GET returned 200. The analysis states a compromised litellm==1.107.0 was published to PyPI on 21 October 2026 (11:39 UTC) and quarantined by PyPI by 13:23 UTC the same day."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-23"
+        }
+      ]
+    },
+    {
+      "url": "https://openrouter.ai/docs/quickstart",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://openrouter.ai/docs/quickstart"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://openrouter.ai/docs/quickstart",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "OpenRouter, Quickstart Guide. First-party documentation: access to hundreds of models through a single API endpoint, with automatic fallbacks. Used in the optional notes under Conditional alternatives.",
+          "evidence_summary": "Direct GET returned 200 (redirect from /docs). The guide states OpenRouter gives access to hundreds of AI models through a single API endpoint and handles fallbacks automatically."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-24"
         }
       ]
     }
