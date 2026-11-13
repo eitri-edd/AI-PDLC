@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-12",
-  "scope": "Current publication census with retained 12 November page-wide passes and targeted 13 November Tech Scan reviews; Wave 2 cited-source reviews completed with limitations, not a new whole-site claim review.",
+  "scope": "Current publication census with retained 12 November page-wide passes and targeted 13 November Tech Scan reviews; Wave 2 cited-source reviews completed with limitations, not a new whole-site claim review. Issue #73 adds a targeted census and claim checks, not a new page-wide pass.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 246,
-  "current_unique_hrefs": 252,
+  "current_unique_urls": 257,
+  "current_unique_hrefs": 263,
   "counts": {
-    "dynamic_page_no_text": 4,
+    "dynamic_page_no_text": 5,
     "expected_preconnect_root_response": 2,
-    "partial_reader_recovery": 7,
+    "partial_reader_recovery": 10,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 228,
+    "retrieved": 235,
     "retrieved_pdf_text": 3,
     "retrieved_with_login_banner": 1
   },
@@ -10729,6 +10729,297 @@
           "id": "source-14"
         }
       ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/memory",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://code.claude.com/docs/en/memory"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "targeted source review",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Anthropic documents Claude Code instruction discovery, settings and version-dependent AGENTS.md support; instruction text is not enforced configuration.",
+          "evidence_summary": "Anthropic documents Claude Code instruction discovery, settings and version-dependent AGENTS.md support; instruction text is not enforced configuration."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-33"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/issues/6235",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://github.com/anthropics/claude-code/issues/6235#issuecomment-5734364232"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "GitHub issue discussion reproduction",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Issue discussion reproduces the attributed announcement; this is a mirror, not independent confirmation of the live X post or current loading behavior.",
+          "evidence_summary": "Issue discussion reproduces the attributed announcement; this is a mirror, not independent confirmation of the live X post or current loading behavior.",
+          "limitation": "Issue discussion reproduces the attributed announcement; this is a mirror, not independent confirmation of the live X post or current loading behavior."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-31"
+        }
+      ]
+    },
+    {
+      "url": "https://kiro.dev/docs/sandbox.md",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/sandbox.md"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "targeted source review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Kiro documents an off-by-default local command sandbox, its exclusions, optional stdio MCP wrapping and unavailable-backend behavior; not a local deployment test.",
+          "evidence_summary": "Kiro documents an off-by-default local command sandbox, its exclusions, optional stdio MCP wrapping and unavailable-backend behavior; not a local deployment test."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-20"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "targeted source review",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "OpenAI describes Codex AGENTS.md discovery and directory scope; behavior must be checked for the actual client.",
+          "evidence_summary": "OpenAI describes Codex AGENTS.md discovery and directory scope; behavior must be checked for the actual client."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-32"
+        }
+      ]
+    },
+    {
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://openai.com/index/securing-our-frontier-model-training-environment"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "targeted source review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "OpenAI reports controlled research on covert channels and shared CPU cache, with researchers supplying protocols or direction in most tests; not evidence of ordinary customer compromise.",
+          "evidence_summary": "OpenAI reports controlled research on covert channels and shared CPU cache, with researchers supplying protocols or direction in most tests; not evidence of ordinary customer compromise."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-23"
+        }
+      ]
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "targeted source review",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Anthropic discusses adjusting prompts and harnesses for model changes; this does not establish the local results of a migration.",
+          "evidence_summary": "Anthropic discusses adjusting prompts and harnesses for model changes; this does not establish the local results of a migration."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-35"
+        }
+      ]
+    },
+    {
+      "url": "https://x.ai/news/grok-bot-and-x",
+      "files": [
+        "about.html"
+      ],
+      "hrefs": [
+        "https://x.ai/news/grok-bot-and-x"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "targeted source review",
+      "claim_reviews": [
+        {
+          "file": "about.html",
+          "outcome": "supported",
+          "scope": "xAI announcement describes Grok Bot searching X posts; it does not verify individual results or the site’s runtime configuration.",
+          "evidence_summary": "xAI announcement describes Grok Bot searching X posts; it does not verify individual results or the site’s runtime configuration."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "about.html",
+          "id": "source-6"
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/ericzakariasson/status/2102853511637774551",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://x.com/ericzakariasson/status/2102853511637774551"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "partial_reader_recovery",
+      "method": "reader extraction / indexed partial where available; original X access limited",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Readable extracted post presents one team’s harness token-efficiency work with quality as a constraint; practitioner account, not a general benchmark or independent local measurement.",
+          "evidence_summary": "Readable extracted post presents one team’s harness token-efficiency work with quality as a constraint; practitioner account, not a general benchmark or independent local measurement.",
+          "limitation": "Readable extracted post presents one team’s harness token-efficiency work with quality as a constraint; practitioner account, not a general benchmark or independent local measurement."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-34"
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/rauchg/status/2114770919436808572",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://x.com/rauchg/status/2114770919436808572"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "partial_reader_recovery",
+      "method": "reader extraction / indexed partial where available; original X access limited",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "limited",
+          "scope": "Partial indexed extract attributes a CPU communication reproduction to Rauch; the truncated extract does not verify implementation details or establish independent test results.",
+          "evidence_summary": "Partial indexed extract attributes a CPU communication reproduction to Rauch; the truncated extract does not verify implementation details or establish independent test results.",
+          "limitation": "Partial indexed extract attributes a CPU communication reproduction to Rauch; the truncated extract does not verify implementation details or establish independent test results."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-24"
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/thsottiaux/status/2107368734981517634",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://x.com/thsottiaux/status/2107368734981517634"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "partial_reader_recovery",
+      "method": "reader extraction / indexed partial where available; original X access limited",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "limited",
+          "scope": "Partial indexed title describes Auto-review and decision fatigue; extract is incomplete and does not document Kiro sandbox behavior.",
+          "evidence_summary": "Partial indexed title describes Auto-review and decision fatigue; extract is incomplete and does not document Kiro sandbox behavior.",
+          "limitation": "Partial indexed title describes Auto-review and decision fatigue; extract is incomplete and does not document Kiro sandbox behavior."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-21"
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/trq212/status/2101009392611278961",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://x.com/trq212/status/2101009392611278961"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "dynamic_page_no_text",
+      "method": "reader extraction / indexed partial where available; original X access limited",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "inaccessible",
+          "scope": "Original X post was unavailable; the linked issue reproduces an announcement. Do not treat a reproduction as a live original read.",
+          "evidence_summary": "Original X post was unavailable; the linked issue reproduces an announcement. Do not treat a reproduction as a live original read.",
+          "limitation": "Original X post was unavailable; the linked issue reproduces an announcement. Do not treat a reproduction as a live original read."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-31"
+        }
+      ]
     }
   ],
   "history": [
@@ -20579,5 +20870,10 @@
     "record": "tech-scan-refinement-review-2026-11-12.md",
     "locally_deployed": false,
     "representative_reader_session": "not performed"
+  },
+  "issue73_targeted_followup": {
+    "checked_on": "2026-11-13",
+    "record": "issue73-x-insights-review-2026-11-13.md",
+    "scope": "New external URLs on About, Concept, Tech Scan Sandbox and Tech Scan Agents; individual claim support and X access are scoped per page. No local product or sandbox tests. Page-wide pass dates remain unchanged."
   }
 }
