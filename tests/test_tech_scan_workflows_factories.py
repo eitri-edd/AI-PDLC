@@ -25,12 +25,17 @@ class WorkflowsFactoriesTests(unittest.TestCase):
         self.assertTrue(list(doc.root.elements('h1')), 'The reference page must exist')
         self.assertIn('workflow', text(section(doc, 'purpose')).lower())
         self.assertIn('factory', text(section(doc, 'purpose')).lower())
+        self.assertIn('no managed software factory', text(section(doc, 'purpose')).lower())
+        self.assertIn('kiro web', text(section(doc, 'purpose')).lower())
         candidate = text(section(doc, 'candidate'))
         for phrase in ('use_bedrock', 'human', 'requirements', 'not a complete factory'):
             self.assertIn(phrase, candidate)
+        self.assertIn('ephemeral github-hosted runner', candidate.lower())
         gates = text(section(doc, 'controls'))
         for phrase in ('status checks', 'human', 'deploy', 'prompt', 'bypass'):
             self.assertIn(phrase, gates)
+        self.assertIn('restrict_untrusted_prs', gates)
+        self.assertIn('untrusted pull request', text(section(doc, 'pilot')).lower())
 
     def test_sources_navigation_and_local_validation(self):
         doc = get_doc()
@@ -45,7 +50,7 @@ class WorkflowsFactoriesTests(unittest.TestCase):
                 self.assertIn(href[1:], ids)
         for nav in doc.root.elements('nav'):
             if nav.attrs.get('aria-label') == 'On this page':
-                self.assertLessEqual(len(list(nav.elements('a'))), 5)
+                self.assertLessEqual(len(list(nav.elements('a'))), 7)
         hrefs = {a.attrs.get('href') for a in doc.root.elements('a')}
         for href in ('tech-scan-agents.html', 'tech-scan-harness.html', 'tech-scan-sandbox.html'):
             self.assertIn(href, hrefs)

@@ -181,6 +181,8 @@ class HarnessSandboxTests(unittest.TestCase):
                 expected = before['nav'][:4] + [
                     ('tech-scan-models.html', 'Models & access'),
                     ('tech-scan-harness.html', 'Harness & execution'),
+                    ('tech-scan-gateway.html', 'AI gateway'),
+                    ('tech-scan-sandbox.html', 'Sandbox'),
                     ('tech-scan-agents.html', 'Coding agents & coordination'),
                     ('tech-scan-workflows-factories.html', 'Workflows & factories'),
                 ] + before['nav'][8:]

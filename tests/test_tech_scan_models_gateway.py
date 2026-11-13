@@ -47,8 +47,8 @@ LEGACY_URLS = {
     ],
 }
 GUIDE_NAV_SHA256 = {
-    "models": "85ace4ba66c5b3db0675f563fb90d487b081dbee354cddd9cf07e29693c2de25",
-    "gateway": "aa8ab4c6f0a9b7681fd8107091a8fa679b48b0f22f98f7b2e960ddec43945787",
+    "models": "0a31dda4366826c405d73b25a1d223aecc5b5644df9c66460aefbb06e9acbcd6",
+    "gateway": "a8908632fd587a35bb5265303ed5aed065d3303a6901d61340c6b1703bb1df51",
 }
 LEGACY_IDS = {"main", "tech-scan-note", "page-map-caption", "page-map-note",
               "purpose", "aws-first-default", "conditional-alternatives",
@@ -200,7 +200,8 @@ class ModelsGatewayTests(unittest.TestCase):
                     continue
                 labels = {a.attrs.get("href"): normalise(a.text()) for a in nav.elements("a")}
                 self.assertEqual(labels["#purpose"], purpose)
-                self.assertNotIn("#do-not-use", labels)
+                self.assertEqual(labels["#do-not-use"], exclusions)
+                self.assertEqual(labels["#gaps"], "Gaps and open questions")
                 self.assertEqual(normalise(next(by_id(doc, "do-not-use").elements("h2")).text()), exclusions)
         research = by_id(document("models"), "research-only")
         self.assertIn("A typed decision returns an answer in a fixed form", normalise(research.text()))
@@ -244,7 +245,7 @@ class ModelsGatewayTests(unittest.TestCase):
                 self.assert_inherited_contract("models", broken)
 
     def test_sources_stay_final_visible_and_citation_numbers_follow_list_order(self):
-        for page, count in [("models", 10), ("gateway", 21)]:
+        for page, count in [("models", 11), ("gateway", 21)]:
             with self.subTest(page=page):
                 doc = document(page)
                 source = by_id(doc, "sources")
