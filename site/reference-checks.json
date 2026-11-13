@@ -3,14 +3,14 @@
   "scope": "Current publication census with retained 12 November page-wide passes and targeted 13 November Tech Scan reviews; Wave 2 cited-source reviews completed with limitations, not a new whole-site claim review.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 235,
-  "current_unique_hrefs": 241,
+  "current_unique_urls": 246,
+  "current_unique_hrefs": 252,
   "counts": {
     "dynamic_page_no_text": 4,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 7,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 217,
+    "retrieved": 228,
     "retrieved_pdf_text": 3,
     "retrieved_with_login_banner": 1
   },
@@ -140,10 +140,10 @@
       "checked_on": "2026-11-12",
       "scope": "whole-page reference and materially cited claim review",
       "status": "completed with explicit limitations",
-      "source_entries": 10,
-      "unique_fetch_destinations": 14,
+      "source_entries": 11,
+      "unique_fetch_destinations": 15,
       "maintenance_record": "tech-scan-refinement-review-2026-11-12.md",
-      "followup_scope": "Original page-wide date retained; targeted primary-source refinement and inherited-source limitations recorded separately."
+      "followup_scope": "Original page-wide date retained; targeted primary-source refinement and inherited-source limitations recorded separately. Inference-profile definition and source 11 added 13 November 2026 from the critical review (site/tech-scan-wave2-critical-review-2026-11-13.md)."
     },
     "tech-scan-harness.html": {
       "checked_on": "2026-11-12",
@@ -176,17 +176,19 @@
       "checked_on": "2026-11-13",
       "scope": "whole-page cited source and materially cited claim review, with explicit limits; operational links retain prior census disposition",
       "status": "completed with explicit limitations",
-      "source_entries": 11,
-      "unique_fetch_destinations": 16,
-      "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+      "source_entries": 19,
+      "unique_fetch_destinations": 23,
+      "maintenance_record": "tech-scan-wave2-review-2026-11-13.md",
+      "followup_scope": "Targeted P0/P1 additions from the 13 November 2026 critical review (site/tech-scan-wave2-critical-review-2026-11-13.md): Runtime/Mantle definitions, Kiro Auto citation and Fable claims, Zed ACP agents, orchestrator table, do-not-use and gaps sections, Kiro CVE-2026-10591 controls. New sources 12-19 checked 13 November 2026."
     },
     "tech-scan-workflows-factories.html": {
       "checked_on": "2026-11-13",
       "scope": "whole-page cited source and materially cited claim review, with explicit limits; operational links retain prior census disposition",
       "status": "completed with explicit limitations",
-      "source_entries": 10,
-      "unique_fetch_destinations": 15,
-      "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+      "source_entries": 14,
+      "unique_fetch_destinations": 20,
+      "maintenance_record": "tech-scan-wave2-review-2026-11-13.md",
+      "followup_scope": "Targeted P0/P1 additions from the 13 November 2026 critical review (site/tech-scan-wave2-critical-review-2026-11-13.md): no managed factory and Kiro Web, AI Factories disambiguation, Spec Kit gates, work tracking, alternatives table, do-not-use and gaps sections, factory control inputs. New sources 11-14 checked 13 November 2026."
     }
   },
   "references": [
@@ -6253,8 +6255,8 @@
         {
           "file": "tech-scan-agents.html",
           "outcome": "limited",
-          "scope": "Auto may route to active models outside the approved list; block Auto and select an approved default to limit processing.",
-          "evidence_summary": "Kiro available models, Auto section; canonical browser body inspected on 13 November 2026.",
+          "scope": "Auto may route to active models outside the approved list; block Auto and select an approved default to limit processing. Auto does not route to Experimental models; open-weight models listed include Grok 4.7, Kimi K3, MiniMax, DeepSeek and Qwen. Fable 5.1 is US East only and Enterprise only, with all traffic retained up to 30 days.",
+          "evidence_summary": "Kiro available models, Auto section; canonical browser body inspected on 13 November 2026; entry promoted to source 12 the same day.",
           "limitation": "Vendor documentation; actual routing and enforcement in local configuration not tested."
         },
         {
@@ -6268,7 +6270,7 @@
       "source_entries": [
         {
           "file": "tech-scan-agents.html",
-          "id": "source-6"
+          "id": "source-12"
         },
         {
           "file": "tech-scan-workflows-factories.html",
@@ -10414,6 +10416,317 @@
         {
           "file": "ai-pdlc.html",
           "id": "source-6"
+        }
+      ]
+    },
+    {
+      "url": "https://kiro.dev/web/",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/web/"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "limited",
+          "scope": "Kiro Web runs a task in an isolated cloud sandbox and opens a pull request for review, never merges on its own; paid-plan feature; autonomous mode selects the model automatically.",
+          "evidence_summary": "Kiro Web primary page fetched 13 November 2026; autonomous-mode doc fetched the same day.",
+          "limitation": "Vendor documentation; plan, region and data terms not independently verified."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-11"
+        }
+      ]
+    },
+    {
+      "url": "https://kiro.dev/docs/web/autonomous-mode/",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/web/autonomous-mode/"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "limited",
+          "scope": "In autonomous mode, the agent selects the model automatically; the user cannot choose the model.",
+          "evidence_summary": "Kiro autonomous-mode doc fetched 13 November 2026.",
+          "limitation": "Vendor documentation; availability date and region are not stated on the primary page."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-11"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/amazon-q-for-github.html",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/amazon-q-for-github.html"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Support ends 30 January 2027; new installations stop 18 November 2026; AWS points users to Kiro and the Kiro GitHub App.",
+          "evidence_summary": "AWS documentation page fetched 13 November 2026; discontinuation notice inspected."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "Support ends 30 January 2027; new installations stop 18 November 2026; AWS points users to Kiro and the Kiro GitHub App.",
+          "evidence_summary": "AWS documentation page fetched 13 November 2026; discontinuation notice inspected."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-13"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-12"
+        }
+      ]
+    },
+    {
+      "url": "https://jules.google/docs/changelog/",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://jules.google/docs/changelog/"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Jules Turndown, 29 October 2026: read-only after 11 November 2026; winds down 31 December 2026.",
+          "evidence_summary": "Google Jules changelog fetched 13 November 2026; turndown entry inspected."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "Jules Turndown, 29 October 2026: read-only after 11 November 2026; winds down 31 December 2026.",
+          "evidence_summary": "Google Jules changelog fetched 13 November 2026; turndown entry inspected."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-14"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-13"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/microsoft/autogen",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://github.com/microsoft/autogen"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Project archived and no longer maintained; no bug fixes, security fixes, features or support; new users should start with Microsoft Agent Framework.",
+          "evidence_summary": "AutoGen README fetched 13 November 2026; archived notice inspected."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-15"
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/assistants/migration",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://developers.openai.com/api/docs/assistants/migration"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "The Assistants API was officially sunset on 26 August 2026 and is no longer available; use the Responses API for new integrations.",
+          "evidence_summary": "OpenAI Assistants migration guide fetched 13 November 2026; sunset notice inspected."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-16"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/microsoft/semantic-kernel",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://github.com/microsoft/semantic-kernel"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Semantic Kernel is now Microsoft Agent Framework, available at version 1.0 as a production-ready release.",
+          "evidence_summary": "Semantic Kernel README fetched 13 November 2026; successor notice inspected."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-17"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eitri-edd/AI-PDLC/issues/65",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://github.com/eitri-edd/AI-PDLC/issues/65"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched issue page; proposal sections inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "limited",
+          "scope": "Orchestrator comparison, lifecycle findings and November 2026 security reports summarised here.",
+          "evidence_summary": "Issue 65 fetched 13 November 2026; research proposal sections inspected.",
+          "limitation": "Research proposal, not evidence of local validation."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-18"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles.html",
+      "files": [
+        "tech-scan-models.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles.html"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-models.html",
+          "outcome": "supported",
+          "scope": "Inference profiles define a model and the Regions its requests can route to; system-defined cross-Region profiles and user-created application profiles for cost and usage tracking.",
+          "evidence_summary": "AWS inference-profiles doc fetched 13 November 2026; profile types inspected."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-models.html",
+          "id": "source-11"
+        }
+      ]
+    },
+    {
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10591",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-10591"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "NVD page read via live browser; CVSS 4.0 and 3.x tabs inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Insufficient access control in the Kiro IDE file-write tool before 0.11; upgrade to Kiro IDE 0.11 or later. CVSS 3.1 8.8, CVSS 4.0 8.6.",
+          "evidence_summary": "NVD page read 13 November 2026; description, CWE-732, scores and remediation inspected; NVD assessment not yet provided."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-19"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "Trust-policy Condition element limits role assumption; GitHub Actions provider token.actions.githubusercontent.com with repository, branch and environment limits.",
+          "evidence_summary": "AWS IAM OIDC role doc fetched 13 November 2026; Condition element and GitHub Actions provider steps inspected."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-14"
         }
       ]
     }

@@ -6,8 +6,8 @@ from test_sources import Document, normalise
 
 DIST = Path(__file__).resolve().parents[1] / 'site/dist'
 PAGES = {
-    'tech-scan-agents.html': ['decision', 'routes', 'coordination', 'controls', 'sources'],
-    'tech-scan-workflows-factories.html': ['purpose', 'candidate', 'controls', 'pilot', 'sources'],
+    'tech-scan-agents.html': ['decision', 'routes', 'coordination', 'controls', 'do-not-use', 'gaps', 'sources'],
+    'tech-scan-workflows-factories.html': ['purpose', 'candidate', 'controls', 'pilot', 'do-not-use', 'gaps', 'sources'],
 }
 
 
@@ -47,7 +47,7 @@ class Wave2MapTests(unittest.TestCase):
                 self.assertEqual(len(navs), 2)
                 for nav in navs:
                     links = list(nav.elements('a'))
-                    self.assertLessEqual(len(links), 5)
+                    self.assertLessEqual(len(links), 7)
                     self.assertFalse(list(nav.elements('ul')))
                     self.assertEqual([a.attrs.get('href') for a in links], ['#' + t for t in targets])
 

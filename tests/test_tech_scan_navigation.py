@@ -4,7 +4,7 @@ import unittest
 from test_sources import Document, normalise
 
 DIST = Path(__file__).resolve().parents[1] / 'site/dist'
-CHILDREN = ['tech-scan-models.html', 'tech-scan-harness.html', 'tech-scan-agents.html', 'tech-scan-workflows-factories.html']
+CHILDREN = ['tech-scan-models.html', 'tech-scan-harness.html', 'tech-scan-gateway.html', 'tech-scan-sandbox.html', 'tech-scan-agents.html', 'tech-scan-workflows-factories.html']
 EXISTING = ['tech-scan.html', 'tech-scan-models.html', 'tech-scan-harness.html', 'tech-scan-gateway.html', 'tech-scan-sandbox.html']
 
 class NavigationTests(unittest.TestCase):
@@ -18,10 +18,8 @@ class NavigationTests(unittest.TestCase):
         for nav in (n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'On this page'):
             self.assertIn('#research-signals', [a.attrs.get('href') for a in nav.elements('a')])
 
-    def test_sidebar_on_existing_pages_has_four_destinations_and_correct_location(self):
+    def test_sidebar_on_every_page_has_six_destinations_and_correct_page(self):
         for path in DIST.glob('*.html'):
-            if path.name in CHILDREN[2:]:
-                continue
             doc = Document(path.read_text())
             nav = next(n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'Guide')
             hub = next(a for a in nav.elements('a') if a.attrs.get('href') == 'tech-scan.html')
@@ -30,10 +28,10 @@ class NavigationTests(unittest.TestCase):
             group = next(n for n in siblings[index + 1:] if not isinstance(n, str))
             self.assertEqual([a.attrs.get('href') for a in group.elements('a')], CHILDREN, path.name)
             for a in group.elements('a'):
-                expected = 'page' if path.name == a.attrs['href'] else ('location' if (path.name, a.attrs['href']) in [('tech-scan-gateway.html', CHILDREN[0]), ('tech-scan-sandbox.html', CHILDREN[1])] else None)
+                expected = 'page' if path.name == a.attrs['href'] else None
                 self.assertEqual(a.attrs.get('aria-current'), expected, path.name)
 
-    def test_flat_matching_contents_have_at_most_five_valid_targets(self):
+    def test_flat_matching_contents_have_at_most_nine_valid_targets(self):
         for name in EXISTING:
             doc = Document((DIST / name).read_text())
             contents = [n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'On this page']
@@ -42,7 +40,7 @@ class NavigationTests(unittest.TestCase):
             ids = {n.attrs['id'] for n in doc.root.elements() if 'id' in n.attrs}
             for nav in contents:
                 links = list(nav.elements('a'))
-                self.assertLessEqual(len(links), 5, name)
+                self.assertLessEqual(len(links), 9, name)
                 self.assertFalse(list(nav.elements('ul')), name)
                 self.assertTrue(all(a.attrs.get('href', '')[1:] in ids for a in links), name)
                 lists.append([a.attrs['href'] for a in links])
@@ -54,7 +52,7 @@ class NavigationTests(unittest.TestCase):
         rows = list(next(section.elements('tbody')).elements('tr'))
         self.assertEqual(len(rows), 4)
         links = {a.attrs.get('href') for a in section.elements('a')}
-        self.assertTrue(set(CHILDREN + ['tech-scan-gateway.html', 'tech-scan-sandbox.html']) <= links)
+        self.assertTrue(set(CHILDREN) <= links)
 
     def test_component_pages_crosslink_related_reference(self):
         for source, target in [('tech-scan-models.html', 'tech-scan-gateway.html'), ('tech-scan-gateway.html', 'tech-scan-models.html'), ('tech-scan-harness.html', 'tech-scan-sandbox.html'), ('tech-scan-sandbox.html', 'tech-scan-harness.html')]:

@@ -44,7 +44,8 @@ class TechScanAgentsTests(unittest.TestCase):
         doc = Document(PAGE.read_text(encoding='utf-8'))
         assert len(doc.tocs) == 2
         assert doc.tocs[0] == doc.tocs[1]
-        assert 1 <= len(doc.tocs[0]) <= 5
+        assert 1 <= len(doc.tocs[0]) <= 7
+        assert 'do-not-use' in doc.ids and 'gaps' in doc.ids
         assert len(doc.ids) == len(set(doc.ids))
         assert all(href[1:] in doc.ids for href in doc.links if href.startswith('#'))
         for destination in ('tech-scan-harness.html', 'tech-scan-sandbox.html'):
@@ -66,5 +67,6 @@ class TechScanAgentsTests(unittest.TestCase):
         text = PAGE.read_text(encoding='utf-8').lower()
         for phrase in ('failed required gate', 'retention', 'authorisation', 'fallback',
                        'runtime and mantle', 'exclude auto', 'single', 'handoff',
-                       'human reviews', 'no local pilot', 'direct provider'):
+                       'human reviews', 'no local pilot', 'direct provider',
+                       'inference profile', 'bedrock-mantle', 'do not start on retired'):
             assert phrase in text
