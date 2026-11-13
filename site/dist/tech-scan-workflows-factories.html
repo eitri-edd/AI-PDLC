@@ -30,13 +30,11 @@
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
           <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
-                    <div class="nav-children">
-            <a href="tech-scan-models.html">Models &amp; access</a>
-            <a href="tech-scan-harness.html">Harness &amp; execution</a>
-            <a href="tech-scan-gateway.html">AI gateway</a>
-            <a href="tech-scan-sandbox.html">Sandbox</a>
-            <a href="tech-scan-agents.html">Coding agents &amp; coordination</a>
-            <a href="tech-scan-workflows-factories.html" aria-current="page">Workflows &amp; factories</a>
+          <div class="nav-children">
+            <a href="tech-scan.html#models-access">Models &amp; access</a>
+            <a href="tech-scan.html#agent-environment">Agent environment</a>
+            <a href="tech-scan.html#agents-workflows" aria-current="location">Agents &amp; workflows</a>
+            <a href="tech-scan.html#verification-delivery">Verification &amp; delivery</a>
           </div>
           <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
           <div class="nav-children">
@@ -70,9 +68,7 @@
             <li class="page-map-node"><strong>Pilot and evidence</strong><div class="page-map-links"><a href="#pilot">Test before adoption</a><a href="#do-not-use">Do not adopt a closing factory</a><a href="#gaps">Gaps and open questions</a><a href="#sources">Sources</a></div></li>
           </ol>
         </figure>
-        <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page"><a href="#purpose">Choose the work and outcome</a><a href="#candidate">Build the AWS-first candidate</a><a href="#controls">Enforce the boundaries</a><a href="#pilot">Test before adoption</a>
-<a href="#do-not-use">Do not adopt a closing factory</a>
-<a href="#gaps">Gaps and open questions</a><a href="#sources">Sources</a></nav></details>
+        <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page"><a href="#purpose">Choose the work and outcome</a><a href="#candidate">Build the AWS-first candidate</a><a href="#controls">Enforce the boundaries</a><a href="#pilot">Test before adoption</a><a href="#sources">Sources</a></nav></details>
         <section id="purpose"><h2>Choose the work and outcome</h2>
           <p>A <strong>workflow</strong> arranges activities, dependencies and decisions: for example, a product owner and engineer agree acceptance criteria, review a design and break it into tasks. A <strong>software factory</strong>, as used here, assembles the intake, agent execution, tests and review handoff that can turn an issue into a pull request (PR). It is a composition, not a guarantee of correctness or an approval to deploy. Do not confuse this with AWS AI Factories, which is managed on-premises AI infrastructure for training and inference, not an issue-to-PR service.<a href="#source-10" aria-label="Source 10: GitHub issue 64, Wave 2 research proposal">[10]</a></p>
 <p>AWS has no managed software factory: no AWS product takes a GitHub issue to a reviewed pull request out of the box. The closest managed option is Kiro Web, which runs a task in an isolated cloud sandbox and opens a pull request for review, but never merges on its own. Kiro Web is a paid-plan feature; in autonomous mode it selects the model automatically, so it cannot pin a named model for a Bedrock-only policy. Confirm the current plan, region and data terms with Kiro before adopting it.<a href="#source-10" aria-label="Source 10: GitHub issue 64, Wave 2 research proposal">[10]</a><a href="#source-11" aria-label="Source 11: Kiro, Web">[11]</a></p>
@@ -105,6 +101,7 @@
 <li><strong>Execution:</strong> restrict filesystem access, egress, credentials and duration outside the prompt. Isolation reduces risk but does not prove the model or generated code is safe; see the <a href="tech-scan-sandbox.html">Sandbox reference</a>.</li></ul>
         </section>
         <section id="pilot"><h2>Test before adoption</h2>
+          <p>For checks and review evidence, see <a href="tech-scan-verification.html">Verification</a>; for the release handoff, see <a href="tech-scan-delivery.html">Delivery</a>.</p>
           <p>The platform engineer and security reviewer should run a non-production pilot against an approved test repository. Record the exact action revision, runner image, model, region, permissions and expected and observed results. Try an injected issue, a secret in a diff, a failing test, and a change to a protected workflow or CODEOWNERS file. Attempt a merge with a failing check and with the agent identity; both should be denied under the proposed policy. Also attempt a command from an untrusted pull request; it should be denied while <code>restrict_untrusted_prs</code> is true.</p>
           <p>Record the PR, logs, costs, failures and remaining gaps. The designated owner decides whether the evidence meets the agreed gates; a passing pilot is not production authorisation. Test the actual deployment approval path separately. No local pilot, independent benchmark or representative reader study supports this draft yet.</p>
         </section>
@@ -141,6 +138,4 @@
 <li id="source-14"><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html">AWS, Create a role for OpenID Connect federation</a> — trust-policy conditions for OIDC roles, including the GitHub Actions provider and repository, branch and environment limits.</li>
         </ol></section>
         <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
-      </article></main><aside class="page-contents"><nav aria-label="On this page"><p>On this page</p><a href="#purpose">Choose the work and outcome</a><a href="#candidate">Build the AWS-first candidate</a><a href="#controls">Enforce the boundaries</a><a href="#pilot">Test before adoption</a>
-<a href="#do-not-use">Do not adopt a closing factory</a>
-<a href="#gaps">Gaps and open questions</a><a href="#sources">Sources</a></nav></aside></div></body></html>
+      </article></main><aside class="page-contents"><nav aria-label="On this page"><p>On this page</p><a href="#purpose">Choose the work and outcome</a><a href="#candidate">Build the AWS-first candidate</a><a href="#controls">Enforce the boundaries</a><a href="#pilot">Test before adoption</a><a href="#sources">Sources</a></nav></aside></div></body></html>

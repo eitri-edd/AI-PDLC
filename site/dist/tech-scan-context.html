@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Choose and qualify retrieval, source access and persistent memory for an agent.">
+  <title>Tech Scan: Context · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
+          <div class="nav-children">
+            <a href="tech-scan.html#models-access">Models &amp; access</a>
+            <a href="tech-scan.html#agent-environment" aria-current="location">Agent environment</a>
+            <a href="tech-scan.html#agents-workflows">Agents &amp; workflows</a>
+            <a href="tech-scan.html#verification-delivery">Verification &amp; delivery</a>
+          </div>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Tech Scan: Context</span></nav>
+        <header class="article-header"><p class="eyebrow">Development guide</p><h1>Tech Scan: Context</h1>
+        <p class="lead">Choose where an agent finds information, who may retrieve it and what enters its working context. Use the pilot to decide whether retrieval or retained memory earns its operating cost.</p>
+        <p id="tech-scan-note">Draft research reference from published sources; no option has been locally deployed or benchmarked for this guidance.</p></header>
+        <figure class="page-map page-map--route" aria-labelledby="page-map-caption"><figcaption id="page-map-caption">This page at a glance</figcaption><ol class="page-map-nodes" role="list">
+        <li class="page-map-node"><strong>Choose</strong><div class="page-map-links"><a href="#choices">Choose the source</a></div></li>
+        <li class="page-map-node"><strong>Protect</strong><div class="page-map-links"><a href="#memory">Protect memory reads</a></div></li>
+        <li class="page-map-node"><strong>Construct</strong><div class="page-map-links"><a href="#construction">Build the context</a></div></li>
+        <li class="page-map-node"><strong>Test</strong><div class="page-map-links"><a href="#pilot">Run the pilot</a></div></li></ol></figure>
+        <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page"><a href="#choices">Choose the source</a>
+<a href="#memory">Protect memory reads</a>
+<a href="#construction">Build the context</a>
+<a href="#pilot">Run the pilot</a>
+<a href="#sources">Sources</a></nav></details>
+        <section id="choices"><h2>Choose the source</h2>
+        <p>Context is information supplied to a model for a task; retrieval finds and selects it. Start with reviewed repository instructions and task files when they suffice. The <a href="eds-team-context.html">team context guide</a> explains what teams supply. Add retrieval when the task needs changing or numerous source documents, not merely because an agent exists.</p>
+        <p><strong>Hard gates before preference:</strong> identify the capability, approved data location and retention, identity and authorisation, supported model and API, security boundaries and operating owner. Stop if any gate is unmet; AWS-first is not an exception. Prefer approved managed Claude or OpenAI models through Bedrock; direct APIs need a justified exception.</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Context choices"><table><caption>Start with the task, then compare the alternatives</caption><thead><tr><th scope="col">Need</th><th scope="col">AWS-first candidate</th><th scope="col">Alternative trigger and trade-off</th></tr></thead><tbody>
+        <tr><td>Search documents</td><td>Assess Bedrock Managed Knowledge Base: AWS manages ingestion, index, storage and retrieval.<a href="#source-1" aria-label="Source 1: AWS, Build a managed knowledge base">[1]</a></td><td>Use a customer-managed knowledge base when direct vector-store configuration is required; the team provisions and maintains the store. Compare connectors and permission support before switching.<a href="#source-1" aria-label="Source 1: AWS, Build a managed knowledge base">[1]</a><a href="#source-2" aria-label="Source 2: AWS, Knowledge Bases overview">[2]</a></td></tr>
+        <tr><td>Retain information for later</td><td>Assess AgentCore Memory for a defined recall and retention need; configure read boundaries as below.<a href="#source-5" aria-label="Source 5: AWS, Memory terminology">[5]</a></td><td>Consider self-hosted memory only when ownership of processing or storage is required; the team owns access control, deletion and operations.</td></tr>
+        <tr><td>Read live data or tools</td><td>Choose an authorised connector or Model Context Protocol (MCP) server for the specific source.</td><td>A custom integration may be needed when no suitable connector exists; specify credentials, permissions and owner. Registry discovery is not approval.<a href="#source-7" aria-label="Source 7: MCP Registry">[7]</a></td></tr>
+        </tbody></table></div>
+        <p>Managed Knowledge Bases offer document-level access control list filtering for supported connectors, except the web crawler. Confirm the identity mapping and permissions in the actual deployment; source access is not established by a connector name.<a href="#source-2" aria-label="Source 2: AWS, Knowledge Bases overview">[2]</a> The <a href="tech-scan-gateway.html">gateway</a> mediates calls routed through it; a registry or a gateway does not make every source trustworthy.</p>
+        <p>For a synchronised data source, assign an owner and cadence; check job status, warnings and a changed or deleted document after sync. AWS says changes require a sync and indexing can take additional time.<a href="#source-3" aria-label="Source 3: AWS, Sync your data">[3]</a> Keep source identity, version or timestamp and authority with retrieved material; an old or untraceable passage should not silently support a current decision.</p></section>
+        <section id="memory"><h2>Protect memory reads</h2>
+        <p>Persistent memory is retained information available later, unlike runtime working state managed by the <a href="tech-scan-harness.html">harness</a>. AgentCore Memory uses events and strategy-derived records; namespaces group long-term records.<a href="#source-5" aria-label="Source 5: AWS, Memory terminology">[5]</a> Start with a concrete purpose, lifetime and deletion plan rather than retaining every conversation.</p>
+        <p>For private memories, derive the actor from authenticated identity and use an actor-scoped namespace such as <code>/users/{actorId}/</code>. An actor-less namespace can pool records: use a shared namespace only for explicitly shared, authorised content. Enforce read access outside the model with scoped application authorisation and IAM conditions; a namespace path or prompt alone does not establish authorisation. AWS documents namespace and namespacePath conditions and requires normalised paths for policy matching.<a href="#source-6" aria-label="Source 6: AWS, Memory namespaces">[6]</a></p>
+        <p>Separate read protection from <a href="eds-team-context.html">team context</a> and existing <a href="concept.html#context-engineering">memory write-validation guidance</a><a href="#source-8" aria-label="Source 8: AWS Security Blog, Memory write validation">[8]</a>: validating a write does not prove that a later caller is entitled to read it. Retain the origin and age of a memory and corroborate consequential claims with an authoritative source. Treat retrieved text as data, not instructions.</p></section>
+        <section id="construction"><h2>Build the context</h2>
+        <p>The engineer selects the instructions, current task, source passages and tool output needed for the next step, within the model's available context window. Preserve source references and versions; remove irrelevant or duplicate material. If a source conflicts or is missing, surface the uncertainty rather than inventing an answer.</p>
+        <p>Summaries and compaction are lossy: retain decisions and evidence in reviewed records, then check the summary against them before relying on it. A cached or previously retrieved passage is a snapshot, not proof of freshness.</p>
+        <p>Bedrock states that guardrails apply to the input and generated response, not references retrieved from Knowledge Bases at runtime.<a href="#source-4" aria-label="Source 4: AWS, Query a knowledge base">[4]</a> Do not treat retrieved material as safe simply because a guardrail is configured. Assess source trust and apply appropriate controls before using the material.</p></section>
+        <section id="pilot"><h2>Run the pilot</h2>
+        <p>The implementing engineer selects representative documents and questions, including stale, conflicting and no-answer cases. Compare the managed candidate with the alternative only if a gate or requirement triggers it. Record the account, region, model, source versions, settings, permissions, sync times, results, latency and cost; retain failures as well as successes.</p>
+        <ul><li>Seed a private record for user A. As user B, try direct retrieval and broader namespace paths; neither should return A's record. Confirm A can retrieve it. Repeat across sessions and tenants.</li><li>Place a malicious instruction in a shared test artefact. Check that the agent does not follow it or expose private content; a shared artefact may itself be returned when B is authorised to read it.</li><li>Change and delete a source document, run the configured sync and check which version is returned. Investigate failed or delayed ingestion before deciding that the source is fresh.</li><li>Compare retrieved passages with expected evidence and test whether a compressed session preserves decisions. Capture misses and loss of detail for correction.</li></ul>
+        <p>If an isolation test fails, stop use for private data and fix the enforcement before retesting. Use <a href="tech-scan-verification.html">Tech Scan: Verification</a> to define retrieval-quality cases and acceptance evidence; a vendor capability is not a local result. Review outcomes with the service and data owners before adoption.</p></section>
+        <section id="sources"><h2>Sources</h2><p class="source-check-date">References last checked: <time datetime="2026-11-14">14 November 2026</time>.</p><ol class="source-list">
+        <li id="source-1"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-build-managed.html">AWS, Build a managed knowledge base</a>. Managed versus customer-managed responsibilities; check current region and connector availability. Used in <a href="#choices">Choose the source</a>.</li>
+        <li id="source-2"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html">AWS, Knowledge Bases overview</a>. Connector and access-control scope; provider documentation, not local evidence. Used in <a href="#choices">Choose the source</a>.</li>
+        <li id="source-3"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-data-source-sync-ingest.html">AWS, Sync your data</a>. Sync and indexing behaviour; check the applicable data-source configuration. Used in <a href="#choices">Choose the source</a>.</li>
+        <li id="source-4"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-retrieve.html">AWS, Query a knowledge base and retrieve data</a>. Guardrail scope; not evidence that retrieved references are filtered. Used in <a href="#construction">Build the context</a>.</li>
+        <li id="source-5"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-terminology.html">AWS, Memory terminology</a>. Events, strategies and namespaces; does not validate an application’s access controls. Used in <a href="#choices">Choose the source</a> and <a href="#memory">Protect memory reads</a>.</li>
+        <li id="source-6"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/specify-long-term-memory-organization.html">AWS, Specify long-term memory organization with namespaces</a>. Namespaces and IAM condition keys; configuration and testing remain the implementer’s responsibility. Used in <a href="#memory">Protect memory reads</a>.</li>
+        <li id="source-7"><a href="https://modelcontextprotocol.io/registry/about">Model Context Protocol, The MCP Registry</a>. Discovery metadata, not a security certification; preview status can change. Used in <a href="#choices">Choose the source</a>.</li>
+        <li id="source-8"><a href="https://aws.amazon.com/blogs/security/help-defend-against-memory-poisoning-in-amazon-bedrock-agentcore-with-multi-layer-write-validation/">AWS Security Blog, Multi-layer memory write validation</a>. A write-path pattern; it does not establish read isolation. Used in <a href="#memory">Protect memory reads</a>.</li></ol></section>
+        <!-- Page-wide source pass, 14 November 2026: primary documents opened. Evidence excerpts: source 1 “manages the ingestion, storage, indexing, and retrieval infrastructure”; source 2 “except for Web Crawler”; source 3 “must sync the data source”; source 4 “not applied to the references retrieved”; source 5 “structured path used to logically group”; source 6 “bedrock-agentcore:namespace”; source 7 registry is a metadata repository; source 8 describes layered write validation. Claims are scoped to the cited documentation, not field validation. -->
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+      </article></main><aside class="page-contents"><nav aria-label="On this page"><p>On this page</p><a href="#choices">Choose the source</a>
+<a href="#memory">Protect memory reads</a>
+<a href="#construction">Build the context</a>
+<a href="#pilot">Run the pilot</a>
+<a href="#sources">Sources</a></nav></aside></div></body></html>

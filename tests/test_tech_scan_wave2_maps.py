@@ -47,9 +47,10 @@ class Wave2MapTests(unittest.TestCase):
                 self.assertEqual(len(navs), 2)
                 for nav in navs:
                     links = list(nav.elements('a'))
-                    self.assertLessEqual(len(links), 7)
+                    self.assertLessEqual(len(links), 5)
                     self.assertFalse(list(nav.elements('ul')))
-                    self.assertEqual([a.attrs.get('href') for a in links], ['#' + t for t in targets])
+                    self.assertEqual([a.attrs.get('href') for a in links],
+                                     ['#' + t for t in targets if t not in {'do-not-use', 'gaps'}])
 
 
 if __name__ == '__main__':
