@@ -48,7 +48,7 @@ Describe what a model or agent generates, retrieves, checks or executes. Explain
 - Connect ideas by explaining the relationship, such as a cause, consequence or condition. Use a transition when it helps, rather than adding one mechanically to every paragraph.
 - Replace noun-heavy phrases with verbs: “review the evidence”, rather than “conduct an evidence review exercise”.
 - Name the referent when “it”, “this” or “they” could mean more than one thing.
-- Explain a specialist term at first use. Keep the precise term when a simpler replacement would change its meaning.
+- Explain terms that are unfamiliar or ambiguous for the intended audience at first use. Keep recognised technical terminology and define vendor-specific or guide-specific meanings where needed. Do not repeat explanations of concepts established as prerequisites; keep the precise term when a simpler replacement would change its meaning.
 - Remove repeated introductions, promotional claims and conclusions that merely restate the opening.
 
 Read difficult passages aloud. Revise wording that sounds stiff, obscures the relationship between ideas or requires a second reading. Sentence and paragraph lengths are editing prompts; understanding takes priority over a word count.
@@ -119,7 +119,7 @@ Distinguish accepting a change from authorising its release, and requesting an e
 
 Use British English in authored prose: “organisation”, “prioritise”, “behaviour” and “programme”. Preserve official product names, code identifiers and quoted titles.
 
-Use established software development lifecycle (SDLC) terminology for engineering concepts and explain specialist terms at first use. Keep the term precise while making its meaning concrete: “Regression testing reruns related workflows to detect unintended effects of a change.” Avoid replacing a useful engineering term with a vague word such as “checks”, or adding jargon that does not help the reader perform the task.
+Use established software development lifecycle (SDLC) terminology for engineering concepts and explain specialist terms unfamiliar or ambiguous to the intended audience at first use. When an explanation is needed, keep the term precise while making its meaning concrete: “Regression testing reruns related workflows to detect unintended effects of a change.” Avoid replacing a useful engineering term with a vague word such as “checks”, or adding jargon that does not help the reader perform the task.
 
 | Term | House usage |
 | --- | --- |
@@ -308,6 +308,8 @@ For product references such as Tech Scan, use consistent comparison fields, not 
 
 For changing product capabilities, recheck categorical negatives against current first-party documentation. A product's general availability does not establish that every feature is production-ready. An issue proposal or successful HTTP request is not independent support for a vendor capability or lifecycle claim.
 
+For a trend-oriented reference, lead with verified developments and their technical implications when those are the reader's task, followed by relevant comparisons and limitations. Keep volatile product facts in a canonical detailed entry; overview and cross-cutting views should link to it rather than maintain competing copies. Apply the same evidence and reference-check requirements to developments and comparisons.
+
 ### Lifecycle stage page
 
 Use a consistent set of questions across stages:
@@ -341,11 +343,13 @@ Keep a decision readable alongside the evidence and responsibility that explain 
 
 When an example contains three or more parallel items, types, options or checks, put them in a bullet list rather than running them together in a sentence. Introduce the list with a complete thought, keep the items grammatically consistent and explain the result or next action afterwards where needed. Apply this rule inside learning panels and table cells as well as in the main text. Use numbered lists when order matters, and keep comparison tables when readers need to compare the same attributes across options. Keep connected explanation in prose; do not turn every sentence into a bullet.
 
-Write learning examples in familiar language that readers could use in conversation with a colleague. Spell out relationships such as “who holds the asset and whether it works” instead of compressed wording such as “custody/status”. Keep precise terms where needed, explain them at first use and use the same names throughout a continuous example.
+Write learning examples in familiar language that readers could use in conversation with a colleague. Spell out relationships such as “who holds the asset and whether it works” instead of compressed wording such as “custody/status”. Keep precise terms where needed, explain unfamiliar or ambiguous terms at first use for the intended audience, and use the same names throughout a continuous example.
 
 Make link text meaningful on its own: “Read the evaluation guide”, not “click here”. Include the file type for downloads. Use callouts only for an exception, a consequential requirement or a useful example; keep essential instructions in the main flow.
 
 Diagrams need a caption explaining their purpose and a text equivalent for the relationships they convey. Classify each as a topic explanation or learning example before styling it. Use descriptive action and decision labels; do not make the image the only place an instruction appears. An adjacent table or list can serve as the equivalent if it preserves the diagram's relevant relationships, choices and return routes. Remove duplication without removing accessible meaning.
+
+State whether a diagram shows coverage, responsibilities, dependencies or a sequence, and explain what its nodes, arrows and boundaries mean. Do not imply execution order, mandatory deployment components or product readiness when showing conceptual relationships or publication plans.
 
 ## Editing examples
 
@@ -411,6 +415,7 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 - [ ] Terms are explained in context and used consistently; different source definitions are mapped without changing meanings mid-procedure.
 - [ ] References use descriptive names rather than invented pointer codes; traceability is retained through links and technical records.
 - [ ] Topic diagrams explain general content in the blue theme; fictional application diagrams and related panels use the shared lavender Method first treatment specified in `design.md`.
+- [ ] Actual rendered diagram connectors, directions, labels and optional paths agree with the caption and text equivalent; checks do not rely only on relationship metadata.
 - [ ] Worked-example headers use the shared label and book mark on every page; standalone and main journey headers state a concrete learning benefit, and collapsed supplementary groups preview their subjects.
 - [ ] The overview explains the lifecycle, while the continuous learning example stays in the product chapters; supplied premises and illustrative findings remain distinguishable.
 - [ ] Ambiguous terms have a clear scope; house definitions and named external methodologies remain distinguishable.
