@@ -38,7 +38,7 @@ LEGACY_URLS = {
         "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-acl.md",
         "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.md",
         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html",
-        "https://www.arcbeta.com/Blog/llm-gateway-pricing-litellm-openrouter-portkey-2026",
+        "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents",
         "https://vdf.ai/blog/ai-gateway-comparison/",
         "https://langfuse.com/self-hosting/deployment/aws",
         "https://kiro.dev/docs/models/available-models",
@@ -49,6 +49,12 @@ LEGACY_URLS = {
 GUIDE_NAV_SHA256 = {
     "models": "0a31dda4366826c405d73b25a1d223aecc5b5644df9c66460aefbb06e9acbcd6",
     "gateway": "a8908632fd587a35bb5265303ed5aed065d3303a6901d61340c6b1703bb1df51",
+}
+# "References last checked" / "Last editorial review" per page.
+# Gateway moved to 13 November 2026 with the issue #81 source replacement.
+CHECK_DATES = {
+    "models": ("12 November 2026", "2026-11-12"),
+    "gateway": ("13 November 2026", "2026-11-13"),
 }
 LEGACY_IDS = {"main", "tech-scan-note", "page-map-caption", "page-map-note",
               "purpose", "aws-first-default", "conditional-alternatives",
@@ -168,7 +174,7 @@ class ModelsGatewayTests(unittest.TestCase):
             self.assertIn(name, extra)
         for obsolete in ["Zero infrastructure →", "Kubernetes-native →", "On AWS →"]:
             self.assertNotIn(obsolete, text)
-        self.assertIn("secondary comparisons", text)
+        self.assertIn("secondary comparison", text)
         self.assertIn("not independently verified", text)
         self.assertIn("Licensing, incident and lifecycle claims", text)
 
@@ -219,13 +225,14 @@ class ModelsGatewayTests(unittest.TestCase):
         self.assertIsNotNone(guide)
         assert guide is not None
         self.assertEqual(sha256(guide[0].encode()).hexdigest(), GUIDE_NAV_SHA256[page])
+        check_text, check_datetime = CHECK_DATES[page]
         dates = [node for node in doc.root.elements("p") if node.has_class("source-check-date")]
         self.assertEqual(len(dates), 1)
-        self.assertEqual(normalise(dates[0].text()), "References last checked: 12 November 2026 .")
-        self.assertEqual(next(dates[0].elements("time")).attrs["datetime"], "2026-11-12")
+        self.assertEqual(normalise(dates[0].text()), f"References last checked: {check_text} .")
+        self.assertEqual(next(dates[0].elements("time")).attrs["datetime"], check_datetime)
         reviews = [node for node in doc.root.elements("p") if "Last editorial review:" in node.text()]
         self.assertEqual(len(reviews), 1)
-        self.assertEqual(next(reviews[0].elements("time")).attrs["datetime"], "2026-11-12")
+        self.assertEqual(next(reviews[0].elements("time")).attrs["datetime"], check_datetime)
         published = (["15 September 2026", "23 October 2026"] if page == "models" else
                      ["19 August 2026", "29 May 2026", "10 September 2026", "March and October 2026"])
         for value in published:
@@ -245,7 +252,7 @@ class ModelsGatewayTests(unittest.TestCase):
                 self.assert_inherited_contract("models", broken)
 
     def test_sources_stay_final_visible_and_citation_numbers_follow_list_order(self):
-        for page, count in [("models", 11), ("gateway", 21)]:
+        for page, count in [("models", 11), ("gateway", 24)]:
             with self.subTest(page=page):
                 doc = document(page)
                 source = by_id(doc, "sources")
