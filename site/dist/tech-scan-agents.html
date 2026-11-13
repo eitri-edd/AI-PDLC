@@ -30,13 +30,11 @@
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
           <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
-                    <div class="nav-children">
-            <a href="tech-scan-models.html">Models &amp; access</a>
-            <a href="tech-scan-harness.html">Harness &amp; execution</a>
-            <a href="tech-scan-gateway.html">AI gateway</a>
-            <a href="tech-scan-sandbox.html">Sandbox</a>
-            <a href="tech-scan-agents.html" aria-current="page">Coding agents &amp; coordination</a>
-            <a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a>
+          <div class="nav-children">
+            <a href="tech-scan.html#models-access">Models &amp; access</a>
+            <a href="tech-scan.html#agent-environment">Agent environment</a>
+            <a href="tech-scan.html#agents-workflows" aria-current="location">Agents &amp; workflows</a>
+            <a href="tech-scan.html#verification-delivery">Verification &amp; delivery</a>
           </div>
           <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
           <div class="nav-children">
@@ -73,8 +71,6 @@
 <a href="#routes">Agents and model routes</a>
 <a href="#coordination">Coordination</a>
 <a href="#controls">Controls and pilot</a>
-<a href="#do-not-use">Do not start on retired products</a>
-<a href="#gaps">Gaps and open questions</a>
 <a href="#sources">Sources</a></nav></details>
 <section id="decision"><h2>Start with the decision gates</h2>
 <p>A coding agent can read a task, propose changes and use permitted tools. An editor is the developer’s interface; the agent may run in that editor, a terminal or a remote service. The model generates responses; the host runs the agent and its tools. Choosing one does not settle the others.</p>
@@ -111,6 +107,7 @@
 <p>The last five rows summarise the research proposal; Strands and LangGraph are covered in depth above. Confirm the current release of any framework before adoption.<a href="#source-18" aria-label="Source 18: GitHub issue 65, Wave 2 research proposal">[18]</a></p>
 <p>Set delegation limits, timeouts, budgets and a failure route; record task inputs, handoffs, tool calls and outcomes without exposing secrets. A human reviews changes before merge and the existing release authority remains separate. For one agent’s loop, tools and memory see <a href="tech-scan-harness.html">Harness</a>; for code execution boundaries see <a href="tech-scan-sandbox.html">Sandbox</a>.</p></section>
 <section id="controls"><h2>Control access and run a pilot</h2>
+<p>For independent checks and review evidence, see <a href="tech-scan-verification.html">Verification</a>.</p>
 <p>Repository files, fetched pages, tool output and agent instructions can contain hostile instructions. Treat them as untrusted data. Use a scoped identity, least-privilege repository and cloud permissions, restricted outbound access and an isolated execution environment. Review instructions, hooks and tool servers before enabling them; protect the agent’s own permissions and trust configuration from unauthorised edits. Avoid blanket approval of shell commands and never put secrets in prompts or commands. Anthropic’s security guidance describes prompt-injection and permission risks for Claude Code; the exact controls differ by product.<a href="#source-10" aria-label="Source 10: Anthropic, Security">[10]</a></p>
 <p>Enforce two rules before any pilot. First, no agent writes its own trust configuration: <code>mcp.json</code>, <code>.vscode/tasks.json</code>, <code>.claude/settings.json</code> and hook definitions stay under human control, because a crafted instruction can turn a write into code execution. Kiro CVE-2026-10591 is that failure: insufficient access control in the file-write tool before Kiro IDE 0.11 let crafted instructions write to execution-sensitive paths; upgrade to Kiro IDE 0.11 or later.<a href="#source-19" aria-label="Source 19: NIST NVD, CVE-2026-10591">[19]</a> Second, no secrets in commands, prompts or allow-rules: a secret written into an agent's local configuration has leaked publicly in at least one November 2026 report, and a leaked allow-rule is a standing permission.<a href="#source-18" aria-label="Source 18: GitHub issue 65, Wave 2 research proposal">[18]</a></p>
 <p>Tibo (@thsottiaux) highlights approval fatigue when discussing OpenAI Auto-review.<a href="#source-21" aria-label="Source 21: Tibo (@thsottiaux), Auto-review post">[21]</a> Automated review is not an isolation boundary: retain independently enforced permission and network restrictions.</p>
@@ -163,6 +160,4 @@
 <a href="#routes">Agents and model routes</a>
 <a href="#coordination">Coordination</a>
 <a href="#controls">Controls and pilot</a>
-<a href="#do-not-use">Do not start on retired products</a>
-<a href="#gaps">Gaps and open questions</a>
 <a href="#sources">Sources</a></nav></aside></div></body></html>

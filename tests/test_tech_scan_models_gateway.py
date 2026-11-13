@@ -4,13 +4,13 @@ Use the site's stdlib parser so disclosures, claims and canonical citations are
 checked together. Representative-reader comprehension remains untested.
 """
 
-from hashlib import sha256
 from pathlib import Path
 import re
 import unittest
 from unittest.mock import patch
 
 from test_sources import Document, Element, normalise, statically_hidden
+from test_tech_scan_harness_sandbox import BASELINE
 
 DIST = Path(__file__).resolve().parents[1] / "site/dist"
 
@@ -45,10 +45,6 @@ LEGACY_URLS = {
         "https://kiro.dev/docs/enterprise/governance/model",
         "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
     ],
-}
-GUIDE_NAV_SHA256 = {
-    "models": "0a31dda4366826c405d73b25a1d223aecc5b5644df9c66460aefbb06e9acbcd6",
-    "gateway": "a8908632fd587a35bb5265303ed5aed065d3303a6901d61340c6b1703bb1df51",
 }
 # "References last checked" / "Last editorial review" per page.
 # Gateway moved to 13 November 2026 with the issue #81 source replacement.
@@ -224,7 +220,14 @@ class ModelsGatewayTests(unittest.TestCase):
         guide = re.search(r'<nav aria-label="Guide">.*?</nav>', raw, re.S)
         self.assertIsNotNone(guide)
         assert guide is not None
-        self.assertEqual(sha256(guide[0].encode()).hexdigest(), GUIDE_NAV_SHA256[page])
+        nav = next(n for n in doc.root.elements("nav") if n.attrs.get("aria-label") == "Guide")
+        expected = BASELINE["harness"]["nav"][:4] + [
+            ("tech-scan.html#models-access", "Models & access"),
+            ("tech-scan.html#agent-environment", "Agent environment"),
+            ("tech-scan.html#agents-workflows", "Agents & workflows"),
+            ("tech-scan.html#verification-delivery", "Verification & delivery"),
+        ] + BASELINE["harness"]["nav"][8:]
+        self.assertEqual([(a.attrs.get("href"), normalise(a.text())) for a in nav.elements("a")], expected)
         check_text, check_datetime = CHECK_DATES[page]
         dates = [node for node in doc.root.elements("p") if node.has_class("source-check-date")]
         self.assertEqual(len(dates), 1)

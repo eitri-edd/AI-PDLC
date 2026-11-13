@@ -39,7 +39,7 @@ class TechScanHubTests(unittest.TestCase):
     def test_publication_plan_is_optional_and_old_figure_links_still_resolve(self):
         document = self.document()
         planned = by_id(document, "planned-spokes")
-        self.assertEqual(normalise(next(planned.elements("h2")).text()), "Planned coverage")
+        self.assertEqual(normalise(next(planned.elements("h2")).text()), "Coverage map")
         for identity in ("fig-waves", "fig-waves-title-caption", "fig-waves-title", "fig-waves-title-desc"):
             node = by_id(document, identity)
             ancestors = []

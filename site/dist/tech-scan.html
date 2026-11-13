@@ -48,13 +48,11 @@
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
           <a href="tech-scan.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
-                    <div class="nav-children">
-            <a href="tech-scan-models.html">Models &amp; access</a>
-            <a href="tech-scan-harness.html">Harness &amp; execution</a>
-            <a href="tech-scan-gateway.html">AI gateway</a>
-            <a href="tech-scan-sandbox.html">Sandbox</a>
-            <a href="tech-scan-agents.html">Coding agents &amp; coordination</a>
-            <a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a>
+          <div class="nav-children">
+            <a href="tech-scan.html#models-access">Models &amp; access</a>
+            <a href="tech-scan.html#agent-environment">Agent environment</a>
+            <a href="tech-scan.html#agents-workflows">Agents &amp; workflows</a>
+            <a href="tech-scan.html#verification-delivery">Verification &amp; delivery</a>
           </div>
           <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
           <div class="nav-children">
@@ -106,21 +104,18 @@
           <nav aria-label="On this page"><a href="#published-spokes">Choose a component</a>
 <a href="#purpose">How the parts work together</a>
 <a href="#research-signals">What is changing</a>
-<a href="#how-to-read">Read the evidence</a>
-<a href="#planned-spokes">Planned coverage</a>
-<a href="#cross-cutting-views">Shared interfaces and stack views</a>
-<a href="#gaps">Limits before adoption</a>
-<a href="#layer-map">Other delivery responsibilities</a>
+<a href="#planned-spokes">Coverage map</a>
 <a href="#sources">Sources</a></nav>
         </details>
         <section id="published-spokes">
           <h2 id="page-map-caption">Choose a component</h2>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Choose a Tech Scan component; scroll horizontally if needed"><table><caption id="page-map-note">Start with the decision you need to make</caption><thead><tr><th scope="col">Your question</th><th scope="col">Open this reference</th></tr></thead><tbody>
-            <tr><th scope="row">Which model and access route fit the task? How are model and tool calls controlled?</th><td><a href="tech-scan-models.html">Models &amp; access</a>: approved routes, coding clients and typed-decision limits. <a href="tech-scan-gateway.html">AI gateway</a>: inference routing, tool connections and their different controls.</td></tr>
-            <tr><th scope="row">What coordinates the agent? Where does untrusted code run?</th><td><a href="tech-scan-harness.html">Harness &amp; execution</a>: the loop, tools, retained state and supporting services. <a href="tech-scan-sandbox.html">Sandbox</a>: execution choices and isolation boundaries.</td></tr>
-            <tr><th scope="row">How do coding agents coordinate work?</th><td><a href="tech-scan-agents.html">Coding agents &amp; coordination</a></td></tr>
-            <tr><th scope="row">How do workflows and factories organise work?</th><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a></td></tr>
+            <tr id="models-access"><th scope="row">Models &amp; access: which model and access route fit the task?</th><td><a href="tech-scan-models.html">Models &amp; access</a> and <a href="tech-scan-gateway.html">AI gateway</a> cover model choices, routing and tool connections.</td></tr>
+            <tr id="agent-environment"><th scope="row">Agent environment: what information, coordination and execution boundaries are needed?</th><td><a href="tech-scan-context.html">Context</a>, <a href="tech-scan-harness.html">Harness &amp; execution</a> and <a href="tech-scan-sandbox.html">Sandbox</a> cover source access, the agent loop and code isolation.</td></tr>
+            <tr id="agents-workflows"><th scope="row">Agents &amp; workflows: how is work organised and coordinated?</th><td><a href="tech-scan-agents.html">Coding agents &amp; coordination</a> and <a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a> cover coding tools and work across tasks.</td></tr>
+            <tr id="verification-delivery"><th scope="row">Verification &amp; delivery: how is a change checked, released and observed?</th><td><a href="tech-scan-verification.html">Verification</a> covers tests, evaluation and security checks; <a href="tech-scan-delivery.html">Delivery</a> covers release controls and operations.</td></tr>
           </tbody></table></div>
+          <p>For cross-cutting indexes, open the <a href="tech-scan-stack-views.html#languages">Languages view</a> or <a href="tech-scan-stack-views.html#aws-platform">AWS platform view</a>.</p>
         </section>
         <section id="purpose">
           <h2>How the parts work together</h2>
@@ -190,10 +185,10 @@
           <p>Read availability at feature level. A generally available product can contain a preview or experimental capability. The single date under Sources records the page's reference-maintenance pass, not a guarantee that every feature is production-ready.</p>
         </section>
         <section id="planned-spokes">
-          <h2>Planned coverage</h2>
-          <p>References for workflows, coding agents and software factories are published. Context, verification and delivery are planned. The planned references do not yet supply a complete implementation shortlist. Language-stack and AWS-platform views will link across those references rather than repeat their product entries.<a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
+          <h2>Coverage map</h2>
+          <p>The ten component responsibilities are covered by published references. The Languages and AWS platform views link across those references rather than repeat their product entries.<a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
           <details class="concept-reference">
-            <summary>Publication plan (optional)</summary>
+            <summary>Publication coverage (optional)</summary>
             <figure class="concept-figure" id="fig-waves" data-diagram="static">
               <figcaption id="fig-waves-title-caption"><span id="fig-waves-title">Figure 2. Tech Scan components across Waves 1, 2 and 3.</span></figcaption>
               <p id="fig-waves-title-desc">Wave 1 covers Models, Harness, AI gateway and Sandbox. Wave 2 adds Workflows, Factories and Coding agents. Wave 3 adds Context, Verification and Delivery, plus the Languages and AWS platform views. Waves describe publication order, not a runtime sequence.</p>
@@ -202,14 +197,14 @@
                   <li>Workflows defines specifications and work tracking. Factories coordinates coding agents and submits changes for Verification.</li>
                   <li>Coding agents use or embed a Harness. Context supplies information to the harness. The harness calls Models directly or via an optional gateway; the AI gateway can also mediate tool access. Code tools run in a Sandbox when needed.</li>
                   <li>Verification supplies evidence for Delivery's existing review and release gates; it does not automatically authorise a release.</li>
-                  <li>The Languages and AWS platform views link across all ten component references. They are indexes, not runtime services. Published references are linked; planned pages are not yet available.</li>
+                  <li>The Languages and AWS platform views link across all ten component references. They are indexes, not runtime services. The map links to the published references.</li>
                 </ul>
               </details>
               <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand the component map</span></summary>
                 <div class="figure-scroll" tabindex="0" role="region" aria-label="Tech Scan component map across three waves; scroll horizontally to explore">
                   <svg viewBox="0 0 760 980" role="img" aria-labelledby="coverage-map-title" aria-describedby="coverage-map-description">
                     <title id="coverage-map-title">Tech Scan component coverage across three publication waves</title>
-                    <desc id="coverage-map-description">Workflows specifies work for Factories, which delegates coding to Coding agents and submits changes for Verification. Verification supplies evidence to Delivery. Coding agents use a Harness; Context supplies information to it. The harness calls Models directly or through an optional AI gateway, and code tools execute in a Sandbox when needed. Languages and AWS platform are cross-cutting views over all ten component references, not extra runtime services. Waves 1 and 2 are published; Wave 3 is planned. This is an illustrative responsibility map, not a deployment topology or mandatory execution sequence.</desc>
+                    <desc id="coverage-map-description">Workflows specifies work for Factories, which delegates coding to Coding agents and submits changes for Verification. Verification supplies evidence to Delivery. Coding agents use a Harness; Context supplies information to it. The harness calls Models directly or through an optional AI gateway, and code tools execute in a Sandbox when needed. Languages and AWS platform are cross-cutting views over all ten component references, not extra runtime services. All three waves are published. This is an illustrative responsibility map, not a deployment topology or mandatory execution sequence.</desc>
                     <g data-from="workflows" data-to="factories">
                       <path class="d-line" d="M220 110H280" marker-end="url(#arrow)"/>
                       <text class="d-label" x="250" y="96" text-anchor="middle">specs</text>
@@ -256,7 +251,7 @@
                     <path class="d-line" d="M20 760V780H740V760" aria-hidden="true"/>
                     <text class="d-label" x="380" y="770" text-anchor="middle">Both views link across the ten component references</text>
                     <rect class="d-group" x="20" y="800" width="720" height="174" rx="10"/>
-                    <text class="d-title" x="380" y="824" text-anchor="middle">Cross-cutting views · Wave 3 planned</text>
+                    <text class="d-title" x="380" y="824" text-anchor="middle">Cross-cutting views · Wave 3 published</text>
                     <text class="d-sub" x="380" y="846" text-anchor="middle">Link across all ten references above; do not duplicate product entries</text>
                   <g id="coverage-workflows" data-component="workflows" data-wave="2" data-publication="published" data-role="component">
                     <a href="tech-scan-workflows-factories.html" aria-label="Open the published workflows reference">
@@ -276,17 +271,23 @@
 
                     </a>
                   </g>
-                  <g id="coverage-verification" data-component="verification" data-wave="3" data-publication="planned" data-role="component">
-                    <rect class="d-planned" x="540" y="60" width="200" height="100" rx="8"/>
+                  <g id="coverage-verification" data-component="verification" data-wave="3" data-publication="published" data-role="component">
+                    <a href="tech-scan-verification.html" aria-label="Open the published verification reference">
+                    <rect class="d-node" x="540" y="60" width="200" height="100" rx="8"/>
                       <text class="d-title" x="640" y="89" text-anchor="middle">Verification</text>
                       <text class="d-sub" x="640" y="113" text-anchor="middle">Tests and evaluation</text>
-                      <text class="d-sub" x="640" y="136" text-anchor="middle">Wave 3 · planned</text>
+                      <text class="d-sub" x="640" y="136" text-anchor="middle">Wave 3 · published</text>
+
+                    </a>
                   </g>
-                  <g id="coverage-delivery" data-component="delivery" data-wave="3" data-publication="planned" data-role="component">
-                    <rect class="d-planned" x="540" y="250" width="200" height="100" rx="8"/>
+                  <g id="coverage-delivery" data-component="delivery" data-wave="3" data-publication="published" data-role="component">
+                    <a href="tech-scan-delivery.html" aria-label="Open the published delivery reference">
+                    <rect class="d-node" x="540" y="250" width="200" height="100" rx="8"/>
                       <text class="d-title" x="640" y="279" text-anchor="middle">Delivery</text>
                       <text class="d-sub" x="640" y="303" text-anchor="middle">Release gates and operations</text>
-                      <text class="d-sub" x="640" y="326" text-anchor="middle">Wave 3 · planned</text>
+                      <text class="d-sub" x="640" y="326" text-anchor="middle">Wave 3 · published</text>
+
+                    </a>
                   </g>
                   <g id="coverage-agents" data-component="agents" data-wave="2" data-publication="published" data-role="component">
                     <a href="tech-scan-agents.html" aria-label="Open the published agents reference">
@@ -305,11 +306,14 @@
                       <text class="d-sub" x="380" y="516" text-anchor="middle">Wave 1 · published</text>
                     </a>
                   </g>
-                  <g id="coverage-context" data-component="context" data-wave="3" data-publication="planned" data-role="component">
-                    <rect class="d-planned" x="20" y="440" width="200" height="100" rx="8"/>
+                  <g id="coverage-context" data-component="context" data-wave="3" data-publication="published" data-role="component">
+                    <a href="tech-scan-context.html" aria-label="Open the published context reference">
+                    <rect class="d-node" x="20" y="440" width="200" height="100" rx="8"/>
                       <text class="d-title" x="120" y="469" text-anchor="middle">Context</text>
                       <text class="d-sub" x="120" y="493" text-anchor="middle">Retrieval and source access</text>
-                      <text class="d-sub" x="120" y="516" text-anchor="middle">Wave 3 · planned</text>
+                      <text class="d-sub" x="120" y="516" text-anchor="middle">Wave 3 · published</text>
+
+                    </a>
                   </g>
                   <g id="coverage-gateway" data-component="gateway" data-wave="1" data-publication="published" data-role="component">
                     <a href="tech-scan-gateway.html" aria-label="Open the published AI gateway reference">
@@ -335,28 +339,34 @@
                       <text class="d-sub" x="640" y="706" text-anchor="middle">Wave 1 · published</text>
                     </a>
                   </g>
-                  <g id="coverage-languages" data-component="languages" data-wave="3" data-publication="planned" data-role="view" data-references="models harness gateway sandbox workflows factories agents context verification delivery">
+                  <g id="coverage-languages" data-component="languages" data-wave="3" data-publication="published" data-role="view" data-references="models harness gateway sandbox workflows factories agents context verification delivery">
+                    <a href="tech-scan-stack-views.html#languages" aria-label="Open the published languages reference">
                     <rect class="d-boundary" x="40" y="866" width="320" height="88" rx="8"/>
                       <text class="d-title" x="200" y="895" text-anchor="middle">Languages</text>
                       <text class="d-sub" x="200" y="919" text-anchor="middle">Java · TypeScript/React · Python</text>
-                      <text class="d-sub" x="200" y="942" text-anchor="middle">Wave 3 · planned</text>
+                      <text class="d-sub" x="200" y="942" text-anchor="middle">Wave 3 · published</text>
+
+                    </a>
                   </g>
-                  <g id="coverage-aws-platform" data-component="aws-platform" data-wave="3" data-publication="planned" data-role="view" data-references="models harness gateway sandbox workflows factories agents context verification delivery">
+                  <g id="coverage-aws-platform" data-component="aws-platform" data-wave="3" data-publication="published" data-role="view" data-references="models harness gateway sandbox workflows factories agents context verification delivery">
+                    <a href="tech-scan-stack-views.html#aws-platform" aria-label="Open the published aws platform reference">
                     <rect class="d-boundary" x="400" y="866" width="320" height="88" rx="8"/>
                       <text class="d-title" x="560" y="895" text-anchor="middle">AWS platform</text>
                       <text class="d-sub" x="560" y="919" text-anchor="middle">Services · identity · Regions</text>
-                      <text class="d-sub" x="560" y="942" text-anchor="middle">Wave 3 · planned</text>
+                      <text class="d-sub" x="560" y="942" text-anchor="middle">Wave 3 · published</text>
+
+                    </a>
                   </g>
                   </svg>
                 </div>
-                <p class="diagram-key">Wave labels show publication coverage, not product maturity. Blue nodes link to published references; amber nodes are planned. The two outlined views are indexes, not runtime services. Arrows show illustrative responsibility links, not request order or a requirement to deploy every component as a separate service.</p>
+                <p class="diagram-key">Wave labels show publication coverage, not product maturity. Component nodes link to published references. The two outlined views are indexes, not runtime services. Arrows show illustrative responsibility links, not request order or a requirement to deploy every component as a separate service.</p>
               </details>
             </figure>
           </details>
         </section>
         <section id="cross-cutting-views">
           <h2>Shared interfaces and stack views</h2>
-          <p>The planned stack views will show how the choices fit Java, TypeScript with React, or Python, and how the AWS services fit together. React is a JavaScript UI library, not a language.<a href="#source-6" aria-label="Source 6: React, Describing the UI">[6]</a> Each view will link to the maintained product entry instead of duplicating it.<a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
+          <p>The <a href="tech-scan-stack-views.html#languages">Languages view</a> shows how the choices fit Java, TypeScript with React, or Python; the <a href="tech-scan-stack-views.html#aws-platform">AWS platform view</a> shows how AWS services fit together. React is a JavaScript UI library, not a language.<a href="#source-6" aria-label="Source 6: React, Describing the UI">[6]</a> Each view links to the maintained product entry instead of duplicating it.<a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
           <details class="concept-reference">
             <summary>Protocols, tools and local conventions</summary>
             <p>These names describe different things; they are not interchangeable standards or evidence that an integration is authorised:</p>
@@ -371,7 +381,7 @@
         </section>
         <section id="gaps">
           <h2>Limits before adoption</h2>
-          <p>The six references do not yet form a complete delivery platform. In particular:</p>
+          <p>The references do not by themselves form a complete delivery platform. In particular:</p>
           <ul>
             <li><strong>Verification and release.</strong> Keep the existing tests, independent review and authorised release decisions. A model route or sandbox does not approve a change. The <a href="eds-path-to-production.html">Path to production</a> page describes the retained local gates.</li>
             <li><strong>Typed visual grounding.</strong> The scan has not established a suitable approved production route. The <a href="tech-scan-models.html#gaps">Models reference</a> distinguishes experimental Box output from the required qualification evidence.</li>
@@ -382,7 +392,7 @@
         <section id="layer-map">
           <h2>Other delivery responsibilities</h2>
           <details class="concept-reference">
-            <summary>What the remaining references need to cover</summary>
+            <summary>Responsibilities covered by the references</summary>
             <p>Context covers retrieval and source permissions. Workflows covers specifications and work tracking. Verification covers build-loop tests, security scans and quality gates. Delivery covers CI/CD, governance, operational observability and outcome measurement. Factories and Agents cover coding tools and coordination across tasks. The ten responsibilities are listed in the refinement record; the detailed layer-to-spoke table was removed from this page.</p>
           </details>
           <p class="next-step"><strong>Next step:</strong> Open the <a href="#published-spokes">reference for your decision</a>. Record why its starting choice fits, or which specific unmet requirement justifies an alternative.</p>
@@ -392,7 +402,7 @@
           <p class="source-check-date">References last checked: <time datetime="2026-11-12">12 November 2026</time>.</p>
           <ol class="source-list">
             <li id="source-1"><a href="https://github.com/eitri-edd/AI-PDLC/issues/54">GitHub issue 54, Add an AWS-first Tech Scan under Concepts</a>. The Tech Scan proposal: AWS-first capability shortlist, assessment criteria, typed-decision boundaries and evidence requirements. Used in <a href="#purpose">How the parts work together</a>, <a href="#how-to-read">Read the evidence</a>, <a href="#cross-cutting-views">Shared interfaces and stack views</a>, <a href="#gaps">Limits before adoption</a> and <a href="#layer-map">Other delivery responsibilities</a>.</li>
-            <li id="source-2"><a href="https://github.com/eitri-edd/AI-PDLC/issues/59">GitHub issue 59, Tech Scan as a hub-and-spoke section under Concepts</a>. The section concept: hub-and-spoke structure, languages and cloud as cross-cutting views, plain-text draft labelling, and phased build in three waves. Used in <a href="#purpose">How the parts work together</a>, <a href="#how-to-read">Read the evidence</a>, <a href="#published-spokes">Choose a component</a> and <a href="#planned-spokes">Planned coverage</a> and <a href="#cross-cutting-views">Shared interfaces and stack views</a>.</li>
+            <li id="source-2"><a href="https://github.com/eitri-edd/AI-PDLC/issues/59">GitHub issue 59, Tech Scan as a hub-and-spoke section under Concepts</a>. The section concept: hub-and-spoke structure, languages and cloud as cross-cutting views, plain-text draft labelling, and phased build in three waves. Used in <a href="#purpose">How the parts work together</a>, <a href="#how-to-read">Read the evidence</a>, <a href="#published-spokes">Choose a component</a> and <a href="#planned-spokes">Coverage map</a> and <a href="#cross-cutting-views">Shared interfaces and stack views</a>.</li>
             <li id="source-3"><a href="https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/">AWS, AWS Nitro Sandboxes for Amazon EKS, ECS and EC2</a>, 9 November 2026. Launch announcement behind the initial execution shortlist; retained for provenance. It does not establish independent performance or suitability for this team's workload. See <a href="tech-scan-sandbox.html">Sandbox</a> for the conditional choices.</li>
             <li id="source-4"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md">AWS, Bedrock AgentCore Harness documentation</a>. Managed-harness background for the initial shortlist. See <a href="tech-scan-harness.html">Harness</a> for the distinction between the agent loop, its hosting runtime and optional tools.</li>
             <li id="source-5"><a href="https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/solutions/approved/documents/architecture-diagrams/building-agentic-ai-foundation-solutions-on-aws.pdf">AWS, Guidance for Building Agentic AI Foundation Solutions on AWS (PDF)</a>. Reference architecture reviewed for technical accuracy 29 January 2026. It separates the AgentCore tool gateway from a LiteLLM inference gateway. Figure 1 adapts those responsibilities: it omits deployment components, does not reproduce the numbered request sequence, and adds an optional code-execution branch. Used in <a href="#purpose">How the parts work together</a>.</li>
@@ -411,11 +421,7 @@
       <nav aria-label="On this page"><p>On this page</p><a href="#published-spokes">Choose a component</a>
 <a href="#purpose">How the parts work together</a>
 <a href="#research-signals">What is changing</a>
-<a href="#how-to-read">Read the evidence</a>
-<a href="#planned-spokes">Planned coverage</a>
-<a href="#cross-cutting-views">Shared interfaces and stack views</a>
-<a href="#gaps">Limits before adoption</a>
-<a href="#layer-map">Other delivery responsibilities</a>
+<a href="#planned-spokes">Coverage map</a>
 <a href="#sources">Sources</a></nav>
     </aside>
   </div>
