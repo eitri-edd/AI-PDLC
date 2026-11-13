@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Specify work and trial an issue-to-pull-request factory with review, execution and release controls.">
+  <title>Tech Scan: Workflows &amp; factories · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
+          <div class="nav-children">
+            <a href="tech-scan-models.html">Models &amp; access</a>
+            <a href="tech-scan-harness.html">Harness &amp; execution</a>
+            <a href="tech-scan-agents.html">Coding agents &amp; coordination</a>
+            <a href="tech-scan-workflows-factories.html" aria-current="page">Workflows &amp; factories</a>
+          </div>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Workflows &amp; factories</span></nav>
+        <header class="article-header"><p class="eyebrow">Development guide</p><h1>Tech Scan: Workflows &amp; factories</h1><p class="lead">How do you turn an agreed requirement into a reviewable change without giving an agent authority to release it?</p><p id="tech-scan-note">Draft research reference; not locally deployed or benchmarked. Vendor documentation describes capabilities, not proof that this composition works in your environment. <a href="#source-10">Issue 64</a> is a research proposal, not local validation.</p></header>
+        <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
+          <figcaption id="page-map-caption">This page at a glance</figcaption>
+          <p id="page-map-note" class="page-map-note">Reading route: choose the work, examine the candidate, enforce boundaries, then test the approach and review its sources.</p>
+          <ol class="page-map-nodes" role="list">
+            <li class="page-map-node"><strong>Purpose</strong><div class="page-map-links"><a href="#purpose">Choose the work and outcome</a></div></li>
+            <li class="page-map-node"><strong>Candidate</strong><div class="page-map-links"><a href="#candidate">Build the AWS-first candidate</a></div></li>
+            <li class="page-map-node"><strong>Boundaries</strong><div class="page-map-links"><a href="#controls">Enforce the boundaries</a></div></li>
+            <li class="page-map-node"><strong>Pilot and evidence</strong><div class="page-map-links"><a href="#pilot">Test before adoption</a><a href="#sources">Sources</a></div></li>
+          </ol>
+        </figure>
+        <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page"><a href="#purpose">Choose the work and outcome</a><a href="#candidate">Build the AWS-first candidate</a><a href="#controls">Enforce the boundaries</a><a href="#pilot">Test before adoption</a><a href="#sources">Sources</a></nav></details>
+        <section id="purpose"><h2>Choose the work and outcome</h2>
+          <p>A <strong>workflow</strong> arranges activities, dependencies and decisions: for example, a product owner and engineer agree acceptance criteria, review a design and break it into tasks. A <strong>software factory</strong>, as used here, assembles the intake, agent execution, tests and review handoff that can turn an issue into a pull request (PR). It is a composition, not a guarantee of correctness or an approval to deploy.</p>
+          <p>Before choosing tools, the product owner records the user need, acceptance criteria and constraints. The engineering lead records the repository, required tests, permitted data and model, operating owner and who may approve the change and release. An unresolved mandatory requirement stops the pilot; AWS preference does not override a hard gate.</p>
+          <p>Kiro specs offer requirements (or bug analysis), design and tasks documents; Quick Spec can generate these without approval gates, so select and verify the review process rather than assuming every mode pauses.<a href="#source-1" aria-label="Source 1: Kiro specs">[1]</a> For a team whose existing coding agent has a supported integration, GitHub Spec Kit is an alternative: its documented flow separates specification, plan and tasks.<a href="#source-2" aria-label="Source 2: Spec Kit quickstart">[2]</a> Compare the artefacts against your own acceptance criteria; neither format proves the work is correct.</p>
+          <p>Related decisions: <a href="tech-scan-agents.html">Agents</a> chooses the worker; <a href="tech-scan-harness.html">Harness</a> explains the agent loop; <a href="tech-scan-sandbox.html">Sandbox</a> covers execution isolation.</p>
+        </section>
+        <section id="candidate"><h2>Build the AWS-first candidate</h2>
+          <p>For a GitHub repository and an approved Claude model on Amazon Bedrock, trial the Claude Code GitHub Action as a component in an owned issue-to-PR workflow. Its <code>use_bedrock: "true"</code> option supports Bedrock with OpenID Connect (OIDC); its configuration documents a named provider model. OIDC also requires separately configured AWS trust, credentials and GitHub <code>id-token: write</code> permission; the option alone does not set these up.<a href="#source-3" aria-label="Source 3: Claude Code Action inputs">[3]</a><a href="#source-4" aria-label="Source 4: Claude Code Action configuration">[4]</a> This is <strong>not a complete factory</strong>: the team must build and test intake, authorisation, PR creation, independent checks and the handoff. It does not establish that all execution, logs or data remain in AWS.</p>
+          <ol><li>The product owner and engineer approve a bounded issue, requirements and expected tests; an authorised operator assigns it to one run.</li><li>The platform engineer pins the action to a reviewed commit, configures a narrowly scoped AWS OIDC role and selects an approved Bedrock model and region. Use an isolated, disposable runner with restricted network and credentials; do not give the agent production access.</li><li>The runner checks out a controlled base, generates a branch and proposed change, and opens a PR. CI independently runs the required tests; the PR records the issue, model, action revision, test results and unresolved risks.</li><li>A qualified human reviews the diff and evidence. Only an authorised human merges; a separate authorised human release decision follows the applicable deployment process.</li></ol>
+          <p><strong>Hard gates:</strong> confirm required capability, approved data location and retention for every provider and log, identity and authorisation, model and API availability, execution and network boundaries, and an accountable operator. Record each decision and evidence. If any gate fails or is unknown, stop; seek an approved exception or select another route.</p>
+          <p><strong>Conditional alternative:</strong> use Kiro specs when its review workflow and data/model settings pass those same gates. If policy requires a named model, configure model access management, exclude Auto and choose an approved default; verify inference location and actual routing before use.<a href="#source-9" aria-label="Source 9: Kiro model governance">[9]</a> Use Spec Kit when the team needs a supported existing agent and a separate specification flow. A different hosted factory is a research option only after its data, identity, model, execution and retention terms are approved; do not infer Bedrock routing from an AWS brand.</p>
+        </section>
+        <section id="controls"><h2>Enforce the boundaries</h2>
+          <p>Issue text, repository files, tool output and third-party skills can contain untrusted instructions. A prompt such as “do not deploy” or an <code>AGENTS.md</code> rule guides behaviour; it is not an enforcement boundary. Do not combine untrusted issue or fork input, shell execution, a write token and secrets in one privileged job. Limit tokens, isolate jobs and pin reviewed dependencies.<a href="#source-7" aria-label="Source 7: GitHub secure use">[7]</a> Review skill instructions and scripts, pin them by commit, disable automatic updates and reject skills that fetch remote instructions at runtime.</p>
+          <ul><li><strong>Merge:</strong> configure protected branches or rulesets to require independent CI status checks and human review. Protect workflow files, instructions and CODEOWNERS with code-owner review; keep the agent and its app off bypass lists. Test these settings rather than relying on a self-reported agent test.<a href="#source-5" aria-label="Source 5: GitHub deploying code">[5]</a><a href="#source-6" aria-label="Source 6: GitHub code owners">[6]</a></li>
+          <li><strong>Deploy:</strong> a merge must not substitute for release approval: a merge can trigger deployment immediately unless a separate gate is configured. Where supported and configured, GitHub environments can require a reviewer and restrict deployment branches; prevent self-review where appropriate, and separately verify that the release approver is not the merger; self-review prevention alone does not establish this. Check plan and repository availability, and restrict administrator bypass where available and prevent other deployment paths from bypassing the gate.<a href="#source-8" aria-label="Source 8: GitHub environments">[8]</a></li>
+          <li><strong>Execution:</strong> restrict filesystem access, egress, credentials and duration outside the prompt. Isolation reduces risk but does not prove the model or generated code is safe; see the <a href="tech-scan-sandbox.html">Sandbox reference</a>.</li></ul>
+        </section>
+        <section id="pilot"><h2>Test before adoption</h2>
+          <p>The platform engineer and security reviewer should run a non-production pilot against an approved test repository. Record the exact action revision, runner image, model, region, permissions and expected and observed results. Try an injected issue, a secret in a diff, a failing test, and a change to a protected workflow or CODEOWNERS file. Attempt a merge with a failing check and with the agent identity; both should be denied under the proposed policy.</p>
+          <p>Record the PR, logs, costs, failures and remaining gaps. The designated owner decides whether the evidence meets the agreed gates; a passing pilot is not production authorisation. Test the actual deployment approval path separately. No local pilot, independent benchmark or representative reader study supports this draft yet.</p>
+        </section>
+        <section id="sources"><h2>Sources</h2><p class="source-check-date">References last checked: <time datetime="2026-11-13">13 November 2026</time>.</p><ol class="source-list">
+          <li id="source-1"><a href="https://kiro.dev/docs/specs/">Kiro, Specs</a>. Documents artefacts and Quick Spec's lack of approval gates.</li>
+          <li id="source-2"><a href="https://github.com/github/spec-kit/blob/main/docs/quickstart.md">GitHub Spec Kit, Quickstart</a>. Specification, planning and task sequence.</li>
+          <li id="source-3"><a href="https://github.com/anthropics/claude-code-action/blob/main/action.yml">Anthropic, Claude Code Action inputs</a>. Bedrock and OIDC option.</li>
+          <li id="source-4"><a href="https://github.com/anthropics/claude-code-action/blob/main/docs/configuration.md">Anthropic, Claude Code Action configuration</a>. Provider model selection.</li>
+          <li id="source-5"><a href="https://docs.github.com/en/pull-requests/concepts/deploying-code">GitHub, Deploying code</a>. Status checks, review and deployment controls.</li>
+          <li id="source-6"><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">GitHub, About code owners</a>. Code-owner review and its configuration.</li>
+          <li id="source-7"><a href="https://docs.github.com/en/actions/reference/security/secure-use">GitHub, Secure use reference</a>. Untrusted input, secrets, least privilege and action pinning.</li>
+          <li id="source-8"><a href="https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments">GitHub, Deployments and environments</a>. Required reviewers, self-review and branch restrictions; availability depends on plan and repository.</li>
+          <li id="source-9"><a href="https://kiro.dev/docs/enterprise/governance/model/">Kiro, Model access management</a>. Model restrictions; its <a href="https://kiro.dev/docs/models/available-models/">available models guidance</a> describes the Auto routing exception.</li>
+          <li id="source-10"><a href="https://github.com/eitri-edd/AI-PDLC/issues/64">GitHub issue 64, Wave 2 research proposal</a>. Candidate research and proposed pilots, not evidence of local validation.</li>
+        </ol></section>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+      </article></main><aside class="page-contents"><nav aria-label="On this page"><p>On this page</p><a href="#purpose">Choose the work and outcome</a><a href="#candidate">Build the AWS-first candidate</a><a href="#controls">Enforce the boundaries</a><a href="#pilot">Test before adoption</a><a href="#sources">Sources</a></nav></aside></div></body></html>

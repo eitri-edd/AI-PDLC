@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-12",
-  "scope": "Current publication census with retained 12 November page-wide passes and targeted Tech Scan follow-up; not a new whole-site claim review.",
+  "scope": "Current publication census with retained 12 November page-wide passes and targeted 13 November Tech Scan reviews; Wave 2 cited-source reviews completed with limitations, not a new whole-site claim review.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 217,
-  "current_unique_hrefs": 223,
+  "current_unique_urls": 235,
+  "current_unique_hrefs": 241,
   "counts": {
     "dynamic_page_no_text": 4,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 7,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 199,
+    "retrieved": 217,
     "retrieved_pdf_text": 3,
     "retrieved_with_login_banner": 1
   },
@@ -171,6 +171,22 @@
       "unique_fetch_destinations": 26,
       "maintenance_record": "tech-scan-refinement-review-2026-11-12.md",
       "followup_scope": "Original page-wide date retained; targeted primary-source refinement and inherited-source limitations recorded separately."
+    },
+    "tech-scan-agents.html": {
+      "checked_on": "2026-11-13",
+      "scope": "whole-page cited source and materially cited claim review, with explicit limits; operational links retain prior census disposition",
+      "status": "completed with explicit limitations",
+      "source_entries": 11,
+      "unique_fetch_destinations": 16,
+      "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+    },
+    "tech-scan-workflows-factories.html": {
+      "checked_on": "2026-11-13",
+      "scope": "whole-page cited source and materially cited claim review, with explicit limits; operational links retain prior census disposition",
+      "status": "completed with explicit limitations",
+      "source_entries": 10,
+      "unique_fetch_destinations": 15,
+      "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
     }
   },
   "references": [
@@ -1288,7 +1304,8 @@
     {
       "url": "https://code.claude.com/docs/en/amazon-bedrock",
       "files": [
-        "tech-scan-models.html"
+        "tech-scan-models.html",
+        "tech-scan-agents.html"
       ],
       "hrefs": [
         "https://code.claude.com/docs/en/amazon-bedrock"
@@ -1306,6 +1323,13 @@
           "evidence_summary": "Direct GET returned 200; page title: 'Claude Code on Amazon Bedrock - Claude Code Docs'.",
           "review_kind": "inherited source pass; citation scope reconciled",
           "limitation": "The prior source pass is retained; this targeted refinement did not re-fetch and verify every inherited claim."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Claude Code supports Bedrock Invoke API and Mantle; choose model ID and region (supported); Both endpoints can be active in one session (supported)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested. Extractor truncated serialized page payload; decisive visible text inspected. See the primary source and section references in the maintenance record.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
         }
       ],
       "evidence_digests": [
@@ -1319,8 +1343,59 @@
         {
           "file": "tech-scan-models.html",
           "id": "source-5"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-1"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
         }
       ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/feature-availability",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://code.claude.com/docs/en/feature-availability"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Bedrock Claude Code web search and subscription cloud sessions unavailable (supported)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested. Extractor truncated serialized page payload; decisive visible text inspected. See the primary source and section references in the maintenance record.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-2"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      }
     },
     {
       "url": "https://code.claude.com/docs/en/sandboxing",
@@ -1358,6 +1433,45 @@
           "id": "source-6"
         }
       ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/security",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://code.claude.com/docs/en/security"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Prompt injection malicious text and permission risks; controls depend on mode (supported); Review code and commands and isolate execution (supported)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested. Canonical extraction ended mid-word; complete official Markdown variant retrieved and canonical browser passage inspected.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-10"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      }
     },
     {
       "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
@@ -1584,7 +1698,8 @@
       "url": "https://developers.openai.com/api/docs/guides/amazon-bedrock",
       "files": [
         "tech-scan-gateway.html",
-        "tech-scan-models.html"
+        "tech-scan-models.html",
+        "tech-scan-agents.html"
       ],
       "hrefs": [
         "https://developers.openai.com/api/docs/guides/amazon-bedrock"
@@ -1610,6 +1725,13 @@
           "evidence_summary": "Direct GET returned 200; page title: 'OpenAI on Amazon Bedrock'.",
           "review_kind": "inherited source pass; citation scope reconciled",
           "limitation": "The prior source pass is retained; this targeted refinement did not re-fetch and verify every inherited claim."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Responses API hosted web search and background unavailable on Runtime; Mantle background subject to retention (supported); Mantle web search is only on supported models (supported); Retention none prohibits background mode; store false alone does not guarantee ZDR (supported)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
         }
       ],
       "evidence_digests": [
@@ -1627,6 +1749,18 @@
         {
           "file": "tech-scan-models.html",
           "id": "source-1"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-4"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
         }
       ]
     },
@@ -3099,6 +3233,166 @@
       ]
     },
     {
+      "url": "https://docs.github.com/en/actions/reference/security/secure-use",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://docs.github.com/en/actions/reference/security/secure-use"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "HTTP 200; HTML body parsed",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "Untrusted issue/repository data, privileged jobs, tokens, secrets and unpinned dependencies create security risk; pin and restrict permissions (supported in general; agent prompt injection and skill-specific prescriptions are security recommendations rather than proven by this GitHub citation); Source discusses script injection and untrusted code, not direct proof that AGENTS.md is unenforceable or that disabling skill updates/remote instructions is universally available. GitHub also recommends workflow dependency lockfiles where available.",
+          "limitation": "Source discusses script injection and untrusted code, not direct proof that AGENTS.md is unenforceable or that disabling skill updates/remote instructions is universally available. GitHub also recommends workflow dependency lockfiles where available.",
+          "evidence_summary": "13 November 2026: HTTP 200; HTML body parsed; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-7"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-workflows-factories.html",
+          "access": "HTTP 200; HTML body parsed",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      },
+      "http_status": 200
+    },
+    {
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "HTTP 200; HTML body parsed",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "Configured environments can require reviewer, prevent self-review, restrict branches and limit admin bypass subject to plan and repository (supported with significant caveats); Applies only to jobs referencing that environment, not other deployment paths. On Free/Pro/Team required reviewers only for public repos. No branch protection rules means protected-branches-only allows all branches. Prevent self-review prevents the initiator, not necessarily the PR author or the person who merged, so it does not alone prove release approver is separate from merger. Self-hosted runners are not made isolated by environments.",
+          "limitation": "Applies only to jobs referencing that environment, not other deployment paths. On Free/Pro/Team required reviewers only for public repos. No branch protection rules means protected-branches-only allows all branches. Prevent self-review prevents the initiator, not necessarily the PR author or the person who merged, so it does not alone prove release approver is separate from merger. Self-hosted runners are not made isolated by environments.",
+          "evidence_summary": "13 November 2026: HTTP 200; HTML body parsed; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-8"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-workflows-factories.html",
+          "access": "HTTP 200; HTML body parsed",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      },
+      "http_status": 200
+    },
+    {
+      "url": "https://docs.github.com/en/pull-requests/concepts/deploying-code",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://docs.github.com/en/pull-requests/concepts/deploying-code"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "HTTP 200; HTML body parsed",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "Branch protections or rulesets can require status checks and human review (supported at capability level; independent CI and no-bypass are proposed settings not established by this source); Automation can merge when requirements are met; mandate human-only merge separately. Verify check provenance, bypass settings and repository plan.; Merge is not release approval (normative separation supported as design advice, not a GitHub default); A merge may trigger deployment immediately unless a separate gate is actually configured.",
+          "limitation": "Automation can merge when requirements are met; mandate human-only merge separately. Verify check provenance, bypass settings and repository plan. A merge may trigger deployment immediately unless a separate gate is actually configured.",
+          "evidence_summary": "13 November 2026: HTTP 200; HTML body parsed; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-5"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-workflows-factories.html",
+          "access": "HTTP 200; HTML body parsed",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      },
+      "http_status": 200
+    },
+    {
+      "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "HTTP 200; HTML body parsed",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "Protect workflow files, instructions and CODEOWNERS with required code-owner review (supported as configurable, with material conditions); Configure matching patterns on base branch and require owner approval; owners need write access; invalid/unmatched rules do not protect. Any one listed owner suffices; bypass settings and independent reviewer identity must be configured separately.",
+          "limitation": "Configure matching patterns on base branch and require owner approval; owners need write access; invalid/unmatched rules do not protect. Any one listed owner suffices; bypass settings and independent reviewer identity must be configured separately.",
+          "evidence_summary": "13 November 2026: HTTP 200; HTML body parsed; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-6"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-workflows-factories.html",
+          "access": "HTTP 200; HTML body parsed",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      },
+      "http_status": 200
+    },
+    {
       "url": "https://docs.google.com/videos/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/play",
       "files": [
         "eds-ai-workflow.html"
@@ -3133,6 +3427,45 @@
           "id": "source-video"
         }
       ]
+    },
+    {
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://docs.langchain.com/oss/python/langgraph/overview"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "LangGraph stateful graph orchestration nodes, edges, mixed deterministic and LLM steps (supported)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-9"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      }
     },
     {
       "url": "https://docs.litellm.ai/docs/routing",
@@ -3658,7 +3991,9 @@
         "tech-scan-sandbox.html",
         "tech-scan.html",
         "training.html",
-        "transformation.html"
+        "transformation.html",
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
       ],
       "hrefs": [
         "https://fonts.googleapis.com"
@@ -3801,6 +4136,18 @@
           "scope": "Operational preconnect hint for Google Fonts, not a cited document.",
           "evidence_summary": "Local HTML uses this origin in rel=preconnect; the actual CSS resource returns font-face rules. An HTTP 404 at the bare origin is not failure of a preconnect hint.",
           "limitation": "No claim that the origin root serves an article. Font rendering, CSP/privacy policy and downstream font-file fetching were not browser-tested."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "unverified",
+          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "unverified",
+          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
         }
       ],
       "evidence_digests": [
@@ -3833,7 +4180,9 @@
         "tech-scan-sandbox.html",
         "tech-scan.html",
         "training.html",
-        "transformation.html"
+        "transformation.html",
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
       ],
       "hrefs": [
         "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap"
@@ -3976,6 +4325,18 @@
           "scope": "Operational stylesheet requesting Inter, JetBrains Mono and Space Grotesk.",
           "evidence_summary": "The exact CSS URL returned font-face declarations with font-display swap and gstatic font URLs for the requested families.",
           "limitation": "Checks resource content and purpose, not visual rendering or availability of every font binary."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "unverified",
+          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "unverified",
+          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
         }
       ],
       "evidence_digests": [
@@ -4008,7 +4369,9 @@
         "tech-scan-sandbox.html",
         "tech-scan.html",
         "training.html",
-        "transformation.html"
+        "transformation.html",
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
       ],
       "hrefs": [
         "https://fonts.gstatic.com"
@@ -4151,6 +4514,18 @@
           "scope": "Operational preconnect hint for font assets, not an article.",
           "evidence_summary": "Local HTML preconnects to the font asset origin; retrieved CSS references fonts on this origin. Bare-origin 404 is not a broken navigation/source link.",
           "limitation": "Individual binary font files and rendered typography were not tested."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "unverified",
+          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "unverified",
+          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
         }
       ],
       "evidence_digests": [
@@ -4270,6 +4645,86 @@
           "id": "source-2"
         }
       ]
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code-action/blob/main/action.yml",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/anthropics/claude-code-action/blob/main/action.yml"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "HTTP 200; HTML body parsed",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "use_bedrock true supports Bedrock with OIDC (supported as documented capability, not turnkey configuration); Input description does not itself establish IAM trust, id-token permission, credential setup, region, model availability or successful execution. Separate Anthropic cloud-provider docs show configure-aws-credentials before the action; GitHub AWS OIDC docs require id-token: write.",
+          "limitation": "Input description does not itself establish IAM trust, id-token permission, credential setup, region, model availability or successful execution. Separate Anthropic cloud-provider docs show configure-aws-credentials before the action; GitHub AWS OIDC docs require id-token: write.",
+          "evidence_summary": "13 November 2026: HTTP 200; HTML body parsed; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-3"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-workflows-factories.html",
+          "access": "HTTP 200; HTML body parsed",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      },
+      "http_status": 200
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code-action/blob/main/docs/configuration.md",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/anthropics/claude-code-action/blob/main/docs/configuration.md"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "HTTP 200; HTML body parsed",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "Action configuration documents named Bedrock provider model (supported as example, not approval or availability guarantee); Uses claude_args and provider-specific model ID. Example is not proof any particular model, account, region or inference residency is approved.",
+          "limitation": "Uses claude_args and provider-specific model ID. Example is not proof any particular model, account, region or inference residency is approved.",
+          "evidence_summary": "13 November 2026: HTTP 200; HTML body parsed; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-4"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-workflows-factories.html",
+          "access": "HTTP 200; HTML body parsed",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      },
+      "http_status": 200
     },
     {
       "url": "https://github.com/aws-samples/sample-eks-nitro-sandbox",
@@ -4771,6 +5226,46 @@
       ]
     },
     {
+      "url": "https://github.com/eitri-edd/AI-PDLC/issues/64",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/eitri-edd/AI-PDLC/issues/64"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "HTTP 200; HTML body parsed",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "limited",
+          "scope": "Issue 64 is a research proposal, not evidence of local validation (supported as issue author's statement, not independent proof no local pilot exists anywhere); Issue says full per-spoke briefs are held by author; not available here. We did not conduct local pilot, benchmark or reader study and cannot independently verify universal negatives.; Quick Spec is not gated despite issue's broad stage-approval formulation (issue internally inconsistent, page corrects overgeneralisation); Immediately following sentence notes Quick Spec has no approval gates; primary docs confirm exception.; Issue's cited Auto-routing warning is current and verbatim in source 9 (not confirmed; apparent source drift or issue misquotation); Issue attributes this to Kiro page updated 11 November 2026; fetched page bears same update date but does not include this text. Treat as unresolved; historical source or vendor clarification needed. Current page says only selected models are available, which may describe selector access rather than internal routing.",
+          "limitation": "Issue says full per-spoke briefs are held by author; not available here. We did not conduct local pilot, benchmark or reader study and cannot independently verify universal negatives. Immediately following sentence notes Quick Spec has no approval gates; primary docs confirm exception. Issue attributes this to Kiro page updated 11 November 2026; fetched page bears same update date but does not include this text. Treat as unresolved; historical source or vendor clarification needed. Current page says only selected models are available, which may describe selector access rather than internal routing. The quoted Auto exception is verified in the supplementary Kiro available-models page, not the governance page.",
+          "evidence_summary": "13 November 2026: HTTP 200; HTML body parsed; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-10"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-workflows-factories.html",
+          "access": "HTTP 200; HTML body parsed",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      },
+      "http_status": 200
+    },
+    {
       "url": "https://github.com/eitri-edd/AI-PDLC/pulls",
       "files": [
         "about.html"
@@ -4868,6 +5363,46 @@
           "id": "source-speckit"
         }
       ]
+    },
+    {
+      "url": "https://github.com/github/spec-kit/blob/main/docs/quickstart.md",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/github/spec-kit/blob/main/docs/quickstart.md"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "HTTP 200; HTML body parsed",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "limited",
+          "scope": "Spec Kit is an alternative used with existing coding agents, separating specification, plan and tasks (supported with compatibility qualification); Agent must be a supported integration; does not establish compatibility with every existing agent. Sequence also includes constitution and implementation, with optional quality gates.",
+          "limitation": "Agent must be a supported integration; does not establish compatibility with every existing agent. Sequence also includes constitution and implementation, with optional quality gates.",
+          "evidence_summary": "13 November 2026: HTTP 200; HTML body parsed; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-2"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-workflows-factories.html",
+          "access": "HTTP 200; HTML body parsed",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      },
+      "http_status": 200
     },
     {
       "url": "https://github.com/github/spec-kit/blob/main/spec-driven.md",
@@ -5570,6 +6105,102 @@
       ]
     },
     {
+      "url": "https://kiro.dev/docs/enterprise/governance/model/",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/enterprise/governance/model/"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "limited",
+          "scope": "Admins must enable model management and can choose Auto (supported); Approved model selector is not proof of Auto underlying-model enforcement (qualified)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested. Initial extraction ended mid-sentence; canonical page recovered in browser. Governance wording describes selectable choices, not underlying Auto routing.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "limited",
+          "scope": "Configure model access management, exclude Auto, choose approved default, verify inference location and actual routing when named model required (partially supported; recommendation conservative but issue's quoted Auto routing rationale not confirmed by current linked page); Source tells administrators review inference scope and set a default; removing a model requires client session restart. The currently fetched source says only selected models are available, but does not contain the issue's purported verbatim statement that Auto may route outside approved models. The page's conservative exclusion is not itself contradicted; claimed reason remains unverified in the linked current source. Actual routing is not proven by a setting alone.",
+          "limitation": "Source tells administrators review inference scope and set a default; removing a model requires client session restart. The currently fetched source says only selected models are available, but does not contain the issue's purported verbatim statement that Auto may route outside approved models. The page's conservative exclusion is not itself contradicted; claimed reason remains unverified in the linked current source. Actual routing is not proven by a setting alone.",
+          "evidence_summary": "13 November 2026: HTTP 200; HTML body parsed; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-6"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-9"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        },
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-workflows-factories.html",
+          "access": "HTTP 200; HTML body parsed",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      }
+    },
+    {
+      "url": "https://kiro.dev/docs/models/",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/models/"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Kiro offers non-Claude and non-OpenAI models (supported); Auto chooses model rather than a fixed named model (supported); Model and geography differ by row; global may leave profile geography (supported)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-5"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      }
+    },
+    {
       "url": "https://kiro.dev/docs/models/available-models",
       "files": [
         "tech-scan-gateway.html"
@@ -5605,6 +6236,124 @@
           "id": "source-14"
         }
       ]
+    },
+    {
+      "url": "https://kiro.dev/docs/models/available-models/",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/models/available-models/"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "canonical browser body; Auto passage inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "limited",
+          "scope": "Auto may route to active models outside the approved list; block Auto and select an approved default to limit processing.",
+          "evidence_summary": "Kiro available models, Auto section; canonical browser body inspected on 13 November 2026.",
+          "limitation": "Vendor documentation; actual routing and enforcement in local configuration not tested."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "limited",
+          "scope": "Auto may route to active models outside the approved list; block Auto and select an approved default to limit processing.",
+          "evidence_summary": "Kiro available models, Auto section; canonical browser body inspected on 13 November 2026.",
+          "limitation": "Vendor documentation; actual routing and enforcement in local configuration not tested."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-6"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-9"
+        }
+      ]
+    },
+    {
+      "url": "https://kiro.dev/docs/privacy-and-security/data-protection/",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/privacy-and-security/data-protection/"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Kiro powered by Bedrock, cross-region inference (supported); Some models or capabilities process globally, distinct from content storage (supported)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-11"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      }
+    },
+    {
+      "url": "https://kiro.dev/docs/specs/",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/specs/"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "HTTP 200; HTML body parsed",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "Kiro specs offer requirements or bug analysis, design and tasks; Quick Spec can generate them without approval gates (supported); Quick Spec is described for well-understood feature specs, not all bugfix workflows.",
+          "limitation": "Quick Spec is described for well-understood feature specs, not all bugfix workflows.",
+          "evidence_summary": "13 November 2026: HTTP 200; HTML body parsed; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-1"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-workflows-factories.html",
+          "access": "HTTP 200; HTML body parsed",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      },
+      "http_status": 200
     },
     {
       "url": "https://kubernetes.io/docs/concepts/configuration/secret/",
@@ -5770,7 +6519,8 @@
     {
       "url": "https://learn.chatgpt.com/docs/amazon-bedrock",
       "files": [
-        "tech-scan-models.html"
+        "tech-scan-models.html",
+        "tech-scan-agents.html"
       ],
       "hrefs": [
         "https://learn.chatgpt.com/docs/amazon-bedrock"
@@ -5788,6 +6538,13 @@
           "evidence_summary": "Direct GET returned 200; page title: 'Use ChatGPT Work and Codex with Amazon Bedrock | ChatGPT Learn'.",
           "review_kind": "inherited source pass; citation scope reconciled",
           "limitation": "The prior source pass is retained; this targeted refinement did not re-fetch and verify every inherited claim."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "OpenAI documents local Codex Bedrock, not Codex cloud (supported); Runtime and Mantle are different selections and Runtime hosted web search unavailable (supported)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
         }
       ],
       "evidence_digests": [
@@ -5801,6 +6558,18 @@
         {
           "file": "tech-scan-models.html",
           "id": "source-4"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-3"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
         }
       ]
     },
@@ -7217,7 +7986,9 @@
         "tech-scan-sandbox.html",
         "tech-scan.html",
         "training.html",
-        "transformation.html"
+        "transformation.html",
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
       ],
       "hrefs": [
         "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"
@@ -7367,6 +8138,18 @@
           "scope": "Operational training entry point in site navigation.",
           "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
           "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "unverified",
+          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "unverified",
+          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
         }
       ],
       "evidence_digests": [
@@ -7754,6 +8537,45 @@
           "id": "source-stitch"
         }
       ]
+    },
+    {
+      "url": "https://strandsagents.com/docs/user-guide/sdk/multi-agent/multi-agent-patterns/",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://strandsagents.com/docs/user-guide/sdk/multi-agent/multi-agent-patterns/"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "limited",
+          "scope": "Strands documents agents as tools, graph, swarm and fixed workflow (supported); Graph conditional path and fixed workflows (supported_with_source_inconsistency); Swarm allows autonomous peer handoff (supported)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested. Page alternately calls Graph model-driven and deterministic; page itself does not assert all Graph paths deterministic.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-8"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      }
     },
     {
       "url": "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
@@ -9519,6 +10341,45 @@
           "id": "source-21"
         }
       ]
+    },
+    {
+      "url": "https://zed.dev/docs/ai/quick-start",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://zed.dev/docs/ai/quick-start"
+      ],
+      "checked_on": "2026-11-13",
+      "result": "retrieved",
+      "method": "fetched primary page; decisive passages inspected",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Zed offers Bedrock gateway and external agents usually manage their own authentication and models (supported)",
+          "limitation": "No local deployment, entitlement, security or regional enforcement tested.",
+          "evidence_summary": "13 November 2026: fetched primary page; decisive passages inspected; claim passages and limits recorded in tech-scan-wave2-review-2026-11-13.md."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-7"
+        }
+      ],
+      "targeted_retrievals": [
+        {
+          "checked_on": "2026-11-13",
+          "file": "tech-scan-agents.html",
+          "access": "fetched primary page; decisive passages inspected",
+          "maintenance_record": "tech-scan-wave2-review-2026-11-13.md"
+        }
+      ],
+      "prior_census": {
+        "result": "not_retrieved_census_only",
+        "method": "offline published-link census; no retrieval evidence recorded"
+      }
     },
     {
       "url": "https://zyvop.com/how-to-secure-ai-coding-agents-sandboxing-permissions-and-human-approval-gates-au71v",

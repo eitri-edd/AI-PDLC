@@ -47,8 +47,8 @@ LEGACY_URLS = {
     ],
 }
 GUIDE_NAV_SHA256 = {
-    "models": "edbd8eb21135c99631500f7136a43c360466c1234b2290706d872eeafce712e7",
-    "gateway": "c6b28f194bde4c09bb2bd8fe9758e817c21a023fe70d59bb0a19f83b5bafdc46",
+    "models": "85ace4ba66c5b3db0675f563fb90d487b081dbee354cddd9cf07e29693c2de25",
+    "gateway": "aa8ab4c6f0a9b7681fd8107091a8fa679b48b0f22f98f7b2e960ddec43945787",
 }
 LEGACY_IDS = {"main", "tech-scan-note", "page-map-caption", "page-map-note",
               "purpose", "aws-first-default", "conditional-alternatives",
@@ -200,7 +200,8 @@ class ModelsGatewayTests(unittest.TestCase):
                     continue
                 labels = {a.attrs.get("href"): normalise(a.text()) for a in nav.elements("a")}
                 self.assertEqual(labels["#purpose"], purpose)
-                self.assertEqual(labels["#do-not-use"], exclusions)
+                self.assertNotIn("#do-not-use", labels)
+                self.assertEqual(normalise(next(by_id(doc, "do-not-use").elements("h2")).text()), exclusions)
         research = by_id(document("models"), "research-only")
         self.assertIn("A typed decision returns an answer in a fixed form", normalise(research.text()))
 
