@@ -67,4 +67,6 @@ Open `http://localhost:8000/AI-PDLC/` and `http://localhost:8000/AI-PDLC/dev/`. 
 
 ## Accuracy review
 
+The [13 November issue #73 targeted review](issue73-x-insights-review-2026-11-13.md) records the 15 editorial decisions, selected source evidence and X-access limitations; it does not advance page-wide reference dates or establish local testing.
+
 The [6 November 2026 accuracy review](accuracy-review.md) records its original 13-page scope, corrections and outstanding source/version checks. The [12 November 2026 whole-site maintenance pass](reference-review-2026-11-12.md) covers the 14 pages present at that pass, source drift, access limitations and verification. Five Tech Scan pages were added afterwards; their [initial source pass](tech-scan-maintenance-2026-11-12.md) and [targeted refinement](tech-scan-refinement-review-2026-11-12.md) are separate records. The [reference inventory](reference-checks.json) separates current URL/page outcomes from retained historical records, including the original 100 external URLs. Public-source checks do not establish the current internal Eitri release or policy-pack version.
