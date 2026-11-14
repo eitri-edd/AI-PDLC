@@ -71,7 +71,10 @@ class Wave3NavigationTests(unittest.TestCase):
         self.assertEqual(len(contents), 2)
         links = [[a.attrs.get('href') for a in nav.elements('a')] for nav in contents]
         self.assertEqual(*links)
-        self.assertLessEqual(len(links[0]), 5)
+        self.assertEqual(links[0], [
+            '#published-spokes', '#purpose', '#research-signals', '#how-to-read',
+            '#planned-spokes', '#cross-cutting-views', '#gaps', '#layer-map', '#sources',
+        ])
         self.assertTrue(all(link.startswith('#') and link[1:] in ids for link in links[0]))
 
 if __name__ == '__main__':
