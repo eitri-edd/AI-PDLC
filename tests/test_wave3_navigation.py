@@ -5,9 +5,10 @@ from test_sources import Document, normalise
 
 DIST = Path(__file__).resolve().parents[1] / 'site/dist'
 GROUPS = ['models-access', 'agent-environment', 'agents-workflows', 'verification-delivery']
-PREEXISTING = [p.name for p in DIST.glob('*.html') if p.name not in {
-    'tech-scan-context.html', 'tech-scan-verification.html',
-    'tech-scan-delivery.html', 'tech-scan-stack-views.html'}]
+SPOKES = ['tech-scan-agents.html', 'tech-scan-context.html', 'tech-scan-delivery.html',
+          'tech-scan-gateway.html', 'tech-scan-harness.html', 'tech-scan-models.html',
+          'tech-scan-sandbox.html', 'tech-scan-stack-views.html',
+          'tech-scan-verification.html', 'tech-scan-workflows-factories.html']
 REFERENCES = {
     'models-access': {'tech-scan-models.html', 'tech-scan-gateway.html'},
     'agent-environment': {'tech-scan-harness.html', 'tech-scan-sandbox.html', 'tech-scan-context.html'},
@@ -16,42 +17,31 @@ REFERENCES = {
 }
 
 class Wave3NavigationTests(unittest.TestCase):
-    def test_guide_navigation_groups_link_to_hub_on_existing_pages(self):
-        for name in PREEXISTING:
+    def test_guide_navigation_has_no_tech_scan_subnav(self):
+        # The four group links all pointed at anchors on the hub page itself,
+        # so the hub link stands alone; the next guide entry is AI-SDLC.
+        for name in sorted(p.name for p in DIST.glob('*.html')):
             with self.subTest(page=name):
                 doc = Document((DIST / name).read_text())
                 nav = next(n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'Guide')
-                hub = next(a for a in nav.elements('a') if a.attrs.get('href') == 'tech-scan.html')
-                siblings = hub.parent.children
-                group = next(n for n in siblings[siblings.index(hub) + 1:] if not isinstance(n, str))
-                self.assertEqual([a.attrs.get('href') for a in group.elements('a')],
-                                 ['tech-scan.html#' + g for g in GROUPS])
-                self.assertLessEqual(sum(a.attrs.get('aria-current') == 'page' for a in nav.elements('a')), 1)
-                for a in nav.elements('a'):
-                    if a.attrs.get('aria-current') == 'page':
-                        self.assertEqual(a.attrs.get('href'), name)
-                matches = [g for g, pages in REFERENCES.items() if name in pages]
-                current = [a.attrs.get('href') for a in group.elements('a') if a.attrs.get('aria-current') == 'location']
-                self.assertEqual(current, ['tech-scan.html#' + matches[0]] if matches else [])
+                hrefs = [a.attrs.get('href') for a in nav.elements('a')]
+                self.assertEqual(hrefs.count('tech-scan.html'), 1, name)
+                self.assertFalse([h for h in hrefs if h.startswith('tech-scan.html#')], name)
+                self.assertEqual(hrefs[hrefs.index('tech-scan.html') + 1], 'ai-pdlc.html', name)
+                self.assertFalse(any(a.attrs.get('aria-current') == 'location' for a in nav.elements('a')), name)
+                current = [a.attrs.get('href') for a in nav.elements('a') if a.attrs.get('aria-current') == 'page']
+                self.assertLessEqual(len(current), 1, name)
+                if current:
+                    self.assertEqual(current, [name], name)
 
-    def test_new_page_sidebar_groups_and_current_location(self):
-        expected = {
-            'tech-scan-context.html': 'agent-environment',
-            'tech-scan-verification.html': 'verification-delivery',
-            'tech-scan-delivery.html': 'verification-delivery',
-            'tech-scan-stack-views.html': None,
-        }
-        for name, current_group in expected.items():
+    def test_spoke_pages_keep_parent_active_without_subnav(self):
+        for name in SPOKES:
             with self.subTest(page=name):
                 doc = Document((DIST / name).read_text())
                 nav = next(n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'Guide')
                 hub = next(a for a in nav.elements('a') if a.attrs.get('href') == 'tech-scan.html')
                 self.assertIn('nav-parent-active', hub.attrs.get('class', '').split())
-                group = next(n for n in hub.parent.children[hub.parent.children.index(hub) + 1:] if not isinstance(n, str))
-                self.assertEqual([a.attrs.get('href') for a in group.elements('a')],
-                                 ['tech-scan.html#' + g for g in GROUPS])
-                current = [a.attrs.get('href') for a in nav.elements('a') if a.attrs.get('aria-current') == 'location']
-                self.assertEqual(current, ['tech-scan.html#' + current_group] if current_group else [])
+                self.assertFalse(any(a.attrs.get('aria-current') == 'location' for a in nav.elements('a')))
                 self.assertFalse(any(a.attrs.get('aria-current') == 'page' for a in nav.elements('a')))
 
     def test_hub_groups_offer_direct_reference_choices(self):

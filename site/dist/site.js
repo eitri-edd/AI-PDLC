@@ -33,22 +33,6 @@ if (navigation) {
   });
 }
 
-// Sidebar group links reflect the selected anchor only on the Tech Scan hub.
-if (window.location.pathname.endsWith('/tech-scan.html')) {
-  const groupLinks = document.querySelectorAll('.sidebar a[href^="tech-scan.html#"]');
-  function syncTechScanGroup() {
-    groupLinks.forEach((link) => {
-      if (window.location.hash && link.getAttribute('href') === `tech-scan.html${window.location.hash}`) {
-        link.setAttribute('aria-current', 'location');
-      } else {
-        link.removeAttribute('aria-current');
-      }
-    });
-  }
-  syncTechScanGroup();
-  window.addEventListener('hashchange', syncTechScanGroup);
-}
-
 const contentsLinks = [...document.querySelectorAll('.page-contents a')];
 const sections = contentsLinks.map((link) => document.querySelector(link.hash)).filter(Boolean);
 function updateContents() {
