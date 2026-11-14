@@ -47,10 +47,16 @@ LEGACY_URLS = {
     ],
 }
 # "References last checked" / "Last editorial review" per page.
-# Gateway moved to 13 November 2026 with the issue #81 source replacement.
+# Check dates moved to 14 November 2026 with the daily reference check;
+# gateway was 13 November 2026 after the issue #81 source replacement.
+# Editorial review dates stay where the last edit left them.
 CHECK_DATES = {
-    "models": ("12 November 2026", "2026-11-12"),
-    "gateway": ("13 November 2026", "2026-11-13"),
+    "models": ("14 November 2026", "2026-11-14"),
+    "gateway": ("14 November 2026", "2026-11-14"),
+}
+EDITORIAL_DATES = {
+    "models": "2026-11-12",
+    "gateway": "2026-11-13",
 }
 LEGACY_IDS = {"main", "tech-scan-note", "page-map-caption", "page-map-note",
               "purpose", "aws-first-default", "conditional-alternatives",
@@ -230,7 +236,7 @@ class ModelsGatewayTests(unittest.TestCase):
         self.assertEqual(next(dates[0].elements("time")).attrs["datetime"], check_datetime)
         reviews = [node for node in doc.root.elements("p") if "Last editorial review:" in node.text()]
         self.assertEqual(len(reviews), 1)
-        self.assertEqual(next(reviews[0].elements("time")).attrs["datetime"], check_datetime)
+        self.assertEqual(next(reviews[0].elements("time")).attrs["datetime"], EDITORIAL_DATES[page])
         published = (["15 September 2026", "23 October 2026"] if page == "models" else
                      ["19 August 2026", "29 May 2026", "10 September 2026", "March and October 2026"])
         for value in published:

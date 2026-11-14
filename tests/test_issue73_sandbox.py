@@ -37,7 +37,7 @@ class SandboxResidualRiskTests(unittest.TestCase):
             self.assertIn(url, {a.attrs.get("href") for a in entry.elements("a")})
             self.assertIn("#gaps", {a.attrs.get("href") for a in entry.elements("a")})
         self.assertIn("partial", normalise(node(doc, "source-24").text()))
-        self.assertIn("12 November 2026", normalise(node(doc, "sources").text()))
+        self.assertIn("14 November 2026", normalise(node(doc, "sources").text()))
 
 
 if __name__ == "__main__":
