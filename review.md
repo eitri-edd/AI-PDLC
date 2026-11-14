@@ -43,9 +43,13 @@ Judge a page by the reader it serves, and say which lens was used.
 
 | Pages | Reader | Lens |
 | --- | --- | --- |
-| Core pages: overview, Concepts, Transformation, Project Discovery, Product Implementation | Aspiring product manager who formerly specialised in IT project delivery | Can the reader read a section once and know what to do next? Is it human-centred, or too robotic, too technical, or too abstract? |
-| Tech Scan hub and spokes | Developers and architects who are savvy and technical | Factual, industry-standard guidance. Prefer verified developments and their technical implications; do not soften a finding for a general reader. |
-| EDS AI Workflow pages | EDS delivery roles using the Eitri workflow | Same core lens, plus the workflow's own sources and limits. |
+| Organisation Transformation | Strategic leaders and team leads | Can a leader read a section once and know what to decide, sponsor or change next? Keep it strategic and outcome-focused; link to implementation detail rather than teaching it. |
+| Concepts, AI-SDLC overview | Everyone: product, design, engineering, delivery and leadership readers, with no AI experience assumed | Can any reader understand the idea and know where to go next? Explain terms at first use, avoid unexplained role-specific jargon and route role-specific depth to the page that owns it. |
+| Project Discovery, Product Implementation | Aspiring product manager who formerly specialised in IT project delivery | Can the reader read a section once and know what to do next? Is it human-centred, or too robotic, too technical, or too abstract? |
+| Tech Scan hub and spokes | Experienced development leads and engineers | Factual, industry-standard guidance. Prefer verified developments and their technical implications; do not soften a finding for a general reader. |
+| EDS AI Workflow pages | EDS delivery roles using the Eitri workflow | Same lens as Project Discovery and Product Implementation, plus the workflow's own sources and limits. |
+
+Reader assignments for Organisation Transformation, Concepts, the AI-SDLC overview and Tech Scan were set on 14 November 2026 on Christopher's instruction (issue #99).
 
 - **Running example:** Maya's asset-management application.
   Do not use the meeting-room booking example in new or revised
@@ -182,9 +186,14 @@ criticality score measure different things and are not interchangeable.
 
 - **Pages:** six — Concepts (`concept.html`, singular;
   `concepts.html` returns a 404), Organisation Transformation,
-  AI-SDLC overview, Product Discovery, Product Implementation,
+  AI-SDLC overview, Project Discovery, Product Implementation,
   Tech Scan hub only (spokes not covered).
-- **Lens:** aspiring product manager, formerly IT project delivery.
+- **Lens:** the reader for each page in "Audiences and lenses":
+  strategic leaders and team leads for Organisation Transformation;
+  everyone for Concepts and the AI-SDLC overview; aspiring product
+  manager, formerly IT project delivery, for Project Discovery and
+  Product Implementation; experienced development leads and
+  engineers for the Tech Scan hub.
 - **Method:** read each page live, in full, paragraph by paragraph.
   Score each section 1–10, where 10 means the reader can read it
   once and know what to do next, and below 4 means it needs an
@@ -351,7 +360,8 @@ criticality score measure different things and are not interchangeable.
   Filed as issue #62 — do not re-file it. Wave 2 and Wave 3
   critical reviews (13 November 2026) add: judge ease of flow,
   factual technical terms, additional information that fits gaps,
-  and redundant information, for the developer/architect audience.
+  and redundant information, for experienced development leads and
+  engineers.
 
 ### 7. Whole-playbook critical review (ad hoc; last run 14 November 2026)
 
