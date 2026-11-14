@@ -70,7 +70,7 @@ class Issue86GuidanceTests(unittest.TestCase):
     def test_concepts_adds_vocabulary_and_calibrated_eval_guidance(self):
         text = normalise(self.pages["concept.html"].root.text()).lower()
         for term in ("domain vocabulary", "bounded", "threshold", "calibrate",
-                     "held-out", "room-booking"):
+                     "held-out", "asset-management"):
             with self.subTest(term=term):
                 self.assertIn(term, text)
 
