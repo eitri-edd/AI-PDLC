@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How agents scout, write and review this playbook, follow shared standards and keep sources current, with human approval for every content change.">
+  <meta name="description" content="How agents scout, write, review and secure this playbook, follow shared standards and keep sources current, with human approval for every content change.">
   <title>About · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,8 +54,8 @@
         <header class="article-header">
           <p class="eyebrow">About this playbook</p>
           <h1>How this site is curated</h1>
-          <p class="lead">Agents help keep this playbook current by finding new practices, writing updates and reviewing existing articles. Every content change still needs a human to review and approve the pull request.</p>
-          <ul class="metadata-bar"><li>Maintained by EDS</li><li>Last updated <time datetime="2026-11-08">8 November 2026</time></li></ul>
+          <p class="lead">Agents help keep this playbook current and secure by finding new practices, writing updates, reviewing existing articles and checking the site for security weaknesses. Every change still needs a human to review and approve the pull request.</p>
+          <ul class="metadata-bar"><li>Maintained by EDS</li><li>Last updated <time datetime="2026-11-14">14 November 2026</time></li></ul>
         </header>
 
         <figure class="page-map" aria-label="Page summary">
@@ -65,6 +65,7 @@
             <li><a href="#standards">How the writer works</a><span>Follow shared writing and design standards, grounded in original sources.</span></li>
             <li><a href="#scouting">How updates are chosen</a><span>Assess new material, prioritise issues and propose valuable changes.</span></li>
             <li><a href="#peer-review">How quality improves</a><span>Check references, review paragraphs and feed corrections into the standards.</span></li>
+            <li><a href="#security">How security is checked</a><span>Scan the site against its threat model and fix vulnerabilities through reviewed pull requests.</span></li>
           </ol>
         </figure>
 
@@ -76,21 +77,23 @@
           <a href="#changes">From issue to approved change</a>
           <a href="#reference-checks">Keeping references current</a>
           <a href="#peer-review">Peer review and improvement</a>
+          <a href="#security">Security checks</a>
           <a href="#sources">Sources</a>
         </nav></details>
 
         <section id="curation-overview">
           <h2>The curation loop</h2>
-          <p>Scouting finds possible additions, while peer review and source monitoring identify changes to existing articles. These findings enter the same backlog. The writer assesses their value, prepares useful changes with the right context and standards, and submits them for human approval.</p>
+          <p>Scouting finds possible additions, while peer review and source monitoring identify changes to existing articles. These findings enter the same backlog. The writer assesses their value, prepares useful changes with the right context and standards, and submits them for human approval. A security agent checks the repository against its threat model and submits fixes through the same approval step.</p>
           <figure class="concept-figure" id="fig-curation">
             <figcaption>Figure 1. How agents curate the playbook under human review.</figcaption>
             <details class="figure-reading"><summary>Read as text: the curation loop</summary>
               <ol>
                 <li>Content scouting agents powered by Muse, Hermes and OpenAI assess online material for novelty, gap coverage and loss if missed, with Grok Bot supplying X-post leads. Medium- and high-priority findings enter the issue backlog.</li>
                 <li>Content peer review uses Muse and OpenAI to score existing paragraphs from 1 to 10 for naturalness, ease of understanding and accuracy. Source-monitoring agents powered by Hermes and OpenAI check quoted sources, publish check dates and record changed, broken or unverified references. Both activities file findings as issues.</li>
-                <li>The Hermes-powered writer agent reviews prioritised issues and assesses their value. Lower-value proposals retain a recorded decision; changes with high assessed value proceed to drafting.</li>
+                <li>The writer agent, powered by Hermes and Devin, reviews prioritised issues and assesses their value. Lower-value proposals retain a recorded decision; changes with high assessed value proceed to drafting.</li>
                 <li>The writer uses the issue evidence, current articles, original sources and intended reader as context. The writing and design standards guide the draft and acceptance checks. For peer-review corrections, revise the content first, then consider whether the standards also need refinement.</li>
                 <li>When evidence, scope or instructions are unclear, the writer asks a human for clarification via Telegram. The writer records the response with the issue and uses it as context before continuing the affected work. This exchange does not replace pull-request approval.</li>
+                <li>A Devin security agent scans the repository against its threat model, SECURITY_MODEL.md. It prepares fixes for confirmed vulnerabilities as pull requests, which need the same human approval as content changes.</li>
                 <li>The writer prepares a feature branch and pull request. A human reviews the change and evidence; requested revisions return to the writer. Only an approved change is merged and published.</li>
                 <li>Published articles and their quoted sources return to peer review and source monitoring, continuing the maintenance loop. Proposed standard changes also require human approval.</li>
               </ol>
@@ -99,7 +102,7 @@
               <div class="figure-scroll" tabindex="0" role="region" aria-label="Site curation workflow; scroll horizontally to explore the full diagram on a narrow screen">
                 <svg viewBox="0 0 840 1120" role="img" aria-labelledby="curation-diagram-title" aria-describedby="curation-diagram-description">
                   <title id="curation-diagram-title">The site curation and maintenance loop</title>
-                  <desc id="curation-diagram-description">Content scouting agents use Muse, Hermes and OpenAI, with Grok Bot supplying X-post leads; content peer review uses Muse and OpenAI; source-monitoring agents use Hermes and OpenAI. Their findings feed the issue backlog. The Hermes writer agent assesses value and drafts useful changes using relevant context and shared standards. A two-way Telegram exchange lets the writer ask a human for clarification and receive a response before continuing affected work. The writer then submits a feature branch and pull request for human approval. Requested revisions return to the writer. Approved updates return to review and source monitoring. After correcting content, the writer also considers whether the standards need refinement.</desc>
+                  <desc id="curation-diagram-description">Content scouting agents use Muse, Hermes and OpenAI, with Grok Bot supplying X-post leads; content peer review uses Muse and OpenAI; source-monitoring agents use Hermes and OpenAI. Their findings feed the issue backlog. The writer agent, powered by Hermes and Devin, assesses value and drafts useful changes using relevant context and shared standards. A two-way Telegram exchange lets the writer ask a human for clarification and receive a response before continuing affected work. The writer then submits a feature branch and pull request for human approval. Requested revisions return to the writer. Approved updates return to review and source monitoring. After correcting content, the writer also considers whether the standards need refinement. A Devin security agent scans the repository against its threat model and submits fixes as pull requests for the same human approval.</desc>
                   <defs>
                     <marker id="curation-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
                     <marker id="curation-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
@@ -169,7 +172,7 @@
                   <path class="d-line" d="M260 610H296" marker-end="url(#curation-arrow)"/>
                   <g><rect class="d-node d-node-accent" x="296" y="554" width="248" height="112" rx="8"/>
                     <text class="d-title" x="420" y="578" text-anchor="middle">Writer agent</text>
-                    <text class="d-sub" x="420" y="600" text-anchor="middle">Hermes</text>
+                    <text class="d-sub" x="420" y="600" text-anchor="middle">Hermes + Devin</text>
                     <text class="d-sub" x="420" y="624" text-anchor="middle">Draft or correct the article</text>
                     <text class="d-sub" x="420" y="648" text-anchor="middle">Cite original sources; run checks</text>
                   </g>
@@ -188,6 +191,13 @@
                     <text class="d-title" x="420" y="741" text-anchor="middle">Feature branch + pull request</text>
                     <text class="d-sub" x="420" y="763" text-anchor="middle">Change, sources and check results</text>
                   </g>
+                  <g><rect class="d-node" x="32" y="752" width="228" height="110" rx="8"/>
+                    <text class="d-title" x="146" y="778" text-anchor="middle">Security agent</text>
+                    <text class="d-sub" x="146" y="801" text-anchor="middle">Devin</text>
+                    <text class="d-sub" x="146" y="825" text-anchor="middle">Scan against threat model</text>
+                    <text class="d-sub" x="146" y="848" text-anchor="middle">Fix vulnerabilities via PR</text>
+                  </g>
+                  <path class="d-line" d="M260 764H296" marker-end="url(#curation-arrow)"/>
                   <path class="d-line" d="M420 778V814" marker-end="url(#curation-arrow)"/>
                   <g><polygon class="d-node d-node-accent d-decision" points="310,814 530,814 544,828 544,892 530,906 310,906 296,892 296,828"/>
                     <text class="d-title" x="420" y="847" text-anchor="middle">Human review and approval</text>
@@ -201,7 +211,7 @@
                     <text class="d-title" x="420" y="1002" text-anchor="middle">Merge and publish</text>
                     <text class="d-sub" x="420" y="1032" text-anchor="middle">Updated articles and dated sources</text>
                   </g>
-                  <text class="d-sub" x="420" y="1095" text-anchor="middle">Content and standard changes both require human approval.</text>
+                  <text class="d-sub" x="420" y="1095" text-anchor="middle">Content, standard and security changes all require human approval.</text>
                 </svg>
               </div>
               <p class="diagram-key">Solid arrows show findings, context and changes moving forward. Cut-corner nodes mark decisions. The two-way dashed arrow shows questions and responses between the writer and a human via Telegram. Other dashed arrows show recurring checks, requested revisions and possible standards updates after content corrections.</p>
@@ -220,9 +230,10 @@
           <h2>The writer follows shared standards</h2>
           <aside class="callout callout--disclaimer" aria-labelledby="ai-writing-note">
             <p class="example-label" id="ai-writing-note">A note on AI-written content</p>
-            <p>A Hermes-powered writer agent drafts and maintains this playbook under human editorial oversight.</p>
-            <p>We apologise for any passages that sound unnatural or lack clarity. The agent will continue refining the content through source verification, peer feedback and human review to improve its clarity and natural flow.</p>
+            <p>Writer agents powered by Hermes and Devin draft and maintain this playbook under human editorial oversight.</p>
+            <p>We apologise for any passages that sound unnatural or lack clarity. The agents will continue refining the content through source verification, peer feedback and human review to improve its clarity and natural flow.</p>
           </aside>
+          <p>Devin, an AI software engineering agent that writes, runs and tests code, <a href="#source-7" aria-label="Source 7: Cognition, Introducing Devin">[7]</a> works alongside the Hermes-powered writer. Both take issues from the same backlog and follow the same standards and approval route, so “the writer” on this page means either agent.</p>
           <p>The writer uses two repository standards to guide the content, its flow and the checks before a change is submitted:</p>
           <ul>
             <li><strong><a href="#source-1">The writing standard (writing.md)</a></strong> starts with the reader’s task. It calls for plain British English, connected explanations, consistent terminology and concrete actions with named owners and expected results. Its editorial acceptance checklist covers evidence, coherence, attribution, useful next steps and the distinction between requirements, recommendations and examples.</li>
@@ -272,6 +283,14 @@
           <p>The writer rechecks the corrected passage and its surrounding explanation, then considers whether a change to writing.md or design.md would help prevent the same problem elsewhere. Article corrections and any proposed standard changes go through pull requests with human approval.</p>
         </section>
 
+        <section id="security">
+          <h2>A security agent checks the site and its publishing</h2>
+          <p>Devin also works as a security agent for this repository. Its security scans look for vulnerabilities in the repository, report findings with a recommended fix where one is available, and can hand a finding to a Devin session that prepares the fix. <a href="#source-8" aria-label="Source 8: Cognition, Devin Security 2.0">[8]</a> The scans follow the repository’s threat model, SECURITY_MODEL.md, which records what the site must protect, who could attack it and which controls are already in place. <a href="#source-9" aria-label="Source 9: AI-PDLC repository, threat model (SECURITY_MODEL.md)">[9]</a></p>
+          <p>For a static site, the main concern is the integrity of the published pages: script injected into a page would run in every visitor’s browser. The threat model therefore directs the scans to the page scripts that read the web address, the GitHub Actions workflows that publish the site, pull requests from forks that run the repository checks, and third-party code such as GitHub Actions and web fonts. <a href="#source-9" aria-label="Source 9: AI-PDLC repository, threat model (SECURITY_MODEL.md)">[9]</a></p>
+          <p>A fix follows the same route as a content change: it is prepared on a feature branch, submitted as a pull request with its evidence, and merged only after a human reviews and approves it. A scan that reports no findings does not establish that the site has no vulnerabilities. Repository settings that are not stored in the code, such as branch protection, remain open questions in the threat model.</p>
+          <p>Report a suspected vulnerability privately through <a href="https://github.com/eitri-edd/AI-PDLC/security/advisories/new">GitHub private vulnerability reporting</a>, as the repository’s security policy asks, rather than in a public issue. <a href="#source-10" aria-label="Source 10: AI-PDLC repository, security policy (SECURITY.md)">[10]</a></p>
+        </section>
+
         <aside class="next-step" aria-label="Next step"><strong>Help improve the playbook.</strong> If an explanation is awkward, unclear or out of date, <a href="https://github.com/eitri-edd/AI-PDLC/issues">raise an issue</a> with the page link, the affected passage and what would make it more useful.</aside>
 
         <section id="sources">
@@ -284,6 +303,10 @@
             <li id="source-4">AI-PDLC repository, <a href="https://github.com/eitri-edd/AI-PDLC/pulls">Pull requests</a> — proposed changes and their review history. Used in <a href="#changes">From issue to approved change</a>. Live pull-request and linked issue records were inspected for their role in proposing and recording changes. They do not verify every change, human approval, runtime agent assignment, Telegram exchange or configured publication control.</li>
             <li id="source-5">AI-PDLC repository, <a href="https://github.com/eitri-edd/AI-PDLC/issues">Issue backlog</a> — candidate material, maintenance findings and proposed corrections for review, not commitments to publish. Used in <a href="#scouting">Scouts assess what deserves attention</a>, <a href="#changes">From issue to approved change</a> and <a href="#peer-review">Peer review improves articles and standards</a>. Live issues and discussion were inspected as candidate and maintenance records, including a proposal closed without implementation. Individual backlog findings and runtime agent assignments were not independently verified.</li>
             <li id="source-6">xAI, <a href="https://x.ai/news/grok-bot-and-x">Grok Bot now works with X</a> — describes searching X posts through Grok Bot. Used in <a href="#scouting">Scouts assess what deserves attention</a>. The announcement describes a capability, not this playbook’s runtime configuration or the accuracy of any result.</li>
+            <li id="source-7">Cognition, <a href="https://docs.devin.ai/get-started/devin-intro">Introducing Devin</a> — describes Devin as an autonomous AI software engineer that can write, run and test code. Used in <a href="#standards">The writer follows shared standards</a>. The vendor documentation describes the product’s capabilities, not this playbook’s runtime configuration or the quality of any change.</li>
+            <li id="source-8">Cognition, <a href="https://docs.devin.ai/work-with-devin/security-2-0">Devin Security 2.0</a> — scanning repositories for vulnerabilities, reviewing findings and assigning fixes to Devin. Used in <a href="#security">A security agent checks the site and its publishing</a>. The vendor documentation describes the product’s capabilities, not this repository’s scan configuration or the results of any scan.</li>
+            <li id="source-9">AI-PDLC repository, <a href="https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY_MODEL.md">Threat model (SECURITY_MODEL.md)</a> — assets, trust boundaries, attacker profiles and existing controls. Used in <a href="#security">A security agent checks the site and its publishing</a>. The linked main revision was inspected; it records the intended scan scope, not the results of any scan or the state of repository settings.</li>
+            <li id="source-10">AI-PDLC repository, <a href="https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY.md">Security policy (SECURITY.md)</a> — asks reporters to use GitHub private vulnerability reporting rather than a public issue. Used in <a href="#security">A security agent checks the site and its publishing</a>. The linked main revision was inspected; response times and the reporting configuration were not tested.</li>
           </ol>
         </section>
         <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
@@ -299,6 +322,7 @@
         <a href="#changes">From issue to approved change</a>
         <a href="#reference-checks">Keeping references current</a>
         <a href="#peer-review">Peer review and improvement</a>
+        <a href="#security">Security checks</a>
         <a href="#sources">Sources</a>
       </nav>
     </aside>
