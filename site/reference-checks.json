@@ -3,14 +3,14 @@
   "scope": "Current publication census with retained 12 November page-wide passes and targeted 13 November Tech Scan reviews; Wave 2 cited-source reviews completed with limitations, not a new whole-site claim review. Issue #73 adds a targeted census and claim checks, not a new page-wide pass. Wave 3 adds four page-scoped source passes and a publication census on 14 November; no earlier page pass is advanced.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 277,
-  "current_unique_hrefs": 283,
+  "current_unique_urls": 278,
+  "current_unique_hrefs": 284,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 10,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 255,
+    "retrieved": 256,
     "retrieved_pdf_text": 3,
     "retrieved_with_login_banner": 1
   },
@@ -7911,6 +7911,42 @@
         {
           "file": "eds-ai-workflow.html",
           "id": "source-spdd"
+        }
+      ]
+    },
+    {
+      "url": "https://martinfowler.com/articles/tests-as-data.html",
+      "files": [
+        "ai-pdlc.html"
+      ],
+      "hrefs": [
+        "https://martinfowler.com/articles/tests-as-data.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://martinfowler.com/articles/tests-as-data.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "ai-pdlc.html",
+          "outcome": "supported",
+          "scope": "11 November 2026 practitioner proposal for keeping AI-written tests trustworthy: customer tests in the user's language, test cases held as data in text files, a small test DSL, and checking expected results against an authoritative record or a second implementation.",
+          "evidence_summary": "The complete article reports interviews with 26 developers who no longer trust AI-generated tests, then proposes customer tests, black-box tests-as-data tables and scenarios, test DSLs, constrained tests and oracles; the guide adapts the customer-test, tests-as-data and test-protection techniques.",
+          "limitation": "Practitioner proposal based on interviews at one organisation and established testing traditions; the techniques are proposed, not measured at scale. Prototypes and early exploration need less rigour, as the article itself states."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "f208df56a5e2c81caaa891fb8f4fce112cdd0da8fc0401ead524f9bd35b039fc",
+          "format": "readable primary-source text",
+          "source_url": "https://martinfowler.com/articles/tests-as-data.html"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "ai-pdlc.html",
+          "id": "source-7"
         }
       ]
     },
