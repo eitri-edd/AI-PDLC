@@ -81,7 +81,7 @@ class Issue73ConceptTests(unittest.TestCase):
         for source in range(1, 31):
             self.assertIn(f'id="source-{source}"', html)
         self.assertIn('id="learning-references"', html)
-        self.assertIn('References last checked: <time datetime="2026-11-12">', html)
+        self.assertIn('References last checked: <time datetime="2026-11-14">', html)
         self.assertIn('Last editorial review: <time datetime="2026-11-06">', html)
 
 
