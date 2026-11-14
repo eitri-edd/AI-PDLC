@@ -54,7 +54,7 @@ class Issue86GuidanceTests(unittest.TestCase):
         expectations = {
             "tech-scan-sandbox.html": ("outside the command sandbox", "unavailable"),
             "tech-scan-gateway.html": ("credential", "revoke"),
-            "tech-scan-workflows-factories.html": ("protected environments", "governance"),
+            "tech-scan-workflows-factories.html": ("protected environments", "human approval"),
             "tech-scan-agents.html": ("Trust", "not a filesystem"),
             "tech-scan-context.html": ("consolidation", "source"),
             "tech-scan-verification.html": ("invariant", "wrong specification"),
