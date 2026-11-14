@@ -965,93 +965,6 @@
       ]
     },
     {
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-harness-generally-available/",
-      "files": [
-        "tech-scan-stack-views.html"
-      ],
-      "hrefs": [
-        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-harness-generally-available/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-harness-generally-available/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "outcome": "supported",
-          "scope": "AgentCore harness is generally available in all AWS Commercial Regions where AgentCore is available (17 Jun 2026).",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "id": "source-9"
-        }
-      ]
-    },
-    {
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/",
-      "files": [
-        "tech-scan-context.html"
-      ],
-      "hrefs": [
-        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-context.html",
-          "outcome": "supported",
-          "scope": "Services moving to Maintenance no longer accessible to new customers from 30 Jul 2026, including Kendra and Bedrock Agents Classic.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-context.html",
-          "id": "source-10"
-        }
-      ]
-    },
-    {
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/new-agentcore-runtime-default/",
-      "files": [
-        "tech-scan-harness.html"
-      ],
-      "hrefs": [
-        "https://aws.amazon.com/about-aws/whats-new/2026/11/new-agentcore-runtime-default/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-harness.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-harness.html (source-32)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-harness.html",
-          "id": "source-32"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/",
       "files": [
         "tech-scan-sandbox.html",
@@ -1186,64 +1099,6 @@
       ]
     },
     {
-      "url": "https://aws.amazon.com/blogs/containers/measuring-developer-experience-on-an-amazon-eks-developer-platform/",
-      "files": [
-        "tech-scan-delivery.html"
-      ],
-      "hrefs": [
-        "https://aws.amazon.com/blogs/containers/measuring-developer-experience-on-an-amazon-eks-developer-platform/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://aws.amazon.com/blogs/containers/measuring-developer-experience-on-an-amazon-eks-developer-platform/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-delivery.html",
-          "outcome": "supported",
-          "scope": "Argo Events processes webhook events; Apache DevLake calculates DORA metrics; Grafana visualizes performance trends. A self-built walkthrough, not a managed service.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-delivery.html",
-          "id": "source-13"
-        }
-      ]
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/devops/choosing-between-amazon-ecs-blue-green-native-or-aws-codedeploy-in-aws-cdk/",
-      "files": [
-        "tech-scan-delivery.html"
-      ],
-      "hrefs": [
-        "https://aws.amazon.com/blogs/devops/choosing-between-amazon-ecs-blue-green-native-or-aws-codedeploy-in-aws-cdk/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://aws.amazon.com/blogs/devops/choosing-between-amazon-ecs-blue-green-native-or-aws-codedeploy-in-aws-cdk/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-delivery.html",
-          "outcome": "supported",
-          "scope": "ECS-native blue/green deployments is now the recommended option for most teams and new projects; CodeDeploy remains a valid option for existing customers; built-in blue/green July 2025, canary/linear October 2025.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-delivery.html",
-          "id": "source-5"
-        }
-      ]
-    },
-    {
       "url": "https://aws.amazon.com/blogs/machine-learning/how-thomson-reuters-built-an-agentic-platform-engineering-hub-with-amazon-bedrock-agentcore",
       "files": [
         "tech-scan-harness.html"
@@ -1276,93 +1131,6 @@
       "source_entries": [
         {
           "file": "tech-scan-harness.html",
-          "id": "source-14"
-        }
-      ]
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/",
-      "files": [
-        "tech-scan-stack-views.html"
-      ],
-      "hrefs": [
-        "https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "outcome": "supported",
-          "scope": "Claude Opus 5 and Claude Sonnet 5 in Seoul and Claude Sonnet 5 in Singapore with in-region inference on the bedrock-runtime endpoint.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "id": "source-10"
-        }
-      ]
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/",
-      "files": [
-        "tech-scan-verification.html"
-      ],
-      "hrefs": [
-        "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-verification.html",
-          "outcome": "supported",
-          "scope": "15 built-in evaluators (two named, 'and 13 more'); managed DeepEval and AutoEval evaluators; on-demand, online and batch modes.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-verification.html",
-          "id": "source-7"
-        }
-      ]
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/mt/support-for-amazon-cloudwatch-evidently-ending-soon/",
-      "files": [
-        "tech-scan-delivery.html"
-      ],
-      "hrefs": [
-        "https://aws.amazon.com/blogs/mt/support-for-amazon-cloudwatch-evidently-ending-soon/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://aws.amazon.com/blogs/mt/support-for-amazon-cloudwatch-evidently-ending-soon/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-delivery.html",
-          "outcome": "supported",
-          "scope": "CloudWatch Evidently discontinued effective 10/17/2025; support ends 10/17/2025; new feature flag launches should use AppConfig.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-delivery.html",
           "id": "source-14"
         }
       ]
@@ -1465,35 +1233,6 @@
       ]
     },
     {
-      "url": "https://aws.amazon.com/security/security-bulletins/2026-035-aws/",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://aws.amazon.com/security/security-bulletins/2026-035-aws/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://aws.amazon.com/security/security-bulletins/2026-035-aws/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "supported",
-          "scope": "Missing input source validation in the Kiro CLI tool-authorization prompt; piped stdin could run tools without approval; fixed in Kiro CLI 1.28.0; published 22 May 2026.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-27"
-        }
-      ]
-    },
-    {
       "url": "https://aws.amazon.com/security/security-bulletins/2026-065-aws/",
       "files": [
         "tech-scan-sandbox.html"
@@ -1527,35 +1266,6 @@
         {
           "file": "tech-scan-sandbox.html",
           "id": "source-6"
-        }
-      ]
-    },
-    {
-      "url": "https://aws.amazon.com/systems-manager/features/incident-manager/",
-      "files": [
-        "tech-scan-delivery.html"
-      ],
-      "hrefs": [
-        "https://aws.amazon.com/systems-manager/features/incident-manager/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://aws.amazon.com/systems-manager/features/incident-manager/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-delivery.html",
-          "outcome": "supported",
-          "scope": "Incident Manager will no longer be open to new customers starting on November 7, 2025; AWS points new accounts at OpsCenter.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-delivery.html",
-          "id": "source-10"
         }
       ]
     },
@@ -1665,35 +1375,6 @@
         {
           "file": "transformation.html",
           "id": "source-8"
-        }
-      ]
-    },
-    {
-      "url": "https://code.claude.com/docs/en/agent-sdk",
-      "files": [
-        "tech-scan-stack-views.html"
-      ],
-      "hrefs": [
-        "https://code.claude.com/docs/en/agent-sdk"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://code.claude.com/docs/en/agent-sdk",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "outcome": "supported",
-          "scope": "The Agent SDK is programmable in Python and TypeScript; the Claude Code SDK has been renamed to the Claude Agent SDK.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "id": "source-5"
         }
       ]
     },
@@ -1894,35 +1575,6 @@
         "result": "not_retrieved_census_only",
         "method": "offline published-link census; no retrieval evidence recorded"
       }
-    },
-    {
-      "url": "https://code.claude.com/docs/en/settings-reference",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://code.claude.com/docs/en/settings-reference"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://code.claude.com/docs/en/settings-reference",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "supported",
-          "scope": "enforceAvailableModels (v2.1.175+) makes /model Default resolve to the first available model in the list; availableModelsMatch and deniedModels (v2.1.283+, managed settings only).",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-22"
-        }
-      ]
     },
     {
       "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
@@ -2604,35 +2256,6 @@
       ]
     },
     {
-      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html",
-      "files": [
-        "tech-scan-delivery.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-delivery.html",
-          "outcome": "supported",
-          "scope": "Create and monitor service-level objectives (SLOs); standard metrics include availability, latency, faults, errors; supported on EKS/ECS/EC2/Lambda.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-delivery.html",
-          "id": "source-9"
-        }
-      ]
-    },
-    {
       "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/coding-agents-insights.html",
       "files": [
         "tech-scan-harness.html"
@@ -2706,64 +2329,6 @@
       ]
     },
     {
-      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html",
-      "files": [
-        "tech-scan-context.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-context.html",
-          "outcome": "supported",
-          "scope": "pgvector 0.8.2 on Aurora PostgreSQL 18.6 and 18.4; 0.8.1 on 18.3.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-context.html",
-          "id": "source-15"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3VectorBuckets_QueryVectors.html",
-      "files": [
-        "tech-scan-context.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3VectorBuckets_QueryVectors.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3VectorBuckets_QueryVectors.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-context.html",
-          "outcome": "supported",
-          "scope": "S3 Vectors distanceMetric valid values are euclidean or cosine, fixed when the index is created.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-context.html",
-          "id": "source-14"
-        }
-      ]
-    },
-    {
       "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html",
       "files": [
         "tech-scan-workflows-factories.html"
@@ -2788,48 +2353,6 @@
           "id": "source-14"
         }
       ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html",
-      "files": [
-        "tech-scan-gateway.html",
-        "tech-scan-workflows-factories.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-gateway.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-gateway.html (source-25)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        },
-        {
-          "file": "tech-scan-workflows-factories.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-workflows-factories.html (source-16)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-gateway.html",
-          "id": "source-25"
-        },
-        {
-          "file": "tech-scan-workflows-factories.html",
-          "id": "source-16"
-        }
-      ],
-      "evidence_digests": []
     },
     {
       "url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/amazon-q-for-github.html",
@@ -2865,35 +2388,6 @@
         {
           "file": "tech-scan-workflows-factories.html",
           "id": "source-12"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html",
-      "files": [
-        "tech-scan-stack-views.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "outcome": "supported",
-          "scope": "AgentCore harness row is Yes for Asia Pacific (Singapore); supported Regions table.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "id": "source-11"
         }
       ]
     },
@@ -3554,35 +3048,6 @@
       ]
     },
     {
-      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-how-it-works.html",
-      "files": [
-        "tech-scan-harness.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-how-it-works.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-harness.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-harness.html (source-33)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-harness.html",
-          "id": "source-33"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-instances-security.md",
       "files": [
         "tech-scan-harness.html",
@@ -3633,35 +3098,6 @@
       ]
     },
     {
-      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-security-best-practices.html",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-security-best-practices.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-security-best-practices.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "supported",
-          "scope": "CLI-created execution role permits model invocation for all foundation models and inference profiles by default; create a least-privilege role for production; MMDSv2 mandatory since 30 June 2026.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-24"
-        }
-      ]
-    },
-    {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/specify-long-term-memory-organization.html",
       "checked_on": "2026-11-14",
       "result": "retrieved",
@@ -3692,35 +3128,6 @@
       ]
     },
     {
-      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/api-reference-overview.html",
-      "files": [
-        "tech-scan-stack-views.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/bedrock/latest/userguide/api-reference-overview.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/api-reference-overview.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "outcome": "supported",
-          "scope": "AWS SDK for Java listed with the bedrock-runtime prefix; Java calls Bedrock through the SDK, not through an agent SDK.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "id": "source-8"
-        }
-      ]
-    },
-    {
       "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
       "checked_on": "2026-11-14",
       "result": "retrieved",
@@ -3747,35 +3154,6 @@
         {
           "file": "tech-scan-stack-views.html",
           "id": "source-3"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html",
-      "files": [
-        "tech-scan-verification.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-verification.html",
-          "outcome": "supported",
-          "scope": "Automated Reasoning checks operate in detect mode only; no prompt-injection protection, no off-topic detection, no streaming, English (US) only.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-verification.html",
-          "id": "source-10"
         }
       ]
     },
@@ -3929,64 +3307,6 @@
         {
           "file": "tech-scan-gateway.html",
           "id": "source-8"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-customize-ingestion.html",
-      "files": [
-        "tech-scan-context.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-customize-ingestion.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-customize-ingestion.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-context.html",
-          "outcome": "supported",
-          "scope": "Chunking strategy cannot be changed after connecting a data source; semantic chunking is not supported for managed knowledge bases; default chunking is fixed-size 300 tokens with 20% overlap.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-context.html",
-          "id": "source-11"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html",
-      "files": [
-        "tech-scan-context.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-context.html",
-          "outcome": "supported",
-          "scope": "A knowledge base query returns up to five results by default; hybrid search only for RDS, OpenSearch Serverless and MongoDB stores with a filterable text field.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-context.html",
-          "id": "source-12"
         }
       ]
     },
@@ -4245,35 +3565,6 @@
       ]
     },
     {
-      "url": "https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-amazon-codeguru-reviewer.html",
-      "files": [
-        "tech-scan-verification.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-amazon-codeguru-reviewer.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-amazon-codeguru-reviewer.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-verification.html",
-          "outcome": "supported",
-          "scope": "Reviewer in maintenance mode as of 7 Nov 2025, no new repository associations; alternatives named are Q Developer (review) and Inspector (scanning); Security Agent is not named.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-verification.html",
-          "id": "source-9"
-        }
-      ]
-    },
-    {
       "url": "https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-rollback-and-redeploy.html",
       "checked_on": "2026-11-14",
       "result": "retrieved",
@@ -4300,35 +3591,6 @@
         {
           "file": "tech-scan-delivery.html",
           "id": "source-4"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html",
-      "files": [
-        "tech-scan-delivery.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-delivery.html",
-          "outcome": "supported",
-          "scope": "CodeDeploy deploys to three compute platforms: EC2/On-Premises, Lambda, ECS. EKS is not one; Lambda/ECS shift traffic canary/linear/all-at-once.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-delivery.html",
-          "id": "source-6"
         }
       ]
     },
@@ -4393,64 +3655,6 @@
       ]
     },
     {
-      "url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html",
-      "files": [
-        "tech-scan-delivery.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-delivery.html",
-          "outcome": "supported",
-          "scope": "V2-only: rollback for pipeline stages, stage conditions, entry conditions with Skip, automatic retry. V1 vs V2 characteristics table.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-delivery.html",
-          "id": "source-7"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/decision-guides/latest/decision-guides/vector-database-guide.html",
-      "files": [
-        "tech-scan-context.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/decision-guides/latest/decision-guides/vector-database-guide.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/decision-guides/latest/decision-guides/vector-database-guide.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-context.html",
-          "outcome": "supported",
-          "scope": "Per-store Knowledge Bases support: OpenSearch Serverless Yes (16,000 dims, hybrid Yes); S3 Vectors Yes (4,096 dims, hybrid No); Aurora pgvector Yes (2,000 indexed dims, hybrid Partial); DynamoDB No.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-context.html",
-          "id": "source-13"
-        }
-      ]
-    },
-    {
       "url": "https://docs.aws.amazon.com/inspector/latest/user/code-security-assessments.html",
       "checked_on": "2026-11-14",
       "result": "retrieved",
@@ -4477,64 +3681,6 @@
         {
           "file": "tech-scan-verification.html",
           "id": "source-3"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/java/api/latest/software/amazon/awssdk/services/codegurusecurity/package-summary.html",
-      "files": [
-        "tech-scan-verification.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/java/api/latest/software/amazon/awssdk/services/codegurusecurity/package-summary.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/java/api/latest/software/amazon/awssdk/services/codegurusecurity/package-summary.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-verification.html",
-          "outcome": "supported",
-          "scope": "Carries the CodeGuru Security end-of-support notice verbatim (support discontinued 20 Nov 2025; no access to console, resources or documentation afterwards).",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-verification.html",
-          "id": "source-8"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/kendra/latest/dg/kendra-availability-change.html",
-      "files": [
-        "tech-scan-context.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/kendra/latest/dg/kendra-availability-change.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/kendra/latest/dg/kendra-availability-change.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-context.html",
-          "outcome": "supported",
-          "scope": "Kendra in Maintenance Mode effective 30 Jun 2026, closed to new customers 30 Jul 2026; existing deployments keep running with bug fixes and security updates; AWS recommends Bedrock Managed Knowledge Base for new search applications.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-context.html",
-          "id": "source-9"
         }
       ]
     },
@@ -4717,64 +3863,6 @@
         {
           "file": "tech-scan-harness.html",
           "id": "source-10"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html",
-      "files": [
-        "tech-scan-delivery.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-delivery.html",
-          "outcome": "supported",
-          "scope": "CloudWatch alarms and EventBridge events can automatically create an OpsItem; SNS publishes notifications when an OpsItem is changed or edited.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-delivery.html",
-          "id": "source-11"
-        }
-      ]
-    },
-    {
-      "url": "https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-migration.html",
-      "files": [
-        "tech-scan-delivery.html"
-      ],
-      "hrefs": [
-        "https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-migration.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-migration.html",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-delivery.html",
-          "outcome": "supported",
-          "scope": "On February 25th, 2026, the AWS X-Ray SDKs/Daemon will enter maintenance mode, with releases limited to security issues only; migrate to OpenTelemetry.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-delivery.html",
-          "id": "source-8"
         }
       ]
     },
@@ -5055,35 +4143,6 @@
         "result": "not_retrieved_census_only",
         "method": "offline published-link census; no retrieval evidence recorded"
       }
-    },
-    {
-      "url": "https://docs.langchain4j.dev/",
-      "files": [
-        "tech-scan-stack-views.html"
-      ],
-      "hrefs": [
-        "https://docs.langchain4j.dev/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://docs.langchain4j.dev/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "outcome": "supported",
-          "scope": "LangChain4j project documentation home; Apache-2.0 licensed Java library for LLM-powered applications on the JVM.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "id": "source-7"
-        }
-      ]
     },
     {
       "url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain",
@@ -5529,35 +4588,6 @@
       ]
     },
     {
-      "url": "https://dora.dev/guides/dora-metrics-four-keys/",
-      "files": [
-        "tech-scan-delivery.html"
-      ],
-      "hrefs": [
-        "https://dora.dev/guides/dora-metrics-four-keys/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://dora.dev/guides/dora-metrics-four-keys/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-delivery.html",
-          "outcome": "supported",
-          "scope": "DORA defines five software delivery performance metrics: change lead time, deployment frequency, failed deployment recovery time, change fail rate, deployment rework rate. Last updated 5 January 2026.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-delivery.html",
-          "id": "source-12"
-        }
-      ]
-    },
-    {
       "url": "https://dora.dev/guides/dora-metrics/",
       "files": [
         "product-implementation.html"
@@ -5697,35 +4727,6 @@
       ]
     },
     {
-      "url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "supported",
-          "scope": "Trailing-dot path-validation bypass let Copilot in Visual Studio and SSMS write .mcp.json and reach command execution; Microsoft Important, CVSS 3.1 8.8; fixed 13 October 2026.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-25"
-        }
-      ]
-    },
-    {
       "url": "https://external-secrets.io/latest/introduction/overview/",
       "checked_on": "2026-11-12",
       "files": [
@@ -5761,35 +4762,6 @@
           "source_url": "https://external-secrets.io/latest/introduction/overview/"
         }
       ]
-    },
-    {
-      "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update",
-      "files": [
-        "tech-scan-gateway.html"
-      ],
-      "hrefs": [
-        "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-gateway.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-gateway.html (source-26)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-gateway.html",
-          "id": "source-26"
-        }
-      ],
-      "evidence_digests": []
     },
     {
       "url": "https://fonts.googleapis.com",
@@ -6455,35 +5427,6 @@
       "source_entries": []
     },
     {
-      "url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "supported",
-          "scope": "Embedded-browser flaws in five AI tools: Cursor patched silently 1 October, Copilot fixed 1.1.29 on 13 October; Codex and VS Code unpatched at publication; no CVE assigned.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-31"
-        }
-      ]
-    },
-    {
       "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
       "files": [
         "transformation.html"
@@ -6518,35 +5461,6 @@
           "id": "source-9"
         }
       ]
-    },
-    {
-      "url": "https://github.com/AgentMemoryRepo/agentmemoryrepo/blob/main/README.md",
-      "files": [
-        "tech-scan-context.html"
-      ],
-      "hrefs": [
-        "https://github.com/AgentMemoryRepo/agentmemoryrepo/blob/main/README.md"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-context.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-context.html (source-17)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-context.html",
-          "id": "source-17"
-        }
-      ],
-      "evidence_digests": []
     },
     {
       "url": "https://github.com/All-Hands-AI/OpenHands",
@@ -7740,64 +6654,6 @@
       ]
     },
     {
-      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://github.com/postmanlabs/postman-app-support/issues/14370"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "supported",
-          "scope": "Postman Desktop 12.33.4 auto-installed Claude Code and Codex plugins and self-approved a startup-hook trust record; the reporter does not claim data exfiltration.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-30"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/rauchg/gdp-ts",
-      "files": [
-        "tech-scan-stack-views.html"
-      ],
-      "hrefs": [
-        "https://github.com/rauchg/gdp-ts"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-stack-views.html (source-12)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "id": "source-12"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
       "url": "https://github.com/sverweij/dependency-cruiser/tree/main",
       "files": [
         "eds-developer-harness.html",
@@ -7953,35 +6809,6 @@
           "source_url": "https://gvisor.dev/docs/architecture_guide/intro/"
         }
       ]
-    },
-    {
-      "url": "https://hamel.dev/blog/posts/decision-model-evals/",
-      "files": [
-        "concept.html"
-      ],
-      "hrefs": [
-        "https://hamel.dev/blog/posts/decision-model-evals/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "concept.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on concept.html (source-37)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "concept.html",
-          "id": "source-37"
-        }
-      ],
-      "evidence_digests": []
     },
     {
       "url": "https://impeccable.style",
@@ -8273,122 +7100,6 @@
       ]
     },
     {
-      "url": "https://kiro.dev/blog/software-factory-1000-prs/",
-      "files": [
-        "tech-scan-workflows-factories.html"
-      ],
-      "hrefs": [
-        "https://kiro.dev/blog/software-factory-1000-prs/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-workflows-factories.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-workflows-factories.html (source-17)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-workflows-factories.html",
-          "id": "source-17"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
-      "url": "https://kiro.dev/blog/software-factory-stability/",
-      "files": [
-        "tech-scan-workflows-factories.html"
-      ],
-      "hrefs": [
-        "https://kiro.dev/blog/software-factory-stability/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-workflows-factories.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-workflows-factories.html (source-18)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-workflows-factories.html",
-          "id": "source-18"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
-      "url": "https://kiro.dev/docs/crew/bots/how-bots-work/",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://kiro.dev/docs/crew/bots/how-bots-work/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-agents.html (source-33)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-33"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
-      "url": "https://kiro.dev/docs/crew/bots/manage-bots/",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://kiro.dev/docs/crew/bots/manage-bots/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-agents.html (source-34)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-34"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
       "url": "https://kiro.dev/docs/enterprise/governance/model",
       "files": [
         "tech-scan-gateway.html"
@@ -8663,48 +7374,6 @@
       ]
     },
     {
-      "url": "https://kiro.dev/docs/sandbox/",
-      "files": [
-        "tech-scan-agents.html",
-        "tech-scan-sandbox.html"
-      ],
-      "hrefs": [
-        "https://kiro.dev/docs/sandbox/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-agents.html (source-32)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        },
-        {
-          "file": "tech-scan-sandbox.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-sandbox.html (source-26)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-32"
-        },
-        {
-          "file": "tech-scan-sandbox.html",
-          "id": "source-26"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
       "url": "https://kiro.dev/docs/specs/",
       "files": [
         "tech-scan-workflows-factories.html"
@@ -8832,35 +7501,6 @@
           "sha256": "a9ed934489f920be5faee0bf8ec83963b65a0fb1b33501f6b37a531fad3f5287",
           "format": "primary-source response capture",
           "source_url": "https://kubernetes.io/docs/concepts/configuration/secret/"
-        }
-      ]
-    },
-    {
-      "url": "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "supported",
-          "scope": "Prompt-injected public agent fetched default execution role credentials from the metadata service (169.254.169.254); the role reached every AgentCore agent in the same account and region; AWS says the behaviour is documented and expected.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-23"
         }
       ]
     },
@@ -9324,35 +7964,6 @@
       ]
     },
     {
-      "url": "https://martinfowler.com/bliki/GeneratedGlossary.html",
-      "files": [
-        "concept.html"
-      ],
-      "hrefs": [
-        "https://martinfowler.com/bliki/GeneratedGlossary.html"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "concept.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on concept.html (source-36)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "concept.html",
-          "id": "source-36"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
       "url": "https://martinfowler.com/rachels-ramblings/code-review.html",
       "files": [
         "ai-pdlc.html",
@@ -9678,35 +8289,6 @@
       ]
     },
     {
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103572",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://nvd.nist.gov/vuln/detail/CVE-2026-103572"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103572",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "supported",
-          "scope": "CVE record for CVE-2026-103572; CVSS 3.1 8.8.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-26"
-        }
-      ]
-    },
-    {
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10591",
       "files": [
         "tech-scan-agents.html"
@@ -9729,35 +8311,6 @@
         {
           "file": "tech-scan-agents.html",
           "id": "source-19"
-        }
-      ]
-    },
-    {
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9255",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://nvd.nist.gov/vuln/detail/CVE-2026-9255"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9255",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "supported",
-          "scope": "CVE record for CVE-2026-9255; CVSS 4.0 8.4, CVSS 3.1 7.8.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-28"
         }
       ]
     },
@@ -9897,35 +8450,6 @@
         {
           "file": "tech-scan-sandbox.html",
           "id": "source-23"
-        }
-      ]
-    },
-    {
-      "url": "https://openai.github.io/openai-agents-js/",
-      "files": [
-        "tech-scan-stack-views.html"
-      ],
-      "hrefs": [
-        "https://openai.github.io/openai-agents-js/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://openai.github.io/openai-agents-js/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "outcome": "supported",
-          "scope": "OpenAI Agents SDK (TypeScript), also available in Python.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "id": "source-6"
         }
       ]
     },
@@ -10597,35 +9121,6 @@
         {
           "file": "tech-scan-models.html",
           "id": "source-9"
-        }
-      ]
-    },
-    {
-      "url": "https://safedep.io/blog/testmetest-npm-worm-miasma-variant",
-      "files": [
-        "tech-scan-agents.html"
-      ],
-      "hrefs": [
-        "https://safedep.io/blog/testmetest-npm-worm-miasma-variant"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://safedep.io/blog/testmetest-npm-worm-miasma-variant",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "supported",
-          "scope": "9 November 2026 update: forged commits in 12 GitHub repositories deliver a Miasma-family worm through agent instruction files; no compromised third-party npm packages found.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-agents.html",
-          "id": "source-29"
         }
       ]
     },
@@ -11369,35 +9864,6 @@
       ]
     },
     {
-      "url": "https://strandsagents.com/docs/user-guide/quickstart/",
-      "files": [
-        "tech-scan-stack-views.html"
-      ],
-      "hrefs": [
-        "https://strandsagents.com/docs/user-guide/quickstart/"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://strandsagents.com/docs/user-guide/quickstart/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "outcome": "supported",
-          "scope": "Strands Agents SDK is available in both Python and TypeScript.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
-        }
-      ],
-      "evidence_digests": [],
-      "source_entries": [
-        {
-          "file": "tech-scan-stack-views.html",
-          "id": "source-4"
-        }
-      ]
-    },
-    {
       "url": "https://strandsagents.com/docs/user-guide/sdk/multi-agent/multi-agent-patterns/",
       "files": [
         "tech-scan-agents.html"
@@ -11696,35 +10162,6 @@
           "id": "learning-factory"
         }
       ]
-    },
-    {
-      "url": "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge",
-      "files": [
-        "tech-scan-sandbox.html"
-      ],
-      "hrefs": [
-        "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-sandbox.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-sandbox.html (source-25)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-sandbox.html",
-          "id": "source-25"
-        }
-      ],
-      "evidence_digests": []
     },
     {
       "url": "https://walkinglabs.github.io/learn-harness-engineering/en/",
@@ -12967,35 +11404,6 @@
       ]
     },
     {
-      "url": "https://www.philschmid.de/code-mode",
-      "files": [
-        "tech-scan-harness.html"
-      ],
-      "hrefs": [
-        "https://www.philschmid.de/code-mode"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "retrieved",
-      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-harness.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-harness.html (source-34)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-harness.html",
-          "id": "source-34"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
       "url": "https://www.producttalk.org/opportunity-solution-trees/",
       "files": [
         "product-discovery.html"
@@ -13288,35 +11696,6 @@
       ]
     },
     {
-      "url": "https://x.com/bcherny/status/2102543349102338309",
-      "files": [
-        "tech-scan-verification.html"
-      ],
-      "hrefs": [
-        "https://x.com/bcherny/status/2102543349102338309"
-      ],
-      "checked_on": "2026-11-14",
-      "result": "partial_reader_recovery",
-      "method": "issue #86 text and independent mirrored excerpt, original X access limited",
-      "claim_reviews": [
-        {
-          "file": "tech-scan-verification.html",
-          "checked_on": "2026-11-14",
-          "outcome": "limited",
-          "scope": "Targeted issue #86 explanation and control implication on tech-scan-verification.html (source-11)",
-          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
-          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-scan-verification.html",
-          "id": "source-11"
-        }
-      ],
-      "evidence_digests": []
-    },
-    {
       "url": "https://x.com/ericzakariasson/status/2102853511637774551",
       "files": [
         "concept.html"
@@ -13498,6 +11877,1627 @@
           "id": "source-6"
         }
       ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-harness-generally-available/",
+      "files": [
+        "tech-scan-stack-views.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-harness-generally-available/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-harness-generally-available/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "outcome": "supported",
+          "scope": "AgentCore harness is generally available in all AWS Commercial Regions where AgentCore is available (17 Jun 2026).",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "id": "source-9"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "outcome": "supported",
+          "scope": "Services moving to Maintenance no longer accessible to new customers from 30 Jul 2026, including Kendra and Bedrock Agents Classic.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-10"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/containers/measuring-developer-experience-on-an-amazon-eks-developer-platform/",
+      "files": [
+        "tech-scan-delivery.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/containers/measuring-developer-experience-on-an-amazon-eks-developer-platform/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/containers/measuring-developer-experience-on-an-amazon-eks-developer-platform/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-delivery.html",
+          "outcome": "supported",
+          "scope": "Argo Events processes webhook events; Apache DevLake calculates DORA metrics; Grafana visualizes performance trends. A self-built walkthrough, not a managed service.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-delivery.html",
+          "id": "source-13"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/devops/choosing-between-amazon-ecs-blue-green-native-or-aws-codedeploy-in-aws-cdk/",
+      "files": [
+        "tech-scan-delivery.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/devops/choosing-between-amazon-ecs-blue-green-native-or-aws-codedeploy-in-aws-cdk/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/devops/choosing-between-amazon-ecs-blue-green-native-or-aws-codedeploy-in-aws-cdk/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-delivery.html",
+          "outcome": "supported",
+          "scope": "ECS-native blue/green deployments is now the recommended option for most teams and new projects; CodeDeploy remains a valid option for existing customers; built-in blue/green July 2025, canary/linear October 2025.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-delivery.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/",
+      "files": [
+        "tech-scan-stack-views.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "outcome": "supported",
+          "scope": "Claude Opus 5 and Claude Sonnet 5 in Seoul and Claude Sonnet 5 in Singapore with in-region inference on the bedrock-runtime endpoint.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "id": "source-10"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/",
+      "files": [
+        "tech-scan-verification.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-verification.html",
+          "outcome": "supported",
+          "scope": "15 built-in evaluators (two named, 'and 13 more'); managed DeepEval and AutoEval evaluators; on-demand, online and batch modes.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-verification.html",
+          "id": "source-7"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/mt/support-for-amazon-cloudwatch-evidently-ending-soon/",
+      "files": [
+        "tech-scan-delivery.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/mt/support-for-amazon-cloudwatch-evidently-ending-soon/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/mt/support-for-amazon-cloudwatch-evidently-ending-soon/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-delivery.html",
+          "outcome": "supported",
+          "scope": "CloudWatch Evidently discontinued effective 10/17/2025; support ends 10/17/2025; new feature flag launches should use AppConfig.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-delivery.html",
+          "id": "source-14"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/security/security-bulletins/2026-035-aws/",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/security/security-bulletins/2026-035-aws/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/security/security-bulletins/2026-035-aws/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Missing input source validation in the Kiro CLI tool-authorization prompt; piped stdin could run tools without approval; fixed in Kiro CLI 1.28.0; published 22 May 2026.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-27"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/systems-manager/features/incident-manager/",
+      "files": [
+        "tech-scan-delivery.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/systems-manager/features/incident-manager/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/systems-manager/features/incident-manager/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-delivery.html",
+          "outcome": "supported",
+          "scope": "Incident Manager will no longer be open to new customers starting on November 7, 2025; AWS points new accounts at OpsCenter.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-delivery.html",
+          "id": "source-10"
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/agent-sdk",
+      "files": [
+        "tech-scan-stack-views.html"
+      ],
+      "hrefs": [
+        "https://code.claude.com/docs/en/agent-sdk"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://code.claude.com/docs/en/agent-sdk",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "outcome": "supported",
+          "scope": "The Agent SDK is programmable in Python and TypeScript; the Claude Code SDK has been renamed to the Claude Agent SDK.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/settings-reference",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://code.claude.com/docs/en/settings-reference"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://code.claude.com/docs/en/settings-reference",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "enforceAvailableModels (v2.1.175+) makes /model Default resolve to the first available model in the list; availableModelsMatch and deniedModels (v2.1.283+, managed settings only).",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-22"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html",
+      "files": [
+        "tech-scan-delivery.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-delivery.html",
+          "outcome": "supported",
+          "scope": "Create and monitor service-level objectives (SLOs); standard metrics include availability, latency, faults, errors; supported on EKS/ECS/EC2/Lambda.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-delivery.html",
+          "id": "source-9"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "outcome": "supported",
+          "scope": "pgvector 0.8.2 on Aurora PostgreSQL 18.6 and 18.4; 0.8.1 on 18.3.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-15"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3VectorBuckets_QueryVectors.html",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3VectorBuckets_QueryVectors.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3VectorBuckets_QueryVectors.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "outcome": "supported",
+          "scope": "S3 Vectors distanceMetric valid values are euclidean or cosine, fixed when the index is created.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-14"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html",
+      "files": [
+        "tech-scan-stack-views.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "outcome": "supported",
+          "scope": "AgentCore harness row is Yes for Asia Pacific (Singapore); supported Regions table.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "id": "source-11"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-security-best-practices.html",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-security-best-practices.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-security-best-practices.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "CLI-created execution role permits model invocation for all foundation models and inference profiles by default; create a least-privilege role for production; MMDSv2 mandatory since 30 June 2026.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-24"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/api-reference-overview.html",
+      "files": [
+        "tech-scan-stack-views.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/api-reference-overview.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/api-reference-overview.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "outcome": "supported",
+          "scope": "AWS SDK for Java listed with the bedrock-runtime prefix; Java calls Bedrock through the SDK, not through an agent SDK.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "id": "source-8"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html",
+      "files": [
+        "tech-scan-verification.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-verification.html",
+          "outcome": "supported",
+          "scope": "Automated Reasoning checks operate in detect mode only; no prompt-injection protection, no off-topic detection, no streaming, English (US) only.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-verification.html",
+          "id": "source-10"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-customize-ingestion.html",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-customize-ingestion.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-customize-ingestion.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "outcome": "supported",
+          "scope": "Chunking strategy cannot be changed after connecting a data source; semantic chunking is not supported for managed knowledge bases; default chunking is fixed-size 300 tokens with 20% overlap.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-11"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "outcome": "supported",
+          "scope": "A knowledge base query returns up to five results by default; hybrid search only for RDS, OpenSearch Serverless and MongoDB stores with a filterable text field.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-12"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-amazon-codeguru-reviewer.html",
+      "files": [
+        "tech-scan-verification.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-amazon-codeguru-reviewer.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-amazon-codeguru-reviewer.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-verification.html",
+          "outcome": "supported",
+          "scope": "Reviewer in maintenance mode as of 7 Nov 2025, no new repository associations; alternatives named are Q Developer (review) and Inspector (scanning); Security Agent is not named.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-verification.html",
+          "id": "source-9"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html",
+      "files": [
+        "tech-scan-delivery.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-delivery.html",
+          "outcome": "supported",
+          "scope": "CodeDeploy deploys to three compute platforms: EC2/On-Premises, Lambda, ECS. EKS is not one; Lambda/ECS shift traffic canary/linear/all-at-once.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-delivery.html",
+          "id": "source-6"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html",
+      "files": [
+        "tech-scan-delivery.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-delivery.html",
+          "outcome": "supported",
+          "scope": "V2-only: rollback for pipeline stages, stage conditions, entry conditions with Skip, automatic retry. V1 vs V2 characteristics table.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-delivery.html",
+          "id": "source-7"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/decision-guides/latest/decision-guides/vector-database-guide.html",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/decision-guides/latest/decision-guides/vector-database-guide.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/decision-guides/latest/decision-guides/vector-database-guide.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "outcome": "supported",
+          "scope": "Per-store Knowledge Bases support: OpenSearch Serverless Yes (16,000 dims, hybrid Yes); S3 Vectors Yes (4,096 dims, hybrid No); Aurora pgvector Yes (2,000 indexed dims, hybrid Partial); DynamoDB No.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-13"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/java/api/latest/software/amazon/awssdk/services/codegurusecurity/package-summary.html",
+      "files": [
+        "tech-scan-verification.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/java/api/latest/software/amazon/awssdk/services/codegurusecurity/package-summary.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/java/api/latest/software/amazon/awssdk/services/codegurusecurity/package-summary.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-verification.html",
+          "outcome": "supported",
+          "scope": "Carries the CodeGuru Security end-of-support notice verbatim (support discontinued 20 Nov 2025; no access to console, resources or documentation afterwards).",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-verification.html",
+          "id": "source-8"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/kendra/latest/dg/kendra-availability-change.html",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/kendra/latest/dg/kendra-availability-change.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/kendra/latest/dg/kendra-availability-change.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "outcome": "supported",
+          "scope": "Kendra in Maintenance Mode effective 30 Jun 2026, closed to new customers 30 Jul 2026; existing deployments keep running with bug fixes and security updates; AWS recommends Bedrock Managed Knowledge Base for new search applications.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-9"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html",
+      "files": [
+        "tech-scan-delivery.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-delivery.html",
+          "outcome": "supported",
+          "scope": "CloudWatch alarms and EventBridge events can automatically create an OpsItem; SNS publishes notifications when an OpsItem is changed or edited.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-delivery.html",
+          "id": "source-11"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-migration.html",
+      "files": [
+        "tech-scan-delivery.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-migration.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-migration.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-delivery.html",
+          "outcome": "supported",
+          "scope": "On February 25th, 2026, the AWS X-Ray SDKs/Daemon will enter maintenance mode, with releases limited to security issues only; migrate to OpenTelemetry.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-delivery.html",
+          "id": "source-8"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.langchain4j.dev/",
+      "files": [
+        "tech-scan-stack-views.html"
+      ],
+      "hrefs": [
+        "https://docs.langchain4j.dev/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.langchain4j.dev/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "outcome": "supported",
+          "scope": "LangChain4j project documentation home; Apache-2.0 licensed Java library for LLM-powered applications on the JVM.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "id": "source-7"
+        }
+      ]
+    },
+    {
+      "url": "https://dora.dev/guides/dora-metrics-four-keys/",
+      "files": [
+        "tech-scan-delivery.html"
+      ],
+      "hrefs": [
+        "https://dora.dev/guides/dora-metrics-four-keys/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://dora.dev/guides/dora-metrics-four-keys/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-delivery.html",
+          "outcome": "supported",
+          "scope": "DORA defines five software delivery performance metrics: change lead time, deployment frequency, failed deployment recovery time, change fail rate, deployment rework rate. Last updated 5 January 2026.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-delivery.html",
+          "id": "source-12"
+        }
+      ]
+    },
+    {
+      "url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Trailing-dot path-validation bypass let Copilot in Visual Studio and SSMS write .mcp.json and reach command execution; Microsoft Important, CVSS 3.1 8.8; fixed 13 October 2026.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-25"
+        }
+      ]
+    },
+    {
+      "url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Embedded-browser flaws in five AI tools: Cursor patched silently 1 October, Copilot fixed 1.1.29 on 13 October; Codex and VS Code unpatched at publication; no CVE assigned.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-31"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://github.com/postmanlabs/postman-app-support/issues/14370"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Postman Desktop 12.33.4 auto-installed Claude Code and Codex plugins and self-approved a startup-hook trust record; the reporter does not claim data exfiltration.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-30"
+        }
+      ]
+    },
+    {
+      "url": "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Prompt-injected public agent fetched default execution role credentials from the metadata service (169.254.169.254); the role reached every AgentCore agent in the same account and region; AWS says the behaviour is documented and expected.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-23"
+        }
+      ]
+    },
+    {
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103572",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-103572"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103572",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "CVE record for CVE-2026-103572; CVSS 3.1 8.8.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-26"
+        }
+      ]
+    },
+    {
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9255",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-9255"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9255",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "CVE record for CVE-2026-9255; CVSS 4.0 8.4, CVSS 3.1 7.8.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-28"
+        }
+      ]
+    },
+    {
+      "url": "https://openai.github.io/openai-agents-js/",
+      "files": [
+        "tech-scan-stack-views.html"
+      ],
+      "hrefs": [
+        "https://openai.github.io/openai-agents-js/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://openai.github.io/openai-agents-js/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "outcome": "supported",
+          "scope": "OpenAI Agents SDK (TypeScript), also available in Python.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "id": "source-6"
+        }
+      ]
+    },
+    {
+      "url": "https://safedep.io/blog/testmetest-npm-worm-miasma-variant",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://safedep.io/blog/testmetest-npm-worm-miasma-variant"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://safedep.io/blog/testmetest-npm-worm-miasma-variant",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "9 November 2026 update: forged commits in 12 GitHub repositories deliver a Miasma-family worm through agent instruction files; no compromised third-party npm packages found.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-29"
+        }
+      ]
+    },
+    {
+      "url": "https://strandsagents.com/docs/user-guide/quickstart/",
+      "files": [
+        "tech-scan-stack-views.html"
+      ],
+      "hrefs": [
+        "https://strandsagents.com/docs/user-guide/quickstart/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://strandsagents.com/docs/user-guide/quickstart/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "outcome": "supported",
+          "scope": "Strands Agents SDK is available in both Python and TypeScript.",
+          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "id": "source-4"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/new-agentcore-runtime-default/",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/new-agentcore-runtime-default/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-harness.html (source-32)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-32"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html",
+      "files": [
+        "tech-scan-gateway.html",
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-gateway.html (source-25)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-workflows-factories.html (source-16)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-25"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-16"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-how-it-works.html",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-how-it-works.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-harness.html (source-33)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-33"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-gateway.html (source-26)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-26"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://github.com/AgentMemoryRepo/agentmemoryrepo/blob/main/README.md",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://github.com/AgentMemoryRepo/agentmemoryrepo/blob/main/README.md"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-context.html (source-17)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-17"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://github.com/rauchg/gdp-ts",
+      "files": [
+        "tech-scan-stack-views.html"
+      ],
+      "hrefs": [
+        "https://github.com/rauchg/gdp-ts"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-stack-views.html (source-12)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "id": "source-12"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://hamel.dev/blog/posts/decision-model-evals/",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://hamel.dev/blog/posts/decision-model-evals/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on concept.html (source-37)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-37"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://kiro.dev/blog/software-factory-1000-prs/",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/blog/software-factory-1000-prs/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-workflows-factories.html (source-17)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-17"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://kiro.dev/blog/software-factory-stability/",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/blog/software-factory-stability/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-workflows-factories.html (source-18)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-18"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://kiro.dev/docs/crew/bots/how-bots-work/",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/crew/bots/how-bots-work/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-agents.html (source-33)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-33"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://kiro.dev/docs/crew/bots/manage-bots/",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/crew/bots/manage-bots/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-agents.html (source-34)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-34"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://kiro.dev/docs/sandbox/",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/sandbox/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-agents.html (source-32)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-sandbox.html (source-26)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-32"
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-26"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://martinfowler.com/bliki/GeneratedGlossary.html",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://martinfowler.com/bliki/GeneratedGlossary.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on concept.html (source-36)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-36"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-sandbox.html (source-25)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-25"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://www.philschmid.de/code-mode",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://www.philschmid.de/code-mode"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-harness.html (source-34)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-34"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://x.com/bcherny/status/2102543349102338309",
+      "files": [
+        "tech-scan-verification.html"
+      ],
+      "hrefs": [
+        "https://x.com/bcherny/status/2102543349102338309"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "partial_reader_recovery",
+      "method": "issue #86 text and independent mirrored excerpt, original X access limited",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-verification.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-verification.html (source-11)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-verification.html",
+          "id": "source-11"
+        }
+      ],
+      "evidence_digests": []
     }
   ],
   "history": [
