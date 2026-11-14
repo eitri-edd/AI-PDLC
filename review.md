@@ -186,12 +186,12 @@ criticality score measure different things and are not interchangeable.
 
 - **Pages:** six — Concepts (`concept.html`, singular;
   `concepts.html` returns a 404), Organisation Transformation,
-  AI-SDLC overview, Product Discovery, Product Implementation,
+  AI-SDLC overview, Project Discovery, Product Implementation,
   Tech Scan hub only (spokes not covered).
 - **Lens:** the reader for each page in "Audiences and lenses":
   strategic leaders and team leads for Organisation Transformation;
   everyone for Concepts and the AI-SDLC overview; aspiring product
-  manager, formerly IT project delivery, for Product Discovery and
+  manager, formerly IT project delivery, for Project Discovery and
   Product Implementation; experienced development leads and
   engineers for the Tech Scan hub.
 - **Method:** read each page live, in full, paragraph by paragraph.
