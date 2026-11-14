@@ -3,14 +3,14 @@
   "scope": "Current publication census with retained 12 November page-wide passes and targeted 13 November Tech Scan reviews; Wave 2 cited-source reviews completed with limitations, not a new whole-site claim review. Issue #73 adds a targeted census and claim checks, not a new page-wide pass. Wave 3 adds four page-scoped source passes and a publication census on 14 November; no earlier page pass is advanced.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 317,
-  "current_unique_hrefs": 323,
+  "current_unique_urls": 333,
+  "current_unique_hrefs": 339,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_preconnect_root_response": 2,
-    "partial_reader_recovery": 10,
+    "partial_reader_recovery": 11,
     "reader_evidence_direct_retry_timed_out": 1,
-    "retrieved": 295,
+    "retrieved": 310,
     "retrieved_pdf_text": 3,
     "retrieved_with_login_banner": 1
   },
@@ -3881,10 +3881,19 @@
           "scope": "Self-review prevention applies to run initiator",
           "evidence_summary": "Direct GET 200; source passage:  proceed. Optionally, to prevent users from approving workflows runs that they triggered, select Prevent self-review . Click Save protection rules . Optionally, specify the amount of time ",
           "limitation": "Provider or research evidence only; no local deployment, enforcement, benchmark or reader testing."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-workflows-factories.html (source-15)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
         }
       ],
       "files": [
-        "tech-scan-delivery.html"
+        "tech-scan-delivery.html",
+        "tech-scan-workflows-factories.html"
       ],
       "hrefs": [
         "https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments"
@@ -3893,6 +3902,10 @@
         {
           "file": "tech-scan-delivery.html",
           "id": "source-3"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-15"
         }
       ]
     },
@@ -12995,6 +13008,496 @@
           "id": "source-4"
         }
       ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/new-agentcore-runtime-default/",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/new-agentcore-runtime-default/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-harness.html (source-32)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-32"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html",
+      "files": [
+        "tech-scan-gateway.html",
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-gateway.html (source-25)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-workflows-factories.html (source-16)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-25"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-16"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-how-it-works.html",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-how-it-works.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-harness.html (source-33)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-33"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-gateway.html (source-26)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-26"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://github.com/AgentMemoryRepo/agentmemoryrepo/blob/main/README.md",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://github.com/AgentMemoryRepo/agentmemoryrepo/blob/main/README.md"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-context.html (source-17)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-17"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://github.com/rauchg/gdp-ts",
+      "files": [
+        "tech-scan-stack-views.html"
+      ],
+      "hrefs": [
+        "https://github.com/rauchg/gdp-ts"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-stack-views.html (source-12)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-stack-views.html",
+          "id": "source-12"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://hamel.dev/blog/posts/decision-model-evals/",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://hamel.dev/blog/posts/decision-model-evals/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on concept.html (source-37)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-37"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://kiro.dev/blog/software-factory-1000-prs/",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/blog/software-factory-1000-prs/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-workflows-factories.html (source-17)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-17"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://kiro.dev/blog/software-factory-stability/",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/blog/software-factory-stability/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-workflows-factories.html (source-18)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-18"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://kiro.dev/docs/crew/bots/how-bots-work/",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/crew/bots/how-bots-work/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-agents.html (source-33)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-33"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://kiro.dev/docs/crew/bots/manage-bots/",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/crew/bots/manage-bots/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-agents.html (source-34)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-34"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://kiro.dev/docs/sandbox/",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/sandbox/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-agents.html (source-32)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-sandbox.html (source-26)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-32"
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-26"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://martinfowler.com/bliki/GeneratedGlossary.html",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://martinfowler.com/bliki/GeneratedGlossary.html"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on concept.html (source-36)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-36"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-sandbox.html (source-25)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-25"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://www.philschmid.de/code-mode",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://www.philschmid.de/code-mode"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "method": "indexed source text retrieved from primary publisher, targeted editorial review",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-harness.html (source-34)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-34"
+        }
+      ],
+      "evidence_digests": []
+    },
+    {
+      "url": "https://x.com/bcherny/status/2102543349102338309",
+      "files": [
+        "tech-scan-verification.html"
+      ],
+      "hrefs": [
+        "https://x.com/bcherny/status/2102543349102338309"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "partial_reader_recovery",
+      "method": "issue #86 text and independent mirrored excerpt, original X access limited",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-verification.html",
+          "checked_on": "2026-11-14",
+          "outcome": "limited",
+          "scope": "Targeted issue #86 explanation and control implication on tech-scan-verification.html (source-11)",
+          "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
+          "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-verification.html",
+          "id": "source-11"
+        }
+      ],
+      "evidence_digests": []
     }
   ],
   "history": [
@@ -22858,5 +23361,24 @@
     "unique_pages": 25,
     "unique_urls": 277,
     "unique_hrefs": 283
+  },
+  "issue86_targeted_followup": {
+    "checked_on": "2026-11-14",
+    "scope": "Selected critical/high educational changes on nine pages with primary-source indexed text retrieval, not page-wide source recheck",
+    "pages": [
+      "concept.html",
+      "tech-scan-agents.html",
+      "tech-scan-context.html",
+      "tech-scan-gateway.html",
+      "tech-scan-harness.html",
+      "tech-scan-sandbox.html",
+      "tech-scan-stack-views.html",
+      "tech-scan-verification.html",
+      "tech-scan-workflows-factories.html"
+    ],
+    "new_external_sources": 16,
+    "original_unique_urls": 317,
+    "current_unique_urls": 333,
+    "limits": "Indexed source text is not equivalent to direct origin HTTP GET, local acceptance tests, security qualification or a completed page-wide source audit."
   }
 }

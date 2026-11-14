@@ -250,7 +250,7 @@ class ModelsGatewayTests(unittest.TestCase):
                 self.assert_inherited_contract("models", broken)
 
     def test_sources_stay_final_visible_and_citation_numbers_follow_list_order(self):
-        for page, count in [("models", 11), ("gateway", 24)]:
+        for page, count in [("models", 11), ("gateway", 26)]:
             with self.subTest(page=page):
                 doc = document(page)
                 source = by_id(doc, "sources")
