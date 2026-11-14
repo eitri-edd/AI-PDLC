@@ -183,7 +183,10 @@
             <li>Do not rely on Gateway policy to control shell networking. It governs traffic through the
             Gateway only.</li>
           </ul>
-        </section>
+        <h3 id="gateway-credential-custody">Treat the gateway's credentials as a separate trust boundary</h3>
+<p>Centralising model calls also concentrates high-value provider credentials and delegated identities. Prefer AWS role-based access and short-lived federation where supported; avoid exporting persistent provider keys to coding agents, CI runners, prompts or environment files. For keys that remain necessary, restrict access by workload, rotate and revoke on incident, monitor unusual usage and spend, and define an owner for response. An agent's ability to reach a gateway does not give it blanket authority to use every model or downstream credential. <a href="#source-25" aria-label="Source 25: AWS OIDC federation">[25]</a></p>
+<p><strong>Threat example, not a gateway benchmark:</strong> Fireworks' November 2026 security bulletin reported exposure of some stored secrets and links to financially motivated LLMjacking. That incident is not evidence of a flaw in every LLM gateway; it shows why key custody, egress, quotas and rapid revocation belong in the architecture. Test stolen-token revocation, abnormal-spend alerts and gateway bypass paths before adoption. <a href="#source-26" aria-label="Source 26: Fireworks security incident update">[26]</a></p>
+</section>
         <section id="gaps">
           <h2>Gaps and open questions</h2>
           <ul>
@@ -227,7 +230,9 @@
             <li id="source-22"><a href="https://docs.litellm.ai/blog/security-update-march-2026">LiteLLM, Security Update: Suspected Supply Chain Incident</a>. First-party advisory, March 2026: malicious PyPI releases litellm==1.82.7 and litellm==1.82.8 were live on 24 March 2026 for about 40 minutes before PyPI quarantined them. Used in the optional notes under <a href="#conditional-alternatives">Conditional alternatives</a>.</li>
             <li id="source-23"><a href="https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain">LiteLLM, The attack chain behind the v1.107.0 LiteLLM release</a>. First-party root-cause analysis, 23 October 2026: a compromised litellm==1.107.0 was published to PyPI on 21 October 2026 and quarantined the same day. Used in the optional notes under <a href="#conditional-alternatives">Conditional alternatives</a>.</li>
             <li id="source-24"><a href="https://openrouter.ai/docs/quickstart">OpenRouter, Quickstart Guide</a>. First-party documentation: access to hundreds of models through a single API endpoint, with automatic fallbacks. Used in the optional notes under <a href="#conditional-alternatives">Conditional alternatives</a>.</li>
-          </ol>
+          <li id="source-25"><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html">AWS IAM, OIDC federation</a>. Recommends temporary AWS role credentials for external workflows over storing long-lived AWS access keys. Used in <a href="#gateway-credential-custody">Credential custody</a>.</li>
+<li id="source-26"><a href="https://fireworks.ai/security/bulletins/october-2026-security-incident-update">Fireworks AI, Update on October 2026 security incident</a>. First-party bulletin updated 9 November 2026; reported affected secrets and criminal LLMjacking links, with investigation still ongoing. Used in <a href="#gateway-credential-custody">Credential custody</a>.</li>
+</ol>
         </section>
         <p class="source-ref">Last editorial review: <time datetime="2026-11-13">13 November 2026</time>.</p>
         <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
