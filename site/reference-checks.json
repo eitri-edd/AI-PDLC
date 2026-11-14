@@ -1,24 +1,25 @@
 {
   "checked_on": "2026-11-14",
-  "scope": "Daily maintenance verification on 2026-11-14 found 337 distinct external hrefs and no broken destination",
+  "scope": "Daily maintenance verification on 2026-11-14 found 338 distinct external hrefs and no broken destination",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 337,
-  "current_unique_hrefs": 343,
+  "current_unique_urls": 338,
+  "current_unique_hrefs": 344,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 5,
     "retrieved": 322,
-    "retrieved_pdf_text": 3
+    "retrieved_pdf_text": 3,
+    "expected_login_redirect": 1
   },
   "page_passes": {
     "about.html": {
       "checked_on": "2026-11-14",
-      "scope": "Daily maintenance verification on 2026-11-14: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record). Sources 7–9 (Devin writer and security agent) added and checked live on 2026-11-14.",
+      "scope": "Daily maintenance verification on 2026-11-14: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record). Sources 7–10 and the private vulnerability reporting link (Devin writer and security agent) added and checked live on 2026-11-14.",
       "status": "completed with explicit limitations",
-      "source_entries": 9,
-      "unique_fetch_destinations": 13,
+      "source_entries": 10,
+      "unique_fetch_destinations": 14,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "ai-pdlc.html": {
@@ -13638,9 +13639,40 @@
       "source_entries": [
         {
           "file": "about.html",
-          "id": "source-9"
+          "id": "source-10"
         }
       ]
+    },
+    {
+      "url": "https://github.com/eitri-edd/AI-PDLC/security/advisories/new",
+      "files": [
+        "about.html"
+      ],
+      "hrefs": [
+        "https://github.com/eitri-edd/AI-PDLC/security/advisories/new"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "expected_login_redirect",
+      "http_status": 200,
+      "final_url": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Feitri-edd%2FAI-PDLC%2Fsecurity%2Fadvisories%2Fnew",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "about.html",
+          "outcome": "supported",
+          "scope": "Action link to the private vulnerability reporting form named in SECURITY.md.",
+          "evidence_summary": "Destination is the GitHub private vulnerability reporting form linked from the live main SECURITY.md; an anonymous request redirects to GitHub sign-in as expected.",
+          "limitation": "Form requires a signed-in GitHub account; whether private reporting is enabled in repository settings was not tested."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "88ea44f9c0cf83e6aa7e8121be5cc8fe2b28c34f3c9cb97fa4b07b327d58c894",
+          "format": "retrieved page body (GitHub sign-in redirect)",
+          "source_url": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Feitri-edd%2FAI-PDLC%2Fsecurity%2Fadvisories%2Fnew"
+        }
+      ],
+      "source_entries": []
     }
   ],
   "history": [
