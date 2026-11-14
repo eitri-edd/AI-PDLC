@@ -92,6 +92,10 @@ class Issue86GuidanceTests(unittest.TestCase):
                     continue
                 with self.subTest(page=page, citation=href):
                     self.assertIn(href[1:], ordinal)
+                    # Navigational links to a source have descriptive link text;
+                    # only numbered claim citations follow the [n] convention.
+                    if not re.fullmatch(r"\[\d+\]", normalise(node.text())):
+                        continue
                     expected = ordinal[href[1:]]
                     self.assertEqual(normalise(node.text()), f"[{expected}]")
                     self.assertTrue(node.attrs.get("aria-label", "").startswith(
