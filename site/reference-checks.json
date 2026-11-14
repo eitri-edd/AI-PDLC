@@ -1,24 +1,24 @@
 {
   "checked_on": "2026-11-14",
-  "scope": "Daily maintenance verification on 2026-11-14 found 333 distinct external hrefs and no broken destination",
+  "scope": "Daily maintenance verification on 2026-11-14 found 337 distinct external hrefs and no broken destination",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 333,
-  "current_unique_hrefs": 339,
+  "current_unique_urls": 337,
+  "current_unique_hrefs": 343,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 5,
-    "retrieved": 318,
+    "retrieved": 322,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
     "about.html": {
       "checked_on": "2026-11-14",
-      "scope": "Daily maintenance verification on 2026-11-14: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "scope": "Daily maintenance verification on 2026-11-14: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record). Sources 7–9 (Devin writer and security agent) added and checked live on 2026-11-14.",
       "status": "completed with explicit limitations",
-      "source_entries": 5,
-      "unique_fetch_destinations": 9,
+      "source_entries": 9,
+      "unique_fetch_destinations": 13,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "ai-pdlc.html": {
@@ -13497,6 +13497,150 @@
         }
       ],
       "evidence_digests": []
+    },
+    {
+      "url": "https://docs.devin.ai/get-started/devin-intro",
+      "files": [
+        "about.html"
+      ],
+      "hrefs": [
+        "https://docs.devin.ai/get-started/devin-intro"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.devin.ai/get-started/devin-intro",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "about.html",
+          "outcome": "supported",
+          "scope": "Vendor product introduction describing Devin as an autonomous AI software engineer.",
+          "evidence_summary": "Live page describes Devin as an autonomous AI software engineer that can write, run and test code.",
+          "limitation": "Vendor documentation; does not verify this playbook’s runtime agent configuration or the quality of its changes."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "37355d15d40a6efe313978be2dde34ca35c969678a4cebf9e11618df18fb1c47",
+          "format": "retrieved page body",
+          "source_url": "https://docs.devin.ai/get-started/devin-intro"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "about.html",
+          "id": "source-7"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.devin.ai/work-with-devin/security-2-0",
+      "files": [
+        "about.html"
+      ],
+      "hrefs": [
+        "https://docs.devin.ai/work-with-devin/security-2-0"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.devin.ai/work-with-devin/security-2-0",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "about.html",
+          "outcome": "supported",
+          "scope": "Vendor documentation for Devin Security 2.0 scans, findings and fixes.",
+          "evidence_summary": "Live page describes scanning repositories for vulnerabilities, reviewing findings with remediation recommendations where available, and assigning fixes to Devin remediation sessions.",
+          "limitation": "Vendor documentation; does not verify this repository’s scan configuration, scan results or remediation outcomes."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "1b850580f1593b035a6af2ea4295ee535ddcca7020d411a9372f1eae1593714b",
+          "format": "retrieved page body",
+          "source_url": "https://docs.devin.ai/work-with-devin/security-2-0"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "about.html",
+          "id": "source-8"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY_MODEL.md",
+      "files": [
+        "about.html"
+      ],
+      "hrefs": [
+        "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY_MODEL.md"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY_MODEL.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "about.html",
+          "outcome": "supported",
+          "scope": "Published repository threat model.",
+          "evidence_summary": "Live main threat model records the static-site assets, trust boundaries, attacker profiles (including untrusted fork PRs and URL-hash control), existing workflow controls and open questions on branch protection.",
+          "limitation": "Records intended scan scope; not evidence of any scan result or of repository settings outside the code."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "966966e58f09479f21a701e79c80f94f2332f7288b9d803fe5f23e2fed4b04a3",
+          "format": "retrieved page body",
+          "source_url": "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY_MODEL.md"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "about.html",
+          "id": "source-9"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY.md",
+      "files": [
+        "about.html"
+      ],
+      "hrefs": [
+        "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY.md"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "about.html",
+          "outcome": "supported",
+          "scope": "Published repository security policy.",
+          "evidence_summary": "Live main policy asks reporters to use GitHub private vulnerability reporting rather than a public issue.",
+          "limitation": "Policy text only; response times and reporting configuration were not tested."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "c268bf988487559783560fa4e439a4947b63b49181a1d313ed0195aa21fec627",
+          "format": "retrieved page body",
+          "source_url": "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY.md"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "about.html",
+          "id": "source-9"
+        }
+      ]
     }
   ],
   "history": [
