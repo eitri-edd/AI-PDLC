@@ -29,7 +29,7 @@ class DeliveryPageTest(unittest.TestCase):
             self.assertTrue(set(links) <= set(ids))
         source_section = text.split('<section id="sources">', 1)[1].split('</section>', 1)[0]
         sources = re.findall(r'<li id="source-(\d+)">(.*?)</li>', source_section, re.S)
-        self.assertEqual(len(sources), 4)
+        self.assertEqual(len(sources), 14)
         for expected, (number, source) in enumerate(sources, 1):
             self.assertEqual(number, str(expected))
             self.assertIn('href="https://', source)
@@ -41,6 +41,28 @@ class DeliveryPageTest(unittest.TestCase):
                 if match is not None:
                     self.assertIn(f'href="#source-{number}"', match.group(1))
         self.assertEqual(text.count('class="source-check-date"'), 1)
+
+    def test_issue76_delivery_gaps_are_present(self):
+        text = PAGE.read_text(encoding='utf-8')
+        lowered = text.lower()
+        for section in ('do-not-use', 'gaps'):
+            self.assertIn(f'id="{section}"', text)
+        for phrase in ('ecs-native blue/green', 'deployment target', 'codepipeline v2',
+                       'opentelemetry', 'x-ray', 'incident manager', 'opscenter',
+                       'dora', 'devlake', 'deployment rework rate'):
+            self.assertIn(phrase, lowered)
+        for target in ('ECS', 'EKS', 'Lambda', 'EC2'):
+            self.assertIn(target, text)
+        self.assertIn('now the recommended option for most teams and new projects', text)
+        self.assertIn('CodeDeploy remains a valid option for existing CodeDeploy deployments', text)
+
+    def test_issue76_hard_rules_are_kept(self):
+        lowered = PAGE.read_text(encoding='utf-8').lower()
+        self.assertNotIn('legacy', lowered)
+        self.assertNotIn('february 2027', lowered)
+        self.assertNotIn('feb 2027', lowered)
+        self.assertNotIn('v1 is frozen', lowered)
+        self.assertNotIn('v1 frozen', lowered)
 
 
 if __name__ == '__main__':

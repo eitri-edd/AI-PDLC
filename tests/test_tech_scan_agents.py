@@ -70,3 +70,19 @@ class TechScanAgentsTests(unittest.TestCase):
                        'human reviews', 'no local pilot', 'direct provider',
                        'inference profile', 'bedrock-mantle', 'do not start on retired'):
             assert phrase in text
+
+
+    def test_agents_security_gaps_enforce_models_and_default_role(self):
+        text = PAGE.read_text(encoding='utf-8')
+        lower = text.lower()
+        for phrase in ('enforceavailablemodels', 'availablemodelsmatch', 'deniedmodels',
+                       'agentcorruption', 'default execution role', 'requiremmdsv2',
+                       '169.254.169.254', 'cve-2026-103572', 'cve-2026-9255', 'miasma',
+                       'postman', 'forever security', 'further 2026 reports',
+                       "this guide's own prescription", 'no fixed ssms build',
+                       'before 29 september 2026'):
+            assert phrase in lower
+        doc = Document(text)
+        for n in range(22, 32):
+            assert f'source-{n}' in doc.ids
+            assert f'#source-{n}' in doc.links

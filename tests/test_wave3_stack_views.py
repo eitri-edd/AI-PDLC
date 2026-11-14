@@ -49,4 +49,30 @@ class StackViewsTests(unittest.TestCase):
         for source in re.findall(r'id="(source-\d+)"', text):
             self.assertIn('#' + source, doc.hrefs)
 
+    def test_issue76_language_and_platform_findings_are_present(self):
+        text = PAGE.read_text()
+        lowered = text.lower()
+        doc = Links(); doc.feed(text)
+        for section in ('do-not-use', 'gaps'):
+            self.assertIn(section, doc.ids)
+        self.assertIn('python- and typescript-only', lowered)
+        self.assertIn('claude agent sdk', lowered)
+        self.assertIn('langchain4j', lowered)
+        self.assertIn('aws sdk for java v2', lowered)
+        self.assertIn('sonnet 5', lowered)
+        self.assertIn('opus 5', lowered)
+        self.assertIn('global.openai.gpt-6-', text)
+        self.assertIn('generally available in singapore', lowered)
+        # The Harness GA sentence is stated once in prose, not repeated.
+        # ('17 June 2026' appears twice in the file: once in prose, once as
+        # the publication date in source entry 9.)
+        self.assertEqual(lowered.count('generally available in singapore'), 1)
+        self.assertEqual(lowered.count('harness general availability on 17 june 2026'), 1)
+        self.assertIn('no managed tracker', lowered)
+
+    def test_issue76_open_questions_stay_open(self):
+        lowered = PAGE.read_text().lower()
+        for phrase in ('kiro web', 'privatelink', 'llamaindex.ts', 'go v2'):
+            self.assertIn(phrase, lowered)
+
 if __name__ == '__main__': unittest.main()
