@@ -1536,6 +1536,34 @@ code {
 section { margin-top: 3rem; scroll-margin-top: 5rem; }
 article :is(section, h3, h4)[id] { scroll-margin-top: 5rem; }
 
+/* Tech Scan reading rhythm: neutral alternating bands only; meaning stays in labels and existing treatments. */
+.tech-scan-article > section:nth-of-type(even):not(#sources) {
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding: 1.5rem 1rem 1.75rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-subtle) 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+}
+@media (max-width: 1099px) {
+  .tech-scan-article > section:nth-of-type(even):not(#sources) {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+@media print {
+  .tech-scan-article > section:nth-of-type(even):not(#sources) {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
 /* EITRI's forge inspiration: a warm accent within the light handbook. */
 .eitri-forge {
   margin-top: 2rem;

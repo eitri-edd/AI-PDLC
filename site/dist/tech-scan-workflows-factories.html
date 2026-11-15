@@ -49,7 +49,7 @@
       </details>
     </aside>
     <main id="main" tabindex="-1">
-      <article class="concept-article">
+      <article class="concept-article tech-scan-article">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Workflows &amp; factories</span></nav>
         <header class="article-header"><p class="eyebrow">Development guide</p><h1>Tech Scan: Workflows &amp; factories</h1><p class="lead">How do you turn an agreed requirement into a reviewable change without giving an agent authority to release it?</p><p id="tech-scan-note">Draft research reference; not locally deployed or benchmarked. Vendor documentation describes capabilities, not proof that this composition works in your environment. <a href="#source-10">Issue 64</a> is a research proposal, not local validation.</p></header>
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
@@ -74,6 +74,61 @@
         <section id="candidate"><h2>Build the AWS-first candidate</h2>
           <p>For a GitHub repository and an approved Claude model on Amazon Bedrock, trial the Claude Code GitHub Action as a component in an owned issue-to-PR workflow. Its <code>use_bedrock: "true"</code> option supports Bedrock with OpenID Connect (OIDC); its configuration documents a named provider model. OIDC also requires separately configured AWS trust, credentials and GitHub <code>id-token: write</code> permission; the option alone does not set these up.<a href="#source-3" aria-label="Source 3: Claude Code Action inputs">[3]</a><a href="#source-4" aria-label="Source 4: Claude Code Action configuration">[4]</a> Condition the role's trust policy on the repository, branch or environment, not only on the AWS account, so a token minted elsewhere cannot assume the role.<a href="#source-14" aria-label="Source 14: AWS, Create a role for OpenID Connect federation">[14]</a> The action also supports Vertex AI and Foundry providers; <code>use_bedrock</code> is a choice among providers, not the only OIDC route.<a href="#source-3" aria-label="Source 3: Claude Code Action inputs">[3]</a> This is <strong>not a complete factory</strong>: the team must build and test intake, authorisation, PR creation, independent checks and the handoff. It does not establish that all execution, logs or data remain in AWS.</p>
           <ol><li>The product owner and engineer approve a bounded issue, requirements and expected tests; an authorised operator assigns it to one run.</li><li>The platform engineer pins the action to a reviewed commit, configures a narrowly scoped AWS OIDC role and selects an approved Bedrock model and region. Use an isolated, ephemeral GitHub-hosted runner, or a just-in-time self-hosted runner, with restricted network and credentials; do not give the agent production access.</li><li>The runner checks out a controlled base, generates a branch and proposed change, and opens a PR. CI independently runs the required tests; the PR records the issue, model, action revision, test results and unresolved risks.</li><li>A qualified human reviews the diff and evidence. Only an authorised human merges; a separate authorised human release decision follows the applicable deployment process.</li></ol>
+          <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
+              <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>
+              <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient>
+              <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eff6ff"/><stop offset="100%" stop-color="#dbeafe"/></linearGradient>
+            </defs>
+          </svg>
+          <figure class="concept-figure" id="fig-issue-pr" data-diagram="static">
+            <figcaption id="fig-issue-pr-caption">Figure 1. Illustrative issue-to-PR candidate path: the agent proposes a change; independent checks and human merge and release decisions stay separate. This is not a deployment architecture.</figcaption>
+            <details class="figure-reading"><summary>Read as text: Issue-to-PR candidate path</summary>
+              <ol>
+                <li>An approved issue with bounded scope and a named owner starts the run.</li>
+                <li>An isolated runner checks out a controlled base and prepares the environment.</li>
+                <li>The agent proposes a branch, diff and pull request; this output is not merge or release authority.</li>
+                <li>Independent CI runs the required checks and records the result.</li>
+                <li>A qualified human reviews the diff and evidence before any merge.</li>
+                <li>Separate authorised humans make the merge and release decisions; production records and recovery follow.</li>
+              </ol>
+            </details>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Illustrative issue-to-PR candidate path; scroll horizontally if needed">
+                <svg viewBox="0 0 850 385" role="img" aria-labelledby="fig-issue-pr-title" aria-describedby="fig-issue-pr-title-desc">
+                  <title id="fig-issue-pr-title">Illustrative issue-to-PR candidate path</title>
+                  <desc id="fig-issue-pr-title-desc">An approved issue enters an isolated runner. The agent proposes a branch, diff and pull request, which is not merge or release authority. Independent CI checks the change. A qualified human reviews the evidence, an authorised human decides merge, a separate authorised human decides release, and production records and recovery follow.</desc>
+                  <rect class="d-node" x="20" y="46" width="180" height="88" rx="8"/>
+                  <text class="d-title" x="110" y="84" text-anchor="middle">Approved issue</text><text class="d-sub" x="110" y="110" text-anchor="middle">bounded scope and owner</text><text class="d-sub" x="110" y="132" text-anchor="middle">operator assigns one run</text>
+                  <rect class="d-node" x="230" y="46" width="180" height="88" rx="8"/>
+                  <text class="d-title" x="320" y="84" text-anchor="middle">Isolated runner</text><text class="d-sub" x="320" y="110" text-anchor="middle">ephemeral and restricted</text><text class="d-sub" x="320" y="132" text-anchor="middle">controlled base checkout</text>
+                  <rect class="d-node" x="440" y="46" width="180" height="88" rx="8"/>
+                  <text class="d-title" x="530" y="84" text-anchor="middle">Agent-proposed PR</text><text class="d-sub" x="530" y="110" text-anchor="middle">branch, diff and evidence</text><text class="d-sub" x="530" y="132" text-anchor="middle">not merge or release authority</text>
+                  <rect class="d-node" x="650" y="46" width="180" height="88" rx="8"/>
+                  <text class="d-title" x="740" y="84" text-anchor="middle">Independent CI</text><text class="d-sub" x="740" y="110" text-anchor="middle">required checks and status</text><text class="d-sub" x="740" y="132" text-anchor="middle">independent of the agent</text>
+                  <path class="d-line" d="M200 90H230" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M410 90H440" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M620 90H650" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M740 134V226" marker-end="url(#arrow)"/>
+                  <rect class="d-node" x="20" y="226" width="180" height="88" rx="8"/>
+                  <text class="d-title" x="110" y="264" text-anchor="middle">Production and recovery</text><text class="d-sub" x="110" y="290" text-anchor="middle">record, monitor, rollback</text><text class="d-sub" x="110" y="312" text-anchor="middle">outcome linked to release</text>
+                  <rect class="d-node d-node-accent" x="230" y="226" width="180" height="88" rx="8"/>
+                  <text class="d-title" x="320" y="264" text-anchor="middle">Separate release gate</text><text class="d-sub" x="320" y="290" text-anchor="middle">authorised release only</text><text class="d-sub" x="320" y="312" text-anchor="middle">follows local process</text>
+                  <rect class="d-node d-node-accent" x="440" y="226" width="180" height="88" rx="8"/>
+                  <text class="d-title" x="530" y="264" text-anchor="middle">Human merge gate</text><text class="d-sub" x="530" y="290" text-anchor="middle">authorised merge only</text><text class="d-sub" x="530" y="312" text-anchor="middle">not release approval</text>
+                  <rect class="d-node d-node-accent" x="650" y="226" width="180" height="88" rx="8"/>
+                  <text class="d-title" x="740" y="264" text-anchor="middle">Qualified human review</text><text class="d-sub" x="740" y="290" text-anchor="middle">checks diff and evidence</text><text class="d-sub" x="740" y="312" text-anchor="middle">before merge is possible</text>
+                  <path class="d-line" d="M650 270H620" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M440 270H410" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M230 270H200" marker-end="url(#arrow)"/>
+                  <rect class="d-boundary" x="20" y="332" width="810" height="38" rx="7"/>
+                  <text class="d-sub" x="425" y="356" text-anchor="middle">Agent output stops at a proposed PR; merge, release and recovery stay under separate human authority.</text>
+                </svg>
+              </div>
+              <p class="diagram-key">Solid arrows show the candidate flow from an approved issue to a proposed PR and then through independent checks and human gates. Blue-highlighted nodes mark human review and approval controls; the agent path stops at the proposed PR.</p>
+            </details>
+          </figure>
           <p><strong>Hard gates:</strong> confirm required capability, approved data location and retention for every provider and log, identity and authorisation, model and API availability, execution and network boundaries, and an accountable operator. Record each decision and evidence. If any gate fails or is unknown, stop; seek an approved exception or select another route.</p>
 <p>Assessed alternatives: the Claude Code Action is not the only issue-to-PR service. Each of the following was assessed in the research proposal; confirm the current plan, region and data terms with the vendor before trialling any of them.<a href="#source-10" aria-label="Source 10: GitHub issue 64, Wave 2 research proposal">[10]</a></p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Issue-to-PR alternatives"><table><caption>Issue-to-PR alternatives assessed in the research proposal</caption><thead><tr><th scope="col">Product</th><th scope="col">Issue-to-PR flow</th><th scope="col">When it fits</th></tr></thead><tbody>

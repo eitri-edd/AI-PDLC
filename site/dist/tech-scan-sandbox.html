@@ -49,7 +49,7 @@
       </details>
     </aside>
     <main id="main" tabindex="-1">
-      <article class="concept-article">
+      <article class="concept-article tech-scan-article">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Tech Scan: Sandbox</span></nav>
         <header class="article-header">
           <p class="eyebrow">Development guide</p>
@@ -89,6 +89,37 @@
 <tr><th scope="row">Guest or microVM</th><td>Separates executing code from the host using the chosen isolation design</td><td>Freedom from kernel vulnerabilities, excessive identities or allowed egress</td><td>Record patch ownership, guest-to-host isolation design and denied access using the actual execution role</td></tr>
 <tr><th scope="row">Identity, egress and action policy</th><td>Restricts what credentials, destinations and operations a workload may use</td><td>That generated code is correct or that a release may be approved</td><td>Exercise a denied credential, IP destination and sensitive action, including bypass routes</td></tr>
 </tbody></table></div>
+          <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker><linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient><linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eff6ff"/><stop offset="100%" stop-color="#dbeafe"/></linearGradient></defs></svg>
+          <figure class="concept-figure" id="fig-sandbox-threats" data-diagram="static">
+            <figcaption id="fig-sandbox-threats-caption">Figure 1. Illustrative sandbox threat lanes: policy bypass, isolation escape and permitted misuse need different controls. This is not a deployment architecture.</figcaption>
+            <details class="figure-reading"><summary>Read as text: Sandbox threat lanes</summary>
+              <ol>
+                <li>Policy bypass uses an unguarded command or network path; test egress and action policy.</li>
+                <li>Isolation escape crosses the guest or host boundary; qualify the chosen isolation design and patch ownership.</li>
+                <li>Permitted misuse uses an allowed but excessive identity or credential; test least-privilege credentials and the separate release decision.</li>
+              </ol>
+            </details>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Illustrative sandbox threat lanes; scroll horizontally if needed">
+                <svg viewBox="0 0 900 480" role="img" aria-labelledby="fig-sandbox-threats-title" aria-describedby="fig-sandbox-threats-title-desc">
+                  <title id="fig-sandbox-threats-title">Illustrative sandbox threat lanes</title>
+                  <desc id="fig-sandbox-threats-title-desc">Three failure paths need different controls: policy bypass is checked through egress and action policy, isolation escape through the chosen guest or microVM boundary and patching, and permitted misuse through least-privilege identity and the separate release decision. Each lane has an acceptance check.</desc>
+                  <rect class="d-node" x="20" y="40" width="200" height="84" rx="8"/><text class="d-title" x="120" y="66" text-anchor="middle">Policy bypass</text><text class="d-sub" x="120" y="90" text-anchor="middle">unguarded command or network path</text><text class="d-sub" x="120" y="112" text-anchor="middle">prompt is not enforcement</text>
+                  <rect class="d-node d-node-accent" x="280" y="40" width="220" height="84" rx="8"/><text class="d-title" x="390" y="66" text-anchor="middle">Egress and action policy</text><text class="d-sub" x="390" y="90" text-anchor="middle">allowed destinations and operations</text><text class="d-sub" x="390" y="112" text-anchor="middle">test denied paths</text>
+                  <rect class="d-node" x="560" y="40" width="320" height="84" rx="8"/><text class="d-title" x="720" y="66" text-anchor="middle">Acceptance check</text><text class="d-sub" x="720" y="90" text-anchor="middle">deny destination and sensitive action</text><text class="d-sub" x="720" y="112" text-anchor="middle">including bypass routes</text>
+                  <rect class="d-node" x="20" y="180" width="200" height="84" rx="8"/><text class="d-title" x="120" y="206" text-anchor="middle">Isolation escape</text><text class="d-sub" x="120" y="230" text-anchor="middle">code crosses guest or host boundary</text><text class="d-sub" x="120" y="252" text-anchor="middle">microVM is not a guarantee</text>
+                  <rect class="d-node d-node-accent" x="280" y="180" width="220" height="84" rx="8"/><text class="d-title" x="390" y="206" text-anchor="middle">Guest or microVM isolation</text><text class="d-sub" x="390" y="230" text-anchor="middle">chosen design plus patching</text><text class="d-sub" x="390" y="252" text-anchor="middle">record patch ownership</text>
+                  <rect class="d-node" x="560" y="180" width="320" height="84" rx="8"/><text class="d-title" x="720" y="206" text-anchor="middle">Acceptance check</text><text class="d-sub" x="720" y="230" text-anchor="middle">record design and denied host access</text><text class="d-sub" x="720" y="252" text-anchor="middle">using the actual execution role</text>
+                  <rect class="d-node" x="20" y="320" width="200" height="84" rx="8"/><text class="d-title" x="120" y="346" text-anchor="middle">Permitted misuse</text><text class="d-sub" x="120" y="370" text-anchor="middle">allowed credential used excessively</text><text class="d-sub" x="120" y="392" text-anchor="middle">isolation does not make roles safe</text>
+                  <rect class="d-node d-node-accent" x="280" y="320" width="220" height="84" rx="8"/><text class="d-title" x="390" y="346" text-anchor="middle">Least-privilege identity and approval</text><text class="d-sub" x="390" y="370" text-anchor="middle">task-scoped credentials and human release</text><text class="d-sub" x="390" y="392" text-anchor="middle">separate release decision</text>
+                  <rect class="d-node" x="560" y="320" width="320" height="84" rx="8"/><text class="d-title" x="720" y="346" text-anchor="middle">Acceptance check</text><text class="d-sub" x="720" y="370" text-anchor="middle">exercise credential and release denial</text><text class="d-sub" x="720" y="392" text-anchor="middle">on bypass routes too</text>
+                  <path class="d-line" d="M220 82H280" marker-end="url(#arrow)"/><path class="d-line" d="M500 82H560" marker-end="url(#arrow)"/><path class="d-line" d="M220 222H280" marker-end="url(#arrow)"/><path class="d-line" d="M500 222H560" marker-end="url(#arrow)"/><path class="d-line" d="M220 362H280" marker-end="url(#arrow)"/><path class="d-line" d="M500 362H560" marker-end="url(#arrow)"/>
+                  <rect class="d-boundary" x="20" y="424" width="860" height="38" rx="7"/><text class="d-sub" x="450" y="448" text-anchor="middle">No single label proves safety: qualify boundary, identity, egress and release path for the task.</text>
+                </svg>
+              </div>
+              <p class="diagram-key">Each row pairs a failure path with the control that addresses it and the acceptance check that would expose a bypass. Blue nodes mark the control points; they are not proof of safety by themselves.</p>
+            </details>
+          </figure>
 </section>
         <section id="aws-first-default">
           <h2>Match the AWS starting point to the task</h2>
