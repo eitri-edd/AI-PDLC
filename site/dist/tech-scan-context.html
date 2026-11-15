@@ -54,7 +54,7 @@
         <header class="article-header"><p class="eyebrow">Development guide</p><h1>Tech Scan: Context</h1>
         <p class="lead">Choose where an agent finds information, who may retrieve it and what enters its working context. Use the pilot to decide whether retrieval or retained memory earns its operating cost.</p>
         <p id="tech-scan-note">Draft research reference from published sources; no option has been locally deployed or benchmarked for this guidance.</p></header>
-        <figure class="page-map page-map--route" aria-labelledby="page-map-caption"><figcaption id="page-map-caption">This page at a glance</figcaption><ol class="page-map-nodes" role="list">
+        <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note"><figcaption id="page-map-caption">This page at a glance</figcaption><p id="page-map-note" class="page-map-note">Developer route: name the information need → start with reviewed instructions or task files → add retrieval or memory only for a defined need → prove reads and freshness in the pilot. These groups organise the page; they are not lifecycle stages.</p><ol class="page-map-nodes" role="list">
         <li class="page-map-node"><strong>Choose</strong><div class="page-map-links"><a href="#choices">Choose the source</a></div></li>
         <li class="page-map-node"><strong>Protect</strong><div class="page-map-links"><a href="#memory">Protect memory reads</a></div></li>
         <li class="page-map-node"><strong>Construct</strong><div class="page-map-links"><a href="#construction">Build the context</a></div></li>
@@ -67,6 +67,36 @@
         <section id="choices"><h2>Choose the source</h2>
         <p>Context is information supplied to a model for a task; retrieval finds and selects it. Start with reviewed repository instructions and task files when they suffice. The <a href="eds-team-context.html">team context guide</a> explains what teams supply. Add retrieval when the task needs changing or numerous source documents, not merely because an agent exists.</p>
         <p><strong>Hard gates before preference:</strong> identify the capability, approved data location and retention, identity and authorisation, supported model and API, security boundaries and operating owner. Stop if any gate is unmet; AWS-first is not an exception. Prefer approved managed Claude or OpenAI models through Bedrock; direct APIs need a justified exception.</p>
+          <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker><linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient><linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eff6ff"/><stop offset="100%" stop-color="#dbeafe"/></linearGradient></defs></svg>
+          <figure class="concept-figure" id="fig-context-route" data-diagram="static">
+            <figcaption id="fig-context-route-caption">Figure 1. Context route decision: name the information need, start with reviewed instructions or task files, add retrieval or memory only for a defined need, and prove reads and freshness before adoption. This is a decision route, not a deployment architecture.</figcaption>
+            <details class="figure-reading"><summary>Read as text: Context route decision</summary>
+              <ol>
+                <li>Name the information need: changing or numerous sources, defined recall, live data or tool access, and the identity allowed to read it.</li>
+                <li>Start with reviewed instructions and task files; add retrieval or memory only when the task needs information they do not supply.</li>
+                <li>Prefer the AWS-first candidates: Bedrock Managed Knowledge Base for documents, AgentCore Memory for defined recall, or an authorised connector or MCP server for live data.</li>
+                <li>Before adoption, run the pilot on representative documents and prove read isolation, freshness, cost and failure handling.</li>
+              </ol>
+            </details>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Context route decision; scroll horizontally if needed">
+                <svg viewBox="0 0 880 390" role="img" aria-labelledby="fig-context-route-title" aria-describedby="fig-context-route-title-desc">
+                  <title id="fig-context-route-title">Context route decision</title>
+                  <desc id="fig-context-route-title-desc">A team first names the information need and the identity allowed to read it. The starting point is reviewed instructions and task files. Managed candidates are Bedrock Managed Knowledge Base for documents, AgentCore Memory for defined recall, or an authorised connector or MCP server for live data. Before adoption, the pilot proves read isolation, freshness, cost and failure handling on representative documents.</desc>
+                  <rect class="d-node" x="20" y="120" width="190" height="124" rx="8"/><text class="d-title" x="115" y="152" text-anchor="middle">Name the need</text><text class="d-sub" x="115" y="176" text-anchor="middle">sources, recall or live data</text><text class="d-sub" x="115" y="198" text-anchor="middle">identity and owner</text><text class="d-sub" x="115" y="220" text-anchor="middle">lifetime and deletion</text>
+                  <rect class="d-node d-node-accent" x="300" y="120" width="220" height="124" rx="8"/><text class="d-title" x="410" y="152" text-anchor="middle">Start small</text><text class="d-sub" x="410" y="176" text-anchor="middle">reviewed instructions and files</text><text class="d-sub" x="410" y="198" text-anchor="middle">add only a defined need</text><text class="d-sub" x="410" y="220" text-anchor="middle">approved Bedrock route</text>
+                  <rect class="d-node" x="580" y="30" width="280" height="104" rx="8"/><text class="d-title" x="720" y="58" text-anchor="middle">Managed candidates</text><text class="d-sub" x="720" y="80" text-anchor="middle">Managed KB, AgentCore Memory,</text><text class="d-sub" x="720" y="98" text-anchor="middle">authorised connector or MCP</text><text class="d-sub" x="720" y="116" text-anchor="middle">each needs its own access proof</text>
+                  <rect class="d-node" x="580" y="190" width="280" height="124" rx="8"/><text class="d-title" x="720" y="222" text-anchor="middle">Prove before adoption</text><text class="d-sub" x="720" y="246" text-anchor="middle">representative documents and questions</text><text class="d-sub" x="720" y="268" text-anchor="middle">user A/B isolation and freshness</text><text class="d-sub" x="720" y="290" text-anchor="middle">record cost, latency and failures</text>
+                  <path class="d-line" d="M210 182H300" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M520 150H545V82H580" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M520 214H545V252H580" marker-end="url(#arrow)"/>
+                  <path class="d-line d-dash" d="M720 134V190" marker-end="url(#arrow)"/>
+                  <rect class="d-boundary" x="20" y="338" width="840" height="40" rx="7"/><text class="d-sub" x="440" y="363" text-anchor="middle">A registry, connector or namespace is not authorisation; enforce reads outside the model.</text>
+                </svg>
+              </div>
+              <p class="diagram-key">The blue node is the smallest AWS-first starting point. The dashed path shows that a managed candidate still needs the same isolation, freshness and cost proof before adoption.</p>
+            </details>
+          </figure>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Context choices"><table><caption>Start with the task, then compare the alternatives</caption><thead><tr><th scope="col">Need</th><th scope="col">AWS-first candidate</th><th scope="col">Alternative trigger and trade-off</th></tr></thead><tbody>
         <tr><td>Search documents</td><td>Assess Bedrock Managed Knowledge Base: AWS manages ingestion, index, storage and retrieval.<a href="#source-1" aria-label="Source 1: AWS, Build a managed knowledge base">[1]</a></td><td>Use a customer-managed knowledge base when direct vector-store configuration is required; the team provisions and maintains the store. Compare connectors and permission support before switching.<a href="#source-1" aria-label="Source 1: AWS, Build a managed knowledge base">[1]</a><a href="#source-2" aria-label="Source 2: AWS, Knowledge Bases overview">[2]</a></td></tr>
         <tr><td>Retain information for later</td><td>Assess AgentCore Memory for a defined recall and retention need; configure read boundaries as below.<a href="#source-5" aria-label="Source 5: AWS, Memory terminology">[5]</a></td><td>Consider self-hosted memory only when ownership of processing or storage is required; the team owns access control, deletion and operations.</td></tr>
@@ -99,9 +129,23 @@
         <section id="pilot"><h2>Run the pilot</h2>
         <p>The implementing engineer selects representative documents and questions, including stale, conflicting and no-answer cases. Compare the managed candidate with the alternative only if a gate or requirement triggers it. Record the account, region, model, source versions, settings, permissions, sync times, results, latency and cost; retain failures as well as successes.</p>
         <ul><li>Seed a private record for user A. As user B, try direct retrieval and broader namespace paths; neither should return A's record. Confirm A can retrieve it. Repeat across sessions and tenants.</li><li>Place a malicious instruction in a shared test artefact. Check that the agent does not follow it or expose private content; a shared artefact may itself be returned when B is authorised to read it.</li><li>Change and delete a source document, run the configured sync and check which version is returned. Investigate failed or delayed ingestion before deciding that the source is fresh.</li><li>Compare retrieved passages with expected evidence and test whether a compressed session preserves decisions. Capture misses and loss of detail for correction.</li></ul>
+        <aside class="callout callout--tip" aria-labelledby="context-pilot-checks">
+          <p class="example-label" id="context-pilot-checks">Check before adoption</p>
+          <ul class="checklist">
+            <li>Representative stale, conflicting and no-answer cases</li>
+            <li>User A/B retrieval isolation across sessions</li>
+            <li>Shared-artefact instruction resistance</li>
+            <li>Source sync, version and deletion checks</li>
+            <li>Compressed-session decision preservation</li>
+            <li>Latency, cost and retained failures</li>
+          </ul>
+          <p>Record the account, region, model, source versions, settings, permissions, sync times, results, latency and cost before adoption.</p>
+        </aside>
         <p>If an isolation test fails, stop use for private data and fix the enforcement before retesting. Use <a href="tech-scan-verification.html">Tech Scan: Verification</a> to define retrieval-quality cases and acceptance evidence; a vendor capability is not a local result. Review outcomes with the service and data owners before adoption.</p></section>
         <section id="do-not-use"><h2>Do not start on a closed or unmaintained source</h2>
         <p>Do not start new work on a product whose vendor has ended support or maintenance, and do not treat a prompt or a registry listing as a boundary. Use the replacement named in each row.</p>
+        <details>
+          <summary>Closed products and unsafe practices — open for exact replacements</summary>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Sources and practices to avoid"><table><caption>Closed products and unsafe practices</caption><thead><tr><th scope="col">Do not use</th><th scope="col">Why</th><th scope="col">Use instead</th></tr></thead><tbody>
         <tr><th scope="row">Amazon Kendra for a new project</th><td>Maintenance Mode effective 30 June 2026; closed to new customers 30 July 2026.<a href="#source-9" aria-label="Source 9: AWS, Amazon Kendra availability change">[9]</a></td><td>Bedrock Managed Knowledge Base.</td></tr>
         <tr><th scope="row">Bedrock Agents Classic as a retrieval host</th><td>Maintenance; closed to new customers 30 July 2026.<a href="#source-10" aria-label="Source 10: AWS, Service availability updates">[10]</a></td><td>Bedrock AgentCore.</td></tr>
@@ -109,7 +153,9 @@
         <tr><th scope="row">A shared (actor-less) namespace for multi-user memory</th><td>It pools every user's records; a namespace path alone does not establish authorisation.</td><td>An actor-scoped namespace such as <code>/users/{actorId}/</code>; see <a href="#memory">Protect memory reads</a>.</td></tr>
         <tr><th scope="row">An unvetted MCP server, or any registry listing, as a source of truth</th><td>The registry verifies namespace ownership only; it does not review code or guarantee safety.<a href="#source-7" aria-label="Source 7: MCP Registry">[7]</a></td><td>Vendor documentation first, then the registry; verify maintainer, last update, permissions and source.</td></tr>
         <tr><th scope="row">A prompt instruction as a memory boundary</th><td>A prompt does not establish authorisation; enforce reads outside the model.<a href="#source-6" aria-label="Source 6: AWS, Memory namespaces">[6]</a></td><td>Scoped application authorisation with IAM conditions; see <a href="#memory">Protect memory reads</a>.</td></tr>
-        </tbody></table></div></section>
+        </tbody></table></div>
+        </details>
+        </section>
         <section id="gaps"><h2>Gaps and open questions</h2>
         <p>No AWS service enforces retrieval freshness. Sync cadence, expiry and cache staleness are operator discipline; a team that never schedules a sync has a frozen knowledge base and no alarm.</p>
         <p>No AWS-native cross-store retrieval exists. No managed federated search covers a knowledge base, AgentCore Memory and a Neptune graph in one call; ranking across sources is unowned.</p>
