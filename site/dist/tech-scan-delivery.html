@@ -49,7 +49,7 @@
       </details>
     </aside>
     <main id="main" tabindex="-1">
-      <article class="concept-article">
+      <article class="concept-article tech-scan-article">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Delivery</span></nav>
         <header class="article-header"><p class="eyebrow">Development guide</p><h1>Tech Scan: Delivery</h1><p class="lead">How can a team move an approved change into production while preserving evidence, authority and a way back?</p><p>Draft research reference; vendor documentation describes capabilities, not a locally tested delivery system.</p></header>
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note"><figcaption id="page-map-caption">This page at a glance</figcaption><p id="page-map-note" class="page-map-note">Follow the boundary, choose a candidate, control the release and plan recovery.</p><ol class="page-map-nodes" role="list"><li class="page-map-node"><strong>Boundary</strong><div class="page-map-links"><a href="#boundary">Define the release boundary</a></div></li><li class="page-map-node"><strong>Choice</strong><div class="page-map-links"><a href="#candidate">Choose a delivery path</a></div></li><li class="page-map-node"><strong>Controls</strong><div class="page-map-links"><a href="#controls">Control and record the release</a></div></li><li class="page-map-node"><strong>Operation</strong><div class="page-map-links"><a href="#operate">Monitor and recover</a><a href="#do-not-use">Do not start on retired products or superseded paths</a><a href="#gaps">Gaps and open questions</a><a href="#sources">Sources</a></div></li></ol></figure>
@@ -61,6 +61,34 @@
         <p><strong>AWS-first candidate:</strong> assess CodePipeline with CodeBuild for build and test, a manual approval action before production, and a deployment action appropriate to the target. CodePipeline supports source, build, test, approval and deploy actions; an approval action pauses execution for an authorised decision.<a href="#source-1" aria-label="Source 1: AWS CodePipeline actions">[1]</a><a href="#source-2" aria-label="Source 2: AWS CodePipeline approvals">[2]</a> This is a composition to pilot, not an established local deployment or an automatic safeguard.</p>
         <p><strong>Conditional alternative:</strong> where repository and CI already live in GitHub, assess GitHub Actions environments for the deployment gate. Required reviewers and self-review prevention depend on configuration and plan; self-review prevention concerns the person who initiated the run, not necessarily the person who merged the PR. Check the identity relationship separately and prevent bypass paths.<a href="#source-3" aria-label="Source 3: GitHub managing environments">[3]</a></p>
         <p><strong>Hard gates before either choice:</strong> confirm required capability, approved data location and retention, identity and authorisation, relevant model and API policy, security boundaries and a named operating owner. Record the evidence for each; if any gate fails or is unknown, stop and resolve it or seek an authorised exception. AWS preference does not override a gate.</p>
+        <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker><linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient><linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eff6ff"/><stop offset="100%" stop-color="#dbeafe"/></linearGradient></defs></svg>
+        <figure class="concept-figure" id="fig-release-path" data-diagram="static">
+          <figcaption id="fig-release-path-caption">Figure 1. Illustrative release path from an approved PR to production and recovery. Merge acceptance and deployment approval are separate; this is not a deployment architecture.</figcaption>
+          <details class="figure-reading"><summary>Read as text: Release path</summary>
+            <ol>
+              <li>An approved PR supplies the source commit and review evidence.</li>
+              <li>Build and test produce an immutable artefact identity.</li>
+              <li>An authorised human approves release; accepting the merge is a separate decision.</li>
+              <li>The selected build is deployed through the target-specific mechanism.</li>
+              <li>The team monitors, records the outcome and follows the tested recovery path when needed.</li>
+            </ol>
+          </details>
+          <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="Illustrative release path; scroll horizontally if needed">
+              <svg viewBox="0 0 680 548" role="img" aria-labelledby="fig-release-path-title" aria-describedby="fig-release-path-title-desc">
+                <title id="fig-release-path-title">Illustrative release path</title>
+                <desc id="fig-release-path-title-desc">An approved PR leads to build and test evidence, then a human release approval, target deployment, monitoring and recovery recording. Merge acceptance and deployment approval are separate controls.</desc>
+                <rect class="d-node" x="190" y="30" width="300" height="58" rx="8"/><text class="d-title" x="340" y="54" text-anchor="middle">Approved PR</text><text class="d-sub" x="340" y="75" text-anchor="middle">source commit and review evidence</text>
+                <rect class="d-node" x="190" y="140" width="300" height="58" rx="8"/><text class="d-title" x="340" y="164" text-anchor="middle">Build and test</text><text class="d-sub" x="340" y="185" text-anchor="middle">immutable artefact identity</text>
+                <rect class="d-node d-node-accent" x="190" y="250" width="300" height="58" rx="8"/><text class="d-title" x="340" y="274" text-anchor="middle">Human release approval</text><text class="d-sub" x="340" y="295" text-anchor="middle">authorised decision; merge is separate</text>
+                <rect class="d-node" x="190" y="360" width="300" height="58" rx="8"/><text class="d-title" x="340" y="384" text-anchor="middle">Deploy selected build</text><text class="d-sub" x="340" y="405" text-anchor="middle">target mechanism and strategy</text>
+                <rect class="d-node" x="190" y="470" width="300" height="58" rx="8"/><text class="d-title" x="340" y="494" text-anchor="middle">Monitor and recover</text><text class="d-sub" x="340" y="515" text-anchor="middle">record, observe, rollback or incident</text>
+                <path class="d-line" d="M340 88V140" marker-end="url(#arrow)"/><path class="d-line" d="M340 198V250" marker-end="url(#arrow)"/><path class="d-line" d="M340 308V360" marker-end="url(#arrow)"/><path class="d-line" d="M340 418V470" marker-end="url(#arrow)"/>
+              </svg>
+            </div>
+            <p class="diagram-key">Solid arrows show the release path. The blue node is the human release approval; merge acceptance and deployment are separate decisions.</p>
+          </details>
+        </figure>
         <p>Choose the deployment mechanism by target, not by habit:</p>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Deployment target and mechanism"><table><caption>Deployment target and mechanism</caption><thead><tr><th scope="col">Target</th><th scope="col">Deployment mechanism</th><th scope="col">Note</th></tr></thead><tbody>
         <tr><th scope="row">ECS</th><td>ECS-native blue/green first: a replacement task set on a separate target group behind the load balancer listener, with all-at-once, canary or linear shifting and a bake period holding both revisions.</td><td>AWS calls ECS-native blue/green "now the recommended option for most teams and new projects"; CodeDeploy remains a valid option for existing CodeDeploy deployments.<a href="#source-5" aria-label="Source 5: AWS, ECS blue/green native or CodeDeploy">[5]</a></td></tr>

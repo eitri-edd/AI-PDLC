@@ -70,6 +70,13 @@ function ensureSharedDiagramDefs() {
     defsSvg.appendChild(defs);
   }
 
+  if (!defs.querySelector('#arrow')) {
+    defs.insertAdjacentHTML(
+      'beforeend',
+      `<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
+      <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1d4ed8"/></marker>`
+    );
+  }
   if (!defs.querySelector('#d-grad-node')) {
     defs.insertAdjacentHTML(
       'beforeend',
