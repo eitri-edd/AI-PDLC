@@ -427,6 +427,7 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 - [ ] The core path supports the next action without requiring a catalogue; applicable limits remain visible when detail moves into a reference.
 - [ ] Decision examples show a completed record and its consequence; aggregate scores, acceptance, exceptions and release permission retain their distinct meanings.
 - [ ] Reorganised content retains usable anchors and correct attribution; structural and browser checks cover the changed links, disclosures and reading layouts, with untested behaviour recorded.
+- [ ] The page never scrolls sideways: measured in a browser at 320px, 375px and 768px, the document width equals the viewport width on every page; wide tables and diagrams scroll inside their own containers, and the shared `overflow-x: clip` guard in `styles.css` stays in place.
 - [ ] Requirements cite a confirmed authority and state where they apply.
 - [ ] Examples contain no invented organisational facts.
 - [ ] Learning examples sound natural, and groups of three or more parallel items use bullets; sequences and comparisons retain the structure that helps readers follow them.
