@@ -66,7 +66,12 @@ class ADEInventoryTests(unittest.TestCase):
 
     def test_inherited_reviews_history_and_page_passes_preserved(self):
         new_urls = {'https://git-scm.com/docs/git-worktree', 'https://code.claude.com/docs/en/worktrees',
-                    'https://orca.dev/docs/agents/supported'}
+                    'https://orca.dev/docs/agents/supported',
+                    'https://code.claude.com/docs/en/agent-view',
+                    'https://www.conductor.build/announcement',
+                    'https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta',
+                    'https://www.conductor.build/changelog/0.94.2-conductor-is-back',
+                    'https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/'}
         baseline = {'page_passes': self.inventory['page_passes'], 'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews'] if v.get('followup') != 'pr102']
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}

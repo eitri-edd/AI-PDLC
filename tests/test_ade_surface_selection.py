@@ -21,6 +21,20 @@ class ADESurfaceSelectionTests(unittest.TestCase):
         self.assertIn('permission-bypass', section)
         self.assertIn('custom', section)
         self.assertIn('https://orca.dev/docs/agents/supported', html)
+        self.assertIn('Agent view', section)
+        self.assertIn('claude agents', section)
+        self.assertIn('is not shutting down', section)
+        for source in ('source-39', 'source-40', 'source-41', 'source-42', 'source-43'):
+            self.assertIn(f'href="#{source}"', section)
+            self.assertIn(f'id="{source}"', html)
+        for url in (
+            'https://code.claude.com/docs/en/agent-view',
+            'https://www.conductor.build/announcement',
+            'https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta',
+            'https://www.conductor.build/changelog/0.94.2-conductor-is-back',
+            'https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/',
+        ):
+            self.assertIn(url, html)
 
     def test_orca_followup_tracks_the_agents_page(self):
         import json
