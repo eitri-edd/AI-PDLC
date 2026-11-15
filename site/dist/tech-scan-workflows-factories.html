@@ -54,7 +54,7 @@
         <header class="article-header"><p class="eyebrow">Development guide</p><h1>Tech Scan: Workflows &amp; factories</h1><p class="lead">How do you turn an agreed requirement into a reviewable change without giving an agent authority to release it?</p><p id="tech-scan-note">Draft research reference; not locally deployed or benchmarked. Vendor documentation describes capabilities, not proof that this composition works in your environment. <a href="#source-10">Issue 64</a> is a research proposal, not local validation.</p></header>
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
-          <p id="page-map-note" class="page-map-note">Reading route: choose the work, examine the candidate, enforce boundaries, then test the approach and review its sources.</p>
+          <p id="page-map-note" class="page-map-note">Developer route: define the work and outcome → build the AWS-first candidate → enforce merge, deploy and credential boundaries → prove the pilot before adoption. These groups organise the page; they are not lifecycle stages.</p>
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>Purpose</strong><div class="page-map-links"><a href="#purpose">Choose the work and outcome</a></div></li>
             <li class="page-map-node"><strong>Candidate</strong><div class="page-map-links"><a href="#candidate">Build the AWS-first candidate</a></div></li>
@@ -158,6 +158,19 @@
           <p>Record the PR, logs, costs, failures and remaining gaps. The designated owner decides whether the evidence meets the agreed gates; a passing pilot is not production authorisation. Test the actual deployment approval path separately. No local pilot, independent benchmark or representative reader study supports this draft yet.</p>
         <p><strong>Credential gate:</strong> a working issue-to-PR loop is not accepted until an untrusted authoring runner cannot retrieve protected deployment credentials or gain production authority via a changed workflow. Test the action identity and all alternate deployment paths, not just the primary pipeline.</p>
 
+<aside class="callout callout--tip" aria-labelledby="factory-pilot-checks">
+          <p class="example-label" id="factory-pilot-checks">Check before adoption</p>
+          <ul class="checklist">
+            <li>Approved issue, requirements, expected tests and named owner</li>
+            <li>Pinned action commit, scoped OIDC role, Bedrock model and region</li>
+            <li>Isolated ephemeral runner with restricted network and credentials</li>
+            <li>Injected issue, secret in diff, failing test and protected-file attempts</li>
+            <li>Untrusted pull request command denied under <code>restrict_untrusted_prs</code></li>
+            <li>Merge with failing check or agent identity denied; deployment secret gate tested</li>
+            <li>Expected versus observed results, costs and unresolved failures recorded</li>
+          </ul>
+          <p>Record the PR, logs, exact revisions, permissions, costs and remaining gaps before adoption; a passing pilot is not production authorisation.</p>
+        </aside>
 <h3 id="factory-maturity-ladder">Choose the next autonomy level, not the highest one</h3>
 <p>Factory maturity is an engineering decision about ownership, handoffs, independent checks and recovery. Kiro Crew's team reports 1,000 PRs merged in a week and describes five stages; the number is an <strong>author-reported throughput result</strong>, not an independent benchmark of acceptance quality or a goal for other teams. Use the stages below as a diagnostic for the bottleneck you have measured, not a recommendation to run more agents. <a href="#source-17" aria-label="Source 17: Kiro Crew factory case">[17]</a></p>
 <div class="table-wrap"><table><thead><tr><th scope="col">Stage</th><th scope="col">Human and agent responsibility</th><th scope="col">What must hold before progressing</th></tr></thead><tbody>
@@ -171,6 +184,8 @@
 </section>
         <section id="do-not-use"><h2>Do not adopt a closing factory</h2>
 <p>Do not build a factory on a product whose vendor has ended support. Use the replacement named in each row.</p>
+<details>
+          <summary>Closing factories and replacements — open for exact replacements</summary>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Closing factories and replacements"><table><caption>Closing factories and their replacements</caption><thead><tr><th scope="col">Product</th><th scope="col">Status</th><th scope="col">Use instead</th></tr></thead><tbody>
 <tr><th scope="row">Amazon Q Developer for GitHub</th><td>Support ends 30 January 2027; new installations stop 18 November 2026.</td><td>Kiro and the Kiro GitHub App.<a href="#source-12" aria-label="Source 12: AWS, Amazon Q Developer for GitHub">[12]</a></td></tr>
 <tr><th scope="row">Google Jules</th><td>Read-only since 11 November 2026; winds down 31 December 2026.</td><td>Google Antigravity, or an agent in <a href="tech-scan-agents.html">Coding agents &amp; coordination</a>.<a href="#source-13" aria-label="Source 13: Google, Jules changelog">[13]</a></td></tr>
@@ -180,7 +195,7 @@
 <tr><th scope="row">Roo Code and Continue</th><td>Shut down or read-only since June 2026.</td><td>A supported editor agent in <a href="tech-scan-agents.html">Coding agents &amp; coordination</a>.<a href="#source-10" aria-label="Source 10: GitHub issue 64, Wave 2 research proposal">[10]</a></td></tr>
 <tr><th scope="row">Aider</th><td>Stalled; no active development.</td><td>A supported editor agent in <a href="tech-scan-agents.html">Coding agents &amp; coordination</a>.<a href="#source-10" aria-label="Source 10: GitHub issue 64, Wave 2 research proposal">[10]</a></td></tr>
 <tr><th scope="row">Bedrock Agents Classic</th><td>Maintenance mode; closed to new customers 30 July 2026.</td><td>Bedrock AgentCore.<a href="#source-10" aria-label="Source 10: GitHub issue 64, Wave 2 research proposal">[10]</a></td></tr>
-</tbody></table></div></section>
+</tbody></table></div></details></section>
 <section id="gaps"><h2>Gaps and open questions</h2>
 <p>The alternatives above are summarised from the research proposal; confirm the current plan, region and data terms with the vendor before trialling any of them.<a href="#source-10" aria-label="Source 10: GitHub issue 64, Wave 2 research proposal">[10]</a></p>
 <p>Kiro Web's availability date and region are not stated on its primary page; confirm both with Kiro before adopting it.<a href="#source-11" aria-label="Source 11: Kiro, Web">[11]</a></p>

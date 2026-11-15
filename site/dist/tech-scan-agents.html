@@ -53,7 +53,7 @@
 <header class="article-header"><p class="eyebrow">Development guide</p><h1>Tech Scan: Coding agents and coordination</h1><p class="lead">Choose where a developer works, how the coding agent reaches a model and, when necessary, who coordinates several agents.</p><p>Draft research reference: vendor documentation, not locally deployed or benchmarked. Availability is not evidence that a configuration meets your organisation’s needs.</p></header>
 <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
   <figcaption id="page-map-caption">This page at a glance</figcaption>
-  <p id="page-map-note" class="page-map-note">Reading route: check the decision gates, compare agent routes, consider coordination, then review controls and evidence.</p>
+  <p id="page-map-note" class="page-map-note">Developer route: name the task and constraints → pass the decision gates → choose an AWS-first agent route → add coordination only for separable work → prove controls before adoption. These groups organise the page; they are not lifecycle stages.</p>
   <ol class="page-map-nodes" role="list">
     <li class="page-map-node"><strong>Decision gates</strong><div class="page-map-links"><a href="#decision">Check the decision gates</a></div></li>
     <li class="page-map-node"><strong>Agent routes</strong><div class="page-map-links"><a href="#routes">Choose the agent and model route</a></div></li>
@@ -70,7 +70,38 @@
 <p>A coding agent can read a task, propose changes and use permitted tools. An editor is the developer’s interface; the agent may run in that editor, a terminal or a remote service. The model generates responses; the host runs the agent and its tools. Choosing one does not settle the others.</p>
 <p>This scan starts with AWS hosting and managed Claude or OpenAI models through Amazon Bedrock. Treat direct provider APIs or another managed service as exceptions to assess, not as interchangeable Bedrock routes. These are scan assumptions, not newly established organisational policy.</p>
 <ol><li><strong>Capability:</strong> identify the task, editor, tool actions and features required on the exact route.</li><li><strong>Data:</strong> compare code sensitivity, processing geography, storage, retention and contractual terms against the approved requirements.</li><li><strong>Identity and authorisation:</strong> check user access, model access, repository permissions and service roles.</li><li><strong>Boundary:</strong> identify the agent host, execution environment, network egress, secrets and model endpoint, including fallback destinations.</li><li><strong>Ownership:</strong> name an operator, support and cost owner; establish monitoring, update, incident and exit arrangements.</li></ol>
-<p>The engineering lead records the version, configuration, evidence and unresolved conditions with the decision owner. A failed required gate rules out that configuration, even if it is AWS-first; obtain the applicable exception before evaluating a different route with real data.</p></section>
+<p>The engineering lead records the version, configuration, evidence and unresolved conditions with the decision owner. A failed required gate rules out that configuration, even if it is AWS-first; obtain the applicable exception before evaluating a different route with real data.</p>
+          <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker><linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient><linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eff6ff"/><stop offset="100%" stop-color="#dbeafe"/></linearGradient></defs></svg>
+          <figure class="concept-figure" id="fig-agents-route" data-diagram="static">
+            <figcaption id="fig-agents-route-caption">Figure 1. Agent route decision: name the task, pass the decision gates, choose an AWS-first agent route and prove controls before adoption. This is a decision route, not a deployment architecture.</figcaption>
+            <details class="figure-reading"><summary>Read as text: Agent route decision</summary>
+              <ol>
+                <li>Name the task: editor, host and tools, task, data and identity, and the features the route must support.</li>
+                <li>Pass the decision gates: capability, data, identity and authorisation, boundary, and ownership.</li>
+                <li>Prefer an AWS-first candidate such as Claude Code, Codex or Kiro on Bedrock; record the endpoint, model or inference profile and region.</li>
+                <li>Before adoption, run a representative task and prove permissions, denials, worktree or sandbox boundaries, cost, latency and failure handling.</li>
+              </ol>
+            </details>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Agent route decision; scroll horizontally if needed">
+                <svg viewBox="0 0 880 390" role="img" aria-labelledby="fig-agents-route-title" aria-describedby="fig-agents-route-title-desc">
+                  <title id="fig-agents-route-title">Agent route decision</title>
+                  <desc id="fig-agents-route-title-desc">A team first names the coding task, editor, host, data and identity constraints. The route must pass capability, data, identity, boundary and ownership gates. AWS-first candidates are Claude Code, Codex or Kiro on Bedrock, with the endpoint, model or inference profile and region recorded. Before adoption, a representative task proves permissions, denials, worktree or sandbox boundaries, cost, latency and failure handling.</desc>
+                  <rect class="d-node" x="20" y="120" width="190" height="124" rx="8"/><text class="d-title" x="115" y="152" text-anchor="middle">Name the task</text><text class="d-sub" x="115" y="176" text-anchor="middle">editor, host and tools</text><text class="d-sub" x="115" y="198" text-anchor="middle">task, data and identity</text><text class="d-sub" x="115" y="220" text-anchor="middle">required features</text>
+                  <rect class="d-node d-node-accent" x="300" y="120" width="220" height="124" rx="8"/><text class="d-title" x="410" y="152" text-anchor="middle">Pass the gates</text><text class="d-sub" x="410" y="176" text-anchor="middle">capability and data</text><text class="d-sub" x="410" y="198" text-anchor="middle">identity and authorisation</text><text class="d-sub" x="410" y="220" text-anchor="middle">boundary and ownership</text>
+                  <rect class="d-node" x="580" y="30" width="280" height="104" rx="8"/><text class="d-title" x="720" y="62" text-anchor="middle">AWS-first route</text><text class="d-sub" x="720" y="86" text-anchor="middle">Claude Code, Codex or Kiro</text><text class="d-sub" x="720" y="108" text-anchor="middle">Bedrock model and region</text>
+                  <rect class="d-node" x="580" y="190" width="280" height="124" rx="8"/><text class="d-title" x="720" y="222" text-anchor="middle">Prove before adoption</text><text class="d-sub" x="720" y="246" text-anchor="middle">representative task and diff</text><text class="d-sub" x="720" y="268" text-anchor="middle">denied action and approvals</text><text class="d-sub" x="720" y="290" text-anchor="middle">cost, latency and failures</text>
+                  <path class="d-line" d="M210 182H300" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M520 150H545V82H580" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M520 214H545V252H580" marker-end="url(#arrow)"/>
+                  <path class="d-line d-dash" d="M720 134V190" marker-end="url(#arrow)"/>
+                  <rect class="d-boundary" x="20" y="338" width="840" height="40" rx="7"/><text class="d-sub" x="440" y="363" text-anchor="middle">Start with one agent; worktrees, sandbox, gateway and release controls stay separate.</text>
+                </svg>
+              </div>
+              <p class="diagram-key">The blue node is the decision gate, not a product choice. The dashed path shows that a managed or AWS-first route still needs the same proof before adoption; coordination is added only for separable work.</p>
+            </details>
+          </figure>
+        </section>
 <section id="routes"><h2>Choose the agent and its model route</h2>
 <p>For a team already working in a terminal or supported editor, compare Claude Code and Codex with Bedrock as starting candidates. Kiro is another AWS-first candidate when its experience and governance satisfy the gates. Select a route for a representative task rather than declaring a universal winner.</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Coding agent route comparison"><table><caption>Document the product, host and endpoint separately</caption><thead><tr><th scope="col">Candidate and trigger</th><th scope="col">Route and material limit</th></tr></thead><tbody>
@@ -126,13 +157,27 @@
 </ul>
 <p>Tibo (@thsottiaux) highlights approval fatigue when discussing OpenAI Auto-review.<a href="#source-21" aria-label="Source 21: Tibo (@thsottiaux), Auto-review post">[21]</a> Automated review is not an isolation boundary: retain independently enforced permission and network restrictions.</p>
 <p>For a pilot, the engineering lead selects the same representative change and acceptance tests for each candidate, with non-sensitive data and an approved sandbox. Record task completion, human correction, elapsed time, cost, permissions, route and failure recovery. Attempt a denied action and confirm it is denied; inspect logs and outbound destinations. The decision owner compares the results with the gates, records gaps and either authorises a wider trial under the applicable process or stops. No local pilot, security test or comparison has been performed for this page.</p>
-<p>Before adoption, confirm current feature availability, model IDs, retention and regional processing with the providers and your agreement. Product documentation is evidence of a stated capability, not local performance, compliance or a guarantee against prompt injection.</p><h3 id="agent-deny-boundaries">Guarantee denials outside the agent</h3>
+<aside class="callout callout--tip" aria-labelledby="agents-pilot-checks">
+          <p class="example-label" id="agents-pilot-checks">Check before adoption</p>
+          <ul class="checklist">
+            <li>Exact product, version, endpoint, model or inference profile and region</li>
+            <li>Model allowlist and denied-model enforcement on the selected route</li>
+            <li>Attempted denied action and approval crossing task boundaries</li>
+            <li>Worktree, sandbox, credential and hosted data path checked separately</li>
+            <li>AgentCore execution role and MMDSv2 posture when AgentCore is used</li>
+            <li>Task completion, corrections, elapsed time, cost and retained failures</li>
+          </ul>
+          <p>Record the account, region, configuration, permissions, logs, costs and unresolved failures before adoption.</p>
+        </aside>
+        <p>Before adoption, confirm current feature availability, model IDs, retention and regional processing with the providers and your agreement. Product documentation is evidence of a stated capability, not local performance, compliance or a guarantee against prompt injection.</p><h3 id="agent-deny-boundaries">Guarantee denials outside the agent</h3>
 <p>A prompt or an approval request does not guarantee that an agent will avoid a destructive command. Place non-negotiable restrictions in OS-enforced execution limits, repository and cloud permissions, network policy and protected workflow configuration. Independently test a denied filesystem target, a privileged tool call and a policy-file edit; an agent review of its own actions is useful evidence but is not an enforcement boundary. Kiro's local command sandbox is one such partial boundary: shell commands are covered when enabled, while built-in file tools and remote MCP access are not. <a href="#source-32" aria-label="Source 32: Kiro local command sandbox">[32]</a></p>
 <p>Use unattended execution only after the test demonstrates each path is denied by the appropriate mechanism; retain action logs and the policy revision alongside the resulting pull request.</p>
 </section>
 <section id="do-not-use"><h2>Do not start on retired products</h2>
 <p>Do not start new work on a product whose vendor has ended support. Use the replacement named in each row.</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Retired products and replacements"><table><caption>Retired products and their replacements</caption><thead><tr><th scope="col">Product</th><th scope="col">Status</th><th scope="col">Use instead</th></tr></thead><tbody>
+<details>
+          <summary>Retired products and replacements — open for exact replacements</summary>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Retired products and replacements"><table><caption>Retired products and their replacements</caption><thead><tr><th scope="col">Product</th><th scope="col">Status</th><th scope="col">Use instead</th></tr></thead><tbody>
 <tr><th scope="row">Amazon Q Developer for GitHub</th><td>Support ends 30 January 2027; new installations stop 18 November 2026.</td><td>Kiro and the Kiro GitHub App.<a href="#source-13" aria-label="Source 13: AWS, Amazon Q Developer for GitHub">[13]</a></td></tr>
 <tr><th scope="row">Amazon Q Developer IDE plugins</th><td>End of support 30 April 2027; new sign-ups stopped 15 May 2026.</td><td>Kiro IDE.<a href="#source-18" aria-label="Source 18: GitHub issue 65, Wave 2 research proposal">[18]</a></td></tr>
 <tr><th scope="row">Google Jules</th><td>Read-only since 11 November 2026; winds down 31 December 2026.</td><td>Google Antigravity, or an agent in <a href="#routes">Agents and model routes</a>.<a href="#source-14" aria-label="Source 14: Google, Jules changelog">[14]</a></td></tr>
@@ -143,7 +188,7 @@
 <tr><th scope="row">LangChain AgentExecutor</th><td>Removed from LangChain core in 1.0.</td><td><code>create_agent</code>.<a href="#source-18" aria-label="Source 18: GitHub issue 65, Wave 2 research proposal">[18]</a></td></tr>
 <tr><th scope="row">Bedrock Agents Classic</th><td>Maintenance mode; closed to new customers 30 July 2026.</td><td>Bedrock AgentCore.<a href="#source-18" aria-label="Source 18: GitHub issue 65, Wave 2 research proposal">[18]</a></td></tr>
 <tr><th scope="row">Roo Code and Continue</th><td>Shut down or read-only since June 2026.</td><td>A supported editor agent in <a href="#routes">Agents and model routes</a>.<a href="#source-18" aria-label="Source 18: GitHub issue 65, Wave 2 research proposal">[18]</a></td></tr>
-</tbody></table></div></section>
+</tbody></table></div></details></section>
 <section id="gaps"><h2>Gaps and open questions</h2>
 <p>The pinned defaults above are current for 13 November 2026. Confirm the current model IDs, regions and data terms with the provider before adoption, and re-check after re:Invent (29 November–4 December 2026), when AgentCore availability may change.</p>
 <p>The orchestrator table covers Strands and LangGraph in depth; the other frameworks are summarised from the research proposal and need a direct comparison before adoption.<a href="#source-18" aria-label="Source 18: GitHub issue 65, Wave 2 research proposal">[18]</a></p>

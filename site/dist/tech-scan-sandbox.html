@@ -60,7 +60,7 @@
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
-          <p id="page-map-note" class="page-map-note">Reading route: what a sandbox is and what it must enforce → the AWS default and its limits → alternatives, what to avoid, and what is still unproven.</p>
+          <p id="page-map-note" class="page-map-note">Developer route: name the execution task → match the AWS starting point to that task → qualify boundary, identity, egress and approval → collect evidence before relying on the boundary. These groups organise the page; they are not lifecycle stages.</p>
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>What it is</strong><div class="page-map-links"><a href="#purpose">Choose the execution boundary</a></div></li>
             <li class="page-map-node"><strong>The recommended route</strong><div class="page-map-links"><a href="#aws-first-default">Match the AWS starting point to the task</a><a href="#conditional-alternatives">When the starting point lacks a required capability</a></div></li>
@@ -135,6 +135,35 @@
               </tbody>
             </table>
           </div>
+          <figure class="concept-figure" id="fig-sandbox-route" data-diagram="static">
+            <figcaption id="fig-sandbox-route-caption">Figure 2. Sandbox route decision: match the AWS starting point to the task, qualify the boundary and identity controls, and collect evidence before adoption. This is a decision route, not a deployment architecture.</figcaption>
+            <details class="figure-reading"><summary>Read as text: Sandbox route decision</summary>
+              <ol>
+                <li>Name the execution task: repository coding, data analysis or computation, or infrastructure you operate on EKS or ECS.</li>
+                <li>Start with the AWS route that matches the task: managed harness shell and filesystem tools for repository coding, optional Code Interpreter for analysis, or investigate Nitro Sandboxes for your own EKS/ECS workloads.</li>
+                <li>If the starting point lacks a required capability, document the missing sandbox API, template, pause/resume or egress behaviour before considering an alternative.</li>
+                <li>Before adoption, test denied network destinations, credential access, revocation, cleanup and the exact runtime, image, role and policy revision.</li>
+              </ol>
+            </details>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Sandbox route decision; scroll horizontally if needed">
+                <svg viewBox="0 0 880 390" role="img" aria-labelledby="fig-sandbox-route-title" aria-describedby="fig-sandbox-route-title-desc">
+                  <title id="fig-sandbox-route-title">Sandbox route decision</title>
+                  <desc id="fig-sandbox-route-title-desc">A team first names the execution task. The AWS starting point matches the task: managed harness shell and filesystem tools for repository coding, optional Code Interpreter for data analysis, or Nitro Sandboxes for workloads on owned EKS or ECS infrastructure. A documented exception is for a required capability the starting point lacks. Before adoption, the boundary is tested for denied network destinations, credential access, revocation, cleanup and the exact runtime, image, role and policy revision.</desc>
+                  <rect class="d-node" x="20" y="120" width="190" height="124" rx="8"/><text class="d-title" x="115" y="152" text-anchor="middle">Name the task</text><text class="d-sub" x="115" y="176" text-anchor="middle">repository coding</text><text class="d-sub" x="115" y="198" text-anchor="middle">data analysis or compute</text><text class="d-sub" x="115" y="220" text-anchor="middle">own EKS or ECS</text>
+                  <rect class="d-node d-node-accent" x="300" y="120" width="220" height="124" rx="8"/><text class="d-title" x="410" y="152" text-anchor="middle">AWS starting point</text><text class="d-sub" x="410" y="176" text-anchor="middle">harness shell and files</text><text class="d-sub" x="410" y="198" text-anchor="middle">optional Code Interpreter</text><text class="d-sub" x="410" y="220" text-anchor="middle">Nitro for own infra</text>
+                  <rect class="d-node" x="580" y="30" width="280" height="104" rx="8"/><text class="d-title" x="720" y="62" text-anchor="middle">Missing capability?</text><text class="d-sub" x="720" y="86" text-anchor="middle">sandbox API, template or resume</text><text class="d-sub" x="720" y="108" text-anchor="middle">document the deployment contract</text>
+                  <rect class="d-node" x="580" y="190" width="280" height="124" rx="8"/><text class="d-title" x="720" y="222" text-anchor="middle">Prove before adoption</text><text class="d-sub" x="720" y="246" text-anchor="middle">denied destination and credential</text><text class="d-sub" x="720" y="268" text-anchor="middle">revocation, timeout and cleanup</text><text class="d-sub" x="720" y="290" text-anchor="middle">exact runtime, role and policy</text>
+                  <path class="d-line" d="M210 182H300" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M520 150H545V82H580" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M520 214H545V252H580" marker-end="url(#arrow)"/>
+                  <path class="d-line d-dash" d="M720 134V190" marker-end="url(#arrow)"/>
+                  <rect class="d-boundary" x="20" y="338" width="840" height="40" rx="7"/><text class="d-sub" x="440" y="363" text-anchor="middle">Isolation reduces risk but is not a guarantee; identity, egress and release approval stay separate.</text>
+                </svg>
+              </div>
+              <p class="diagram-key">The blue node is the AWS-first starting point matched to the task. The dashed path shows that a missing capability still needs the same boundary and identity proof before adoption.</p>
+            </details>
+          </figure>
           <h3>Controls the isolation mechanism does not replace</h3>
           <p>Keep these checks visible whichever execution route you choose. Apply Kubernetes-specific controls only to a Kubernetes deployment; they are not a universal AgentCore configuration.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Execution controls and their limits">
@@ -279,6 +308,18 @@
             <li>Allowed and denied credential access, session separation and permission revocation.</li>
             <li>Timeout, cancellation and cleanup, including files, credentials and any persistent resources left behind.</li>
           </ul>
+          <aside class="callout callout--tip" aria-labelledby="sandbox-boundary-checks">
+            <p class="example-label" id="sandbox-boundary-checks">Check before adoption</p>
+            <ul class="checklist">
+              <li>Exact runtime, image, region and policy revision</li>
+              <li>Allowed dependency fetch and denied destination</li>
+              <li>Allowed and denied credential access</li>
+              <li>Permission revocation and session separation</li>
+              <li>Timeout, cancellation and cleanup</li>
+              <li>Expected versus observed results retained</li>
+            </ul>
+            <p>Include patch owner, disclosure path and residual co-residency controls in the record; unresolved denials or leaked credentials leave the boundary unqualified.</p>
+          </aside>
           <p>Unresolved denials, leaked credentials or incomplete cleanup leave the boundary unqualified. Keep startup and task timings separate from security results; a fast run is not evidence that the controls held.</p>
           <p><strong>Shared-host residual risk and maintenance:</strong> In controlled frontier-model research, OpenAI reports agents exchanging synthetic secrets across isolated tasks using a shared CPU cache; researchers supplied protocols or direction in most channel tests.<a href="#source-23" aria-label="Source 23: OpenAI, Securing our frontier model training environment">[23]</a> Guillermo Rauch describes an independent <code>cpu-chat</code> reproduction in his X post; the available partial extract limits verification of its details.<a href="#source-24" aria-label="Source 24: Guillermo Rauch, cpu-chat post on X">[24]</a> This is a threat model for cooperating, co-resident workloads communicating across an intended boundary, not evidence of ordinary tenant compromise or a universal sandbox bypass. Ask the platform owner how host kernels, hypervisors and sandbox components are patched, how vulnerabilities are disclosed and remediated, and which residual co-residency controls and isolation guarantees apply to the selected deployment.</p>
           <p>The 9 November 2026 Nitro launch sources describe availability and mechanisms, not this account's results.<a href="#source-1" aria-label="Source 1: AWS, AWS Nitro Sandboxes">[1]</a><a href="#source-2" aria-label="Source 2: AWS Containers Blog, AWS Nitro Sandboxes">[2]</a> The initial research did not establish independent startup benchmarks, an SLA or a supported GPU path; recheck those requirements rather than assuming their absence or availability.</p>

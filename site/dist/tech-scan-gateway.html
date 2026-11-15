@@ -60,10 +60,7 @@
         </header>
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
-          <p id="page-map-note" class="page-map-note">Reading route: what a gateway is → the AWS-first
-          answer → alternatives and the decision rule →
-          limits. These groups organise the page; they are not
-          lifecycle stages.</p>
+          <p id="page-map-note" class="page-map-note">Developer route: name the missing capability → qualify the AWS-first baseline → document an exception → prove the controls before adoption. These groups organise the page; they are not lifecycle stages.</p>
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>What a gateway is</strong><div class="page-map-links"><a
             href="#purpose">Separate model routing from tool access</a></div></li>
@@ -128,6 +125,35 @@
                 </svg>
               </div>
               <p class="diagram-key">Solid arrows show the three traffic lanes from the agent or harness to their AWS routes. The boundary note repeats that Gateway policy is not a shell-network or credential control.</p>
+            </details>
+          </figure>
+          <figure class="concept-figure" id="fig-gateway-route" data-diagram="static">
+            <figcaption id="fig-gateway-route-caption">Figure 2. Gateway route decision: name the missing capability, qualify the AWS-first baseline, document an exception and prove the controls before adoption. This is a decision route, not a deployment architecture.</figcaption>
+            <details class="figure-reading"><summary>Read as text: Gateway route decision</summary>
+              <ol>
+                <li>Name the missing capability: model routing, tool or MCP access, retrieval or usage reporting.</li>
+                <li>Start with approved Claude or OpenAI models through Bedrock and AgentCore Gateway; record the exact route, region, model and controls.</li>
+                <li>If the baseline cannot meet a specific capability or approved-region requirement, document the exception and review egress, credentials, retention and data handling.</li>
+                <li>Before adoption, qualify the intended account: denied models, fallback destinations, permission revocation, timeouts, costs and retained identity.</li>
+              </ol>
+            </details>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Gateway route decision; scroll horizontally if needed">
+                <svg viewBox="0 0 880 390" role="img" aria-labelledby="fig-gateway-route-title" aria-describedby="fig-gateway-route-title-desc">
+                  <title id="fig-gateway-route-title">Gateway route decision</title>
+                  <desc id="fig-gateway-route-title-desc">A team first names the missing gateway capability. The default is approved Claude or OpenAI models through Bedrock with AgentCore Gateway for shared routing and controls, recording the exact route, region, model and controls. A documented exception is for a specific capability or approved-region gap after reviewing egress, credentials, retention and data handling. Before adoption, the intended account is qualified for denied models, fallback destinations, permission revocation, timeouts, costs and retained identity.</desc>
+                  <rect class="d-node" x="20" y="120" width="190" height="124" rx="8"/><text class="d-title" x="115" y="152" text-anchor="middle">Name the gap</text><text class="d-sub" x="115" y="176" text-anchor="middle">missing capability</text><text class="d-sub" x="115" y="198" text-anchor="middle">model, tool or retrieval</text><text class="d-sub" x="115" y="220" text-anchor="middle">identity and owner</text>
+                  <rect class="d-node d-node-accent" x="300" y="120" width="220" height="124" rx="8"/><text class="d-title" x="410" y="152" text-anchor="middle">AWS-first baseline</text><text class="d-sub" x="410" y="176" text-anchor="middle">Bedrock + AgentCore</text><text class="d-sub" x="410" y="198" text-anchor="middle">record route and config</text><text class="d-sub" x="410" y="220" text-anchor="middle">approved models only</text>
+                  <rect class="d-node" x="580" y="30" width="280" height="104" rx="8"/><text class="d-title" x="720" y="62" text-anchor="middle">Documented exception</text><text class="d-sub" x="720" y="86" text-anchor="middle">specific capability or region gap</text><text class="d-sub" x="720" y="108" text-anchor="middle">review egress and credentials</text>
+                  <rect class="d-node" x="580" y="190" width="280" height="124" rx="8"/><text class="d-title" x="720" y="222" text-anchor="middle">Prove before adoption</text><text class="d-sub" x="720" y="246" text-anchor="middle">held-out qualification</text><text class="d-sub" x="720" y="268" text-anchor="middle">denied models and fallback</text><text class="d-sub" x="720" y="290" text-anchor="middle">revocation, timeout, cost, identity</text>
+                  <path class="d-line" d="M210 182H300" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M520 150H545V82H580" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M520 214H545V252H580" marker-end="url(#arrow)"/>
+                  <path class="d-line d-dash" d="M720 134V190" marker-end="url(#arrow)"/>
+                  <rect class="d-boundary" x="20" y="338" width="840" height="40" rx="7"/><text class="d-sub" x="440" y="363" text-anchor="middle">Gateway policy governs Gateway traffic only; model approval, identity and egress need separate controls.</text>
+                </svg>
+              </div>
+              <p class="diagram-key">The blue node is the AWS-first default. The dashed path shows that a documented exception still needs the same proof before adoption; it is not permission to bypass approval.</p>
             </details>
           </figure>
         </section>
@@ -216,8 +242,18 @@
             routing to unapproved models is acceptable as a fallback. Kiro's Auto routing is the
             cautionary example: current documentation says Auto can route to active models outside
             the administrator's approved list.<a href="#source-14" aria-label="Source 14: Kiro, Available models">[14]</a><a href="#source-15" aria-label="Source 15: Kiro, Model governance">[15]</a></li>
-            <li>Qualification needs the intended account and configuration: check denied models, fallback destinations, permission revocation, timeouts, costs and retained identity before adoption.</li>
           </ul>
+          <aside class="callout callout--tip" aria-labelledby="gateway-adoption-checks">
+            <p class="example-label" id="gateway-adoption-checks">Check before adoption</p>
+            <ul class="checklist">
+              <li>Use the intended account and configuration</li>
+              <li>Check denied models</li>
+              <li>Check fallback destinations</li>
+              <li>Check permission revocation</li>
+              <li>Check timeouts and costs</li>
+              <li>Check retained identity</li>
+            </ul>
+          </aside>
           <p class="next-step">Next, record the team's approved-model list and the fallback behaviour it
           accepts — fail closed, or queue and retry — before adopting any gateway,
           then read the <a href="tech-scan-harness.html">harness spoke</a> for the managed harness this gateway sits

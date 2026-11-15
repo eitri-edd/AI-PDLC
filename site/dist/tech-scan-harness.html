@@ -60,7 +60,7 @@
 
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
           <figcaption id="page-map-caption">This page at a glance</figcaption>
-          <p id="page-map-note" class="page-map-note">Start with the managed default, then the alternatives for behaviour it cannot express, and finish with what not to use and what is still open.</p>
+          <p id="page-map-note" class="page-map-note">Developer route: name the missing harness responsibility → start with the managed AgentCore harness → qualify tools, approvals and observability → document an exception only for required behaviour the default cannot express. These groups organise the page; they are not lifecycle stages.</p>
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>Start here</strong><div class="page-map-links"><a href="#purpose">What needs to run the agent?</a></div></li>
             <li class="page-map-node"><strong>The default</strong><div class="page-map-links"><a href="#aws-first-default">Start with the managed harness</a></div></li>
@@ -96,6 +96,36 @@
           </div>
           <p>The managed harness supplies the loop and tools; its configuration still needs explicit boundaries.<a href="#source-4" aria-label="Source 4: AWS, Amazon Bedrock AgentCore developer guide: Harness">[4]</a><a href="#source-25" aria-label="Source 25: AWS, Harness tools">[25]</a> Retrieval can use Bedrock Knowledge Bases through an AgentCore Gateway connector when needed, rather than becoming a compulsory component of every harness.<a href="#source-12" aria-label="Source 12: AWS, Amazon Bedrock user guide: Knowledge bases">[12]</a><a href="#source-13" aria-label="Source 13: AWS, Amazon Bedrock AgentCore developer guide: Gateway target connector, managed knowledge base">[13]</a></p>
           <p>The MCP Registry supplies discovery metadata, not a replacement for AgentCore Gateway: finding a server does not execute or authorise its tools.<a href="#source-27" aria-label="Source 27: Model Context Protocol, About the MCP Registry">[27]</a> Gateway Policy governs calls through that gateway.<a href="#source-11" aria-label="Source 11: AWS, Amazon Bedrock AgentCore developer guide: Policy">[11]</a> OPA needs an enforcement integration for runtime decisions; Conftest tests structured configuration. Neither is a drop-in Gateway Policy replacement.<a href="#source-30" aria-label="Source 30: Open Policy Agent, Integrating OPA">[30]</a><a href="#source-31" aria-label="Source 31: Conftest, Overview">[31]</a></p>
+          <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker><linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient><linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eff6ff"/><stop offset="100%" stop-color="#dbeafe"/></linearGradient></defs></svg>
+          <figure class="concept-figure" id="fig-harness-route" data-diagram="static">
+            <figcaption id="fig-harness-route-caption">Figure 1. Harness route decision: name the missing responsibility, start with the managed harness, qualify the exact configuration and prove the controls before adoption. This is a decision route, not a deployment architecture.</figcaption>
+            <details class="figure-reading"><summary>Read as text: Harness route decision</summary>
+              <ol>
+                <li>Name the missing responsibility: state and loop, tools and authorisation, context, memory, evaluation or observability.</li>
+                <li>Start with the AgentCore managed harness, approved Bedrock models and explicitly allowed tools within bounded execution.</li>
+                <li>If a required pause, transition, recovery or control cannot be configured, document the exception and compare the same task, approval boundary and recovery case.</li>
+                <li>Before adoption, run a representative repository task and record the exact model, tools, permissions, image, result, traces and full cost.</li>
+              </ol>
+            </details>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Harness route decision; scroll horizontally if needed">
+                <svg viewBox="0 0 880 390" role="img" aria-labelledby="fig-harness-route-title" aria-describedby="fig-harness-route-title-desc">
+                  <title id="fig-harness-route-title">Harness route decision</title>
+                  <desc id="fig-harness-route-title-desc">A team first names the missing harness responsibility. The default is the AgentCore managed harness with approved Bedrock models, explicit tools and bounded execution. A documented exception is for required behaviour that cannot be configured, compared on the same task, approval boundary and recovery case. Before adoption, a representative repository task records the exact model, tools, permissions, image, result, traces and full cost.</desc>
+                  <rect class="d-node" x="20" y="120" width="190" height="124" rx="8"/><text class="d-title" x="115" y="152" text-anchor="middle">Name the gap</text><text class="d-sub" x="115" y="176" text-anchor="middle">state, tools or memory</text><text class="d-sub" x="115" y="198" text-anchor="middle">evaluation or observability</text><text class="d-sub" x="115" y="220" text-anchor="middle">approval and recovery</text>
+                  <rect class="d-node d-node-accent" x="300" y="120" width="220" height="124" rx="8"/><text class="d-title" x="410" y="152" text-anchor="middle">Managed harness</text><text class="d-sub" x="410" y="176" text-anchor="middle">AgentCore default</text><text class="d-sub" x="410" y="198" text-anchor="middle">approved Bedrock models</text><text class="d-sub" x="410" y="220" text-anchor="middle">explicit tools and bounds</text>
+                  <rect class="d-node" x="580" y="30" width="280" height="104" rx="8"/><text class="d-title" x="720" y="62" text-anchor="middle">Documented exception</text><text class="d-sub" x="720" y="86" text-anchor="middle">required behaviour cannot be configured</text><text class="d-sub" x="720" y="108" text-anchor="middle">compare task, approval and recovery</text>
+                  <rect class="d-node" x="580" y="190" width="280" height="124" rx="8"/><text class="d-title" x="720" y="222" text-anchor="middle">Prove before adoption</text><text class="d-sub" x="720" y="246" text-anchor="middle">representative repository task</text><text class="d-sub" x="720" y="268" text-anchor="middle">revoke, timeout, approval pause</text><text class="d-sub" x="720" y="290" text-anchor="middle">record traces and full cost</text>
+                  <path class="d-line" d="M210 182H300" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M520 150H545V82H580" marker-end="url(#arrow)"/>
+                  <path class="d-line" d="M520 214H545V252H580" marker-end="url(#arrow)"/>
+                  <path class="d-line d-dash" d="M720 134V190" marker-end="url(#arrow)"/>
+                  <rect class="d-boundary" x="20" y="338" width="840" height="40" rx="7"/><text class="d-sub" x="440" y="363" text-anchor="middle">Gateway policy, IAM, sandbox and release controls remain separate; a harness does not approve the change.</text>
+                </svg>
+              </div>
+              <p class="diagram-key">The blue node is the AWS-first default. The dashed path shows that a documented exception still needs the same proof before adoption; it is not permission to bypass approval.</p>
+            </details>
+          </figure>
           <p>What this page does not cover:</p>
           <ul>
             <li>Model choice (<a href="tech-scan-models.html">Tech Scan: Models</a>)</li>
@@ -181,6 +211,18 @@
             <li>Exercise a timeout, retry and restart; inspect duplicate side effects and cancellation.</li>
             <li>Pause for an authorised human decision and confirm that denial does not resume the action.</li>
           </ul>
+          <aside class="callout callout--tip" aria-labelledby="harness-adoption-checks">
+            <p class="example-label" id="harness-adoption-checks">Check before adoption</p>
+            <ul class="checklist">
+              <li>Exact model, tool selectors and role permissions</li>
+              <li>Runtime platformVersion read back as V1 or V2</li>
+              <li>Permission revocation fails closed</li>
+              <li>Timeout, retry, restart and duplicate side effects</li>
+              <li>Human approval pause and resume path</li>
+              <li>Evaluation, traces and full cost</li>
+            </ul>
+            <p>Record the intended account, region, image, task result, traces and unresolved failures before adoption.</p>
+          </aside>
           <p>For work beyond the InvokeHarness task limit, define how the outer workflow starts, observes and cancels the job. Exercise an inline-function approval separately from a Step Functions callback; the two resume paths are not interchangeable.</p>
           <p class="next-step">Next, compare the recorded results with the task's requirements and unresolved failures. Use <a href="tech-scan-sandbox.html">Tech Scan: Sandbox</a> to qualify execution boundaries; a functioning harness does not authorise release.</p>
         </section>

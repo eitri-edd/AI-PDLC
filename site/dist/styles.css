@@ -968,6 +968,22 @@ article .page-map-steps > li::before {
   border-color: currentColor;
   color: var(--warning-text);
 }
+.callout--tip {
+  background:
+    linear-gradient(180deg, var(--success-text) 0%, var(--success-text) 100%) left / 4px 100% no-repeat,
+    linear-gradient(180deg, #ffffff 0%, var(--success-bg) 100%);
+  border-color: var(--success-border);
+  border-left-color: var(--success-text);
+}
+.callout--tip .example-label {
+  background: var(--success-bg);
+  border-color: var(--success-border);
+  color: var(--success-text);
+}
+.callout--tip .checklist li::before {
+  border-color: var(--success-border);
+  color: var(--success-text);
+}
 
 .concept-question {
   padding: 0.75rem 1rem;
