@@ -398,15 +398,27 @@ criticality score measure different things and are not interchangeable.
   per-page stylesheets and `site.js` directly from a fresh `main`
   clone. Direct file reads and grep/regex counts; no cached or web
   copies. Check tokens value-for-value against `design.md`.
+  Render every page in a browser (headless is fine) at 320px,
+  375px and 768px and require the document width to equal the
+  viewport width (`document.documentElement.scrollWidth` equals
+  `window.innerWidth`) on every page. Wide tables and diagrams
+  scroll inside their own containers and do not count as page
+  overflow; anything else that widens the page is a finding at
+  criticality 4. The shared `overflow-x: clip` guard in
+  `styles.css` must stay in place (repo test
+  `test_page_never_scrolls_sideways`); removing it fails the check.
 - **Criticality scale (1–5):** 1 cosmetic or minor inconsistency,
   barely visible; 2 noticeable inconsistency, low impact on
   reading; 3 clear drift from the design system, breaks consistency
   across pages; 4 significant violation, impairs readability,
   usability or a core component; 5 critical, breaks accessibility,
   the core template, or misleads.
-- **Limit:** responsive behaviour at specific widths was verified
-  from CSS only, not rendered in a browser — record that limit.
-  State what static checks cannot verify.
+- **Limit:** in the 12 November 2026 run, responsive behaviour at
+  specific widths was verified from CSS only, not rendered in a
+  browser. That limit no longer applies to horizontal overflow:
+  since 15 November 2026 it is measured in a rendered browser
+  (see "Acceptance gates", item 6). State what static checks
+  cannot verify for every other responsive behaviour.
 - **Provenance:** 12 November 2026, main `ee8ebb9`; 29 findings
   (0×5, 0×4, 6×3, 10×2, 13×1); no page fully conforming. Filed as
   issue #58 — do not re-file it.
@@ -483,7 +495,7 @@ per score.
 A change is not editorially complete until these have been run
 for the pages it touches. Mark an item only after verification.
 
-1. **`writing.md` Editorial acceptance checklist** (30 items at the
+1. **`writing.md` Editorial acceptance checklist** (31 items at the
    end of `writing.md`): one final Sources section, one list, one
    page-level check date; teaching chapters distinguish general
    guidance, continuous case and reference material; opening tells
@@ -524,6 +536,15 @@ for the pages it touches. Mark an item only after verification.
 5. **Reader evidence:** see §"Evidence and reporting rules", item 7.
    Report comprehension as unverified unless a representative-reader
    task has actually been observed.
+6. **Rendered mobile-overflow check:** for the pages a change
+   touches, render each in a browser at 320px, 375px and 768px and
+   require the document width to equal the viewport width
+   (`document.documentElement.scrollWidth == window.innerWidth`).
+   Wide tables and diagrams scroll inside their own containers;
+   any other page-level sideways scroll fails the gate. The shared
+   `overflow-x: clip` guard in `styles.css` must remain, with its
+   repo test passing. Record the widths checked and the result; a
+   page that was not rendered is unverified, not passed.
 
 ## Governance — filing, branching and approval
 
@@ -563,6 +584,11 @@ for the pages it touches. Mark an item only after verification.
   scale or threshold changes, or a past rule is corrected by a
   later decision. Record the date, the main HEAD it was checked
   against, and the issue or decision that changed it.
+- 15 November 2026 (checked against main `11d3d30`): added the
+  rendered mobile-overflow check as a required pass criterion —
+  `writing.md` checklist item 31, §8 method, and Acceptance gates
+  item 6 — on Christopher's instruction, following the Tech Scan
+  mobile-overflow report and the `overflow-x: clip` fix (PR #105).
 - When a review corrects content, consider whether the standards
   also need refinement — and file that as a separate proposal,
   not as a side effect of the content fix.
