@@ -55,7 +55,7 @@
           <p class="eyebrow">About this playbook</p>
           <h1>How this site is curated</h1>
           <p class="lead">Agents help keep this playbook current and secure by finding new practices, writing updates, reviewing existing articles and checking the site for security weaknesses. Every change still needs a human to review and approve the pull request.</p>
-          <ul class="metadata-bar"><li>Maintained by EDS</li><li>Last updated <time datetime="2026-11-14">14 November 2026</time></li></ul>
+          <ul class="metadata-bar"><li>Maintained by EDS</li><li>Last updated <time datetime="2026-11-15">15 November 2026</time></li></ul>
         </header>
 
         <figure class="page-map" aria-label="Page summary">
@@ -88,7 +88,7 @@
             <figcaption>Figure 1. How agents curate the playbook under human review.</figcaption>
             <details class="figure-reading"><summary>Read as text: the curation loop</summary>
               <ol>
-                <li>Content scouting agents powered by Muse, Hermes and OpenAI assess online material for novelty, gap coverage and loss if missed, with Grok Bot supplying X-post leads. Medium- and high-priority findings enter the issue backlog.</li>
+                <li>Content scouting agents powered by Muse, Hermes and OpenAI assess online material for novelty, gap coverage and loss if missed, with Grok Bot supplying X-post leads. The highest-scoring qualifying finding—high priority, or medium priority with loss if missed of at least 4—enters the issue backlog, with other qualifying findings listed in that issue.</li>
                 <li>Content peer review uses Muse and OpenAI to score existing paragraphs from 1 to 10 for naturalness, ease of understanding and accuracy. Source-monitoring agents powered by Hermes and OpenAI check quoted sources, publish check dates and record changed, broken or unverified references. Both activities file findings as issues.</li>
                 <li>The writer agent, powered by Hermes and Devin, reviews prioritised issues and assesses their value. Lower-value proposals retain a recorded decision; changes with high assessed value proceed to drafting.</li>
                 <li>The writer uses the issue evidence, current articles, original sources and intended reader as context. The writing and design standards guide the draft and acceptance checks. For peer-review corrections, revise the content first, then consider whether the standards also need refinement.</li>
@@ -135,7 +135,7 @@
                   <path class="d-line" d="M420 210V244" marker-end="url(#curation-arrow)"/>
                   <path class="d-line" d="M694 210V250H426" marker-end="url(#curation-arrow)"/>
                   <circle cx="420" cy="250" r="4" fill="#64748b"/>
-                  <text class="d-label" x="146" y="233" text-anchor="middle">Medium / high priority</text>
+                  <text class="d-label" x="146" y="233" text-anchor="middle">Highest qualifying finding</text>
                   <text class="d-label" x="459" y="233">Issues</text>
                   <text class="d-label" x="694" y="233" text-anchor="middle">Dated findings</text>
                   <g><rect class="d-node" x="296" y="280" width="248" height="82" rx="8"/>
@@ -252,7 +252,7 @@
             <li><strong>Loss if missed:</strong> What would readers lose if the material were not covered, and how consequential would that omission be?</li>
           </ul>
           <p><a href="#source-6">Grok Bot</a> is also a source of X posts and research leads. Treat its output as a lead, not the post’s authorship or proof of accuracy: verify the original post and its context, credit the original author, and include the evidence in human review before publication.</p>
-          <p>The assessment produces a criticality score and a low, medium or high priority, supported by the reasons for that judgement. Medium- and high-priority findings are filed as issues in the <a href="https://github.com/eitri-edd/AI-PDLC/issues">issue backlog</a> for consideration. An issue records a candidate for review; it is not a commitment to include the material.</p>
+          <p>Each candidate is scored from 1 to 5 on each question and summed into a criticality score from 3 to 15, grouped as low (3–7), medium (8–11) or high (12–15), with the reasons for that judgement recorded. Only the single highest-scoring finding that qualifies for filing is raised as an issue in the <a href="https://github.com/eitri-edd/AI-PDLC/issues">issue backlog</a>: a high-priority finding, or a medium-priority finding with a loss-if-missed score of at least 4. Other qualifying findings are listed in that issue; lower-priority findings are not filed. An issue records a candidate for review, not a commitment to include the material.</p>
         </section>
 
         <section id="changes">
