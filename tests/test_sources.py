@@ -243,6 +243,13 @@ class SourceListingTests(unittest.TestCase):
                         if url.startswith(("https://", "http://")):
                             self.assertIs(owners.setdefault(url, entry), entry, f"Duplicate bibliography entry: {url}")
 
+    def test_page_never_scrolls_sideways(self):
+        # The page itself must never scroll horizontally on mobile: wide
+        # tables and diagrams scroll inside their own containers. `clip`
+        # (not `hidden`) is required so the sticky header keeps working.
+        styles = (DIST / "styles.css").read_text()
+        self.assertRegex(styles, r"html,\s*body\s*\{\s*overflow-x:\s*clip;\s*\}")
+
     def test_moved_source_aliases_have_desktop_and_mobile_header_offsets(self):
         styles = (DIST / "styles.css").read_text()
         self.assertIn(".source-list [id] { scroll-margin-top: 5rem; }", styles)
