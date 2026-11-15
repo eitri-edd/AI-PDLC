@@ -1,15 +1,15 @@
 {
   "checked_on": "2026-11-14",
-  "scope": "Daily maintenance verification on 2026-11-14 found 338 distinct external hrefs and no broken destination. Current totals include five Concepts sources read on 15 November 2026; that partial addition does not advance the page-wide date.",
+  "scope": "Daily maintenance verification on 2026-11-14 found 338 distinct external hrefs and no broken destination. Current totals include three Concepts sources for agentic development environments and five Concepts sources for the approved enrichments, both read on 15 November 2026; those partial additions do not advance the page-wide date.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 343,
-  "current_unique_hrefs": 349,
+  "current_unique_urls": 346,
+  "current_unique_hrefs": 352,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 8,
-    "retrieved": 324,
+    "retrieved": 327,
     "retrieved_pdf_text": 3,
     "expected_login_redirect": 1
   },
@@ -13675,6 +13675,96 @@
       "source_entries": []
     },
     {
+      "url": "https://ademark.dev/",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://ademark.dev/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://ademark.dev/",
+      "method": "Direct HTTP GET on 15 November 2026; readable page text inspected the same day. Inventory date stays on the last page-wide pass.",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Targeted issue #103 on concept.html (source-38): ADE definition, cross-task supervision, and ADEMark as a discovery and comparison reference with no overall winner.",
+          "evidence_summary": "ADEMark states its last complete run ended 12 November 2026, run on one Mac mini M4 with 16 GB; the Bare CLI control is plain Claude Code in Ghostty; there is no overall winner and each test is ranked on its own; the catalogue includes Orca, T3 Code, Capy, Emdash and Paseo among others.",
+          "limitation": "First pass with empty or not-measured cells; results are specific to one Mac, one model and task set and the versions measured. Not evidence of enterprise readiness or better software quality."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-38"
+        }
+      ]
+    },
+    {
+      "url": "https://support.claude.com/en/articles/14554000-claude-code-power-user-tips",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://support.claude.com/en/articles/14554000-claude-code-power-user-tips"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://support.claude.com/en/articles/14554000-claude-code-power-user-tips",
+      "method": "Direct HTTP GET on 15 November 2026; readable page text inspected the same day. Inventory date stays on the last page-wide pass.",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Targeted issue #103 on concept.html (source-39): native Claude Code parallel sessions and worktrees as the baseline an ADE must beat.",
+          "evidence_summary": "The article states the biggest productivity unlock is running 3-5 Claude sessions in parallel, each in its own git worktree, with native worktree support; /batch fans a migration out to worktree agents that each test their work and open a pull request independently.",
+          "limitation": "Vendor guidance about Anthropic's own product; the productivity framing is the team's account, not an independent measurement."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-39"
+        }
+      ]
+    },
+    {
+      "url": "https://orca.dev/docs/model/worktrees",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://orca.dev/docs/model/worktrees"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://orca.dev/docs/model/worktrees",
+      "method": "Direct HTTP GET on 15 November 2026; readable page text inspected the same day. Inventory date stays on the last page-wide pass.",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Targeted issue #103 on concept.html (source-40): Orca's worktree mechanism as one product example of per-task workspaces.",
+          "evidence_summary": "Orca is worktree-native: every task gets its own on-disk copy via git worktree, its own branch, files and agent terminals; review is a diff view against the start-from ref and shipping is commit, push and PR inline. A brand-new worktree is a clean checkout and gitignored dependencies and local secrets are missing until recreated.",
+          "limitation": "Vendor documentation for one product; capabilities describe Orca, not every ADE."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-40"
+        }
+      ]
+    },
+    {
       "url": "https://x.com/aparnadhinak/status/2109040646627721384",
       "files": [
         "concept.html"
@@ -13690,7 +13780,7 @@
         {
           "file": "concept.html",
           "outcome": "limited",
-          "scope": "Targeted issue #101 item 1 on concept.html (source-38): do not treat conversation, pasted or instruction-file text as permission; check role, ownership or a recorded approval in the harness and log it where the agent cannot change it.",
+          "scope": "Targeted issue #101 item 1 on concept.html (source-44): do not treat conversation, pasted or instruction-file text as permission; check role, ownership or a recorded approval in the harness and log it where the agent cannot change it.",
           "evidence_summary": "Article title and 11 October 2026 UTC+7 publication confirmed. Co-author line names @seldo, whose profile name is Laurie Voss. Verbatim working rule: if it appears in the chat, you cannot trust it; get permission from the harness and check it using tools. Permission sources named in the article include role, ownership and a recorded delegation. The log should sit where the agent cannot reach it. Practitioner account by a vendor founder; the article's product plug and unverified LayerX case are not used.",
           "limitation": "Canonical X page returned HTTP 403. Article text was read through a public mirror of the same post, not a direct X response. No independent local test of the recommended permission tool."
         }
@@ -13699,7 +13789,7 @@
       "source_entries": [
         {
           "file": "concept.html",
-          "id": "source-38"
+          "id": "source-41"
         }
       ]
     },
@@ -13720,7 +13810,7 @@
         {
           "file": "concept.html",
           "outcome": "limited",
-          "scope": "Targeted issue #101 item 1 on concept.html (source-39): approval-fatigue evidence for the Claude Code auto-mode classifier study.",
+          "scope": "Targeted issue #101 item 1 on concept.html (source-45): approval-fatigue evidence for the Claude Code auto-mode classifier study.",
           "evidence_summary": "Author named in the article: Conner Phillippi. Study of 1,053 paid testers hired through a research vendor, in a purpose-built test environment, not their own projects. Participants knew they were being evaluated but not which behaviour was measured. One permission prompt per session was swapped for a clearly dangerous command; approving it did not run the command. People blocked 143 of 1,053 (article states 13.6%); auto mode blocked 937 of 1,053 (article states 89%). Human block rate about 17% early in a session and about 5% after 50 or more prior prompts. Vendor report about Anthropic's own classifier.",
           "limitation": "Vendor report about its own classifier. The article does not publish the counts behind the about-17% and about-5% rates. Not independently replicated. Page-wide reference date was not advanced."
         }
@@ -13729,7 +13819,7 @@
       "source_entries": [
         {
           "file": "concept.html",
-          "id": "source-39"
+          "id": "source-42"
         }
       ]
     },
@@ -13749,7 +13839,7 @@
         {
           "file": "concept.html",
           "outcome": "limited",
-          "scope": "Targeted issue #101 item 3 on concept.html (source-40): ordinary program steps can express workflow dependencies; a resumed run should continue from finished checks; results passed between steps should have a checked format.",
+          "scope": "Targeted issue #101 item 3 on concept.html (source-43): ordinary program steps can express workflow dependencies; a resumed run should continue from finished checks; results passed between steps should have a checked format.",
           "evidence_summary": "Article title The code IS the graph, created 14 October 2026 UTC+7. Author Samuel Colvin, founder of Pydantic. He argues control flow in ordinary code is the graph, diagrams should explain a run rather than be the thing executed, and a crashed run should resume from completed work. Typed results between steps are part of that argument. The two-of-three typed/parallel/snapshot trade-off and the Prime Intellect scale example are not used on the page.",
           "limitation": "Canonical X page returned HTTP 403. Article text was read through a public mirror of the same post. One practitioner's view from a vendor founder; not an independent evaluation."
         }
@@ -13758,7 +13848,7 @@
       "source_entries": [
         {
           "file": "concept.html",
-          "id": "source-40"
+          "id": "source-43"
         }
       ]
     },
@@ -13779,7 +13869,7 @@
         {
           "file": "concept.html",
           "outcome": "limited",
-          "scope": "Targeted issue #101 item 2 on concept.html (source-41): review depth follows the change; agent approval is not a person's approval; approval is per commit; stop after three rounds; incidents and reverts are the guardrail.",
+          "scope": "Targeted issue #101 item 2 on concept.html (source-44): review depth follows the change; agent approval is not a person's approval; approval is per commit; stop after three rounds; incidents and reverts are the guardrail.",
           "evidence_summary": "Team account. From June to September, merged pull requests to the Claude Code codebase more than doubled while the reverted share fell by more than 40 percent. Substantive review comments went from 16% to 54% when the research preview launched. About 59% of repeated findings were code present since the first pass. After three rounds the reviewer asks the author to reconsider. An agent's approval never counts as a person's. An approval covers one commit. The reviewer runs daily against past incidents and reverts. The team does not yet have circuit breakers that tighten approval when those numbers move. Underlying counts are not published.",
           "limitation": "Team report about its own codebase, not independently replicated. The post does not publish the counts behind the doubled pull requests, the 40 percent revert share, 16% to 54%, or about 59%. Page-wide reference date was not advanced."
         }
@@ -13788,7 +13878,7 @@
       "source_entries": [
         {
           "file": "concept.html",
-          "id": "source-41"
+          "id": "source-44"
         }
       ]
     },
@@ -13808,7 +13898,7 @@
         {
           "file": "concept.html",
           "outcome": "limited",
-          "scope": "Targeted issue #101 item 2 on concept.html (source-42): companion account of the same Claude Code review practice, not a second measurement.",
+          "scope": "Targeted issue #101 item 2 on concept.html (source-45): companion account of the same Claude Code review practice, not a second measurement.",
           "evidence_summary": "Addy Osmani, 26 October 2026 UTC+7, title How the Claude Code team does code review. States that agent approvals do not count as human approvals, that a pull-request approval is only good for one commit, and that the review system asks the author to re-evaluate after three cycles. The June-to-September pull-request and revert shares match the 15 October 2026 Anthropic article by Osmani, Lunt and Wang.",
           "limitation": "Canonical X page returned HTTP 403. Article text was read through a public mirror of the same post. Same team's later account, not an independent replication."
         }
@@ -13817,7 +13907,7 @@
       "source_entries": [
         {
           "file": "concept.html",
-          "id": "source-42"
+          "id": "source-45"
         }
       ]
     }
@@ -23705,7 +23795,7 @@
   },
   "issue101_targeted_followup": {
     "checked_on": "2026-11-15",
-    "scope": "Three approved High items from issue #101 on concept.html only. Page-wide reference-check date remains 14 November 2026.",
+    "scope": "Three approved High items from issue #101 on concept.html only. Page-wide reference-check date remains 14 November 2026. Source ids renumbered to 41-45 after dev reserved 38-40.",
     "pages": ["concept.html"],
     "new_external_sources": 5,
     "items": ["harness approval authority", "software-factory review", "graph routing rules"],
