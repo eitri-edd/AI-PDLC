@@ -71,6 +71,8 @@ class ADEInventoryTests(unittest.TestCase):
                     'https://www.conductor.build/announcement',
                     'https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta',
                     'https://www.conductor.build/changelog/0.94.2-conductor-is-back',
+                    'https://platform.claude.com/docs/en/managed-agents/dreams',
+                    'https://claude.com/resources/articles/new-in-claude-managed-agents',
                     'https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/'}
         baseline = {'page_passes': self.inventory['page_passes'], 'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews'] if v.get('followup') != 'pr102']

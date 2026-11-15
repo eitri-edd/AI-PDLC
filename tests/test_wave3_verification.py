@@ -68,7 +68,7 @@ class VerificationTests(unittest.TestCase):
         do_not_use = normalise(sections['do-not-use'].text())
         for expected in ('CodeGuru Security', 'single benchmark number',
                          'same model family', "author agent's own tests",
-                         'screening eval quoted as a release gate',
+                         'lightweight preliminary evaluation quoted as a release gate',
                          'blocking control or prompt-injection protection'):
             self.assertIn(expected, do_not_use)
         gaps = normalise(sections['gaps'].text())

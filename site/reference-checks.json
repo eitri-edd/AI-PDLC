@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-15 found 353 distinct external hrefs and no broken destination",
   "reviewed_base": "804e41fe862f9c2158f30d74108be400060040f5",
   "original_unique_urls": 100,
-  "current_unique_urls": 354,
-  "current_unique_hrefs": 360,
+  "current_unique_urls": 356,
+  "current_unique_hrefs": 362,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 5,
-    "retrieved": 338,
+    "retrieved": 340,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -14320,6 +14320,68 @@
         }
       ],
       "targeted_checked_on": "2026-11-15"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/managed-agents/dreams",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://platform.claude.com/docs/en/managed-agents/dreams"
+      ],
+      "checked_on": "2026-11-15",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://platform.claude.com/docs/en/managed-agents/dreams",
+      "method": "Targeted direct HTTP GET and publisher page inspection on 15 November 2026; not a whole-page source pass.",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "followup": "issue112",
+          "outcome": "supported",
+          "scope": "Research preview; Claude API availability, separate output memory store, retention eligibility and self-hosted exception. (source-18)",
+          "evidence_summary": "Anthropic documents Dreams as a research preview: existing memory and past session transcripts yield a separate output store; ZDR is not eligible except self-hosted Managed Agents.",
+          "limitation": "Vendor documentation; not an organisational approval, local deployment or test of memory correctness."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-18"
+        }
+      ]
+    },
+    {
+      "url": "https://claude.com/resources/articles/new-in-claude-managed-agents",
+      "files": [
+        "tech-scan-context.html"
+      ],
+      "hrefs": [
+        "https://claude.com/resources/articles/new-in-claude-managed-agents"
+      ],
+      "checked_on": "2026-11-15",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://claude.com/resources/articles/new-in-claude-managed-agents",
+      "method": "Targeted direct HTTP GET and publisher page inspection on 15 November 2026; not a whole-page source pass.",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-context.html",
+          "followup": "issue112",
+          "outcome": "supported",
+          "scope": "19 May 2026 announcement of Claude Managed Agents dreaming research preview. (source-19)",
+          "evidence_summary": "The announcement dated 19 May 2026 says dreaming is launching as a research preview.",
+          "limitation": "Launch announcement is vendor material; the announcement does not establish a locally approved route."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-context.html",
+          "id": "source-19"
+        }
+      ]
     }
   ],
   "history": [
