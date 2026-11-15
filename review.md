@@ -362,6 +362,15 @@ criticality score measure different things and are not interchangeable.
   factual technical terms, additional information that fits gaps,
   and redundant information, for experienced development leads and
   engineers.
+- **Component-reference presentation checks:** when reviewing or
+  revising a Tech Scan spoke, verify that the page-map note states the
+  developer decision route, conditional choices have an accessible
+  static route figure with caption, text equivalent and legend,
+  actionable pre-adoption checks use the distinct success checklist,
+  secondary exclusions are collapsed without hiding required evidence,
+  safety controls or Sources, and anchors, citations and source order
+  remain stable. Treat this as a presentation check beside the factual
+  score, not a replacement for it.
 
 ### 7. Whole-playbook critical review (ad hoc; last run 14 November 2026)
 
@@ -495,11 +504,13 @@ per score.
 A change is not editorially complete until these have been run
 for the pages it touches. Mark an item only after verification.
 
-1. **`writing.md` Editorial acceptance checklist** (31 items at the
+1. **`writing.md` Editorial acceptance checklist** (32 items at the
    end of `writing.md`): one final Sources section, one list, one
    page-level check date; teaching chapters distinguish general
-   guidance, continuous case and reference material; opening tells
-   the reader what the page helps them do; terms explained and
+   guidance, continuous case and reference material; Tech Scan
+   component references state the developer route and keep actionable
+   checks distinct; opening tells the reader what the page helps them
+   do; terms explained and
    consistent; instructions identify actions, outputs and ownership;
    `check / review / validate / ensure` followed by enough detail
    to perform the work; observations, interpretations and untested
@@ -589,6 +600,11 @@ for the pages it touches. Mark an item only after verification.
   `writing.md` checklist item 31, §8 method, and Acceptance gates
   item 6 — on Christopher's instruction, following the Tech Scan
   mobile-overflow report and the `overflow-x: clip` fix (PR #105).
+- 15 November 2026 (checked against main `804e41f`): added Tech Scan
+  component-reference presentation checks to §6, updated the
+  `writing.md` editorial checklist to 32 items and Acceptance gates
+  item 1, on Christopher's instruction after the Tech Scan
+  readability pass in PR #110.
 - When a review corrects content, consider whether the standards
   also need refinement — and file that as a separate proposal,
   not as a side effect of the content fix.
