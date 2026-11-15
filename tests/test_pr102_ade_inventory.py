@@ -65,10 +65,17 @@ class ADEInventoryTests(unittest.TestCase):
             self.assertIn(url, [n.attrs.get('href') for n in entries[0].elements('a')])
 
     def test_inherited_reviews_history_and_page_passes_preserved(self):
-        new_urls = {'https://git-scm.com/docs/git-worktree', 'https://code.claude.com/docs/en/worktrees'}
+        new_urls = {'https://git-scm.com/docs/git-worktree', 'https://code.claude.com/docs/en/worktrees',
+                    'https://orca.dev/docs/agents/supported',
+                    'https://code.claude.com/docs/en/agent-view',
+                    'https://www.conductor.build/announcement',
+                    'https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta',
+                    'https://www.conductor.build/changelog/0.94.2-conductor-is-back',
+                    'https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/'}
         baseline = {'page_passes': self.inventory['page_passes'], 'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews'] if v.get('followup') != 'pr102']
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
+        baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
         self.assertEqual(digest, 'e74783027452352f8810ae0d26269484844a690ab9424b207622a0dd9c918bd4')
         # Compare inherited retrieval metadata and source mappings to a digest
@@ -81,6 +88,8 @@ class ADEInventoryTests(unittest.TestCase):
         for entry in ({'file': 'concept.html', 'id': 'source-47'},
                       {'file': 'tech-scan-agents.html', 'id': 'source-36'}):
             sandbox['source_entries'].remove(entry)
+        metadata['https://orca.dev/docs/model/worktrees']['source_entries'].remove(
+            {'file': 'tech-scan-agents.html', 'id': 'source-37'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
         self.assertEqual(actual, '798b936257d401b59275f3429c211afbad6475f9f682538eaadee549c9b119a8')
 

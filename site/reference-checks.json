@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-14 found 338 distinct external hrefs and no broken destination. Current totals include three Concepts sources for agentic development environments and five Concepts sources for the approved enrichments, both read on 15 November 2026; those partial additions do not advance the page-wide date. PR #102 targeted ADE sources were inspected on 15 November 2026; the inherited page-wide pass date is unchanged.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 348,
-  "current_unique_hrefs": 354,
+  "current_unique_urls": 354,
+  "current_unique_hrefs": 360,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 8,
-    "retrieved": 329,
+    "retrieved": 335,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -13763,7 +13763,8 @@
     {
       "url": "https://orca.dev/docs/model/worktrees",
       "files": [
-        "concept.html"
+        "concept.html",
+        "tech-scan-agents.html"
       ],
       "hrefs": [
         "https://orca.dev/docs/model/worktrees"
@@ -13780,6 +13781,14 @@
           "scope": "Targeted issue #103 on concept.html (source-40): Orca's worktree mechanism as one product example of per-task workspaces.",
           "evidence_summary": "Orca is worktree-native: every task gets its own on-disk copy via git worktree, its own branch, files and agent terminals; review is a diff view against the start-from ref and shipping is commit, push and PR inline. A brand-new worktree is a clean checkout and gitignored dependencies and local secrets are missing until recreated.",
           "limitation": "Vendor documentation for one product; capabilities describe Orca, not every ADE."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "ade-tech-scan",
+          "outcome": "supported",
+          "scope": "Targeted 15 November 2026 review of worktrees, review, shipping and setup options in Agents source-37.",
+          "evidence_summary": "The vendor describes task worktrees with agent terminals, diff review against the start-from ref, inline commit/push/PR, and ignored files copied or directories shared by configuration.",
+          "limitation": "Vendor documentation, not an independent security, performance, or local product test; other ADEs may differ."
         }
       ],
       "evidence_digests": [],
@@ -13787,6 +13796,10 @@
         {
           "file": "concept.html",
           "id": "source-40"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-37"
         }
       ]
     },
@@ -14010,6 +14023,198 @@
           "id": "source-46"
         }
       ]
+    },
+    {
+      "url": "https://orca.dev/docs/agents/supported",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://orca.dev/docs/agents/supported"
+      ],
+      "checked_on": "2026-11-15",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://orca.dev/docs/agents/supported",
+      "method": "Targeted web extraction on 15 November 2026; page-wide reference date unchanged.",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "ade-tech-scan",
+          "outcome": "supported",
+          "scope": "Supported-agent launch permission defaults and Manual switch scope, source-38.",
+          "evidence_summary": "Orca documents pre-filled permission-bypass flags; global Manual changes uncustomized launches and new chat defaults, not custom agent overrides or existing chat mode.",
+          "limitation": "Vendor documentation only; effective settings and commands were not locally tested."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-38"
+        }
+      ],
+      "targeted_checked_on": "2026-11-15"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/agent-view",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://code.claude.com/docs/en/agent-view"
+      ],
+      "checked_on": "2026-11-15",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://code.claude.com/docs/en/agent-view",
+      "method": "Targeted web extraction on 15 November 2026; page-wide reference date unchanged.",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "pr107-ade-x",
+          "outcome": "supported",
+          "scope": "Agent view as a native supervision surface, background-session worktree isolation and exceptions, deletion and local lifetime limits, source-39.",
+          "evidence_summary": "Vendor docs describe claude agents as a research-preview screen for background sessions, claude --bg dispatch, a move into .claude/worktrees/ before edits, documented exceptions including backgrounded interactive sessions and worktree.bgIsolation none, deletion of Claude-created worktrees with uncommitted changes, and local sessions preserved across sleep but stopped on shutdown.",
+          "limitation": "Vendor documentation in research preview; interface may change; not a local configuration, security or performance test."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-39"
+        }
+      ],
+      "targeted_checked_on": "2026-11-15"
+    },
+    {
+      "url": "https://www.conductor.build/announcement",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://www.conductor.build/announcement"
+      ],
+      "checked_on": "2026-11-15",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.conductor.build/announcement",
+      "method": "Targeted web extraction on 15 November 2026; page-wide reference date unchanged.",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "pr107-ade-x",
+          "outcome": "supported",
+          "scope": "Conductor joining Meta, cloud export steps, and the later note that development continues, source-40.",
+          "evidence_summary": "Vendor page announces joining Meta, describes Transfer to local and Export data, and states both that Cloud will shut down over the next few weeks and that plans have changed and Conductor is still being developed.",
+          "limitation": "Vendor announcement; wording on Cloud is not fully reconciled with the later changelog; not a test of export."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-40"
+        }
+      ],
+      "targeted_checked_on": "2026-11-15"
+    },
+    {
+      "url": "https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta"
+      ],
+      "checked_on": "2026-11-15",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta",
+      "method": "Targeted web extraction on 15 November 2026; page-wide reference date unchanged.",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "pr107-ade-x",
+          "outcome": "supported",
+          "scope": "4 November 2026 Cloud read-only and shutdown dates, and the later update that Conductor is not shutting down, source-41.",
+          "evidence_summary": "4 November 2026 notes set Cloud read-only on 13 November and shutdown on 20 November, with local model and critical fixes until early 2027, and later add that Conductor is not shutting down.",
+          "limitation": "Vendor changelog; the shutdown dates are the original plan, not the later position."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-41"
+        }
+      ],
+      "targeted_checked_on": "2026-11-15"
+    },
+    {
+      "url": "https://www.conductor.build/changelog/0.94.2-conductor-is-back",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://www.conductor.build/changelog/0.94.2-conductor-is-back"
+      ],
+      "checked_on": "2026-11-15",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.conductor.build/changelog/0.94.2-conductor-is-back",
+      "method": "Targeted web extraction on 15 November 2026; page-wide reference date unchanged.",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "pr107-ade-x",
+          "outcome": "supported",
+          "scope": "13 November 2026 note that Conductor is not shutting down and is being developed again, source-42.",
+          "evidence_summary": "13 November 2026 note states Conductor is not shutting down and is being developed again.",
+          "limitation": "Short vendor note; no further product roadmap detail."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-42"
+        }
+      ],
+      "targeted_checked_on": "2026-11-15"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/"
+      ],
+      "checked_on": "2026-11-15",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+      "method": "Targeted web extraction on 15 November 2026; page-wide reference date unchanged.",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "pr107-ade-x",
+          "outcome": "supported",
+          "scope": "TechCrunch report that Meta confirmed the Conductor acquisition and did not disclose terms, source-43.",
+          "evidence_summary": "Meta confirmed the acquisition to TechCrunch on 4 November 2026 and did not disclose terms; the article also reported a 20 November Cloud shutdown as of that date.",
+          "limitation": "News report of the 4 November position; later vendor notes reversed the shutdown and should be read with it."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-43"
+        }
+      ],
+      "targeted_checked_on": "2026-11-15"
     }
   ],
   "history": [

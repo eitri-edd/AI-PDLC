@@ -63,7 +63,10 @@ class ReferenceMaintenanceTests(unittest.TestCase):
             with self.subTest(url=record["url"]):
                 record_date = date.fromisoformat(record["checked_on"]).isoformat()
                 self.assertGreaterEqual(record_date, self.inventory["checked_on"])
-                self.assertLessEqual(record_date, max(p["checked_on"] for p in self.inventory["page_passes"].values()))
+                latest_pass = max(p["checked_on"] for p in self.inventory["page_passes"].values())
+                targeted_date = record.get("targeted_checked_on", latest_pass)
+                date.fromisoformat(targeted_date)
+                self.assertLessEqual(record_date, max(latest_pass, targeted_date))
                 self.assertTrue(record.get("method"))
                 self.assertTrue(record.get("result"))
                 reviews = record.get("claim_reviews", [])
