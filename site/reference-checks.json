@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-14 found 338 distinct external hrefs and no broken destination. Current totals include three Concepts sources for agentic development environments and five Concepts sources for the approved enrichments, both read on 15 November 2026; those partial additions do not advance the page-wide date. PR #102 targeted ADE sources were inspected on 15 November 2026; the inherited page-wide pass date is unchanged.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 348,
-  "current_unique_hrefs": 354,
+  "current_unique_urls": 349,
+  "current_unique_hrefs": 355,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 8,
-    "retrieved": 329,
+    "retrieved": 330,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -13763,7 +13763,8 @@
     {
       "url": "https://orca.dev/docs/model/worktrees",
       "files": [
-        "concept.html"
+        "concept.html",
+        "tech-scan-agents.html"
       ],
       "hrefs": [
         "https://orca.dev/docs/model/worktrees"
@@ -13780,6 +13781,14 @@
           "scope": "Targeted issue #103 on concept.html (source-40): Orca's worktree mechanism as one product example of per-task workspaces.",
           "evidence_summary": "Orca is worktree-native: every task gets its own on-disk copy via git worktree, its own branch, files and agent terminals; review is a diff view against the start-from ref and shipping is commit, push and PR inline. A brand-new worktree is a clean checkout and gitignored dependencies and local secrets are missing until recreated.",
           "limitation": "Vendor documentation for one product; capabilities describe Orca, not every ADE."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "ade-tech-scan",
+          "outcome": "supported",
+          "scope": "Targeted 15 November 2026 review of worktrees, review, shipping and setup options in Agents source-37.",
+          "evidence_summary": "The vendor describes task worktrees with agent terminals, diff review against the start-from ref, inline commit/push/PR, and ignored files copied or directories shared by configuration.",
+          "limitation": "Vendor documentation, not an independent security, performance, or local product test; other ADEs may differ."
         }
       ],
       "evidence_digests": [],
@@ -13787,6 +13796,10 @@
         {
           "file": "concept.html",
           "id": "source-40"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-37"
         }
       ]
     },
@@ -14010,6 +14023,38 @@
           "id": "source-46"
         }
       ]
+    },
+    {
+      "url": "https://orca.dev/docs/agents/supported",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://orca.dev/docs/agents/supported"
+      ],
+      "checked_on": "2026-11-15",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://orca.dev/docs/agents/supported",
+      "method": "Targeted web extraction on 15 November 2026; page-wide reference date unchanged.",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "ade-tech-scan",
+          "outcome": "supported",
+          "scope": "Supported-agent launch permission defaults and Manual switch scope, source-38.",
+          "evidence_summary": "Orca documents pre-filled permission-bypass flags; global Manual changes uncustomized launches and new chat defaults, not custom agent overrides or existing chat mode.",
+          "limitation": "Vendor documentation only; effective settings and commands were not locally tested."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-38"
+        }
+      ],
+      "targeted_checked_on": "2026-11-15"
     }
   ],
   "history": [
