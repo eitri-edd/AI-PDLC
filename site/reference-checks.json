@@ -1,17 +1,17 @@
 {
   "checked_on": "2026-11-14",
-  "scope": "Daily maintenance verification on 2026-11-14 found 338 distinct external hrefs and no broken destination Current totals include three Concepts sources read on 15 November 2026; that partial addition does not advance the page-wide date.",
+  "scope": "Daily maintenance verification on 2026-11-14 found 338 distinct external hrefs and no broken destination. Current totals include three Concepts sources for agentic development environments and five Concepts sources for the approved enrichments, both read on 15 November 2026; those partial additions do not advance the page-wide date. PR #102 targeted ADE sources were inspected on 15 November 2026; the inherited page-wide pass date is unchanged.",
   "reviewed_base": "9f9c2049afccc91d28ca2d85ede2213a990120d6",
   "original_unique_urls": 100,
-  "current_unique_urls": 341,
-  "current_unique_hrefs": 347,
+  "current_unique_urls": 348,
+  "current_unique_hrefs": 354,
   "counts": {
     "dynamic_page_no_text": 5,
+    "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
-    "partial_reader_recovery": 5,
-    "retrieved": 325,
-    "retrieved_pdf_text": 3,
-    "expected_login_redirect": 1
+    "partial_reader_recovery": 8,
+    "retrieved": 329,
+    "retrieved_pdf_text": 3
   },
   "page_passes": {
     "about.html": {
@@ -1502,7 +1502,9 @@
     {
       "url": "https://code.claude.com/docs/en/sandboxing",
       "files": [
-        "ai-pdlc.html"
+        "ai-pdlc.html",
+        "concept.html",
+        "tech-scan-agents.html"
       ],
       "hrefs": [
         "https://code.claude.com/docs/en/sandboxing"
@@ -1520,6 +1522,22 @@
           "evidence_summary": "Current docs confirm the retained defaults and shell-only scope. Startup refusal and unsandboxed-retry refusal are separate settings; exclusions can bypass the boundary, and trusted-host allowlists do not inspect encrypted content.",
           "limitation": "Documentation verification only, not execution of a configured sandbox. Generic refusal wording hides two controls; broad allowlist entries are not a complete exfiltration boundary.",
           "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
+        },
+        {
+          "file": "concept.html",
+          "followup": "pr102",
+          "outcome": "supported",
+          "scope": "Claude shell sandbox scope, default credential reads, operating systems and network restrictions inform the warning that controls need explicit scope.",
+          "evidence_summary": "Targeted 15 November 2026 publisher review; exact excerpts and capture provenance in pr102_targeted_followup.",
+          "limitation": "Claude Code-specific documentation; not verification of any ADE or local configuration."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "pr102",
+          "outcome": "supported",
+          "scope": "Claude shell sandbox excludes file tools, hooks and MCP servers; unsandboxed retry depends on configuration.",
+          "evidence_summary": "Targeted 15 November 2026 publisher review; exact excerpts and capture provenance in pr102_targeted_followup.",
+          "limitation": "Vendor documentation, not verification of the pilot or any ADE."
         }
       ],
       "evidence_digests": [
@@ -1533,6 +1551,14 @@
         {
           "file": "ai-pdlc.html",
           "id": "source-6"
+        },
+        {
+          "file": "concept.html",
+          "id": "source-47"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-36"
         }
       ]
     },
@@ -13763,6 +13789,227 @@
           "id": "source-40"
         }
       ]
+    },
+    {
+      "url": "https://x.com/aparnadhinak/status/2109040646627721384",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://x.com/aparnadhinak/status/2109040646627721384"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "partial_reader_recovery",
+      "http_status": 403,
+      "method": "Canonical X URL returned HTTP 403 on 15 November 2026. Full article text was read the same day from api.fxtwitter.com for the same post. Inventory date stays on the last page-wide pass.",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Targeted issue #101 item 1 on concept.html (source-41): do not treat conversation, pasted or instruction-file text as permission; check role, ownership or a recorded approval in the harness and log it where the agent cannot change it.",
+          "evidence_summary": "Article title and 11 October 2026 UTC+7 publication confirmed. Co-author line names @seldo, whose profile name is Laurie Voss. Verbatim working rule: if it appears in the chat, you cannot trust it; get permission from the harness and check it using tools. Permission sources named in the article include role, ownership and a recorded delegation. The log should sit where the agent cannot reach it. Practitioner account by a vendor founder; the article's product plug and unverified LayerX case are not used.",
+          "limitation": "Canonical X page returned HTTP 403. Article text was read through a public mirror of the same post, not a direct X response. No independent local test of the recommended permission tool."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-41"
+        }
+      ]
+    },
+    {
+      "url": "https://claude.com/resources/articles/auto-mode-default-in-claude-code",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://claude.com/resources/articles/auto-mode-default-in-claude-code"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://claude.com/resources/articles/auto-mode-default-in-claude-code",
+      "method": "Direct HTTP GET on 15 November 2026. Page metadata datePublished 2026-08-07; visible update dated 22 October 2026. Inventory date stays on the last page-wide pass.",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Targeted issue #101 item 1 on concept.html (source-42): approval-fatigue evidence for the Claude Code auto-mode classifier study.",
+          "evidence_summary": "Author named in the article: Conner Phillippi. Study of 1,053 paid testers hired through a research vendor, in a purpose-built test environment, not their own projects. Participants knew they were being evaluated but not which behaviour was measured. One permission prompt per session was swapped for a clearly dangerous command; approving it did not run the command. People blocked 143 of 1,053 (article states 13.6%); auto mode blocked 937 of 1,053 (article states 89%). Human block rate about 17% early in a session and about 5% after 50 or more prior prompts. Vendor report about Anthropic's own classifier.",
+          "limitation": "Vendor report about its own classifier. The article does not publish the counts behind the about-17% and about-5% rates. Not independently replicated. Page-wide reference date was not advanced."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-42"
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/samuelcolvin/status/2110055467007303729",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://x.com/samuelcolvin/status/2110055467007303729"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "partial_reader_recovery",
+      "http_status": 403,
+      "method": "Canonical X URL returned HTTP 403 on 15 November 2026. Full article text was read the same day from api.fxtwitter.com for the same post. Inventory date stays on the last page-wide pass.",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Targeted issue #101 item 3 on concept.html (source-43): ordinary program steps can express workflow dependencies; a resumed run should continue from finished checks; results passed between steps should have a checked format.",
+          "evidence_summary": "Article title The code IS the graph, created 14 October 2026 UTC+7. Author Samuel Colvin, founder of Pydantic. He argues control flow in ordinary code is the graph, diagrams should explain a run rather than be the thing executed, and a crashed run should resume from completed work. Typed results between steps are part of that argument. The two-of-three typed/parallel/snapshot trade-off and the Prime Intellect scale example are not used on the page.",
+          "limitation": "Canonical X page returned HTTP 403. Article text was read through a public mirror of the same post. One practitioner's view from a vendor founder; not an independent evaluation."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-43"
+        }
+      ]
+    },
+    {
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://claude.dev/blog/solving-code-review-at-anthropic/"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+      "method": "Page text read on 15 November 2026 from the publisher URL. Visible byline: Addy Osmani, Morgan Westlee Lunt and Qing Wang. Visible published date: Oct 15, 2026. Inventory date stays on the last page-wide pass.",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Targeted issue #101 item 2 on concept.html (source-44): review depth follows the change; agent approval is not a person's approval; approval is per commit; stop after three rounds; incidents and reverts are the guardrail.",
+          "evidence_summary": "Team account. From June to September, merged pull requests to the Claude Code codebase more than doubled while the reverted share fell by more than 40 percent. Substantive review comments went from 16% to 54% when the research preview launched. About 59% of repeated findings were code present since the first pass. After three rounds the reviewer asks the author to reconsider. An agent's approval never counts as a person's. An approval covers one commit. The reviewer runs daily against past incidents and reverts. The team does not yet have circuit breakers that tighten approval when those numbers move. Underlying counts are not published.",
+          "limitation": "Team report about its own codebase, not independently replicated. The post does not publish the counts behind the doubled pull requests, the 40 percent revert share, 16% to 54%, or about 59%. Page-wide reference date was not advanced."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-44"
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/addyosmani/status/2114604912520921136",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://x.com/addyosmani/status/2114604912520921136"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "partial_reader_recovery",
+      "http_status": 403,
+      "method": "Canonical X URL returned HTTP 403 on 15 November 2026. Full article text was read the same day from api.fxtwitter.com for the same post. Inventory date stays on the last page-wide pass.",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Targeted issue #101 item 2 on concept.html (source-45): companion account of the same Claude Code review practice, not a second measurement.",
+          "evidence_summary": "Addy Osmani, 26 October 2026 UTC+7, title How the Claude Code team does code review. States that agent approvals do not count as human approvals, that a pull-request approval is only good for one commit, and that the review system asks the author to re-evaluate after three cycles. The June-to-September pull-request and revert shares match the 15 October 2026 Anthropic article by Osmani, Lunt and Wang.",
+          "limitation": "Canonical X page returned HTTP 403. Article text was read through a public mirror of the same post. Same team's later account, not an independent replication."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-45"
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/worktrees",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://code.claude.com/docs/en/worktrees"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://code.claude.com/docs/en/worktrees",
+      "method": "Targeted direct HTTP GET on 2026-11-15; checked_on retains the inherited whole-page inventory date. Publisher Markdown also fetched at https://code.claude.com/docs/en/worktrees.md.",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "followup": "pr102",
+          "outcome": "supported",
+          "scope": "Claude parallel worktree sessions, optional gitignored-file copying, background-session worktree checks and potentially shared Bash approval settings.",
+          "evidence_summary": "Targeted 15 November 2026 publisher review; exact excerpts and capture provenance in pr102_targeted_followup.",
+          "limitation": "Vendor documentation, not a test of agent permissions or security isolation."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "66f5501dc74194bc0b5db1a4df1806394f66da5d473fa79cb2638379d74c9922",
+          "format": "publisher Markdown response",
+          "source_url": "https://code.claude.com/docs/en/worktrees.md"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-35"
+        }
+      ]
+    },
+    {
+      "url": "https://git-scm.com/docs/git-worktree",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://git-scm.com/docs/git-worktree"
+      ],
+      "checked_on": "2026-11-14",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://git-scm.com/docs/git-worktree",
+      "method": "Targeted direct HTTP GET on 2026-11-15; checked_on retains the inherited whole-page inventory date. ",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "followup": "pr102",
+          "outcome": "supported",
+          "scope": "Linked worktrees are separate working copies attached to one repository; the security-boundary warning is an inference about ordinary process access, not a Git sandbox feature.",
+          "evidence_summary": "Targeted 15 November 2026 publisher review; exact excerpts and capture provenance in pr102_targeted_followup.",
+          "limitation": "Documentation only; no local security isolation test."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "a9c89ae3bf0f6ee142347a5b7b3eba46b1f0e9291c18a721c52b90e4fcc52f97",
+          "format": "direct HTTP response",
+          "source_url": "https://git-scm.com/docs/git-worktree"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-46"
+        }
+      ]
     }
   ],
   "history": [
@@ -23645,5 +23892,113 @@
     "original_unique_urls": 317,
     "current_unique_urls": 333,
     "limits": "Indexed source text is not equivalent to direct origin HTTP GET, local acceptance tests, security qualification or a completed page-wide source audit."
+  },
+  "issue101_targeted_followup": {
+    "checked_on": "2026-11-15",
+    "scope": "Three approved High items from issue #101 on concept.html only. Page-wide reference-check date remains 14 November 2026. Source ids renumbered to 41-45 after dev reserved 38-40.",
+    "pages": [
+      "concept.html"
+    ],
+    "new_external_sources": 5,
+    "items": [
+      "harness approval authority",
+      "software-factory review",
+      "graph routing rules"
+    ],
+    "limits": "X article text was read through api.fxtwitter.com after the canonical pages returned HTTP 403. Anthropic pages were read from the publisher. No browser layout check and no representative-reader session. The LayerX case and the Prime Intellect scale example were not used."
+  },
+  "pr102_targeted_followup": {
+    "checked_on": "2026-11-15",
+    "pages": [
+      "concept.html",
+      "tech-scan-agents.html"
+    ],
+    "scope": "Targeted ADE worktree and shell-sandbox claims only; operational links and other inherited claims were not rechecked. Page-wide pass dates unchanged.",
+    "record": "pr102-ade-review-2026-11-15.md",
+    "corrections": [
+      "Issue #101 aparnadhinak review scope source-44 corrected to source-41",
+      "Issue #101 Claude classifier review scope source-45 corrected to source-42"
+    ],
+    "reviews": [
+      {
+        "file": "concept.html",
+        "url": "https://git-scm.com/docs/git-worktree",
+        "checked_on": "2026-11-15",
+        "outcome": "supported",
+        "scope": "Linked worktrees are separate working copies attached to one repository; the security-boundary warning is an inference about ordinary process access, not a Git sandbox feature.",
+        "evidence_excerpts": [
+          "Manage multiple working trees attached to the same repository."
+        ],
+        "limitation": "Documentation only; no local security isolation test.",
+        "retrieval": "Direct HTTP GET 200",
+        "final_url": "https://git-scm.com/docs/git-worktree",
+        "capture_sha256": "a9c89ae3bf0f6ee142347a5b7b3eba46b1f0e9291c18a721c52b90e4fcc52f97",
+        "capture_url": "https://git-scm.com/docs/git-worktree"
+      },
+      {
+        "file": "concept.html",
+        "url": "https://code.claude.com/docs/en/sandboxing",
+        "checked_on": "2026-11-15",
+        "outcome": "supported",
+        "scope": "Claude shell sandbox scope, default credential reads, operating systems and network restrictions inform the warning that controls need explicit scope.",
+        "evidence_excerpts": [
+          "The sandbox covers shell commands only.",
+          "Claude's file tools, MCP servers, and hooks [run outside it](#what-runs-outside-the-sandbox).",
+          "The sandbox is off by default.",
+          "The sandbox runs on macOS, Linux, and WSL2. On native Windows, Claude Code runs commands unsandboxed.",
+          "Most of the machine, including credential files such as `~/.ssh` and `~/.aws/credentials`",
+          "No direct route out. Connections go through a proxy on your machine that checks each host against your allowed domains, which start empty.",
+          "Claude Code ignores the `dangerouslyDisableSandbox` escape hatch, so when a command fails under the sandbox, Claude can't retry it unsandboxed"
+        ],
+        "limitation": "Claude Code-specific documentation; not verification of any ADE or local configuration.",
+        "retrieval": "Direct HTTP GET 200; publisher Markdown also inspected",
+        "final_url": "https://code.claude.com/docs/en/sandboxing",
+        "capture_sha256": "2df1b27e787a5c7919c328a565ee08e5cb34a706d0b89e1390f70c39a915e447",
+        "capture_url": "https://code.claude.com/docs/en/sandboxing.md"
+      },
+      {
+        "file": "tech-scan-agents.html",
+        "url": "https://code.claude.com/docs/en/worktrees",
+        "checked_on": "2026-11-15",
+        "outcome": "supported",
+        "scope": "Claude parallel worktree sessions, optional gitignored-file copying, background-session worktree checks and potentially shared Bash approval settings.",
+        "evidence_excerpts": [
+          "Running each Claude Code session in its own worktree gives it a separate copy of the files to edit, so one session can build a feature while a second fixes a bug.",
+          "A worktree is a fresh checkout, so untracked files like `.env` or `.env.local` from your main repository are not present.",
+          "To copy them automatically when Claude creates a worktree, add a `.worktreeinclude` file to your project root.",
+          "Only files that match a pattern and are also gitignored are copied, so tracked files are never duplicated.",
+          "None of them tracks which files a shell command writes, so a command that writes into the main checkout without running git there, such as `cp` or a shell redirect, isn't refused by them.",
+          "choosing \"Yes, and don't ask again\" for a Bash command in a worktree session saves the rule to the main checkout's `.claude/settings.local.json`.",
+          "The rule applies in the main checkout and in every other worktree of the repository, and it survives the worktree's removal.",
+          "On Windows and in the other cases where Claude Code [doesn't use the repository root](https://code.claude.com/docs/en/settings.md#where-claude-code-looks-for-each-file), the rule stays with that worktree. See [where approvals are saved](https://code.claude.com/docs/en/permissions.md#permission-system)."
+        ],
+        "limitation": "Vendor documentation, not a test of agent permissions or security isolation.",
+        "retrieval": "Direct HTTP GET 200; publisher Markdown also inspected",
+        "final_url": "https://code.claude.com/docs/en/worktrees",
+        "capture_sha256": "66f5501dc74194bc0b5db1a4df1806394f66da5d473fa79cb2638379d74c9922",
+        "capture_url": "https://code.claude.com/docs/en/worktrees.md"
+      },
+      {
+        "file": "tech-scan-agents.html",
+        "url": "https://code.claude.com/docs/en/sandboxing",
+        "checked_on": "2026-11-15",
+        "outcome": "supported",
+        "scope": "Claude shell sandbox excludes file tools, hooks and MCP servers; unsandboxed retry depends on configuration.",
+        "evidence_excerpts": [
+          "The sandbox covers shell commands only.",
+          "Claude's file tools, MCP servers, and hooks [run outside it](#what-runs-outside-the-sandbox).",
+          "The sandbox is off by default.",
+          "The sandbox runs on macOS, Linux, and WSL2. On native Windows, Claude Code runs commands unsandboxed.",
+          "Most of the machine, including credential files such as `~/.ssh` and `~/.aws/credentials`",
+          "No direct route out. Connections go through a proxy on your machine that checks each host against your allowed domains, which start empty.",
+          "Claude Code ignores the `dangerouslyDisableSandbox` escape hatch, so when a command fails under the sandbox, Claude can't retry it unsandboxed"
+        ],
+        "limitation": "Vendor documentation, not verification of the pilot or any ADE.",
+        "retrieval": "Direct HTTP GET 200; publisher Markdown also inspected",
+        "final_url": "https://code.claude.com/docs/en/sandboxing",
+        "capture_sha256": "2df1b27e787a5c7919c328a565ee08e5cb34a706d0b89e1390f70c39a915e447",
+        "capture_url": "https://code.claude.com/docs/en/sandboxing.md"
+      }
+    ]
   }
 }
