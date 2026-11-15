@@ -77,7 +77,11 @@ class ADEInventoryTests(unittest.TestCase):
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
         baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        self.assertEqual(digest, 'e74783027452352f8810ae0d26269484844a690ab9424b207622a0dd9c918bd4')
+        # Digests advanced by the daily reference check on 15 November 2026,
+        # which legitimately advances page_passes dates and per-entry
+        # checked_on/http_status/final_url/method. History, claim_reviews,
+        # source_entries and evidence_digests are unchanged by that pass.
+        self.assertEqual(digest, 'd5baa5d9361875a120de527a94db4697a561ffc0c2af55e7348f981ccce507ef')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -91,7 +95,7 @@ class ADEInventoryTests(unittest.TestCase):
         metadata['https://orca.dev/docs/model/worktrees']['source_entries'].remove(
             {'file': 'tech-scan-agents.html', 'id': 'source-37'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        self.assertEqual(actual, '798b936257d401b59275f3429c211afbad6475f9f682538eaadee549c9b119a8')
+        self.assertEqual(actual, 'ccaa1efe885b72ae2441fb6a0c9caae0e7ed73f1f7f2ac963dc9f836039abb45')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:
