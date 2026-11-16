@@ -79,6 +79,14 @@
           <p>This page is still a draft and may not reflect the latest technologies or releases.</p>
           <p>The entries are based on published documentation, not local deployment tests. Carry out your own research before adopting any option.</p>
         </aside>
+        <aside class="tech-scan-key-points" aria-labelledby="tech-scan-key-points-label">
+          <p class="tech-scan-key-points-label" id="tech-scan-key-points-label">Key points</p>
+          <ul>
+            <li>Start with the decision you need to make, then open the matching component reference.</li>
+            <li>Scope is AWS; managed Claude or OpenAI through Bedrock is the default route, with direct APIs as exceptions.</li>
+            <li>Treat entries as research references, not local deployment tests; prove the exact route before adoption.</li>
+          </ul>
+        </aside>
         <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false">
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker>
@@ -185,7 +193,7 @@
         <section id="planned-spokes">
           <h2>Coverage map</h2>
           <p>The ten component responsibilities are covered by published references. The Languages and AWS platform views link across those references rather than repeat their product entries.<a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
-          <details class="concept-reference">
+          <details class="concept-reference tech-scan-detail">
             <summary>Publication coverage (optional)</summary>
             <figure class="concept-figure" id="fig-waves" data-diagram="static">
               <figcaption id="fig-waves-title-caption"><span id="fig-waves-title">Figure 2. Tech Scan components across Waves 1, 2 and 3.</span></figcaption>
@@ -365,7 +373,7 @@
         <section id="cross-cutting-views">
           <h2>Shared interfaces and stack views</h2>
           <p>The <a href="tech-scan-stack-views.html#languages">Languages view</a> shows how the choices fit Java, TypeScript with React, or Python; the <a href="tech-scan-stack-views.html#aws-platform">AWS platform view</a> shows how AWS services fit together. React is a JavaScript UI library, not a language.<a href="#source-6" aria-label="Source 6: React, Describing the UI">[6]</a> Each view links to the maintained product entry instead of duplicating it.<a href="#source-2" aria-label="Source 2: GitHub issue 59, Tech Scan hub-and-spoke proposal">[2]</a></p>
-          <details class="concept-reference">
+          <details class="concept-reference tech-scan-detail">
             <summary>Protocols, tools and local conventions</summary>
             <p>These names describe different things; they are not interchangeable standards or evidence that an integration is authorised:</p>
             <ul>
@@ -389,7 +397,7 @@
         </section>
         <section id="layer-map">
           <h2>Other delivery responsibilities</h2>
-          <details class="concept-reference">
+          <details class="concept-reference tech-scan-detail">
             <summary>Responsibilities covered by the references</summary>
             <p>Context covers retrieval and source permissions. Workflows covers specifications and work tracking. Verification covers build-loop tests, security scans and quality gates. Delivery covers CI/CD, governance, operational observability and outcome measurement. Factories and Agents cover coding tools and coordination across tasks. The ten responsibilities are listed in the refinement record; the detailed layer-to-spoke table was removed from this page.</p>
           </details>

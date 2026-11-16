@@ -75,6 +75,14 @@
             questions</a></div></li>
           </ol>
         </figure>
+        <aside class="tech-scan-key-points" aria-labelledby="tech-scan-key-points-label">
+          <p class="tech-scan-key-points-label" id="tech-scan-key-points-label">Key points</p>
+          <ul>
+            <li>Separate model routing, tool/MCP access and usage reporting before choosing a product.</li>
+            <li>Start with Bedrock plus AgentCore Gateway where a shared control point is needed; document any exception.</li>
+            <li>Check identity, credentials, fallbacks and egress for every destination before adoption.</li>
+          </ul>
+        </aside>
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page"><a href="#purpose">Separate model routing from tool access</a>
@@ -183,7 +191,7 @@
           controls.</p>
           <p>A Bedrock Managed Knowledge Base can be exposed through AgentCore Gateway.<a href="#source-6" aria-label="Source 6: AWS, Amazon Bedrock AgentCore: Gateway target connector, Managed Knowledge Base">[6]</a> Begin with Retrieve plus an approved Claude or OpenAI model for generation,<a href="#source-7" aria-label="Source 7: AWS, Amazon Bedrock: Knowledge Bases">[7]</a> with embeddings and reranking approved separately.<a href="#source-9" aria-label="Source 9: AWS, Amazon Bedrock: Knowledge Bases, supported features">[9]</a></p>
           <p>ACL-aware retrieval respects access control lists, but the managed service does not authenticate the end user: the application supplies verified identity.<a href="#source-8" aria-label="Source 8: AWS, Amazon Bedrock: Managed Knowledge Bases, ACL-aware retrieval">[8]</a> A shared retrieval endpoint cannot replace that identity check.</p>
-          <details>
+          <details class="tech-scan-detail">
             <summary>Match other controls to their enforcement points</summary>
             <p>The AgentCore harness can use these managed components,<a href="#source-1" aria-label="Source 1: AWS, Amazon Bedrock AgentCore: Harness">[1]</a> but each control needs its own scope. IAM sets identity and resource boundaries; AgentCore Policy uses Cedar for configured Gateway authorisation.<a href="#source-2" aria-label="Source 2: AWS, Amazon Bedrock AgentCore: Policy">[2]</a></p>
             <p>CloudFormation Guard checks structured data.<a href="#source-10" aria-label="Source 10: AWS, CloudFormation Guard">[10]</a> It is not interchangeable with request authorisation or content guardrails. None of these components implies complete policy-framework coverage or replaces retained human decisions.</p>
@@ -194,7 +202,7 @@
           <p>First name the capability the Bedrock and AgentCore baseline cannot meet. Then consider existing infrastructure and who will operate the alternative. Being on AWS, Kubernetes or a managed service does not by itself decide the gateway.</p>
           <p>Consider LiteLLM proxy when the required routing behaviour is missing from the baseline and the team can operate another service. LiteLLM documents load balancing, fallbacks, timeouts and retries across deployments and providers.<a href="#source-20" aria-label="Source 20: LiteLLM, Router - Load Balancing">[20]</a> Compare the exact configuration and operating cost, not just the provider count.</p>
           <p>Any alternative still needs the required API, approved data location and retention, identity, security boundaries and an operational owner. A hosted gateway's supported-model catalogue is not the team's approved list; restrict every primary and fallback route accordingly.</p>
-          <details>
+          <details class="tech-scan-detail">
             <summary>Explore other gateway candidates and earlier comparison notes</summary>
             <p>The earlier secondary comparison retains useful research leads, but its packaging, licensing and product-history claims are not independently verified in this refinement.<a href="#source-12" aria-label="Source 12: VDF, AI gateway comparison">[12]</a> Licensing, incident and lifecycle claims need current first-party terms, advisories or announcements before they inform adoption.</p>
             <div class="table-scroll" tabindex="0" role="region" aria-label="Additional gateway candidates and evidence limits">

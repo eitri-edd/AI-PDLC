@@ -69,6 +69,14 @@
           </ol>
         </figure>
         <!-- PAGE MAP END -->
+        <aside class="tech-scan-key-points" aria-labelledby="tech-scan-key-points-label">
+          <p class="tech-scan-key-points-label" id="tech-scan-key-points-label">Key points</p>
+          <ul>
+            <li>Match the execution boundary to the task: managed shell, Code Interpreter or Nitro Sandboxes.</li>
+            <li>Check isolation, network, credential, secret and approval boundaries separately.</li>
+            <li>Prove expected and observed denials, cleanup and exact runtime before relying on the boundary.</li>
+          </ul>
+        </aside>
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page"><a href="#purpose">Choose the execution boundary</a>
@@ -178,7 +186,7 @@
               </tbody>
             </table>
           </div>
-          <details>
+          <details class="tech-scan-detail">
             <summary>Nitro deployment mechanics and the AWS execution catalogue</summary>
             <p>Open this after choosing to operate the infrastructure. The launch material below describes specific deployment modes, not settings inherited by every managed harness. Recheck supported versions, regions and operating limits before deployment.</p>
           <p>For teams operating their own supported container infrastructure, investigate <strong>AWS Nitro Sandboxes</strong>, announced 9 November 2026: a hardware-isolated lightweight virtual machine per EKS pod, ECS task or EC2 workload, managed by the Nitro Hypervisor, at no extra charge beyond the instance, in all commercial regions, explicitly positioned for LLM-generated code and AI agents.<a href="#source-1" aria-label="Source 1: AWS, AWS Nitro Sandboxes">[1]</a><a href="#source-2" aria-label="Source 2: AWS Containers Blog, AWS Nitro Sandboxes">[2]</a> On EKS and ECS the sandbox is a Firecracker microVM running on Nitro instead of KVM, so each pod gets its own operating system and kernel.</p>
@@ -241,7 +249,7 @@
           <p>Runtime Instances is not per-session microVM compute: co-resident agents in an Instances session share a filesystem and can access each other's execution-role credentials.
             Do not treat it as an isolation boundary for untrusted code.<a href="#source-12" aria-label="Source 12: AWS, Bedrock AgentCore Runtime Instances security">[12]</a></p>
           </details>
-          <details>
+          <details class="tech-scan-detail">
             <summary>Code Interpreter package-installation advisories</summary>
           <h3>AgentCore advisories</h3>
           <p>The cited package-installation advisories concern the SDK around Code Interpreter, not a demonstrated microVM escape.
@@ -262,7 +270,7 @@
           <h2>When the starting point lacks a required capability</h2>
           <p>Investigate a self-hosted sandbox platform when the chosen AWS route cannot provide a required sandbox API, reusable environment template or pause-and-resume behaviour. Name that requirement first; these candidates are not additional layers to install by default.</p>
           <p>Evaluate each platform against its documented deployment contract: required host capabilities, isolation implementation, supported AWS deployment and network and secret controls. Do not assume that E2B or another sandbox platform can be nested into Nitro, Kata or gVisor merely because those names describe isolation options. gVisor is a userspace application kernel, not a microVM; its security and syscall-compatibility trade-offs need their own assessment.<a href="#source-19" aria-label="Source 19: gVisor, Architecture guide: Introduction">[19]</a></p>
-          <details>
+          <details class="tech-scan-detail">
             <summary>Sandbox-platform candidates from the initial research</summary>
             <div class="table-scroll" tabindex="0" role="region" aria-label="Sandbox-platform investigation list">
               <table>
@@ -280,7 +288,7 @@
         <section id="research-only">
           <h2>If building the execution layer directly</h2>
           <p>First establish why a managed execution route cannot meet the task. A runtime boundary does not by itself provide the sandbox API, templates, lifecycle or destination policy.</p>
-          <details>
+          <details class="tech-scan-detail">
             <summary>Isolation primitives and host software to investigate</summary>
             <p>The initial research named Firecracker with firecracker-containerd, Kata Containers, gVisor (runsc) and Bottlerocket OS.<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a> Separate a VM runtime from an application kernel and a hardened host OS; they solve different parts of the problem. gVisor documents its application-kernel boundary and residual limits directly.<a href="#source-19" aria-label="Source 19: gVisor, Architecture guide: Introduction">[19]</a></p>
             <p>Check each project's current licence, supported host and syscall or device requirements. Do not infer Kata compatibility from general EC2 nested-virtualisation availability, or classify a host OS as a per-task execution boundary.</p>
@@ -293,7 +301,7 @@
             <li><strong>Runtime Instances as a per-session boundary:</strong> co-resident agents share a filesystem and can access each other's execution-role credentials.<a href="#source-12" aria-label="Source 12: AWS, Bedrock AgentCore Runtime Instances security">[12]</a></li>
             <li><strong>Non-AWS cloud compute:</strong> hosted sandboxes from Modal, Deno, Fly, Vercel or Cloudflare are outside the agreed scope of this scan. That does not turn an SDK library into a cloud deployment or establish that any managed SaaS is approved.</li>
           </ul>
-          <details>
+          <details class="tech-scan-detail">
             <summary>Historical lifecycle warnings to recheck</summary>
             <p>Sysbox is slow-moving and community-maintained, not retired: v0.7.1 shipped 28 July 2026, adding support on Ubuntu 24.04 with kernel 6.8+ under containerd 2.x (v0.7.0, 2 March 2025, already added Kubernetes 1.33–1.35 and containerd 2.0.5+). Check the current release before extending an inherited deployment.</p>
             <p>The initial research flagged Daytona OSS; it was archived (frozen at v0.190.0, AGPL-3.0), so do not build on it.</p>

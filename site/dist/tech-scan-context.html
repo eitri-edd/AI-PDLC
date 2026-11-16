@@ -59,6 +59,14 @@
         <li class="page-map-node"><strong>Protect</strong><div class="page-map-links"><a href="#memory">Protect memory reads</a></div></li>
         <li class="page-map-node"><strong>Construct</strong><div class="page-map-links"><a href="#construction">Build the context</a></div></li>
         <li class="page-map-node"><strong>Test</strong><div class="page-map-links"><a href="#pilot">Run the pilot</a></div></li></ol></figure>
+        <aside class="tech-scan-key-points" aria-labelledby="tech-scan-key-points-label">
+          <p class="tech-scan-key-points-label" id="tech-scan-key-points-label">Key points</p>
+          <ul>
+            <li>Start with reviewed instructions and task files; add retrieval or memory only for a defined need.</li>
+            <li>Prefer Bedrock Managed Knowledge Base and AgentCore Memory where they fit the requirement.</li>
+            <li>Prove read isolation, freshness, cost and failure handling in the pilot.</li>
+          </ul>
+        </aside>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page"><a href="#choices">Choose the source</a>
 <a href="#memory">Protect memory reads</a>
 <a href="#construction">Build the context</a>
@@ -144,7 +152,7 @@
         <p>If an isolation test fails, stop use for private data and fix the enforcement before retesting. Use <a href="tech-scan-verification.html">Tech Scan: Verification</a> to define retrieval-quality cases and acceptance evidence; a vendor capability is not a local result. Review outcomes with the service and data owners before adoption.</p></section>
         <section id="do-not-use"><h2>Do not start on a closed or unmaintained source</h2>
         <p>Do not start new work on a product whose vendor has ended support or maintenance, and do not treat a prompt or a registry listing as a boundary. Use the replacement named in each row.</p>
-        <details>
+        <details class="tech-scan-detail">
           <summary>Closed products and unsafe practices — open for exact replacements</summary>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Sources and practices to avoid"><table><caption>Closed products and unsafe practices</caption><thead><tr><th scope="col">Do not use</th><th scope="col">Why</th><th scope="col">Use instead</th></tr></thead><tbody>
         <tr><th scope="row">Amazon Kendra for a new project</th><td>Maintenance Mode effective 30 June 2026; closed to new customers 30 July 2026.<a href="#source-9" aria-label="Source 9: AWS, Amazon Kendra availability change">[9]</a></td><td>Bedrock Managed Knowledge Base.</td></tr>

@@ -391,7 +391,7 @@ if (sections.length) {
 let printDetails = [];
 window.addEventListener('beforeprint', () => {
   printing = true;
-  printDetails = [...document.querySelectorAll('.figure-reading, .concept-reference')].map((el) => [el, el.open]);
+  printDetails = [...document.querySelectorAll('.figure-reading, .concept-reference, .tech-scan-detail')].map((el) => [el, el.open]);
   printDetails.forEach(([el]) => {
     el.open = true;
   });

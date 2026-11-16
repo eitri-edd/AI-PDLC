@@ -61,6 +61,14 @@
     <li class="page-map-node"><strong>Controls and evidence</strong><div class="page-map-links"><a href="#controls">Control access and run a pilot</a><a href="#do-not-use">Do not start on retired products</a><a href="#gaps">Gaps and open questions</a><a href="#sources">Sources</a></div></li>
   </ol>
 </figure>
+<aside class="tech-scan-key-points" aria-labelledby="tech-scan-key-points-label">
+<p class="tech-scan-key-points-label" id="tech-scan-key-points-label">Key points</p>
+<ul>
+<li>Start with one agent and an AWS-first Bedrock route; add coordination only for separable work.</li>
+<li>Keep editor, agent, host and model route as separate decisions.</li>
+<li>Prove permissions, worktree or sandbox boundaries, cost and failure handling before widening the pilot.</li>
+</ul>
+</aside>
 <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page"><a href="#decision">Decision gates</a>
 <a href="#routes">Agents and model routes</a>
 <a href="#coordination">Coordination</a>
@@ -175,7 +183,7 @@
 </section>
 <section id="do-not-use"><h2>Do not start on retired products</h2>
 <p>Do not start new work on a product whose vendor has ended support. Use the replacement named in each row.</p>
-<details>
+<details class="tech-scan-detail">
           <summary>Retired products and replacements — open for exact replacements</summary>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Retired products and replacements"><table><caption>Retired products and their replacements</caption><thead><tr><th scope="col">Product</th><th scope="col">Status</th><th scope="col">Use instead</th></tr></thead><tbody>
 <tr><th scope="row">Amazon Q Developer for GitHub</th><td>Support ends 30 January 2027; new installations stop 18 November 2026.</td><td>Kiro and the Kiro GitHub App.<a href="#source-13" aria-label="Source 13: AWS, Amazon Q Developer for GitHub">[13]</a></td></tr>
