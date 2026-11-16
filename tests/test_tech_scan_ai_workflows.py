@@ -1,4 +1,4 @@
-"""Editorial contracts for the AI workflows trend reference (issue 60)."""
+"""Editorial contracts for the AI workflows trend reference (content-sourcing agent scan)."""
 from pathlib import Path
 import unittest
 

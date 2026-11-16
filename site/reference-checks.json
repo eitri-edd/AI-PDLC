@@ -223,7 +223,7 @@
     },
     "tech-scan-ai-workflows.html": {
       "checked_on": "2026-11-16",
-      "scope": "New page 16 November 2026: single canonical source (issue 60 proposal and acceptance-analysis comment) read in full and page claims compared with it; shared operational links retain prior disposition.",
+      "scope": "New page 16 November 2026: single canonical source (content-sourcing agent research record, issue 60) read in full and page claims compared with it; shared operational links retain prior disposition.",
       "status": "completed with explicit limitations",
       "source_entries": 1,
       "unique_fetch_destinations": 5
@@ -6238,9 +6238,9 @@
         {
           "file": "tech-scan-ai-workflows.html",
           "outcome": "limited",
-          "scope": "Issue 60 viral-index method, research window and ranked listing; follow-up comment on developer sentiment and industry acceptance (scores, dimension weights, sensitivity check, adoption signals, per-pack findings, method and caveats). Used in Read the two rankings, Match packs to lifecycle needs, Bound authority and cost and Gaps and refresh.",
-          "evidence_summary": "HTTP 200; proposal and the single comment inspected on 16 November 2026. Page figures (acceptance scores, viral ranks, benchmark results, security-review findings) match the issue text.",
-          "limitation": "Research analysis, not primary product documentation or local validation. Third-party X posts, Hacker News threads, benchmarks, security reviews and marketplace listings cited in the issue were not independently reverified. Issue text is living content."
+          "scope": "Content-sourcing agent research record (published as issue 60): viral-index method, research window and ranked listing; follow-up acceptance analysis (scores, dimension weights, sensitivity check, adoption signals, per-pack findings, method and caveats). Used in Read the two rankings, Match packs to lifecycle needs, Bound authority and cost and Gaps and refresh.",
+          "evidence_summary": "HTTP 200; research record and its single analysis comment inspected on 16 November 2026. Page figures (acceptance scores, viral ranks, benchmark results, security-review findings) match the record.",
+          "limitation": "Research analysis produced by the content-sourcing agents, not primary product documentation or local validation. Third-party X posts, Hacker News threads, benchmarks, security reviews and marketplace listings it cites were not independently reverified. The record is living content."
         }
       ],
       "source_entries": [
