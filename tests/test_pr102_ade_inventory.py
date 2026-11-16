@@ -77,6 +77,9 @@ class ADEInventoryTests(unittest.TestCase):
         # Later pages add their own pass, source and shared-link reviews; exclude
         # only those additions so inherited records stay pinned.
         later_pages = {'tech-scan-ai-workflows.html'}
+        # URLs that exist only for the AI workflows page are part of that page's
+        # source pass, not the inherited inventory this digest pins.
+        new_urls |= {r['url'] for r in self.inventory['references'] if set(r['files']) <= later_pages}
         new_urls |= {'https://github.com/eitri-edd/AI-PDLC/issues/60'}
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
