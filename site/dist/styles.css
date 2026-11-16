@@ -781,6 +781,47 @@ strong { font-weight: 600; color: var(--text-primary); }
   line-height: 1.55;
   color: var(--text-secondary);
 }
+.tech-scan-key-points {
+  margin: 1.25rem 0 1.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-subtle) 100%);
+  box-shadow: var(--shadow-xs);
+}
+.tech-scan-key-points-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+.tech-scan-key-points ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.tech-scan-key-points li + li {
+  margin-top: 0.35rem;
+}
+.tech-scan-detail {
+  margin: 1.25rem 0;
+  padding: 0 1rem 1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-subtle) 100%);
+  box-shadow: var(--shadow-xs);
+}
+.tech-scan-detail:not([open]) {
+  padding-bottom: 0;
+}
+.tech-scan-detail > summary {
+  padding: 0.75rem 0;
+}
+.tech-scan-detail[open] > summary {
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
 .page-map .page-map-nodes,
 .page-map .page-map-steps {
   display: grid;

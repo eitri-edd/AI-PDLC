@@ -68,6 +68,14 @@
             <li class="page-map-node"><strong>Limits</strong><div class="page-map-links"><a href="#do-not-use">Check inherited integrations before extending them</a><a href="#gaps">What to establish before adoption</a></div></li>
           </ol>
         </figure>
+        <aside class="tech-scan-key-points" aria-labelledby="tech-scan-key-points-label">
+          <p class="tech-scan-key-points-label" id="tech-scan-key-points-label">Key points</p>
+          <ul>
+            <li>Start with the managed AgentCore harness; add a component only for a missing responsibility.</li>
+            <li>Keep loop, tools, memory, evaluation and observability requirements explicit before extending the stack.</li>
+            <li>Pin versions and prove the controls in a representative task before adoption.</li>
+          </ul>
+        </aside>
         <details class="mobile-contents">
           <summary>On this page</summary>
           <nav aria-label="On this page"><a href="#purpose">What needs to run the agent?</a>
@@ -178,7 +186,7 @@
           </div>
           <p>Using the AI SDK library does not require Vercel hosting. Its Amazon Bedrock provider can call Bedrock from the application's AWS environment; this library choice does not add a non-AWS cloud route.<a href="#source-29" aria-label="Source 29: AI SDK, Amazon Bedrock provider">[29]</a> Keep the approved model and individually allowed tools explicit whichever library supplies the loop.</p>
           <p>Keep evaluation separate from telemetry. Define representative task cases and expected outcomes, then check whether the managed evaluation workflow fits them. For tracing, begin with CloudWatch and AgentCore Observability; Coding Agent Insights dashboards depend on expected telemetry names and resource attributes.<a href="#source-16" aria-label="Source 16: AWS, Amazon Bedrock AgentCore developer guide: Harness operations">[16]</a><a href="#source-17" aria-label="Source 17: AWS, Amazon CloudWatch user guide: Coding Agent Insights">[17]</a></p>
-          <details>
+          <details class="tech-scan-detail">
             <summary>Additional candidates: open after identifying a missing responsibility</summary>
             <p>The initial research named the following candidates. They are a shortlist for further research, not distinct recommendations: the evidence does not discriminate between products with the same trigger. Verify the current licence, release, deployment contract and AWS operating model before selecting a candidate.<a href="#source-22" aria-label="Source 22: GitHub issue 54, Tech Scan proposal and deep-research update">[22]</a></p>
             <ul>

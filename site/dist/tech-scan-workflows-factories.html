@@ -62,6 +62,14 @@
             <li class="page-map-node"><strong>Pilot and evidence</strong><div class="page-map-links"><a href="#pilot">Test before adoption</a><a href="#do-not-use">Do not adopt a closing factory</a><a href="#gaps">Gaps and open questions</a><a href="#sources">Sources</a></div></li>
           </ol>
         </figure>
+        <aside class="tech-scan-key-points" aria-labelledby="tech-scan-key-points-label">
+          <p class="tech-scan-key-points-label" id="tech-scan-key-points-label">Key points</p>
+          <ul>
+            <li>Turn an approved issue into a reviewable PR; never give the agent merge or release authority.</li>
+            <li>AWS has no managed issue-to-PR factory; trial Claude Code Action on Bedrock as a component after the gates.</li>
+            <li>Enforce protected branches, independent CI, scoped credentials and human release decisions before pilot.</li>
+          </ul>
+        </aside>
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page"><a href="#purpose">Choose the work and outcome</a><a href="#candidate">Build the AWS-first candidate</a><a href="#controls">Enforce the boundaries</a><a href="#pilot">Test before adoption</a><a href="#sources">Sources</a></nav></details>
         <section id="purpose"><h2>Choose the work and outcome</h2>
           <p>A <strong>workflow</strong> arranges activities, dependencies and decisions: for example, a product owner and engineer agree acceptance criteria, review a design and break it into tasks. A <strong>software factory</strong>, as used here, assembles the intake, agent execution, tests and review handoff that can turn an issue into a pull request (PR). It is a composition, not a guarantee of correctness or an approval to deploy. Do not confuse this with AWS AI Factories, which is managed on-premises AI infrastructure for training and inference, not an issue-to-PR service.<a href="#source-10" aria-label="Source 10: GitHub issue 64, Wave 2 research proposal">[10]</a></p>
@@ -184,7 +192,7 @@
 </section>
         <section id="do-not-use"><h2>Do not adopt a closing factory</h2>
 <p>Do not build a factory on a product whose vendor has ended support. Use the replacement named in each row.</p>
-<details>
+<details class="tech-scan-detail">
           <summary>Closing factories and replacements — open for exact replacements</summary>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Closing factories and replacements"><table><caption>Closing factories and their replacements</caption><thead><tr><th scope="col">Product</th><th scope="col">Status</th><th scope="col">Use instead</th></tr></thead><tbody>
 <tr><th scope="row">Amazon Q Developer for GitHub</th><td>Support ends 30 January 2027; new installations stop 18 November 2026.</td><td>Kiro and the Kiro GitHub App.<a href="#source-12" aria-label="Source 12: AWS, Amazon Q Developer for GitHub">[12]</a></td></tr>
