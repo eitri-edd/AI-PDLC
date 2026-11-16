@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare community AI workflow and skill packs by acceptance, lifecycle fit, authority limits and cost before a local pilot.">
+  <title>Tech Scan: AI workflows · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article tech-scan-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">AI workflows</span></nav>
+        <header class="article-header"><p class="eyebrow">Development guide</p><h1>Tech Scan: AI workflows</h1><p class="lead">Which community workflow and skill packs are worth assessing for agent-assisted delivery, and what separates launch attention from sustained acceptance?</p><p id="tech-scan-note">Draft trend reference from the research recorded in <a href="#source-1">issue 60</a>; no pack has been locally installed, piloted or benchmarked for this guidance.</p></header>
+        <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note"><figcaption id="page-map-caption">This page at a glance</figcaption><p id="page-map-note" class="page-map-note">Developer route: separate attention from acceptance → shortlist by lifecycle need → bound authority and cost → pilot against a no-pack baseline before adoption. These groups organise the page; they are not lifecycle stages.</p><ol class="page-map-nodes" role="list">
+        <li class="page-map-node"><strong>Signals</strong><div class="page-map-links"><a href="#signals">Read the two rankings</a></div></li>
+        <li class="page-map-node"><strong>Fit</strong><div class="page-map-links"><a href="#lifecycle">Match packs to lifecycle needs</a></div></li>
+        <li class="page-map-node"><strong>Boundaries</strong><div class="page-map-links"><a href="#controls">Bound authority and cost</a></div></li>
+        <li class="page-map-node"><strong>Pilot and evidence</strong><div class="page-map-links"><a href="#pilot">Pilot before adoption</a><a href="#gaps">Gaps and refresh</a><a href="#sources">Sources</a></div></li></ol></figure>
+        <aside class="tech-scan-key-points" aria-labelledby="tech-scan-key-points-label">
+          <p class="tech-scan-key-points-label" id="tech-scan-key-points-label">Key points</p>
+          <ul>
+            <li>Shortlist on sustained acceptance: Matt Pocock's skills and Superpowers lead; launch-week virality favoured pstack.</li>
+            <li>A skill pack is instructions to an agent, not a control; keep merge, release and approval gates outside it.</li>
+            <li>Enable only the skills you need and compare cost, pass rate and rework against a no-pack baseline.</li>
+          </ul>
+        </aside>
+        <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page"><a href="#signals">Read the two rankings</a><a href="#lifecycle">Match packs to lifecycle needs</a><a href="#controls">Bound authority and cost</a><a href="#pilot">Pilot before adoption</a><a href="#sources">Sources</a></nav></details>
+        <section id="signals"><h2>Read the two rankings</h2>
+          <p>A <strong>workflow or skill pack</strong>, as used here, is a published set of agent instructions, commands and playbooks, such as a spec-first or test-driven routine, that a coding agent such as Claude Code, Cursor or Codex loads. It shapes how the agent works; it is not the <a href="tech-scan-agents.html">coding agent</a>, the <a href="tech-scan-harness.html">harness</a> or an issue-to-PR <a href="tech-scan-workflows-factories.html">factory</a>.</p>
+          <p>Issue 60 ranked seven packs by a <strong>viral index</strong>: engagement on the top three X posts for each pack between 15 October and 12 November 2026. A follow-up analysis on 16 November 2026 scored the same packs for <strong>industry acceptance</strong>: independent sentiment, breadth of discussion, sustained adoption, independent endorsement and maturity. The two largely disagree. The viral index rewards large audiences and packs launched inside the window; acceptance rewards sustained use and independent validation.<a href="#source-1" aria-label="Source 1: GitHub issue 60, AI workflow trend listing and acceptance analysis">[1]</a> Use acceptance to shortlist and the viral index only to spot new entrants.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="AI workflow packs by acceptance and viral rank; scroll horizontally if needed"><table><caption>Seven packs, ordered by acceptance score (0–100)</caption><thead><tr><th scope="col">Pack</th><th scope="col">What it does</th><th scope="col">Acceptance</th><th scope="col">Viral rank</th><th scope="col">Main caution</th></tr></thead><tbody>
+          <tr><th scope="row">Matt Pocock skills</th><td>Small composable skills: <code>grill-me</code> alignment, TDD, specs, <code>/pr</code>, <code>/retro</code></td><td>1 (92.2)</td><td>2</td><td>Can be overkill; some skills are TypeScript- or web-specific; listings use context</td></tr>
+          <tr><th scope="row">Superpowers</th><td>Brainstorm, reviewed plan, then strict TDD</td><td>2 (84.0)</td><td>7</td><td>Token and context cost; slow on small tasks</td></tr>
+          <tr><th scope="row">Agent Skills (Addy Osmani)</th><td>About 25 lifecycle skills: spec, plan, build, test, review, ship</td><td>3 (64.2)</td><td>6</td><td>Ceremony on small fixes; large pack; agents drift from the spec</td></tr>
+          <tr><th scope="row">pstack</th><td><code>/poteto-mode</code> routes tasks to playbooks; verify before “done”; less code</td><td>4 (62.5)</td><td>1</td><td>Heavy token use; one independent benchmark showed no pass-rate gain</td></tr>
+          <tr><th scope="row">gstack</th><td>Role-based sprint pipeline (office hours, reviews, <code>/qa</code>, <code>/ship</code>)</td><td>5 (61.0)</td><td>5</td><td>Bloat, token cost, telemetry and reported security findings</td></tr>
+          <tr><th scope="row">tstack</th><td>Nine PR-lifecycle skills, including multi-model <code>council</code> review</td><td>6 (33.5)</td><td>3</td><td><code>full-send</code> merges unattended and overrides ask-first rules</td></tr>
+          <tr><th scope="row">ub-mode</th><td>“Make it work, then make it right” with TDD and metric quality gates</td><td>7 (28.5)</td><td>4</td><td>Rigid metric targets; companion tools hard to find; pushes to main</td></tr>
+          </tbody></table></div>
+          <p>Ranks 3 to 5 are effectively tied, and tstack and ub-mode were about three weeks old when scored. The scores are an analyst's judgement against small samples, not a measurement of productivity.<a href="#source-1" aria-label="Source 1: GitHub issue 60, AI workflow trend listing and acceptance analysis">[1]</a></p>
+          <details class="tech-scan-detail"><summary>How the two scores were calculated</summary>
+            <p><strong>Viral index.</strong> For each pack, take the top three original, on-topic, non-repost X posts in the window. Post engagement is likes + 2 × reposts + 2 × quotes + replies + 0.5 × bookmarks; the pack score is the sum of the three. The index is 100 × score ÷ the top score (pstack, 38,610). Impressions, mention counts and GitHub stars were reported separately and are not part of the index. The search was relevancy-ranked with at most 25 results per query, so it is a sample, not a census.</p>
+            <p><strong>Acceptance score.</strong> Each pack was scored 1–10 on five dimensions: sentiment (25%), breadth (20%), sustained adoption (25%), independent endorsement (20%) and maturity (10%); the composite is 10 × the weighted sum. Inputs included hand-coded X samples excluding the author's own posts, Hacker News threads, a Reddit archive, GitHub activity, CLI install counts, official marketplace listings and independent reviews such as the Thoughtworks Technology Radar. With equal weights the order holds, except that pstack and gstack tie.<a href="#source-1" aria-label="Source 1: GitHub issue 60, AI workflow trend listing and acceptance analysis">[1]</a></p>
+          </details>
+        </section>
+        <section id="lifecycle"><h2>Match packs to lifecycle needs</h2>
+          <p>Start from the gap in your current delivery practice, not from the pack. The mapping below follows each pack's documented focus as summarised in issue 60; it is not evidence that the pack improves that stage.<a href="#source-1" aria-label="Source 1: GitHub issue 60, AI workflow trend listing and acceptance analysis">[1]</a></p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Lifecycle stages and the packs that target them; scroll horizontally if needed"><table><caption>Lifecycle need and packs that target it</caption><thead><tr><th scope="col">Need</th><th scope="col">Packs that target it</th></tr></thead><tbody>
+          <tr><th scope="row">Specify and plan before code</th><td>Matt Pocock skills (<code>grill-me</code>, specs), Superpowers (brainstorm and reviewed design), Agent Skills (spec, plan), pstack (plan before touching code), gstack (office hours and plan reviews)</td></tr>
+          <tr><th scope="row">Build with less code</th><td>pstack, ub-mode, Agent Skills (build)</td></tr>
+          <tr><th scope="row">Test</th><td>Superpowers (strict TDD), Matt Pocock skills (TDD), ub-mode (TDD with complexity, duplication and mutation gates), gstack (browser QA), Agent Skills (test)</td></tr>
+          <tr><th scope="row">Review</th><td>tstack (multi-model <code>council</code>), gstack (review and security roles), pstack (verify before “done”), Matt Pocock skills (<code>/pr</code>), Agent Skills (review)</td></tr>
+          <tr><th scope="row">Ship and learn</th><td>gstack (<code>/ship</code>), tstack (<code>full-send</code>), Agent Skills (ship), Matt Pocock skills (<code>/retro</code>); see the authority limits below before using any ship step</td></tr>
+          </tbody></table></div>
+          <p>Packs can be combined: issue 60 records practitioners pairing Matt Pocock's skills with tstack's <code>council</code>. Enable only the skills a task needs; reviewers of the larger packs advise the same.<a href="#source-1" aria-label="Source 1: GitHub issue 60, AI workflow trend listing and acceptance analysis">[1]</a> For spec artefacts and work tracking, see <a href="tech-scan-workflows-factories.html#purpose">Workflows &amp; factories</a>.</p>
+        </section>
+        <section id="controls"><h2>Bound authority and cost</h2>
+          <p>A skill pack instructs the agent; it does <strong>not enforce</strong> permissions, branch protection, sandboxing or release approval. Some packs include steps that act without a person: tstack's <code>full-send</code> takes a PR to merge unattended and has been reported to override ask-first rules in <code>CLAUDE.md</code> and <code>AGENTS.md</code>; a static security review of gstack flagged an unauthenticated localhost route and <code>/ship</code> steps that run without confirmation; ub-mode includes a push-to-main step.<a href="#source-1" aria-label="Source 1: GitHub issue 60, AI workflow trend listing and acceptance analysis">[1]</a> These are third-party reports collected in issue 60, not findings verified here.</p>
+          <p>Keep protected branches, independent CI, task-scoped credentials and an authorised human merge and release decision outside the pack, as set out in <a href="tech-scan-workflows-factories.html#controls">Workflows &amp; factories</a> and <a href="tech-scan-delivery.html">Delivery</a>. Disable or remove any skill that merges, pushes to a protected branch or deploys. Run packs in the <a href="tech-scan-sandbox.html">sandbox</a> and permission mode you would use without them, and check any telemetry or hosted data path before use.</p>
+          <p>Expect higher token use. Two small independent benchmarks cited in issue 60 found modest or no gains: Superpowers produced better output on 1 of 7 tasks at 1.33 times the cost per task, and a 108-task Codex run with pstack found no significant pass-rate gain, 24% to 75% more input tokens and fewer regression tests; its author notes it did not cover multi-file work.<a href="#source-1" aria-label="Source 1: GitHub issue 60, AI workflow trend listing and acceptance analysis">[1]</a> Treat a pack as an experiment to measure, not a productivity upgrade.</p>
+          <details class="tech-scan-detail"><summary>Per-pack notes: why developers use it and what holds it back</summary>
+            <ul>
+              <li><strong>Matt Pocock skills.</strong> Developers value aligning the agent before it writes code and skills that stay small and composable. Concerns: overkill on simple work, skills that do not fire automatically, and adopting whole libraries without evaluation. Thoughtworks Technology Radar placed it at Trial (November 2026); it is listed in Claude's official marketplace.</li>
+              <li><strong>Superpowers.</strong> The largest and most divided discussion: valued for a reviewed design before code, strict TDD and long unattended runs, and criticised for token and context consumption and a v7 regression. It is the oldest pack (October 2025), with the most forks and closed PRs, and is listed in Claude's marketplace.</li>
+              <li><strong>Agent Skills.</strong> Valued for spec-first ordering, evidence gates and browser and web-performance skills; criticised as ceremony for one-line fixes. It has the broadest contributor base of the seven but thin independent discussion.</li>
+              <li><strong>pstack.</strong> The warmest independent sentiment, a single <code>/poteto-mode</code> entry point and writing skills; concerns are token burn and added complexity in some languages. Ships in Cursor's official marketplace; adoption is under-measured because it has no standalone repository.</li>
+              <li><strong>gstack.</strong> The most polarised: valued for its structured sprint and browser QA tooling, criticised for bloat, its lines-of-code claims and telemetry. Sustained repository activity, with its own installer.</li>
+              <li><strong>tstack.</strong> Positive but thin early sentiment, mainly for <code>council</code> reviews; one contributor and no Hacker News threads at the time of the analysis.</li>
+              <li><strong>ub-mode.</strong> Valued for deterministic quality gates; criticised for rigid metric targets, hard-to-find companion tools and a critique that it drops the conditions that make pstack's rules work.</li>
+            </ul>
+            <p>All points summarise the issue 60 analysis and its cited posts and reviews.<a href="#source-1" aria-label="Source 1: GitHub issue 60, AI workflow trend listing and acceptance analysis">[1]</a></p>
+          </details>
+        </section>
+        <section id="pilot"><h2>Pilot before adoption</h2>
+          <p>The engineering lead picks one or two shortlisted packs for a specific lifecycle gap and runs them against a no-pack baseline on the same bounded tasks, starting context, model route and acceptance criteria. Record cost, pass rate, regression tests added, interventions and rework; treat the result as a local pilot, not general productivity proof. Keep independent human review before merge, and see <a href="tech-scan-verification.html">Verification</a> for evidence.</p>
+          <aside class="callout callout--tip" aria-labelledby="ai-workflow-checks">
+            <p class="example-label" id="ai-workflow-checks">Check before adoption</p>
+            <ul class="checklist">
+              <li>Pack pinned to a reviewed commit; licence and installer reviewed</li>
+              <li>Only the skills needed for the target lifecycle gap enabled</li>
+              <li>Merge, push-to-main and deploy steps removed or denied by repository settings</li>
+              <li>Permission mode, sandbox and credentials unchanged from the no-pack baseline</li>
+              <li>Telemetry, hosted data paths and retention checked</li>
+              <li>Cost, pass rate, regression tests and rework compared with the baseline</li>
+            </ul>
+            <p>Record the expected and observed results and any unresolved failure before widening use.</p>
+          </aside>
+        </section>
+        <section id="gaps"><h2>Gaps and refresh</h2>
+          <p>The samples are small (8 to 25 opinion posts per pack), engagement-farming accounts are common, and names such as “pstack”, “tstack” and “superpowers” collide with unrelated uses. Install counts depend on the channel: CLI counts miss marketplace and custom installers. GitHub stars are not usage and are not used here as evidence. Some figures are author claims, and each cited benchmark is small and tests a single model.<a href="#source-1" aria-label="Source 1: GitHub issue 60, AI workflow trend listing and acceptance analysis">[1]</a></p>
+          <p>Adjacent trends seen in the same window were not scored because they are platforms or methods rather than skill packs, including “harness engineering”; see <a href="tech-scan-harness.html">Harness</a>. Refresh this listing monthly, as issue 60 proposes, and re-score the newest packs once they have sustained adoption evidence.</p>
+        </section>
+        <section id="sources"><h2>Sources</h2><p class="source-check-date">References last checked: <time datetime="2026-11-16">16 November 2026</time>.</p><ol class="source-list">
+          <li id="source-1"><a href="https://github.com/eitri-edd/AI-PDLC/issues/60">GitHub issue 60, Add an X trend listing of popular AI workflows (viral index)</a>. The proposal's viral-index method, research window and ranked listing, and the follow-up comment on developer sentiment and industry acceptance with its scores, adoption signals, per-pack findings, method and caveats. Research analysis, not primary product documentation or local validation; third-party posts, benchmarks and security reviews it cites were not independently reverified here. Used in <a href="#signals">Read the two rankings</a>, <a href="#lifecycle">Match packs to lifecycle needs</a>, <a href="#controls">Bound authority and cost</a> and <a href="#gaps">Gaps and refresh</a>.</li>
+        </ol></section>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+      </article></main><aside class="page-contents"><nav aria-label="On this page"><p>On this page</p><a href="#signals">Read the two rankings</a><a href="#lifecycle">Match packs to lifecycle needs</a><a href="#controls">Bound authority and cost</a><a href="#pilot">Pilot before adoption</a><a href="#sources">Sources</a></nav></aside></div></body></html>

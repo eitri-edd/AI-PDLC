@@ -74,8 +74,14 @@ class ADEInventoryTests(unittest.TestCase):
                     'https://platform.claude.com/docs/en/managed-agents/dreams',
                     'https://claude.com/resources/articles/new-in-claude-managed-agents',
                     'https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/'}
-        baseline = {'page_passes': self.inventory['page_passes'], 'history': self.inventory['history'],
-                    'reviews': {r['url']: [v for v in r['claim_reviews'] if v.get('followup') != 'pr102']
+        # Later pages add their own pass, source and shared-link reviews; exclude
+        # only those additions so inherited records stay pinned.
+        later_pages = {'tech-scan-ai-workflows.html'}
+        new_urls |= {'https://github.com/eitri-edd/AI-PDLC/issues/60'}
+        baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
+                    'history': self.inventory['history'],
+                    'reviews': {r['url']: [v for v in r['claim_reviews']
+                                           if v.get('followup') != 'pr102' and v.get('file') not in later_pages]
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
         baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
