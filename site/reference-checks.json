@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-15 found 353 distinct external hrefs and no broken destination",
   "reviewed_base": "804e41fe862f9c2158f30d74108be400060040f5",
   "original_unique_urls": 100,
-  "current_unique_urls": 356,
-  "current_unique_hrefs": 362,
+  "current_unique_urls": 357,
+  "current_unique_hrefs": 363,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 5,
-    "retrieved": 340,
+    "retrieved": 341,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -220,6 +220,13 @@
       "source_entries": 6,
       "unique_fetch_destinations": 10,
       "maintenance_record": "tech-scan-wave3-review-2026-11-14.md"
+    },
+    "tech-scan-ai-workflows.html": {
+      "checked_on": "2026-11-16",
+      "scope": "New page 16 November 2026: single canonical source (content-sourcing agent research record, issue 60) read in full and page claims compared with it; shared operational links retain prior disposition.",
+      "status": "completed with explicit limitations",
+      "source_entries": 1,
+      "unique_fetch_destinations": 5
     }
   },
   "references": [
@@ -4824,6 +4831,7 @@
         "product-discovery.html",
         "product-implementation.html",
         "tech-scan-agents.html",
+        "tech-scan-ai-workflows.html",
         "tech-scan-context.html",
         "tech-scan-delivery.html",
         "tech-scan-gateway.html",
@@ -4986,6 +4994,13 @@
           "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
         },
         {
+          "file": "tech-scan-ai-workflows.html",
+          "checked_on": "2026-11-16",
+          "outcome": "operational",
+          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
+        },
+        {
           "file": "tech-scan-workflows-factories.html",
           "outcome": "unverified",
           "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
@@ -5045,6 +5060,7 @@
         "product-discovery.html",
         "product-implementation.html",
         "tech-scan-agents.html",
+        "tech-scan-ai-workflows.html",
         "tech-scan-context.html",
         "tech-scan-delivery.html",
         "tech-scan-gateway.html",
@@ -5207,6 +5223,13 @@
           "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
         },
         {
+          "file": "tech-scan-ai-workflows.html",
+          "checked_on": "2026-11-16",
+          "outcome": "operational",
+          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
+        },
+        {
           "file": "tech-scan-workflows-factories.html",
           "outcome": "unverified",
           "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
@@ -5266,6 +5289,7 @@
         "product-discovery.html",
         "product-implementation.html",
         "tech-scan-agents.html",
+        "tech-scan-ai-workflows.html",
         "tech-scan-context.html",
         "tech-scan-delivery.html",
         "tech-scan-gateway.html",
@@ -5426,6 +5450,13 @@
           "outcome": "unverified",
           "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
           "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
+        },
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "checked_on": "2026-11-16",
+          "outcome": "operational",
+          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
         },
         {
           "file": "tech-scan-workflows-factories.html",
@@ -6187,6 +6218,35 @@
         {
           "file": "tech-scan.html",
           "id": "source-2"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eitri-edd/AI-PDLC/issues/60",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/eitri-edd/AI-PDLC/issues/60"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/eitri-edd/AI-PDLC/issues/60",
+      "method": "direct HTTP GET; issue body and comment 6910012556 read through the GitHub API",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "limited",
+          "scope": "Content-sourcing agent research record (published as issue 60): viral-index method, research window and ranked listing; follow-up acceptance analysis (scores, dimension weights, sensitivity check, adoption signals, per-pack findings, method and caveats). Used in Read the two rankings, Match packs to lifecycle needs, Bound authority and cost and Gaps and refresh.",
+          "evidence_summary": "HTTP 200; research record and its single analysis comment inspected on 16 November 2026. Page figures (acceptance scores, viral ranks, benchmark results, security-review findings) match the record.",
+          "limitation": "Research analysis produced by the content-sourcing agents, not primary product documentation or local validation. Third-party X posts, Hacker News threads, benchmarks, security reviews and marketplace listings it cites were not independently reverified. The record is living content."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-1"
         }
       ]
     },
@@ -9356,6 +9416,7 @@
         "product-discovery.html",
         "product-implementation.html",
         "tech-scan-agents.html",
+        "tech-scan-ai-workflows.html",
         "tech-scan-context.html",
         "tech-scan-delivery.html",
         "tech-scan-gateway.html",
@@ -9523,6 +9584,13 @@
           "outcome": "unverified",
           "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
           "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
+        },
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "checked_on": "2026-11-16",
+          "outcome": "operational",
+          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
         },
         {
           "file": "tech-scan-workflows-factories.html",
