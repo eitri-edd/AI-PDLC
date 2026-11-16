@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-15 found 353 distinct external hrefs and no broken destination",
   "reviewed_base": "804e41fe862f9c2158f30d74108be400060040f5",
   "original_unique_urls": 100,
-  "current_unique_urls": 357,
-  "current_unique_hrefs": 363,
+  "current_unique_urls": 387,
+  "current_unique_hrefs": 393,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 5,
-    "retrieved": 341,
+    "retrieved": 371,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -223,10 +223,10 @@
     },
     "tech-scan-ai-workflows.html": {
       "checked_on": "2026-11-16",
-      "scope": "New page 16 November 2026: single canonical source (content-sourcing agent research record, issue 60) read in full and page claims compared with it; shared operational links retain prior disposition.",
+      "scope": "Revised 16 November 2026 for issue 115. Primary pack documents at the pinned commits, the Redeux review, the GitHub advisory, Thoughtworks Radar blips, SkillsBench v4 and the cited benchmark posts were fetched and compared with the claims that cite them. The content-sourcing research record remains the source for the demoted attention scores and scan sentiment. Shared operational links retain their prior disposition. gstack's cookie-picker remediation was not independently re-tested, and whether /ship in Agent Skills deploys by itself was not read from that skill file.",
       "status": "completed with explicit limitations",
-      "source_entries": 1,
-      "unique_fetch_destinations": 5
+      "source_entries": 22,
+      "unique_fetch_destinations": 35
     }
   },
   "references": [
@@ -6238,9 +6238,9 @@
         {
           "file": "tech-scan-ai-workflows.html",
           "outcome": "limited",
-          "scope": "Content-sourcing agent research record (published as issue 60): viral-index method, research window and ranked listing; follow-up acceptance analysis (scores, dimension weights, sensitivity check, adoption signals, per-pack findings, method and caveats). Used in Read the two rankings, Match packs to lifecycle needs, Bound authority and cost and Gaps and refresh.",
-          "evidence_summary": "HTTP 200; research record and its single analysis comment inspected on 16 November 2026. Page figures (acceptance scores, viral ranks, benchmark results, security-review findings) match the record.",
-          "limitation": "Research analysis produced by the content-sourcing agents, not primary product documentation or local validation. Third-party X posts, Hacker News threads, benchmarks, security reviews and marketplace listings it cites were not independently reverified. The record is living content."
+          "scope": "Content-sourcing agent research record (issue 60 and its analysis comment): viral-index method, analyst-assigned ecosystem evidence scores, and per-pack sentiment. Kept as research history after the 16 November 2026 revision. Used for attention signals and scan sentiment, not for the permission, security or benchmark claims that now cite primary sources.",
+          "evidence_summary": "The 16 November 2026 read of the issue and comment 6910012556 still supports the viral-index method, the score table and the scan's sentiment summaries. Primary sources added on the same date correct the page where the record's second-hand benchmark and security wording was less precise.",
+          "limitation": "Research analysis, not primary product documentation or local validation. Third-party posts, benchmarks and security reviews cited only inside the record, and not given their own source on the page, were not independently reverified. The record is living content."
         }
       ],
       "source_entries": [
@@ -14448,6 +14448,906 @@
         {
           "file": "tech-scan-context.html",
           "id": "source-19"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/mattpocock/skills/blob/5863806dd4e15c63174bee4e7515a4256792ecfa/README.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/mattpocock/skills/blob/5863806dd4e15c63174bee4e7515a4256792ecfa/README.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/mattpocock/skills/blob/5863806dd4e15c63174bee4e7515a4256792ecfa/README.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "README at commit 5863806 (12 November 2026), later than release v1.3.2 (29 October 2026): install hosts, user-invoked versus model-invoked skills, and the roles of implement, to-spec, code-review and pr.",
+          "evidence_summary": "The README splits user-invoked orchestrators from model-invoked disciplines, lists the plugin and skills.sh installs, and describes pr as the shape of a pull-request body and code-review as the review.",
+          "limitation": "Vendor documentation, not a task-success result. The release tag is older than this commit. Refresh this claim when the pinned file changes."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-2"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/README.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/README.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/README.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Superpowers v7.0.2 README: brainstorm, plan, red/green TDD, automatic skill triggers, 16 host install sections, and visual-companion telemetry on by default.",
+          "evidence_summary": "The README says skills trigger automatically, that a couple of hours of unattended subagent work is not uncommon after 'go', and that SUPERPOWERS_DISABLE_TELEMETRY disables the version beacon.",
+          "limitation": "The duration and trigger statements are the vendor's. The GitHub release timestamp is 3 November 2026, 22:17 UTC. Refresh on a new release."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-3"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/addyosmani/agent-skills/blob/39b723ceebf81474d0557c1fecd01eddab585563/README.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/addyosmani/agent-skills/blob/39b723ceebf81474d0557c1fecd01eddab585563/README.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/addyosmani/agent-skills/blob/39b723ceebf81474d0557c1fecd01eddab585563/README.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Agent Skills 0.6.16 README (14 November 2026): nine commands, /build auto, host differences, and per-skill installs omitting references/.",
+          "evidence_summary": "The README says /build auto runs after one plan approval, pauses on failures or risky steps, and that lifecycle slash commands do not appear in Copilot. It describes /ship as shipping to production.",
+          "limitation": "The /ship skill file was not read, so whether that command deploys by itself is unverified. The '70+ agents' figure is the vendor's. Refresh on a new release."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-4"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/README.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/README.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/README.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "pstack README at bf0c7cd: no default planning, Cursor and Claude Code install, and the default model panel.",
+          "evidence_summary": "The README says the author does not believe in planning, that code is the best spec, and that /poteto-mode can plan but is not a default. It names the panel fable 5.2 / opus 5.5 / gemini 4 carbon and describes Shipping and Autopilot-full.",
+          "limitation": "Vendor documentation. Refresh when plugin.json version or the playbook list changes."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/SKILL.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/SKILL.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/SKILL.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "poteto-mode skill: foundations before logic, verify against the real artefact, and the merge playbooks.",
+          "evidence_summary": "The skill says to name core types and data structures before writing logic, to verify against the real artifact before done, and describes Autopilot-full as a queue run to merged and Autopilot-stack as that queue without the merge.",
+          "limitation": "Instructions to the agent, not evidence that branch protection can be bypassed. Refresh when this skill or its playbook list changes."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/playbooks/shipping.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/playbooks/shipping.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/playbooks/shipping.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Shipping playbook lands a contiguous verified run through gh by default or Origin when available.",
+          "evidence_summary": "The playbook says to verify each PR independently, then merge the lowest unmerged PR of the verified run with gh or origin, and not to treat green CI or an approving bot as a verdict.",
+          "limitation": "Vendor playbook. Refresh when this file changes."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/playbooks/autopilot-full.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/playbooks/autopilot-full.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/playbooks/autopilot-full.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Autopilot-full merges only after a swarm that did not write the code has checked the PR, and operator-owned items stop at merge-ready.",
+          "evidence_summary": "The playbook says 'Green CI alone never authorizes a merge' and that items the operator names as theirs stop at merge-ready.",
+          "limitation": "Vendor playbook. Refresh when this file changes."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/.cursor-plugin/plugin.json",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/.cursor-plugin/plugin.json"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/.cursor-plugin/plugin.json",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Plugin manifest version 0.15.42 at commit bf0c7cd, author Lauren Tan, licence MIT.",
+          "evidence_summary": "plugin.json version field is 0.15.42 and license is MIT.",
+          "limitation": "Version pin for the pstack claims. Refresh when the version field changes."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/README.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/README.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/README.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "gstack 1.99.5.0 README at a15a0de: Claude Code is the only full host; other table rows are experimental or instruction-only, and safety skills are advisory off Claude Code.",
+          "evidence_summary": "The host table marks Claude Code 'enforced (hooks block)' and every other row 'advisory, not blocked'. Ten rows are experimental and two are instruction-only. Requirements include Git and Bun.",
+          "limitation": "Vendor tiers. 'Full' is the project's own certification. gstack releases often; refresh when the host table or VERSION changes."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-6"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/docs/privacy.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/docs/privacy.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/docs/privacy.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Privacy note at a15a0de: telemetry opt-in and off by default; update check on by default; outside reviews on by default and can send code, diffs or plans.",
+          "evidence_summary": "The note says telemetry never sends code, paths, repo or branch names, or prompts; the update check is independent of telemetry; outside reviews use the user's Codex or Claude Code login; egress receipts are an audit trail, not a firewall.",
+          "limitation": "Vendor documentation of defaults, not a network capture. Refresh when docs/privacy.md changes; gstack ships several times a week."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-7"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/CHANGELOG.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/CHANGELOG.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/CHANGELOG.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Changelog records cookie-picker bearer auth in 0.13.1.0 (28 March 2026), mandatory auth in 0.15.7.0 (5 April 2026), and a one-time code exchange in 0.16.1.0 (8 April 2026), crediting a CVSS 7.8 report with no CVE identifier.",
+          "evidence_summary": "0.16.1.0 says the token no longer appears in HTML and credits Horoshi at Vagabond Research, CVSS 7.8. No CVE number is in that entry. 1.91.159.0 (19 October 2026) records the .env and bunfig.toml fix.",
+          "limitation": "Upstream changelog, not an independent re-test. Refresh on a new GHSA or CVE, or a Redeux re-review."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-8"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/browse/src/cookie-picker-routes.ts",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/browse/src/cookie-picker-routes.ts"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/browse/src/cookie-picker-routes.ts",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Current cookie-picker comment documents a one-time code (five minutes) or session cookie (one hour) for the UI, and a bearer token or session cookie for data routes. The comment says 'post-CVE fix' and gives no CVE identifier.",
+          "evidence_summary": "CODE_TTL_MS is 5 minutes and SESSION_TTL_MS is 1 hour. The comment heading is 'Auth model (post-CVE fix)'.",
+          "limitation": "Documented remediation in the current source, not an independent certification or a re-test of 1.99.5.0."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-8"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/garrytan/gstack/security/advisories/GHSA-249x-w96r-pw6c",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/garrytan/gstack/security/advisories/GHSA-249x-w96r-pw6c"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/garrytan/gstack/security/advisories/GHSA-249x-w96r-pw6c",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "GHSA-249x-w96r-pw6c, high, published 20 October 2026: gstack before 1.91.159.0 applied a repository .env and bunfig.toml preload to its Bun processes. The advisory has no CVE ID. It is the repository's only published advisory and is a different issue from the cookie-picker review.",
+          "evidence_summary": "GitHub advisory API returned this single advisory, severity high, published_at 2026-10-20, cve_id null, patched in 1.91.159.0.",
+          "limitation": "Advisory text, not a re-test of later versions. Refresh when a new GHSA or CVE is published on the repository."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-9"
+        }
+      ]
+    },
+    {
+      "url": "https://security.redeux.ai/advisories/gstack-prompt-security-review",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://security.redeux.ai/advisories/gstack-prompt-security-review"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://security.redeux.ai/advisories/gstack-prompt-security-review",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Redeux RDXS-2026-007, published 16 March 2026, reviews gstack 0.4.4 commit c86faa7. Static review only. Two server findings, plus design observations that /qa committed without a human gate and /ship pushed and opened a PR without asking.",
+          "evidence_summary": "The page states version 0.4.4, commit c86faa7, 'No running instance of gstack was attacked', and quotes a /ship prompt as 'Do NOT ask for confirmation at any step.' It says the trust-boundary notes are not vulnerabilities.",
+          "limitation": "Historical review of 0.4.4, not a finding about 1.99.5.0. Refresh if Redeux publishes a re-review."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-10"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/ship/SKILL.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/ship/SKILL.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/ship/SKILL.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "gstack /ship at 1.99.5.0: routine steps need no confirmation; the workflow pushes and creates a PR; complex merge conflicts stop and ask.",
+          "evidence_summary": "The description says 'merge the base, run tests, review the diff, bump VERSION and CHANGELOG, push and create a PR.' The body says routine work needs no confirmation and, for complex or ambiguous conflicts, to stop and ask before any edit.",
+          "limitation": "Vendor skill text. It describes opening a PR, not merging that PR or deploying. Refresh when ship/SKILL.md changes."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-11"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/README.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/README.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/README.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "tstack README at 11e37a7 (11 November 2026): nine skills, Claude Code and Codex install, authenticated gh, and council/sol-loop on other providers' models.",
+          "evidence_summary": "The README says full-send takes a change to a merged PR, full-stop stops when the PR is ready to merge, council asks three models from different providers, and sol-loop uses GPT Sol.",
+          "limitation": "Vendor README. No GitHub release. Refresh when the skill list or install requirements change."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-12"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-send/SKILL.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-send/SKILL.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-send/SKILL.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "full-send, on an explicit 'full send', merges after its gate, through branch protection, without --admin, and replaces ask-first rules for test methods. It does not bypass a harness or system approval prompt. It may ignore automated 'needs human review' requests when confident.",
+          "evidence_summary": "The skill grants merge, force-push of the PR branch with --force-with-lease, and testing without asking first. The merge gate requires green required checks, finished review bots, no human review requesting changes, and a mergeable up-to-date branch.",
+          "limitation": "Vendor instruction, read at commit 11e37a7. Refresh on any commit that touches skills/full-send."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-12"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-stop/SKILL.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-stop/SKILL.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-stop/SKILL.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "full-stop does the same work as full-send, including the testing permission, and never merges. It disables existing auto-merge.",
+          "evidence_summary": "The skill says 'Never merge it', forbids enabling auto-merge, entering a merge queue, pushing to the default branch, or bypassing branch protection, and keeps full-send's testing permission even when a project file says to ask first.",
+          "limitation": "Vendor instruction. Calling it non-merging is accurate and incomplete without the testing override. Refresh on any commit that touches skills/full-stop."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-12"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/unclebob/ub-mode/blob/3da62bf3fcfd2034de41f30d920d2739e566171f/SKILL.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/unclebob/ub-mode/blob/3da62bf3fcfd2034de41f30d920d2739e566171f/SKILL.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/unclebob/ub-mode/blob/3da62bf3fcfd2034de41f30d920d2739e566171f/SKILL.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "ub-mode skill at 3da62bf: failing test first, CRAP under 10, duplication at or above 0.8 removed, mutation testing, and 'Push to the main line at the end.'",
+          "evidence_summary": "The Practice section says 'Commit often, in small ordered commits' and 'Push to the main line at the end.'",
+          "limitation": "An instruction to the agent, not evidence that protected-branch rules can be bypassed. Refresh when SKILL.md changes."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-13"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/unclebob/ub-mode/blob/3da62bf3fcfd2034de41f30d920d2739e566171f/README.md",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/unclebob/ub-mode/blob/3da62bf3fcfd2034de41f30d920d2739e566171f/README.md"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/unclebob/ub-mode/blob/3da62bf3fcfd2034de41f30d920d2739e566171f/README.md",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "ub-mode README links crapper, dryer, mutator and uml-viewer, and shows Grok, Claude and Cursor install paths.",
+          "evidence_summary": "The README links the four public companion repositories and gives example skill-directory paths.",
+          "limitation": "The scan's 'hard to find' and crash reports are not re-tested here. Refresh when the README's tool links change."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-13"
+        }
+      ]
+    },
+    {
+      "url": "https://bartlomiejkrupa.dev/articles/does-superpowers-beat-no-plugin/",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://bartlomiejkrupa.dev/articles/does-superpowers-beat-no-plugin/"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://bartlomiejkrupa.dev/articles/does-superpowers-beat-no-plugin/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "limited",
+          "scope": "Independent ablation, 29 September 2026, of Superpowers v6.4.2: 12 tiny Node cases, 8 runs per arm, 192 scored runs, Claude Sonnet 5.5 as agent and judge. Better delivered result on 1 of 7 positive cases; mean cost ratio 1.33 (range 1.08 to 1.63).",
+          "evidence_summary": "The article states the case split (7 positive, 4 negative, 1 control), the 8/8 versus 4/8 regression-test result, the headless brainstorming limit, and that long multi-step work, subagents and worktrees were not tested.",
+          "limitation": "Practitioner study of v6.4.2, not v7.0.2. One model and a same-family judge. Refresh if the author publishes an ablation of v7."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-14"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/bartek-890/superpowers-evals/commit/c3617b0cf964132138509afdf60689fe1ce6beb6",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/bartek-890/superpowers-evals/commit/c3617b0cf964132138509afdf60689fe1ce6beb6"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/bartek-890/superpowers-evals/commit/c3617b0cf964132138509afdf60689fe1ce6beb6",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "limited",
+          "scope": "Published cases and transcripts for the 29 September 2026 Superpowers ablation, commit c3617b0.",
+          "evidence_summary": "The repository commit exists and is dated 29 September 2026. The article points to this GitHub repository for cases, runner and transcripts.",
+          "limitation": "The commit was confirmed; individual transcripts were not re-scored. Refresh if the author updates the dataset."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-14"
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/LabubuNoBB/status/2118012147334832265",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://x.com/LabubuNoBB/status/2118012147334832265"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://x.com/LabubuNoBB/status/2118012147334832265",
+      "method": "direct HTTP GET returned 200; post text read from the fxtwitter mirror of the same status id",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "limited",
+          "scope": "Practitioner post, 4 November 2026: 108 Codex runs, 12 cases by 3 runs by 3 arms. Pass rates 36/36, 35/36, 34/36, called not significant. Input tokens +24% and +75%. No pstack skill invoked in the installed-only arm. No dataset linked.",
+          "evidence_summary": "The post text states those counts, the token changes, the drop in added tests from 7 to 3 and bug-catching tests from 7/15 to 3/15, and limits of n=3, one unnamed model, small single-file tasks and multi-agent off.",
+          "limitation": "Social report. The post body was read through the fxtwitter mirror of this status id after x.com returned HTTP 200. Not independently reproduced. Refresh if the author publishes the data or a multi-file follow-up."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-15"
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/utk0x/status/2103537281290367411",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://x.com/utk0x/status/2103537281290367411"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://x.com/utk0x/status/2103537281290367411",
+      "method": "direct HTTP GET returned 200; article text read from the fxtwitter mirror of the same status id",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "limited",
+          "scope": "Competing-pack author's X article, 25 September 2026: 267 Terminal-Bench 2.1 runs in Claude Code with Gemini 3.6 Flash High. Supreme 61 of 89, three more than Superpowers and six more than the no-prompt baseline. McNemar p = 0.605 and 0.239. Baseline highest on 14 esoteric tasks (12 of 14).",
+          "evidence_summary": "The article states 89 tasks, three set-ups, one model, and that none of Supreme's pairwise differences cleared p < 0.05. A Superpowers-versus-baseline test is not reported.",
+          "limitation": "Conflict of interest: the author built Supreme. The linked repository was not opened. Post text read through the fxtwitter mirror. Not used as evidence that one pack is better."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-16"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2602.12670v4",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://arxiv.org/abs/2602.12670v4"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://arxiv.org/abs/2602.12670v4",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "SkillsBench v4, 14 June 2026: curated skills raised average pass rate from 33.9% to 50.5% on 87 tasks. Software engineering +11.6 percentage points. One skill +18.0, two or three +19.0, four or more +10.1. Self-generated skills fell below the no-skills baseline on three harnesses. 13 of 87 tasks had a negative change.",
+          "evidence_summary": "Abstract and PDF text of arXiv 2602.12670v4. The quantity ablation and the software-engineering row are in the paper body. The paper studies curated task skills, not the workflow packs on this page.",
+          "limitation": "Preprint. Refresh if a new arXiv version is posted."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-17"
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/plugin-evals",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://code.claude.com/docs/en/plugin-evals"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://code.claude.com/docs/en/plugin-evals",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Claude Code plugin evals (docs require v2.1.269 or later) run each case with and without the plugin, three times by default, and report WITH, W/OUT and the difference.",
+          "evidence_summary": "The page says a case that scores 1.0 both ways was not passed because of the plugin, and that three runs are the default.",
+          "limitation": "Vendor documentation. No publication date is shown on the page. Not a result for any pack on this page."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-18"
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/blog/eval-skills",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://developers.openai.com/blog/eval-skills"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://developers.openai.com/blog/eval-skills",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "OpenAI Developers blog, 22 January 2026, by Dominik Kundel and Gabriel Chua: test Codex skills for outcome, process, style and efficiency, check that the skill triggers, and start with 10 to 20 prompts.",
+          "evidence_summary": "The page date reads Jan 22, 2026, and the body names those four goal types and the 10–20 prompt starting set.",
+          "limitation": "Vendor guidance for Codex skills, not a result for the packs on this page."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-19"
+        }
+      ]
+    },
+    {
+      "url": "https://www.thoughtworks.com/radar/tools/mattpocock-skills",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://www.thoughtworks.com/radar/tools/mattpocock-skills"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.thoughtworks.com/radar/tools/mattpocock-skills",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Thoughtworks Technology Radar, published 4 November 2026, places mattpocock/skills at Trial and cautions against adopting entire skill libraries without evaluating them.",
+          "evidence_summary": "The blip is ring Trial, published Nov 04, 2026, and links the caution to agent skill cognitive surrender.",
+          "limitation": "Informed opinion and an endorsement signal, not a task-success result. Refresh on the next Radar edition."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-20"
+        }
+      ]
+    },
+    {
+      "url": "https://www.thoughtworks.com/radar/techniques/agent-skill-cognitive-surrender",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://www.thoughtworks.com/radar/techniques/agent-skill-cognitive-surrender"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.thoughtworks.com/radar/techniques/agent-skill-cognitive-surrender",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Thoughtworks Technology Radar, published 4 November 2026, places agent skill cognitive surrender at Caution: adopting large community skill libraries or heavyweight AI agent frameworks without understanding them.",
+          "evidence_summary": "The blip is ring Caution, published Nov 04, 2026.",
+          "limitation": "Opinion, not a benchmark. Refresh on the next Radar edition."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-21"
+        }
+      ]
+    },
+    {
+      "url": "https://x.com/BiosRiosz/status/2098722174886424588",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://x.com/BiosRiosz/status/2098722174886424588"
+      ],
+      "checked_on": "2026-11-16",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://x.com/BiosRiosz/status/2098722174886424588",
+      "method": "direct HTTP GET returned 200; post text read from the fxtwitter mirror of the same status id",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "limited",
+          "scope": "Practitioner reply, 12 September 2026: a baseline could read a skill pack through file reads the sandbox did not stop, and 3 of 6 paired runs were voided by the author's own checks.",
+          "evidence_summary": "The post says 'A baseline had my skill pack leaking in through reads the sandbox didn't stop' and 'Mine voided 3 of 6 paired runs on its own checks.'",
+          "limitation": "Anecdote used only to support a pilot isolation check. It does not name a pack on this page. Post text read through the fxtwitter mirror."
+        }
+      ],
+      "evidence_digests": [],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-22"
         }
       ]
     }
