@@ -482,6 +482,12 @@ a:hover {
   color: var(--indigo);
 }
 
+.status-do-not-use {
+  border-color: var(--danger-text);
+  background: var(--danger-bg);
+  color: var(--danger-text);
+}
+
 /* Key to the status labels a page uses */
 .status-key {
   margin: 1.5rem 0;
