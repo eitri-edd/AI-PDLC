@@ -1,149 +1,1167 @@
 <!doctype html>
 <html lang="en-SG">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Choose evidence for tests, security and agent evaluation before release.">
-  <title>Tech Scan: Verification · AI-SDLC</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
-  <link rel="stylesheet" href="styles.css">
-  <script src="site.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
-      <span class="organisation">Enterprise Digital Services (EDS)</span>
-    </div>
-  </header>
-  <div class="page-layout">
-    <aside class="sidebar">
-      <details class="site-navigation" open>
-        <summary>Guide navigation</summary>
-        <nav aria-label="Guide">
-          <p class="nav-label">Development guide</p>
-          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
-          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
-          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
-          <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
-          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
-          <div class="nav-children">
-            <a href="product-discovery.html">Project Discovery</a>
-            <a href="product-implementation.html">Product implementation</a>
-          </div>
-          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
-          <div class="nav-children">
-            <a href="eds-po-ba-harness.html">PO/BA harness</a>
-            <a href="eds-developer-harness.html">Developer harness</a>
-            <a href="eds-path-to-production.html">Path to production</a>
-            <a href="eds-team-context.html">Team context</a>
-            <a href="eds-skills-catalogue.html">Skills catalogue</a>
-          </div>
-          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
-          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
-        </nav>
-      </details>
-    </aside>
-    <main id="main" tabindex="-1">
-      <article class="concept-article tech-scan-article">
-        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Verification</span></nav>
-        <header class="article-header"><p class="eyebrow">Development guide</p><h1>Tech Scan: Verification</h1><p class="lead">Choose evidence that a change meets its requirements, then give the decision owner its limits.</p><p>Draft research reference; published documentation is not a local deployment test. No local pilot or representative-reader study has been completed.</p></header>
-        <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note"><figcaption id="page-map-caption">This page at a glance</figcaption><p id="page-map-note" class="page-map-note">Developer route: name the evidence need → separate evidence → build a credible check → choose a candidate → diagnose and hand off. These groups organise the page; they are not lifecycle stages.</p><ol class="page-map-nodes" role="list"><li class="page-map-node"><strong>Evidence</strong><div class="page-map-links"><a href="#evidence">Separate evidence</a></div></li><li class="page-map-node"><strong>Independence</strong><div class="page-map-links"><a href="#independence">Build a credible check</a></div></li><li class="page-map-node"><strong>Choices</strong><div class="page-map-links"><a href="#choices">Choose a candidate</a></div></li><li class="page-map-node"><strong>Decision</strong><div class="page-map-links"><a href="#decision">Diagnose and hand off</a><a href="#sources">Sources</a></div></li></ol></figure>
-        <aside class="tech-scan-key-points" aria-labelledby="tech-scan-key-points-label">
-          <p class="tech-scan-key-points-label" id="tech-scan-key-points-label">Key points</p>
-          <ul>
-            <li>Separate tests, security scans and evaluations; one green result does not replace the others.</li>
-            <li>Build an independent oracle, held-out cases, controlled execution and qualified review.</li>
-            <li>Record critical failures and limits before handing evidence to the decision owner.</li>
-          </ul>
-        </aside>
-        <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page"><a href="#evidence">Separate evidence</a><a href="#independence">Build a credible check</a><a href="#choices">Choose a candidate</a><a href="#decision">Diagnose and hand off</a><a href="#sources">Sources</a></nav></details>
-        <section id="evidence"><h2>Separate evidence</h2><p>Verification checks an output against specified requirements. Tests exercise expected software behaviour; security scans and adversarial tests seek vulnerabilities; evaluations assess defined agent or AI behaviours across cases. A green result in one category does not replace the others or establish fitness for every use.</p><p>For a code change, the engineer records the revision, acceptance criteria, test cases and expected results, CI output, security findings and unresolved failures. For a product containing AI, add evaluation cases for the model, retrieval and tool behaviour where applicable. <a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a> covers the authoring and CI handoff; <a href="tech-scan-delivery.html">Delivery</a> covers release controls.</p></section>
-        <section id="independence"><h2>Build a credible check</h2><p>A <strong>test oracle</strong> is the basis used to judge a result: for example, an independently reviewed expected answer, an invariant or a domain expert’s rubric. Independence is a matter of degree, not a second process or a different model name alone.</p><ul><li><strong>Oracle:</strong> have a qualified reviewer derive expected outcomes from requirements and inspect whether the test can catch a wrong result; author-written tests remain useful but are not sufficient alone.</li><li><strong>Data:</strong> reserve held-out cases from the author and tuning loop. Select representative normal, boundary, adverse and no-answer cases from the intended population; protect sensitive data and refresh cases when exposed. A small convenient set does not establish representativeness.</li><li><strong>Execution:</strong> run a separate controlled harness against the exact revision, with pinned configurations and protected results. Separation alone does not make a flawed oracle independent.</li><li><strong>Decisions:</strong> a qualified person who did not author the change reviews failures and evidence; the authorised human retains the release decision. Separate review from action approval.</li></ul><p>Model judges can exhibit position, verbosity and self-preference biases. Compare a sample with expert labels, swap ordering for pairwise comparisons and repeat borderline cases; record disagreement. A different model family is not proof of independence, and a judge score alone is not acceptance evidence.<a href="#source-5" aria-label="Source 5: Judging LLM-as-a-Judge">[5]</a></p>
-        <h3 id="formal-model-checks">Use formal models for state and concurrency risks</h3>
-        <p>For a race-prone operation, a model checker or proof assistant can help test invariants that example-based tests may miss. Ask an agent to propose a small Lean or TLA+ model, but have the engineer and domain owner first review its states, assumptions and invariants. An internally consistent proof of the wrong specification does not establish correctness of the implementation. A practitioner reported 16 bug-fix pull requests after modeling parts of an agent SDK; this is a case report, not an independent benchmark or evidence that the whole SDK was formally verified. <a href="#source-11" aria-label="Source 11: Boris Cherny, formal methods case">[11]</a></p>
-        <ol><li>State the invariant in business terms, for example: two confirmed bookings must never overlap for the same meeting room.</li><li>Model only the relevant actions, such as hold, confirm, cancel and concurrent confirm; review whether the model matches the running system.</li><li>Investigate any counterexample in the actual service and reproduce it with an executable test before changing production code.</li><li>Retain the reviewed specification, counterexample, reproduction and corrected test as evidence; do not substitute the agent's own proof for independent acceptance.</li></ol>
-</section>
-        <section id="choices"><h2>Choose a candidate</h2>
-          <svg class="diagram-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#64748b"/></marker><linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient><linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eff6ff"/><stop offset="100%" stop-color="#dbeafe"/></linearGradient></defs></svg>
-          <figure class="concept-figure" id="fig-verification-route" data-diagram="static">
-            <figcaption id="fig-verification-route-caption">Figure 1. Verification route decision: name the evidence need, separate evidence, build a credible check, choose a candidate and diagnose failures before handoff. This is a decision route, not a release approval.</figcaption>
-            <details class="figure-reading"><summary>Read as text: Verification route decision</summary>
-              <ol>
-                <li>Name the evidence need: code change, agent or retrieval behaviour, security risk and the decision owner.</li>
-                <li>Separate evidence: tests, security scans and evaluations answer different questions; one green result does not replace the others.</li>
-                <li>Build a credible check: independent oracle, held-out cases, controlled execution and a qualified reviewer.</li>
-                <li>Choose an AWS-first or conditional candidate, then diagnose failures and record limits before handoff.</li>
-              </ol>
-            </details>
-            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
-              <div class="figure-scroll" tabindex="0" role="region" aria-label="Verification route decision; scroll horizontally if needed">
-                <svg viewBox="0 0 880 390" role="img" aria-labelledby="fig-verification-route-title" aria-describedby="fig-verification-route-title-desc">
-                  <title id="fig-verification-route-title">Verification route decision</title>
-                  <desc id="fig-verification-route-title-desc">A team first names the evidence need for a code change, agent, retrieval or security risk. Evidence is separated into tests, security scans and evaluations. A credible check uses an independent oracle, held-out cases, controlled execution and a qualified reviewer. The team chooses an AWS-first or conditional candidate, diagnoses failures and records limits before handoff.</desc>
-                  <rect class="d-node" x="20" y="120" width="190" height="124" rx="8"/><text class="d-title" x="115" y="152" text-anchor="middle">Name the need</text><text class="d-sub" x="115" y="176" text-anchor="middle">code, agent or retrieval</text><text class="d-sub" x="115" y="198" text-anchor="middle">security and requirements</text><text class="d-sub" x="115" y="220" text-anchor="middle">decision owner</text>
-                  <rect class="d-node d-node-accent" x="300" y="120" width="220" height="124" rx="8"/><text class="d-title" x="410" y="152" text-anchor="middle">Separate evidence</text><text class="d-sub" x="410" y="176" text-anchor="middle">tests, security, evaluations</text><text class="d-sub" x="410" y="198" text-anchor="middle">held-out cases</text><text class="d-sub" x="410" y="220" text-anchor="middle">exact revision and config</text>
-                  <rect class="d-node" x="580" y="30" width="280" height="104" rx="8"/><text class="d-title" x="720" y="62" text-anchor="middle">Credible check</text><text class="d-sub" x="720" y="86" text-anchor="middle">independent oracle and data</text><text class="d-sub" x="720" y="108" text-anchor="middle">judge bias and reviewer</text>
-                  <rect class="d-node" x="580" y="190" width="280" height="124" rx="8"/><text class="d-title" x="720" y="222" text-anchor="middle">Choose and prove</text><text class="d-sub" x="720" y="246" text-anchor="middle">AWS-first or conditional fit</text><text class="d-sub" x="720" y="268" text-anchor="middle">critical failure blocks acceptance</text><text class="d-sub" x="720" y="290" text-anchor="middle">record counts and gaps</text>
-                  <path class="d-line" d="M210 182H300" marker-end="url(#arrow)"/>
-                  <path class="d-line" d="M520 150H545V82H580" marker-end="url(#arrow)"/>
-                  <path class="d-line" d="M520 214H545V252H580" marker-end="url(#arrow)"/>
-                  <path class="d-line d-dash" d="M720 134V190" marker-end="url(#arrow)"/>
-                  <rect class="d-boundary" x="20" y="338" width="840" height="40" rx="7"/><text class="d-sub" x="440" y="363" text-anchor="middle">A green check, judge score or screening result is not acceptance; the authorised human decides release.</text>
-                </svg>
-              </div>
-              <p class="diagram-key">The blue node separates evidence categories before any candidate is chosen. The dashed path shows that a credible check still needs diagnosed failures and recorded limits before handoff.</p>
-            </details>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Choose evidence for tests, security and agent evaluation before release."
+    />
+    <title>Tech Scan: Verification · AI-SDLC</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="identity"
+          href="index.html"
+          aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"
+          ><svg
+            class="identity-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linejoin="round"
+            /></svg
+          ><span>AI Software Development Lifecycle (AI-SDLC)</span></a
+        >
+        <span class="organisation">Enterprise Digital Services (EDS)</span>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="sidebar">
+        <details class="site-navigation" open>
+          <summary>Guide navigation</summary>
+          <nav aria-label="Guide">
+            <p class="nav-label">Development guide</p>
+            <a href="index.html"
+              ><svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                /></svg
+              >Introduction</a
+            >
+            <a href="transformation.html"
+              ><svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                /></svg
+              >Organisation transformation</a
+            >
+            <a href="concept.html"
+              ><svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              >Concepts</a
+            >
+            <a href="tech-scan.html" class="nav-parent-active"
+              ><svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              >Tech Scan (draft)</a
+            >
+            <a href="ai-pdlc.html"
+              ><svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              >AI-SDLC</a
+            >
+            <div class="nav-children">
+              <a href="product-discovery.html">Project Discovery</a>
+              <a href="product-implementation.html">Product implementation</a>
+            </div>
+            <a href="eds-ai-workflow.html"
+              ><svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                /></svg
+              >EDS AI Workflow (Eitri)</a
+            >
+            <div class="nav-children">
+              <a href="eds-po-ba-harness.html">PO/BA harness</a>
+              <a href="eds-developer-harness.html">Developer harness</a>
+              <a href="eds-path-to-production.html">Path to production</a>
+              <a href="eds-team-context.html">Team context</a>
+              <a href="eds-skills-catalogue.html">Skills catalogue</a>
+            </div>
+            <a
+              href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"
+              ><svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              >Training</a
+            >
+            <a href="about.html"
+              ><svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="7"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                />
+                <path
+                  d="M10 9v5M10 6v.5"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                /></svg
+              >About</a
+            >
+          </nav>
+        </details>
+      </aside>
+      <main id="main" tabindex="-1">
+        <article class="concept-article tech-scan-article">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Introduction</a
+            ><span aria-hidden="true">/</span
+            ><a href="tech-scan.html">Tech Scan</a
+            ><span aria-hidden="true">/</span
+            ><span aria-current="page">Verification</span>
+          </nav>
+          <header class="article-header">
+            <p class="eyebrow">Development guide</p>
+            <h1>Tech Scan: Verification</h1>
+            <p class="lead">
+              Choose evidence that a change meets its requirements, then give
+              the decision owner its limits.
+            </p>
+            <p>
+              Draft research reference; published documentation is not a local
+              deployment test. No local pilot or representative-reader study has
+              been completed.
+            </p>
+          </header>
+          <figure
+            class="page-map page-map--route"
+            aria-labelledby="page-map-caption"
+            aria-describedby="page-map-note"
+          >
+            <figcaption id="page-map-caption">This page at a glance</figcaption>
+            <p id="page-map-note" class="page-map-note">
+              Developer route: name the evidence need → separate evidence →
+              build a credible check → choose a candidate → diagnose and hand
+              off. These groups organise the page; they are not lifecycle
+              stages.
+            </p>
+            <ol class="page-map-nodes" role="list">
+              <li class="page-map-node">
+                <strong>Evidence</strong>
+                <div class="page-map-links">
+                  <a href="#evidence">Separate evidence</a>
+                </div>
+              </li>
+              <li class="page-map-node">
+                <strong>Independence</strong>
+                <div class="page-map-links">
+                  <a href="#independence">Build a credible check</a>
+                </div>
+              </li>
+              <li class="page-map-node">
+                <strong>Choices</strong>
+                <div class="page-map-links">
+                  <a href="#choices">Choose a candidate</a>
+                </div>
+              </li>
+              <li class="page-map-node">
+                <strong>Decision</strong>
+                <div class="page-map-links">
+                  <a href="#decision">Diagnose and hand off</a
+                  ><a href="#sources">Sources</a>
+                </div>
+              </li>
+            </ol>
           </figure>
-        <p><strong>AWS-first candidate:</strong> trial Amazon Bedrock AgentCore Evaluations for agent traces, alongside your own CI tests and security checks. AWS documents on-demand, batch and sampled online evaluation, including built-in and custom evaluators; a model judge evaluates against its criteria, not a proof of patch correctness.<a href="#source-1" aria-label="Source 1: AgentCore evaluation types">[1]</a><a href="#source-2" aria-label="Source 2: AgentCore evaluators">[2]</a> Amazon Inspector Code Security can scan application code, dependencies and infrastructure as code; findings require triage and do not prove absence of vulnerabilities.<a href="#source-3" aria-label="Source 3: Inspector Code Security">[3]</a></p>
-        <p>AgentCore Evaluations ships 15 built-in evaluators, alongside managed third-party evaluators from the DeepEval and <a href="#source-7">AutoEval</a> libraries and custom evaluators you define as a judge or Lambda code.<a href="#source-7" aria-label="Source 7: AWS Machine Learning Blog, The agent evaluation playbook">[7]</a> The built-ins cover response quality, task and goal completion, tool use, skills and safety, plus ground-truth trajectory checks — none of them runs your test suite or scores whether a patch is correct.<a href="#source-7" aria-label="Source 7: AWS Machine Learning Blog, The agent evaluation playbook">[7]</a></p>
-        <p>No managed AWS service evaluates code correctness. Deterministic evidence still comes from your own CI: tests run in GitHub Actions or CodeBuild and are recorded as required status checks in GitHub rulesets — the only mechanism that can block a merge. Add mutation testing as the check on AI-written test suites: a coverage number alone does not show the tests would catch a real fault. <a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a> covers the authoring and CI handoff.</p>
-        <p>Do not build new work on Amazon CodeGuru. CodeGuru Security reached end of support on 20 November 2025; after that date the console, service resources and documentation are no longer accessible. The dedicated end-of-support page has itself been removed, and the notice now survives in the AWS SDK API reference.<a href="#source-8" aria-label="Source 8: AWS, CodeGuru Security API reference">[8]</a> CodeGuru Reviewer has been in maintenance mode since 7 November 2025 and accepts no new repository associations; existing associations keep working. AWS names Amazon Q Developer for code review and Amazon Inspector for code scanning as the replacements.<a href="#source-9" aria-label="Source 9: AWS, Amazon CodeGuru Reviewer and AWS CodeCommit">[9]</a> AWS Security Agent is not named as a CodeGuru successor in either notice, so this page does not present it as one.</p>
-        <p>Bedrock Guardrails Automated Reasoning checks validate a response against natural-language policies using formal logic — but they operate in detect mode only: they return findings and feedback rather than blocking content.<a href="#source-10" aria-label="Source 10: AWS, Automated Reasoning checks">[10]</a> They offer no prompt-injection protection, no off-topic detection and no streaming, and support English (US) only.<a href="#source-10" aria-label="Source 10: AWS, Automated Reasoning checks">[10]</a> Treat a VALID result as evidence about the policy you wrote, not as a safety gate.</p><p><strong>Conditional alternative:</strong> for a retrieval-augmented generation (RAG) pipeline needing separately controlled evaluation, trial Ragas with approved models and data handling. Compare relevant retrieved material and ranking using context precision and recall, then assess whether answers are faithful to that material. Faithfulness to retrieved text is not truth if the source is stale or wrong; confirm claims against authoritative records.<a href="#source-4" aria-label="Source 4: Ragas metrics">[4]</a><a href="#source-6" aria-label="Source 6: Ragas faithfulness">[6]</a> Choose the alternative when its metrics and operating model fit better; the team owns its deployment and configuration. <a href="tech-scan-context.html">Context</a> covers source access and retrieval boundaries.</p><p><strong>Hard gates before either pilot:</strong> verify required capability, region and availability, approved model and API, data location and retention across traces and judge calls, identity and authorisation, security boundaries, cost and an accountable operator. Stop when a gate is failed or unknown; AWS preference is not an exception. Vendor documentation establishes a capability, not local effectiveness.</p></section>
-        <section id="decision"><h2>Diagnose and hand off</h2><p>Before running the held-out set, the engineer and domain reviewer agree case selection, expected outcomes, severity and decision thresholds. Record the number passed and total, case mix, model and dataset versions, sampling method, judge disagreement and unresolved failures. A high aggregate cannot override a failed critical requirement; a small sample limits confidence.</p><p>Inspect failed traces: was the required source missing, inaccessible or stale; did retrieval rank it poorly; or did generation ignore good evidence? Record the observed failure before proposing a cause. Reproduce, route the issue to its owner and rerun the affected cases and regression set after a fix. Quarantine a flaky check for investigation, but do not silently waive a required gate.</p><aside class="learning-example"><div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><div class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span></span><h3 class="learning-title">Interpret a critical failure</h3><p class="learning-benefit">See why an aggregate cannot override a critical failure.</p></div></div><p>In a fictional pilot, a search assistant passes 18 of 20 held-out cases, but one failure exposes another user’s document. The reviewer records 18/20 and the access failure, blocks the proposed acceptance and sends isolation for investigation; the aggregate does not cancel the critical failure. After repair, rerun isolation and regression cases. An authorised person separately decides whether to release under <a href="eds-path-to-production.html">Path to production</a>.</p></aside><aside class="callout callout--tip" aria-labelledby="verification-acceptance-checks">
-          <p class="example-label" id="verification-acceptance-checks">Check before acceptance</p>
-          <ul class="checklist">
-            <li>Held-out denominator, case mix and sampling method recorded</li>
-            <li>Oracle derived from requirements and shown to catch a wrong result</li>
-            <li>Exact revision, pinned configuration and protected results</li>
-            <li>Judge family, ordering swaps, borderline repeats and disagreement recorded</li>
-            <li>Critical failure blocks acceptance even when the aggregate passes</li>
-            <li>Failed traces inspected, reproduced, routed and regressed after repair</li>
-          </ul>
-          <p>Record model and dataset versions, evaluator settings, costs and unresolved failures before handoff.</p>
-        </aside>
-        <p>Public benchmarks can screen options, not establish local acceptance. Results here are not locally validated; inspect service region, data terms, evaluator model, costs and current documentation before adoption.</p></section>
-        <section id="do-not-use"><h2>Do not treat screening as acceptance</h2>
-        <p>Do not let a screening signal, a self-graded check or a detect-only control stand in for acceptance evidence. Use the replacement named in each row.</p>
-        <div class="table-scroll" tabindex="0" role="region" aria-label="Evidence that does not establish acceptance"><table><caption>Evidence that does not establish acceptance</caption><thead><tr><th scope="col">Do not use</th><th scope="col">Why</th><th scope="col">Use instead</th></tr></thead><tbody>
-        <tr><th scope="row">Amazon CodeGuru Security or CodeGuru Reviewer for new work</th><td>Security reached end of support 20 November 2025; Reviewer in maintenance mode since 7 November 2025, with no new repository associations.<a href="#source-8" aria-label="Source 8: AWS, CodeGuru Security API reference">[8]</a><a href="#source-9" aria-label="Source 9: AWS, Amazon CodeGuru Reviewer and AWS CodeCommit">[9]</a></td><td>Q Developer for code review; Inspector Code Security for scanning.</td></tr>
-        <tr><th scope="row">A single benchmark number as acceptance evidence</th><td>Public benchmarks screen options; they do not establish local acceptance.</td><td>Your own held-out cases, with the denominator and sampling beside every threshold; see <a href="#decision">Diagnose and hand off</a>.</td></tr>
-        <tr><th scope="row">A judge from the same model family as the sole acceptance signal</th><td>Position, verbosity and self-preference biases.<a href="#source-5" aria-label="Source 5: Judging LLM-as-a-Judge">[5]</a></td><td>A different model family or a deterministic check alongside; see <a href="#independence">Build a credible check</a>.</td></tr>
-        <tr><th scope="row">An author agent's own tests or self-review as release evidence</th><td>The author grading itself is not independent validation.</td><td>A separate harness, held-out cases and a qualified reviewer; see <a href="#independence">Build a credible check</a>.</td></tr>
-        <tr><th scope="row">A lightweight preliminary evaluation quoted as a release gate</th><td>A cheap screen is not a release gate; a gate needs the full held-out set and human review of failures.</td><td>Full held-out set, deterministic checks and human review; see <a href="#decision">Diagnose and hand off</a>.</td></tr>
-        <tr><th scope="row">Guardrails Automated Reasoning as a blocking control or prompt-injection protection</th><td>Detect mode only; no prompt-injection protection.<a href="#source-10" aria-label="Source 10: AWS, Automated Reasoning checks">[10]</a></td><td>Content filters and topic policies for blocking; Automated Reasoning findings as feedback.</td></tr>
-        </tbody></table></div></section>
-        <section id="gaps"><h2>Gaps and open questions</h2>
-        <p>No managed AWS service evaluates code correctness. Nothing managed runs your test suite, scores patch quality or proves a fix; that is CI plus rulesets plus mutation testing, composed by you.</p>
-        <p>No managed AWS DAST service exists. Inspector Code Security is static analysis; Security Agent pentesting is per-run and agent-driven. Repeatable dynamic testing of a running app is an open-source scanner you operate.</p>
-        <p>AgentCore Evaluations general-availability date and region availability are not stated here: the reported 31 March 2026 date comes from secondary sources only.<a href="#source-7" aria-label="Source 7: AWS Machine Learning Blog, The agent evaluation playbook">[7]</a></p>
-        <p>AWS Security Agent pentesting general availability (reported 31 March 2026, six regions) is not verified against a primary AWS announcement, and the Agent is not named as a CodeGuru successor in the end-of-support notices.<a href="#source-9" aria-label="Source 9: AWS, Amazon CodeGuru Reviewer and AWS CodeCommit">[9]</a></p>
-        <p>Built-in evaluator count: this page cites the AWS Machine Learning Blog (10 November 2026), which lists 15 built-in evaluators.<a href="#source-7" aria-label="Source 7: AWS Machine Learning Blog, The agent evaluation playbook">[7]</a> An older AgentCore README lists 13; re-count with the ListEvaluators API at adoption.</p>
-        <p>The Automated Reasoning "up to 99%" verification-accuracy figure is a vendor claim whose scope was not verified; it is not quoted on this page.<a href="#source-10" aria-label="Source 10: AWS, Automated Reasoning checks">[10]</a></p></section>
-        <section id="sources"><h2>Sources</h2><p class="source-check-date">References last checked: <time datetime="2026-11-16">16 November 2026</time>.</p><ol class="source-list">
-        <li id="source-1"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations-types.html">AWS, Evaluation types</a>. Describes online, on-demand and batch modes; online uses sampled production traffic. Used in <a href="#choices">Choose a candidate</a>.</li>
-        <li id="source-2"><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluators.html">AWS, Evaluators</a>. Describes built-in and custom evaluators; built-in configurations cannot be modified. Used in <a href="#choices">Choose a candidate</a>.</li>
-        <li id="source-3"><a href="https://docs.aws.amazon.com/inspector/latest/user/code-security-assessments.html">AWS, Amazon Inspector Code Security</a>. Describes scans of application source, dependencies and infrastructure as code. Used in <a href="#choices">Choose a candidate</a>.</li>
-        <li id="source-4"><a href="https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/">Ragas, List of available metrics</a>. Lists context precision and context recall; metric variants have different inputs. Used in <a href="#choices">Choose a candidate</a>.</li>
-        <li id="source-5"><a href="https://arxiv.org/abs/2306.05685">Zheng and colleagues, Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena</a> (2023). Studies position, verbosity and self-enhancement biases in conversational judging; these findings do not measure every current judge. Used in <a href="#independence">Build a credible check</a>.</li>
-        <li id="source-6"><a href="https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/faithfulness/">Ragas, Faithfulness</a>. Measures consistency of response claims with retrieved context, not source truth. Used in <a href="#choices">Choose a candidate</a>.</li>
-        <li id="source-7"><a href="https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/">AWS Machine Learning Blog, The agent evaluation playbook: Built-in, DeepEval, and AutoEval on Amazon Bedrock AgentCore Evaluations</a> (10 November 2026). Fifteen built-in evaluators ("Builtin.GoalSuccessRate, Builtin.Helpfulness, and 13 more"); managed DeepEval and AutoEval evaluators; on-demand, online and batch modes. Used in <a href="#choices">Choose a candidate</a> and <a href="#gaps">Gaps and open questions</a>.</li>
-        <li id="source-8"><a href="https://docs.aws.amazon.com/java/api/latest/software/amazon/awssdk/services/codegurusecurity/package-summary.html">AWS, CodeGuru Security API reference</a> (AWS SDK for Java). Carries the end-of-support notice verbatim: support discontinued 20 November 2025; after that date no access to the console, service resources or documentation. The dedicated end-of-support page it links to has been removed. Used in <a href="#choices">Choose a candidate</a> and <a href="#do-not-use">Do not treat screening as acceptance</a>.</li>
-        <li id="source-9"><a href="https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-amazon-codeguru-reviewer.html">AWS, Amazon CodeGuru Reviewer and AWS CodeCommit</a>. Reviewer in maintenance mode as of 7 November 2025; no new repository associations; alternatives named are Amazon Q Developer for code review and Amazon Inspector for code scanning. Used in <a href="#choices">Choose a candidate</a>, <a href="#do-not-use">Do not treat screening as acceptance</a> and <a href="#gaps">Gaps and open questions</a>.</li>
-        <li id="source-10"><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html">AWS, What are Automated Reasoning checks in Amazon Bedrock Guardrails?</a>. Detect mode only; no prompt-injection protection, no off-topic detection, no streaming, English (US) only. Used in <a href="#choices">Choose a candidate</a>, <a href="#do-not-use">Do not treat screening as acceptance</a> and <a href="#gaps">Gaps and open questions</a>.</li><li id="source-11"><a href="https://x.com/bcherny/status/2102543349102338309">Boris Cherny, Lean and TLA+ for agent SDK bug discovery</a>. September 2026 practitioner case: state-model counterexamples and 16 reported PRs; not an independent correctness study. Used in <a href="#formal-model-checks">Formal models</a>.</li>
-</ol></section>
-        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer></article></main><aside class="page-contents"><nav aria-label="On this page"><p>On this page</p><a href="#evidence">Separate evidence</a><a href="#independence">Build a credible check</a><a href="#choices">Choose a candidate</a><a href="#decision">Diagnose and hand off</a><a href="#sources">Sources</a></nav></aside></div></body></html>
+          <aside
+            class="tech-scan-key-points"
+            aria-labelledby="tech-scan-key-points-label"
+          >
+            <p
+              class="tech-scan-key-points-label"
+              id="tech-scan-key-points-label"
+            >
+              Key points
+            </p>
+            <ul>
+              <li>
+                Separate tests, security scans and evaluations; one green result
+                does not replace the others.
+              </li>
+              <li>
+                Build an independent oracle, held-out cases, controlled
+                execution and qualified review.
+              </li>
+              <li>
+                Record critical failures and limits before handing evidence to
+                the decision owner.
+              </li>
+            </ul>
+          </aside>
+          <details class="mobile-contents">
+            <summary>On this page</summary>
+            <nav aria-label="On this page">
+              <a href="#evidence">Separate evidence</a
+              ><a href="#independence">Build a credible check</a
+              ><a href="#choices">Choose a candidate</a
+              ><a href="#decision">Diagnose and hand off</a
+              ><a href="#sources">Sources</a>
+            </nav>
+          </details>
+          <section id="evidence">
+            <h2>Separate evidence</h2>
+            <p>
+              Verification checks an output against specified requirements.
+              Tests exercise expected software behaviour; security scans and
+              adversarial tests seek vulnerabilities; evaluations assess defined
+              agent or AI behaviours across cases. A green result in one
+              category does not replace the others or establish fitness for
+              every use.
+            </p>
+            <p>
+              For a code change, the engineer records the revision, acceptance
+              criteria, test cases and expected results, CI output, security
+              findings and unresolved failures. For a product containing AI, add
+              evaluation cases for the model, retrieval and tool behaviour where
+              applicable.
+              <a href="tech-scan-workflows-factories.html"
+                >Workflows &amp; factories</a
+              >
+              covers the authoring and CI handoff;
+              <a href="tech-scan-delivery.html">Delivery</a> covers release
+              controls.
+            </p>
+          </section>
+          <section id="independence">
+            <h2>Build a credible check</h2>
+            <p>
+              A <strong>test oracle</strong> is the basis used to judge a
+              result: for example, an independently reviewed expected answer, an
+              invariant or a domain expert’s rubric. Independence is a matter of
+              degree, not a second process or a different model name alone.
+            </p>
+            <ul>
+              <li>
+                <strong>Oracle:</strong> have a qualified reviewer derive
+                expected outcomes from requirements and inspect whether the test
+                can catch a wrong result; author-written tests remain useful but
+                are not sufficient alone.
+              </li>
+              <li>
+                <strong>Data:</strong> reserve held-out cases from the author
+                and tuning loop. Select representative normal, boundary, adverse
+                and no-answer cases from the intended population; protect
+                sensitive data and refresh cases when exposed. A small
+                convenient set does not establish representativeness.
+              </li>
+              <li>
+                <strong>Execution:</strong> run a separate controlled harness
+                against the exact revision, with pinned configurations and
+                protected results. Separation alone does not make a flawed
+                oracle independent.
+              </li>
+              <li>
+                <strong>Decisions:</strong> a qualified person who did not
+                author the change reviews failures and evidence; the authorised
+                human retains the release decision. Separate review from action
+                approval.
+              </li>
+            </ul>
+            <p>
+              <strong>Property-based tests:</strong> turn an important acceptance
+              criterion into a rule that must hold for every valid input, then
+              generate inputs and event sequences that try to break it. For
+              example, “only one current verification task per asset” is stronger
+              than a single retry example. The product owner checks that the rule
+              expresses the intended behaviour; the engineer checks that the test
+              fails on a deliberately broken implementation and retains the
+              smallest failing case. A property can still be too weak, and a
+              passing property test is evidence rather than proof.
+              <a href="#source-12" aria-label="Source 12: Kiro, Correctness with Property-based tests">[12]</a>
+            </p>
+            <p>
+              Model judges can exhibit position, verbosity and self-preference
+              biases. Compare a sample with expert labels, swap ordering for
+              pairwise comparisons and repeat borderline cases; record
+              disagreement. A different model family is not proof of
+              independence, and a judge score alone is not acceptance
+              evidence.<a
+                href="#source-5"
+                aria-label="Source 5: Judging LLM-as-a-Judge"
+                >[5]</a
+              >
+            </p>
+            <h3 id="formal-model-checks">
+              Use formal models for state and concurrency risks
+            </h3>
+            <p>
+              For a race-prone operation, a model checker or proof assistant can
+              help test invariants that example-based tests may miss. Ask an
+              agent to propose a small Lean or TLA+ model, but have the engineer
+              and domain owner first review its states, assumptions and
+              invariants. An internally consistent proof of the wrong
+              specification does not establish correctness of the
+              implementation. A practitioner reported 16 bug-fix pull requests
+              after modeling parts of an agent SDK; this is a case report, not
+              an independent benchmark or evidence that the whole SDK was
+              formally verified.
+              <a
+                href="#source-11"
+                aria-label="Source 11: Boris Cherny, formal methods case"
+                >[11]</a
+              >
+            </p>
+            <ol>
+              <li>
+                State the invariant in business terms, for example: one asset
+                must have no more than one current verification task.
+              </li>
+              <li>
+                Model only the relevant actions, such as start, save a
+                declaration, interrupt and retry; review whether the model
+                matches the running system.
+              </li>
+              <li>
+                Freeze the reviewed specification before proof work, and retain
+                any approved change to it with the proof result.
+              </li>
+              <li>
+                Investigate any counterexample in the actual service and
+                reproduce it with an executable test before changing production
+                code.
+              </li>
+              <li>
+                Retain the reviewed specification, counterexample, reproduction
+                and corrected test as evidence; do not substitute the agent's
+                own proof for independent acceptance.
+              </li>
+            </ol>
+            <p>
+              A proof establishes only the property and assumptions that its
+              checked specification states. Review the business rule, theorem
+              statement, input bounds, trusted components and excluded
+              concurrency or environment behaviour before relying on it. “Does
+              not crash” is narrower than “matches the documented behaviour”.
+              Recent vendor reports show agents helping produce proofs at larger
+              scale, but their results are not local evidence and do not remove
+              this review. <a href="#source-13" aria-label="Source 13: Anthropic, formal verification">[13]</a>
+              <a href="#source-14" aria-label="Source 14: Microsoft Research, PDD Kit">[14]</a>
+            </p>
+          </section>
+          <section id="choices">
+            <h2>Choose a candidate</h2>
+            <svg
+              class="diagram-defs"
+              width="0"
+              height="0"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <defs>
+                <marker
+                  id="arrow"
+                  viewBox="0 0 10 10"
+                  refX="9"
+                  refY="5"
+                  markerWidth="8"
+                  markerHeight="8"
+                  orient="auto-start-reverse"
+                >
+                  <path d="M0 0 10 5 0 10Z" fill="#64748b" />
+                </marker>
+                <linearGradient id="d-grad-node" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="100%" stop-color="#f8fafc" />
+                </linearGradient>
+                <linearGradient id="d-grad-accent" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#eff6ff" />
+                  <stop offset="100%" stop-color="#dbeafe" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <figure
+              class="concept-figure"
+              id="fig-verification-route"
+              data-diagram="static"
+            >
+              <figcaption id="fig-verification-route-caption">
+                Figure 1. Verification route decision: name the evidence need,
+                separate evidence, build a credible check, choose a candidate
+                and diagnose failures before handoff. This is a decision route,
+                not a release approval.
+              </figcaption>
+              <details class="figure-reading">
+                <summary>Read as text: Verification route decision</summary>
+                <ol>
+                  <li>
+                    Name the evidence need: code change, agent or retrieval
+                    behaviour, security risk and the decision owner.
+                  </li>
+                  <li>
+                    Separate evidence: tests, security scans and evaluations
+                    answer different questions; one green result does not
+                    replace the others.
+                  </li>
+                  <li>
+                    Build a credible check: independent oracle, held-out cases,
+                    controlled execution and a qualified reviewer.
+                  </li>
+                  <li>
+                    Choose an AWS-first or conditional candidate, then diagnose
+                    failures and record limits before handoff.
+                  </li>
+                </ol>
+              </details>
+              <details class="diagram-detail" open>
+                <summary>
+                  Diagram
+                  <span class="diagram-hint"
+                    >— expand for the detailed view</span
+                  >
+                </summary>
+                <div
+                  class="figure-scroll"
+                  tabindex="0"
+                  role="region"
+                  aria-label="Verification route decision; scroll horizontally if needed"
+                >
+                  <svg
+                    viewBox="0 0 880 390"
+                    role="img"
+                    aria-labelledby="fig-verification-route-title"
+                    aria-describedby="fig-verification-route-title-desc"
+                  >
+                    <title id="fig-verification-route-title">
+                      Verification route decision
+                    </title>
+                    <desc id="fig-verification-route-title-desc">
+                      A team first names the evidence need for a code change,
+                      agent, retrieval or security risk. Evidence is separated
+                      into tests, security scans and evaluations. A credible
+                      check uses an independent oracle, held-out cases,
+                      controlled execution and a qualified reviewer. The team
+                      chooses an AWS-first or conditional candidate, diagnoses
+                      failures and records limits before handoff.
+                    </desc>
+                    <rect
+                      class="d-node"
+                      x="20"
+                      y="120"
+                      width="190"
+                      height="124"
+                      rx="8"
+                    />
+                    <text class="d-title" x="115" y="152" text-anchor="middle">
+                      Name the need
+                    </text>
+                    <text class="d-sub" x="115" y="176" text-anchor="middle">
+                      code, agent or retrieval
+                    </text>
+                    <text class="d-sub" x="115" y="198" text-anchor="middle">
+                      security and requirements
+                    </text>
+                    <text class="d-sub" x="115" y="220" text-anchor="middle">
+                      decision owner
+                    </text>
+                    <rect
+                      class="d-node d-node-accent"
+                      x="300"
+                      y="120"
+                      width="220"
+                      height="124"
+                      rx="8"
+                    />
+                    <text class="d-title" x="410" y="152" text-anchor="middle">
+                      Separate evidence
+                    </text>
+                    <text class="d-sub" x="410" y="176" text-anchor="middle">
+                      tests, security, evaluations
+                    </text>
+                    <text class="d-sub" x="410" y="198" text-anchor="middle">
+                      held-out cases
+                    </text>
+                    <text class="d-sub" x="410" y="220" text-anchor="middle">
+                      exact revision and config
+                    </text>
+                    <rect
+                      class="d-node"
+                      x="580"
+                      y="30"
+                      width="280"
+                      height="104"
+                      rx="8"
+                    />
+                    <text class="d-title" x="720" y="62" text-anchor="middle">
+                      Credible check
+                    </text>
+                    <text class="d-sub" x="720" y="86" text-anchor="middle">
+                      independent oracle and data
+                    </text>
+                    <text class="d-sub" x="720" y="108" text-anchor="middle">
+                      judge bias and reviewer
+                    </text>
+                    <rect
+                      class="d-node"
+                      x="580"
+                      y="190"
+                      width="280"
+                      height="124"
+                      rx="8"
+                    />
+                    <text class="d-title" x="720" y="222" text-anchor="middle">
+                      Choose and prove
+                    </text>
+                    <text class="d-sub" x="720" y="246" text-anchor="middle">
+                      AWS-first or conditional fit
+                    </text>
+                    <text class="d-sub" x="720" y="268" text-anchor="middle">
+                      critical failure blocks acceptance
+                    </text>
+                    <text class="d-sub" x="720" y="290" text-anchor="middle">
+                      record counts and gaps
+                    </text>
+                    <path
+                      class="d-line"
+                      d="M210 182H300"
+                      marker-end="url(#arrow)"
+                    />
+                    <path
+                      class="d-line"
+                      d="M520 150H545V82H580"
+                      marker-end="url(#arrow)"
+                    />
+                    <path
+                      class="d-line"
+                      d="M520 214H545V252H580"
+                      marker-end="url(#arrow)"
+                    />
+                    <path
+                      class="d-line d-dash"
+                      d="M720 134V190"
+                      marker-end="url(#arrow)"
+                    />
+                    <rect
+                      class="d-boundary"
+                      x="20"
+                      y="338"
+                      width="840"
+                      height="40"
+                      rx="7"
+                    />
+                    <text class="d-sub" x="440" y="363" text-anchor="middle">
+                      A green check, judge score or screening result is not
+                      acceptance; the authorised human decides release.
+                    </text>
+                  </svg>
+                </div>
+                <p class="diagram-key">
+                  The blue node separates evidence categories before any
+                  candidate is chosen. The dashed path shows that a credible
+                  check still needs diagnosed failures and recorded limits
+                  before handoff.
+                </p>
+              </details>
+            </figure>
+            <p>
+              <strong>AWS-first candidate:</strong> trial Amazon Bedrock
+              AgentCore Evaluations for agent traces, alongside your own CI
+              tests and security checks. AWS documents on-demand, batch and
+              sampled online evaluation, including built-in and custom
+              evaluators; a model judge evaluates against its criteria, not a
+              proof of patch correctness.<a
+                href="#source-1"
+                aria-label="Source 1: AgentCore evaluation types"
+                >[1]</a
+              ><a href="#source-2" aria-label="Source 2: AgentCore evaluators"
+                >[2]</a
+              >
+              Amazon Inspector Code Security can scan application code,
+              dependencies and infrastructure as code; findings require triage
+              and do not prove absence of vulnerabilities.<a
+                href="#source-3"
+                aria-label="Source 3: Inspector Code Security"
+                >[3]</a
+              >
+            </p>
+            <p>
+              <strong>Conditional AWS-first option:</strong> Kiro property-based
+              tests can turn an eligible specification into generated tests that
+              remain linked to the requirement. They are optional and documented
+              for the IDE, not Kiro CLI, Web or Mobile; trial them only after the
+              existing model, data and review gates pass. Treat the generated
+              property as a proposal to review, and keep integration tests for
+              behaviours outside its execution boundary.
+              <a href="#source-12" aria-label="Source 12: Kiro, Correctness with Property-based tests">[12]</a>
+              <a href="tech-scan-workflows-factories.html#purpose">Workflows &amp; factories</a>
+              explains Kiro specification artefacts and their review limits.
+            </p>
+            <p>
+              AgentCore Evaluations ships 15 built-in evaluators, alongside
+              managed third-party evaluators from the DeepEval and
+              <a href="#source-7">AutoEval</a> libraries and custom evaluators
+              you define as a judge or Lambda code.<a
+                href="#source-7"
+                aria-label="Source 7: AWS Machine Learning Blog, The agent evaluation playbook"
+                >[7]</a
+              >
+              The built-ins cover response quality, task and goal completion,
+              tool use, skills and safety, plus ground-truth trajectory checks —
+              none of them runs your test suite or scores whether a patch is
+              correct.<a
+                href="#source-7"
+                aria-label="Source 7: AWS Machine Learning Blog, The agent evaluation playbook"
+                >[7]</a
+              >
+            </p>
+            <p>
+              No managed AWS service evaluates code correctness. Deterministic
+              evidence still comes from your own CI: tests run in GitHub Actions
+              or CodeBuild and are recorded as required status checks in GitHub
+              rulesets — the only mechanism that can block a merge. Add mutation
+              testing as the check on AI-written test suites: a coverage number
+              alone does not show the tests would catch a real fault.
+              <a href="tech-scan-workflows-factories.html"
+                >Workflows &amp; factories</a
+              >
+              covers the authoring and CI handoff.
+            </p>
+            <p>
+              Do not build new work on Amazon CodeGuru. CodeGuru Security
+              reached end of support on 20 November 2025; after that date the
+              console, service resources and documentation are no longer
+              accessible. The dedicated end-of-support page has itself been
+              removed, and the notice now survives in the AWS SDK API
+              reference.<a
+                href="#source-8"
+                aria-label="Source 8: AWS, CodeGuru Security API reference"
+                >[8]</a
+              >
+              CodeGuru Reviewer has been in maintenance mode since 7 November
+              2025 and accepts no new repository associations; existing
+              associations keep working. AWS names Amazon Q Developer for code
+              review and Amazon Inspector for code scanning as the
+              replacements.<a
+                href="#source-9"
+                aria-label="Source 9: AWS, Amazon CodeGuru Reviewer and AWS CodeCommit"
+                >[9]</a
+              >
+              AWS Security Agent is not named as a CodeGuru successor in either
+              notice, so this page does not present it as one.
+            </p>
+            <p>
+              Bedrock Guardrails Automated Reasoning checks validate a response
+              against natural-language policies using formal logic — but they
+              operate in detect mode only: they return findings and feedback
+              rather than blocking content.<a
+                href="#source-10"
+                aria-label="Source 10: AWS, Automated Reasoning checks"
+                >[10]</a
+              >
+              They offer no prompt-injection protection, no off-topic detection
+              and no streaming, and support English (US) only.<a
+                href="#source-10"
+                aria-label="Source 10: AWS, Automated Reasoning checks"
+                >[10]</a
+              >
+              Treat a VALID result as evidence about the policy you wrote, not
+              as a safety gate.
+            </p>
+            <p>
+              <strong>Conditional alternative:</strong> for a
+              retrieval-augmented generation (RAG) pipeline needing separately
+              controlled evaluation, trial Ragas with approved models and data
+              handling. Compare relevant retrieved material and ranking using
+              context precision and recall, then assess whether answers are
+              faithful to that material. Faithfulness to retrieved text is not
+              truth if the source is stale or wrong; confirm claims against
+              authoritative records.<a
+                href="#source-4"
+                aria-label="Source 4: Ragas metrics"
+                >[4]</a
+              ><a href="#source-6" aria-label="Source 6: Ragas faithfulness"
+                >[6]</a
+              >
+              Choose the alternative when its metrics and operating model fit
+              better; the team owns its deployment and configuration.
+              <a href="tech-scan-context.html">Context</a> covers source access
+              and retrieval boundaries.
+            </p>
+            <p>
+              <strong>Hard gates before either pilot:</strong> verify required
+              capability, region and availability, approved model and API, data
+              location and retention across traces and judge calls, identity and
+              authorisation, security boundaries, cost and an accountable
+              operator. Stop when a gate is failed or unknown; AWS preference is
+              not an exception. Vendor documentation establishes a capability,
+              not local effectiveness.
+            </p>
+          </section>
+          <section id="decision">
+            <h2>Diagnose and hand off</h2>
+            <p>
+              Before running the held-out set, the engineer and domain reviewer
+              agree case selection, expected outcomes, severity and decision
+              thresholds. Record the number passed and total, case mix, model
+              and dataset versions, sampling method, judge disagreement and
+              unresolved failures. A high aggregate cannot override a failed
+              critical requirement; a small sample limits confidence.
+            </p>
+            <p>
+              Inspect failed traces: was the required source missing,
+              inaccessible or stale; did retrieval rank it poorly; or did
+              generation ignore good evidence? Record the observed failure
+              before proposing a cause. Reproduce, route the issue to its owner
+              and rerun the affected cases and regression set after a fix.
+              Quarantine a flaky check for investigation, but do not silently
+              waive a required gate.
+            </p>
+            <aside class="learning-example">
+              <div class="learning-example-header">
+                <svg
+                  class="learning-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div class="learning-header-copy">
+                  <span class="learning-header-meta"
+                    ><span class="learning-kind">Worked example</span></span
+                  >
+                  <h3 class="learning-title">Interpret a critical failure</h3>
+                  <p class="learning-benefit">
+                    See why an aggregate cannot override a critical failure.
+                  </p>
+                </div>
+              </div>
+              <p>
+                In a fictional pilot, a search assistant passes 18 of 20
+                held-out cases, but one failure exposes another user’s document.
+                The reviewer records 18/20 and the access failure, blocks the
+                proposed acceptance and sends isolation for investigation; the
+                aggregate does not cancel the critical failure. After repair,
+                rerun isolation and regression cases. An authorised person
+                separately decides whether to release under
+                <a href="eds-path-to-production.html">Path to production</a>.
+              </p>
+            </aside>
+            <aside
+              class="callout callout--tip"
+              aria-labelledby="verification-acceptance-checks"
+            >
+              <p class="example-label" id="verification-acceptance-checks">
+                Check before acceptance
+              </p>
+              <ul class="checklist">
+                <li>
+                  Held-out denominator, case mix and sampling method recorded
+                </li>
+                <li>
+                  Oracle derived from requirements and shown to catch a wrong
+                  result
+                </li>
+                <li>
+                  Exact revision, pinned configuration and protected results
+                </li>
+                <li>
+                  Judge family, ordering swaps, borderline repeats and
+                  disagreement recorded
+                </li>
+                <li>
+                  Critical failure blocks acceptance even when the aggregate
+                  passes
+                </li>
+                <li>
+                  Failed traces inspected, reproduced, routed and regressed
+                  after repair
+                </li>
+              </ul>
+              <p>
+                Record model and dataset versions, evaluator settings, costs and
+                unresolved failures before handoff.
+              </p>
+            </aside>
+            <p>
+              Public benchmarks can screen options, not establish local
+              acceptance. Results here are not locally validated; inspect
+              service region, data terms, evaluator model, costs and current
+              documentation before adoption.
+            </p>
+          </section>
+          <section id="do-not-use">
+            <h2>Do not treat screening as acceptance</h2>
+            <p>
+              Do not let a screening signal, a self-graded check or a
+              detect-only control stand in for acceptance evidence. Use the
+              replacement named in each row.
+            </p>
+            <div
+              class="table-scroll"
+              tabindex="0"
+              role="region"
+              aria-label="Evidence that does not establish acceptance"
+            >
+              <table>
+                <caption>
+                  Evidence that does not establish acceptance
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Do not use</th>
+                    <th scope="col">Why</th>
+                    <th scope="col">Use instead</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      Amazon CodeGuru Security or CodeGuru Reviewer for new work
+                    </th>
+                    <td>
+                      Security reached end of support 20 November 2025; Reviewer
+                      in maintenance mode since 7 November 2025, with no new
+                      repository associations.<a
+                        href="#source-8"
+                        aria-label="Source 8: AWS, CodeGuru Security API reference"
+                        >[8]</a
+                      ><a
+                        href="#source-9"
+                        aria-label="Source 9: AWS, Amazon CodeGuru Reviewer and AWS CodeCommit"
+                        >[9]</a
+                      >
+                    </td>
+                    <td>
+                      Q Developer for code review; Inspector Code Security for
+                      scanning.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      A single benchmark number as acceptance evidence
+                    </th>
+                    <td>
+                      Public benchmarks screen options; they do not establish
+                      local acceptance.
+                    </td>
+                    <td>
+                      Your own held-out cases, with the denominator and sampling
+                      beside every threshold; see
+                      <a href="#decision">Diagnose and hand off</a>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      A judge from the same model family as the sole acceptance
+                      signal
+                    </th>
+                    <td>
+                      Position, verbosity and self-preference biases.<a
+                        href="#source-5"
+                        aria-label="Source 5: Judging LLM-as-a-Judge"
+                        >[5]</a
+                      >
+                    </td>
+                    <td>
+                      A different model family or a deterministic check
+                      alongside; see
+                      <a href="#independence">Build a credible check</a>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      An author agent's own tests or self-review as release
+                      evidence
+                    </th>
+                    <td>
+                      The author grading itself is not independent validation.
+                    </td>
+                    <td>
+                      A separate harness, held-out cases and a qualified
+                      reviewer; see
+                      <a href="#independence">Build a credible check</a>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      A lightweight preliminary evaluation quoted as a release
+                      gate
+                    </th>
+                    <td>
+                      A cheap screen is not a release gate; a gate needs the
+                      full held-out set and human review of failures.
+                    </td>
+                    <td>
+                      Full held-out set, deterministic checks and human review;
+                      see <a href="#decision">Diagnose and hand off</a>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Guardrails Automated Reasoning as a blocking control or
+                      prompt-injection protection
+                    </th>
+                    <td>
+                      Detect mode only; no prompt-injection protection.<a
+                        href="#source-10"
+                        aria-label="Source 10: AWS, Automated Reasoning checks"
+                        >[10]</a
+                      >
+                    </td>
+                    <td>
+                      Content filters and topic policies for blocking; Automated
+                      Reasoning findings as feedback.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="gaps">
+            <h2>Gaps and open questions</h2>
+            <p>
+              No managed AWS service evaluates code correctness. Nothing managed
+              runs your test suite, scores patch quality or proves a fix; that
+              is CI plus rulesets plus mutation testing, composed by you.
+            </p>
+            <p>
+              No managed AWS DAST service exists. Inspector Code Security is
+              static analysis; Security Agent pentesting is per-run and
+              agent-driven. Repeatable dynamic testing of a running app is an
+              open-source scanner you operate.
+            </p>
+            <p>
+              AgentCore Evaluations general-availability date and region
+              availability are not stated here: the reported 31 March 2026 date
+              comes from secondary sources only.<a
+                href="#source-7"
+                aria-label="Source 7: AWS Machine Learning Blog, The agent evaluation playbook"
+                >[7]</a
+              >
+            </p>
+            <p>
+              AWS Security Agent pentesting general availability (reported 31
+              March 2026, six regions) is not verified against a primary AWS
+              announcement, and the Agent is not named as a CodeGuru successor
+              in the end-of-support notices.<a
+                href="#source-9"
+                aria-label="Source 9: AWS, Amazon CodeGuru Reviewer and AWS CodeCommit"
+                >[9]</a
+              >
+            </p>
+            <p>
+              Built-in evaluator count: this page cites the AWS Machine Learning
+              Blog (10 November 2026), which lists 15 built-in evaluators.<a
+                href="#source-7"
+                aria-label="Source 7: AWS Machine Learning Blog, The agent evaluation playbook"
+                >[7]</a
+              >
+              An older AgentCore README lists 13; re-count with the
+              ListEvaluators API at adoption.
+            </p>
+            <p>
+              The Automated Reasoning "up to 99%" verification-accuracy figure
+              is a vendor claim whose scope was not verified; it is not quoted
+              on this page.<a
+                href="#source-10"
+                aria-label="Source 10: AWS, Automated Reasoning checks"
+                >[10]</a
+              >
+            </p>
+          </section>
+          <section id="sources">
+            <h2>Sources</h2>
+            <p class="source-check-date">
+              References last checked:
+              <time datetime="2026-11-16">16 November 2026</time>.
+            </p>
+            <ol class="source-list">
+              <li id="source-1">
+                <a
+                  href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations-types.html"
+                  >AWS, Evaluation types</a
+                >. Describes online, on-demand and batch modes; online uses
+                sampled production traffic. Used in
+                <a href="#choices">Choose a candidate</a>.
+              </li>
+              <li id="source-2">
+                <a
+                  href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluators.html"
+                  >AWS, Evaluators</a
+                >. Describes built-in and custom evaluators; built-in
+                configurations cannot be modified. Used in
+                <a href="#choices">Choose a candidate</a>.
+              </li>
+              <li id="source-3">
+                <a
+                  href="https://docs.aws.amazon.com/inspector/latest/user/code-security-assessments.html"
+                  >AWS, Amazon Inspector Code Security</a
+                >. Describes scans of application source, dependencies and
+                infrastructure as code. Used in
+                <a href="#choices">Choose a candidate</a>.
+              </li>
+              <li id="source-4">
+                <a
+                  href="https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/"
+                  >Ragas, List of available metrics</a
+                >. Lists context precision and context recall; metric variants
+                have different inputs. Used in
+                <a href="#choices">Choose a candidate</a>.
+              </li>
+              <li id="source-5">
+                <a href="https://arxiv.org/abs/2306.05685"
+                  >Zheng and colleagues, Judging LLM-as-a-Judge with MT-Bench
+                  and Chatbot Arena</a
+                >
+                (2023). Studies position, verbosity and self-enhancement biases
+                in conversational judging; these findings do not measure every
+                current judge. Used in
+                <a href="#independence">Build a credible check</a>.
+              </li>
+              <li id="source-6">
+                <a
+                  href="https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/faithfulness/"
+                  >Ragas, Faithfulness</a
+                >. Measures consistency of response claims with retrieved
+                context, not source truth. Used in
+                <a href="#choices">Choose a candidate</a>.
+              </li>
+              <li id="source-7">
+                <a
+                  href="https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/"
+                  >AWS Machine Learning Blog, The agent evaluation playbook:
+                  Built-in, DeepEval, and AutoEval on Amazon Bedrock AgentCore
+                  Evaluations</a
+                >
+                (10 November 2026). Fifteen built-in evaluators
+                ("Builtin.GoalSuccessRate, Builtin.Helpfulness, and 13 more");
+                managed DeepEval and AutoEval evaluators; on-demand, online and
+                batch modes. Used in
+                <a href="#choices">Choose a candidate</a> and
+                <a href="#gaps">Gaps and open questions</a>.
+              </li>
+              <li id="source-8">
+                <a
+                  href="https://docs.aws.amazon.com/java/api/latest/software/amazon/awssdk/services/codegurusecurity/package-summary.html"
+                  >AWS, CodeGuru Security API reference</a
+                >
+                (AWS SDK for Java). Carries the end-of-support notice verbatim:
+                support discontinued 20 November 2025; after that date no access
+                to the console, service resources or documentation. The
+                dedicated end-of-support page it links to has been removed. Used
+                in <a href="#choices">Choose a candidate</a> and
+                <a href="#do-not-use">Do not treat screening as acceptance</a>.
+              </li>
+              <li id="source-9">
+                <a
+                  href="https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-amazon-codeguru-reviewer.html"
+                  >AWS, Amazon CodeGuru Reviewer and AWS CodeCommit</a
+                >. Reviewer in maintenance mode as of 7 November 2025; no new
+                repository associations; alternatives named are Amazon Q
+                Developer for code review and Amazon Inspector for code
+                scanning. Used in <a href="#choices">Choose a candidate</a>,
+                <a href="#do-not-use">Do not treat screening as acceptance</a>
+                and <a href="#gaps">Gaps and open questions</a>.
+              </li>
+              <li id="source-10">
+                <a
+                  href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html"
+                  >AWS, What are Automated Reasoning checks in Amazon Bedrock
+                  Guardrails?</a
+                >. Detect mode only; no prompt-injection protection, no
+                off-topic detection, no streaming, English (US) only. Used in
+                <a href="#choices">Choose a candidate</a>,
+                <a href="#do-not-use">Do not treat screening as acceptance</a>
+                and <a href="#gaps">Gaps and open questions</a>.
+              </li>
+              <li id="source-11">
+                <a href="https://x.com/bcherny/status/2102543349102338309"
+                  >Boris Cherny, Lean and TLA+ for agent SDK bug discovery</a
+                >. September 2026 practitioner case: state-model counterexamples
+                and 16 reported PRs; not an independent correctness study. Used
+                in <a href="#formal-model-checks">Formal models</a>.
+              </li>
+              <li id="source-12">
+                <a href="https://kiro.dev/docs/specs/correctness/">Kiro, Correctness with Property-based tests</a>.
+                Documents optional, IDE-only property tests generated from specifications; they are evidence, not proof. Used in <a href="#independence">Build a credible check</a> and <a href="#choices">Choose a candidate</a>.
+              </li>
+              <li id="source-13">
+                <a href="https://www.anthropic.com/research/formal-verification">Anthropic, LLMs are making formal software verification feasible at a much larger scale</a> (22 October 2026).
+                Vendor research report describing proofs for specified properties under stated assumptions; it does not establish general correctness or local effectiveness. Used in <a href="#formal-model-checks">Formal models</a>.
+              </li>
+              <li id="source-14">
+                <a href="https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/">Microsoft Research, Formally verifying agent-written full-stack web apps with PDD Kit</a> (5 November 2026).
+                Describes a Verus-based proof workflow plus tests for boundaries outside a proof. This vendor account is illustrative, not a local trial. Used in <a href="#formal-model-checks">Formal models</a>.
+              </li>
+            </ol>
+          </section>
+          <footer class="article-footer">
+            <span
+              ><a href="index.html#about-guidance">About this guidance</a></span
+            ><span>AI-Software Development Lifecycle</span><span>EDS</span>
+          </footer>
+        </article>
+      </main>
+      <aside class="page-contents">
+        <nav aria-label="On this page">
+          <p>On this page</p>
+          <a href="#evidence">Separate evidence</a
+          ><a href="#independence">Build a credible check</a
+          ><a href="#choices">Choose a candidate</a
+          ><a href="#decision">Diagnose and hand off</a
+          ><a href="#sources">Sources</a>
+        </nav>
+      </aside>
+    </div>
+  </body>
+</html>

@@ -25338,6 +25338,102 @@
         "final_url": "https://code.claude.com/docs/en/sandboxing",
         "capture_sha256": "2df1b27e787a5c7919c328a565ee08e5cb34a706d0b89e1390f70c39a915e447",
         "capture_url": "https://code.claude.com/docs/en/sandboxing.md"
+      },
+      {
+        "url": "https://kiro.dev/docs/specs/correctness/",
+        "checked_on": "2026-11-17",
+        "result": "retrieved",
+        "method": "web reader",
+        "files": [
+          "tech-scan-verification.html"
+        ],
+        "source_entries": [
+          {
+            "file": "tech-scan-verification.html",
+            "id": "source-12"
+          }
+        ],
+        "claim_reviews": [
+          {
+            "file": "tech-scan-verification.html",
+            "checked_on": "2026-11-17",
+            "outcome": "supported with limitations",
+            "scope": "Optional, IDE-only property-based testing generated from specifications.",
+            "limitation": "Vendor documentation; no local pilot or general correctness guarantee."
+          }
+        ]
+      },
+      {
+        "url": "https://www.anthropic.com/research/formal-verification",
+        "checked_on": "2026-11-17",
+        "result": "retrieved",
+        "method": "web reader",
+        "files": [
+          "tech-scan-verification.html"
+        ],
+        "source_entries": [
+          {
+            "file": "tech-scan-verification.html",
+            "id": "source-13"
+          }
+        ],
+        "claim_reviews": [
+          {
+            "file": "tech-scan-verification.html",
+            "checked_on": "2026-11-17",
+            "outcome": "supported with limitations",
+            "scope": "Proofs establish specified properties under stated assumptions.",
+            "limitation": "Vendor research report; no local replication or proof of general correctness."
+          }
+        ]
+      },
+      {
+        "url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+        "checked_on": "2026-11-17",
+        "result": "retrieved",
+        "method": "web reader",
+        "files": [
+          "tech-scan-verification.html"
+        ],
+        "source_entries": [
+          {
+            "file": "tech-scan-verification.html",
+            "id": "source-14"
+          }
+        ],
+        "claim_reviews": [
+          {
+            "file": "tech-scan-verification.html",
+            "checked_on": "2026-11-17",
+            "outcome": "supported with limitations",
+            "scope": "Verus proofs paired with tests for unproved boundaries.",
+            "limitation": "Microsoft Research product account; illustrative rather than a local trial."
+          }
+        ]
+      },
+      {
+        "url": "https://aws.amazon.com/blogs/migration-and-modernization/from-mainframes-to-microservices-specification-driven-mainframe-modernization-with-ai-agents/",
+        "checked_on": "2026-11-17",
+        "result": "retrieved",
+        "method": "web reader",
+        "files": [
+          "product-implementation.html"
+        ],
+        "source_entries": [
+          {
+            "file": "product-implementation.html",
+            "id": "source-18"
+          }
+        ],
+        "claim_reviews": [
+          {
+            "file": "product-implementation.html",
+            "checked_on": "2026-11-17",
+            "outcome": "supported with limitations",
+            "scope": "Vendor recipe tracing EARS requirements to generated property tests in one modernisation setting.",
+            "limitation": "Does not establish a general Kiro feature or replace integration testing."
+          }
+        ]
       }
     ]
   }
