@@ -81,6 +81,13 @@ class ADEInventoryTests(unittest.TestCase):
         # source pass, not the inherited inventory this digest pins.
         new_urls |= {r['url'] for r in self.inventory['references'] if set(r['files']) <= later_pages}
         new_urls |= {'https://github.com/eitri-edd/AI-PDLC/issues/60'}
+        # Issue 122 adds only these four records; inherited records remain pinned.
+        new_urls |= {
+            'https://kiro.dev/docs/specs/correctness/',
+            'https://www.anthropic.com/research/formal-verification',
+            'https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/',
+            'https://aws.amazon.com/blogs/migration-and-modernization/from-mainframes-to-microservices-specification-driven-mainframe-modernization-with-ai-agents/',
+        }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews']
