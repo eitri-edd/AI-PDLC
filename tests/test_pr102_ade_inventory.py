@@ -106,6 +106,9 @@ class ADEInventoryTests(unittest.TestCase):
         fields = ('checked_on', 'result', 'http_status', 'final_url', 'method', 'source_entries', 'evidence_digests')
         metadata = {r['url']: {k: copy.deepcopy(r[k]) for k in fields if k in r}
                     for r in self.inventory['references'] if r['url'] not in new_urls}
+        for entry in metadata.values():
+            if 'source_entries' in entry:
+                entry['source_entries'] = [e for e in entry['source_entries'] if e.get('file') != 'tech-radar.html']
         sandbox = metadata['https://code.claude.com/docs/en/sandboxing']
         for entry in ({'file': 'concept.html', 'id': 'source-47'},
                       {'file': 'tech-scan-agents.html', 'id': 'source-36'}):

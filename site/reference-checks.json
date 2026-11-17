@@ -1036,6 +1036,10 @@
         {
           "file": "tech-scan.html",
           "id": "source-3"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-12"
         }
       ]
     },
@@ -1080,6 +1084,10 @@
         {
           "file": "tech-scan-sandbox.html",
           "id": "source-14"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-22"
         }
       ]
     },
@@ -6690,6 +6698,10 @@
         {
           "file": "training.html",
           "id": "source-1"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-46"
         }
       ]
     },
@@ -7272,6 +7284,10 @@
         {
           "file": "tech-scan-workflows-factories.html",
           "id": "source-13"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-42"
         }
       ],
       "http_status": 200,
@@ -10977,6 +10993,10 @@
         {
           "file": "tech-scan-context.html",
           "id": "source-16"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-21"
         }
       ]
     },
@@ -12294,6 +12314,10 @@
         {
           "file": "tech-scan-verification.html",
           "id": "source-7"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-14"
         }
       ]
     },
@@ -12649,6 +12673,10 @@
         {
           "file": "tech-scan-verification.html",
           "id": "source-10"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-15"
         }
       ]
     },
