@@ -371,6 +371,14 @@ criticality score measure different things and are not interchangeable.
   safety controls or Sources, and anchors, citations and source order
   remain stable. Treat this as a presentation check beside the factual
   score, not a replacement for it.
+- **Status labels:** verify every product status on Tech Radar and
+  in Tech Scan against the four-label rule in `writing.md`: Do not
+  use only for products officially winding down, retired or at end
+  of support, with the wind-down or retirement date or the vendor's
+  statement cited; dormant or stalled products are Hold, unproven
+  or not-recommended products are Emerging. A status that does not
+  match its cited evidence is a factual finding at the same
+  threshold as any other below-5 item.
 
 ### 7. Whole-playbook critical review (ad hoc; last run 14 November 2026)
 
@@ -504,12 +512,14 @@ per score.
 A change is not editorially complete until these have been run
 for the pages it touches. Mark an item only after verification.
 
-1. **`writing.md` Editorial acceptance checklist** (32 items at the
+1. **`writing.md` Editorial acceptance checklist** (33 items at the
    end of `writing.md`): one final Sources section, one list, one
    page-level check date; teaching chapters distinguish general
    guidance, continuous case and reference material; Tech Scan
    component references state the developer route and keep actionable
-   checks distinct; opening tells the reader what the page helps them
+   checks distinct; product status labels follow the four-label rule
+   (Do not use only for officially winding down, retired or
+   end-of-support products); opening tells the reader what the page helps them
    do; terms explained and
    consistent; instructions identify actions, outputs and ownership;
    `check / review / validate / ensure` followed by enough detail
@@ -605,6 +615,12 @@ for the pages it touches. Mark an item only after verification.
   `writing.md` editorial checklist to 32 items and Acceptance gates
   item 1, on Christopher's instruction after the Tech Scan
   readability pass in PR #110.
+- 17 November 2026 (checked against dev `ebfb934`, base main
+  `826d009`): added the product status-label rule — Do not use only
+  for officially winding down, retired or end-of-support products —
+  to `writing.md` (Reference page section and checklist item 33),
+  §6 and Acceptance gates item 1, on Christopher's instruction
+  after the Tech Radar reclassification in PR #125.
 - When a review corrects content, consider whether the standards
   also need refinement — and file that as a separate proposal,
   not as a side effect of the content fix.
