@@ -17,9 +17,8 @@ REFERENCES = {
 }
 
 class Wave3NavigationTests(unittest.TestCase):
-    def test_guide_navigation_has_no_tech_scan_subnav(self):
-        # The four group links all pointed at anchors on the hub page itself,
-        # so the hub link stands alone; the next guide entry is AI-SDLC.
+    def test_guide_navigation_has_tech_scan_subnav(self):
+        # Tech Radar is the single child under the Tech Scan guide entry.
         for name in sorted(p.name for p in DIST.glob('*.html')):
             with self.subTest(page=name):
                 doc = Document((DIST / name).read_text())
@@ -27,7 +26,9 @@ class Wave3NavigationTests(unittest.TestCase):
                 hrefs = [a.attrs.get('href') for a in nav.elements('a')]
                 self.assertEqual(hrefs.count('tech-scan.html'), 1, name)
                 self.assertFalse([h for h in hrefs if h.startswith('tech-scan.html#')], name)
-                self.assertEqual(hrefs[hrefs.index('tech-scan.html') + 1], 'ai-pdlc.html', name)
+                scan_index = hrefs.index('tech-scan.html')
+                self.assertEqual(hrefs[scan_index + 1], 'tech-radar.html', name)
+                self.assertEqual(hrefs[scan_index + 2], 'ai-pdlc.html', name)
                 self.assertFalse(any(a.attrs.get('aria-current') == 'location' for a in nav.elements('a')), name)
                 current = [a.attrs.get('href') for a in nav.elements('a') if a.attrs.get('aria-current') == 'page']
                 self.assertLessEqual(len(current), 1, name)
