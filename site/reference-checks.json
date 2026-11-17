@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-11-17",
-  "scope": "Daily maintenance verification on 2026-11-17, with four targeted additions for issue 122; inherited page-wide reviews retained.",
-  "reviewed_base": "38b78b903af748c5d2fdcee17e6a2198dfbfdd99",
+  "scope": "Daily maintenance verification on 2026-11-17 found 451 distinct external hrefs and no broken destination",
+  "reviewed_base": "2ca2dd43d65849fa41dc0845eff73ffda3dcd87e",
   "original_unique_urls": 100,
   "current_unique_urls": 451,
   "current_unique_hrefs": 457,
