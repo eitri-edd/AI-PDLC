@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-17",
-  "scope": "Daily maintenance verification on 2026-11-17 found 387 distinct external hrefs and no broken destination",
+  "scope": "Daily maintenance verification on 2026-11-17, with four targeted additions for issue 122; inherited page-wide reviews retained.",
   "reviewed_base": "38b78b903af748c5d2fdcee17e6a2198dfbfdd99",
   "original_unique_urls": 100,
-  "current_unique_urls": 387,
-  "current_unique_hrefs": 393,
+  "current_unique_urls": 391,
+  "current_unique_hrefs": 397,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 5,
-    "retrieved": 371,
+    "retrieved": 375,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -15350,6 +15350,126 @@
           "id": "source-22"
         }
       ]
+    },
+    {
+      "url": "https://kiro.dev/docs/specs/correctness/",
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "method": "direct HTTP GET 200",
+      "files": [
+        "tech-scan-verification.html"
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-verification.html",
+          "id": "source-12"
+        }
+      ],
+      "claim_reviews": [
+        {
+          "file": "tech-scan-verification.html",
+          "checked_on": "2026-11-17",
+          "outcome": "limited",
+          "scope": "Optional, IDE-only property-based testing generated from specifications.",
+          "limitation": "Vendor documentation; no local pilot or general correctness guarantee."
+        }
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/specs/correctness/"
+      ],
+      "http_status": 200,
+      "final_url": "https://kiro.dev/docs/specs/correctness/",
+      "evidence_digests": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/formal-verification",
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "method": "direct HTTP GET 200",
+      "files": [
+        "tech-scan-verification.html"
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-verification.html",
+          "id": "source-13"
+        }
+      ],
+      "claim_reviews": [
+        {
+          "file": "tech-scan-verification.html",
+          "checked_on": "2026-11-17",
+          "outcome": "limited",
+          "scope": "Proofs establish specified properties under stated assumptions.",
+          "limitation": "Vendor research report; no local replication or proof of general correctness."
+        }
+      ],
+      "hrefs": [
+        "https://www.anthropic.com/research/formal-verification"
+      ],
+      "http_status": 200,
+      "final_url": "https://www.anthropic.com/research/formal-verification",
+      "evidence_digests": []
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "method": "direct HTTP GET 200",
+      "files": [
+        "tech-scan-verification.html"
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-verification.html",
+          "id": "source-14"
+        }
+      ],
+      "claim_reviews": [
+        {
+          "file": "tech-scan-verification.html",
+          "checked_on": "2026-11-17",
+          "outcome": "limited",
+          "scope": "Verus proofs paired with tests for unproved boundaries.",
+          "limitation": "Microsoft Research product account; illustrative rather than a local trial."
+        }
+      ],
+      "hrefs": [
+        "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/"
+      ],
+      "http_status": 200,
+      "final_url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+      "evidence_digests": []
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/migration-and-modernization/from-mainframes-to-microservices-specification-driven-mainframe-modernization-with-ai-agents/",
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "method": "direct HTTP GET 200",
+      "files": [
+        "product-implementation.html"
+      ],
+      "source_entries": [
+        {
+          "file": "product-implementation.html",
+          "id": "source-18"
+        }
+      ],
+      "claim_reviews": [
+        {
+          "file": "product-implementation.html",
+          "checked_on": "2026-11-17",
+          "outcome": "limited",
+          "scope": "Vendor recipe tracing EARS requirements to generated property tests in one modernisation setting.",
+          "limitation": "Does not establish a general Kiro feature or replace integration testing."
+        }
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/migration-and-modernization/from-mainframes-to-microservices-specification-driven-mainframe-modernization-with-ai-agents/"
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/migration-and-modernization/from-mainframes-to-microservices-specification-driven-mainframe-modernization-with-ai-agents/",
+      "evidence_digests": []
     }
   ],
   "history": [
