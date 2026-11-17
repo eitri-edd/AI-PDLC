@@ -227,7 +227,7 @@ class ModelsGatewayTests(unittest.TestCase):
         self.assertIsNotNone(guide)
         assert guide is not None
         nav = next(n for n in doc.root.elements("nav") if n.attrs.get("aria-label") == "Guide")
-        expected = BASELINE["harness"]["nav"][:4] + BASELINE["harness"]["nav"][8:]
+        expected = BASELINE["harness"]["nav"][:4] + [("tech-radar.html", "Tech Radar")] + BASELINE["harness"]["nav"][8:]
         self.assertEqual([(a.attrs.get("href"), normalise(a.text())) for a in nav.elements("a")], expected)
         check_text, check_datetime = CHECK_DATES[page]
         dates = [node for node in doc.root.elements("p") if node.has_class("source-check-date")]
