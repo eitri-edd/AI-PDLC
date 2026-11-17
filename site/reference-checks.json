@@ -126,6 +126,13 @@
       "unique_fetch_destinations": 21,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
+    "tech-radar.html": {
+      "checked_on": "2026-11-17",
+      "scope": "Compiled from published Concepts and Tech Scan references; no new external fetches for this table-only page.",
+      "status": "completed with explicit limitations",
+      "source_entries": 11,
+      "unique_fetch_destinations": 0
+    },
     "tech-scan.html": {
       "checked_on": "2026-11-17",
       "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
@@ -4830,6 +4837,7 @@
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
+        "tech-radar.html",
         "tech-scan-agents.html",
         "tech-scan-ai-workflows.html",
         "tech-scan-context.html",
@@ -5033,6 +5041,13 @@
           "outcome": "operational",
           "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+        },
+        {
+          "file": "tech-radar.html",
+          "checked_on": "2026-11-17",
+          "outcome": "operational",
+          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
         }
       ],
       "evidence_digests": [
@@ -5059,6 +5074,7 @@
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
+        "tech-radar.html",
         "tech-scan-agents.html",
         "tech-scan-ai-workflows.html",
         "tech-scan-context.html",
@@ -5262,6 +5278,13 @@
           "outcome": "operational",
           "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+        },
+        {
+          "file": "tech-radar.html",
+          "checked_on": "2026-11-17",
+          "outcome": "operational",
+          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
         }
       ],
       "evidence_digests": [
@@ -5288,6 +5311,7 @@
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
+        "tech-radar.html",
         "tech-scan-agents.html",
         "tech-scan-ai-workflows.html",
         "tech-scan-context.html",
@@ -5491,6 +5515,13 @@
           "outcome": "operational",
           "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+        },
+        {
+          "file": "tech-radar.html",
+          "checked_on": "2026-11-17",
+          "outcome": "operational",
+          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
         }
       ],
       "evidence_digests": [
@@ -9415,6 +9446,7 @@
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
+        "tech-radar.html",
         "tech-scan-agents.html",
         "tech-scan-ai-workflows.html",
         "tech-scan-context.html",
@@ -9625,6 +9657,13 @@
           "outcome": "operational",
           "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+        },
+        {
+          "file": "tech-radar.html",
+          "checked_on": "2026-11-17",
+          "outcome": "operational",
+          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
         }
       ],
       "evidence_digests": [

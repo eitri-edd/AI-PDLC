@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A table-only product radar for AI-SDLC concepts, with maturity, version, popularity and sentiment signals from the published Tech Scan references.">
+  <title>Tech Radar · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article tech-scan-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="tech-scan.html">Tech Scan</a><span aria-hidden="true">/</span><span aria-current="page">Tech Radar</span></nav>
+        <header class="article-header">
+          <p class="eyebrow">Development guide</p>
+          <h1>Tech Radar</h1>
+          <p class="lead">Products and tools mapped to the Concepts page, with maturity, version, popularity and sentiment signals from the published Tech Scan references.</p>
+        </header>
+        <details class="mobile-contents">
+          <summary>On this page</summary>
+          <nav aria-label="On this page"><a href="#radar">Product radar</a><a href="#sources">Sources</a></nav>
+        </details>
+        <section id="radar">
+          <h2>Product radar</h2>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="AI-SDLC product radar; scroll horizontally if needed"><table class="wide-table reference-table"><caption>Product radar compiled from Concepts and Tech Scan. Maturity, version, popularity and sentiment are qualitative signals from the linked reviews, not endorsements or local deployment tests.</caption><thead><tr><th scope="col">Concept</th><th scope="col">Product</th><th scope="col">Maturity</th><th scope="col">Version</th><th scope="col">Popularity signal</th><th scope="col">Sentiment signal</th><th scope="col">Evidence</th></tr></thead><tbody>
+            <tr><td>Model selection</td><th scope="row">Amazon Bedrock</th><td>GA</td><td>Service</td><td>Default AWS model-access route</td><td>Established</td><td><a href="tech-scan-models.html">Models &amp; access</a></td></tr>
+            <tr><td>Model selection</td><th scope="row">Claude Code</th><td>GA</td><td>Client; version not tracked</td><td>Default coding client through Bedrock</td><td>Established</td><td><a href="tech-scan-models.html">Models &amp; access</a>, <a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Model selection</td><th scope="row">Codex</th><td>GA</td><td>Client; cloud route separate</td><td>Default coding client through Bedrock</td><td>Established</td><td><a href="tech-scan-models.html">Models &amp; access</a>, <a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Model selection</td><th scope="row">Kiro</th><td>Available IDE/CLI route</td><td>Version not tracked</td><td>Alternative when its workflow fits</td><td>Emerging alternative</td><td><a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Model selection</td><th scope="row">TypeSafe Jev (System One)</th><td>Public beta / early access</td><td>Jev 1.14 for Box</td><td>Early access; educational material only</td><td>Emerging, mixed</td><td><a href="tech-scan-models.html">Models &amp; access</a></td></tr>
+            <tr><td>Model selection</td><th scope="row">Strands Decider 2B</th><td>Open-weight; not recommended</td><td>2B</td><td>Survey and repository claims only</td><td>Negative for approval</td><td><a href="tech-scan-models.html">Models &amp; access</a></td></tr>
+            <tr><td>Model access</td><th scope="row">LiteLLM proxy</th><td>Open-source core; paid enterprise</td><td>Version not tracked</td><td>Self-host or Cloud across 100+ providers</td><td>Mixed; security advisories reported</td><td><a href="tech-scan-gateway.html">AI gateway</a></td></tr>
+            <tr><td>Model access</td><th scope="row">OpenRouter</th><td>Managed service</td><td>Service</td><td>Hundreds of models through one endpoint</td><td>Positive; acquisition reported</td><td><a href="tech-scan-gateway.html">AI gateway</a></td></tr>
+            <tr><td>Model access</td><th scope="row">Portkey</th><td>MIT core; hosted service</td><td>Service</td><td>Routing, fallbacks, caching and guardrails</td><td>Mixed; acquisition completed</td><td><a href="tech-scan-gateway.html">AI gateway</a></td></tr>
+            <tr><td>Model access</td><th scope="row">Kong AI Gateway</th><td>Apache-2.0 core; tiered AI features</td><td>Version not tracked</td><td>Fit for existing Kong platform teams</td><td>Cautious</td><td><a href="tech-scan-gateway.html">AI gateway</a></td></tr>
+            <tr><td>Model access</td><th scope="row">Envoy AI Gateway / Agent Router</th><td>Apache-2.0</td><td>Kubernetes deployment</td><td>Fit for Kubernetes platform teams</td><td>Cautious</td><td><a href="tech-scan-gateway.html">AI gateway</a></td></tr>
+            <tr><td>Model access</td><th scope="row">Unkey</th><td>FSL-1.1-ALv2 source-available</td><td>Versioned releases</td><td>Key and quota layer</td><td>Cautious</td><td><a href="tech-scan-gateway.html">AI gateway</a></td></tr>
+            <tr><td>Context</td><th scope="row">Bedrock Managed Knowledge Base</th><td>AWS managed service</td><td>Service</td><td>AWS-managed ingestion, index, storage and retrieval</td><td>Established</td><td><a href="tech-scan-context.html">Context</a></td></tr>
+            <tr><td>Context</td><th scope="row">AgentCore Memory</th><td>AWS service</td><td>Service</td><td>Defined recall and retention needs</td><td>Emerging</td><td><a href="tech-scan-context.html">Context</a>, <a href="tech-scan-harness.html">Harness &amp; execution</a></td></tr>
+            <tr><td>Context</td><th scope="row">OpenSearch Serverless vectorsearch</th><td>AWS service</td><td>Service</td><td>Hybrid search or low-latency filtered retrieval</td><td>Established</td><td><a href="tech-scan-context.html">Context</a></td></tr>
+            <tr><td>Context</td><th scope="row">Aurora PostgreSQL with pgvector</th><td>AWS service</td><td>pgvector 0.8.2 on Aurora PostgreSQL 18.6</td><td>Retrieval joined to business rows</td><td>Established</td><td><a href="tech-scan-context.html">Context</a></td></tr>
+            <tr><td>Context</td><th scope="row">Zep Community Edition</th><td>No longer maintained</td><td>No release since April 2025</td><td>Historical memory option</td><td>Negative</td><td><a href="tech-scan-context.html">Context</a></td></tr>
+            <tr><td>Harness</td><th scope="row">AgentCore managed harness</th><td>AWS managed</td><td>Service</td><td>State, tools, context, memory, evaluation and observability starting points</td><td>Established</td><td><a href="tech-scan-harness.html">Harness &amp; execution</a></td></tr>
+            <tr><td>Workflow dependencies</td><th scope="row">LangGraph</th><td>Open-source framework</td><td>Releases versioned</td><td>Stateful graph orchestration with durable state</td><td>Positive</td><td><a href="tech-scan-harness.html">Harness &amp; execution</a>, <a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Harness</td><th scope="row">AI SDK</th><td>TypeScript agent loop</td><td>Releases versioned</td><td>Code-level loop and context control</td><td>Positive</td><td><a href="tech-scan-harness.html">Harness &amp; execution</a></td></tr>
+            <tr><td>Agentic development environment</td><th scope="row">OpenHands</th><td>Open-source coding agent</td><td>Releases versioned</td><td>Self-hosted issue-to-PR option</td><td>Positive</td><td><a href="tech-scan-harness.html">Harness &amp; execution</a>, <a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a></td></tr>
+            <tr><td>Workflow dependencies</td><th scope="row">Strands Agents</th><td>Python and TypeScript SDKs</td><td>Releases versioned</td><td>Agents as tools, graphs or fixed workflows</td><td>Positive</td><td><a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Workflow dependencies</td><th scope="row">Microsoft Agent Framework</th><td>Enterprise multi-agent framework</td><td>1.0</td><td>Successor to AutoGen and Semantic Kernel</td><td>Positive</td><td><a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Workflow dependencies</td><th scope="row">Google ADK</th><td>Agent development kit</td><td>2.0</td><td>Multi-agent systems with tooling</td><td>Positive</td><td><a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Workflow dependencies</td><th scope="row">OpenAI Agents SDK</th><td>Python and TypeScript SDK</td><td>Pre-1.0 at review; confirm release</td><td>OpenAI-model agent workflows</td><td>Emerging</td><td><a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Workflow dependencies</td><th scope="row">CrewAI</th><td>Multi-agent teams</td><td>Confirm release and licensing</td><td>Roles and delegation</td><td>Positive</td><td><a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Workflow dependencies</td><th scope="row">AG2</th><td>Multi-agent conversations</td><td>1.0</td><td>Group chat patterns</td><td>Positive</td><td><a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Verification engineering</td><th scope="row">AgentCore Evaluations</th><td>AWS service</td><td>Service</td><td>Task-specific evaluation scoring</td><td>Established</td><td><a href="tech-scan-verification.html">Verification</a>, <a href="tech-scan-harness.html">Harness &amp; execution</a></td></tr>
+            <tr><td>Verification engineering</td><th scope="row">Bedrock Guardrails Automated Reasoning</th><td>Detect mode only</td><td>Service</td><td>Reasoning checks as feedback, not blocking control</td><td>Cautious</td><td><a href="tech-scan-verification.html">Verification</a>, <a href="tech-scan-gateway.html">AI gateway</a></td></tr>
+            <tr><td>Verification engineering</td><th scope="row">Amazon CodeGuru Reviewer</th><td>Maintenance mode; end of support path</td><td>N/A</td><td>No new repository associations</td><td>Negative</td><td><a href="tech-scan-verification.html">Verification</a></td></tr>
+            <tr><td>Sandbox</td><th scope="row">Nitro Sandboxes</th><td>EC2/EKS microVM boundary</td><td>Service</td><td>For EKS shops that own cluster and network controls</td><td>Cautious</td><td><a href="tech-scan-sandbox.html">Sandbox</a></td></tr>
+            <tr><td>Sandbox</td><th scope="row">Nitro Enclaves</th><td>Locked-down VM</td><td>Service</td><td>Secrets and key custody, not a code-execution sandbox</td><td>Cautious</td><td><a href="tech-scan-sandbox.html">Sandbox</a></td></tr>
+            <tr><td>Sandbox</td><th scope="row">Lambda MicroVMs</th><td>Snapshot microVM endpoint</td><td>Service</td><td>Build-your-own sandbox API</td><td>Emerging</td><td><a href="tech-scan-sandbox.html">Sandbox</a></td></tr>
+            <tr><td>Sandbox</td><th scope="row">E2B</th><td>Sandbox API and templates</td><td>Version not confirmed in review</td><td>Reusable template lead</td><td>Cautious</td><td><a href="tech-scan-sandbox.html">Sandbox</a></td></tr>
+            <tr><td>Software factory</td><th scope="row">Copilot cloud agent</th><td>GitHub-managed agent</td><td>Service</td><td>Issue-to-draft pull request inside GitHub</td><td>Positive</td><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a></td></tr>
+            <tr><td>Software factory</td><th scope="row">Codex Cloud</th><td>OpenAI-managed cloud tasks</td><td>Service</td><td>Cloud tasks landing as pull requests</td><td>Positive</td><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a></td></tr>
+            <tr><td>Software factory</td><th scope="row">Cursor Cloud Agents</th><td>Cursor-managed cloud agents</td><td>Service</td><td>Cloud agents opening pull requests</td><td>Positive</td><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a></td></tr>
+            <tr><td>Software factory</td><th scope="row">Devin</th><td>Managed agent service</td><td>Service</td><td>Assigns work from issues and opens pull requests</td><td>Positive</td><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a></td></tr>
+            <tr><td>Software factory</td><th scope="row">Factory Droids</th><td>Managed droids</td><td>Service</td><td>Issue-to-pull-request without building the runner</td><td>Positive</td><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a></td></tr>
+            <tr><td>Software factory</td><th scope="row">GitHub Agent HQ</th><td>Platform layer</td><td>Service</td><td>Compare provider pull requests; not a factory alone</td><td>Cautious</td><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a></td></tr>
+            <tr><td>Software factory</td><th scope="row">Google Jules</th><td>Read-only; winding down</td><td>N/A</td><td>Ends 31 December 2026</td><td>Negative</td><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a>, <a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Software factory</td><th scope="row">Amazon Q Developer for GitHub</th><td>Support ending</td><td>N/A</td><td>New installations stop 18 November 2026; support ends 30 January 2027</td><td>Negative</td><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a>, <a href="tech-scan-agents.html">Coding agents</a></td></tr>
+            <tr><td>Software factory</td><th scope="row">Amazon CodeCatalyst</th><td>Closed to new customers</td><td>N/A</td><td>Maintenance only</td><td>Negative</td><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a>, <a href="tech-scan-delivery.html">Delivery</a></td></tr>
+            <tr><td>Software factory</td><th scope="row">Aider</th><td>Stalled</td><td>N/A</td><td>No active development</td><td>Negative</td><td><a href="tech-scan-workflows-factories.html">Workflows &amp; factories</a></td></tr>
+            <tr><td>Feedback loops</td><th scope="row">Matt Pocock skills</th><td>Community skill pack</td><td>v1.3.2; README commit 5863806</td><td>Ecosystem evidence 92.2; viral rank 2</td><td>High community signal</td><td><a href="tech-scan-ai-workflows.html">AI workflows</a></td></tr>
+            <tr><td>Feedback loops</td><th scope="row">Superpowers</th><td>Community skill pack</td><td>v7.0.2</td><td>Ecosystem evidence 84.0; viral rank 7</td><td>High community signal</td><td><a href="tech-scan-ai-workflows.html">AI workflows</a></td></tr>
+            <tr><td>Feedback loops</td><th scope="row">Agent Skills (Addy Osmani)</th><td>Community skill pack</td><td>0.6.16</td><td>Ecosystem evidence 64.2; viral rank 6</td><td>Moderate community signal</td><td><a href="tech-scan-ai-workflows.html">AI workflows</a></td></tr>
+            <tr><td>Feedback loops</td><th scope="row">pstack</th><td>Community plugin</td><td>plugin 0.15.42</td><td>Ecosystem evidence 62.5; viral rank 1</td><td>High attention; verify claims</td><td><a href="tech-scan-ai-workflows.html">AI workflows</a></td></tr>
+            <tr><td>Feedback loops</td><th scope="row">gstack</th><td>Community sprint pack</td><td>1.99.5.0</td><td>Ecosystem evidence 61.0; viral rank 5</td><td>Moderate community signal</td><td><a href="tech-scan-ai-workflows.html">AI workflows</a></td></tr>
+            <tr><td>Feedback loops</td><th scope="row">tstack</th><td>Community pull-request pack</td><td>No release; commit 11e37a7</td><td>Ecosystem evidence 33.5; viral rank 3</td><td>Mixed; no release</td><td><a href="tech-scan-ai-workflows.html">AI workflows</a></td></tr>
+            <tr><td>Feedback loops</td><th scope="row">ub-mode</th><td>Community principles skill</td><td>No release; commit 3da62bf</td><td>Ecosystem evidence 28.5; viral rank 4</td><td>Mixed; no release</td><td><a href="tech-scan-ai-workflows.html">AI workflows</a></td></tr>
+          </tbody></table></div>
+        </section>
+        <section id="sources">
+          <h2>Sources</h2>
+          <p class="source-check-date">References last checked: <time datetime="2026-11-17">17 November 2026</time>.</p>
+          <ol class="source-list">
+            <li><a href="concept.html">Concepts</a></li>
+            <li><a href="tech-scan.html">Tech Scan hub</a></li>
+            <li><a href="tech-scan-models.html">Tech Scan — Models &amp; access</a></li>
+            <li><a href="tech-scan-gateway.html">Tech Scan — AI gateway</a></li>
+            <li><a href="tech-scan-context.html">Tech Scan — Context</a></li>
+            <li><a href="tech-scan-harness.html">Tech Scan — Harness &amp; execution</a></li>
+            <li><a href="tech-scan-sandbox.html">Tech Scan — Sandbox</a></li>
+            <li><a href="tech-scan-agents.html">Tech Scan — Coding agents &amp; coordination</a></li>
+            <li><a href="tech-scan-workflows-factories.html">Tech Scan — Workflows &amp; factories</a></li>
+            <li><a href="tech-scan-verification.html">Tech Scan — Verification</a></li>
+            <li><a href="tech-scan-ai-workflows.html">Tech Scan — AI workflows</a></li>
+          </ol>
+        </section>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
