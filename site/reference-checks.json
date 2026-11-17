@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-17, with four targeted additions for issue 122; inherited page-wide reviews retained.",
   "reviewed_base": "38b78b903af748c5d2fdcee17e6a2198dfbfdd99",
   "original_unique_urls": 100,
-  "current_unique_urls": 425,
-  "current_unique_hrefs": 431,
+  "current_unique_urls": 445,
+  "current_unique_hrefs": 451,
   "counts": {
     "dynamic_page_no_text": 5,
-    "expected_login_redirect": 2,
+    "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 5,
-    "retrieved": 408,
+    "retrieved": 429,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -130,8 +130,8 @@
       "checked_on": "2026-11-17",
       "scope": "Grouped radar rebuild on 2026-11-17: every cited vendor link re-fetched live and new claims compared with the cited page; internal Concepts and Tech Scan references retained from the PR 125 pass.",
       "status": "completed with explicit limitations",
-      "source_entries": 52,
-      "unique_fetch_destinations": 45
+      "source_entries": 75,
+      "unique_fetch_destinations": 68
     },
     "tech-scan.html": {
       "checked_on": "2026-11-17",
@@ -1069,8 +1069,8 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "Lambda MicroVMs reached general availability on 22 June 2026, ARM64 only at launch, as a dedicated stateful microVM per session.",
-          "evidence_summary": "The launch blog dates general availability to 22 June 2026 and describes the per-session microVM."
+          "scope": "Lambda MicroVMs reached general availability on 22 June 2026 and were ARM64 only at launch.",
+          "evidence_summary": "The launch post is the general-availability announcement. Later What's New posts, recorded separately, add regions and x86."
         }
       ],
       "evidence_digests": [
@@ -6667,8 +6667,8 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "The Matt Pocock skills pack holds 27 MIT-licensed skills, at v1.3.0 tagged 29 September 2026.",
-          "evidence_summary": "The repository lists 27 skills under an MIT licence at v1.3.0."
+          "scope": "mattpocock/skills v1.3.2 was published on 29 October 2026.",
+          "evidence_summary": "GitHub releases list v1.3.2 published on 29 October 2026."
         }
       ],
       "evidence_digests": [
@@ -11624,7 +11624,8 @@
     {
       "url": "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents",
       "files": [
-        "tech-scan-gateway.html"
+        "tech-scan-gateway.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents"
@@ -11640,12 +11641,22 @@
           "outcome": "supported",
           "scope": "Palo Alto Networks, Palo Alto Networks Completes Acquisition of Portkey to Secure AI Agents. Press release, 29 May 2026: Palo Alto Networks has closed the acquisition of Portkey, making Portkey the core AI Gateway for Prisma AIRS. Used in the optional notes under Conditional alternatives.",
           "evidence_summary": "Direct GET returned 200. The release states Palo Alto Networks has closed the acquisition of Portkey and that Portkey becomes the core AI Gateway for Prisma AIRS."
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Palo Alto Networks completed its acquisition of Portkey on 29 May 2026.",
+          "evidence_summary": "The press release, dated 29 May 2026, says Palo Alto Networks has closed the acquisition of Portkey."
         }
       ],
       "source_entries": [
         {
           "file": "tech-scan-gateway.html",
           "id": "source-11"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-75"
         }
       ]
     },
@@ -12498,7 +12509,8 @@
     {
       "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html",
       "files": [
-        "tech-scan-context.html"
+        "tech-scan-context.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html"
@@ -12514,6 +12526,12 @@
           "outcome": "supported",
           "scope": "pgvector 0.8.2 on Aurora PostgreSQL 18.6 and 18.4; 0.8.1 on 18.3.",
           "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Aurora's extension list includes pgvector 0.8.2, 0.8.1 and 0.8.0, depending on the engine version.",
+          "evidence_summary": "The extensions page lists pgvector 0.8.2 for some engine columns and also 0.8.1 and 0.8.0."
         }
       ],
       "evidence_digests": [],
@@ -12521,6 +12539,10 @@
         {
           "file": "tech-scan-context.html",
           "id": "source-15"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-56"
         }
       ]
     },
@@ -13814,7 +13836,8 @@
     {
       "url": "https://docs.devin.ai/get-started/devin-intro",
       "files": [
-        "about.html"
+        "about.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://docs.devin.ai/get-started/devin-intro"
@@ -13831,6 +13854,12 @@
           "scope": "Vendor product introduction describing Devin as an autonomous AI software engineer.",
           "evidence_summary": "Live page describes Devin as an autonomous AI software engineer that can write, run and test code.",
           "limitation": "Vendor documentation; does not verify this playbook\u2019s runtime agent configuration or the quality of its changes."
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Devin is an autonomous software engineer that writes, runs and tests code, takes Linear and Jira tickets and Slack or Teams work, and can use a shell and browser in the cloud and return a draft pull request.",
+          "evidence_summary": "The Introducing Devin page states those capabilities, including draft pull requests and the shell and browser."
         }
       ],
       "evidence_digests": [
@@ -13844,6 +13873,10 @@
         {
           "file": "about.html",
           "id": "source-7"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-39"
         }
       ]
     },
@@ -15632,8 +15665,8 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "CodeGuru Reviewer is in maintenance mode from 7 November 2025, not end of support; the November 2025 end-of-support date belongs to CodeGuru Security.",
-          "evidence_summary": "The availability page dates maintenance mode to 7 November 2025 and describes the no-new-associations limit."
+          "scope": "CodeGuru Reviewer stopped new repository associations on 7 November 2025; existing associations keep working. The page does not call this maintenance mode or end of support.",
+          "evidence_summary": "Direct GET of the availability page. It says new repository associations cannot be created and existing associations can still be used."
         }
       ],
       "source_entries": [
@@ -15771,9 +15804,9 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "E2B is a hosted sandbox platform with an open-source runtime, offering a Firecracker microVM per agent session.",
-          "evidence_summary": "The home page describes the hosted sandbox platform and the open-source runtime.",
+          "outcome": "supported",
+          "scope": "E2B is the hosted sandbox platform. SDK 2.64.0 is the GitHub release e2b@2.64.0 on 13 November 2026.",
+          "evidence_summary": "The home page describes the hosted sandbox. The version was confirmed on the e2b-dev/E2B GitHub release e2b@2.64.0.",
           "limitation": "The SDK version 2.64.0 was reported by release trackers on 13 November 2026, not read from the E2B releases page; confirm it before relying on it."
         }
       ],
@@ -15800,9 +15833,10 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "supported",
-          "scope": "Strands Decider 2B release v1-2610 scores 0.779 on JevBench and documents Choice, Score and Noul only, with no Box.",
-          "evidence_summary": "The README names release v1-2610 with JevBench 0.779 and lists Choice, Score and Noul."
+          "outcome": "limited",
+          "scope": "The README is the vendor source for release v1-2610 and for the vendor-reported JevBench, Brier and ECE figures. This pass did not reproduce those scores.",
+          "evidence_summary": "The figures remain the vendor's own. JevBench is the vendor's decision-quality test; Brier and ECE describe probability calibration.",
+          "limitation": "The numeric scores were not re-run for this pass."
         }
       ],
       "source_entries": [
@@ -15885,8 +15919,8 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "The Portkey open-source gateway is MIT-licensed, with v1.15.2 from January 2026 as its latest tagged release.",
-          "evidence_summary": "The README describes the MIT-licensed gateway; the release history shows no tagged release after v1.15.2."
+          "scope": "The Portkey open-source gateway's latest tagged release is v1.15.2 on 12 January 2026, with no release since.",
+          "evidence_summary": "GitHub releases list v1.15.2 published on 12 January 2026 as the latest tag. The acquisition is a separate Palo Alto Networks press release."
         }
       ],
       "source_entries": [
@@ -15913,8 +15947,8 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "Kong AI Gateway 2.3 was released on 4 November 2026, with 2.2 as the stable line.",
-          "evidence_summary": "The version support policy dates AI Gateway 2.3 to 4 November 2026."
+          "scope": "Kong AI Gateway 2.3 was released on 4 November 2026 and is supported to 4 December 2026. Version 2.2, released 30 September 2026, is the stable line and is supported to 30 March 2027.",
+          "evidence_summary": "The version support policy page states those release dates and the support windows for 2.3 and 2.2."
         }
       ],
       "source_entries": [
@@ -15941,8 +15975,8 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "The Envoy AI Gateway was renamed Agent Router in September 2026, and v1.2.1 was released on 6 November 2026.",
-          "evidence_summary": "The repository carries the Agent Router name and the v1.2.1 release."
+          "scope": "Agent Router, formerly Envoy AI Gateway, is an Apache-2.0 gateway. v1.2.1, released 6 November 2026, is the latest stable release.",
+          "evidence_summary": "GitHub releases list v1.2.1 published on 6 November 2026 as the latest non-prerelease."
         }
       ],
       "source_entries": [
@@ -16094,34 +16128,6 @@
       ]
     },
     {
-      "url": "https://pypi.org/project/google-adk/2.14.0/",
-      "files": [
-        "tech-radar.html"
-      ],
-      "hrefs": [
-        "https://pypi.org/project/google-adk/2.14.0/"
-      ],
-      "checked_on": "2026-11-17",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://pypi.org/project/google-adk/2.14.0/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-radar.html",
-          "outcome": "supported",
-          "scope": "Google ADK 2.14.0 was released on 7 November 2026.",
-          "evidence_summary": "The PyPI page dates 2.14.0 to 7 November 2026."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-radar.html",
-          "id": "source-35"
-        }
-      ]
-    },
-    {
       "url": "https://docs.github.com/en/copilot/concepts/about-copilot-coding-agent",
       "files": [
         "tech-radar.html"
@@ -16147,35 +16153,6 @@
         {
           "file": "tech-radar.html",
           "id": "source-36"
-        }
-      ]
-    },
-    {
-      "url": "https://developers.openai.com/codex/cloud/environments",
-      "files": [
-        "tech-radar.html"
-      ],
-      "hrefs": [
-        "https://developers.openai.com/codex/cloud/environments"
-      ],
-      "checked_on": "2026-11-17",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://learn.chatgpt.com/docs/environments/cloud-environment",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-radar.html",
-          "outcome": "supported",
-          "scope": "Reusable Codex cloud environments were relaunched on 29 September 2026, and the earlier flow is now Codex Cloud (Legacy).",
-          "evidence_summary": "The documentation describes reusable cloud environments and labels the earlier flow as Legacy.",
-          "limitation": "The documentation has moved to the ChatGPT docs site; the page content is the same material."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-radar.html",
-          "id": "source-37"
         }
       ]
     },
@@ -16208,34 +16185,6 @@
       ]
     },
     {
-      "url": "https://devin.ai/pricing",
-      "files": [
-        "tech-radar.html"
-      ],
-      "hrefs": [
-        "https://devin.ai/pricing"
-      ],
-      "checked_on": "2026-11-17",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://devin.ai/pricing",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-radar.html",
-          "outcome": "supported",
-          "scope": "Devin is a hosted autonomous software-engineering service with published plans.",
-          "evidence_summary": "The pricing page lists the current Devin plans."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-radar.html",
-          "id": "source-39"
-        }
-      ]
-    },
-    {
       "url": "https://factory.com/",
       "files": [
         "tech-radar.html"
@@ -16260,35 +16209,6 @@
         {
           "file": "tech-radar.html",
           "id": "source-40"
-        }
-      ]
-    },
-    {
-      "url": "https://github.com/copilot/agents",
-      "files": [
-        "tech-radar.html"
-      ],
-      "hrefs": [
-        "https://github.com/copilot/agents"
-      ],
-      "checked_on": "2026-11-17",
-      "result": "expected_login_redirect",
-      "http_status": 200,
-      "final_url": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fcopilot%2Fagents",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "Agent HQ is a single Mission Control for Copilot, Claude and Codex agents on GitHub issues and pull requests.",
-          "evidence_summary": "The repository describes Agent HQ as Mission Control for several coding agents.",
-          "limitation": "GitHub serves a sign-in page to unauthenticated direct requests, so the repository content was read through the published announcement material instead; confirm the current agent list in the product before relying on it."
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "tech-radar.html",
-          "id": "source-41"
         }
       ]
     },
@@ -16337,8 +16257,8 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "Amazon CodeCatalyst closed to new customers on 7 November 2025.",
-          "evidence_summary": "The documentation dates the closure to new customers to 7 November 2025."
+          "scope": "The getting-started page says CodeCatalyst is no longer open to new customers and that existing customers can continue to use the service. It does not give the 7 November 2025 date.",
+          "evidence_summary": "Direct GET. The date and the no-new-features statement are on the migration page, recorded separately."
         }
       ],
       "source_entries": [
@@ -16392,9 +16312,9 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "Superpowers is an MIT-licensed methodology of composable skills for software development.",
-          "evidence_summary": "The repository describes the methodology and its MIT licence.",
+          "outcome": "supported",
+          "scope": "Superpowers v7.0.2 was published on 3 November 2026.",
+          "evidence_summary": "GitHub releases list v7.0.2 published at 22:17 UTC on 3 November 2026.",
           "limitation": "The v7.0.0 version and 9 October 2026 date were reported by an independent comparison reading the repository, not read from the releases page directly; confirm it before relying on it."
         }
       ],
@@ -16422,8 +16342,8 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "The Agent Skills pack holds 25 MIT-licensed skills and carries no verified version tag.",
-          "evidence_summary": "The repository lists 25 skills under an MIT licence."
+          "scope": "Agent Skills 0.6.16 was published on 14 November 2026.",
+          "evidence_summary": "GitHub releases list tag 0.6.16 published on 14 November 2026."
         }
       ],
       "source_entries": [
@@ -16450,8 +16370,8 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "pstack is an MIT-licensed Cursor-first skill pack at v0.15.36 on 27 October 2026.",
-          "evidence_summary": "The repository shows pstack at v0.15.36 with its playbooks."
+          "scope": "The pstack plugin manifest on main is version 0.15.43, in the commit of 16 November 2026. The AI workflows page cites 0.15.42 from 15 November 2026.",
+          "evidence_summary": "The raw plugin.json on main reads 0.15.43. The commit that updated pstack/.cursor-plugin/plugin.json is dated 16 November 2026."
         }
       ],
       "source_entries": [
@@ -16478,8 +16398,8 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "gstack is an MIT-licensed role-based skill library for Claude Code.",
-          "evidence_summary": "The repository describes the role-based skill library under an MIT licence.",
+          "scope": "gstack v1.99.5.0 was published on 16 November 2026.",
+          "evidence_summary": "GitHub releases list v1.99.5.0 published on 16 November 2026.",
           "limitation": "No version was verified for gstack, so the table says so rather than quoting one."
         }
       ],
@@ -16545,6 +16465,1001 @@
           "id": "source-52"
         }
       ]
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000142.000077879.html",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://prtimes.jp/main/html/rd/p/000000142.000077879.html"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://prtimes.jp/main/html/rd/p/000000142.000077879.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Stripe Japan reported on 16 November 2026 that Stripe completed the acquisition of OpenRouter on 10 November 2026 (US time).",
+          "evidence_summary": "The press release states the completion date as 10 November 2026, US time, and is dated 16 November 2026."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Stripe Japan reported on 16 November 2026 that Stripe completed the acquisition of OpenRouter on 10 November 2026 (US time).",
+          "evidence_summary": "The press release states the completion date as 10 November 2026, US time, and is dated 16 November 2026."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-61"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-27"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/project/google-adk/2.14.1/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://pypi.org/project/google-adk/2.14.1/"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://pypi.org/project/google-adk/2.14.1/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "google-adk 2.14.1 was uploaded to PyPI on 12 November 2026.",
+          "evidence_summary": "The PyPI JSON API returned version 2.14.1 with upload time 2026-11-12. The HTML page presented a browser check to this client.",
+          "limitation": "HTML shell was a client challenge; the version and upload time come from the PyPI JSON API."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-35"
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/codex/cloud",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://developers.openai.com/codex/cloud"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://learn.chatgpt.com/docs/cloud",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "The current Codex Cloud guide covers choosing a published environment and a workspace for each task. It does not state the 29 September 2026 date.",
+          "evidence_summary": "GET followed a redirect to the Codex Cloud guide on learn.chatgpt.com, which describes published environments."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-37"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "GitHub Docs says third-party coding agents are currently in public preview. The page does not give the 4 February 2026 date.",
+          "evidence_summary": "The docs page contains the sentence that third-party coding agents are currently in public preview."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-41"
+        }
+      ]
+    },
+    {
+      "url": "https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available/"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "The Copilot coding agent became generally available on 25 September 2025.",
+          "evidence_summary": "The GitHub Changelog entry is dated 25 September 2025 and says the agent is generally available."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-53"
+        }
+      ]
+    },
+    {
+      "url": "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github/"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Claude and Codex became available in public preview on GitHub on 4 February 2026.",
+          "evidence_summary": "The GitHub Changelog entry is dated 4 February 2026."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-54"
+        }
+      ]
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/29/openai-gives-codex-reusable-cloud-environments-that-work-across-devices/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://techcrunch.com/2026/09/29/openai-gives-codex-reusable-cloud-environments-that-work-across-devices/"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://techcrunch.com/2026/09/29/openai-gives-codex-reusable-cloud-environments-that-work-across-devices/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "TechCrunch, 29 September 2026, reports reusable Codex cloud environments that work across devices.",
+          "evidence_summary": "The article byline is 29 September 2026 and describes the reusable cloud environments."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-55"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/08/lambda-microvms-5-additional-regions/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/lambda-microvms-5-additional-regions/"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/08/lambda-microvms-5-additional-regions/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "On 19 August 2026 Lambda MicroVMs reached five more regions, including Asia Pacific (Singapore), for 10 regions in total.",
+          "evidence_summary": "The What's New post is dated 19 August 2026 and names Singapore among the five regions."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-57"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-lambda-microvms-x86-architecture/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-lambda-microvms-x86-architecture/"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-lambda-microvms-x86-architecture/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "On 11 November 2026 Lambda MicroVMs added x86 beside Arm. x86 is not available in Hong Kong, Malaysia, Thailand or Spain.",
+          "evidence_summary": "The What's New post is dated 11 November 2026 and names those four exceptions."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-58"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/lambda-microvms-4-additional-regions/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/lambda-microvms-4-additional-regions/"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/lambda-microvms-4-additional-regions/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "On 22 October 2026 Lambda MicroVMs reached four more regions, 14 in total.",
+          "evidence_summary": "The What's New post is dated 22 October 2026 and says the total is 14 regions."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-59"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/codecatalyst/latest/userguide/migration.html",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/codecatalyst/latest/userguide/migration.html"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/codecatalyst/latest/userguide/migration.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "New customer access to CodeCatalyst ended on 7 November 2025. Existing customers can continue with their current spaces, and AWS does not plan to introduce new features.",
+          "evidence_summary": "The migration page states the 7 November 2025 date, continued use for existing customers, and no planned new features."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-60"
+        }
+      ]
+    },
+    {
+      "url": "https://aaif.io/blog/agent-router-joins-aaif",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aaif.io/blog/agent-router-joins-aaif"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aaif.io/blog/agent-router-joins-aaif",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "The Agentic AI Foundation post dated 9 September 2026 says Envoy AI Gateway becomes Agent Router and joins the foundation.",
+          "evidence_summary": "The post is dated 9 September 2026 and uses that title."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-62"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/theagentrouter/agent-router/security/advisories/GHSA-mgwh-j6v5-5mf8",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/theagentrouter/agent-router/security/advisories/GHSA-mgwh-j6v5-5mf8"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/theagentrouter/agent-router/security/advisories/GHSA-mgwh-j6v5-5mf8",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "GHSA-mgwh-j6v5-5mf8, published 6 November 2026, is high severity with CVSS 8.1. Affected versions are below 1.2.0 and the patched version is 1.2.1. Use 1.2.1 or later.",
+          "evidence_summary": "The advisory page and the GitHub API both give high severity, score 8.1, affected versions below 1.2.0, and patched version 1.2.1."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-63"
+        }
+      ]
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Microsoft's 23 October 2026 post describes credential theft through Python startup hooks in the compromised LiteLLM 1.107.0 release.",
+          "evidence_summary": "The post title and date match that description."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-64"
+        }
+      ]
+    },
+    {
+      "url": "https://securitylabs.datadoghq.com/articles/litellm-compromised-pypi-docker/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://securitylabs.datadoghq.com/articles/litellm-compromised-pypi-docker/"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://securitylabs.datadoghq.com/articles/litellm-compromised-pypi-docker/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Datadog's 21 October 2026 article calls the 1.107.0 incident the second LiteLLM compromise of 2026, after 1.82.7 and 1.82.8.",
+          "evidence_summary": "The article names 1.82.7 and 1.82.8 as the earlier 2026 incident."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-65"
+        }
+      ]
+    },
+    {
+      "url": "https://www.stepsecurity.io/blog/litellm-1-107-0-compromised-pypi-backdoored-wheels-credential-stealer",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.stepsecurity.io/blog/litellm-1-107-0-compromised-pypi-backdoored-wheels-credential-stealer"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.stepsecurity.io/blog/litellm-1-107-0-compromised-pypi-backdoored-wheels-credential-stealer",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "StepSecurity's 21 October 2026 post says litellm 1.107.0 was compromised on PyPI and Docker.",
+          "evidence_summary": "The page title states that 1.107.0 was compromised on PyPI and Docker."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-66"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.litellm.ai/blog/security-incident-oct-21-2026"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "LiteLLM's own notice, 21 October 2026, says the v1.107.0 release was compromised and then contained.",
+          "evidence_summary": "The vendor page title is Contained: Oct 21, 2026 LiteLLM release v1.107.0 Compromised."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-67"
+        }
+      ]
+    },
+    {
+      "url": "https://lizard.build/blog/e2b-vs-daytona-vs-modal",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://lizard.build/blog/e2b-vs-daytona-vs-modal"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://lizard.build/blog/e2b-vs-daytona-vs-modal",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Lizard's 12 October 2026 comparison of 1,200 sandbox starts, 300 from one runner in US East for each of four products, reports median create-to-first-command times of 264 ms for E2B, 819 ms for Daytona and 929 ms for Modal.",
+          "evidence_summary": "The article states those medians and the US East runner. It also reports 228 ms for Lizard.",
+          "limitation": "Lizard sells a competing sandbox and included its own product. This is not an independent adoption result."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-68"
+        }
+      ]
+    },
+    {
+      "url": "https://www.thoughtworks.com/radar/tools/claude-code",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.thoughtworks.com/radar/tools/claude-code"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.thoughtworks.com/radar/tools/claude-code",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Thoughtworks placed Claude Code in Adopt in April 2026. That blip is not on the current edition.",
+          "evidence_summary": "The blip page is labelled Apr 2026 Adopt.",
+          "limitation": "Not on the current Radar edition, so it is context rather than a current adoption instruction."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-69"
+        }
+      ]
+    },
+    {
+      "url": "https://www.thoughtworks.com/radar/languages-and-frameworks/langgraph",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.thoughtworks.com/radar/languages-and-frameworks/langgraph"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.thoughtworks.com/radar/languages-and-frameworks/langgraph",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Thoughtworks moved LangGraph from Adopt to Trial in April 2026 and said it is no longer the default choice for every agent system. That blip is not on the current edition.",
+          "evidence_summary": "The blip page is labelled Apr 2026 Trial and says LangGraph is no longer the default choice.",
+          "limitation": "Not on the current Radar edition."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-70"
+        }
+      ]
+    },
+    {
+      "url": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.vals.ai/benchmarks/terminal-bench-2-1"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Vals AI's Terminal-Bench 2.1 leaderboard, as of 1 October 2026, shows Claude Opus 4.8 at 69.66% in Claude Code and 71.91% in Terminus 2, GPT 5.5 at 57.30% in Codex and in Factory, and Composer 2.5 at 58.43% in Cursor CLI. Vals no longer runs this benchmark on new model releases.",
+          "evidence_summary": "Those percentages are on the leaderboard. The page says Vals no longer runs the benchmark on new model releases.",
+          "limitation": "A harness comparison only. No costs are quoted. Not a reason by itself to adopt a product."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-71"
+        }
+      ]
+    },
+    {
+      "url": "https://www.tbench.ai/news/terminal-bench-2-1",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.tbench.ai/news/terminal-bench-2-1"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.tbench.ai/news/terminal-bench-2-1",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Terminal-Bench 2.1 fixes 28 of the 89 tasks from Terminal-Bench 2.0.",
+          "evidence_summary": "The project news page says the revision fixes 28 of 89 tasks."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-72"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/openai/openai-agents-python/issues/2921",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/openai/openai-agents-python/issues/2921"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/openai/openai-agents-python/issues/2921",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "A closed issue opened on 17 April 2026 plans to mark Agents SDK 1.0 Production/Stable. The current stable release is still 0.24.0, from 15 October 2026.",
+          "evidence_summary": "The issue title is Planned changes for v1.0 release and the body adds the Production/Stable classifier. PyPI still shows 0.24.0."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-73"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/OpenHands/OpenHands/releases",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/OpenHands/OpenHands/releases"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/OpenHands/OpenHands/releases",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "OpenHands v1.41.0 was published on 16 November 2026.",
+          "evidence_summary": "GitHub releases list v1.41.0 published on 16 November 2026."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-74"
+        }
+      ]
+    }
+  ],
+  "evidence_policy": "Portable source URLs, page-specific scope, limitations, supporting paraphrases and evidence hashes are retained here. Copyrighted full-source captures remain outside the published repository. Historical records are preserved without relabelling their dates.",
+  "maintenance_record": "tech-scan-refinement-review-2026-11-12.md",
+  "targeted_followup": {
+    "checked_on": "2026-11-12",
+    "reviewed_base": "4e438010b935d50df6fcd9a5b4e46ac1079c0ea9",
+    "pages": [
+      "tech-scan-gateway.html",
+      "tech-scan-harness.html",
+      "tech-scan-models.html",
+      "tech-scan-sandbox.html",
+      "tech-scan.html"
+    ],
+    "scope": "Approved issue #54/#59 factual and natural-prose refinements; primary passages inspected for changed/new claims. Inherited sources not fully re-fetched.",
+    "new_fetch_destinations": 22,
+    "primary_page_source_checks": 30,
+    "record": "tech-scan-refinement-review-2026-11-12.md",
+    "locally_deployed": false,
+    "representative_reader_session": "not performed"
+  },
+  "issue73_targeted_followup": {
+    "checked_on": "2026-11-13",
+    "record": "issue73-x-insights-review-2026-11-13.md",
+    "scope": "New external URLs on About, Concept, Tech Scan Sandbox and Tech Scan Agents; individual claim support and X access are scoped per page. No local product or sandbox tests. Page-wide pass dates remain unchanged."
+  },
+  "wave3_followup": {
+    "checked_on": "2026-11-14",
+    "maintenance_record": "tech-scan-wave3-review-2026-11-14.md",
+    "scope": "Four new pages and their canonical primary sources; shared operational links retain previous disposition. Census does not certify prior pages.",
+    "unique_pages": 25,
+    "unique_urls": 277,
+    "unique_hrefs": 283
+  },
+  "issue86_targeted_followup": {
+    "checked_on": "2026-11-14",
+    "scope": "Selected critical/high educational changes on nine pages with primary-source indexed text retrieval, not page-wide source recheck",
+    "pages": [
+      "concept.html",
+      "tech-scan-agents.html",
+      "tech-scan-context.html",
+      "tech-scan-gateway.html",
+      "tech-scan-harness.html",
+      "tech-scan-sandbox.html",
+      "tech-scan-stack-views.html",
+      "tech-scan-verification.html",
+      "tech-scan-workflows-factories.html"
+    ],
+    "new_external_sources": 16,
+    "original_unique_urls": 317,
+    "current_unique_urls": 333,
+    "limits": "Indexed source text is not equivalent to direct origin HTTP GET, local acceptance tests, security qualification or a completed page-wide source audit."
+  },
+  "issue101_targeted_followup": {
+    "checked_on": "2026-11-15",
+    "scope": "Three approved High items from issue #101 on concept.html only. Page-wide reference-check date remains 14 November 2026. Source ids renumbered to 41-45 after dev reserved 38-40.",
+    "pages": [
+      "concept.html"
+    ],
+    "new_external_sources": 5,
+    "items": [
+      "harness approval authority",
+      "software-factory review",
+      "graph routing rules"
+    ],
+    "limits": "X article text was read through api.fxtwitter.com after the canonical pages returned HTTP 403. Anthropic pages were read from the publisher. No browser layout check and no representative-reader session. The LayerX case and the Prime Intellect scale example were not used."
+  },
+  "pr102_targeted_followup": {
+    "checked_on": "2026-11-15",
+    "pages": [
+      "concept.html",
+      "tech-scan-agents.html"
+    ],
+    "scope": "Targeted ADE worktree and shell-sandbox claims only; operational links and other inherited claims were not rechecked. Page-wide pass dates unchanged.",
+    "record": "pr102-ade-review-2026-11-15.md",
+    "corrections": [
+      "Issue #101 aparnadhinak review scope source-44 corrected to source-41",
+      "Issue #101 Claude classifier review scope source-45 corrected to source-42"
+    ],
+    "reviews": [
+      {
+        "file": "concept.html",
+        "url": "https://git-scm.com/docs/git-worktree",
+        "checked_on": "2026-11-15",
+        "outcome": "supported",
+        "scope": "Linked worktrees are separate working copies attached to one repository; the security-boundary warning is an inference about ordinary process access, not a Git sandbox feature.",
+        "evidence_excerpts": [
+          "Manage multiple working trees attached to the same repository."
+        ],
+        "limitation": "Documentation only; no local security isolation test.",
+        "retrieval": "Direct HTTP GET 200",
+        "final_url": "https://git-scm.com/docs/git-worktree",
+        "capture_sha256": "a9c89ae3bf0f6ee142347a5b7b3eba46b1f0e9291c18a721c52b90e4fcc52f97",
+        "capture_url": "https://git-scm.com/docs/git-worktree"
+      },
+      {
+        "file": "concept.html",
+        "url": "https://code.claude.com/docs/en/sandboxing",
+        "checked_on": "2026-11-15",
+        "outcome": "supported",
+        "scope": "Claude shell sandbox scope, default credential reads, operating systems and network restrictions inform the warning that controls need explicit scope.",
+        "evidence_excerpts": [
+          "The sandbox covers shell commands only.",
+          "Claude's file tools, MCP servers, and hooks [run outside it](#what-runs-outside-the-sandbox).",
+          "The sandbox is off by default.",
+          "The sandbox runs on macOS, Linux, and WSL2. On native Windows, Claude Code runs commands unsandboxed.",
+          "Most of the machine, including credential files such as `~/.ssh` and `~/.aws/credentials`",
+          "No direct route out. Connections go through a proxy on your machine that checks each host against your allowed domains, which start empty.",
+          "Claude Code ignores the `dangerouslyDisableSandbox` escape hatch, so when a command fails under the sandbox, Claude can't retry it unsandboxed"
+        ],
+        "limitation": "Claude Code-specific documentation; not verification of any ADE or local configuration.",
+        "retrieval": "Direct HTTP GET 200; publisher Markdown also inspected",
+        "final_url": "https://code.claude.com/docs/en/sandboxing",
+        "capture_sha256": "2df1b27e787a5c7919c328a565ee08e5cb34a706d0b89e1390f70c39a915e447",
+        "capture_url": "https://code.claude.com/docs/en/sandboxing.md"
+      },
+      {
+        "file": "tech-scan-agents.html",
+        "url": "https://code.claude.com/docs/en/worktrees",
+        "checked_on": "2026-11-15",
+        "outcome": "supported",
+        "scope": "Claude parallel worktree sessions, optional gitignored-file copying, background-session worktree checks and potentially shared Bash approval settings.",
+        "evidence_excerpts": [
+          "Running each Claude Code session in its own worktree gives it a separate copy of the files to edit, so one session can build a feature while a second fixes a bug.",
+          "A worktree is a fresh checkout, so untracked files like `.env` or `.env.local` from your main repository are not present.",
+          "To copy them automatically when Claude creates a worktree, add a `.worktreeinclude` file to your project root.",
+          "Only files that match a pattern and are also gitignored are copied, so tracked files are never duplicated.",
+          "None of them tracks which files a shell command writes, so a command that writes into the main checkout without running git there, such as `cp` or a shell redirect, isn't refused by them.",
+          "choosing \"Yes, and don't ask again\" for a Bash command in a worktree session saves the rule to the main checkout's `.claude/settings.local.json`.",
+          "The rule applies in the main checkout and in every other worktree of the repository, and it survives the worktree's removal.",
+          "On Windows and in the other cases where Claude Code [doesn't use the repository root](https://code.claude.com/docs/en/settings.md#where-claude-code-looks-for-each-file), the rule stays with that worktree. See [where approvals are saved](https://code.claude.com/docs/en/permissions.md#permission-system)."
+        ],
+        "limitation": "Vendor documentation, not a test of agent permissions or security isolation.",
+        "retrieval": "Direct HTTP GET 200; publisher Markdown also inspected",
+        "final_url": "https://code.claude.com/docs/en/worktrees",
+        "capture_sha256": "66f5501dc74194bc0b5db1a4df1806394f66da5d473fa79cb2638379d74c9922",
+        "capture_url": "https://code.claude.com/docs/en/worktrees.md"
+      },
+      {
+        "file": "tech-scan-agents.html",
+        "url": "https://code.claude.com/docs/en/sandboxing",
+        "checked_on": "2026-11-15",
+        "outcome": "supported",
+        "scope": "Claude shell sandbox excludes file tools, hooks and MCP servers; unsandboxed retry depends on configuration.",
+        "evidence_excerpts": [
+          "The sandbox covers shell commands only.",
+          "Claude's file tools, MCP servers, and hooks [run outside it](#what-runs-outside-the-sandbox).",
+          "The sandbox is off by default.",
+          "The sandbox runs on macOS, Linux, and WSL2. On native Windows, Claude Code runs commands unsandboxed.",
+          "Most of the machine, including credential files such as `~/.ssh` and `~/.aws/credentials`",
+          "No direct route out. Connections go through a proxy on your machine that checks each host against your allowed domains, which start empty.",
+          "Claude Code ignores the `dangerouslyDisableSandbox` escape hatch, so when a command fails under the sandbox, Claude can't retry it unsandboxed"
+        ],
+        "limitation": "Vendor documentation, not verification of the pilot or any ADE.",
+        "retrieval": "Direct HTTP GET 200; publisher Markdown also inspected",
+        "final_url": "https://code.claude.com/docs/en/sandboxing",
+        "capture_sha256": "2df1b27e787a5c7919c328a565ee08e5cb34a706d0b89e1390f70c39a915e447",
+        "capture_url": "https://code.claude.com/docs/en/sandboxing.md"
+      }
+    ]
+  },
+  "uncited_replacements": [
+    {
+      "removed_on": "2026-11-17",
+      "reason": "Superseded on tech-radar.html by the google-adk 2.14.1 release. The 2.14.0 page is no longer cited.",
+      "replaced_by": "https://pypi.org/project/google-adk/2.14.1/",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://pypi.org/project/google-adk/2.14.0/",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://pypi.org/project/google-adk/2.14.0/"
+        ],
+        "checked_on": "2026-11-17",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://pypi.org/project/google-adk/2.14.0/",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "supported",
+            "scope": "Google ADK 2.14.0 was released on 7 November 2026.",
+            "evidence_summary": "The PyPI page dates 2.14.0 to 7 November 2026."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-35"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-17",
+      "reason": "The cited page now resolves as Codex Cloud (Legacy) and does not carry the 29 September 2026 date. Replaced by the current Codex Cloud guide.",
+      "replaced_by": "https://developers.openai.com/codex/cloud",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://developers.openai.com/codex/cloud/environments",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://developers.openai.com/codex/cloud/environments"
+        ],
+        "checked_on": "2026-11-17",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://learn.chatgpt.com/docs/environments/cloud-environment",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "supported",
+            "scope": "Reusable Codex cloud environments were relaunched on 29 September 2026, and the earlier flow is now Codex Cloud (Legacy).",
+            "evidence_summary": "The documentation describes reusable cloud environments and labels the earlier flow as Legacy.",
+            "limitation": "The documentation has moved to the ChatGPT docs site; the page content is the same material."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-37"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-17",
+      "reason": "A pricing page conflicts with the no-prices rule and does not support what the product does. Replaced by the Devin docs introduction.",
+      "replaced_by": "https://docs.devin.ai/get-started/devin-intro",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://devin.ai/pricing",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://devin.ai/pricing"
+        ],
+        "checked_on": "2026-11-17",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://devin.ai/pricing",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "supported",
+            "scope": "Devin is a hosted autonomous software-engineering service with published plans.",
+            "evidence_summary": "The pricing page lists the current Devin plans."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-39"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-17",
+      "reason": "The URL is a GitHub sign-in page, not a source for the public-preview claim. Replaced by the GitHub Docs page on third-party coding agents.",
+      "replaced_by": "https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/about-third-party-coding-agents",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://github.com/copilot/agents",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://github.com/copilot/agents"
+        ],
+        "checked_on": "2026-11-17",
+        "result": "expected_login_redirect",
+        "http_status": 200,
+        "final_url": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fcopilot%2Fagents",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "limited",
+            "scope": "Agent HQ is a single Mission Control for Copilot, Claude and Codex agents on GitHub issues and pull requests.",
+            "evidence_summary": "The repository describes Agent HQ as Mission Control for several coding agents.",
+            "limitation": "GitHub serves a sign-in page to unauthenticated direct requests, so the repository content was read through the published announcement material instead; confirm the current agent list in the product before relying on it."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-41"
+          }
+        ]
+      }
     }
   ],
   "history": [
@@ -26376,164 +27291,5 @@
       "evidence_policy": "Portable source URLs, page-specific scope, limitations, supporting paraphrases and evidence hashes are retained here. Copyrighted full-source captures remain outside the published repository. Historical records are preserved without relabelling their dates.",
       "maintenance_record": "reference-review-2026-11-12.md"
     }
-  ],
-  "evidence_policy": "Portable source URLs, page-specific scope, limitations, supporting paraphrases and evidence hashes are retained here. Copyrighted full-source captures remain outside the published repository. Historical records are preserved without relabelling their dates.",
-  "maintenance_record": "tech-scan-refinement-review-2026-11-12.md",
-  "targeted_followup": {
-    "checked_on": "2026-11-12",
-    "reviewed_base": "4e438010b935d50df6fcd9a5b4e46ac1079c0ea9",
-    "pages": [
-      "tech-scan-gateway.html",
-      "tech-scan-harness.html",
-      "tech-scan-models.html",
-      "tech-scan-sandbox.html",
-      "tech-scan.html"
-    ],
-    "scope": "Approved issue #54/#59 factual and natural-prose refinements; primary passages inspected for changed/new claims. Inherited sources not fully re-fetched.",
-    "new_fetch_destinations": 22,
-    "primary_page_source_checks": 30,
-    "record": "tech-scan-refinement-review-2026-11-12.md",
-    "locally_deployed": false,
-    "representative_reader_session": "not performed"
-  },
-  "issue73_targeted_followup": {
-    "checked_on": "2026-11-13",
-    "record": "issue73-x-insights-review-2026-11-13.md",
-    "scope": "New external URLs on About, Concept, Tech Scan Sandbox and Tech Scan Agents; individual claim support and X access are scoped per page. No local product or sandbox tests. Page-wide pass dates remain unchanged."
-  },
-  "wave3_followup": {
-    "checked_on": "2026-11-14",
-    "maintenance_record": "tech-scan-wave3-review-2026-11-14.md",
-    "scope": "Four new pages and their canonical primary sources; shared operational links retain previous disposition. Census does not certify prior pages.",
-    "unique_pages": 25,
-    "unique_urls": 277,
-    "unique_hrefs": 283
-  },
-  "issue86_targeted_followup": {
-    "checked_on": "2026-11-14",
-    "scope": "Selected critical/high educational changes on nine pages with primary-source indexed text retrieval, not page-wide source recheck",
-    "pages": [
-      "concept.html",
-      "tech-scan-agents.html",
-      "tech-scan-context.html",
-      "tech-scan-gateway.html",
-      "tech-scan-harness.html",
-      "tech-scan-sandbox.html",
-      "tech-scan-stack-views.html",
-      "tech-scan-verification.html",
-      "tech-scan-workflows-factories.html"
-    ],
-    "new_external_sources": 16,
-    "original_unique_urls": 317,
-    "current_unique_urls": 333,
-    "limits": "Indexed source text is not equivalent to direct origin HTTP GET, local acceptance tests, security qualification or a completed page-wide source audit."
-  },
-  "issue101_targeted_followup": {
-    "checked_on": "2026-11-15",
-    "scope": "Three approved High items from issue #101 on concept.html only. Page-wide reference-check date remains 14 November 2026. Source ids renumbered to 41-45 after dev reserved 38-40.",
-    "pages": [
-      "concept.html"
-    ],
-    "new_external_sources": 5,
-    "items": [
-      "harness approval authority",
-      "software-factory review",
-      "graph routing rules"
-    ],
-    "limits": "X article text was read through api.fxtwitter.com after the canonical pages returned HTTP 403. Anthropic pages were read from the publisher. No browser layout check and no representative-reader session. The LayerX case and the Prime Intellect scale example were not used."
-  },
-  "pr102_targeted_followup": {
-    "checked_on": "2026-11-15",
-    "pages": [
-      "concept.html",
-      "tech-scan-agents.html"
-    ],
-    "scope": "Targeted ADE worktree and shell-sandbox claims only; operational links and other inherited claims were not rechecked. Page-wide pass dates unchanged.",
-    "record": "pr102-ade-review-2026-11-15.md",
-    "corrections": [
-      "Issue #101 aparnadhinak review scope source-44 corrected to source-41",
-      "Issue #101 Claude classifier review scope source-45 corrected to source-42"
-    ],
-    "reviews": [
-      {
-        "file": "concept.html",
-        "url": "https://git-scm.com/docs/git-worktree",
-        "checked_on": "2026-11-15",
-        "outcome": "supported",
-        "scope": "Linked worktrees are separate working copies attached to one repository; the security-boundary warning is an inference about ordinary process access, not a Git sandbox feature.",
-        "evidence_excerpts": [
-          "Manage multiple working trees attached to the same repository."
-        ],
-        "limitation": "Documentation only; no local security isolation test.",
-        "retrieval": "Direct HTTP GET 200",
-        "final_url": "https://git-scm.com/docs/git-worktree",
-        "capture_sha256": "a9c89ae3bf0f6ee142347a5b7b3eba46b1f0e9291c18a721c52b90e4fcc52f97",
-        "capture_url": "https://git-scm.com/docs/git-worktree"
-      },
-      {
-        "file": "concept.html",
-        "url": "https://code.claude.com/docs/en/sandboxing",
-        "checked_on": "2026-11-15",
-        "outcome": "supported",
-        "scope": "Claude shell sandbox scope, default credential reads, operating systems and network restrictions inform the warning that controls need explicit scope.",
-        "evidence_excerpts": [
-          "The sandbox covers shell commands only.",
-          "Claude's file tools, MCP servers, and hooks [run outside it](#what-runs-outside-the-sandbox).",
-          "The sandbox is off by default.",
-          "The sandbox runs on macOS, Linux, and WSL2. On native Windows, Claude Code runs commands unsandboxed.",
-          "Most of the machine, including credential files such as `~/.ssh` and `~/.aws/credentials`",
-          "No direct route out. Connections go through a proxy on your machine that checks each host against your allowed domains, which start empty.",
-          "Claude Code ignores the `dangerouslyDisableSandbox` escape hatch, so when a command fails under the sandbox, Claude can't retry it unsandboxed"
-        ],
-        "limitation": "Claude Code-specific documentation; not verification of any ADE or local configuration.",
-        "retrieval": "Direct HTTP GET 200; publisher Markdown also inspected",
-        "final_url": "https://code.claude.com/docs/en/sandboxing",
-        "capture_sha256": "2df1b27e787a5c7919c328a565ee08e5cb34a706d0b89e1390f70c39a915e447",
-        "capture_url": "https://code.claude.com/docs/en/sandboxing.md"
-      },
-      {
-        "file": "tech-scan-agents.html",
-        "url": "https://code.claude.com/docs/en/worktrees",
-        "checked_on": "2026-11-15",
-        "outcome": "supported",
-        "scope": "Claude parallel worktree sessions, optional gitignored-file copying, background-session worktree checks and potentially shared Bash approval settings.",
-        "evidence_excerpts": [
-          "Running each Claude Code session in its own worktree gives it a separate copy of the files to edit, so one session can build a feature while a second fixes a bug.",
-          "A worktree is a fresh checkout, so untracked files like `.env` or `.env.local` from your main repository are not present.",
-          "To copy them automatically when Claude creates a worktree, add a `.worktreeinclude` file to your project root.",
-          "Only files that match a pattern and are also gitignored are copied, so tracked files are never duplicated.",
-          "None of them tracks which files a shell command writes, so a command that writes into the main checkout without running git there, such as `cp` or a shell redirect, isn't refused by them.",
-          "choosing \"Yes, and don't ask again\" for a Bash command in a worktree session saves the rule to the main checkout's `.claude/settings.local.json`.",
-          "The rule applies in the main checkout and in every other worktree of the repository, and it survives the worktree's removal.",
-          "On Windows and in the other cases where Claude Code [doesn't use the repository root](https://code.claude.com/docs/en/settings.md#where-claude-code-looks-for-each-file), the rule stays with that worktree. See [where approvals are saved](https://code.claude.com/docs/en/permissions.md#permission-system)."
-        ],
-        "limitation": "Vendor documentation, not a test of agent permissions or security isolation.",
-        "retrieval": "Direct HTTP GET 200; publisher Markdown also inspected",
-        "final_url": "https://code.claude.com/docs/en/worktrees",
-        "capture_sha256": "66f5501dc74194bc0b5db1a4df1806394f66da5d473fa79cb2638379d74c9922",
-        "capture_url": "https://code.claude.com/docs/en/worktrees.md"
-      },
-      {
-        "file": "tech-scan-agents.html",
-        "url": "https://code.claude.com/docs/en/sandboxing",
-        "checked_on": "2026-11-15",
-        "outcome": "supported",
-        "scope": "Claude shell sandbox excludes file tools, hooks and MCP servers; unsandboxed retry depends on configuration.",
-        "evidence_excerpts": [
-          "The sandbox covers shell commands only.",
-          "Claude's file tools, MCP servers, and hooks [run outside it](#what-runs-outside-the-sandbox).",
-          "The sandbox is off by default.",
-          "The sandbox runs on macOS, Linux, and WSL2. On native Windows, Claude Code runs commands unsandboxed.",
-          "Most of the machine, including credential files such as `~/.ssh` and `~/.aws/credentials`",
-          "No direct route out. Connections go through a proxy on your machine that checks each host against your allowed domains, which start empty.",
-          "Claude Code ignores the `dangerouslyDisableSandbox` escape hatch, so when a command fails under the sandbox, Claude can't retry it unsandboxed"
-        ],
-        "limitation": "Vendor documentation, not verification of the pilot or any ADE.",
-        "retrieval": "Direct HTTP GET 200; publisher Markdown also inspected",
-        "final_url": "https://code.claude.com/docs/en/sandboxing",
-        "capture_sha256": "2df1b27e787a5c7919c328a565ee08e5cb34a706d0b89e1390f70c39a915e447",
-        "capture_url": "https://code.claude.com/docs/en/sandboxing.md"
-      }
-    ]
-  }
+  ]
 }

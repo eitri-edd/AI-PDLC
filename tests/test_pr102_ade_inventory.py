@@ -88,6 +88,12 @@ class ADEInventoryTests(unittest.TestCase):
             'https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/',
             'https://aws.amazon.com/blogs/migration-and-modernization/from-mainframes-to-microservices-specification-driven-mainframe-modernization-with-ai-agents/',
         }
+        # PR 125 review: the OpenRouter completion release is cited from the
+        # gateway page as well as the radar. Exclude it so the inherited digest
+        # stays pinned to records that predate this pass.
+        new_urls |= {
+            'https://prtimes.jp/main/html/rd/p/000000142.000077879.html',
+        }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews']

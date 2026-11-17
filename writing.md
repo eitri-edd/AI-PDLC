@@ -313,7 +313,7 @@ Status labels on product references (Tech Radar and Tech Scan) say what a reader
 - **Available** — generally available or actively maintained, and usable from this reference.
 - **Emerging** — in preview, early access, new and still settling, or not yet proven for this route. Prove it on representative work before adoption.
 - **Hold** — usable only with conditions, such as a pinned version, a licence check or a named limitation. State the condition in the entry.
-- **Do not use** — only for a product that is officially winding down, retired, or at end of support. State the wind-down or retirement date, or the vendor's statement, in the entry.
+- **Do not use** — only for a product that is officially winding down, retired, closed to new customers, or at end of support. State the wind-down, closure or retirement date, or the vendor's statement, in the entry.
 
 Never use Do not use for a product that is merely dormant, stalled, unproven or not recommended: dormant or stalled products are Hold, unproven or not-recommended products are Emerging. Do not use a status label to express an opinion; popularity and sentiment are not statuses.
 
@@ -446,7 +446,7 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 - [ ] The page includes a useful next step and current ownership metadata.
 - [ ] The task-based review records author, structural, browser and representative-reader evidence separately; pending comprehension checks remain explicitly unverified.
 - [ ] Tech Scan component references state the developer route in the page map, use an accessible static decision figure where the choice is conditional, keep actionable checks visually distinct, collapse only secondary detail and preserve required evidence and source contracts.
-- [ ] Product status labels follow the four-label rule: Do not use only for products officially winding down, retired or at end of support; dormant or stalled products are Hold and unproven or not-recommended products are Emerging, with the reason stated in the entry.
+- [ ] Product status labels follow the four-label rule: Do not use only for products officially winding down, retired, closed to new customers, or at end of support; dormant or stalled products are Hold and unproven or not-recommended products are Emerging, with the reason stated in the entry.
 
 Do not mark a procedure or review activity editorially complete while readers still have to invent the checking method or infer what to record. Before accepting it, ask whether a reader unfamiliar with the topic could carry out the next action using the passage and its linked inputs. Revise the passage if they could not. This is an authoring acceptance rule, not a new organisational approval gate.
 
