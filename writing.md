@@ -308,6 +308,17 @@ For product references such as Tech Scan, use consistent comparison fields, not 
 
 For Tech Scan component references, make the developer route explicit rather than leaving readers to infer it from section order. State the route in the page-map note — constraints and decision gates, AWS-first candidate, documented exception, proof before adoption or the page's own equivalent — and keep the page-map groups aligned with that route. When the choice is conditional, add an accessible static decision figure using the shared concept-figure structure: descriptive caption, text equivalent, legend and `data-diagram="static"` when no animation is needed. Place consequential pre-adoption checks in a distinct success-coloured checklist callout (the existing `.callout--tip` treatment), beside the pilot or decision section, and keep safety boundaries, evidence requirements, do-not-use warnings and the Sources section visible. Collapse only secondary reference detail, such as retired-product replacement tables, behind native `details`; never collapse required evidence or safety-critical controls. Preserve anchors, citations, source order and external URLs, and keep research notes distinct from approved deployments.
 
+Status labels on product references (Tech Radar and Tech Scan) say what a reader may do with a product, and each label must match its cited evidence. Use these labels, and no others:
+
+- **Available** — generally available or actively maintained, and usable from this reference.
+- **Emerging** — in preview, early access, new and still settling, or not yet proven for this route. Prove it on representative work before adoption.
+- **Hold** — only for a product that is dormant or stalled, with no official wind-down: no release or commit for months. State the last release or commit dates in the entry, and what the reader must confirm before adopting.
+- **Do not use** — only for a product that is officially winding down, retired, closed to new customers, or at end of support. State the wind-down, closure or retirement date, or the vendor's statement, in the entry.
+
+A product that is usable only if the reader meets a stated condition keeps its Available or Emerging label and carries a **Conditions apply** flag beside it — not a status on its own. The flag means the entry states a condition to meet before adopting, such as a pinned version, a licence check or a named limitation. Always state the condition in the entry.
+
+Never use Do not use for a product that is merely dormant, stalled, unproven or not recommended: dormant or stalled products are Hold, unproven or not-recommended products are Emerging. A conditional product is never demoted to Hold for having a condition. Do not use a status label to express an opinion; popularity and sentiment are not statuses.
+
 For changing product capabilities, recheck categorical negatives against current first-party documentation. A product's general availability does not establish that every feature is production-ready. An issue proposal or successful HTTP request is not independent support for a vendor capability or lifecycle claim.
 
 For a trend-oriented reference, lead with verified developments and their technical implications when those are the reader's task, followed by relevant comparisons and limitations. Keep volatile product facts in a canonical detailed entry; overview and cross-cutting views should link to it rather than maintain competing copies. Apply the same evidence and reference-check requirements to developments and comparisons.
@@ -437,6 +448,7 @@ Display dates as “27 September 2026”. Store machine-readable dates as `2026-
 - [ ] The page includes a useful next step and current ownership metadata.
 - [ ] The task-based review records author, structural, browser and representative-reader evidence separately; pending comprehension checks remain explicitly unverified.
 - [ ] Tech Scan component references state the developer route in the page map, use an accessible static decision figure where the choice is conditional, keep actionable checks visually distinct, collapse only secondary detail and preserve required evidence and source contracts.
+- [ ] Product status labels follow the rule: Do not use only for products officially winding down, retired, closed to new customers or at end of support; dormant or stalled products are Hold and unproven or not-recommended products are Emerging; a conditional product keeps its Available or Emerging label with a Conditions apply flag, and the condition is stated in the entry.
 
 Do not mark a procedure or review activity editorially complete while readers still have to invent the checking method or infer what to record. Before accepting it, ask whether a reader unfamiliar with the topic could carry out the next action using the passage and its linked inputs. Revise the passage if they could not. This is an authoring acceptance rule, not a new organisational approval gate.
 

@@ -37,7 +37,7 @@ class VerificationTests(unittest.TestCase):
         choices = next(n for n in doc.root.elements('section') if n.attrs.get('id') == 'choices')
         prose = normalise(choices.text())
         for expected in ('CodeGuru Security reached end of support on 20 November 2025',
-                         'CodeGuru Reviewer has been in maintenance mode since 7 November 2025',
+                         'CodeGuru Reviewer has been closed to new repository associations since 7 November 2025',
                          'Amazon Q Developer for code review',
                          'Amazon Inspector for code scanning',
                          'AWS Security Agent is not named as a CodeGuru successor'):

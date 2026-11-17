@@ -30,6 +30,9 @@
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
           <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
+          <div class="nav-children">
+            <a href="tech-radar.html">Tech Radar</a>
+          </div>
           <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
           <div class="nav-children">
             <a href="product-discovery.html">Project Discovery</a>
@@ -135,7 +138,7 @@
         <tr><th scope="row">X-Ray SDKs and daemon for new instrumentation</th><td>Maintenance mode since 25 February 2026; security fixes only.</td><td>OpenTelemetry via ADOT or the CloudWatch agent, with traces stored in X-Ray.<a href="#source-8" aria-label="Source 8: AWS, Migrating from X-Ray instrumentation to OpenTelemetry">[8]</a></td></tr>
         <tr><th scope="row">CodePipeline V1 for new pipelines</th><td>Supported, but stage conditions, stage rollback, automatic retry and entry conditions with a Skip result are V2-only.</td><td>Build new pipelines as V2.<a href="#source-7" aria-label="Source 7: AWS, What type of pipeline is right for me">[7]</a></td></tr>
         <tr><th scope="row">CodeDeploy as the ECS default</th><td>ECS-native blue/green is now the recommended option for new ECS deployments; CodeDeploy remains a valid option for existing CodeDeploy deployments.</td><td>ECS-native blue/green.<a href="#source-5" aria-label="Source 5: AWS, ECS blue/green native or CodeDeploy">[5]</a></td></tr>
-        <tr><th scope="row">Amazon CodeCatalyst</th><td>Closed to new customers; maintenance only.</td><td>See the <a href="tech-scan-workflows-factories.html#do-not-use">Workflows &amp; factories do-not-use list</a>, which owns this product.</td></tr>
+        <tr><th scope="row">Amazon CodeCatalyst</th><td>Closed to new customers since 7 November 2025; existing customers can carry on.</td><td>See the <a href="tech-scan-workflows-factories.html#do-not-use">Workflows &amp; factories do-not-use list</a>, which owns this product.</td></tr>
         <tr><th scope="row">Any release path that auto-merges or auto-deploys from an agent without a human approval gate</th><td>A prompt instruction is not a control.</td><td>A human approval gate in the pipeline or GitHub Environment; see <a href="#controls">Control and record the release</a>.</td></tr>
         </tbody></table></div></section>
         <section id="gaps"><h2>Gaps and open questions</h2>

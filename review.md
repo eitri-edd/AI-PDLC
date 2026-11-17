@@ -371,6 +371,17 @@ criticality score measure different things and are not interchangeable.
   safety controls or Sources, and anchors, citations and source order
   remain stable. Treat this as a presentation check beside the factual
   score, not a replacement for it.
+- **Status labels:** verify every product status on Tech Radar and
+  in Tech Scan against the label rule in `writing.md`: Do not
+  use only for products officially winding down, retired, closed to
+  new customers, or at end of support, with the wind-down, closure
+  or retirement date or the vendor's statement cited; dormant or
+  stalled products are Hold, unproven or not-recommended products
+  are Emerging; a product usable only with conditions keeps its
+  Available or Emerging label and carries the Conditions apply
+  flag, with the condition stated in the entry. A status that does
+  not match its cited evidence is a factual finding at the same
+  threshold as any other below-5 item.
 
 ### 7. Whole-playbook critical review (ad hoc; last run 14 November 2026)
 
@@ -504,12 +515,15 @@ per score.
 A change is not editorially complete until these have been run
 for the pages it touches. Mark an item only after verification.
 
-1. **`writing.md` Editorial acceptance checklist** (32 items at the
+1. **`writing.md` Editorial acceptance checklist** (33 items at the
    end of `writing.md`): one final Sources section, one list, one
    page-level check date; teaching chapters distinguish general
    guidance, continuous case and reference material; Tech Scan
    component references state the developer route and keep actionable
-   checks distinct; opening tells the reader what the page helps them
+   checks distinct; product status labels follow the rule
+   (Do not use only for officially winding down, retired, closed to
+   new customers, or end-of-support products; conditional products
+   keep Available or Emerging with a Conditions apply flag); opening tells the reader what the page helps them
    do; terms explained and
    consistent; instructions identify actions, outputs and ownership;
    `check / review / validate / ensure` followed by enough detail
@@ -605,6 +619,29 @@ for the pages it touches. Mark an item only after verification.
   `writing.md` editorial checklist to 32 items and Acceptance gates
   item 1, on Christopher's instruction after the Tech Scan
   readability pass in PR #110.
+- 17 November 2026 (checked against dev `ebfb934`, base main
+  `826d009`): added the product status-label rule — Do not use only
+  for officially winding down, retired or end-of-support products —
+  to `writing.md` (Reference page section and checklist item 33),
+  §6 and Acceptance gates item 1, on Christopher's instruction
+  after the Tech Radar reclassification in PR #125.
+- 17 November 2026 (checked against dev `5c7e72b`, base main
+  `826d009`): widened Do not use so that it also covers a product
+  closed to new customers, in `writing.md`, §6, Acceptance gates
+  item 1 and the Tech Radar key. The owner kept that label for
+  Amazon CodeGuru Reviewer and Amazon CodeCatalyst. Each entry
+  states the closure date and that existing customers can carry on
+  for now. The label is not a maintenance-mode or end-of-support
+  finding.
+- 17 November 2026 (checked against dev `d9e3daa`, base main
+  `826d009`): replaced Hold as the conditional label with
+  Available or Emerging plus a Conditions apply flag, on
+  Christopher's instruction — Hold is now only for dormant or
+  stalled products — in `writing.md` (Reference page section and
+  checklist item 33), §6, Acceptance gates item 1 and the Tech
+  Radar key. LiteLLM, Unkey and Automated Reasoning became
+  Available with the flag; ub-mode became Emerging with the flag;
+  Portkey and Aider stay on Hold.
 - When a review corrects content, consider whether the standards
   also need refinement — and file that as a separate proposal,
   not as a side effect of the content fix.

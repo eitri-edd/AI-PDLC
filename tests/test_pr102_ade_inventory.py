@@ -76,7 +76,7 @@ class ADEInventoryTests(unittest.TestCase):
                     'https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/'}
         # Later pages add their own pass, source and shared-link reviews; exclude
         # only those additions so inherited records stay pinned.
-        later_pages = {'tech-scan-ai-workflows.html'}
+        later_pages = {'tech-scan-ai-workflows.html', 'tech-radar.html'}
         # URLs that exist only for the AI workflows page are part of that page's
         # source pass, not the inherited inventory this digest pins.
         new_urls |= {r['url'] for r in self.inventory['references'] if set(r['files']) <= later_pages}
@@ -88,6 +88,26 @@ class ADEInventoryTests(unittest.TestCase):
             'https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/',
             'https://aws.amazon.com/blogs/migration-and-modernization/from-mainframes-to-microservices-specification-driven-mainframe-modernization-with-ai-agents/',
         }
+        # PR 125 review: the OpenRouter completion release is cited from the
+        # gateway page as well as the radar. Exclude it so the inherited digest
+        # stays pinned to records that predate this pass.
+        new_urls |= {
+            'https://prtimes.jp/main/html/rd/p/000000142.000077879.html',
+        }
+        # Follow-up on the same PR: these URLs are newly cited from Sandbox,
+        # Verification or Workflows, or were previously only on the radar.
+        new_urls |= {
+            'https://aws.amazon.com/about-aws/whats-new/2026/11/aws-lambda-microvms-x86-architecture/',
+            'https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/codeguru-reviewer-availability-change.html',
+            'https://docs.aws.amazon.com/codecatalyst/latest/userguide/migration.html',
+            'https://github.com/Aider-AI/aider',
+            'https://docs.aws.amazon.com/bedrock/latest/userguide/agents-classic-maintenance-mode.html',
+            'https://github.com/SWE-agent/SWE-agent',
+            'https://github.com/RooCodeInc/Roo-Code',
+            'https://github.com/sweepai/sweep',
+            'https://github.com/continuedev/continue',
+            'https://github.com/cursor/plugins/blob/2f87c854fe3e2fcda44ca86b46ede35aad3c46b7/pstack/.cursor-plugin/plugin.json',
+        }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews']
@@ -97,15 +117,19 @@ class ADEInventoryTests(unittest.TestCase):
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
         # Digests advanced by the daily reference check on 17 November 2026,
         # which legitimately advances page_passes dates and per-entry
-        # checked_on/http_status/final_url/method. History, claim_reviews,
-        # source_entries and evidence_digests are unchanged by that pass.
-        self.assertEqual(digest, 'e9fe8787cb9e4d5897dbbbf1a497775b8e1c5218e5cc993a3845d200183b35c1')
+        # checked_on/http_status/final_url/method. The reviews digest moved
+        # again the same day when the Lambda MicroVMs x86 date and the
+        # CodeGuru Reviewer wording were corrected on the cited pages.
+        self.assertEqual(digest, '30a414cf39097dfbf15ba3d1e497f707a56a685971ca232625d5c97e2ca6b83f')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
         fields = ('checked_on', 'result', 'http_status', 'final_url', 'method', 'source_entries', 'evidence_digests')
         metadata = {r['url']: {k: copy.deepcopy(r[k]) for k in fields if k in r}
                     for r in self.inventory['references'] if r['url'] not in new_urls}
+        for entry in metadata.values():
+            if 'source_entries' in entry:
+                entry['source_entries'] = [e for e in entry['source_entries'] if e.get('file') != 'tech-radar.html']
         sandbox = metadata['https://code.claude.com/docs/en/sandboxing']
         for entry in ({'file': 'concept.html', 'id': 'source-47'},
                       {'file': 'tech-scan-agents.html', 'id': 'source-36'}):
