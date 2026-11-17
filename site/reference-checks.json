@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-17, with four targeted additions for issue 122; inherited page-wide reviews retained.",
   "reviewed_base": "38b78b903af748c5d2fdcee17e6a2198dfbfdd99",
   "original_unique_urls": 100,
-  "current_unique_urls": 445,
-  "current_unique_hrefs": 451,
+  "current_unique_urls": 451,
+  "current_unique_hrefs": 457,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 5,
-    "retrieved": 429,
+    "retrieved": 435,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -1321,8 +1321,8 @@
         {
           "file": "tech-scan-sandbox.html",
           "outcome": "limited",
-          "scope": "AWS Builder Center, Lambda Now Comes in Three Shapes . Published 7 November 2026: MicroVMs launched in five regions in June 2026, grew to 14 regions, and AWS added x86_64 support on 5 November 2026. Used in Match the AWS starting point to the task .",
-          "evidence_summary": "Direct GET returned 200; article published 7 November 2026 states MicroVMs launched in five regions in June 2026, grew to 14 regions, and AWS added x86_64 support on 5 November 2026.",
+          "scope": "AWS Builder Center, Lambda Now Comes in Three Shapes. Published 7 November 2026: MicroVMs launched in five regions in June 2026 and later grew to 14 regions. The x86 date is the What's New post of 11 November 2026, not this article.",
+          "evidence_summary": "The article is dated 7 November 2026 and discusses the June launch and later region growth. The x86 architecture date used on the page is the AWS What's New post of 11 November 2026.",
           "review_kind": "inherited source pass; citation scope reconciled",
           "limitation": "The prior source pass is retained; this targeted refinement did not re-fetch and verify every inherited claim."
         }
@@ -12777,8 +12777,8 @@
         {
           "file": "tech-scan-verification.html",
           "outcome": "supported",
-          "scope": "Reviewer in maintenance mode as of 7 Nov 2025, no new repository associations; alternatives named are Q Developer (review) and Inspector (scanning); Security Agent is not named.",
-          "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+          "scope": "From 7 November 2025, new CodeGuru Reviewer repository associations cannot be created and existing associations continue to function. Alternatives named are Amazon Q Developer for code review and Amazon Inspector for code scanning.",
+          "evidence_summary": "The CodeCommit page states the 7 November 2025 association limit and names Amazon Q Developer and Amazon Inspector. The page's status wording on this site follows the availability-change page, which does not call the change maintenance mode."
         }
       ],
       "evidence_digests": [],
@@ -15651,7 +15651,8 @@
     {
       "url": "https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/codeguru-reviewer-availability-change.html",
       "files": [
-        "tech-radar.html"
+        "tech-radar.html",
+        "tech-scan-verification.html"
       ],
       "hrefs": [
         "https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/codeguru-reviewer-availability-change.html"
@@ -15667,12 +15668,22 @@
           "outcome": "supported",
           "scope": "CodeGuru Reviewer stopped new repository associations on 7 November 2025; existing associations keep working. The page does not call this maintenance mode or end of support.",
           "evidence_summary": "Direct GET of the availability page. It says new repository associations cannot be created and existing associations can still be used."
+        },
+        {
+          "file": "tech-scan-verification.html",
+          "outcome": "supported",
+          "scope": "From 7 November 2025, new CodeGuru Reviewer repository associations cannot be created and existing associations keep working. The availability page does not call this maintenance mode or end of support.",
+          "evidence_summary": "Direct GET of the availability page. It limits new repository associations from 7 November 2025 and says existing associations can still be used."
         }
       ],
       "source_entries": [
         {
           "file": "tech-radar.html",
           "id": "source-16"
+        },
+        {
+          "file": "tech-scan-verification.html",
+          "id": "source-15"
         }
       ]
     },
@@ -16271,7 +16282,8 @@
     {
       "url": "https://github.com/Aider-AI/aider",
       "files": [
-        "tech-radar.html"
+        "tech-radar.html",
+        "tech-scan-workflows-factories.html"
       ],
       "hrefs": [
         "https://github.com/Aider-AI/aider"
@@ -16287,12 +16299,22 @@
           "outcome": "supported",
           "scope": "Aider is an Apache-2.0 open-source CLI whose last release was v0.86.2 on 12 February 2026.",
           "evidence_summary": "The repository carries the Apache-2.0 licence and the v0.86.2 release."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "The Aider repository's last commit is 22 May 2026. It is not archived and has no vendor wind-down notice.",
+          "evidence_summary": "GitHub lists the latest commit on 22 May 2026 and the repository is not archived."
         }
       ],
       "source_entries": [
         {
           "file": "tech-radar.html",
           "id": "source-45"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-22"
         }
       ]
     },
@@ -16705,7 +16727,8 @@
     {
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-lambda-microvms-x86-architecture/",
       "files": [
-        "tech-radar.html"
+        "tech-radar.html",
+        "tech-scan-sandbox.html"
       ],
       "hrefs": [
         "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-lambda-microvms-x86-architecture/"
@@ -16721,12 +16744,22 @@
           "outcome": "supported",
           "scope": "On 11 November 2026 Lambda MicroVMs added x86 beside Arm. x86 is not available in Hong Kong, Malaysia, Thailand or Spain.",
           "evidence_summary": "The What's New post is dated 11 November 2026 and names those four exceptions."
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS added x86 support for Lambda MicroVMs on 11 November 2026, beside Arm.",
+          "evidence_summary": "The What's New post is dated 11 November 2026 and announces x86 support."
         }
       ],
       "source_entries": [
         {
           "file": "tech-radar.html",
           "id": "source-58"
+        },
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-27"
         }
       ]
     },
@@ -16761,7 +16794,8 @@
     {
       "url": "https://docs.aws.amazon.com/codecatalyst/latest/userguide/migration.html",
       "files": [
-        "tech-radar.html"
+        "tech-radar.html",
+        "tech-scan-workflows-factories.html"
       ],
       "hrefs": [
         "https://docs.aws.amazon.com/codecatalyst/latest/userguide/migration.html"
@@ -16777,12 +16811,22 @@
           "outcome": "supported",
           "scope": "New customer access to CodeCatalyst ended on 7 November 2025. Existing customers can continue with their current spaces, and AWS does not plan to introduce new features.",
           "evidence_summary": "The migration page states the 7 November 2025 date, continued use for existing customers, and no planned new features."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "New customer access to CodeCatalyst ended on 7 November 2025. Existing customers can continue with their current spaces, and AWS does not plan to introduce new features.",
+          "evidence_summary": "The migration page states the 7 November 2025 date, continued use for existing customers, and no planned new features."
         }
       ],
       "source_entries": [
         {
           "file": "tech-radar.html",
           "id": "source-60"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-19"
         }
       ]
     },
@@ -17151,6 +17195,174 @@
         {
           "file": "tech-radar.html",
           "id": "source-74"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/cursor/plugins/blob/2f87c854fe3e2fcda44ca86b46ede35aad3c46b7/pstack/.cursor-plugin/plugin.json",
+      "files": [
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/cursor/plugins/blob/2f87c854fe3e2fcda44ca86b46ede35aad3c46b7/pstack/.cursor-plugin/plugin.json"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/cursor/plugins/blob/2f87c854fe3e2fcda44ca86b46ede35aad3c46b7/pstack/.cursor-plugin/plugin.json",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "The pstack plugin manifest at commit 2f87c854fe3e2fcda44ca86b46ede35aad3c46b7 is version 0.15.43, dated 16 November 2026.",
+          "evidence_summary": "plugin.json at that commit reads 0.15.43. The commit is dated 16 November 2026."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-5"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents-classic-maintenance-mode.html",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/agents-classic-maintenance-mode.html"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents-classic-maintenance-mode.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "From 30 July 2026 Amazon Bedrock Agents Classic is no longer open to new customers. AWS calls that maintenance mode and directs existing customers to AgentCore.",
+          "evidence_summary": "The AWS page uses those words and the 30 July 2026 date."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-20"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/SWE-agent/SWE-agent",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/SWE-agent/SWE-agent"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/SWE-agent/SWE-agent",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "The SWE-agent README says mini-SWE-agent has superseded SWE-agent and is the recommendation. The latest tagged release is v1.1.0, published 22 May 2025.",
+          "evidence_summary": "The README warning and the GitHub release v1.1.0 published 22 May 2025."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-21"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/RooCodeInc/Roo-Code",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/RooCodeInc/Roo-Code"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/RooCodeInc/Roo-Code",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "The Roo Code repository is archived. The last release is v3.54.0, published 15 May 2026.",
+          "evidence_summary": "GitHub reports the repository archived and release v3.54.0 published 15 May 2026."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-23"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/sweepai/sweep",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/sweepai/sweep"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/sweepai/sweep",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "The Sweep repository describes a JetBrains coding assistant. Its last commit is 18 September 2025.",
+          "evidence_summary": "The repository description and the latest commit date, 18 September 2025."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-24"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/continuedev/continue",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/continuedev/continue"
+      ],
+      "checked_on": "2026-11-17",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/continuedev/continue",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "The Continue repository is not archived. Its default branch was updated on 21 July 2026 and the repository was pushed on 16 November 2026.",
+          "evidence_summary": "GitHub reports archived false, default-branch commit 21 July 2026, and pushed_at 16 November 2026."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-25"
         }
       ]
     }
