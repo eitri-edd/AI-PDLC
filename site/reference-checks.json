@@ -1,6 +1,6 @@
 {
-  "checked_on": "2026-11-16",
-  "scope": "Daily maintenance verification on 2026-11-16 found 387 distinct external hrefs and no broken destination",
+  "checked_on": "2026-11-17",
+  "scope": "Daily maintenance verification on 2026-11-17 found 387 distinct external hrefs and no broken destination",
   "reviewed_base": "38b78b903af748c5d2fdcee17e6a2198dfbfdd99",
   "original_unique_urls": 100,
   "current_unique_urls": 387,
@@ -15,79 +15,79 @@
   },
   "page_passes": {
     "about.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record). Sources 7–10 and the private vulnerability reporting link (Devin writer and security agent) added and checked live on 2026-11-16.",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record). Sources 7–10 and the private vulnerability reporting link (Devin writer and security agent) added and checked live on 2026-11-17.",
       "status": "completed with explicit limitations",
       "source_entries": 10,
       "unique_fetch_destinations": 14,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "ai-pdlc.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 6,
       "unique_fetch_destinations": 12,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "concept.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 39,
       "unique_fetch_destinations": 44,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "eds-ai-workflow.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 6,
       "unique_fetch_destinations": 9,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "eds-developer-harness.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 16,
       "unique_fetch_destinations": 20,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "eds-path-to-production.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 9,
       "unique_fetch_destinations": 12,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "eds-po-ba-harness.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 8,
       "unique_fetch_destinations": 12,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "eds-skills-catalogue.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 18,
       "unique_fetch_destinations": 21,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "eds-team-context.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 7,
       "unique_fetch_destinations": 11,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "index.html": {
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "scope": "orientation-only operational links",
       "status": "completed with explicit limitations",
       "source_entries": 0,
@@ -95,40 +95,40 @@
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "product-discovery.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 19,
       "unique_fetch_destinations": 24,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "product-implementation.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 17,
       "unique_fetch_destinations": 23,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "training.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 8,
       "unique_fetch_destinations": 15,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "transformation.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 16,
       "unique_fetch_destinations": 21,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "tech-scan.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 10,
       "unique_fetch_destinations": 14,
@@ -136,8 +136,8 @@
       "followup_scope": "Original page-wide date retained; targeted primary-source refinement and inherited-source limitations recorded separately."
     },
     "tech-scan-models.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 11,
       "unique_fetch_destinations": 15,
@@ -145,8 +145,8 @@
       "followup_scope": "Original page-wide date retained; targeted primary-source refinement and inherited-source limitations recorded separately. Inference-profile definition and source 11 added 13 November 2026 from the critical review (site/tech-scan-wave2-critical-review-2026-11-13.md)."
     },
     "tech-scan-harness.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 31,
       "unique_fetch_destinations": 35,
@@ -154,8 +154,8 @@
       "followup_scope": "Original page-wide date retained; targeted primary-source refinement and inherited-source limitations recorded separately."
     },
     "tech-scan-gateway.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 13 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 13 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 24,
       "unique_fetch_destinations": 28,
@@ -163,8 +163,8 @@
       "followup_scope": "Targeted primary-source refinement 13 November 2026 (issue #81): dead ArcBeta comparison replaced by Palo Alto Networks, LiteLLM and OpenRouter first-party sources; page check and editorial dates moved to 13 November 2026."
     },
     "tech-scan-sandbox.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 22,
       "unique_fetch_destinations": 26,
@@ -172,8 +172,8 @@
       "followup_scope": "Original page-wide date retained; targeted primary-source refinement and inherited-source limitations recorded separately."
     },
     "tech-scan-agents.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 13 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 13 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 19,
       "unique_fetch_destinations": 23,
@@ -181,8 +181,8 @@
       "followup_scope": "Targeted P0/P1 additions from the 13 November 2026 critical review (site/tech-scan-wave2-critical-review-2026-11-13.md): Runtime/Mantle definitions, Kiro Auto citation and Fable claims, Zed ACP agents, orchestrator table, do-not-use and gaps sections, Kiro CVE-2026-10591 controls. New sources 12-19 checked 13 November 2026."
     },
     "tech-scan-workflows-factories.html": {
-      "checked_on": "2026-11-16",
-      "scope": "Daily maintenance verification on 2026-11-16: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 13 November 2026 (see maintenance record).",
+      "checked_on": "2026-11-17",
+      "scope": "Daily maintenance verification on 2026-11-17: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 13 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
       "source_entries": 14,
       "unique_fetch_destinations": 20,
@@ -190,7 +190,7 @@
       "followup_scope": "Targeted P0/P1 additions from the 13 November 2026 critical review (site/tech-scan-wave2-critical-review-2026-11-13.md): no managed factory and Kiro Web, AI Factories disambiguation, Spec Kit gates, work tracking, alternatives table, do-not-use and gaps sections, factory control inputs. New sources 11-14 checked 13 November 2026."
     },
     "tech-scan-context.html": {
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "scope": "whole-page canonical source and materially cited claim review; shared operational links retain prior disposition",
       "status": "completed with explicit limitations",
       "source_entries": 8,
@@ -198,7 +198,7 @@
       "maintenance_record": "tech-scan-wave3-review-2026-11-14.md"
     },
     "tech-scan-delivery.html": {
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "scope": "whole-page canonical source and materially cited claim review; shared operational links retain prior disposition",
       "status": "completed with explicit limitations",
       "source_entries": 4,
@@ -206,7 +206,7 @@
       "maintenance_record": "tech-scan-wave3-review-2026-11-14.md"
     },
     "tech-scan-stack-views.html": {
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "scope": "whole-page canonical source and materially cited claim review; shared operational links retain prior disposition",
       "status": "completed with explicit limitations",
       "source_entries": 3,
@@ -214,7 +214,7 @@
       "maintenance_record": "tech-scan-wave3-review-2026-11-14.md"
     },
     "tech-scan-verification.html": {
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "scope": "whole-page canonical source and materially cited claim review; shared operational links retain prior disposition",
       "status": "completed with explicit limitations",
       "source_entries": 6,
@@ -222,7 +222,7 @@
       "maintenance_record": "tech-scan-wave3-review-2026-11-14.md"
     },
     "tech-scan-ai-workflows.html": {
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "scope": "Revised 16 November 2026 for issue 115. Primary pack documents at the pinned commits, the Redeux review, the GitHub advisory, Thoughtworks Radar blips, SkillsBench v4 and the cited benchmark posts were fetched and compared with the claims that cite them. The content-sourcing research record remains the source for the demoted attention scores and scan sentiment. Shared operational links retain their prior disposition. gstack's cookie-picker remediation was not independently re-tested, and whether /ship in Agent Skills deploys by itself was not read from that skill file.",
       "status": "completed with explicit limitations",
       "source_entries": 22,
@@ -238,7 +238,7 @@
       "hrefs": [
         "https://aclanthology.org/2020.acl-main.740/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aclanthology.org/2020.acl-main.740/",
@@ -274,7 +274,7 @@
       "hrefs": [
         "https://addyosmani.com/blog/software-factories/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://addyosmani.com/blog/software-factories/",
@@ -311,7 +311,7 @@
       "hrefs": [
         "https://agent-browser.dev"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://agent-browser.dev",
@@ -358,7 +358,7 @@
       "hrefs": [
         "https://agentfactory.panaversity.org/docs/graph-engineering-crash-course"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://agentfactory1.panaversity.org/docs/graph-engineering-crash-course",
@@ -394,7 +394,7 @@
       "hrefs": [
         "https://agentfactory.panaversity.org/docs/harness-engineering-crash-course"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://agentfactory1.panaversity.org/docs/harness-engineering-crash-course",
@@ -429,7 +429,7 @@
       "hrefs": [
         "https://agentfactory.panaversity.org/docs/loop-engineering-crash-course"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://agentfactory1.panaversity.org/docs/loop-engineering-crash-course",
@@ -464,7 +464,7 @@
       "hrefs": [
         "https://agentfactory.panaversity.org/docs/spec-driven-development-crash-course"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://agentfactory1.panaversity.org/docs/spec-driven-development-crash-course",
@@ -500,7 +500,7 @@
       "hrefs": [
         "https://agentopsguide.com/smithery-vs-glama-vs-official-mcp-registry/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://agentopsguide.com/smithery-vs-glama-vs-official-mcp-registry/",
@@ -537,7 +537,7 @@
       "hrefs": [
         "https://agentskills.io/specification"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://agentskills.io/specification",
@@ -567,7 +567,7 @@
     },
     {
       "url": "https://ai-sdk.dev/docs/agents/overview",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-harness.html"
       ],
@@ -604,7 +604,7 @@
     },
     {
       "url": "https://ai-sdk.dev/providers/ai-sdk-providers/amazon-bedrock",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-harness.html"
       ],
@@ -647,7 +647,7 @@
       "hrefs": [
         "https://arxiv.org/abs/2303.17564"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2303.17564",
@@ -677,7 +677,7 @@
     },
     {
       "url": "https://arxiv.org/abs/2306.05685",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2306.05685",
@@ -713,7 +713,7 @@
       "hrefs": [
         "https://arxiv.org/abs/2307.03172"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2307.03172",
@@ -749,7 +749,7 @@
       "hrefs": [
         "https://arxiv.org/abs/2404.14219"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2404.14219",
@@ -785,7 +785,7 @@
       "hrefs": [
         "https://arxiv.org/abs/2407.06023"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2407.06023",
@@ -821,7 +821,7 @@
       "hrefs": [
         "https://arxiv.org/abs/2610.02267"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2610.02267",
@@ -858,7 +858,7 @@
       "hrefs": [
         "https://arxiv.org/abs/2611.10058"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2611.10058",
@@ -905,7 +905,7 @@
       "hrefs": [
         "https://astqb.org/2-2-test-levels-and-test-types/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://astqb.org/2-2-test-levels-and-test-types/",
@@ -941,7 +941,7 @@
       "hrefs": [
         "https://automater.ai/intel/harness-engineering/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://automater.ai/intel/harness-engineering/",
@@ -979,7 +979,7 @@
       "hrefs": [
         "https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/nitro-sandboxes-eks-ecs-ec2/",
@@ -1033,7 +1033,7 @@
       "hrefs": [
         "https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/",
@@ -1070,7 +1070,7 @@
       "hrefs": [
         "https://aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks/",
@@ -1112,7 +1112,7 @@
       "hrefs": [
         "https://aws.amazon.com/blogs/machine-learning/how-thomson-reuters-built-an-agentic-platform-engineering-hub-with-amazon-bedrock-agentcore"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/blogs/machine-learning/how-thomson-reuters-built-an-agentic-platform-engineering-hub-with-amazon-bedrock-agentcore/",
@@ -1151,7 +1151,7 @@
       "hrefs": [
         "https://aws.amazon.com/blogs/security/help-defend-against-memory-poisoning-in-amazon-bedrock-agentcore-with-multi-layer-write-validation/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/blogs/security/help-defend-against-memory-poisoning-in-amazon-bedrock-agentcore-with-multi-layer-write-validation/",
@@ -1210,7 +1210,7 @@
       "hrefs": [
         "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
@@ -1246,7 +1246,7 @@
       "hrefs": [
         "https://aws.amazon.com/security/security-bulletins/2026-065-aws/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/security/security-bulletins/2026-065-aws/",
@@ -1283,7 +1283,7 @@
       "hrefs": [
         "https://builder.aws.com/content/3LmNG2STjfdIrh1BIvWkHHDZpsi"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://builder.aws.com/content/3LmNG2STjfdIrh1BIvWkHHDZpsi",
@@ -1320,7 +1320,7 @@
       "hrefs": [
         "https://circleci.com/blog/intent-driven-development/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://circleci.com/blog/intent-driven-development/",
@@ -1356,7 +1356,7 @@
       "hrefs": [
         "https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model",
@@ -1393,7 +1393,7 @@
       "hrefs": [
         "https://code.claude.com/docs/en/amazon-bedrock"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://code.claude.com/docs/en/amazon-bedrock",
@@ -1449,7 +1449,7 @@
       "hrefs": [
         "https://code.claude.com/docs/en/feature-availability"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -1490,7 +1490,7 @@
       "hrefs": [
         "https://code.claude.com/docs/en/memory"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "targeted source review",
       "claim_reviews": [
@@ -1520,7 +1520,7 @@
       "hrefs": [
         "https://code.claude.com/docs/en/sandboxing"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://code.claude.com/docs/en/sandboxing",
@@ -1581,7 +1581,7 @@
       "hrefs": [
         "https://code.claude.com/docs/en/security"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -1622,7 +1622,7 @@
       "hrefs": [
         "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
@@ -1659,7 +1659,7 @@
       "hrefs": [
         "https://context7.com"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://context7.com",
@@ -1706,7 +1706,7 @@
       "hrefs": [
         "https://creativecommons.org/licenses/by/4.0/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1737,7 +1737,7 @@
       "hrefs": [
         "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/solutions/approved/documents/architecture-diagrams/building-agentic-ai-foundation-solutions-on-aws.pdf"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved_pdf_text",
       "http_status": 200,
       "final_url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/solutions/approved/documents/architecture-diagrams/building-agentic-ai-foundation-solutions-on-aws.pdf",
@@ -1779,7 +1779,7 @@
         "https://defence-pp.vercel.app/#/problems",
         "https://defence-pp.vercel.app/#/tools"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://defence-pp.vercel.app/",
@@ -1843,7 +1843,7 @@
       "hrefs": [
         "https://developers.openai.com/api/docs/assistants/migration"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -1873,7 +1873,7 @@
       "hrefs": [
         "https://developers.openai.com/api/docs/guides/amazon-bedrock"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://developers.openai.com/api/docs/guides/amazon-bedrock",
@@ -1941,7 +1941,7 @@
       "hrefs": [
         "https://developers.openai.com/api/docs/guides/decisions"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://developers.openai.com/api/docs/guides/decisions",
@@ -1978,7 +1978,7 @@
       "hrefs": [
         "https://developers.openai.com/api/docs/guides/latest-model"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://developers.openai.com/api/docs/guides/latest-model",
@@ -2014,7 +2014,7 @@
       "hrefs": [
         "https://developers.openai.com/api/docs/guides/reasoning-best-practices"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://developers.openai.com/api/docs/guides/reasoning-best-practices",
@@ -2050,7 +2050,7 @@
       "hrefs": [
         "https://developers.openai.com/api/docs/models/gpt-6-astra"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
@@ -2086,7 +2086,7 @@
       "hrefs": [
         "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
@@ -2122,7 +2122,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-guard.html",
@@ -2159,7 +2159,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html",
@@ -2195,7 +2195,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html",
@@ -2231,7 +2231,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html",
@@ -2267,7 +2267,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html",
@@ -2303,7 +2303,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/coding-agents-insights.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/coding-agents-insights.html",
@@ -2340,7 +2340,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html",
@@ -2376,7 +2376,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -2405,7 +2405,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/amazon-q-for-github.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -2444,7 +2444,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-vpc.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-vpc.html",
@@ -2487,7 +2487,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations-types.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations-types.html",
@@ -2517,7 +2517,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluators.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluators.html",
@@ -2547,7 +2547,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-rules-fallback.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-gateway.html"
       ],
@@ -2591,7 +2591,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-managed-kb.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-managed-kb.md",
@@ -2634,7 +2634,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-targets-inference.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-gateway.html"
       ],
@@ -2671,7 +2671,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-environment.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-harness.html",
         "tech-scan-sandbox.html"
@@ -2727,7 +2727,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-models.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-models.html",
@@ -2764,7 +2764,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-operations.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-operations.html",
@@ -2803,7 +2803,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-security.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-security.html",
@@ -2863,7 +2863,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-tools.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-harness.html",
         "tech-scan-sandbox.html"
@@ -2921,7 +2921,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.md",
@@ -2976,7 +2976,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-terminology.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-terminology.html",
@@ -3013,7 +3013,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html",
@@ -3062,7 +3062,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.md",
@@ -3100,7 +3100,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-instances-security.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-instances-security.md",
@@ -3143,7 +3143,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/specify-long-term-memory-organization.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/specify-long-term-memory-organization.html",
@@ -3173,7 +3173,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
@@ -3203,7 +3203,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html",
@@ -3239,7 +3239,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -3261,7 +3261,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-build-managed.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-build-managed.html",
@@ -3291,7 +3291,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-data-source-sync-ingest.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-data-source-sync-ingest.html",
@@ -3327,7 +3327,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-acl.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-acl.md",
@@ -3358,7 +3358,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-retrieve.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-retrieve.html",
@@ -3394,7 +3394,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.md",
@@ -3433,7 +3433,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html",
@@ -3495,7 +3495,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html",
@@ -3544,7 +3544,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock/latest/userguide/models-api-compatibility.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-api-compatibility.html",
@@ -3581,7 +3581,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/claude-platform/latest/userguide/feature-support.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/claude-platform/latest/userguide/feature-support.html",
@@ -3612,7 +3612,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-rollback-and-redeploy.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-rollback-and-redeploy.html",
@@ -3642,7 +3642,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/actions.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/actions.html",
@@ -3672,7 +3672,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/approvals-action-add.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/approvals-action-add.html",
@@ -3702,7 +3702,7 @@
     },
     {
       "url": "https://docs.aws.amazon.com/inspector/latest/user/code-security-assessments.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/inspector/latest/user/code-security-assessments.html",
@@ -3738,7 +3738,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-java-microservices-on-amazon-ecs-using-aws-fargate.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-java-microservices-on-amazon-ecs-using-aws-fargate.html",
@@ -3774,7 +3774,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-targets-templated.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-targets-templated.html",
@@ -3810,7 +3810,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html",
@@ -3846,7 +3846,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrockagentcore.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrockagentcore.html",
@@ -3883,7 +3883,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html",
@@ -3914,7 +3914,7 @@
     },
     {
       "url": "https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments",
@@ -3963,7 +3963,7 @@
       "hrefs": [
         "https://docs.github.com/en/actions/reference/security/secure-use"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "HTTP 200; HTML body parsed",
       "claim_reviews": [
@@ -4004,7 +4004,7 @@
       "hrefs": [
         "https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "HTTP 200; HTML body parsed",
       "claim_reviews": [
@@ -4045,7 +4045,7 @@
       "hrefs": [
         "https://docs.github.com/en/pull-requests/concepts/deploying-code"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "HTTP 200; HTML body parsed",
       "claim_reviews": [
@@ -4086,7 +4086,7 @@
       "hrefs": [
         "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "HTTP 200; HTML body parsed",
       "claim_reviews": [
@@ -4127,7 +4127,7 @@
       "hrefs": [
         "https://docs.google.com/videos/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/play"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "dynamic_page_no_text",
       "http_status": 200,
       "final_url": "https://docs.google.com/videos/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/play",
@@ -4163,7 +4163,7 @@
       "hrefs": [
         "https://docs.langchain.com/oss/python/langgraph/overview"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -4204,7 +4204,7 @@
       "hrefs": [
         "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain",
@@ -4232,7 +4232,7 @@
       "hrefs": [
         "https://docs.litellm.ai/blog/security-update-march-2026"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.litellm.ai/blog/security-update-march-2026",
@@ -4254,7 +4254,7 @@
     },
     {
       "url": "https://docs.litellm.ai/docs/routing",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-gateway.html"
       ],
@@ -4291,7 +4291,7 @@
     },
     {
       "url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan.html"
       ],
@@ -4328,7 +4328,7 @@
     },
     {
       "url": "https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/",
@@ -4358,7 +4358,7 @@
     },
     {
       "url": "https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/faithfulness/",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/faithfulness/",
@@ -4394,7 +4394,7 @@
       "hrefs": [
         "https://docs.typesafe.ai/concepts/system-one"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.typesafe.ai/concepts/system-one",
@@ -4430,7 +4430,7 @@
       "hrefs": [
         "https://docs.typesafe.ai/confidence"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.typesafe.ai/confidence",
@@ -4466,7 +4466,7 @@
       "hrefs": [
         "https://docs.typesafe.ai/primitives"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.typesafe.ai/primitives",
@@ -4496,7 +4496,7 @@
     },
     {
       "url": "https://docs.typesafe.ai/primitives/box",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-models.html"
       ],
@@ -4539,7 +4539,7 @@
       "hrefs": [
         "https://dora.dev/capabilities/generative-organizational-culture/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://dora.dev/capabilities/generative-organizational-culture/",
@@ -4575,7 +4575,7 @@
       "hrefs": [
         "https://dora.dev/capabilities/monitoring-and-observability/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://dora.dev/capabilities/monitoring-and-observability/",
@@ -4611,7 +4611,7 @@
       "hrefs": [
         "https://dora.dev/capabilities/user-centric-focus/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://dora.dev/capabilities/user-centric-focus/",
@@ -4647,7 +4647,7 @@
       "hrefs": [
         "https://dora.dev/guides/dora-metrics/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://dora.dev/guides/dora-metrics/",
@@ -4683,7 +4683,7 @@
       "hrefs": [
         "https://dora.dev/research/2025/dora-report/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://dora.dev/research/2025/dora-report/",
@@ -4719,7 +4719,7 @@
       "hrefs": [
         "https://drive.google.com/file/d/1BxLFoaeKiTPLfciZ7Vr8qHABsJ9bbvrTrDWEs0OEZsk/preview"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "dynamic_page_no_text",
       "http_status": 200,
       "final_url": "https://drive.google.com/file/d/1BxLFoaeKiTPLfciZ7Vr8qHABsJ9bbvrTrDWEs0OEZsk/preview",
@@ -4750,7 +4750,7 @@
       "hrefs": [
         "https://drive.google.com/file/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/preview"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "dynamic_page_no_text",
       "http_status": 200,
       "final_url": "https://drive.google.com/file/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/preview",
@@ -4780,7 +4780,7 @@
     },
     {
       "url": "https://external-secrets.io/latest/introduction/overview/",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-sandbox.html"
       ],
@@ -4848,7 +4848,7 @@
       "hrefs": [
         "https://fonts.googleapis.com"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "expected_preconnect_root_response",
       "http_status": 404,
       "final_url": "https://fonts.googleapis.com",
@@ -4995,7 +4995,7 @@
         },
         {
           "file": "tech-scan-ai-workflows.html",
-          "checked_on": "2026-11-16",
+          "checked_on": "2026-11-17",
           "outcome": "operational",
           "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
@@ -5077,7 +5077,7 @@
       "hrefs": [
         "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap",
@@ -5224,7 +5224,7 @@
         },
         {
           "file": "tech-scan-ai-workflows.html",
-          "checked_on": "2026-11-16",
+          "checked_on": "2026-11-17",
           "outcome": "operational",
           "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
@@ -5306,7 +5306,7 @@
       "hrefs": [
         "https://fonts.gstatic.com"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "expected_preconnect_root_response",
       "http_status": 404,
       "final_url": "https://fonts.gstatic.com",
@@ -5453,7 +5453,7 @@
         },
         {
           "file": "tech-scan-ai-workflows.html",
-          "checked_on": "2026-11-16",
+          "checked_on": "2026-11-17",
           "outcome": "operational",
           "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
@@ -5510,7 +5510,7 @@
       "hrefs": [
         "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
@@ -5546,7 +5546,7 @@
       "hrefs": [
         "https://github.com/All-Hands-AI/OpenHands"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/OpenHands/OpenHands",
@@ -5583,7 +5583,7 @@
       "hrefs": [
         "https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/SGTechStack/ai-coding-workflow-d2-self-paced-training",
@@ -5619,7 +5619,7 @@
       "hrefs": [
         "https://github.com/anthropics/claude-code-action/blob/main/action.yml"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "HTTP 200; HTML body parsed",
       "claim_reviews": [
@@ -5660,7 +5660,7 @@
       "hrefs": [
         "https://github.com/anthropics/claude-code-action/blob/main/docs/configuration.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "HTTP 200; HTML body parsed",
       "claim_reviews": [
@@ -5701,7 +5701,7 @@
       "hrefs": [
         "https://github.com/anthropics/claude-code/issues/6235#issuecomment-5734364232"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "GitHub issue discussion reproduction",
       "claim_reviews": [
@@ -5730,7 +5730,7 @@
       "hrefs": [
         "https://github.com/aws-samples/sample-eks-nitro-sandbox"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/aws-samples/sample-eks-nitro-sandbox",
@@ -5769,7 +5769,7 @@
       "hrefs": [
         "https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md",
@@ -5828,7 +5828,7 @@
       "hrefs": [
         "https://github.com/dsta-productops/clara"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/dsta-productops/clara",
@@ -5876,7 +5876,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/blob/f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79/site/dist/concept.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/blob/f1ed9b1bdc7ba502ffbbd233ed0780f6748f5c79/site/dist/concept.html",
@@ -5926,7 +5926,7 @@
         "https://github.com/eitri-edd/AI-PDLC/blob/main/design.md",
         "https://github.com/eitri-edd/AI-PDLC/blob/main/design.md#design-acceptance-checklist"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/blob/main/design.md",
@@ -5976,7 +5976,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/blob/main/site/reference-checks.json"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/blob/main/site/reference-checks.json",
@@ -6023,7 +6023,7 @@
         "https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md",
         "https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md#editorial-acceptance-checklist"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/blob/main/writing.md",
@@ -6073,7 +6073,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/issues"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/issues",
@@ -6131,7 +6131,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/issues/54"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/issues/54",
@@ -6192,7 +6192,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/issues/59"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/issues/59",
@@ -6229,7 +6229,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/issues/60"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/issues/60",
@@ -6258,7 +6258,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/issues/64"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "HTTP 200; HTML body parsed",
       "claim_reviews": [
@@ -6299,7 +6299,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/issues/65"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched issue page; proposal sections inspected",
       "claim_reviews": [
@@ -6328,7 +6328,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/pulls"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/pulls",
@@ -6380,7 +6380,7 @@
       "hrefs": [
         "https://github.com/github/spec-kit"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/github/spec-kit",
@@ -6427,7 +6427,7 @@
       "hrefs": [
         "https://github.com/github/spec-kit/blob/main/docs/quickstart.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "direct HTTP GET",
       "claim_reviews": [
@@ -6470,7 +6470,7 @@
       "hrefs": [
         "https://github.com/github/spec-kit/blob/main/spec-driven.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/github/spec-kit/blob/main/spec-driven.md",
@@ -6528,7 +6528,7 @@
       "hrefs": [
         "https://github.com/langfuse/langfuse-terraform-aws"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/langfuse/langfuse-terraform-aws",
@@ -6569,7 +6569,7 @@
       "hrefs": [
         "https://github.com/mattpocock/skills"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/mattpocock/skills",
@@ -6649,7 +6649,7 @@
       "hrefs": [
         "https://github.com/microsoft/autogen"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -6677,7 +6677,7 @@
       "hrefs": [
         "https://github.com/microsoft/semantic-kernel"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -6705,7 +6705,7 @@
       "hrefs": [
         "https://github.com/mlnjsh/context-engineering"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/mlnjsh/context-engineering",
@@ -6741,7 +6741,7 @@
       "hrefs": [
         "https://github.com/perplexityai/SPACE"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/perplexityai/SPACE",
@@ -6779,7 +6779,7 @@
       "hrefs": [
         "https://github.com/sverweij/dependency-cruiser/tree/main"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/sverweij/dependency-cruiser/tree/main",
@@ -6829,7 +6829,7 @@
       "hrefs": [
         "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/",
@@ -6892,7 +6892,7 @@
     },
     {
       "url": "https://gvisor.dev/docs/architecture_guide/intro/",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-sandbox.html"
       ],
@@ -6935,7 +6935,7 @@
       "hrefs": [
         "https://impeccable.style"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://impeccable.style",
@@ -6971,7 +6971,7 @@
       "hrefs": [
         "https://info.amplitude.com/rs/138-CDN-550/images/Amplitude-The-North-Star-Playbook.pdf"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved_pdf_text",
       "http_status": 200,
       "final_url": "https://info.amplitude.com/rs/138-CDN-550/images/Amplitude-The-North-Star-Playbook.pdf",
@@ -7010,7 +7010,7 @@
       "hrefs": [
         "https://info.standards.tech.gov.sg"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://info.standards.tech.gov.sg",
@@ -7079,7 +7079,7 @@
       "hrefs": [
         "https://intent-driven.dev/knowledge/context-engineering/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://intent-driven.dev/knowledge/context-engineering/",
@@ -7114,7 +7114,7 @@
       "hrefs": [
         "https://intent-driven.dev/knowledge/intent-driven-development/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://intent-driven.dev/knowledge/intent-driven-development/",
@@ -7150,7 +7150,7 @@
       "hrefs": [
         "https://istqb.org/?sdm_process_download=1&download_id=3345"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf",
@@ -7188,7 +7188,7 @@
       "hrefs": [
         "https://jules.google/docs/changelog/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -7226,7 +7226,7 @@
       "hrefs": [
         "https://kiro.dev/docs/enterprise/governance/model"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://kiro.dev/docs/enterprise/governance/model/",
@@ -7264,7 +7264,7 @@
       "hrefs": [
         "https://kiro.dev/docs/enterprise/governance/model/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -7322,7 +7322,7 @@
       "hrefs": [
         "https://kiro.dev/docs/models/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -7363,7 +7363,7 @@
       "hrefs": [
         "https://kiro.dev/docs/models/available-models"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://kiro.dev/docs/models/available-models/",
@@ -7401,7 +7401,7 @@
       "hrefs": [
         "https://kiro.dev/docs/models/available-models/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "canonical browser body; Auto passage inspected",
       "claim_reviews": [
@@ -7441,7 +7441,7 @@
       "hrefs": [
         "https://kiro.dev/docs/privacy-and-security/data-protection/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -7482,7 +7482,7 @@
       "hrefs": [
         "https://kiro.dev/docs/sandbox.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "targeted source review",
       "claim_reviews": [
@@ -7510,7 +7510,7 @@
       "hrefs": [
         "https://kiro.dev/docs/specs/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "HTTP 200; HTML body parsed",
       "claim_reviews": [
@@ -7551,7 +7551,7 @@
       "hrefs": [
         "https://kiro.dev/docs/web/autonomous-mode/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -7580,7 +7580,7 @@
       "hrefs": [
         "https://kiro.dev/web/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -7603,7 +7603,7 @@
     },
     {
       "url": "https://kubernetes.io/docs/concepts/configuration/secret/",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-sandbox.html"
       ],
@@ -7640,7 +7640,7 @@
     },
     {
       "url": "https://langfuse.com/docs/gateway/overview",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-gateway.html"
       ],
@@ -7683,7 +7683,7 @@
       "hrefs": [
         "https://langfuse.com/handbook/product-engineering/infrastructure/ecs"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://langfuse.com/handbook/product-engineering/infrastructure/ecs",
@@ -7721,7 +7721,7 @@
       "hrefs": [
         "https://langfuse.com/self-hosting/deployment/aws"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://langfuse.com/self-hosting/deployment/aws",
@@ -7770,7 +7770,7 @@
       "hrefs": [
         "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "targeted source review",
       "claim_reviews": [
@@ -7799,7 +7799,7 @@
       "hrefs": [
         "https://learn.chatgpt.com/docs/amazon-bedrock"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://learn.chatgpt.com/docs/amazon-bedrock",
@@ -7855,7 +7855,7 @@
       "hrefs": [
         "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/automation"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/automation",
@@ -7891,7 +7891,7 @@
       "hrefs": [
         "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/secure/teams-roles"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/secure/teams-roles",
@@ -7927,7 +7927,7 @@
       "hrefs": [
         "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats",
@@ -7963,7 +7963,7 @@
       "hrefs": [
         "https://linddun.org"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://linddun.org",
@@ -7999,7 +7999,7 @@
       "hrefs": [
         "https://martinfowler.com/articles/are-harnesses-worth-the-cost.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://martinfowler.com/articles/are-harnesses-worth-the-cost.html",
@@ -8035,7 +8035,7 @@
       "hrefs": [
         "https://martinfowler.com/articles/structured-prompt-driven/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://martinfowler.com/articles/structured-prompt-driven/",
@@ -8071,7 +8071,7 @@
       "hrefs": [
         "https://martinfowler.com/articles/tests-as-data.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://martinfowler.com/articles/tests-as-data.html",
@@ -8108,7 +8108,7 @@
       "hrefs": [
         "https://martinfowler.com/rachels-ramblings/code-review.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://martinfowler.com/rachels-ramblings/code-review.html",
@@ -8155,7 +8155,7 @@
       "hrefs": [
         "https://martinfowler.com/rachels-ramblings/good-devs-wary.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://martinfowler.com/rachels-ramblings/good-devs-wary.html",
@@ -8191,7 +8191,7 @@
       "hrefs": [
         "https://medium.com/@manu.dinicola/make-bad-code-impossible-to-merge-guardrails-for-ai-written-net-af10025d86f5"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 403,
       "final_url": "https://medium.com/@manu.dinicola/make-bad-code-impossible-to-merge-guardrails-for-ai-written-net-af10025d86f5",
@@ -8237,7 +8237,7 @@
       "hrefs": [
         "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
@@ -8273,7 +8273,7 @@
       "hrefs": [
         "https://metr.org/blog/2026-02-24-uplift-update/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://metr.org/blog/2026-02-24-uplift-update/",
@@ -8309,7 +8309,7 @@
       "hrefs": [
         "https://microservices.io/patterns/data/transactional-outbox.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://microservices.io/patterns/data/transactional-outbox.html",
@@ -8339,7 +8339,7 @@
     },
     {
       "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan.html"
       ],
@@ -8376,7 +8376,7 @@
     },
     {
       "url": "https://modelcontextprotocol.io/registry/about",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-context.html",
         "tech-scan-harness.html"
@@ -8432,7 +8432,7 @@
       "hrefs": [
         "https://nvd.nist.gov/vuln/detail/CVE-2026-10591"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "NVD page read via live browser; CVSS 4.0 and 3.x tabs inspected",
       "claim_reviews": [
@@ -8460,7 +8460,7 @@
       "hrefs": [
         "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved_pdf_text",
       "http_status": 200,
       "final_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
@@ -8496,7 +8496,7 @@
       "hrefs": [
         "https://okf.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://okf.md",
@@ -8532,7 +8532,7 @@
       "hrefs": [
         "https://openai.com/index/harness-engineering/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 403,
       "final_url": "https://openai.com/index/harness-engineering/",
@@ -8573,7 +8573,7 @@
       "hrefs": [
         "https://openai.com/index/securing-our-frontier-model-training-environment"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "direct HTTP GET 403; full article text retrieved via live reader",
       "claim_reviews": [
@@ -8601,7 +8601,7 @@
       "hrefs": [
         "https://openrouter.ai/docs/quickstart"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://openrouter.ai/docs/quickstart",
@@ -8623,7 +8623,7 @@
     },
     {
       "url": "https://opentelemetry.io/docs/what-is-opentelemetry/",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan.html"
       ],
@@ -8667,7 +8667,7 @@
       "hrefs": [
         "https://owasp.org/projects/threat-dragon"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://owasp.org/projects/threat-dragon",
@@ -8715,7 +8715,7 @@
       "hrefs": [
         "https://pitest.org"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://pitest.org",
@@ -8762,7 +8762,7 @@
       "hrefs": [
         "https://platform.claude.com/docs/en/about-claude/glossary#temperature"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://platform.claude.com/docs/en/about-claude/glossary",
@@ -8798,7 +8798,7 @@
       "hrefs": [
         "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "targeted source review",
       "claim_reviews": [
@@ -8826,7 +8826,7 @@
       "hrefs": [
         "https://platform.claude.com/docs/en/models/fable-5-2/overview"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://platform.claude.com/docs/en/models/fable-5-2/overview",
@@ -8862,7 +8862,7 @@
       "hrefs": [
         "https://platform.claude.com/docs/en/models/opus-5-5/overview"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
@@ -8898,7 +8898,7 @@
       "hrefs": [
         "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
@@ -8935,7 +8935,7 @@
       "hrefs": [
         "https://playwright.dev"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://playwright.dev",
@@ -8982,7 +8982,7 @@
       "hrefs": [
         "https://prized.dev/docs/sandboxes-vs-aws-nitro-sandboxes-lambda-microvms"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://prized.dev/docs/sandboxes-vs-aws-nitro-sandboxes-lambda-microvms",
@@ -9019,7 +9019,7 @@
       "hrefs": [
         "https://productschool.com/blog/artificial-intelligence/how-improve-product-discovery-with-ai"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://productschool.com/blog/artificial-intelligence/how-improve-product-discovery-with-ai",
@@ -9055,7 +9055,7 @@
       "hrefs": [
         "https://productschool.com/blog/product-fundamentals/product-experimentation"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://productschool.com/blog/product-fundamentals/product-experimentation",
@@ -9091,7 +9091,7 @@
       "hrefs": [
         "https://productschool.com/blog/product-fundamentals/what-is-product-discovery"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://productschool.com/blog/product-fundamentals/what-is-product-discovery",
@@ -9127,7 +9127,7 @@
       "hrefs": [
         "https://programminginsider.com/ai-coding-agents-in-a-small-team-hand-them-tickets-not-the-keys/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://programminginsider.com/ai-coding-agents-in-a-small-team-hand-them-tickets-not-the-keys/",
@@ -9157,7 +9157,7 @@
     },
     {
       "url": "https://raw.githubusercontent.com/github/spec-kit/main/README.md",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan.html"
       ],
@@ -9194,7 +9194,7 @@
     },
     {
       "url": "https://react.dev/learn/describing-the-ui",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan.html"
       ],
@@ -9237,7 +9237,7 @@
       "hrefs": [
         "https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://s5labs.io/resources/insights/open-decision-models-clef-d1-jev/",
@@ -9274,7 +9274,7 @@
       "hrefs": [
         "https://schristoph.online/blog/aws-lambda-microvms/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://schristoph.online/blog/aws-lambda-microvms/",
@@ -9305,7 +9305,7 @@
     },
     {
       "url": "https://secrets-store-csi-driver.sigs.k8s.io/topics/sync-as-kubernetes-secret",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-sandbox.html"
       ],
@@ -9350,7 +9350,7 @@
       "hrefs": [
         "https://semgrep.dev/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://semgrep.dev/",
@@ -9433,7 +9433,7 @@
       "hrefs": [
         "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/",
@@ -9587,7 +9587,7 @@
         },
         {
           "file": "tech-scan-ai-workflows.html",
-          "checked_on": "2026-11-16",
+          "checked_on": "2026-11-17",
           "outcome": "operational",
           "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
@@ -9672,7 +9672,7 @@
       "hrefs": [
         "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/00-pm-ba-workflow.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/00-pm-ba-workflow.html",
@@ -9760,7 +9760,7 @@
       "hrefs": [
         "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html",
@@ -9875,7 +9875,7 @@
       "hrefs": [
         "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html",
@@ -9937,7 +9937,7 @@
       "hrefs": [
         "https://sre.google/workbook/canarying-releases/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://sre.google/workbook/canarying-releases/",
@@ -9974,7 +9974,7 @@
       "hrefs": [
         "https://stitch.withgoogle.com"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "dynamic_page_no_text",
       "http_status": 200,
       "final_url": "https://stitch.google.com/",
@@ -10021,7 +10021,7 @@
       "hrefs": [
         "https://strandsagents.com/docs/user-guide/sdk/multi-agent/multi-agent-patterns/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -10062,7 +10062,7 @@
       "hrefs": [
         "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
@@ -10100,7 +10100,7 @@
       "hrefs": [
         "https://stryker-mutator.io"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://stryker-mutator.io",
@@ -10147,7 +10147,7 @@
       "hrefs": [
         "https://theainewsreport.com/2026-11-02-trigger-dev-env-vars-exposure-explained.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://theainewsreport.com/2026-11-02-trigger-dev-env-vars-exposure-explained.html",
@@ -10178,7 +10178,7 @@
       "hrefs": [
         "https://theleanstartup.com/principles"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://theleanstartup.com/principles",
@@ -10214,7 +10214,7 @@
       "hrefs": [
         "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
@@ -10250,7 +10250,7 @@
       "hrefs": [
         "https://vdf.ai/blog/ai-gateway-comparison/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://vdf.ai/blog/ai-gateway-comparison/",
@@ -10287,7 +10287,7 @@
       "hrefs": [
         "https://vercel.com/academy/creating-a-software-factory"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://vercel.com/academy/creating-a-software-factory",
@@ -10323,7 +10323,7 @@
       "hrefs": [
         "https://walkinglabs.github.io/learn-harness-engineering/en/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://walkinglabs.github.io/learn-harness-engineering/en/",
@@ -10359,7 +10359,7 @@
       "hrefs": [
         "https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/",
@@ -10395,7 +10395,7 @@
       "hrefs": [
         "https://waveo.io/insights/signal-noise-2026-11-09/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://waveo.io/insights/signal-noise-2026-11-09/",
@@ -10433,7 +10433,7 @@
       "hrefs": [
         "https://www.anthropic.com/research/building-effective-agents"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.anthropic.com/research/building-effective-agents",
@@ -10481,7 +10481,7 @@
       "hrefs": [
         "https://www.anthropic.com/research/demystifying-evals-for-ai-agents"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
@@ -10519,7 +10519,7 @@
       "hrefs": [
         "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
@@ -10577,7 +10577,7 @@
       "hrefs": [
         "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
@@ -10613,7 +10613,7 @@
       "hrefs": [
         "https://www.anthropic.com/transparency"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.anthropic.com/transparency",
@@ -10650,7 +10650,7 @@
       "hrefs": [
         "https://www.archunit.org"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.archunit.org",
@@ -10697,7 +10697,7 @@
       "hrefs": [
         "https://www.beyondtrust.com/blog/entry/amazon-bedrock-agentcore-python-sdk-rce-cves"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 403,
       "final_url": "https://www.beyondtrust.com/blog/entry/amazon-bedrock-agentcore-python-sdk-rce-cves",
@@ -10727,7 +10727,7 @@
       "hrefs": [
         "https://www.christenseninstitute.org/theory/jobs-to-be-done/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.christenseninstitute.org/theory/jobs-to-be-done/",
@@ -10757,7 +10757,7 @@
     },
     {
       "url": "https://www.conftest.dev/",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-harness.html"
       ],
@@ -10800,7 +10800,7 @@
       "hrefs": [
         "https://www.designcouncil.org.uk/resources/the-double-diamond/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.designcouncil.org.uk/resources/the-double-diamond/",
@@ -10836,7 +10836,7 @@
       "hrefs": [
         "https://www.figma.com/make/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.figma.com/make/",
@@ -10873,7 +10873,7 @@
       "hrefs": [
         "https://www.getzep.com/blog/announcing-a-new-direction-for-zeps-open-source-strategy/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.getzep.com/blog/announcing-a-new-direction-for-zeps-open-source-strategy/",
@@ -10914,7 +10914,7 @@
       "hrefs": [
         "https://www.gv.com/sprint"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.gv.com/sprint",
@@ -10950,7 +10950,7 @@
       "hrefs": [
         "https://www.harness.io/blog/why-ai-coding-agents-lose-context-after-pr"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.harness.io/blog/why-ai-coding-agents-lose-context-after-pr",
@@ -10986,7 +10986,7 @@
       "hrefs": [
         "https://www.heyuan110.com/posts/ai/2026-04-18-harness-six-layers-reverse-build/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.heyuan110.com/posts/ai/2026-04-18-harness-six-layers-reverse-build/",
@@ -11023,7 +11023,7 @@
       "hrefs": [
         "https://www.ibm.com/think/topics/loop-engineering"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.ibm.com/think/topics/loop-engineering",
@@ -11059,7 +11059,7 @@
       "hrefs": [
         "https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf",
@@ -11095,7 +11095,7 @@
       "hrefs": [
         "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2026/updated-model-ai-governance-framework-for-agentic-ai"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "partial_reader_recovery",
       "http_status": 200,
       "final_url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2026/updated-model-ai-governance-framework-for-agentic-ai",
@@ -11131,7 +11131,7 @@
       "hrefs": [
         "https://www.iwoszapar.com/resources/loop-engineering-playbook/access"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.iwoszapar.com/resources/loop-engineering-playbook/access",
@@ -11167,7 +11167,7 @@
       "hrefs": [
         "https://www.linkedin.com/pulse/from-headless-thoughtful-why-3-in-a-box-operating-model-sumit-sheth-imptc/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 403,
       "final_url": "https://www.linkedin.com/pulse/from-headless-thoughtful-why-3-in-a-box-operating-model-sumit-sheth-imptc/",
@@ -11203,7 +11203,7 @@
       "hrefs": [
         "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2025"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": null,
       "final_url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2025",
@@ -11240,7 +11240,7 @@
       "hrefs": [
         "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": null,
       "final_url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation",
@@ -11281,7 +11281,7 @@
       "hrefs": [
         "https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/the%20state%20of%20ai/november%202025/the-state-of-ai-in-2025.pdf"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": null,
       "final_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/the%20state%20of%20ai/november%202025/the-state-of-ai-in-2025.pdf",
@@ -11318,7 +11318,7 @@
       "hrefs": [
         "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
@@ -11354,7 +11354,7 @@
       "hrefs": [
         "https://www.nngroup.com/articles/synthetic-users/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.nngroup.com/articles/synthetic-users/",
@@ -11390,7 +11390,7 @@
       "hrefs": [
         "https://www.nngroup.com/articles/wizard-of-oz/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.nngroup.com/articles/wizard-of-oz/",
@@ -11420,7 +11420,7 @@
     },
     {
       "url": "https://www.openpolicyagent.org/docs/integration",
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "files": [
         "tech-scan-harness.html"
       ],
@@ -11463,7 +11463,7 @@
       "hrefs": [
         "https://www.optimizely.com/optimization-glossary/multivariate-testing"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.optimizely.com/optimization-glossary/multivariate-testing",
@@ -11499,7 +11499,7 @@
       "hrefs": [
         "https://www.oreilly.com/radar/software-factories-light-and-dark/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.oreilly.com/radar/software-factories-light-and-dark/",
@@ -11535,7 +11535,7 @@
       "hrefs": [
         "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents",
@@ -11563,7 +11563,7 @@
       "hrefs": [
         "https://www.producttalk.org/opportunity-solution-trees/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.producttalk.org/opportunity-solution-trees/",
@@ -11599,7 +11599,7 @@
       "hrefs": [
         "https://www.puppygraph.com/learn/graph-engineering"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.puppygraph.com/learn/graph-engineering",
@@ -11635,7 +11635,7 @@
       "hrefs": [
         "https://www.qovery.com/blog/aws-nitro-sandboxes-eks-vs-daytona-e2b"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.qovery.com/blog/aws-nitro-sandboxes-eks-vs-daytona-e2b",
@@ -11673,7 +11673,7 @@
       "hrefs": [
         "https://www.sonarsource.com"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.sonarsource.com",
@@ -11720,7 +11720,7 @@
       "hrefs": [
         "https://www.svpg.com/dual-track-agile/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.svpg.com/dual-track-agile/",
@@ -11756,7 +11756,7 @@
       "hrefs": [
         "https://www.svpg.com/four-big-risks/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.svpg.com/four-big-risks/",
@@ -11792,7 +11792,7 @@
       "hrefs": [
         "https://www.unkey.com/docs/platform/index"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.unkey.com/docs/platform/index",
@@ -11829,7 +11829,7 @@
       "hrefs": [
         "https://x.ai/news/grok-bot-and-x"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "targeted source review",
       "claim_reviews": [
@@ -11857,7 +11857,7 @@
       "hrefs": [
         "https://x.com/ericzakariasson/status/2102853511637774551"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "partial_reader_recovery",
       "method": "reader extraction / indexed partial where available; original X access limited",
       "claim_reviews": [
@@ -11886,7 +11886,7 @@
       "hrefs": [
         "https://x.com/rauchg/status/2114770919436808572"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "partial_reader_recovery",
       "method": "reader extraction / indexed partial where available; original X access limited",
       "claim_reviews": [
@@ -11915,7 +11915,7 @@
       "hrefs": [
         "https://x.com/thsottiaux/status/2107368734981517634"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "partial_reader_recovery",
       "method": "reader extraction / indexed partial where available; original X access limited",
       "claim_reviews": [
@@ -11944,7 +11944,7 @@
       "hrefs": [
         "https://x.com/trq212/status/2101009392611278961"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "dynamic_page_no_text",
       "method": "reader extraction / indexed partial where available; original X access limited",
       "claim_reviews": [
@@ -11973,7 +11973,7 @@
       "hrefs": [
         "https://zed.dev/docs/ai/quick-start"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "fetched primary page; decisive passages inspected",
       "claim_reviews": [
@@ -12014,7 +12014,7 @@
       "hrefs": [
         "https://zyvop.com/how-to-secure-ai-coding-agents-sandboxing-permissions-and-human-approval-gates-au71v"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://zyvop.com/how-to-secure-ai-coding-agents-sandboxing-permissions-and-human-approval-gates-au71v",
@@ -12050,7 +12050,7 @@
       "hrefs": [
         "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-harness-generally-available/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-harness-generally-available/",
@@ -12079,7 +12079,7 @@
       "hrefs": [
         "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/",
@@ -12108,7 +12108,7 @@
       "hrefs": [
         "https://aws.amazon.com/blogs/containers/measuring-developer-experience-on-an-amazon-eks-developer-platform/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/blogs/containers/measuring-developer-experience-on-an-amazon-eks-developer-platform/",
@@ -12137,7 +12137,7 @@
       "hrefs": [
         "https://aws.amazon.com/blogs/devops/choosing-between-amazon-ecs-blue-green-native-or-aws-codedeploy-in-aws-cdk/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/blogs/devops/choosing-between-amazon-ecs-blue-green-native-or-aws-codedeploy-in-aws-cdk/",
@@ -12166,7 +12166,7 @@
       "hrefs": [
         "https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/",
@@ -12195,7 +12195,7 @@
       "hrefs": [
         "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/blogs/machine-learning/the-agent-evaluation-playbook-built-in-deepeval-and-autoeval-on-agentcore/",
@@ -12224,7 +12224,7 @@
       "hrefs": [
         "https://aws.amazon.com/blogs/mt/support-for-amazon-cloudwatch-evidently-ending-soon/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/blogs/mt/support-for-amazon-cloudwatch-evidently-ending-soon/",
@@ -12253,7 +12253,7 @@
       "hrefs": [
         "https://aws.amazon.com/security/security-bulletins/2026-035-aws/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/security/security-bulletins/2026-035-aws/",
@@ -12282,7 +12282,7 @@
       "hrefs": [
         "https://aws.amazon.com/systems-manager/features/incident-manager/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://aws.amazon.com/systems-manager/features/incident-manager/",
@@ -12311,7 +12311,7 @@
       "hrefs": [
         "https://code.claude.com/docs/en/agent-sdk"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://code.claude.com/docs/en/agent-sdk",
@@ -12340,7 +12340,7 @@
       "hrefs": [
         "https://code.claude.com/docs/en/settings-reference"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://code.claude.com/docs/en/settings-reference",
@@ -12369,7 +12369,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html",
@@ -12398,7 +12398,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Extensions.html",
@@ -12427,7 +12427,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3VectorBuckets_QueryVectors.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3VectorBuckets_QueryVectors.html",
@@ -12456,7 +12456,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html",
@@ -12485,7 +12485,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-security-best-practices.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-security-best-practices.html",
@@ -12514,7 +12514,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock/latest/userguide/api-reference-overview.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/api-reference-overview.html",
@@ -12543,7 +12543,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html",
@@ -12572,7 +12572,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-customize-ingestion.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-managed-customize-ingestion.html",
@@ -12601,7 +12601,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html",
@@ -12630,7 +12630,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-amazon-codeguru-reviewer.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-amazon-codeguru-reviewer.html",
@@ -12659,7 +12659,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html",
@@ -12688,7 +12688,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html",
@@ -12717,7 +12717,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/decision-guides/latest/decision-guides/vector-database-guide.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/decision-guides/latest/decision-guides/vector-database-guide.html",
@@ -12746,7 +12746,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/java/api/latest/software/amazon/awssdk/services/codegurusecurity/package-summary.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/java/api/latest/software/amazon/awssdk/services/codegurusecurity/package-summary.html",
@@ -12775,7 +12775,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/kendra/latest/dg/kendra-availability-change.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/kendra/latest/dg/kendra-availability-change.html",
@@ -12804,7 +12804,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html",
@@ -12833,7 +12833,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-migration.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-migration.html",
@@ -12862,7 +12862,7 @@
       "hrefs": [
         "https://docs.langchain4j.dev/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.langchain4j.dev/",
@@ -12891,7 +12891,7 @@
       "hrefs": [
         "https://dora.dev/guides/dora-metrics-four-keys/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://dora.dev/guides/dora-metrics/",
@@ -12920,7 +12920,7 @@
       "hrefs": [
         "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
@@ -12949,7 +12949,7 @@
       "hrefs": [
         "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
@@ -12978,7 +12978,7 @@
       "hrefs": [
         "https://github.com/postmanlabs/postman-app-support/issues/14370"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
@@ -13007,7 +13007,7 @@
       "hrefs": [
         "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model",
@@ -13036,7 +13036,7 @@
       "hrefs": [
         "https://nvd.nist.gov/vuln/detail/CVE-2026-103572"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://nvd.nist.gov/vuln/detail/cve-2026-103572",
@@ -13065,7 +13065,7 @@
       "hrefs": [
         "https://nvd.nist.gov/vuln/detail/CVE-2026-9255"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://nvd.nist.gov/vuln/detail/cve-2026-9255",
@@ -13094,7 +13094,7 @@
       "hrefs": [
         "https://openai.github.io/openai-agents-js/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://openai.github.io/openai-agents-js/",
@@ -13123,7 +13123,7 @@
       "hrefs": [
         "https://safedep.io/blog/testmetest-npm-worm-miasma-variant"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://safedep.io/blog/testmetest-npm-worm-miasma-variant",
@@ -13152,7 +13152,7 @@
       "hrefs": [
         "https://strandsagents.com/docs/user-guide/quickstart/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://strandsagents.com/docs/user-guide/quickstart/",
@@ -13181,7 +13181,7 @@
       "hrefs": [
         "https://aws.amazon.com/about-aws/whats-new/2026/11/new-agentcore-runtime-default/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13213,7 +13213,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13256,7 +13256,7 @@
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-how-it-works.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13287,7 +13287,7 @@
       "hrefs": [
         "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13318,7 +13318,7 @@
       "hrefs": [
         "https://github.com/AgentMemoryRepo/agentmemoryrepo/blob/main/README.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13349,7 +13349,7 @@
       "hrefs": [
         "https://github.com/rauchg/gdp-ts"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13380,7 +13380,7 @@
       "hrefs": [
         "https://hamel.dev/blog/posts/decision-model-evals/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13411,7 +13411,7 @@
       "hrefs": [
         "https://kiro.dev/blog/software-factory-1000-prs/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13442,7 +13442,7 @@
       "hrefs": [
         "https://kiro.dev/blog/software-factory-stability/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13473,7 +13473,7 @@
       "hrefs": [
         "https://kiro.dev/docs/crew/bots/how-bots-work/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13504,7 +13504,7 @@
       "hrefs": [
         "https://kiro.dev/docs/crew/bots/manage-bots/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13536,7 +13536,7 @@
       "hrefs": [
         "https://kiro.dev/docs/sandbox/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13579,7 +13579,7 @@
       "hrefs": [
         "https://martinfowler.com/bliki/GeneratedGlossary.html"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13610,7 +13610,7 @@
       "hrefs": [
         "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13641,7 +13641,7 @@
       "hrefs": [
         "https://www.philschmid.de/code-mode"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "method": "indexed source text retrieved from primary publisher, targeted editorial review",
       "claim_reviews": [
@@ -13672,7 +13672,7 @@
       "hrefs": [
         "https://x.com/bcherny/status/2102543349102338309"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "partial_reader_recovery",
       "method": "issue #86 text and independent mirrored excerpt, original X access limited",
       "claim_reviews": [
@@ -13703,7 +13703,7 @@
       "hrefs": [
         "https://docs.devin.ai/get-started/devin-intro"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.devin.ai/get-started/devin-intro",
@@ -13739,7 +13739,7 @@
       "hrefs": [
         "https://docs.devin.ai/work-with-devin/security-2-0"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://docs.devin.ai/work-with-devin/security-2-0",
@@ -13775,7 +13775,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY_MODEL.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY_MODEL.md",
@@ -13811,7 +13811,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/eitri-edd/AI-PDLC/blob/main/SECURITY.md",
@@ -13847,7 +13847,7 @@
       "hrefs": [
         "https://github.com/eitri-edd/AI-PDLC/security/advisories/new"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "expected_login_redirect",
       "http_status": 200,
       "final_url": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Feitri-edd%2FAI-PDLC%2Fsecurity%2Fadvisories%2Fnew",
@@ -13878,7 +13878,7 @@
       "hrefs": [
         "https://ademark.dev/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://ademark.dev/",
@@ -13908,7 +13908,7 @@
       "hrefs": [
         "https://support.claude.com/en/articles/14554000-claude-code-power-user-tips"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://support.claude.com/en/articles/14554000-claude-code-power-user-tips",
@@ -13939,7 +13939,7 @@
       "hrefs": [
         "https://orca.dev/docs/model/worktrees"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://orca.dev/docs/model/worktrees",
@@ -13981,7 +13981,7 @@
       "hrefs": [
         "https://x.com/aparnadhinak/status/2109040646627721384"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "method": "Direct HTTP 200; full article text read live in the browser",
@@ -14011,7 +14011,7 @@
       "hrefs": [
         "https://claude.com/resources/articles/auto-mode-default-in-claude-code"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://claude.com/resources/articles/auto-mode-default-in-claude-code",
@@ -14041,7 +14041,7 @@
       "hrefs": [
         "https://x.com/samuelcolvin/status/2110055467007303729"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "method": "Direct HTTP 200; full article text read live in the browser",
@@ -14071,7 +14071,7 @@
       "hrefs": [
         "https://claude.dev/blog/solving-code-review-at-anthropic/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
@@ -14101,7 +14101,7 @@
       "hrefs": [
         "https://x.com/addyosmani/status/2114604912520921136"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "method": "Direct HTTP 200; full article text read live in the browser",
@@ -14131,7 +14131,7 @@
       "hrefs": [
         "https://code.claude.com/docs/en/worktrees"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://code.claude.com/docs/en/worktrees",
@@ -14168,7 +14168,7 @@
       "hrefs": [
         "https://git-scm.com/docs/git-worktree"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://git-scm.com/docs/git-worktree",
@@ -14205,7 +14205,7 @@
       "hrefs": [
         "https://orca.dev/docs/agents/supported"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://orca.dev/docs/agents/supported",
@@ -14237,7 +14237,7 @@
       "hrefs": [
         "https://code.claude.com/docs/en/agent-view"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://code.claude.com/docs/en/agent-view",
@@ -14269,7 +14269,7 @@
       "hrefs": [
         "https://www.conductor.build/announcement"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.conductor.build/announcement",
@@ -14301,7 +14301,7 @@
       "hrefs": [
         "https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta",
@@ -14333,7 +14333,7 @@
       "hrefs": [
         "https://www.conductor.build/changelog/0.94.2-conductor-is-back"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.conductor.build/changelog/0.94.2-conductor-is-back",
@@ -14365,7 +14365,7 @@
       "hrefs": [
         "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
@@ -14397,7 +14397,7 @@
       "hrefs": [
         "https://platform.claude.com/docs/en/managed-agents/dreams"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://platform.claude.com/docs/en/managed-agents/dreams",
@@ -14428,7 +14428,7 @@
       "hrefs": [
         "https://claude.com/resources/articles/new-in-claude-managed-agents"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://claude.com/resources/articles/new-in-claude-managed-agents",
@@ -14459,7 +14459,7 @@
       "hrefs": [
         "https://github.com/mattpocock/skills/blob/5863806dd4e15c63174bee4e7515a4256792ecfa/README.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/mattpocock/skills/blob/5863806dd4e15c63174bee4e7515a4256792ecfa/README.md",
@@ -14489,7 +14489,7 @@
       "hrefs": [
         "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/README.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/README.md",
@@ -14519,7 +14519,7 @@
       "hrefs": [
         "https://github.com/addyosmani/agent-skills/blob/39b723ceebf81474d0557c1fecd01eddab585563/README.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/addyosmani/agent-skills/blob/39b723ceebf81474d0557c1fecd01eddab585563/README.md",
@@ -14549,7 +14549,7 @@
       "hrefs": [
         "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/README.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/README.md",
@@ -14579,7 +14579,7 @@
       "hrefs": [
         "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/SKILL.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/SKILL.md",
@@ -14609,7 +14609,7 @@
       "hrefs": [
         "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/playbooks/shipping.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/playbooks/shipping.md",
@@ -14639,7 +14639,7 @@
       "hrefs": [
         "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/playbooks/autopilot-full.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/skills/poteto-mode/playbooks/autopilot-full.md",
@@ -14669,7 +14669,7 @@
       "hrefs": [
         "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/.cursor-plugin/plugin.json"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/cursor/plugins/blob/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7/pstack/.cursor-plugin/plugin.json",
@@ -14699,7 +14699,7 @@
       "hrefs": [
         "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/README.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/README.md",
@@ -14729,7 +14729,7 @@
       "hrefs": [
         "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/docs/privacy.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/docs/privacy.md",
@@ -14759,7 +14759,7 @@
       "hrefs": [
         "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/CHANGELOG.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/CHANGELOG.md",
@@ -14789,7 +14789,7 @@
       "hrefs": [
         "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/browse/src/cookie-picker-routes.ts"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/browse/src/cookie-picker-routes.ts",
@@ -14819,7 +14819,7 @@
       "hrefs": [
         "https://github.com/garrytan/gstack/security/advisories/GHSA-249x-w96r-pw6c"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/garrytan/gstack/security/advisories/GHSA-249x-w96r-pw6c",
@@ -14849,7 +14849,7 @@
       "hrefs": [
         "https://security.redeux.ai/advisories/gstack-prompt-security-review"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://security.redeux.ai/advisories/gstack-prompt-security-review",
@@ -14879,7 +14879,7 @@
       "hrefs": [
         "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/ship/SKILL.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/garrytan/gstack/blob/a15a0de7b1b2098ec59d158c90275adb75d7812b/ship/SKILL.md",
@@ -14909,7 +14909,7 @@
       "hrefs": [
         "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/README.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/README.md",
@@ -14939,7 +14939,7 @@
       "hrefs": [
         "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-send/SKILL.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-send/SKILL.md",
@@ -14969,7 +14969,7 @@
       "hrefs": [
         "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-stop/SKILL.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/t3dotgg/tstack/blob/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-stop/SKILL.md",
@@ -14999,7 +14999,7 @@
       "hrefs": [
         "https://github.com/unclebob/ub-mode/blob/3da62bf3fcfd2034de41f30d920d2739e566171f/SKILL.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/unclebob/ub-mode/blob/3da62bf3fcfd2034de41f30d920d2739e566171f/SKILL.md",
@@ -15029,7 +15029,7 @@
       "hrefs": [
         "https://github.com/unclebob/ub-mode/blob/3da62bf3fcfd2034de41f30d920d2739e566171f/README.md"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/unclebob/ub-mode/blob/3da62bf3fcfd2034de41f30d920d2739e566171f/README.md",
@@ -15059,7 +15059,7 @@
       "hrefs": [
         "https://bartlomiejkrupa.dev/articles/does-superpowers-beat-no-plugin/"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://bartlomiejkrupa.dev/articles/does-superpowers-beat-no-plugin/",
@@ -15089,7 +15089,7 @@
       "hrefs": [
         "https://github.com/bartek-890/superpowers-evals/commit/c3617b0cf964132138509afdf60689fe1ce6beb6"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/bartek-890/superpowers-evals/commit/c3617b0cf964132138509afdf60689fe1ce6beb6",
@@ -15119,7 +15119,7 @@
       "hrefs": [
         "https://x.com/LabubuNoBB/status/2118012147334832265"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://x.com/LabubuNoBB/status/2118012147334832265",
@@ -15149,7 +15149,7 @@
       "hrefs": [
         "https://x.com/utk0x/status/2103537281290367411"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://x.com/utk0x/status/2103537281290367411",
@@ -15179,7 +15179,7 @@
       "hrefs": [
         "https://arxiv.org/abs/2602.12670v4"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2602.12670v4",
@@ -15209,7 +15209,7 @@
       "hrefs": [
         "https://code.claude.com/docs/en/plugin-evals"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://code.claude.com/docs/en/plugin-evals",
@@ -15239,7 +15239,7 @@
       "hrefs": [
         "https://developers.openai.com/blog/eval-skills"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://developers.openai.com/blog/eval-skills",
@@ -15269,7 +15269,7 @@
       "hrefs": [
         "https://www.thoughtworks.com/radar/tools/mattpocock-skills"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.thoughtworks.com/radar/tools/mattpocock-skills",
@@ -15299,7 +15299,7 @@
       "hrefs": [
         "https://www.thoughtworks.com/radar/techniques/agent-skill-cognitive-surrender"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://www.thoughtworks.com/radar/techniques/agent-skill-cognitive-surrender",
@@ -15329,7 +15329,7 @@
       "hrefs": [
         "https://x.com/BiosRiosz/status/2098722174886424588"
       ],
-      "checked_on": "2026-11-16",
+      "checked_on": "2026-11-17",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://x.com/BiosRiosz/status/2098722174886424588",

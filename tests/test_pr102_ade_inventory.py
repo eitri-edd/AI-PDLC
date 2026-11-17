@@ -88,11 +88,11 @@ class ADEInventoryTests(unittest.TestCase):
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
         baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        # Digests advanced by the daily reference check on 16 November 2026,
+        # Digests advanced by the daily reference check on 17 November 2026,
         # which legitimately advances page_passes dates and per-entry
         # checked_on/http_status/final_url/method. History, claim_reviews,
         # source_entries and evidence_digests are unchanged by that pass.
-        self.assertEqual(digest, '51c72528cda9611de6a0b0bb1c507139969a1332e8af6f4079adb8f8b3d7f0be')
+        self.assertEqual(digest, 'e9fe8787cb9e4d5897dbbbf1a497775b8e1c5218e5cc993a3845d200183b35c1')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -106,7 +106,7 @@ class ADEInventoryTests(unittest.TestCase):
         metadata['https://orca.dev/docs/model/worktrees']['source_entries'].remove(
             {'file': 'tech-scan-agents.html', 'id': 'source-37'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        self.assertEqual(actual, '49bde0913caa99c21c0ad6c9cf37183bbbe69c98ff017bf28cb0bb867e5c1966')
+        self.assertEqual(actual, '34da0fff590e9c1b46e3aa133bd5530b9e80f512bf2586df8d0a4e25b6eb1740')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:
