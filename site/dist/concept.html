@@ -351,6 +351,39 @@
           <h2>Check the work (verification engineering)</h2>
           <p>Verification engineering means designing the work and its checks so correctness can be established cheaply and independently of whoever produced it. As used here, it is not the hardware or reinforcement-learning sense of verification. An agent can produce a plausible change quickly; the team still needs a check that would catch the wrong result.</p>
           <p>Use it when a change carries real risk, when several agent attempts depend on feedback, or when an AI reviewer is involved. The goal is not more testing everywhere; it is a check strength that fits the risk.</p>
+          <figure class="concept-figure" id="fig-verification-concept" data-diagram="static">
+            <figcaption>Verification engineering: from an agreed rule to evidence and a decision, with correction and recheck when needed.</figcaption>
+            <details class="figure-reading"><summary>Read as text: verification and correction</summary>
+              <ol>
+                <li>Agree the rule from the acceptance criteria.</li>
+                <li>Design independent checks and expected results against that rule; review the checks themselves.</li>
+                <li>Exercise the candidate using those checks.</li>
+                <li>Review evidence and decide the next action. If a check fails, investigate and correct the candidate, then recheck it. Escalate uncertainty or a blocked check.</li>
+              </ol>
+              <p>Checks provide evidence about what they exercise, not proof of every behaviour. Automated review does not replace the required human approval.</p>
+            </details>
+            <details class="diagram-detail" open><summary>Diagram <span class="diagram-hint">— expand for the detailed view</span></summary>
+              <div class="figure-scroll" tabindex="0" role="region" aria-label="Verification engineering diagram; scroll horizontally if needed">
+                <svg viewBox="0 0 880 300" role="img" aria-labelledby="verification-concept-title" aria-describedby="verification-concept-desc">
+                  <title id="verification-concept-title">Verification engineering and correction</title>
+                  <desc id="verification-concept-desc">Agree the rule, design independent checks, exercise the candidate, and review evidence to decide the next action. A failed check can lead to correction and rechecking. Checks are evidence, not proof of every behaviour; required human approval remains.</desc>
+                  <defs><marker id="verification-concept-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#64748b"/></marker></defs>
+                  <path class="d-line" data-from="rule" data-to="checks" d="M200 80 L240 80" marker-end="url(#verification-concept-arrow)"/>
+                  <path class="d-line" data-from="checks" data-to="exercise" d="M420 80 L460 80" marker-end="url(#verification-concept-arrow)"/>
+                  <path class="d-line" data-from="exercise" data-to="review" d="M640 80 L680 80" marker-end="url(#verification-concept-arrow)"/>
+                  <path class="d-line" data-from="review" data-to="correct" d="M770 120 L770 240 L640 240" marker-end="url(#verification-concept-arrow)"/>
+                  <path class="d-line" data-from="correct" data-to="exercise" d="M550 200 L550 120" marker-end="url(#verification-concept-arrow)"/>
+                  <rect class="d-node" data-node="rule" x="20" y="40" width="180" height="80" rx="8"/><text class="d-title" x="110" y="73" text-anchor="middle">Agree the rule</text><text class="d-sub" x="110" y="96" text-anchor="middle">acceptance criteria</text>
+                  <rect class="d-node" data-node="checks" x="240" y="40" width="180" height="80" rx="8"/><text class="d-title" x="330" y="73" text-anchor="middle">Design checks</text><text class="d-sub" x="330" y="96" text-anchor="middle">independent expectations</text>
+                  <rect class="d-node" data-node="exercise" x="460" y="40" width="180" height="80" rx="8"/><text class="d-title" x="550" y="73" text-anchor="middle">Exercise candidate</text><text class="d-sub" x="550" y="96" text-anchor="middle">run the checks</text>
+                  <rect class="d-node" data-node="review" x="680" y="40" width="180" height="80" rx="8"/><text class="d-title" x="770" y="73" text-anchor="middle">Review evidence</text><text class="d-sub" x="770" y="96" text-anchor="middle">decide next action</text>
+                  <rect class="d-node" data-node="correct" x="460" y="200" width="180" height="80" rx="8"/><text class="d-title" x="550" y="233" text-anchor="middle">Investigate and correct</text><text class="d-sub" x="550" y="256" text-anchor="middle">then recheck</text>
+                  <text class="d-sub" x="700" y="220" text-anchor="middle">failure</text>
+                </svg>
+              </div>
+              <p class="diagram-key">Arrows show the verification route; the lower path returns a failure for correction and recheck. Escalate uncertainty or blocked checks. Evidence is not proof of every behaviour; required human approval remains.</p>
+            </details>
+          </figure>
           <h3>Choose the strength of the check</h3>
           <p>Start from the acceptance criterion, not from the test the agent happens to write. A check is only as good as the rule it checks.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Check strength for agent-written work; scroll horizontally if needed"><table><caption>Check strength for agent-written work</caption><thead><tr><th scope="col">Check</th><th scope="col">What it establishes</th><th scope="col">Cost and limit</th></tr></thead><tbody>
@@ -364,7 +397,12 @@
           <p>For agent review, the Claude Code team’s account makes the same split: an agent’s approval does not count as a person’s approval, and approval covers the reviewed commit.<a href="#source-44" aria-label="Source 53: Addy Osmani, Morgan Westlee Lunt and Qing Wang, How the Claude Code team does code review">[53]</a> <a href="#source-45" aria-label="Source 54: Addy Osmani, How the Claude Code team does code review">[54]</a></p>
           <aside class="example learning-example" aria-label="Fictional example: make the handover rule checkable">
             <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Make the concurrency rule checkable</span><span class="learning-benefit">See why one passing example is not enough for a handover rule.</span></span></div>
-            <p>In Maya’s asset-management application, an example test can pass one acknowledgement sequence while two simultaneous acknowledgements still leave two current holders. The team states the rule as a property: for any sequence of handover acknowledgements, each asset has at most one current holder and saved declarations remain visible. Generated cases search for a counterexample; the reviewer checks the property itself before trusting a pass. The retry criterion in <a href="product-implementation.html#example-annual-workflow">Product Implementation</a> is already such a rule.</p>
+            <p><strong>Task:</strong> Check an agent’s change to transfer requests in Maya’s asset-management application. <strong>Situation:</strong> Two people could request the same laptop for different recipients at nearly the same time; a single passing request does not test that collision.</p>
+            <p><strong>Rule:</strong> The application allows at most one pending transfer per asset. While one is pending, a second request for that asset is rejected with an appropriate response. A request for another asset may proceed, and a new request for the original asset may start after the pending transfer is resolved. A pending request does not change the current holder; the handover completes when the recipient acknowledges it.</p>
+            <p><strong>Output:</strong> The agent proposes a change and tests. <strong>Independent checks:</strong> A reviewer derives the expected results independently from the rule, then uses a test environment to submit two otherwise valid requests for the same asset at the same time: one request is accepted and one is rejected, with only one pending. They also check:</p>
+            <ul><li>requests for separate assets;</li><li>a new request after the pending transfer is resolved;</li><li>the holder changes only when the recipient acknowledges the handover.</li></ul>
+            <p>Generated sequences can search for other counterexamples; a deliberately broken implementation should fail the checks.</p>
+            <p><strong>Decision:</strong> A failure sends the change back for correction; passing checks provide evidence, not proof. A human still reviews the rule and results and decides whether to accept the change. The annual-task retry rule in <a href="product-implementation.html#example-annual-workflow">Product Implementation</a> is a separate example.</p>
           </aside>
           <aside class="ai-help ai-help--inline" id="ai-help-verification" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Ask AI to draft property cases from the accepted rule, then have a reviewer check the rule, generator ranges and failing counterexample. Keep the independently derived expected result with the change.</p></aside>
           <p class="next-step"><strong>Next step:</strong> choose one change your team is making and decide which check strength its acceptance criteria need. Then read <a href="tech-scan-verification.html#independence">the Verification Tech Scan page</a> for credible-check detail and <a href="product-implementation.html#gates-and-assurance">Product Implementation’s independent review route</a>.</p>
