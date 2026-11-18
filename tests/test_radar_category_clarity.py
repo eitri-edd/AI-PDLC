@@ -20,15 +20,15 @@ CATEGORIES = {
 
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
-    'models-access': 'db946f14745258452ab6461e2921e3f4430ba63824e02d4280ed2a3bd6ac6470',
-    'gateways': '2b6e8f0418a651c81696cde341c090b11122921e8479b6c45302c56e18dcef1f',
+    'models-access': 'dbe407f53646276972a244a664bcb7de8a11993deaf9553684b78f06f2bc935e',
+    'gateways': '7740fe80eae4b75b8bba48729dde5dc2f7778fa8cd196e515736eb687d4271e4',
     'context-memory': 'eb84382835a2273eafb1eeabf9705d19a391b73a4f8af9b2e007fcfefc9863b6',
-    'harness-frameworks': 'c8f76c97e8234042506b1cd2d3a104eb89bd3b8eeab7108b6d91e331ea7854e6',
+    'harness-frameworks': '34e1d8f3460b17af03c30c0c57ae7fe6afc1ce4dacdd79994caf7a11ce28a40b',
     'agentic-development-environments': 'df0f89c2d5b981e7093b1e9e04c37bd61541a92bea117f1c13a157a65afd3a97',
     'verification': '2ca114ac9fc6e2d17417b911c5474ea46d42bc506ead8c199c5b4ad21abad2b0',
     'sandbox': '72b979083d7c899410f9f1d31d6335a52d4ebf10000c686550bfdec4db9c4512',
-    'software-factories': '8c248dd2314e595a4e826c411e253d5b732aa9eea5ea2bf31a1ba7ebc09cb7a1',
-    'skill-packs': 'f728a5873da244ec263220dc67ef7917d8dbe9a99bb56ba5c5167910d4993c5e',
+    'software-factories': 'ac9e4fed18a557c6e6d5b502bb76501b095dd65355120ed158df9f489438ac73',
+    'skill-packs': 'd3182c10dc28d89f3df09b176e05eea7dbcee8da7bf8fdda7b698815fd2610d9',
 }
 
 
