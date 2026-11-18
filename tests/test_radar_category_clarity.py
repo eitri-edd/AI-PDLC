@@ -26,9 +26,9 @@ TABLE_DIGESTS = {
     'harness-frameworks': '34e1d8f3460b17af03c30c0c57ae7fe6afc1ce4dacdd79994caf7a11ce28a40b',
     'agentic-development-environments': 'df0f89c2d5b981e7093b1e9e04c37bd61541a92bea117f1c13a157a65afd3a97',
     'verification': '2ca114ac9fc6e2d17417b911c5474ea46d42bc506ead8c199c5b4ad21abad2b0',
-    'sandbox': '72b979083d7c899410f9f1d31d6335a52d4ebf10000c686550bfdec4db9c4512',
+    'sandbox': '41bb3b17fdc4f386b32d676a8a048b25980bfd652ea0bd09e3991906b07855d5',
     'software-factories': 'ac9e4fed18a557c6e6d5b502bb76501b095dd65355120ed158df9f489438ac73',
-    'skill-packs': 'd3182c10dc28d89f3df09b176e05eea7dbcee8da7bf8fdda7b698815fd2610d9',
+    'skill-packs': '20852c303149043ba29db05ed8ffa554e9c4622c4a8ee06f7a6c946ebb5cb28b',
 }
 
 
