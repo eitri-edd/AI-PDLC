@@ -116,6 +116,14 @@ class RadarCategoryClarityTests(unittest.TestCase):
                 self.assertTrue(section['table'])
                 self.assertEqual(section['rows'], count + 1)  # header plus products
 
+    def test_introductions_are_concise_and_avoid_prescribing_a_product_choice(self):
+        for ident, section in self.doc.sections.items():
+            with self.subTest(category=ident):
+                text = prose(section)
+                self.assertLessEqual(len(text.split()), 60, 'avoid an overly long category introduction')
+                self.assertNotRegex(text, r'\bconsider (?:a|an|the|using)\b',
+                                    'describe the category rather than prescribe a choice')
+
     def test_product_tables_are_preserved(self):
         for ident, expected in TABLE_DIGESTS.items():
             with self.subTest(category=ident):
@@ -157,7 +165,7 @@ class RadarCategoryClarityTests(unittest.TestCase):
         self.assert_concepts('verification', r'\b(check\w*|verif\w*|evaluat\w*)\b',
                              r'\b(code|software)\b', r'\b(agent|model|ai)\b')
         text = prose(self.doc.sections['verification'])
-        self.assertIn('for agent-produced work, use checks independent of its author', text)
+        self.assertRegex(text, r'for agent-produced work, use checks independent of (its author|the producing agent)')
 
     def test_sandbox_does_not_equate_isolation_with_access_controls(self):
         self.assert_concepts('sandbox', r'\b(isolat\w*|bound\w*)\b',
