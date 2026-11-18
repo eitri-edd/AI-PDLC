@@ -27,7 +27,7 @@ class Issue122InventoryTests(unittest.TestCase):
                 self.assertEqual(record['files'], [page])
                 self.assertEqual(record['hrefs'], [url])
                 self.assertEqual(record['source_entries'], [{'file': page, 'id': source}])
-                self.assertEqual(record['checked_on'], '2026-11-17')
+                self.assertEqual(record['checked_on'], '2026-11-18')
                 self.assertTrue(record['method'])
                 self.assertTrue(record['result'])
                 self.assertEqual(len(record['claim_reviews']), 1)
