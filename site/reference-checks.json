@@ -1,12 +1,12 @@
 {
   "checked_on": "2026-11-18",
-  "scope": "Daily maintenance verification on 2026-11-18 found 451 distinct external hrefs and no broken destination; targeted issue-133 source additions were checked on 2026-11-19.",
+  "scope": "Daily maintenance verification on 2026-11-18 covered the site; targeted issue-133 and issue-131 source additions were checked on 2026-11-19.",
   "reviewed_base": "a1ec3e974fc7a22e6d51548cc33feca3b14a8538",
   "original_unique_urls": 100,
-  "current_unique_urls": 482,
-  "current_unique_hrefs": 488,
+  "current_unique_urls": 490,
+  "current_unique_hrefs": 496,
   "counts": {
-    "retrieved": 466,
+    "retrieved": 474,
     "retrieved_pdf_text": 3,
     "dynamic_page_no_text": 5,
     "expected_preconnect_root_response": 2,
@@ -18450,6 +18450,238 @@
         {
           "file": "tech-radar.html",
           "id": "source-87"
+        }
+      ]
+    },
+    {
+      "url": "https://www.verasight.io/reports/ai-moderated-interviews-vs-survey-open-ends",
+      "files": [
+        "product-discovery.html"
+      ],
+      "hrefs": [
+        "https://www.verasight.io/reports/ai-moderated-interviews-vs-survey-open-ends"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.verasight.io/reports/ai-moderated-interviews-vs-survey-open-ends",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "product-discovery.html",
+          "outcome": "supported",
+          "scope": "Verasight, Depth at a Cost: A Randomized Comparison of AI-Moderated Interviews and Written Survey Open-Ends. Randomised n=3,160 comparison: AI interviews gave richer answers but 40.5% completion versus 99.4% for written questions, with non-random drop-out. Used in AI-moderated interviews.",
+          "evidence_summary": "Targeted issue-131 check on 2026-11-19 returned HTTP 200; the page records the claim and its vendor/research limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "product-discovery.html",
+          "id": "source-22"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2411.10109",
+      "files": [
+        "product-discovery.html"
+      ],
+      "hrefs": [
+        "https://arxiv.org/abs/2411.10109"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://arxiv.org/abs/2411.10109",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "product-discovery.html",
+          "outcome": "supported",
+          "scope": "Park, Zou et al., AI Simulations Grounded in Rich Self-Reports Increase Accuracy and Reduce Distortion. Interview-grounded simulations are more accurate than demographic-prompt simulations but less consistent than real respondents. Used in limits of synthetic users.",
+          "evidence_summary": "Targeted issue-131 check on 2026-11-19 returned HTTP 200; the page records the claim and its vendor/research limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "product-discovery.html",
+          "id": "source-23"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nature.com/articles/s41586-026-10742-x",
+      "files": [
+        "product-discovery.html"
+      ],
+      "hrefs": [
+        "https://www.nature.com/articles/s41586-026-10742-x"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.nature.com/articles/s41586-026-10742-x",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "product-discovery.html",
+          "outcome": "supported",
+          "scope": "Ashokkumar, Hewitt, Ghezae and Willer, Large language models can predict the results of social science experiments. LLM forecasts of social-science experiments get direction right but systematically overestimate effect sizes. Used in limits of synthetic users.",
+          "evidence_summary": "Targeted issue-131 check on 2026-11-19 returned HTTP 200; the page records the claim and its vendor/research limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "product-discovery.html",
+          "id": "source-24"
+        }
+      ]
+    },
+    {
+      "url": "https://www.svpg.com/ai-and-the-future-of-the-product-role/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "hrefs": [
+        "https://www.svpg.com/ai-and-the-future-of-the-product-role/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.svpg.com/ai-and-the-future-of-the-product-role/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "product-discovery.html",
+          "outcome": "supported",
+          "scope": "Marty Cagan, SVPG, AI and the Future of the Product Role. Cagan argues delivery coordination is shrinking as agents automate delivery and discovery judgement is the bottleneck. Used in why discovery matters now.",
+          "evidence_summary": "Targeted issue-131 check on 2026-11-19 returned HTTP 200; the page records the claim and its vendor/research limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "product-discovery.html",
+          "id": "source-25"
+        }
+      ]
+    },
+    {
+      "url": "https://www.atlassian.com/software/jira/product-discovery/resources/state-of-product-2027",
+      "files": [
+        "product-discovery.html"
+      ],
+      "hrefs": [
+        "https://www.atlassian.com/software/jira/product-discovery/resources/state-of-product-2027"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.atlassian.com/software/jira/product-discovery/resources/state-of-product-2027",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "product-discovery.html",
+          "outcome": "supported",
+          "scope": "Atlassian, State of Product 2027: AI and What’s Next. Vendor survey of 1,000 product professionals: AI speeds shipping but customers do not get value sooner and decisions have not sped up. Used in why discovery matters now; metric ladder.",
+          "evidence_summary": "Targeted issue-131 check on 2026-11-19 returned HTTP 200; the page records the claim and its vendor/research limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "product-discovery.html",
+          "id": "source-26"
+        }
+      ]
+    },
+    {
+      "url": "https://www.surveypractice.org/article/171999-vocal-vs-typed-responses-in-ai-moderated-interviews-a-comparative-study-of-data-quality-disclosure-and-participant-experience",
+      "files": [
+        "product-discovery.html"
+      ],
+      "hrefs": [
+        "https://www.surveypractice.org/article/171999-vocal-vs-typed-responses-in-ai-moderated-interviews-a-comparative-study-of-data-quality-disclosure-and-participant-experience"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.surveypractice.org/article/171999-vocal-vs-typed-responses-in-ai-moderated-interviews-a-comparative-study-of-data-quality-disclosure-and-participant-experience",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "product-discovery.html",
+          "outcome": "supported",
+          "scope": "Veronica Valli, Vocal vs. typed responses in AI-Moderated Interviews. 252 AI-moderated interviews: voice answers were longer and yielded more thematic codes, while a majority still preferred text for comfort/privacy. Used in AI-moderated interview modality.",
+          "evidence_summary": "Targeted issue-131 check on 2026-11-19 returned HTTP 200; the page records the claim and its vendor/research limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "product-discovery.html",
+          "id": "source-27"
+        }
+      ]
+    },
+    {
+      "url": "https://www.producttalk.org/4-new-evals-and-16-experiment-variants/",
+      "files": [
+        "product-discovery.html"
+      ],
+      "hrefs": [
+        "https://www.producttalk.org/4-new-evals-and-16-experiment-variants/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.producttalk.org/4-new-evals-and-16-experiment-variants/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "product-discovery.html",
+          "outcome": "supported",
+          "scope": "Teresa Torres, Product Talk, 4 New Evals and 16 Experiment Variants to Fix 1 Customer Complaint. Torres describes errors in interview summaries propagating through an AI-built opportunity solution tree and the eval/experiment rework needed. Used in AI-built opportunity solution trees.",
+          "evidence_summary": "Targeted issue-131 check on 2026-11-19 returned HTTP 200; the page records the claim and its vendor/research limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "product-discovery.html",
+          "id": "source-28"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/krishnabhat/continuous-discovery-skills",
+      "files": [
+        "product-discovery.html"
+      ],
+      "hrefs": [
+        "https://github.com/krishnabhat/continuous-discovery-skills"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/krishnabhat/continuous-discovery-skills",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "product-discovery.html",
+          "outcome": "supported",
+          "scope": "krishnabhat, continuous-discovery-skills. Open-source continuous discovery skills count supporting sources and flag dependent sources; compliments/future intentions are not evidence. Used in independence of sources.",
+          "evidence_summary": "Targeted issue-131 check on 2026-11-19 returned HTTP 200; the page records the claim and its vendor/research limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "product-discovery.html",
+          "id": "source-29"
         }
       ]
     }
