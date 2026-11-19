@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-18",
-  "scope": "Daily maintenance verification on 2026-11-18 covered the site; targeted issue-133 and issue-131 source additions were checked on 2026-11-19.",
+  "scope": "Daily maintenance verification on 2026-11-18 covered the site; targeted issue-133 and issue-131 source additions were checked on 2026-11-19; issue-136 persistent-agent sources for Concepts were checked on 2026-11-19.",
   "reviewed_base": "a1ec3e974fc7a22e6d51548cc33feca3b14a8538",
   "original_unique_urls": 100,
-  "current_unique_urls": 492,
-  "current_unique_hrefs": 498,
+  "current_unique_urls": 497,
+  "current_unique_hrefs": 503,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
-    "partial_reader_recovery": 5,
-    "retrieved": 476,
+    "partial_reader_recovery": 6,
+    "retrieved": 480,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -17689,7 +17689,8 @@
     {
       "url": "https://devin.ai/blog/introducing-devin-bots",
       "files": [
-        "tech-scan-agents.html"
+        "tech-scan-agents.html",
+        "concept.html"
       ],
       "hrefs": [
         "https://devin.ai/blog/introducing-devin-bots"
@@ -17706,12 +17707,23 @@
           "outcome": "supported",
           "scope": "Cognition, Introducing Devin Bots. Cognition\u2019s 17 November 2026 launch describes persistent Devin Bots that own a goal and lead several Devin sessions; throughput figures are vendor-reported.",
           "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://devin.ai/blog/introducing-devin-bots. The page records the claim and its limits."
+        },
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Cognition, Introducing Devin Bots. A persistent agent owns a goal, retains context, leads several Devin sessions and brings decisions to a person; the example Android Bot merged pull requests that passed CI and Devin Review; the Layout Bot started an unrequested fix after a scheduled check; engineers build the way a Bot evaluates its work. Used in Delegate an ongoing responsibility (persistent agents).",
+          "evidence_summary": "Targeted issue-136 check on 2026-11-19 returned HTTP 200; the page states each claim. Throughput figures are vendor-reported and are not cited on Concepts.",
+          "followup": "issue136"
         }
       ],
       "source_entries": [
         {
           "file": "tech-scan-agents.html",
           "id": "source-49"
+        },
+        {
+          "file": "concept.html",
+          "id": "source-48"
         }
       ]
     },
@@ -18742,6 +18754,188 @@
         {
           "file": "tech-radar.html",
           "id": "source-91"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.devin.ai/work-with-devin/bots",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://docs.devin.ai/work-with-devin/bots"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.devin.ai/work-with-devin/bots",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Cognition, Devin Bots documentation. Child sessions with their own machine; a Bot has its own connections and secrets; Needs you collects decisions and permission requests; automations may need approval; Child Capability sets the mode child sessions inherit; a shared Bot's memory is readable by everyone who can use it.",
+          "evidence_summary": "Targeted issue-136 check on 2026-11-19 returned HTTP 200; the page states each claim."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "2af001787af0ee05e0c373103b1cc3471566a9d3923e6fe36197f4d9472d2c62",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.devin.ai/work-with-devin/bots"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-49"
+        }
+      ]
+    },
+    {
+      "url": "https://openai.com/index/introducing-dots/",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://openai.com/index/introducing-dots/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "partial_reader_recovery",
+      "http_status": 403,
+      "final_url": "https://openai.com/index/introducing-dots/",
+      "method": "direct HTTP GET; partial live reader recovery",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "OpenAI, Introducing dots. Always-on agents with their own cloud computer, reached through ChatGPT, Slack or Teams, working on the owner's behalf; dated 29 September 2026 with a 3 November 2026 update.",
+          "evidence_summary": "Direct GET returned HTTP 403. A reader-service recovery returned the article text, including the 3 November 2026 update note and the cloud computer, channels and on-your-behalf statements.",
+          "limitation": "Direct request returned HTTP 403; the recovered text verifies these statements only, not every claim on the page."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "be8798dd078e5a56996f8c0f8ae8d8a268435b48b4a790249e4fec8f2b54e73a",
+          "format": "readable primary-source text",
+          "source_url": "https://openai.com/index/introducing-dots/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-50"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/dots",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://learn.chatgpt.com/docs/dots"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://learn.chatgpt.com/docs/dots",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "OpenAI, Meet dots. A dot tracks an ongoing responsibility between conversations; uses plugins with the owner's connected accounts and existing permissions; can create Work or Codex tasks; automatic review lets it proceed, asks for approval or hands a step to the owner.",
+          "evidence_summary": "Targeted issue-136 check on 2026-11-19 returned HTTP 200; the page states each claim."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "9314f3e9e00424e26e0d924d3c6a98a7af09b78bdc5ce5c12c3c2e2e6ca23727",
+          "format": "direct HTTP response",
+          "source_url": "https://learn.chatgpt.com/docs/dots"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-51"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.x.ai/grok-bot/computer-and-apps",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://docs.x.ai/grok-bot/computer-and-apps"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.x.ai/grok-bot/computer-and-apps",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "xAI, Use the computer and apps. Every Bot on an account uses the same computer, with shared browser sign-ins and command-line credentials; each Bot's screen is not a separate security boundary.",
+          "evidence_summary": "Targeted issue-136 check on 2026-11-19 returned HTTP 200; the page states each claim."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "1277831f5093c476429f14bddca8d42de4ba4feeaaae95f349389f769292dd79",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.x.ai/grok-bot/computer-and-apps"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-52"
+        }
+      ]
+    },
+    {
+      "url": "https://www.rickblalock.dev/scratch-notes/learnings-from-moving-my-grok-bots-to-devin-bots/",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://www.rickblalock.dev/scratch-notes/learnings-from-moving-my-grok-bots-to-devin-bots/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.rickblalock.dev/scratch-notes/learnings-from-moving-my-grok-bots-to-devin-bots/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Rick Blalock, Learnings from moving my Grok Bots to Devin Bots. One practitioner's beta account: orchestration was the strongest part; the engineering bots kept asking him to review items despite his instructions.",
+          "evidence_summary": "Targeted issue-136 check on 2026-11-19 returned HTTP 200; the page states each claim.",
+          "limitation": "Single practitioner's beta use over a few days; not a controlled comparison."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "bce63cfb91be0fca4e5f15f37063a7e87491abe1c67e46e464814efa9c79d87e",
+          "format": "direct HTTP response",
+          "source_url": "https://www.rickblalock.dev/scratch-notes/learnings-from-moving-my-grok-bots-to-devin-bots/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-53"
         }
       ]
     }

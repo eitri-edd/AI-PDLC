@@ -108,10 +108,20 @@ class ADEInventoryTests(unittest.TestCase):
             'https://github.com/continuedev/continue',
             'https://github.com/cursor/plugins/blob/2f87c854fe3e2fcda44ca86b46ede35aad3c46b7/pstack/.cursor-plugin/plugin.json',
         }
+        # Issue 136: the Concepts persistent-agent sources are a targeted
+        # addition; the Devin Bots announcement's new Concepts review is
+        # tagged followup 'issue136' and excluded below.
+        new_urls |= {
+            'https://docs.devin.ai/work-with-devin/bots',
+            'https://openai.com/index/introducing-dots/',
+            'https://learn.chatgpt.com/docs/dots',
+            'https://docs.x.ai/grok-bot/computer-and-apps',
+            'https://www.rickblalock.dev/scratch-notes/learnings-from-moving-my-grok-bots-to-devin-bots/',
+        }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews']
-                                           if v.get('followup') != 'pr102' and v.get('file') not in later_pages]
+                                           if v.get('followup') not in {'pr102', 'issue136'} and v.get('file') not in later_pages]
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
         baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
@@ -143,6 +153,8 @@ class ADEInventoryTests(unittest.TestCase):
             sandbox['source_entries'].remove(entry)
         metadata['https://orca.dev/docs/model/worktrees']['source_entries'].remove(
             {'file': 'tech-scan-agents.html', 'id': 'source-37'})
+        metadata['https://devin.ai/blog/introducing-devin-bots']['source_entries'].remove(
+            {'file': 'concept.html', 'id': 'source-48'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
         self.assertEqual(actual, '4e66c8c395e0373fa8ce23542e985fb98df7fea571a065f810a853b9b439c9d2')
 
