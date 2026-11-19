@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-18",
-  "scope": "Daily maintenance verification on 2026-11-18 covered the site; targeted issue-133 and issue-131 source additions were checked on 2026-11-19; issue-136 persistent-agent sources for Concepts were checked on 2026-11-19. Issue-136 persistent-agent types for Tech Scan agents and the Tech Radar persistent-agents category were checked on 2026-11-19.",
+  "scope": "Daily maintenance verification on 2026-11-18 covered the site; targeted issue-133 and issue-131 source additions were checked on 2026-11-19; issue-136 persistent-agent sources for Concepts were checked on 2026-11-19. Issue-136 persistent-agent types for Tech Scan agents and the Tech Radar persistent-agents category were checked on 2026-11-19. Issue-136 follow-up: Muse, Cue by Manus and OpenClaw persistent-agent sources were checked on 2026-11-19.",
   "reviewed_base": "a1ec3e974fc7a22e6d51548cc33feca3b14a8538",
   "original_unique_urls": 100,
-  "current_unique_urls": 501,
-  "current_unique_hrefs": 507,
+  "current_unique_urls": 509,
+  "current_unique_hrefs": 515,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 484,
+    "retrieved": 492,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -19254,6 +19254,378 @@
         {
           "file": "tech-radar.html",
           "id": "source-95"
+        }
+      ]
+    },
+    {
+      "url": "https://muse.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://muse.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://muse.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Muse uses one dedicated Secure VM per user, stores connector OAuth tokens in that VM, keeps the agent from seeing real credentials, and runs a separate Sentinel permission authority for connectors and network egress.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "be1d29e2c8209a7486a5e792e8b60e75275960a05728150fc539ffc4e86db3c3",
+          "format": "direct HTTP response",
+          "source_url": "https://muse.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-58"
+        }
+      ]
+    },
+    {
+      "url": "https://muse.ai/blog/how-we-designed-muse",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://muse.ai/blog/how-we-designed-muse"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://muse.ai/blog/how-we-designed-muse",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Muse continues working toward goals on a schedule and in response to relevant events and surfaces a result only when something is meaningfully new or needs input.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Muse continues working toward goals on a schedule and in response to relevant events and surfaces a result only when something is meaningfully new or needs input.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "b3a1221341f0a3f20a4e0ed9d1bfd40bc225a53b242a70edfe010cb715fa43e0",
+          "format": "direct HTTP response",
+          "source_url": "https://muse.ai/blog/how-we-designed-muse"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-59"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-104"
+        }
+      ]
+    },
+    {
+      "url": "https://muse.ai/",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://muse.ai/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://muse.ai/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Each Muse user shares one Secure VM with their Muse, and users can intervene at any point.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Each Muse user shares one Secure VM with their Muse, and users can intervene at any point.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "f9d5d956b27d6c1b52f01099b5b70cb68a55c9a6a859517dbd916e0d5d54a003",
+          "format": "direct HTTP response",
+          "source_url": "https://muse.ai/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-60"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-105"
+        }
+      ]
+    },
+    {
+      "url": "https://manus.im/blog/introducing-manus-2-0",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://manus.im/blog/introducing-manus-2-0"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://manus.im/blog/introducing-manus-2-0",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Manus 2.0 introduces Automations that start work when a signal happens in a connected service, and a Cue app whose agents each have their own email, phone number, wallet and computer.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Manus 2.0 introduces Automations that start work when a signal happens in a connected service, and a Cue app whose agents each have their own email, phone number, wallet and computer.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "e5e6bb860fffce28577f93e1ad3e9091a5f0876588e39524e6825cd27b6ce28e",
+          "format": "direct HTTP response",
+          "source_url": "https://manus.im/blog/introducing-manus-2-0"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-61"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-103"
+        }
+      ]
+    },
+    {
+      "url": "https://help.manus.im/en/articles/17190150-what-is-new-in-manus-2-0",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://help.manus.im/en/articles/17190150-what-is-new-in-manus-2-0"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://help.manus.im/en/articles/17190150-what-is-new-in-manus-2-0",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Cue agents can pass work to each other in a group chat with a shared goal; the user sets direction and makes the final call.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "f10bc2624522e1b98f7b48b9702e5d737a963dad3a2274f9b9579691a03f4632",
+          "format": "direct HTTP response",
+          "source_url": "https://help.manus.im/en/articles/17190150-what-is-new-in-manus-2-0"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-62"
+        }
+      ]
+    },
+    {
+      "url": "https://apps.apple.com/us/app/cue-by-manus/id6808613358",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://apps.apple.com/us/app/cue-by-manus/id6808613358"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://apps.apple.com/us/app/cue-by-manus/id6808613358",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Cue agents have their own identity, can complete purchases and payments with approval within a budget, connect authorised apps, and run automations on a schedule or in response to supported events.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "The Cue by Manus App Store listing: per-agent identity, budgets for purchases, authorised apps, Memory and Dream, and automations on a schedule or in response to events.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "adfeb2b0fdca76401de136c3c251726a279ea6c5d861493f0058e23b66c4edc1",
+          "format": "direct HTTP response",
+          "source_url": "https://apps.apple.com/us/app/cue-by-manus/id6808613358"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-63"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-102"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.openclaw.ai/gateway/security",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.openclaw.ai/gateway/security"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.openclaw.ai/gateway/security",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "OpenClaw states that one gateway supports one trust boundary, for a single operator or a team whose members trust each other, and is not a hostile multi-tenant boundary for adversarial users sharing one gateway.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "OpenClaw states that one gateway supports one trust boundary, for a single operator or a team whose members trust each other, and is not a hostile multi-tenant boundary for adversarial users sharing one gateway.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "ae857a7fe4a4ec43a32b950ffb3c6201fa90dda49ba3c0bd438f5b6fb43f017e",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.openclaw.ai/gateway/security"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-64"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-106"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/openclaw/openclaw",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/openclaw/openclaw"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/openclaw/openclaw",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "The OpenClaw repository is MIT-licensed and describes one gateway running as a personal claw or a shared multiplayer claw.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "The OpenClaw repository is MIT-licensed and describes one gateway running as a personal claw or a shared multiplayer claw.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "0934fb5e6aafec2d092af7632fed157a5c79f6d7a77462256d393e229415fb46",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/openclaw/openclaw"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-65"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-102"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-107"
         }
       ]
     }

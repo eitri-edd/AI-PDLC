@@ -126,6 +126,17 @@ class ADEInventoryTests(unittest.TestCase):
             'https://docs.x.ai/grok-bot/team-bots',
             'https://kiro.dev/docs/crew/',
         }
+        # Issue 136 follow-up: Muse, Cue by Manus and OpenClaw sources.
+        new_urls |= {
+            'https://muse.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse',
+            'https://muse.ai/blog/how-we-designed-muse',
+            'https://muse.ai/',
+            'https://manus.im/blog/introducing-manus-2-0',
+            'https://help.manus.im/en/articles/17190150-what-is-new-in-manus-2-0',
+            'https://apps.apple.com/us/app/cue-by-manus/id6808613358',
+            'https://docs.openclaw.ai/gateway/security',
+            'https://github.com/openclaw/openclaw',
+        }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews']
