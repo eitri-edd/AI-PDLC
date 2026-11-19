@@ -18333,13 +18333,13 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "CISA, Known Exploited Vulnerabilities catalogue. CISA\u2019s KEV JSON feed records three LiteLLM CVEs exploited in 2026: CVE-2026-42208, CVE-2026-42271 and CVE-2026-59822.",
+          "scope": "CISA, Known Exploited Vulnerabilities catalogue. CISA\u2019s KEV JSON feed records four LiteLLM CVEs exploited in 2026: CVE-2026-42208, CVE-2026-42271, CVE-2026-59822 and CVE-2026-40217.",
           "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json. The page records the claim and its limits."
         },
         {
           "file": "tech-scan-gateway.html",
           "outcome": "supported",
-          "scope": "CISA, Known Exploited Vulnerabilities catalogue. CISA\u2019s KEV JSON feed records three LiteLLM CVEs exploited in 2026: CVE-2026-42208, CVE-2026-42271 and CVE-2026-59822.",
+          "scope": "CISA, Known Exploited Vulnerabilities catalogue. CISA\u2019s KEV JSON feed records four LiteLLM CVEs exploited in 2026: CVE-2026-42208, CVE-2026-42271, CVE-2026-59822 and CVE-2026-40217.",
           "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json. The page records the claim and its limits."
         }
       ],

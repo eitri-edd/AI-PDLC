@@ -124,7 +124,10 @@ class ADEInventoryTests(unittest.TestCase):
         # inherited digests for gateway, harness, agents, workflows and sandbox sources.
         # Issue 131 review: targeted discovery-evidence additions advance the
         # inherited digest for product-discovery sources.
-        self.assertEqual(digest, 'db9a0eb4b4fabf45711a6f1dccc9eaf5fd468a6d94c43bf466c9737673174ea0')
+        # Issue 137 fix: the KEV LiteLLM count moves from three to four
+        # (CVE-2026-40217 added 18 November 2026), so the two KEV
+        # claim_reviews scope strings advance the reviews digest.
+        self.assertEqual(digest, '2a1da8a5dcf3d8ae026350a011447723b13f305feb5c561b60e91b23ce34c42f')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
