@@ -120,7 +120,11 @@ class ADEInventoryTests(unittest.TestCase):
         # checked_on/http_status/final_url/method. The reviews digest moved
         # again the same day when the Lambda MicroVMs x86 date and the
         # CodeGuru Reviewer wording were corrected on the cited pages.
-        self.assertEqual(digest, '41c9559d063cd1c086841491e069c8d36743e7cc8c7a88785effbf5e10f79305')
+        # Issue 133 review: targeted market-research additions advance the
+        # inherited digests for gateway, harness, agents, workflows and sandbox sources.
+        # Issue 131 review: targeted discovery-evidence additions advance the
+        # inherited digest for product-discovery sources.
+        self.assertEqual(digest, 'db9a0eb4b4fabf45711a6f1dccc9eaf5fd468a6d94c43bf466c9737673174ea0')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -137,7 +141,7 @@ class ADEInventoryTests(unittest.TestCase):
         metadata['https://orca.dev/docs/model/worktrees']['source_entries'].remove(
             {'file': 'tech-scan-agents.html', 'id': 'source-37'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        self.assertEqual(actual, 'a6194ef7b7a9759aebf1d2574ac06b3b42a02bc3e4e36df510dc82df2c79b3b4')
+        self.assertEqual(actual, '4e66c8c395e0373fa8ce23542e985fb98df7fea571a065f810a853b9b439c9d2')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:

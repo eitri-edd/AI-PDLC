@@ -296,6 +296,7 @@
             <p>The initial research named Firecracker with firecracker-containerd, Kata Containers, gVisor (runsc) and Bottlerocket OS.<a href="#source-13" aria-label="Source 13: GitHub issue 54, Tech Scan proposal and deep-research update">[13]</a> Separate a VM runtime from an application kernel and a hardened host OS; they solve different parts of the problem. gVisor documents its application-kernel boundary and residual limits directly.<a href="#source-19" aria-label="Source 19: gVisor, Architecture guide: Introduction">[19]</a></p>
             <p>Check each project's current licence, supported host and syscall or device requirements. Do not infer Kata compatibility from general EC2 nested-virtualisation availability, or classify a host OS as a per-task execution boundary.</p>
           </details>
+<p><strong>Firecracker snapshot restore.</strong> If you build the execution layer directly and restore snapshots with the File memory backend and a balloon or virtio-mem device, run Firecracker 1.16.2, 1.17.0 or later (CVE-2026-122192). AWS states its own services, including Lambda, are not affected. Ask a self-hosted E2B deployment which Firecracker version it runs. <a href="#source-29" aria-label="Source 29: AWS Security Bulletin 2026-169-AWS">[29]</a></p>
         </section>
         <section id="do-not-use">
           <h2>Exclude the wrong execution boundary</h2>
@@ -319,6 +320,7 @@
             <li>Allowed and denied credential access, session separation and permission revocation.</li>
             <li>Timeout, cancellation and cleanup, including files, credentials and any persistent resources left behind.</li>
           </ul>
+<p>For Nitro Sandboxes on EKS, also record capacity and identity limits before relying on the boundary: sandboxes per node are capped at five times the node’s vCPUs; on SMT instances usable compute is about half the advertised vCPUs; instance-metadata credentials are unavailable, so use EKS Pod Identity; per-pod connection and DNS-rate limits apply; and there is no GPU or <code>hostNetwork</code>. <a href="#source-28" aria-label="Source 28: AWS, Considerations for Nitro Sandboxes">[28]</a></p>
           <aside class="callout callout--tip" aria-labelledby="sandbox-boundary-checks">
             <p class="example-label" id="sandbox-boundary-checks">Check before adoption</p>
             <ul class="checklist">
@@ -369,6 +371,8 @@
           <li id="source-25"><a href="https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge">Vercel, Findings from the $1M Vercel Sandbox challenge</a>. Vendor-run October 2026 challenge: upstream Linux-kernel guest-to-host flaw, no demonstrated access to customer data; illustrates isolation limits. Used in <a href="#sandbox-trust-boundaries">Test the boundary</a>.</li>
 <li id="source-26"><a href="https://kiro.dev/docs/sandbox/">Kiro, Local command sandbox</a>. Defines included shell commands, excluded agent and remote tool paths, off-by-default configuration and unavailable-backend behaviour. Used in <a href="#local-command-sandbox">Local coding agents</a>.</li>
             <li id="source-27"><a href="https://aws.amazon.com/about-aws/whats-new/2026/11/aws-lambda-microvms-x86-architecture/">AWS, Lambda MicroVMs now supports the x86 CPU architecture</a>. What's New, 11 November 2026: x86 is available beside Arm (AWS Graviton). Used in <a href="#aws-first-default">Match the AWS starting point to the task</a>.</li>
+<li id="source-28"><a href="https://docs.aws.amazon.com/eks/latest/userguide/sandboxing-limitations.html">AWS, Considerations for Nitro Sandboxes</a>. EKS Nitro Sandboxes considerations document density caps, SMT capacity, blocked IMDS paths, Pod Identity, per-pod connection and DNS limits, and the absence of GPU or hostNetwork. Used in <a href="#gaps">Evidence to collect before relying on the boundary</a>.</li>
+<li id="source-29"><a href="https://aws.amazon.com/security/security-bulletins/2026-169-aws/">AWS Security Bulletin 2026-169-AWS</a>. AWS bulletin for CVE-2026-122192: guest root access to Firecracker process memory after a failed memory discard during snapshot restore; fixed in Firecracker 1.16.2 and 1.17.0, with AWS services such as Lambda not affected. Used in <a href="#research-only">If building the execution layer directly</a>.</li>
 </ol>
         </section>
         <p class="source-ref">Last editorial review: <time datetime="2026-11-12">12 November 2026</time>.</p>

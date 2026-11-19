@@ -21,9 +21,9 @@ CATEGORIES = {
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
     'models-access': 'dbe407f53646276972a244a664bcb7de8a11993deaf9553684b78f06f2bc935e',
-    'gateways': '7740fe80eae4b75b8bba48729dde5dc2f7778fa8cd196e515736eb687d4271e4',
+    'gateways': '810367d21bd72f0c75eb9b27bbd60b0129becf04584f176569e36385382635f5',
     'context-memory': 'eb84382835a2273eafb1eeabf9705d19a391b73a4f8af9b2e007fcfefc9863b6',
-    'harness-frameworks': '34e1d8f3460b17af03c30c0c57ae7fe6afc1ce4dacdd79994caf7a11ce28a40b',
+    'harness-frameworks': 'c0fd92338ebf0bccf0438b627d4377ab99d62d888280e7fb23dddb5d54e375e6',
     'agentic-development-environments': 'df0f89c2d5b981e7093b1e9e04c37bd61541a92bea117f1c13a157a65afd3a97',
     'verification': '2ca114ac9fc6e2d17417b911c5474ea46d42bc506ead8c199c5b4ad21abad2b0',
     'sandbox': '41bb3b17fdc4f386b32d676a8a048b25980bfd652ea0bd09e3991906b07855d5',
