@@ -1,17 +1,17 @@
 {
   "checked_on": "2026-11-18",
-  "scope": "Daily maintenance verification on 2026-11-18 found 451 distinct external hrefs and no broken destination",
+  "scope": "Daily maintenance verification on 2026-11-18 found 451 distinct external hrefs and no broken destination; targeted issue-133 source additions were checked on 2026-11-19.",
   "reviewed_base": "a1ec3e974fc7a22e6d51548cc33feca3b14a8538",
   "original_unique_urls": 100,
-  "current_unique_urls": 451,
-  "current_unique_hrefs": 457,
+  "current_unique_urls": 482,
+  "current_unique_hrefs": 488,
   "counts": {
+    "retrieved": 466,
+    "retrieved_pdf_text": 3,
     "dynamic_page_no_text": 5,
-    "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 5,
-    "retrieved": 435,
-    "retrieved_pdf_text": 3
+    "expected_login_redirect": 1
   },
   "page_passes": {
     "about.html": {
@@ -17363,6 +17363,1093 @@
         {
           "file": "tech-scan-workflows-factories.html",
           "id": "source-25"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "AWS Security Blog, Amazon Threat Intelligence observes threat actors running cybercrime campaigns with ARTEX AI agents. AWS reports threat actors using AI agents in cybercrime campaigns, including activity against exposed LiteLLM proxies; the post does not verify every reported outcome.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "AWS Security Blog, Amazon Threat Intelligence observes threat actors running cybercrime campaigns with ARTEX AI agents. AWS reports threat actors using AI agents in cybercrime campaigns, including activity against exposed LiteLLM proxies; the post does not verify every reported outcome.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-77"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-29"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/security/security-bulletins/2026-169-aws/",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/security/security-bulletins/2026-169-aws/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/security/security-bulletins/2026-169-aws/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS Security Bulletin 2026-169-AWS. AWS bulletin for CVE-2026-122192: guest root access to Firecracker process memory after a failed memory discard during snapshot restore; fixed in Firecracker 1.16.2 and 1.17.0, with AWS services such as Lambda not affected.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://aws.amazon.com/security/security-bulletins/2026-169-aws/. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-29"
+        }
+      ]
+    },
+    {
+      "url": "https://depi.security/blog/20261111-backdooring-codex/",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://depi.security/blog/20261111-backdooring-codex/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://depi.security/blog/20261111-backdooring-codex/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Depi, Backdooring the next release of Codex. Depi’s 11 November 2026 research describes a Codex release-pipeline compromise path; OpenAI’s fix is separately recorded on the Workflows and factories page.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://depi.security/blog/20261111-backdooring-codex/. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Depi, Backdooring the next release of Codex. Depi’s 11 November 2026 research describes a Codex release-pipeline compromise path; OpenAI’s fix is separately recorded on the Workflows and factories page.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://depi.security/blog/20261111-backdooring-codex/. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "Depi, Backdooring the next release of Codex. Depi’s 11 November 2026 research describes prompt injection in a Codex-based issue labeller leading to a sandbox escape, Actions cache poisoning and a path toward npm publishing rights; OpenAI’s fix is separately recorded.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://depi.security/blog/20261111-backdooring-codex/. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-88"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-48"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-26"
+        }
+      ]
+    },
+    {
+      "url": "https://developer.konghq.com/support/security/security-advisory-cve-2026-123041/",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://developer.konghq.com/support/security/security-advisory-cve-2026-123041/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://developer.konghq.com/support/security/security-advisory-cve-2026-123041/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Kong, CVE-2026-123041. Kong advisory for a request-callout cache-key flaw.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://developer.konghq.com/support/security/security-advisory-cve-2026-123041/. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Kong, CVE-2026-123041. Kong advisory for a request-callout cache-key flaw.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://developer.konghq.com/support/security/security-advisory-cve-2026-123041/. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-84"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-35"
+        }
+      ]
+    },
+    {
+      "url": "https://developer.konghq.com/support/security/security-advisory-cve-2026-92439/",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://developer.konghq.com/support/security/security-advisory-cve-2026-92439/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://developer.konghq.com/support/security/security-advisory-cve-2026-92439/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Kong, CVE-2026-92439. Kong advisory for a SAML AudienceRestriction check, fixed in 2.2.1 and 2.3.1.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://developer.konghq.com/support/security/security-advisory-cve-2026-92439/. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Kong, CVE-2026-92439. Kong advisory for a SAML AudienceRestriction check, fixed in 2.2.1 and 2.3.1.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://developer.konghq.com/support/security/security-advisory-cve-2026-92439/. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-86"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-37"
+        }
+      ]
+    },
+    {
+      "url": "https://developer.konghq.com/support/security/security-advisory-cve-2026-92441/",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://developer.konghq.com/support/security/security-advisory-cve-2026-92441/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://developer.konghq.com/support/security/security-advisory-cve-2026-92441/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Kong, CVE-2026-92441. Kong advisory for X-Forwarded-Prefix header injection and request smuggling.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://developer.konghq.com/support/security/security-advisory-cve-2026-92441/. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Kong, CVE-2026-92441. Kong advisory for X-Forwarded-Prefix header injection and request smuggling.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://developer.konghq.com/support/security/security-advisory-cve-2026-92441/. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-83"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-34"
+        }
+      ]
+    },
+    {
+      "url": "https://developer.konghq.com/support/security/security-advisory-cve-2026-92443/",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://developer.konghq.com/support/security/security-advisory-cve-2026-92443/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://developer.konghq.com/support/security/security-advisory-cve-2026-92443/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Kong, CVE-2026-92443. Kong advisory for caching plugins and the Authorization header.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://developer.konghq.com/support/security/security-advisory-cve-2026-92443/. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Kong, CVE-2026-92443. Kong advisory for caching plugins and the Authorization header.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://developer.konghq.com/support/security/security-advisory-cve-2026-92443/. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-85"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-36"
+        }
+      ]
+    },
+    {
+      "url": "https://developer.konghq.com/support/security/security-advisory-cve-2026-92544/",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://developer.konghq.com/support/security/security-advisory-cve-2026-92544/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://developer.konghq.com/support/security/security-advisory-cve-2026-92544/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Kong, CVE-2026-92544. Kong advisory for SQL injection in LLM usage counters, published 10 November 2026.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://developer.konghq.com/support/security/security-advisory-cve-2026-92544/. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Kong, CVE-2026-92544. Kong advisory for SQL injection in LLM usage counters, published 10 November 2026.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://developer.konghq.com/support/security/security-advisory-cve-2026-92544/. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-82"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-33"
+        }
+      ]
+    },
+    {
+      "url": "https://devin.ai/blog/introducing-devin-bots",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://devin.ai/blog/introducing-devin-bots"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://devin.ai/blog/introducing-devin-bots",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Cognition, Introducing Devin Bots. Cognition’s 17 November 2026 launch describes persistent Devin Bots that own a goal and lead several Devin sessions; throughput figures are vendor-reported.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://devin.ai/blog/introducing-devin-bots. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-49"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/eks/latest/userguide/sandboxing-limitations.html",
+      "files": [
+        "tech-scan-sandbox.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/eks/latest/userguide/sandboxing-limitations.html"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/eks/latest/userguide/sandboxing-limitations.html",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "outcome": "supported",
+          "scope": "AWS, Considerations for Nitro Sandboxes. EKS Nitro Sandboxes considerations document density caps, SMT capacity, blocked IMDS paths, Pod Identity, per-pod connection and DNS limits, and the absence of GPU or hostNetwork.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://docs.aws.amazon.com/eks/latest/userguide/sandboxing-limitations.html. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-sandbox.html",
+          "id": "source-28"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.paloaltonetworks.com/prisma-airs/ai-gateway/ai-gateway-overview",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://docs.paloaltonetworks.com/prisma-airs/ai-gateway/ai-gateway-overview"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.paloaltonetworks.com/prisma-airs/ai-gateway/ai-gateway-overview",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Palo Alto Networks, AI Gateway Overview. Prisma AIRS documentation lists the AI Gateway for the Americas region and describes SaaS and hybrid data-plane options.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://docs.paloaltonetworks.com/prisma-airs/ai-gateway/ai-gateway-overview. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Palo Alto Networks, AI Gateway Overview. Prisma AIRS documentation lists the AI Gateway for the Americas region and describes SaaS and hybrid data-plane options.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://docs.paloaltonetworks.com/prisma-airs/ai-gateway/ai-gateway-overview. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-90"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-39"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-2rwg-2wh4-7c4f",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://github.com/BerriAI/litellm/security/advisories/GHSA-2rwg-2wh4-7c4f"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-2rwg-2wh4-7c4f",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "LiteLLM, GHSA-2rwg-2wh4-7c4f. High-severity LiteLLM proxy advisory published 12 November 2026; fixed in 1.106.9, 1.108.6, 1.109.1 and 1.110.0-rc.2.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/BerriAI/litellm/security/advisories/GHSA-2rwg-2wh4-7c4f. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "LiteLLM, GHSA-2rwg-2wh4-7c4f. High-severity LiteLLM proxy advisory published 12 November 2026; fixed in 1.106.9, 1.108.6, 1.109.1 and 1.110.0-rc.2.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/BerriAI/litellm/security/advisories/GHSA-2rwg-2wh4-7c4f. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-78"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-30"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/advisories/GHSA-26wp-42v3-96xp",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/advisories/GHSA-26wp-42v3-96xp"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/advisories/GHSA-26wp-42v3-96xp",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "GitHub Advisory Database, GHSA-26wp-42v3-96xp. Codex CLI approval-bypass advisory CVE-2026-19592, fixed in 0.131.0.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/advisories/GHSA-26wp-42v3-96xp. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "GitHub Advisory Database, GHSA-26wp-42v3-96xp. Codex CLI approval-bypass advisory CVE-2026-19592, fixed in 0.131.0.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/advisories/GHSA-26wp-42v3-96xp. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-47"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-29"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/advisories/GHSA-2FRJ-4QR5-M2RF",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/advisories/GHSA-2FRJ-4QR5-M2RF"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/advisories/GHSA-2FRJ-4QR5-M2RF",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "GitHub Advisory Database, GHSA-2FRJ-4QR5-M2RF. Codex CLI approval-bypass advisory CVE-2026-19591, fixed in 0.131.0.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/advisories/GHSA-2FRJ-4QR5-M2RF. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "GitHub Advisory Database, GHSA-2FRJ-4QR5-M2RF. Codex CLI approval-bypass advisory CVE-2026-19591, fixed in 0.131.0.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/advisories/GHSA-2FRJ-4QR5-M2RF. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-46"
+        },
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-28"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/advisories/GHSA-764m-3ppc-5m73",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://github.com/advisories/GHSA-764m-3ppc-5m73"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/advisories/GHSA-764m-3ppc-5m73",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "GitHub Advisory Database, GHSA-764m-3ppc-5m73. GitHub malware advisory for malicious agent-framework PyPI releases 1.26.1 and 1.26.2.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/advisories/GHSA-764m-3ppc-5m73. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "GitHub Advisory Database, GHSA-764m-3ppc-5m73. GitHub malware advisory for malicious agent-framework PyPI releases 1.26.1 and 1.26.2.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/advisories/GHSA-764m-3ppc-5m73. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-79"
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-35"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/advisories/GHSA-rg7c-g689-fr3x",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://github.com/advisories/GHSA-rg7c-g689-fr3x"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/advisories/GHSA-rg7c-g689-fr3x",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "GitHub Advisory Database, GHSA-rg7c-g689-fr3x. Critical Google ADK code-injection and missing-authentication advisory, fixed in 1.28.1.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/advisories/GHSA-rg7c-g689-fr3x. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-42"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ag2ai/ag2/security/advisories/GHSA-3ccw-g7ph-hrcr",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://github.com/ag2ai/ag2/security/advisories/GHSA-3ccw-g7ph-hrcr"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/ag2ai/ag2/security/advisories/GHSA-3ccw-g7ph-hrcr",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AG2, GHSA-3ccw-g7ph-hrcr. High-severity AG2 Network Hub advisory; the affected 0.13.3–0.14.1 range lists no patched 0.x release.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/ag2ai/ag2/security/advisories/GHSA-3ccw-g7ph-hrcr. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-38"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ag2ai/ag2/security/advisories/GHSA-42mf-vpmr-gw5r",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://github.com/ag2ai/ag2/security/advisories/GHSA-42mf-vpmr-gw5r"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/ag2ai/ag2/security/advisories/GHSA-42mf-vpmr-gw5r",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "AG2, GHSA-42mf-vpmr-gw5r. Critical AG2 command-filter bypass in LocalShellEnvironment via shell=True, fixed in 1.1.2.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/ag2ai/ag2/security/advisories/GHSA-42mf-vpmr-gw5r. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-37"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/security/advisories/GHSA-5xjx-9qx6-jcrv",
+      "files": [
+        "tech-scan-agents.html"
+      ],
+      "hrefs": [
+        "https://github.com/anthropics/claude-code/security/advisories/GHSA-5xjx-9qx6-jcrv"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/anthropics/claude-code/security/advisories/GHSA-5xjx-9qx6-jcrv",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Anthropic, GHSA-5xjx-9qx6-jcrv. Claude Code Edit-tool TOCTOU race, CVE-2026-88968, fixed in 2.1.251.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/anthropics/claude-code/security/advisories/GHSA-5xjx-9qx6-jcrv. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-45"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/security/advisories/GHSA-pq7j-f95f-qfcv",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-scan-ai-workflows.html"
+      ],
+      "hrefs": [
+        "https://github.com/anthropics/claude-code/security/advisories/GHSA-pq7j-f95f-qfcv"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/anthropics/claude-code/security/advisories/GHSA-pq7j-f95f-qfcv",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Anthropic, GHSA-pq7j-f95f-qfcv. Claude Code plugin commit-SHA pin bypass, CVE-2026-86063, fixed in 2.1.179.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/anthropics/claude-code/security/advisories/GHSA-pq7j-f95f-qfcv. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "outcome": "supported",
+          "scope": "Anthropic, GHSA-pq7j-f95f-qfcv. Claude Code plugin commit-SHA pin bypass, CVE-2026-86063, fixed in 2.1.179; a pin is only as good as the installer’s check.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/anthropics/claude-code/security/advisories/GHSA-pq7j-f95f-qfcv. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-44"
+        },
+        {
+          "file": "tech-scan-ai-workflows.html",
+          "id": "source-23"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/langchain-ai/langgraph/security/advisories/GHSA-4hm6-w6qq-w73v",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://github.com/langchain-ai/langgraph/security/advisories/GHSA-4hm6-w6qq-w73v"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/langchain-ai/langgraph/security/advisories/GHSA-4hm6-w6qq-w73v",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "LangChain, GHSA-4hm6-w6qq-w73v. High-severity LangGraph JavaScript custom-authentication advisory; fixed in langgraph-api 0.15.0.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/langchain-ai/langgraph/security/advisories/GHSA-4hm6-w6qq-w73v. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-39"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/openai/codex/pull/60897",
+      "files": [
+        "tech-scan-workflows-factories.html"
+      ],
+      "hrefs": [
+        "https://github.com/openai/codex/pull/60897"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/openai/codex/pull/60897",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "outcome": "supported",
+          "scope": "OpenAI, pull request 60897. OpenAI pull request merged 12 November 2026, “Use the Responses API for issue label suggestions”, the fix described in the Depi write-up.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/openai/codex/pull/60897. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-workflows-factories.html",
+          "id": "source-27"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/vercel/ai/security/advisories/GHSA-4mqq-99j3-3hmv",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://github.com/vercel/ai/security/advisories/GHSA-4mqq-99j3-3hmv"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/vercel/ai/security/advisories/GHSA-4mqq-99j3-3hmv",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "Vercel, GHSA-4mqq-99j3-3hmv. High-severity AI SDK Harness advisory; session resume could expose host credentials to sandboxed code, fixed in @ai-sdk/harness 1.0.133 and adapters.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://github.com/vercel/ai/security/advisories/GHSA-4mqq-99j3-3hmv. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-40"
+        }
+      ]
+    },
+    {
+      "url": "https://kb.cert.org/vuls/id/221883",
+      "files": [
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://kb.cert.org/vuls/id/221883"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://kb.cert.org/vuls/id/221883",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "CERT/CC, VU#221883. CERT/CC vulnerability note for CrewAI SSRF, RCE and local-file-read issues, including CrewAI’s statement that the Code Interpreter tool was removed.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://kb.cert.org/vuls/id/221883. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-41"
+        }
+      ]
+    },
+    {
+      "url": "https://openrouter.ai/blog/announcements/introducing-safety-retention/",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://openrouter.ai/blog/announcements/introducing-safety-retention/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://openrouter.ai/blog/announcements/introducing-safety-retention/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "OpenRouter, Introducing Safety Retention. OpenRouter announcement, 26 October 2026, describing the Safety Retention tier for abuse-prevention storage.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://openrouter.ai/blog/announcements/introducing-safety-retention/. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-31"
+        }
+      ]
+    },
+    {
+      "url": "https://openrouter.ai/docs/guides/features/zdr",
+      "files": [
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://openrouter.ai/docs/guides/features/zdr"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://openrouter.ai/docs/guides/features/zdr",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "OpenRouter, Zero Data Retention. OpenRouter ZDR documentation describes routine-storage exclusion, Google Safety Retention from 18 October 2026 and CSAM screening of ZDR traffic.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://openrouter.ai/docs/guides/features/zdr. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-32"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/agent-framework/json",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-harness.html"
+      ],
+      "hrefs": [
+        "https://pypi.org/pypi/agent-framework/json"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://pypi.org/pypi/agent-framework/json",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "PyPI, agent-framework release data. PyPI release data lists 1.26.0, uploaded 13 November 2026, as the newest release after the malicious versions were removed.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://pypi.org/pypi/agent-framework/json. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "outcome": "supported",
+          "scope": "PyPI, agent-framework release data. PyPI release data lists 1.26.0, uploaded 13 November 2026, as the newest release after the malicious versions were removed.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://pypi.org/pypi/agent-framework/json. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-81"
+        },
+        {
+          "file": "tech-scan-harness.html",
+          "id": "source-36"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "CISA, Known Exploited Vulnerabilities catalogue. CISA’s KEV JSON feed records three LiteLLM CVEs exploited in 2026: CVE-2026-42208, CVE-2026-42271 and CVE-2026-59822.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "CISA, Known Exploited Vulnerabilities catalogue. CISA’s KEV JSON feed records three LiteLLM CVEs exploited in 2026: CVE-2026-42208, CVE-2026-42271 and CVE-2026-59822.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-76"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-28"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ox.security/blog/breaking-hijacked-releases-of-microsofts-official-agent-framework-steals-azure-and-ci-credentials/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.ox.security/blog/breaking-hijacked-releases-of-microsofts-official-agent-framework-steals-azure-and-ci-credentials/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 403,
+      "final_url": "https://www.ox.security/blog/breaking-hijacked-releases-of-microsofts-official-agent-framework-steals-azure-and-ci-credentials/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "OX Security, Hijacked Releases of Microsoft’s Official agent-framework. Security-firm analysis of the hijacked agent-framework releases and the credential-stealing payload.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 403; final URL https://www.ox.security/blog/breaking-hijacked-releases-of-microsofts-official-agent-framework-steals-azure-and-ci-credentials/. The page records the claim and its limits.",
+          "limitation": "Direct fetch returned HTTP 403; the claim is recorded from issue #133’s reviewed evidence rather than a fresh full-text read."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-80"
+        }
+      ]
+    },
+    {
+      "url": "https://www.paloaltonetworks.com/blog/2026/07/announcing-general-availability-of-prisma-airs-ai-gateway/",
+      "files": [
+        "tech-radar.html",
+        "tech-scan-gateway.html"
+      ],
+      "hrefs": [
+        "https://www.paloaltonetworks.com/blog/2026/07/announcing-general-availability-of-prisma-airs-ai-gateway/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.paloaltonetworks.com/blog/2026/07/announcing-general-availability-of-prisma-airs-ai-gateway/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Palo Alto Networks, Announcing the General Availability of Prisma AIRS AI Gateway. Palo Alto Networks announced Prisma AIRS AI Gateway general availability on 16 July 2026 as the hosted successor to Portkey.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://www.paloaltonetworks.com/blog/2026/07/announcing-general-availability-of-prisma-airs-ai-gateway/. The page records the claim and its limits."
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "outcome": "supported",
+          "scope": "Palo Alto Networks, Announcing the General Availability of Prisma AIRS AI Gateway. Palo Alto Networks announced Prisma AIRS AI Gateway general availability on 16 July 2026 as the hosted successor to Portkey.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://www.paloaltonetworks.com/blog/2026/07/announcing-general-availability-of-prisma-airs-ai-gateway/. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-89"
+        },
+        {
+          "file": "tech-scan-gateway.html",
+          "id": "source-38"
+        }
+      ]
+    },
+    {
+      "url": "https://www.thoughtworks.com/radar/tools/openai-codex",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.thoughtworks.com/radar/tools/openai-codex"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.thoughtworks.com/radar/tools/openai-codex",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Thoughtworks, OpenAI Codex. Thoughtworks Technology Radar Vol. 35 places OpenAI Codex in Adopt, November 2026; an informed consultancy opinion, not a test.",
+          "evidence_summary": "Targeted issue-133 check on 2026-11-19 returned HTTP 200; final URL https://www.thoughtworks.com/radar/tools/openai-codex. The page records the claim and its limits."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-87"
         }
       ]
     }
