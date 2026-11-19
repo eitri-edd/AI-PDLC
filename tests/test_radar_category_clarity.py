@@ -12,6 +12,7 @@ CATEGORIES = {
     'context-memory': ('Context and memory', 5),
     'harness-frameworks': ('Harness and agent frameworks', 9),
     'agentic-development-environments': ('Agentic development environments', 1),
+    'persistent-agents': ('Persistent agents', 4),
     'verification': ('Verification', 3),
     'sandbox': ('Sandbox and execution', 4),
     'software-factories': ('Software factories', 10),
@@ -20,6 +21,7 @@ CATEGORIES = {
 
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
+    'persistent-agents': '110aae49949c6584b58353a7f5da1c4cd1f27a8f2c6569c97b083e49cafc9701',
     'models-access': 'dbe407f53646276972a244a664bcb7de8a11993deaf9553684b78f06f2bc935e',
     'gateways': '810367d21bd72f0c75eb9b27bbd60b0129becf04584f176569e36385382635f5',
     'context-memory': 'eb84382835a2273eafb1eeabf9705d19a391b73a4f8af9b2e007fcfefc9863b6',
@@ -161,6 +163,10 @@ class RadarCategoryClarityTests(unittest.TestCase):
         self.assertRegex(text, r'worktree[^.]*\b(not|isn.t|does not)\b[^.]*sandbox')
         self.assertNotIn('a coding client running several worktree sessions is not the same thing', text)
         self.assertRegex(text, r'\b(client|coding agent)\b[^.]*\b(may|can|some)\b')
+
+    def test_persistent_agents_separate_ongoing_ownership_from_access(self):
+        self.assert_concepts('persistent-agents', r'\bongoing\b', r'\bmemory\b',
+                             r'\b(schedule|event)\b', r'\b(identity|secrets?|access)\b')
 
     def test_verification_distinguishes_evaluation_from_code_checks(self):
         self.assert_concepts('verification', r'\b(check\w*|verif\w*|evaluat\w*)\b',

@@ -15,6 +15,7 @@ PRODUCT_NAMES = (
     'AutoGen', 'AG2', 'LangGraph', 'OpenHands', 'CodeGuru', 'Guardrails',
     'Nitro Sandboxes', 'Nitro Enclaves', 'Lambda MicroVMs', 'E2B', 'Daytona', 'Modal', 'Lizard',
     'Copilot', 'Jules', 'CodeCatalyst', 'Aider', 'Superpowers', 'pstack', 'gstack', 'tstack', 'ub-mode',
+    'Devin', 'Kiro', 'dots', 'Grok', 'Cursor',
 )
 # Citations originally attached to product notes, not just bibliography entries.
 SECTION_SOURCES = {
@@ -26,6 +27,7 @@ SECTION_SOURCES = {
     'sandbox': (12, 22, 57, 59, 58, 23, 68),
     'software-factories': (53, 42, 43, 60, 44, 45, 71),
     'skill-packs': (52,),
+    'persistent-agents': (92, 93, 94, 95, 96, 97, 98, 99, 100, 101),
 }
 
 

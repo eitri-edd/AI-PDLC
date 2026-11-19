@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-18",
-  "scope": "Daily maintenance verification on 2026-11-18 covered the site; targeted issue-133 and issue-131 source additions were checked on 2026-11-19; issue-136 persistent-agent sources for Concepts were checked on 2026-11-19.",
+  "scope": "Daily maintenance verification on 2026-11-18 covered the site; targeted issue-133 and issue-131 source additions were checked on 2026-11-19; issue-136 persistent-agent sources for Concepts were checked on 2026-11-19. Issue-136 persistent-agent types for Tech Scan agents and the Tech Radar persistent-agents category were checked on 2026-11-19.",
   "reviewed_base": "a1ec3e974fc7a22e6d51548cc33feca3b14a8538",
   "original_unique_urls": 100,
-  "current_unique_urls": 497,
-  "current_unique_hrefs": 503,
+  "current_unique_urls": 501,
+  "current_unique_hrefs": 507,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 480,
+    "retrieved": 484,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -13606,7 +13606,8 @@
     {
       "url": "https://kiro.dev/docs/crew/bots/how-bots-work/",
       "files": [
-        "tech-scan-agents.html"
+        "tech-scan-agents.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://kiro.dev/docs/crew/bots/how-bots-work/"
@@ -13622,12 +13623,23 @@
           "scope": "Targeted issue #86 explanation and control implication on tech-scan-agents.html (source-33)",
           "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
           "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "A bot conductor delegates to workers that share its memory and workspace; heartbeat and custom schedules wake it; workers inherit its approval mode and new bots start in Trust mode.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
         }
       ],
       "source_entries": [
         {
           "file": "tech-scan-agents.html",
           "id": "source-33"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-94"
         }
       ],
       "evidence_digests": [],
@@ -17690,7 +17702,8 @@
       "url": "https://devin.ai/blog/introducing-devin-bots",
       "files": [
         "tech-scan-agents.html",
-        "concept.html"
+        "concept.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://devin.ai/blog/introducing-devin-bots"
@@ -17714,6 +17727,13 @@
           "scope": "Cognition, Introducing Devin Bots. A persistent agent owns a goal, retains context, leads several Devin sessions and brings decisions to a person; the example Android Bot merged pull requests that passed CI and Devin Review; the Layout Bot started an unrequested fix after a scheduled check; engineers build the way a Bot evaluates its work. Used in Delegate an ongoing responsibility (persistent agents).",
           "evidence_summary": "Targeted issue-136 check on 2026-11-19 returned HTTP 200; the page states each claim. Throughput figures are vendor-reported and are not cited on Concepts.",
           "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Cognition announced Devin Bots on 17 November 2026 as persistent agents that own a goal and lead several Devin sessions.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
         }
       ],
       "source_entries": [
@@ -17724,6 +17744,10 @@
         {
           "file": "concept.html",
           "id": "source-48"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-92"
         }
       ]
     },
@@ -18760,7 +18784,9 @@
     {
       "url": "https://docs.devin.ai/work-with-devin/bots",
       "files": [
-        "concept.html"
+        "concept.html",
+        "tech-scan-agents.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://docs.devin.ai/work-with-devin/bots"
@@ -18777,6 +18803,20 @@
           "outcome": "supported",
           "scope": "Cognition, Devin Bots documentation. Child sessions with their own machine; a Bot has its own connections and secrets; Needs you collects decisions and permission requests; automations may need approval; Child Capability sets the mode child sessions inherit; a shared Bot's memory is readable by everyone who can use it.",
           "evidence_summary": "Targeted issue-136 check on 2026-11-19 returned HTTP 200; the page states each claim."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Bots plan work, start one Devin session per piece, follow sessions up, use automations, raise Needs you approval cards for access, automations, network hosts and usage limits, ask before sharing a sign-in or secret, and share memory with everyone who can use the Bot.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Bots plan work, start one Devin session per piece, follow sessions up, use automations, raise Needs you approval cards for access, automations, network hosts and usage limits, ask before sharing a sign-in or secret, and share memory with everyone who can use the Bot.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
         }
       ],
       "evidence_digests": [
@@ -18790,13 +18830,23 @@
         {
           "file": "concept.html",
           "id": "source-49"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-50"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-93"
         }
       ]
     },
     {
       "url": "https://openai.com/index/introducing-dots/",
       "files": [
-        "concept.html"
+        "concept.html",
+        "tech-scan-agents.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://openai.com/index/introducing-dots/"
@@ -18814,6 +18864,22 @@
           "scope": "OpenAI, Introducing dots. Always-on agents with their own cloud computer, reached through ChatGPT, Slack or Teams, working on the owner's behalf; dated 29 September 2026 with a 3 November 2026 update.",
           "evidence_summary": "Direct GET returned HTTP 403. A reader-service recovery returned the article text, including the 3 November 2026 update note and the cloud computer, channels and on-your-behalf statements.",
           "limitation": "Direct request returned HTTP 403; the recovered text verifies these statements only, not every claim on the page."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "limited",
+          "scope": "Dots have their own cloud computer, use connected apps under existing ChatGPT app controls, start with built-in approval rules plus Custom Rules, and specialist dots with their own identity and credentials are in preview.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136",
+          "limitation": "Direct request returned HTTP 403; the recovered reader text verifies these statements only."
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Dots have their own cloud computer, use connected apps under existing ChatGPT app controls, start with built-in approval rules plus Custom Rules, and specialist dots with their own identity and credentials are in preview.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136",
+          "limitation": "Direct request returned HTTP 403; the recovered reader text verifies these statements only."
         }
       ],
       "evidence_digests": [
@@ -18827,13 +18893,23 @@
         {
           "file": "concept.html",
           "id": "source-50"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-51"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-96"
         }
       ]
     },
     {
       "url": "https://learn.chatgpt.com/docs/dots",
       "files": [
-        "concept.html"
+        "concept.html",
+        "tech-scan-agents.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://learn.chatgpt.com/docs/dots"
@@ -18850,6 +18926,20 @@
           "outcome": "supported",
           "scope": "OpenAI, Meet dots. A dot tracks an ongoing responsibility between conversations; uses plugins with the owner's connected accounts and existing permissions; can create Work or Codex tasks; automatic review lets it proceed, asks for approval or hands a step to the owner.",
           "evidence_summary": "Targeted issue-136 check on 2026-11-19 returned HTTP 200; the page states each claim."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "A dot uses connected apps and existing permissions, can create Work or Codex tasks, decides when to pause and wake up, and applies automatic approval checks.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "A dot uses connected apps and existing permissions, can create Work or Codex tasks, decides when to pause and wake up, and applies automatic approval checks.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
         }
       ],
       "evidence_digests": [
@@ -18863,13 +18953,23 @@
         {
           "file": "concept.html",
           "id": "source-51"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-52"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-97"
         }
       ]
     },
     {
       "url": "https://docs.x.ai/grok-bot/computer-and-apps",
       "files": [
-        "concept.html"
+        "concept.html",
+        "tech-scan-agents.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://docs.x.ai/grok-bot/computer-and-apps"
@@ -18886,6 +18986,20 @@
           "outcome": "supported",
           "scope": "xAI, Use the computer and apps. Every Bot on an account uses the same computer, with shared browser sign-ins and command-line credentials; each Bot's screen is not a separate security boundary.",
           "evidence_summary": "Targeted issue-136 check on 2026-11-19 returned HTTP 200; the page states each claim."
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Every Bot on an account uses one cloud computer with shared files and browser sign-ins, so separate Bots are not separate security boundaries.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Every Bot on an account uses one cloud computer with shared files and browser sign-ins, so separate Bots are not separate security boundaries.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
         }
       ],
       "evidence_digests": [
@@ -18899,6 +19013,14 @@
         {
           "file": "concept.html",
           "id": "source-52"
+        },
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-54"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-98"
         }
       ]
     },
@@ -18936,6 +19058,202 @@
         {
           "file": "concept.html",
           "id": "source-53"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.x.ai/grok-bot/how-grok-bot-works",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.x.ai/grok-bot/how-grok-bot-works"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.x.ai/grok-bot/how-grok-bot-works",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Bots have their own memory, use connected apps and a shared cloud computer, take logins from Vault or an approved password manager, and can hand coding work to Cursor Cloud Agents.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Bots have their own memory, use connected apps and a shared cloud computer, take logins from Vault or an approved password manager, and can hand coding work to Cursor Cloud Agents.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "3d38932824f903d521e1448d2aa7441d32f920f85f58513f0e5119b0be0e560e",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.x.ai/grok-bot/how-grok-bot-works"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-53"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-101"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.x.ai/grok-bot/approvals-security-and-privacy"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Auto Review checks actions, Ask first rules always raise a card, and cards raised by routines or other background work expire after 30 minutes.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Auto Review checks actions, Ask first rules always raise a card, and cards raised by routines or other background work expire after 30 minutes.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "093cc5471e8d3570decf3e30731493644566fc4772d4d790e0e806bc2dcea1cf",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-55"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-99"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.x.ai/grok-bot/team-bots",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.x.ai/grok-bot/team-bots"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.x.ai/grok-bot/team-bots",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "A Team Bot is shared with a team in Grok Bot, Slack or Teams; everyone works with one set of apps, secrets, skills and files, and team memory applies to everyone.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "A Team Bot is shared with a team in Grok Bot, Slack or Teams; everyone works with one set of apps, secrets, skills and files, and team memory applies to everyone.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "b15c9c23ec83a1f95168a237ad25185f33f5169f52c7ad050f87c699d361111b",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.x.ai/grok-bot/team-bots"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-56"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-100"
+        }
+      ]
+    },
+    {
+      "url": "https://kiro.dev/docs/crew/",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://kiro.dev/docs/crew/"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://kiro.dev/docs/crew/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Crew is an open-source personal AI agent that runs locally or remotely on your own hardware.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Crew is an open-source personal AI agent that runs locally or remotely on your own hardware.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "e278ed27577978a20c2bc1a698a49f322068598d815a33915a938b9d204ab861",
+          "format": "direct HTTP response",
+          "source_url": "https://kiro.dev/docs/crew/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-57"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-95"
         }
       ]
     }

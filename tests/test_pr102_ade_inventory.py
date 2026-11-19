@@ -118,6 +118,14 @@ class ADEInventoryTests(unittest.TestCase):
             'https://docs.x.ai/grok-bot/computer-and-apps',
             'https://www.rickblalock.dev/scratch-notes/learnings-from-moving-my-grok-bots-to-devin-bots/',
         }
+        # Issue 136 follow-up: persistent-agent types on Tech Scan agents and
+        # the radar's persistent-agents category; new reviews carry followup 'issue136'.
+        new_urls |= {
+            'https://docs.x.ai/grok-bot/how-grok-bot-works',
+            'https://docs.x.ai/grok-bot/approvals-security-and-privacy',
+            'https://docs.x.ai/grok-bot/team-bots',
+            'https://kiro.dev/docs/crew/',
+        }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews']
