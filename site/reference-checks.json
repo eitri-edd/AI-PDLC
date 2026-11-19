@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-18 covered the site; targeted issue-133 and issue-131 source additions were checked on 2026-11-19; issue-136 persistent-agent sources for Concepts were checked on 2026-11-19. Issue-136 persistent-agent types for Tech Scan agents and the Tech Radar persistent-agents category were checked on 2026-11-19. Issue-136 follow-up: Muse, Cue by Manus and OpenClaw persistent-agent sources were checked on 2026-11-19. Hermes Agent persistent-agent sources were checked on 2026-11-19.",
   "reviewed_base": "a1ec3e974fc7a22e6d51548cc33feca3b14a8538",
   "original_unique_urls": 100,
-  "current_unique_urls": 513,
-  "current_unique_hrefs": 519,
+  "current_unique_urls": 532,
+  "current_unique_hrefs": 538,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 496,
+    "retrieved": 515,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -8671,7 +8671,8 @@
     {
       "url": "https://openrouter.ai/docs/quickstart",
       "files": [
-        "tech-scan-gateway.html"
+        "tech-scan-gateway.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://openrouter.ai/docs/quickstart"
@@ -8687,12 +8688,23 @@
           "outcome": "supported",
           "scope": "OpenRouter, Quickstart Guide. First-party documentation: access to hundreds of models through a single API endpoint, with automatic fallbacks. Used in the optional notes under Conditional alternatives.",
           "evidence_summary": "Direct GET returned 200 (redirect from /docs). The guide states OpenRouter gives access to hundreds of AI models through a single API endpoint and handles fallbacks automatically."
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "First-party documentation: access to hundreds of models through a single API endpoint, with automatic fallbacks.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
         }
       ],
       "source_entries": [
         {
           "file": "tech-scan-gateway.html",
           "id": "source-24"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-130"
         }
       ]
     },
@@ -13420,7 +13432,8 @@
     {
       "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update",
       "files": [
-        "tech-scan-gateway.html"
+        "tech-scan-gateway.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
@@ -13436,12 +13449,23 @@
           "scope": "Targeted issue #86 explanation and control implication on tech-scan-gateway.html (source-26)",
           "evidence_summary": "Authoritative publisher or author source text examined for the adjacent claim; scope, uncertainty and applicability described next to the edited paragraph.",
           "limitation": "Targeted indexed/document evidence only. No independent local runtime, security, correctness benchmark or full-page reference pass."
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "First-party bulletin describing two contained 2026 incidents: one exposed some customers\u2019 secrets, model files and datasets; the other exposed account and billing information for all accounts created before 30 October 2026.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
         }
       ],
       "source_entries": [
         {
           "file": "tech-scan-gateway.html",
           "id": "source-26"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-132"
         }
       ],
       "evidence_digests": [],
@@ -16055,8 +16079,9 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "Claude Code v2.1.326 was released on 16 November 2026.",
-          "evidence_summary": "The changelog lists v2.1.326 on 16 November 2026."
+          "scope": "Claude Code v2.1.328 is the latest changelog entry.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
         }
       ],
       "source_entries": [
@@ -16064,7 +16089,8 @@
           "file": "tech-radar.html",
           "id": "source-31"
         }
-      ]
+      ],
+      "targeted_checked_on": "2026-11-20"
     },
     {
       "url": "https://github.com/openai/codex",
@@ -16083,8 +16109,9 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "Codex is an Apache-2.0 open-source CLI, at rust-v0.169.0 on 13 November 2026.",
-          "evidence_summary": "The repository carries the Apache-2.0 licence and the rust-v0.169.0 tag."
+          "scope": "Codex is an Apache-2.0 open-source CLI, at rust-v0.172.0 on 19 November 2026.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
         }
       ],
       "source_entries": [
@@ -16092,7 +16119,8 @@
           "file": "tech-radar.html",
           "id": "source-32"
         }
-      ]
+      ],
+      "targeted_checked_on": "2026-11-20"
     },
     {
       "url": "https://kiro.dev/changelog/cli/",
@@ -16111,8 +16139,9 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "Kiro CLI 3.4.0 was released on 16 November 2026.",
-          "evidence_summary": "The changelog lists CLI 3.4.0 on 16 November 2026."
+          "scope": "Kiro CLI 3.5.0 was released on 17 November 2026.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
         }
       ],
       "source_entries": [
@@ -16120,7 +16149,8 @@
           "file": "tech-radar.html",
           "id": "source-33"
         }
-      ]
+      ],
+      "targeted_checked_on": "2026-11-20"
     },
     {
       "url": "https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/",
@@ -19822,6 +19852,709 @@
         {
           "file": "tech-radar.html",
           "id": "source-111"
+        }
+      ]
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/models/overview",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://platform.claude.com/docs/en/models/overview"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://platform.claude.com/docs/en/models/overview",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Lists Claude Fable 5.2, Opus 5.5, Sonnet 5.5 and Haiku 5.5, recommends Opus 5.5 for most workloads and Fable 5.2 for demanding long-horizon agentic work, and gives model IDs for the Claude API, Amazon Bedrock and Google Cloud.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "25dba2681545893d07ee8407c501099a6faee3ec1bce711fdf3df56e9f7c6084",
+          "format": "direct HTTP response",
+          "source_url": "https://platform.claude.com/docs/en/models/overview"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-112"
+        }
+      ]
+    },
+    {
+      "url": "https://deepmind.google/models/gemini/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://deepmind.google/models/gemini/"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://deepmind.google/models/gemini/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Announces Gemini 4 Argon (October 2026), built for the hardest problems, and Gemini 4 Carbon, Hydrogen and Neon (October and November 2026).",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "af050260f37f3409703caaba02fa3b49cdef1f42c704e1d4c9539b9d74ed66d1",
+          "format": "direct HTTP response",
+          "source_url": "https://deepmind.google/models/gemini/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-113"
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://developers.openai.com/api/docs/models"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://developers.openai.com/api/docs/models",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Names GPT-6.2 Astra as the flagship for complex reasoning and coding, GPT-6.2 Sol to balance intelligence and cost, and GPT-6 Luna for cost-sensitive, high-volume work.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "e0037b081dd821903ddb620f582ce24dc20f8dee8c4120705e83ad17614563f5",
+          "format": "direct HTTP response",
+          "source_url": "https://developers.openai.com/api/docs/models"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-114"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/zai-org/GLM-5.3",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://huggingface.co/zai-org/GLM-5.3"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://huggingface.co/zai-org/GLM-5.3",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Publishes the GLM-5.3 weights under a custom GLM-5.3 licence; earlier GLM-5, 5.1 and 5.2 weights on the same page use MIT.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "a6e0c47e4a42e1a565a7f0e63043fe85709a2425b3d86d1987e775b6a48e684b",
+          "format": "direct HTTP response",
+          "source_url": "https://huggingface.co/zai-org/GLM-5.3"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-115"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.z.ai/guides/overview/quick-start",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.z.ai/guides/overview/quick-start"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.z.ai/guides/overview/quick-start",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Describes GLM-5.3 as Z.ai\u2019s flagship for software engineering and agent work, and documents GLM models in coding clients such as Claude Code and OpenCode.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "187e80406ab9a7028b4791d22db00b5dea929f7d32a787d957411fb9aecd7da0",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.z.ai/guides/overview/quick-start"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-116"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Publishes the DeepSeek-V4.1-Flash-1017 weights under the MIT licence.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "305fbbf4cabaf78acbea1436325317e0680412214ba55fff47cb5fc5b3170e16",
+          "format": "direct HTTP response",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-117"
+        }
+      ]
+    },
+    {
+      "url": "https://api-docs.deepseek.com/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://api-docs.deepseek.com/"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://api-docs.deepseek.com/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "States that the deepseek-flash model name is now served by DeepSeek-V4.1-Flash-1017, lists deepseek-v4-pro, and says the API accepts OpenAI- and Anthropic-format requests.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "3a60b7de38312544e4178fed68c3dc62bb5bf2b300a06d325b523eeadaf08a7a",
+          "format": "direct HTTP response",
+          "source_url": "https://api-docs.deepseek.com/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-118"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Publishes the Qwen3.8-2.4T-A95B weights under a custom Qwen3.8 licence; many smaller Qwen models, including Qwen3-Coder-Next, use Apache-2.0.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "c842719bfc5f92787651cadaabe4e9293c843dba5f3601641eb04f1bad361e0b",
+          "format": "direct HTTP response",
+          "source_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-119"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Publishes the Kimi K3.1 Pro weights under a custom Kimi K3.1 Pro licence.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "d7fe98ec241336e4c7e49281abac207bd5ec65691ac22b06a09adcc0f5f5013d",
+          "format": "direct HTTP response",
+          "source_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-120"
+        }
+      ]
+    },
+    {
+      "url": "https://platform.kimi.ai/docs/get-your-api-key",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://platform.kimi.ai/docs/get-your-api-key"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://platform.kimi.ai/docs/get-your-api-key",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "States that the Kimi API Platform serves Kimi K3.1 Pro through the Chat Completions, Responses and Messages APIs.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "83c70a7531e16919d061d1b984789042b383b0a60319aeb0abc1bc0818203564",
+          "format": "direct HTTP response",
+          "source_url": "https://platform.kimi.ai/docs/get-your-api-key"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-121"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://huggingface.co/MiniMaxAI/MiniMax-M2.7"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Publishes the MiniMax-M2.7 weights under a custom licence; it is the newest MiniMax text model with weights on Hugging Face.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "04b8b34aa67e68e2baa300227275f0c0f11896efcd1e1f9c3073628275f6ed66",
+          "format": "direct HTTP response",
+          "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-122"
+        }
+      ]
+    },
+    {
+      "url": "https://platform.minimax.io/docs/guides/models-intro",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://platform.minimax.io/docs/guides/models-intro"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://platform.minimax.io/docs/guides/models-intro",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Lists MiniMax-M3 and MiniMax-M3.1-Flash as frontier multimodal coding models with a 1M-token context window.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "1c04d72519bef14d25c0820f1a2217ee70174e1fc2d7d18105410080a1de838c",
+          "format": "direct HTTP response",
+          "source_url": "https://platform.minimax.io/docs/guides/models-intro"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-123"
+        }
+      ]
+    },
+    {
+      "url": "https://opencode.ai/docs/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://opencode.ai/docs/"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://opencode.ai/docs/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Describes OpenCode as an open-source coding agent with terminal, desktop and web interfaces and built-in support for many model providers, MCP servers, plugins and commands.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "19cad39ebbddd2a122f5e8e36256b1f4e739d21571c213982ff8b26f1bf4e7a5",
+          "format": "direct HTTP response",
+          "source_url": "https://opencode.ai/docs/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-124"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/anomalyco/opencode",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/anomalyco/opencode"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/anomalyco/opencode",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "The OpenCode repository: MIT-licensed, with v2.3.2 released on 18 November 2026.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "08e67b6781556d084ea70de83dd67dc65fc92f58d21c46db09662b023a7d6aa3",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/anomalyco/opencode"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-125"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.devin.ai/work-with-devin/devin-cli",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.devin.ai/work-with-devin/devin-cli"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.devin.ai/work-with-devin/devin-cli",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Describes Devin CLI as a local coding agent for the terminal on macOS, Linux, WSL and Windows with handoff to cloud Devin, and as bundled with Devin Desktop once an admin enables it.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "27d68440ab5df86fa88a925baae252db0faff211d66de4e504d2e9fea0edeb4f",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.devin.ai/work-with-devin/devin-cli"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-126"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.factory.com/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.factory.com/"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.factory.com/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "States that Droid runs the same across the Factory desktop app, Droid CLI and web and mobile, from a single session to automated delivery workflows.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "fe1dac61861f9fd6660104bcb1d243388df3317d550e36a930d335783bf6c6d1",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.factory.com/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-127"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/vertex-ai-name-changes",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.cloud.google.com/gemini-enterprise-agent-platform/vertex-ai-name-changes"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/vertex-ai-name-changes",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Lists the Vertex AI renames: Vertex AI Platform is now Gemini Enterprise Agent Platform, and Model Garden and Model as a Service, including Claude and DeepSeek, carry the new name.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "61256329961e2d793c00dcea1493f56d183e032278a42162268ca571393c4ac9",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/vertex-ai-name-changes"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-128"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.cloud.google.com/gemini-enterprise-agent-platform"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Describes the platform for building, scaling, governing and optimising agents, with Agent Studio, the Agent Development Kit and an API.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "e1a7558e5b8e801d1619b0cb2c3993a61e2caaa358ca7753046474fdf15516e2",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-129"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.fireworks.ai/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.fireworks.ai/"
+      ],
+      "checked_on": "2026-11-20",
+      "targeted_checked_on": "2026-11-20",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://docs.fireworks.ai/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Describes serverless, pay-per-token inference for open models and dedicated GPU deployments with autoscaling.",
+          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "6073a08a79b396abf9f993293922b34087300e9476eba2b2cf9807fa5a1bf81e",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.fireworks.ai/"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-131"
         }
       ]
     }
