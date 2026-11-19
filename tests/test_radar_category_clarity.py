@@ -12,7 +12,7 @@ CATEGORIES = {
     'context-memory': ('Context and memory', 5),
     'harness-frameworks': ('Harness and agent frameworks', 9),
     'agentic-development-environments': ('Agentic development environments', 1),
-    'persistent-agents': ('Persistent agents', 7),
+    'persistent-agents': ('Persistent agents', 8),
     'verification': ('Verification', 3),
     'sandbox': ('Sandbox and execution', 4),
     'software-factories': ('Software factories', 10),
@@ -21,7 +21,7 @@ CATEGORIES = {
 
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
-    'persistent-agents': '02c724cf55c5827c92c062bcfe4b77629f60b0108403afb9e3b912b21f9ff4dc',
+    'persistent-agents': '45d1a29e7d4f4bba79ec5559b4c3107606b7b9ea15e47a6fe97acad97bcd2d84',
     'models-access': 'dbe407f53646276972a244a664bcb7de8a11993deaf9553684b78f06f2bc935e',
     'gateways': '810367d21bd72f0c75eb9b27bbd60b0129becf04584f176569e36385382635f5',
     'context-memory': 'eb84382835a2273eafb1eeabf9705d19a391b73a4f8af9b2e007fcfefc9863b6',

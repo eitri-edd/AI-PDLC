@@ -136,6 +136,10 @@ class ADEInventoryTests(unittest.TestCase):
             'https://apps.apple.com/us/app/cue-by-manus/id6808613358',
             'https://docs.openclaw.ai/gateway/security',
             'https://github.com/openclaw/openclaw',
+            'https://github.com/nousresearch/hermes-agent',
+            'https://hermes-agent.nousresearch.com/docs',
+            'https://hermes-agent.nousresearch.com/docs/user-guide/security',
+            'https://hermes-agent.nousresearch.com/open-source-ai-agent',
         }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],

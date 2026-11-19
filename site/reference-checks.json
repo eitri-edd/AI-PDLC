@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-18",
-  "scope": "Daily maintenance verification on 2026-11-18 covered the site; targeted issue-133 and issue-131 source additions were checked on 2026-11-19; issue-136 persistent-agent sources for Concepts were checked on 2026-11-19. Issue-136 persistent-agent types for Tech Scan agents and the Tech Radar persistent-agents category were checked on 2026-11-19. Issue-136 follow-up: Muse, Cue by Manus and OpenClaw persistent-agent sources were checked on 2026-11-19.",
+  "scope": "Daily maintenance verification on 2026-11-18 covered the site; targeted issue-133 and issue-131 source additions were checked on 2026-11-19; issue-136 persistent-agent sources for Concepts were checked on 2026-11-19. Issue-136 persistent-agent types for Tech Scan agents and the Tech Radar persistent-agents category were checked on 2026-11-19. Issue-136 follow-up: Muse, Cue by Manus and OpenClaw persistent-agent sources were checked on 2026-11-19. Hermes Agent persistent-agent sources were checked on 2026-11-19.",
   "reviewed_base": "a1ec3e974fc7a22e6d51548cc33feca3b14a8538",
   "original_unique_urls": 100,
-  "current_unique_urls": 509,
-  "current_unique_hrefs": 515,
+  "current_unique_urls": 513,
+  "current_unique_hrefs": 519,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 492,
+    "retrieved": 496,
     "retrieved_pdf_text": 3
   },
   "page_passes": {
@@ -19626,6 +19626,202 @@
         {
           "file": "tech-radar.html",
           "id": "source-107"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nousresearch/hermes-agent",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/nousresearch/hermes-agent"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/nousresearch/hermes-agent",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Hermes Agent is MIT-licensed and documents agent-curated memory, autonomous skill creation, a built-in cron scheduler with delivery to any platform, isolated subagents and a single gateway process for messaging platforms.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Hermes Agent is MIT-licensed and documents agent-curated memory, autonomous skill creation, a built-in cron scheduler with delivery to any platform, isolated subagents and a single gateway process for messaging platforms.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "253721ee6a481fa24941ffa77e5ea7eaf091fff79ce318ac02ac2b8754a95d25",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/nousresearch/hermes-agent"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-66"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-108"
+        }
+      ]
+    },
+    {
+      "url": "https://hermes-agent.nousresearch.com/docs",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://hermes-agent.nousresearch.com/docs"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://hermes-agent.nousresearch.com/docs",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Hermes Agent runs on a VPS, a GPU cluster or serverless infrastructure such as Daytona or Modal, and Bot Mode builds a durable team of specialist Bots that work together in group chats and through mentions.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Hermes Agent runs on a VPS, a GPU cluster or serverless infrastructure such as Daytona or Modal, and Bot Mode builds a durable team of specialist Bots that work together in group chats and through mentions.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "115c481d30ff7decfb400527a4e328809c9f6e7c0e82909778db4032929815c6",
+          "format": "direct HTTP response",
+          "source_url": "https://hermes-agent.nousresearch.com/docs"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-67"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-109"
+        }
+      ]
+    },
+    {
+      "url": "https://hermes-agent.nousresearch.com/docs/user-guide/security",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://hermes-agent.nousresearch.com/docs/user-guide/security"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://hermes-agent.nousresearch.com/docs/user-guide/security",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Hermes Agent approval supports smart (default; an auxiliary LLM assesses risk), manual and off modes; cron_mode defaults to deny for dangerous commands; YOLO mode bypasses approval prompts for a session; user authorisation uses allowlists and DM pairing.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Hermes Agent approval supports smart (default; an auxiliary LLM assesses risk), manual and off modes; cron_mode defaults to deny for dangerous commands; YOLO mode bypasses approval prompts for a session; user authorisation uses allowlists and DM pairing.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "5402409db0e6b2b1fd75018973cae97457fe44bdbbd1a07b83537bc1a252c21a",
+          "format": "direct HTTP response",
+          "source_url": "https://hermes-agent.nousresearch.com/docs/user-guide/security"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-68"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-110"
+        }
+      ]
+    },
+    {
+      "url": "https://hermes-agent.nousresearch.com/open-source-ai-agent",
+      "files": [
+        "tech-scan-agents.html",
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://hermes-agent.nousresearch.com/open-source-ai-agent"
+      ],
+      "checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-19",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://hermes-agent.nousresearch.com/open-source-ai-agent",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-scan-agents.html",
+          "outcome": "supported",
+          "scope": "Hermes Agent runs as a process on hardware the user chooses, keeps conversations, memories and skills in the Hermes data directory, and can run as an always-on hosted cloud agent in Nous Portal.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "Hermes Agent runs as a process on hardware the user chooses, keeps conversations, memories and skills in the Hermes data directory, and can run as an always-on hosted cloud agent in Nous Portal.",
+          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
+          "followup": "issue136"
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "3567d3a9d87ec7dd9bac484f1d3c82278817a2b9b9bcb1bd9a8e2a79a8ea765b",
+          "format": "direct HTTP response",
+          "source_url": "https://hermes-agent.nousresearch.com/open-source-ai-agent"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-scan-agents.html",
+          "id": "source-69"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-111"
         }
       ]
     }
