@@ -12,6 +12,7 @@ CATEGORIES = {
     'context-memory': ('Context and memory', 5),
     'harness-frameworks': ('Harness and agent frameworks', 9),
     'agentic-development-environments': ('Agentic development environments', 1),
+    'persistent-agents': ('Persistent agents', 8),
     'verification': ('Verification', 3),
     'sandbox': ('Sandbox and execution', 4),
     'software-factories': ('Software factories', 10),
@@ -20,10 +21,12 @@ CATEGORIES = {
 
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
+    'persistent-agents': '45d1a29e7d4f4bba79ec5559b4c3107606b7b9ea15e47a6fe97acad97bcd2d84',
     'models-access': 'dbe407f53646276972a244a664bcb7de8a11993deaf9553684b78f06f2bc935e',
     'gateways': '810367d21bd72f0c75eb9b27bbd60b0129becf04584f176569e36385382635f5',
     'context-memory': 'eb84382835a2273eafb1eeabf9705d19a391b73a4f8af9b2e007fcfefc9863b6',
-    'harness-frameworks': 'c0fd92338ebf0bccf0438b627d4377ab99d62d888280e7fb23dddb5d54e375e6',
+    # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
+    'harness-frameworks': '080d7b2e94c551e140b4b4fedd946943eafc3b9d05149df7bc3207c8e8fba4f6',
     'agentic-development-environments': 'df0f89c2d5b981e7093b1e9e04c37bd61541a92bea117f1c13a157a65afd3a97',
     'verification': '2ca114ac9fc6e2d17417b911c5474ea46d42bc506ead8c199c5b4ad21abad2b0',
     'sandbox': '41bb3b17fdc4f386b32d676a8a048b25980bfd652ea0bd09e3991906b07855d5',
@@ -160,6 +163,10 @@ class RadarCategoryClarityTests(unittest.TestCase):
         self.assertRegex(text, r'worktree[^.]*\b(not|isn.t|does not)\b[^.]*sandbox')
         self.assertNotIn('a coding client running several worktree sessions is not the same thing', text)
         self.assertRegex(text, r'\b(client|coding agent)\b[^.]*\b(may|can|some)\b')
+
+    def test_persistent_agents_separate_ongoing_ownership_from_access(self):
+        self.assert_concepts('persistent-agents', r'\bongoing\b', r'\bmemory\b',
+                             r'\b(schedule|event)\b', r'\b(identity|secrets?|access)\b')
 
     def test_verification_distinguishes_evaluation_from_code_checks(self):
         self.assert_concepts('verification', r'\b(check\w*|verif\w*|evaluat\w*)\b',

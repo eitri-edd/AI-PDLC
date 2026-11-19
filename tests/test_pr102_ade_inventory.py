@@ -108,10 +108,43 @@ class ADEInventoryTests(unittest.TestCase):
             'https://github.com/continuedev/continue',
             'https://github.com/cursor/plugins/blob/2f87c854fe3e2fcda44ca86b46ede35aad3c46b7/pstack/.cursor-plugin/plugin.json',
         }
+        # Issue 136: the Concepts persistent-agent sources are a targeted
+        # addition; the Devin Bots announcement's new Concepts review is
+        # tagged followup 'issue136' and excluded below.
+        new_urls |= {
+            'https://docs.devin.ai/work-with-devin/bots',
+            'https://openai.com/index/introducing-dots/',
+            'https://learn.chatgpt.com/docs/dots',
+            'https://docs.x.ai/grok-bot/computer-and-apps',
+            'https://www.rickblalock.dev/scratch-notes/learnings-from-moving-my-grok-bots-to-devin-bots/',
+        }
+        # Issue 136 follow-up: persistent-agent types on Tech Scan agents and
+        # the radar's persistent-agents category; new reviews carry followup 'issue136'.
+        new_urls |= {
+            'https://docs.x.ai/grok-bot/how-grok-bot-works',
+            'https://docs.x.ai/grok-bot/approvals-security-and-privacy',
+            'https://docs.x.ai/grok-bot/team-bots',
+            'https://kiro.dev/docs/crew/',
+        }
+        # Issue 136 follow-up: Muse, Cue by Manus and OpenClaw sources.
+        new_urls |= {
+            'https://muse.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse',
+            'https://muse.ai/blog/how-we-designed-muse',
+            'https://muse.ai/',
+            'https://manus.im/blog/introducing-manus-2-0',
+            'https://help.manus.im/en/articles/17190150-what-is-new-in-manus-2-0',
+            'https://apps.apple.com/us/app/cue-by-manus/id6808613358',
+            'https://docs.openclaw.ai/gateway/security',
+            'https://github.com/openclaw/openclaw',
+            'https://github.com/nousresearch/hermes-agent',
+            'https://hermes-agent.nousresearch.com/docs',
+            'https://hermes-agent.nousresearch.com/docs/user-guide/security',
+            'https://hermes-agent.nousresearch.com/open-source-ai-agent',
+        }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews']
-                                           if v.get('followup') != 'pr102' and v.get('file') not in later_pages]
+                                           if v.get('followup') not in {'pr102', 'issue136'} and v.get('file') not in later_pages]
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
         baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
@@ -124,7 +157,10 @@ class ADEInventoryTests(unittest.TestCase):
         # inherited digests for gateway, harness, agents, workflows and sandbox sources.
         # Issue 131 review: targeted discovery-evidence additions advance the
         # inherited digest for product-discovery sources.
-        self.assertEqual(digest, 'db9a0eb4b4fabf45711a6f1dccc9eaf5fd468a6d94c43bf466c9737673174ea0')
+        # Issue 137 fix: the KEV LiteLLM count moves from three to four
+        # (CVE-2026-40217 added 18 November 2026), so the two KEV
+        # claim_reviews scope strings advance the reviews digest.
+        self.assertEqual(digest, '2a1da8a5dcf3d8ae026350a011447723b13f305feb5c561b60e91b23ce34c42f')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -140,6 +176,8 @@ class ADEInventoryTests(unittest.TestCase):
             sandbox['source_entries'].remove(entry)
         metadata['https://orca.dev/docs/model/worktrees']['source_entries'].remove(
             {'file': 'tech-scan-agents.html', 'id': 'source-37'})
+        metadata['https://devin.ai/blog/introducing-devin-bots']['source_entries'].remove(
+            {'file': 'concept.html', 'id': 'source-48'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
         self.assertEqual(actual, '4e66c8c395e0373fa8ce23542e985fb98df7fea571a065f810a853b9b439c9d2')
 
