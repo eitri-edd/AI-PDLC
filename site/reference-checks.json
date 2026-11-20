@@ -16570,24 +16570,24 @@
       ]
     },
     {
-      "url": "https://pypi.org/project/google-adk/2.14.1/",
+      "url": "https://pypi.org/project/google-adk/2.15.0/",
       "files": [
         "tech-radar.html"
       ],
       "hrefs": [
-        "https://pypi.org/project/google-adk/2.14.1/"
+        "https://pypi.org/project/google-adk/2.15.0/"
       ],
-      "checked_on": "2026-11-18",
+      "checked_on": "2026-11-20",
       "result": "retrieved",
       "http_status": 200,
-      "final_url": "https://pypi.org/project/google-adk/2.14.1/",
+      "final_url": "https://pypi.org/project/google-adk/2.15.0/",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "google-adk 2.14.1 was uploaded to PyPI on 12 November 2026.",
-          "evidence_summary": "The PyPI JSON API returned version 2.14.1 with upload time 2026-11-12. The HTML page presented a browser check to this client.",
+          "scope": "google-adk 2.15.0 was uploaded to PyPI on 20 November 2026.",
+          "evidence_summary": "The PyPI JSON API returned version 2.15.0 with upload time 2026-11-20T00:30:35.",
           "limitation": "HTML shell was a client challenge; the version and upload time come from the PyPI JSON API."
         }
       ],
@@ -21454,6 +21454,43 @@
           {
             "file": "tech-radar.html",
             "id": "source-41"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-20",
+      "reason": "Superseded on tech-radar.html by the google-adk 2.15.0 release. The 2.14.1 page is no longer cited.",
+      "replaced_by": "https://pypi.org/project/google-adk/2.15.0/",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://pypi.org/project/google-adk/2.14.1/",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://pypi.org/project/google-adk/2.14.1/"
+        ],
+        "checked_on": "2026-11-18",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://pypi.org/project/google-adk/2.14.1/",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "supported",
+            "scope": "google-adk 2.14.1 was uploaded to PyPI on 12 November 2026.",
+            "evidence_summary": "The PyPI JSON API returned version 2.14.1 with upload time 2026-11-12. The HTML page presented a browser check to this client.",
+            "limitation": "HTML shell was a client challenge; the version and upload time come from the PyPI JSON API."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-35"
           }
         ]
       }
