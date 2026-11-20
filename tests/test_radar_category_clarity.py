@@ -7,7 +7,7 @@ import unittest
 
 PAGE = Path(__file__).resolve().parents[1] / 'site/dist/tech-radar.html'
 CATEGORIES = {
-    'models-access': ('Models and model access', 6),
+    'models-access': ('Models and model access', 40),
     'gateways': ('AI gateways and routing', 6),
     'context-memory': ('Context and memory', 5),
     'harness-frameworks': ('Harness and agent frameworks', 9),
@@ -22,15 +22,17 @@ CATEGORIES = {
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
     'persistent-agents': '45d1a29e7d4f4bba79ec5559b4c3107606b7b9ea15e47a6fe97acad97bcd2d84',
-    'models-access': 'dbe407f53646276972a244a664bcb7de8a11993deaf9553684b78f06f2bc935e',
+    # Moved when Models and model access split into LLM model, coding tool,
+    # provider and decision-model tables (20 November 2026).
+    'models-access': 'd1153f9fff33f6ac4a7a27ff05bc47148ff1e9d3fcd9844dabf0e7e6c0a4f3c7',
     'gateways': '810367d21bd72f0c75eb9b27bbd60b0129becf04584f176569e36385382635f5',
     'context-memory': 'eb84382835a2273eafb1eeabf9705d19a391b73a4f8af9b2e007fcfefc9863b6',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
     'harness-frameworks': '080d7b2e94c551e140b4b4fedd946943eafc3b9d05149df7bc3207c8e8fba4f6',
-    'agentic-development-environments': 'df0f89c2d5b981e7093b1e9e04c37bd61541a92bea117f1c13a157a65afd3a97',
+    'agentic-development-environments': '9a8ce940d2c260962a04629483b04f51e4156447f11a5819d268f93bbc302092',
     'verification': '2ca114ac9fc6e2d17417b911c5474ea46d42bc506ead8c199c5b4ad21abad2b0',
     'sandbox': '41bb3b17fdc4f386b32d676a8a048b25980bfd652ea0bd09e3991906b07855d5',
-    'software-factories': 'ac9e4fed18a557c6e6d5b502bb76501b095dd65355120ed158df9f489438ac73',
+    'software-factories': 'cf3d512bb9dcc0b3d7b61a3420d502ab156aeef836e7a10b97c12f80735b34ed',
     'skill-packs': '20852c303149043ba29db05ed8ffa554e9c4622c4a8ee06f7a6c946ebb5cb28b',
 }
 
@@ -52,12 +54,14 @@ class Radar(HTMLParser):
                 if ident in self.sections:
                     raise ValueError('duplicate category: ' + ident)
                 self.section = ident
-                self.sections[ident] = {'heading': '', 'paragraphs': [], 'table': '', 'rows': 0}
+                self.sections[ident] = {'heading': '', 'paragraphs': [], 'table': '', 'rows': 0, 'tables': 0}
         if self.section is None:
             return
         data = self.sections[self.section]
         if tag == 'table':
             self.table_depth += 1
+            if self.table_depth == 1:
+                data['tables'] += 1
         if self.table_depth:
             data['table'] += self.get_starttag_text()
             if tag == 'tr':
@@ -117,7 +121,7 @@ class RadarCategoryClarityTests(unittest.TestCase):
                 self.assertTrue(section['paragraphs'], 'missing introductory prose')
                 self.assertGreaterEqual(len(section['paragraphs'][0].split()), 10)
                 self.assertTrue(section['table'])
-                self.assertEqual(section['rows'], count + 1)  # header plus products
+                self.assertEqual(section['rows'], count + section['tables'])  # one header per table plus products
 
     def test_introductions_are_concise_and_avoid_prescribing_a_product_choice(self):
         for ident, section in self.doc.sections.items():

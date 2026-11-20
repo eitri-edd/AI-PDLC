@@ -16,16 +16,18 @@ PRODUCT_NAMES = (
     'Nitro Sandboxes', 'Nitro Enclaves', 'Lambda MicroVMs', 'E2B', 'Daytona', 'Modal', 'Lizard',
     'Copilot', 'Jules', 'CodeCatalyst', 'Aider', 'Superpowers', 'pstack', 'gstack', 'tstack', 'ub-mode',
     'Devin', 'Kiro', 'dots', 'Grok', 'Cursor', 'Muse', 'Cue', 'OpenClaw', 'Meta', 'Manus', 'Hermes', 'Nous',
+    'Gemini', 'GPT', 'GLM', 'DeepSeek', 'Qwen', 'Kimi', 'MiniMax', 'OpenCode', 'Droid',
+    'Vertex', 'Fireworks',
 )
 # Citations originally attached to product notes, not just bibliography entries.
 SECTION_SOURCES = {
-    'models-access': (25, 24, 69, 71, 72),
+    'models-access': (25, 24, 69, 71, 72) + tuple(range(112, 153)),
     'gateways': (64, 65, 66, 67, 61, 27, 75, 29, 62, 63, 30),
     'context-memory': (56, 17, 21),
     'harness-frameworks': (18, 34, 70, 73),
     'verification': (14, 15, 16),
     'sandbox': (12, 22, 57, 59, 58, 23, 68),
-    'software-factories': (53, 42, 43, 60, 44, 45, 71),
+    'software-factories': (53, 42, 43, 60, 44, 45, 71, 140, 153),
     'skill-packs': (52,),
     'persistent-agents': (92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111),
 }
