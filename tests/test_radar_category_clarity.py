@@ -21,19 +21,19 @@ CATEGORIES = {
 
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
-    'persistent-agents': '45d1a29e7d4f4bba79ec5559b4c3107606b7b9ea15e47a6fe97acad97bcd2d84',
+    'persistent-agents': '5ff202f07c47cda3ba1c43bb584b4cefd003a24c0b8836df7b90087ed0c55249',
     # Moved when Models and model access split into LLM model, coding tool,
     # provider and decision-model tables (20 November 2026).
-    'models-access': 'd1153f9fff33f6ac4a7a27ff05bc47148ff1e9d3fcd9844dabf0e7e6c0a4f3c7',
-    'gateways': '810367d21bd72f0c75eb9b27bbd60b0129becf04584f176569e36385382635f5',
+    'models-access': '14c40b0f5005f8a133917bacbe68e0772140b887bdbf2bc288ce7304c4746f2a',
+    'gateways': '315854cd811aa033aeb40700bbbdd52c86deb0d8438c807a54b846934c870ecf',
     'context-memory': 'eb84382835a2273eafb1eeabf9705d19a391b73a4f8af9b2e007fcfefc9863b6',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
-    'harness-frameworks': '080d7b2e94c551e140b4b4fedd946943eafc3b9d05149df7bc3207c8e8fba4f6',
+    'harness-frameworks': '49c7d22d7ce9f219cffd68e3588bdfa800298fbfff33944a766ea56e99d2c517',
     'agentic-development-environments': '9a8ce940d2c260962a04629483b04f51e4156447f11a5819d268f93bbc302092',
     'verification': '2ca114ac9fc6e2d17417b911c5474ea46d42bc506ead8c199c5b4ad21abad2b0',
-    'sandbox': '41bb3b17fdc4f386b32d676a8a048b25980bfd652ea0bd09e3991906b07855d5',
+    'sandbox': 'eddffc1e5e7445b1aa421a27038a0b572097a71c836c18e36c3df82b037c1670',
     'software-factories': 'cf3d512bb9dcc0b3d7b61a3420d502ab156aeef836e7a10b97c12f80735b34ed',
-    'skill-packs': '20852c303149043ba29db05ed8ffa554e9c4622c4a8ee06f7a6c946ebb5cb28b',
+    'skill-packs': 'bbe4295f29bae8bd10e3dac8cad1f35a12f65f332dd8a9c80d6cdab74edc0238',
 }
 
 

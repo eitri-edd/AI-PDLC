@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Agentic coding maturity L0 to L5: what a person still reads at each level, which Concepts unlock the next step, and the verification gates that make higher autonomy defensible.">
+  <title>Agentic coding maturity · AI-SDLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
+      <span class="organisation">Enterprise Digital Services (EDS)</span>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <details class="site-navigation" open>
+        <summary>Guide navigation</summary>
+        <nav aria-label="Guide">
+          <p class="nav-label">Development guide</p>
+          <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
+          <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
+          <a href="concept.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <div class="nav-children">
+            <a href="concept-maturity.html" aria-current="page">Maturity</a>
+          </div>
+          <a href="tech-scan.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
+          <div class="nav-children">
+            <a href="tech-radar.html">Tech Radar</a>
+          </div>
+          <a href="ai-pdlc.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h11l-3-3m6 11H6l3 3M14 6l-3 3M6 14l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-SDLC</a>
+          <div class="nav-children">
+            <a href="product-discovery.html">Project Discovery</a>
+            <a href="product-implementation.html">Product implementation</a>
+          </div>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <div class="nav-children">
+            <a href="eds-po-ba-harness.html">PO/BA harness</a>
+            <a href="eds-developer-harness.html">Developer harness</a>
+            <a href="eds-path-to-production.html">Path to production</a>
+            <a href="eds-team-context.html">Team context</a>
+            <a href="eds-skills-catalogue.html">Skills catalogue</a>
+          </div>
+          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" tabindex="-1">
+      <article class="concept-article tech-scan-article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="concept.html">Concepts</a><span aria-hidden="true">/</span><span aria-current="page">Agentic coding maturity</span></nav>
+        <header class="article-header">
+          <p class="eyebrow">Development guide</p>
+          <h1>Agentic coding maturity</h1>
+          <p class="lead">How far to let an agent go, level by level. The ladder runs from writing every line yourself (L0) to a dark factory where you only step in by exception (L5). At every level the question is the same: what does a person still read, and when?</p>
+          <p id="tech-scan-note">Draft research reference. Based on published research and practitioner accounts, not local deployment tests.</p>
+          <p>For the practices behind each level, read <a href="concept.html#how-the-concepts-fit">How the concepts fit together</a> in Concepts.</p>
+        </header>
+        <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
+          <figcaption id="page-map-caption">This page at a glance</figcaption>
+          <p id="page-map-note" class="page-map-note">Reader route: locate your level per task → read the six rungs and their diagrams → check what gates each climb → apply per-task scoring with the delivery system as the cap. These groups organise the explanation; they are not maturity levels.</p>
+          <ol class="page-map-nodes" role="list">
+            <li class="page-map-node"><strong>Find your level</strong><div class="page-map-links">
+              <a href="#start-here">Where are we?</a>
+              <a href="#ladder">The ladder L0 to L5</a>
+            </div></li>
+            <li class="page-map-node"><strong>What gates the climb</strong><div class="page-map-links">
+              <a href="#verification-gate">Verification is the gate</a>
+              <a href="#plateaus">The two plateaus</a>
+            </div></li>
+            <li class="page-map-node"><strong>Score per task</strong><div class="page-map-links">
+              <a href="#per-task">Score per task, cap by risk</a>
+              <a href="#delivery-system">What the delivery system needs to support</a>
+            </div></li>
+            <li class="page-map-node"><strong>Limits and step-down</strong><div class="page-map-links">
+              <a href="#l5-direction">L5: a direction, not a target</a>
+              <a href="#step-down">Step back down</a>
+              <a href="#sources">Sources</a>
+            </div></li>
+          </ol>
+        </figure>
+        <aside class="tech-scan-key-points" aria-labelledby="tech-scan-key-points-label">
+          <p class="tech-scan-key-points-label" id="tech-scan-key-points-label">Key points</p>
+          <ul>
+            <li>Autonomy is a setting chosen per task and per deployment, not a property of a team or a tool. "Maturity" is the capability to choose and support a higher setting safely.</li>
+            <li>The ladder runs L0–L5 on Dan Shapiro's framing with Knight First Amendment Institute role names; verification is the gate at every climb.</li>
+            <li>Score per task and cap by risk; L5 is a direction, not a target — unattended autonomy suits exploration and throwaway work, not production defaults.</li>
+          </ul>
+        </aside>
+        <details class="mobile-contents">
+          <summary>On this page</summary>
+          <nav aria-label="On this page"><a href="#start-here">Where are we?</a>
+<a href="#ladder">The ladder L0 to L5</a>
+<a href="#verification-gate">Verification is the gate</a>
+<a href="#plateaus">The two plateaus</a>
+<a href="#per-task">Score per task, cap by risk</a>
+<a href="#delivery-system">What the delivery system needs to support</a>
+<a href="#l5-direction">L5: a direction, not a target</a>
+<a href="#step-down">Step back down</a>
+<a href="#sources">Sources</a></nav>
+        </details>
+      <section id="start-here">
+        <h2>Where are we?</h2>
+        <p>The five-levels framing<a href="#source-1" aria-label="Source 1: Dan Shapiro, The Five Levels: from Spicy Autocomplete to the Dark Factory">[1]</a> describes delegation distance: how much of the work an agent does before a person has to understand it. The Knight First Amendment Institute<a href="#source-4" aria-label="Source 4: Knight First Amendment Institute, Levels of Autonomy for AI Agents">[4]</a> names the human role at each level: operator, collaborator, consultant, approver, observer. Addy Osmani's agentic autonomy levels<a href="#source-2" aria-label="Source 2: Addy Osmani, Agentic Autonomy Levels">[2]</a> push the framing further: autonomy is a property of a deployment for a task, not of a person or a tool, and capability is something you grow deliberately through feedback loops. The AI Codebase Maturity Model<a href="#source-3" aria-label="Source 3: Daniel Vaughan, The AI Codebase Maturity Model">[3]</a> reaches a similar conclusion from a different direction: progress comes from tightening feedback loops, not from chasing a level.</p>
+        <p>So this page separates two things that maturity models often blur. The <strong>level</strong> is the autonomy setting for one task. <strong>Maturity</strong> is the team's capability to choose a higher setting for that task — and to support it — without losing the ability to detect and undo mistakes. A team can run L3 on one workflow and L1 on another — Qodo's L1–L4 earned-autonomy framework, analysed by Futurum, scopes autonomy per workflow in the same way<a href="#source-12" aria-label="Source 12: Futurum Group, Qodo Builds the Governance Layer Agentic SDLC Has Been Missing">[12]</a>.</p>
+        <p><strong>Self-test.</strong> Pick the last three changes your team shipped. For each one, answer: what did a person read, and when? Every line? Every diff? Evidence of checks? Nothing until after release? The answers locate you on the ladder per task, not per team.</p>
+        <p>Running example, used across the playbook: Maya's small-business asset-management app. Handing the agent the handover-form wording change is an L2 task. Letting the agent redesign the reporting module from a spec — and read only the evidence — is an L3 or L4 task, and only if the <a href="concept.html#verification-engineering">verification</a> underneath is real.</p>
+        <figure class="concept-figure" data-diagram="static" id="fig-ladder-overview">
+          <details class="figure-reading">
+            <summary><span class="figure-reading-label">Text alternative</span> — Read the ladder diagram as text</summary>
+            <ol>
+              <li>Six rungs, L0 to L5, each a delegation distance: from the person writing every line to authorised automation that can release without a reader.</li>
+              <li>Each rung names what the agent does and what the person still reads; the accent rung (L5) is a direction, not a target.</li>
+              <li>A spine on the left carries the climb upward; it is not a required sequence for every task.</li>
+              <li>Below the rungs sit two foundations every level needs: per-level foundations (goal, behaviour, context, harness, feedback, verification, model choice) and the delivery system that caps how high any level can safely go.</li>
+            </ol>
+          </details>
+          <details class="diagram-detail" open>
+            <summary>Diagram detail</summary>
+            <div class="figure-scroll">
+              <svg viewBox="0 0 960 580" role="img" aria-labelledby="fig-ladder-title fig-ladder-desc">
+                <title id="fig-ladder-title">Agentic coding maturity ladder L0 to L5 with foundations and the delivery-system cap</title>
+                <desc id="fig-ladder-desc">Six rungs from L0 baseline to L5 observer, each describing what the agent does and what the person still reads. Below them, foundations needed at every level and the delivery system that caps every level.</desc>
+                <g>
+                  <rect class="d-node" x="16" y="20" width="52" height="58" rx="7"/>
+                  <rect class="d-node" x="16" y="86" width="52" height="58" rx="7"/>
+                  <rect class="d-node" x="16" y="152" width="52" height="58" rx="7"/>
+                  <rect class="d-node" x="16" y="218" width="52" height="58" rx="7"/>
+                  <rect class="d-node" x="16" y="284" width="52" height="58" rx="7"/>
+                  <rect class="d-node d-node-accent" x="16" y="350" width="52" height="58" rx="7"/>
+                  <path class="d-line" d="M42 30V78M42 92V144M42 158V210M42 224V276M42 290V342M42 408V432" marker-end="url(#arrow)"/>
+                  <rect class="d-node" x="84" y="20" width="852" height="58" rx="8"/>
+                  <rect class="d-node" x="84" y="86" width="852" height="58" rx="8"/>
+                  <rect class="d-node" x="84" y="152" width="852" height="58" rx="8"/>
+                  <rect class="d-node" x="84" y="218" width="852" height="58" rx="8"/>
+                  <rect class="d-node" x="84" y="284" width="852" height="58" rx="8"/>
+                  <rect class="d-node d-node-accent" x="84" y="350" width="852" height="58" rx="8"/>
+                  <text class="d-title" x="42" y="56" text-anchor="middle">L0</text>
+                  <text class="d-title" x="42" y="122" text-anchor="middle">L1</text>
+                  <text class="d-title" x="42" y="188" text-anchor="middle">L2</text>
+                  <text class="d-title" x="42" y="254" text-anchor="middle">L3</text>
+                  <text class="d-title" x="42" y="320" text-anchor="middle">L4</text>
+                  <text class="d-title" x="42" y="386" text-anchor="middle">L5</text>
+                  <text class="d-title" x="104" y="44">Baseline</text>
+                  <text class="d-sub" x="104" y="64">Autocomplete at most · person writes and owns every line</text>
+                  <text class="d-title" x="104" y="110">Operator</text>
+                  <text class="d-sub" x="104" y="130">Agent helps on request · person reads every line of small tasks</text>
+                  <text class="d-title" x="104" y="176">Collaborator</text>
+                  <text class="d-sub" x="104" y="196">Agent edits and tests code · person reads every diff</text>
+                  <text class="d-title" x="104" y="242">Consultant</text>
+                  <text class="d-sub" x="104" y="262">Parallel agents, supervised · person reads evidence, not lines</text>
+                  <text class="d-title" x="104" y="308">Approver</text>
+                  <text class="d-sub" x="104" y="328">Agent starts work from triggers · person approves goals and decisions</text>
+                  <text class="d-title" x="104" y="374">Observer</text>
+                  <text class="d-sub" x="104" y="394">Authorised route can release · person monitors outcomes and can stop</text>
+                </g>
+                <g>
+                  <rect class="d-boundary" x="84" y="440" width="852" height="56" rx="8"/>
+                  <text class="d-title" x="510" y="464" text-anchor="middle">Foundations — needed at every level, stricter as you climb</text>
+                  <text class="d-sub" x="510" y="484" text-anchor="middle">Agree the goal · Define the behaviour · Supply context · Equip the harness · Use feedback · Check the work · Choose a model</text>
+                  <rect class="d-boundary" x="84" y="516" width="852" height="44" rx="8"/>
+                  <text class="d-title" x="510" y="543" text-anchor="middle">Delivery system caps every level — version control, small batches, platform, fast feedback</text>
+                </g>
+              </svg>
+            </div>
+            <p class="diagram-key"><strong>Key:</strong> Each rung pairs what the agent does with what the person still reads. The spine shows the direction of the climb; it is not a required path for every task. The two foundations below apply at every level and tighten as autonomy rises.</p>
+          </details>
+          <figcaption id="fig-ladder-title-caption">Figure 1. The L0–L5 autonomy ladder: delegation distance per rung, with the foundations every level needs and the delivery system that caps every level.</figcaption>
+        </figure>
+      </section>
+      <section id="ladder">
+        <h2>The ladder L0 to L5</h2>
+        <p>The levels follow Dan Shapiro's five levels framing<a href="#source-1" aria-label="Source 1: Dan Shapiro, The Five Levels: from Spicy Autocomplete to the Dark Factory">[1]</a>, extended with an explicit L0 baseline, and the role names follow the Knight First Amendment Institute<a href="#source-4" aria-label="Source 4: Knight First Amendment Institute, Levels of Autonomy for AI Agents">[4]</a>. Addy Osmani's levels<a href="#source-2" aria-label="Source 2: Addy Osmani, Agentic Autonomy Levels">[2]</a> name the same progression differently — Assist, Supervised action, Scoped task delegation, Goal-driven autonomy, Parallel delegation, and Managed-by-exception orchestration — and argue that a single ladder cannot capture both how far one agent goes and how well many agents are coordinated. Numbers are not comparable across frameworks — treat them as a shared vocabulary for this page, not a universal scale.</p>
+        <div class="table-scroll">
+          <table>
+            <caption>Summary of the six levels: agent scope, what the person still reads, and the exit criterion for the next climb.</caption>
+            <thead>
+              <tr><th scope="col">Level</th><th scope="col">Name (role)</th><th scope="col">Agent scope</th><th scope="col">Person still reads</th><th scope="col">Exit criterion</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>L0</td><td>Baseline</td><td>No delegation; autocomplete at most</td><td>Every line, as the author</td><td>Delegate three recurring chores to an agent on request</td></tr>
+              <tr><td>L1</td><td>Operator</td><td>Agent helps on request inside granted tools</td><td>Every line of small tasks</td><td>Agent mode handles a real multi-file task and loops on test feedback</td></tr>
+              <tr><td>L2</td><td>Collaborator</td><td>Agent edits code, runs tests, reworks within limits</td><td>Every diff before it ships</td><td>A second agent or worktree runs in parallel and you read evidence, not lines</td></tr>
+              <tr><td>L3</td><td>Consultant</td><td>Several agents run supervised, each with own branch and checks</td><td>PRs and check evidence for each change, not lines</td><td>The agent starts work from triggers; you review specs, plans and test results instead of gating each change</td></tr>
+              <tr><td>L4</td><td>Approver</td><td>Persistent agent starts work from triggers, plans and runs sessions</td><td>Goals, plans, exceptions, final evidence</td><td>Authorised scope, holdout evaluation and minutes-fast rollback are proven</td></tr>
+              <tr><td>L5</td><td>Observer</td><td>Authorised automation can release without a reader</td><td>Outcomes, by exception</td><td>No next level on this page — see the direction-not-target section</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>L0 — Baseline: you write every line</h3>
+        <p>L0 is the no-agent baseline, included so the ladder has a floor. You write the code; an autocomplete suggestion is the most delegation. The exit criterion is behavioural, not technical: delegate three recurring chores to an agent on request. Concepts that apply here: <a href="concept.html#context-engineering">context engineering</a> (what you paste into the prompt) and <a href="concept.html#verification-engineering">verification engineering</a> (how you check your own work).</p>
+        <figure class="concept-figure" data-diagram="static" id="fig-level-0">
+          <details class="figure-reading">
+            <summary><span class="figure-reading-label">Text alternative</span> — Read the L0 diagram as text</summary>
+            <ol>
+              <li>A task arrives and the person writes the change; the agent is absent or autocomplete-only.</li>
+              <li>The person, as author, owns every line.</li>
+              <li>The check is the person's own run and review, with no independent check yet.</li>
+              <li>Climb to L1 when three recurring chores have been delegated to an agent on request.</li>
+            </ol>
+          </details>
+          <details class="diagram-detail" open>
+            <summary>Diagram detail</summary>
+            <div class="figure-scroll">
+              <svg viewBox="0 0 880 300" role="img" aria-labelledby="fig-level-0-title fig-level-0-desc">
+                <title id="fig-level-0-title">L0 baseline: the person writes every line</title>
+                <desc id="fig-level-0-desc">At L0 there is no delegation. The person writes the change, the agent is absent or autocomplete-only, the check is the person's own review, and the exit criterion is delegating three recurring chores.</desc>
+                <rect class="d-node" x="30" y="110" width="150" height="90" rx="8"/>
+                <text class="d-title" x="105" y="138" text-anchor="middle">Task arrives</text>
+                <text class="d-sub" x="105" y="160" text-anchor="middle">One code change</text>
+                <text class="d-sub" x="105" y="180" text-anchor="middle">Written by the person</text>
+                <rect class="d-node" x="240" y="110" width="220" height="90" rx="8"/>
+                <text class="d-title" x="350" y="138" text-anchor="middle">No delegation</text>
+                <text class="d-sub" x="350" y="160" text-anchor="middle">Agent absent or</text>
+                <text class="d-sub" x="350" y="180" text-anchor="middle">autocomplete-only</text>
+                <rect class="d-node d-node-accent" x="530" y="30" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="58" text-anchor="middle">Person: author</text>
+                <text class="d-sub" x="690" y="78" text-anchor="middle">Writes and owns</text>
+                <text class="d-sub" x="690" y="96" text-anchor="middle">every line</text>
+                <rect class="d-node" x="530" y="170" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="198" text-anchor="middle">Check</text>
+                <text class="d-sub" x="690" y="218" text-anchor="middle">Your own run and review;</text>
+                <text class="d-sub" x="690" y="236" text-anchor="middle">no independent check yet</text>
+                <path class="d-line" d="M180 155H240" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M460 155H495V205H530" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M690 170V116" marker-end="url(#arrow)"/>
+                <text class="d-label" x="210" y="145" text-anchor="middle">asks</text>
+                <text class="d-label" x="480" y="185" text-anchor="middle">work</text>
+                <text class="d-label" x="702" y="148" text-anchor="start">reads</text>
+                <rect class="d-boundary" x="30" y="262" width="820" height="34" rx="7"/>
+                <text class="d-sub" x="440" y="284" text-anchor="middle">Climb to L1 when you delegate three recurring chores to an agent on request.</text>
+              </svg>
+            </div>
+            <p class="diagram-key"><strong>Key:</strong> The accent node is what the person still does; the right column pairs that with the check behind the work; the bottom strip states the exit criterion.</p>
+          </details>
+          <figcaption id="fig-level-0-title-caption">Figure 2. L0 baseline — the person writes and owns every line; the agent is absent or autocomplete-only.</figcaption>
+        </figure>
+        <h3>L1 — Operator: the agent helps when asked</h3>
+        <p>The Knight role at L1 is <em>operator</em>: the person prompts, reviews, and remains accountable for every line. This matches Shapiro's "spicy autocomplete" — powerful suggestions, but the person is still the author. The Concepts that make this level useful rather than busywork: <a href="concept.html#context-engineering">context engineering</a> and <a href="concept.html#harness-engineering">harness engineering</a> — Osmani's level 1 notes the agent's ceiling is set by the quality of context and tools you give it<a href="#source-2" aria-label="Source 2: Addy Osmani, Agentic Autonomy Levels">[2]</a>.</p>
+        <figure class="concept-figure" data-diagram="static" id="fig-level-1">
+          <details class="figure-reading">
+            <summary><span class="figure-reading-label">Text alternative</span> — Read the L1 diagram as text</summary>
+            <ol>
+              <li>A small, bounded task arrives; the person asks the agent for help on request.</li>
+              <li>The agent suggests or drafts within its granted tools and permissions.</li>
+              <li>The person, as operator, writes every line and directs each step.</li>
+              <li>The check is the person reading every line of the result.</li>
+              <li>Climb to L2 when agent mode handles a real multi-file task and loops on test feedback.</li>
+            </ol>
+          </details>
+          <details class="diagram-detail" open>
+            <summary>Diagram detail</summary>
+            <div class="figure-scroll">
+              <svg viewBox="0 0 880 300" role="img" aria-labelledby="fig-level-1-title fig-level-1-desc">
+                <title id="fig-level-1-title">L1 operator: agent helps on request, person reads every line</title>
+                <desc id="fig-level-1-desc">At L1 the person prompts the agent for small bounded tasks. The agent suggests or drafts within granted permissions, the person as operator writes every line, and the check is the person reading every line.</desc>
+                <rect class="d-node" x="30" y="110" width="150" height="90" rx="8"/>
+                <text class="d-title" x="105" y="138" text-anchor="middle">Task arrives</text>
+                <text class="d-sub" x="105" y="160" text-anchor="middle">A small bounded task</text>
+                <text class="d-sub" x="105" y="180" text-anchor="middle">With clear tools</text>
+                <rect class="d-node" x="240" y="110" width="220" height="90" rx="8"/>
+                <text class="d-title" x="350" y="138" text-anchor="middle">Agent helps on request</text>
+                <text class="d-sub" x="350" y="160" text-anchor="middle">Suggests or drafts</text>
+                <text class="d-sub" x="350" y="180" text-anchor="middle">Inside granted permissions</text>
+                <rect class="d-node d-node-accent" x="530" y="30" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="58" text-anchor="middle">Person: operator</text>
+                <text class="d-sub" x="690" y="78" text-anchor="middle">Writes every line;</text>
+                <text class="d-sub" x="690" y="96" text-anchor="middle">directs each step</text>
+                <rect class="d-node" x="530" y="170" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="198" text-anchor="middle">Check</text>
+                <text class="d-sub" x="690" y="218" text-anchor="middle">You read every line</text>
+                <text class="d-sub" x="690" y="236" text-anchor="middle">of the result</text>
+                <path class="d-line" d="M180 155H240" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M460 155H495V205H530" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M690 170V116" marker-end="url(#arrow)"/>
+                <text class="d-label" x="210" y="145" text-anchor="middle">asks</text>
+                <text class="d-label" x="480" y="185" text-anchor="middle">drafts</text>
+                <text class="d-label" x="702" y="148" text-anchor="start">reads</text>
+                <rect class="d-boundary" x="30" y="262" width="820" height="34" rx="7"/>
+                <text class="d-sub" x="440" y="284" text-anchor="middle">Climb to L2 when agent mode handles a real multi-file task and loops on test feedback.</text>
+              </svg>
+            </div>
+            <p class="diagram-key"><strong>Key:</strong> The accent node is what the person still does; the right column pairs that with the check behind the work; the bottom strip states the exit criterion.</p>
+          </details>
+          <figcaption id="fig-level-1-title-caption">Figure 3. L1 operator — the agent helps on request; the person still writes and reads every line.</figcaption>
+        </figure>
+        <h3>L2 — Collaborator: the agent does the typing, you read the diffs</h3>
+        <p>At L2 the agent edits files, runs tests and reworks within agreed limits, and the person reviews every diff before it ships. The Knight role is <em>collaborator</em>. This is where <a href="concept.html#loop-engineering">loop engineering</a> and <a href="concept.html#verification-engineering">verification engineering</a> start to carry weight: the agent's rework loop is only as good as the checks it runs. The <a href="tech-scan-agents.html">coding agents</a> page covers which tools sit here; <a href="tech-scan-harness.html">the harness</a> page covers what keeps the loop bounded.</p>
+        <figure class="concept-figure" data-diagram="static" id="fig-level-2">
+          <details class="figure-reading">
+            <summary><span class="figure-reading-label">Text alternative</span> — Read the L2 diagram as text</summary>
+            <ol>
+              <li>A real code change arrives; the person delegates the typing to the agent.</li>
+              <li>The agent edits files, runs tests and reworks within agreed limits.</li>
+              <li>The person, as collaborator, reads every diff before it ships.</li>
+              <li>The check is the existing automated tests the agent runs — the person still reads the diffs themselves.</li>
+              <li>Climb to L3 when a second agent or worktree runs in parallel and you read evidence, not lines.</li>
+            </ol>
+          </details>
+          <details class="diagram-detail" open>
+            <summary>Diagram detail</summary>
+            <div class="figure-scroll">
+              <svg viewBox="0 0 880 300" role="img" aria-labelledby="fig-level-2-title fig-level-2-desc">
+                <title id="fig-level-2-title">L2 collaborator: agent edits and tests, person reads every diff</title>
+                <desc id="fig-level-2-desc">At L2 the agent edits files, runs tests and reworks within limits. The person as collaborator reads every diff before it ships, and the check is the existing automated tests the agent runs.</desc>
+                <rect class="d-node" x="30" y="110" width="150" height="90" rx="8"/>
+                <text class="d-title" x="105" y="138" text-anchor="middle">Task arrives</text>
+                <text class="d-sub" x="105" y="160" text-anchor="middle">A real code change</text>
+                <text class="d-sub" x="105" y="180" text-anchor="middle">Delegated typing</text>
+                <rect class="d-node" x="240" y="110" width="220" height="90" rx="8"/>
+                <text class="d-title" x="350" y="138" text-anchor="middle">Agent changes code</text>
+                <text class="d-sub" x="350" y="160" text-anchor="middle">Edits files, runs tests,</text>
+                <text class="d-sub" x="350" y="180" text-anchor="middle">reworks within agreed limits</text>
+                <rect class="d-node d-node-accent" x="530" y="30" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="58" text-anchor="middle">Person: collaborator</text>
+                <text class="d-sub" x="690" y="78" text-anchor="middle">Reads every diff</text>
+                <text class="d-sub" x="690" y="96" text-anchor="middle">before it ships</text>
+                <rect class="d-node" x="530" y="170" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="198" text-anchor="middle">Check</text>
+                <text class="d-sub" x="690" y="218" text-anchor="middle">Existing automated tests</text>
+                <text class="d-sub" x="690" y="236" text-anchor="middle">the agent runs</text>
+                <path class="d-line" d="M180 155H240" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M460 155H495V205H530" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M690 170V116" marker-end="url(#arrow)"/>
+                <text class="d-label" x="210" y="145" text-anchor="middle">delegates</text>
+                <text class="d-label" x="480" y="185" text-anchor="middle">diff + tests</text>
+                <text class="d-label" x="702" y="148" text-anchor="start">reads</text>
+                <rect class="d-boundary" x="30" y="262" width="820" height="34" rx="7"/>
+                <text class="d-sub" x="440" y="284" text-anchor="middle">Climb to L3 when a second agent or worktree runs in parallel and you read evidence, not lines.</text>
+              </svg>
+            </div>
+            <p class="diagram-key"><strong>Key:</strong> The accent node is what the person still does; the right column pairs that with the check behind the work; the bottom strip states the exit criterion.</p>
+          </details>
+          <figcaption id="fig-level-2-title-caption">Figure 4. L2 collaborator — the agent edits and tests; the person still reads every diff.</figcaption>
+        </figure>
+        <h3>L3 — Consultant: supervise several agents, read the evidence</h3>
+        <p>At L3 several agents run in parallel — separate worktrees, branches and check runs — and the person's job shifts from reading lines to supervising and reading evidence. The Knight role is <em>consultant</em>. This is the first level where the <a href="concept.html#graph-engineering">graph engineering</a> and <a href="concept.html#spec-driven-development">spec-driven development</a> concepts become load-bearing: parallel agents need contracts for their work. Gametime's published example<a href="#source-13" aria-label="Source 13: Gametime, How Gametime Engineering Hit Level 3">[13]</a> scores this level per repository — its web and mobile apps at L3 while the backend stayed high L2 on Shapiro's framework — which is the per-task scoring this page recommends.</p>
+        <figure class="concept-figure" data-diagram="static" id="fig-level-3">
+          <details class="figure-reading">
+            <summary><span class="figure-reading-label">Text alternative</span> — Read the L3 diagram as text</summary>
+            <ol>
+              <li>Several tasks arrive at once; the person delegates them to parallel agents.</li>
+              <li>Agents work with their own branches, worktrees and check runs.</li>
+              <li>The person, as consultant, supervises and reads evidence rather than every line.</li>
+              <li>The check is independent automated checks that the authoring agent cannot edit.</li>
+              <li>Climb to L4 when the agent starts work from triggers and you review specs, plans and test results instead of gating each change.</li>
+            </ol>
+          </details>
+          <details class="diagram-detail" open>
+            <summary>Diagram detail</summary>
+            <div class="figure-scroll">
+              <svg viewBox="0 0 880 300" role="img" aria-labelledby="fig-level-3-title fig-level-3-desc">
+                <title id="fig-level-3-title">L3 consultant: parallel agents, person reads evidence not lines</title>
+                <desc id="fig-level-3-desc">At L3 several agents run in parallel with their own branches and checks. The person as consultant supervises and reads evidence, and the check is independent automated checks the authoring agent cannot edit.</desc>
+                <rect class="d-node" x="30" y="110" width="150" height="90" rx="8"/>
+                <text class="d-title" x="105" y="138" text-anchor="middle">Tasks arrive</text>
+                <text class="d-sub" x="105" y="160" text-anchor="middle">Several at once</text>
+                <text class="d-sub" x="105" y="180" text-anchor="middle">Bounded by specs</text>
+                <rect class="d-node" x="240" y="110" width="220" height="90" rx="8"/>
+                <text class="d-title" x="350" y="138" text-anchor="middle">Agents work in parallel</text>
+                <text class="d-sub" x="350" y="160" text-anchor="middle">Own branches, worktrees</text>
+                <text class="d-sub" x="350" y="180" text-anchor="middle">and check runs</text>
+                <rect class="d-node d-node-accent" x="530" y="30" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="58" text-anchor="middle">Person: consultant</text>
+                <text class="d-sub" x="690" y="78" text-anchor="middle">Supervises several tasks;</text>
+                <text class="d-sub" x="690" y="96" text-anchor="middle">reads evidence, not lines</text>
+                <rect class="d-node" x="530" y="170" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="198" text-anchor="middle">Check</text>
+                <text class="d-sub" x="690" y="218" text-anchor="middle">Independent automated checks</text>
+                <text class="d-sub" x="690" y="236" text-anchor="middle">the authoring agent cannot edit</text>
+                <path class="d-line" d="M180 155H240" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M460 155H495V205H530" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M690 170V116" marker-end="url(#arrow)"/>
+                <text class="d-label" x="210" y="145" text-anchor="middle">delegates</text>
+                <text class="d-label" x="480" y="185" text-anchor="middle">branches + checks</text>
+                <text class="d-label" x="702" y="148" text-anchor="start">reads</text>
+                <rect class="d-boundary" x="30" y="262" width="820" height="34" rx="7"/>
+                <text class="d-sub" x="440" y="284" text-anchor="middle">Climb to L4 when the agent starts work from triggers and you review specs, plans and test results.</text>
+              </svg>
+            </div>
+            <p class="diagram-key"><strong>Key:</strong> The accent node is what the person still does; the right column pairs that with the check behind the work; the bottom strip states the exit criterion.</p>
+          </details>
+          <figcaption id="fig-level-3-title-caption">Figure 5. L3 consultant — parallel supervised agents; the person reads evidence, not every line.</figcaption>
+        </figure>
+        <h3>L4 — Approver: the agent starts work, you approve decisions</h3>
+        <p>At L4 a persistent agent starts work from triggers — a schedule, an event, a message — plans the work, runs sessions and collects evidence. The Knight role is <em>approver</em>: the person sets goals, approves plans and decisions, and handles exceptions. This is where <a href="concept.html#persistent-agents">persistent agents</a>, <a href="concept.html#harness-engineering">harness engineering</a> and intent-driven development carry the load. The <a href="tech-scan-workflows-factories.html">workflows and factories</a> page covers the orchestration side; <a href="tech-scan-verification.html">verification</a> covers what must be independent before you stop reviewing every change.</p>
+        <figure class="concept-figure" data-diagram="static" id="fig-level-4">
+          <details class="figure-reading">
+            <summary><span class="figure-reading-label">Text alternative</span> — Read the L4 diagram as text</summary>
+            <ol>
+              <li>A trigger arrives — a schedule, an event or a message — and the agent starts its own work.</li>
+              <li>A persistent agent plans, runs sessions and collects evidence.</li>
+              <li>The person, as approver, sets goals and approves decisions and exceptions.</li>
+              <li>The check is independent verification, evaluators and fast rollback.</li>
+              <li>Toward L5 only when authorised scope, holdout evaluation and minutes-fast rollback are proven.</li>
+            </ol>
+          </details>
+          <details class="diagram-detail" open>
+            <summary>Diagram detail</summary>
+            <div class="figure-scroll">
+              <svg viewBox="0 0 880 300" role="img" aria-labelledby="fig-level-4-title fig-level-4-desc">
+                <title id="fig-level-4-title">L4 approver: agent starts work from triggers, person approves decisions</title>
+                <desc id="fig-level-4-desc">At L4 a persistent agent starts work from triggers, plans and runs sessions. The person as approver sets goals and approves decisions and exceptions; the check is independent verification, evaluators and fast rollback.</desc>
+                <rect class="d-node" x="30" y="110" width="150" height="90" rx="8"/>
+                <text class="d-title" x="105" y="138" text-anchor="middle">Trigger arrives</text>
+                <text class="d-sub" x="105" y="160" text-anchor="middle">Schedule, event</text>
+                <text class="d-sub" x="105" y="180" text-anchor="middle">or message</text>
+                <rect class="d-node" x="240" y="110" width="220" height="90" rx="8"/>
+                <text class="d-title" x="350" y="138" text-anchor="middle">Agent starts its own work</text>
+                <text class="d-sub" x="350" y="160" text-anchor="middle">Persistent agent plans,</text>
+                <text class="d-sub" x="350" y="180" text-anchor="middle">runs sessions, collects evidence</text>
+                <rect class="d-node d-node-accent" x="530" y="30" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="58" text-anchor="middle">Person: approver</text>
+                <text class="d-sub" x="690" y="78" text-anchor="middle">Sets goals, approves</text>
+                <text class="d-sub" x="690" y="96" text-anchor="middle">decisions and exceptions</text>
+                <rect class="d-node" x="530" y="170" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="198" text-anchor="middle">Check</text>
+                <text class="d-sub" x="690" y="218" text-anchor="middle">Independent verification,</text>
+                <text class="d-sub" x="690" y="236" text-anchor="middle">evaluators, fast rollback</text>
+                <path class="d-line" d="M180 155H240" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M460 155H495V205H530" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M690 170V116" marker-end="url(#arrow)"/>
+                <text class="d-label" x="210" y="145" text-anchor="middle">triggers</text>
+                <text class="d-label" x="480" y="185" text-anchor="middle">plans + evidence</text>
+                <text class="d-label" x="702" y="148" text-anchor="start">approves</text>
+                <rect class="d-boundary" x="30" y="262" width="820" height="34" rx="7"/>
+                <text class="d-sub" x="440" y="284" text-anchor="middle">Toward L5 only when authorised scope, holdout evaluation and minutes-fast rollback are proven.</text>
+              </svg>
+            </div>
+            <p class="diagram-key"><strong>Key:</strong> The accent node is what the person still does; the right column pairs that with the check behind the work; the bottom strip states the exit criterion.</p>
+          </details>
+          <figcaption id="fig-level-4-title-caption">Figure 6. L4 approver — the agent starts work from triggers; the person approves goals and decisions.</figcaption>
+        </figure>
+        <h3>L5 — Observer: outcomes by exception</h3>
+        <p>At L5 an authorised automation route can carry a change to release without a person reading it first; the person watches outcomes and intervenes by exception. The Knight role is <em>observer</em>. Shapiro's March 2026 dark factories post describes StrongDM's Attractor — a feedback-loop factory explained by StrongDM's CTO Justin Massa — alongside Trycycle, Shapiro's own minimal skill<a href="#source-9" aria-label="Source 9: Dan Shapiro, Dark Factories: Rise of the Trycycle">[9]</a>; the StrongDM account is a vendor self-description, not an independently verified benchmark. The Oversight Ladder<a href="#source-10" aria-label="Source 10: dominik_ddd, The Oversight Ladder: The Five Levels of AI Coding Autonomy">[10]</a> is explicit that this level suits "exploration and throwaway work, not production a business depends on". Concepts behind it: <a href="concept.html#software-factory">the software factory</a> with light and dark routes, guardrails, and model selection.</p>
+        <figure class="concept-figure" data-diagram="static" id="fig-level-5">
+          <details class="figure-reading">
+            <summary><span class="figure-reading-label">Text alternative</span> — Read the L5 diagram as text</summary>
+            <ol>
+              <li>A change arrives inside an authorised route — checks, policy and monitors act without a reader.</li>
+              <li>Automation carries the change toward release.</li>
+              <li>The person, as observer, watches outcomes by exception and can stop the route.</li>
+              <li>The check is holdout evaluation and rollback measured in minutes.</li>
+              <li>There is no next level on this page: L5 is a direction, not a target.</li>
+            </ol>
+          </details>
+          <details class="diagram-detail" open>
+            <summary>Diagram detail</summary>
+            <div class="figure-scroll">
+              <svg viewBox="0 0 880 300" role="img" aria-labelledby="fig-level-5-title fig-level-5-desc">
+                <title id="fig-level-5-title">L5 observer: authorised automation releases, person watches by exception</title>
+                <desc id="fig-level-5-desc">At L5 an authorised route carries changes to release without a reader. The person as observer watches outcomes by exception and can stop the route; the check is holdout evaluation and rollback in minutes.</desc>
+                <rect class="d-node" x="30" y="110" width="150" height="90" rx="8"/>
+                <text class="d-title" x="105" y="138" text-anchor="middle">Change arrives</text>
+                <text class="d-sub" x="105" y="160" text-anchor="middle">Inside an authorised</text>
+                <text class="d-sub" x="105" y="180" text-anchor="middle">route</text>
+                <rect class="d-node" x="240" y="110" width="220" height="90" rx="8"/>
+                <text class="d-title" x="350" y="138" text-anchor="middle">Automation carries it</text>
+                <text class="d-sub" x="350" y="160" text-anchor="middle">Checks, policy and</text>
+                <text class="d-sub" x="350" y="180" text-anchor="middle">monitors act without a reader</text>
+                <rect class="d-node d-node-accent" x="530" y="30" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="58" text-anchor="middle">Person: observer</text>
+                <text class="d-sub" x="690" y="78" text-anchor="middle">Watches outcomes by exception;</text>
+                <text class="d-sub" x="690" y="96" text-anchor="middle">can stop the route</text>
+                <rect class="d-node" x="530" y="170" width="320" height="80" rx="8"/>
+                <text class="d-title" x="690" y="198" text-anchor="middle">Check</text>
+                <text class="d-sub" x="690" y="218" text-anchor="middle">Holdout evaluation and</text>
+                <text class="d-sub" x="690" y="236" text-anchor="middle">rollback in minutes</text>
+                <path class="d-line" d="M180 155H240" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M460 155H495V205H530" marker-end="url(#arrow)"/>
+                <path class="d-line" d="M690 170V116" marker-end="url(#arrow)"/>
+                <text class="d-label" x="210" y="145" text-anchor="middle">arrives</text>
+                <text class="d-label" x="480" y="185" text-anchor="middle">release path</text>
+                <text class="d-label" x="702" y="148" text-anchor="start">watches</text>
+                <rect class="d-boundary" x="30" y="262" width="820" height="34" rx="7"/>
+                <text class="d-sub" x="440" y="284" text-anchor="middle">No next level on this page — L5 is a direction, not a target.</text>
+              </svg>
+            </div>
+            <p class="diagram-key"><strong>Key:</strong> The accent node is what the person still does; the right column pairs that with the check behind the work; the bottom strip states the exit criterion.</p>
+          </details>
+          <figcaption id="fig-level-5-title-caption">Figure 7. L5 observer — authorised automation can release; the person watches outcomes and can stop the route.</figcaption>
+        </figure>
+      </section>
+      <section id="verification-gate">
+        <h2>Verification is the gate</h2>
+        <p>Every climb on this ladder is gated by verification, and the requirement gets stricter as the person reads less. The rule the <a href="concept.html#verification-engineering">verification engineering</a> concept already states applies here directly: nothing climbs past L2 without an automated check the agent cannot edit, and the climb from L4 to L5 additionally needs independent verification plus rollback measured in minutes. The <a href="tech-scan-verification.html">verification scan</a> covers how to build those checks; the <a href="concept.html#verification-engineering">Concepts section</a> covers why they must be independent of the author.</p>
+        <div class="table-scroll">
+          <table>
+            <caption>Minimum check strength required before climbing to each level.</caption>
+            <thead>
+              <tr><th scope="col">Climb to</th><th scope="col">Minimum check</th><th scope="col">Why</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>L1</td><td>You can run the code and read what the agent suggests</td><td>The person is still the author; the risk is wasted effort, not shipped defects</td></tr>
+              <tr><td>L2</td><td>Automated tests exist and the agent runs them in its loop</td><td>The agent now types; the person reads diffs, so checks must catch what eyes miss</td></tr>
+              <tr><td>L3</td><td>Checks are independent — the authoring agent cannot edit them</td><td>Parallel agents multiply the blast radius of a weak check</td></tr>
+              <tr><td>L4</td><td>Independent verification, holdout evaluation, rollback in minutes</td><td>The agent starts work without a reader; detection and undo must not depend on attention</td></tr>
+              <tr><td>L5</td><td>Authorised route, monitored exceptions, proven stop and rollback</td><td>No reader is in the loop at all; the route itself must be the check</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Addy Osmani frames the same gate as three questions to answer before raising autonomy on a task<a href="#source-2" aria-label="Source 2: Addy Osmani, Agentic Autonomy Levels">[2]</a>:</p>
+        <ul>
+          <li><strong>How quickly will we know we're wrong about what it's doing?</strong> Detection latency sets the ceiling on how much damage an autonomous run can do.</li>
+          <li><strong>How cleanly can we undo what it's doing?</strong> Rollback that takes minutes permits autonomy; rollback that takes days does not.</li>
+          <li><strong>What would prove we're right about what it's doing?</strong> The check must be independent of the agent that produced the work.</li>
+        </ul>
+      </section>
+      <section id="plateaus">
+        <h2>The two plateaus</h2>
+        <p>Two climbs fail for organisational reasons, not technical ones. Naming them helps teams diagnose a stall instead of blaming the tool.</p>
+        <h3>L2 to L3: reviewer fatigue</h3>
+        <p>At L2 the person reads every diff. The moment parallel agents multiply the diff volume, reading stops scaling — and teams quietly drift back to skimming, which is L3 behaviour without L3 verification. The exit criterion is therefore behavioural: you only climb when a second agent or worktree runs in parallel <em>and</em> you have replaced line-reading with evidence-reading that the authoring agent cannot edit. Anthropic's measurement work<a href="#source-8" aria-label="Source 8: Anthropic, Measuring Agent Autonomy">[8]</a> shows the same direction in the wild: among the longest-running Claude Code sessions, the time the agent works before stopping nearly doubled in three months, from under 25 to over 45 minutes, while 73% of sampled tool calls still appeared to involve a human in the loop in some way.</p>
+        <h3>L3 to L4: spec quality and supervision</h3>
+        <p>The harder plateau is L3 to L4. Steve Yegge's account, analysed by Augment Code<a href="#source-11" aria-label="Source 11: Augment Code, Steve Yegge's 8 Levels of AI Development">[11]</a>, describes the coordination problems that appear when agents outnumber the humans who can supervise them. The climb depends on spec quality: if specs feed agents well enough that the agent starts work from triggers and you approve goals and exceptions instead of gating each change, you are at L4; if you still review every change, you are at L3. Dan Shapiro's March 2026 dark factories post<a href="#source-9" aria-label="Source 9: Dan Shapiro, Dark Factories: Rise of the Trycycle">[9]</a> names the same prerequisite from the other side — his Trycycle skill is the plan-check loop in its plainest form: define the problem, write a plan, implement, check, repeat.</p>
+        <p>Gametime's published levels show the same pattern at repository scale: web and mobile repos at L3, the backend at high L2 on Shapiro's framework<a href="#source-13" aria-label="Source 13: Gametime, How Gametime Engineering Hit Level 3">[13]</a>. Score per task and per repo, cap by risk, and let different parts of the system sit at different levels.</p>
+      </section>
+      <section id="per-task">
+        <h2>Score per task, cap by risk</h2>
+        <p>A team does not have a level; a task does. The Futurum analysis of Qodo's L1–L4 earned-autonomy framework says the same in Qodo's numbering: "a team can operate at L4 for some workflows while keeping others at L3"<a href="#source-12" aria-label="Source 12: Futurum Group, Qodo Builds the Governance Layer Agentic SDLC Has Been Missing">[12]</a>. The METR study<a href="#source-6" aria-label="Source 6: METR, Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity">[6]</a> of 16 developers on 246 tasks adds a warning about measurement: developers' own estimates of how much the agent sped them up were far more optimistic than observed completion times — so score tasks on observable behaviours (what the person read, which checks ran, whether rollback was needed), not on self-reported velocity.</p>
+        <p>Before raising autonomy on a task, write the run contract. Osmani's checklist<a href="#source-2" aria-label="Source 2: Addy Osmani, Agentic Autonomy Levels">[2]</a> covers:</p>
+        <ul>
+          <li><strong>Goal</strong> — the outcome, in one sentence.</li>
+          <li><strong>Scope</strong> — which files, services and systems the agent may touch.</li>
+          <li><strong>Non-goals</strong> — what the agent must not do, even if it sees a way.</li>
+          <li><strong>Tools and permissions</strong> — exactly what the agent can run and change.</li>
+          <li><strong>Stopping condition</strong> — when the agent must stop and ask.</li>
+          <li><strong>Evidence</strong> — what the agent must produce to prove the work.</li>
+          <li><strong>Escalation</strong> — who decides when the agent is unsure.</li>
+          <li><strong>Budget</strong> — time, tokens and cost ceiling for the run.</li>
+        </ul>
+        <p>Then cap by risk. Osmani's metrics for judging whether autonomy is working<a href="#source-2" aria-label="Source 2: Addy Osmani, Agentic Autonomy Levels">[2]</a>: mean time between interventions, longest successful unattended run with accepted work, defect escape rate, and token cost per accepted change. If interventions cluster, the level is too high for that task; step down.</p>
+      </section>
+      <section id="delivery-system">
+        <h2>What the delivery system needs to support</h2>
+        <p>The organisational axis matters as much as the task axis. The 2025 DORA report<a href="#source-5" aria-label="Source 5: Google Cloud, Announcing the 2025 DORA Report">[5]</a>, based on roughly 5,000 professionals, found that AI adoption is associated with <em>worse</em> delivery stability unless the surrounding system is strong — "AI doesn't fix a team; it amplifies what's already there". DORA names seven capabilities that magnify AI's benefits: clear AI stance, healthy data ecosystems, strong version control, small batch sizes, platform engineering, quality internal platforms, and fast feedback loops. The <a href="transformation.html">transformation page</a> covers building those capabilities; the short version for this ladder is that <strong>your delivery system caps the level any task can safely reach</strong>. Weak version control or slow feedback makes L3 the ceiling no matter how good the agent is. The <a href="tech-scan-delivery.html">delivery scan</a> covers the release and rollback side of that cap.</p>
+      </section>
+      <section id="l5-direction">
+        <h2>L5: a direction, not a target</h2>
+        <p>L5 is the level most easily misread as a destination. Three cautions:</p>
+        <ul>
+          <li><strong>Vendor self-description.</strong> The best-known L5 account is StrongDM's Attractor factory, explained by its CTO in Shapiro's March 2026 dark factories post<a href="#source-9" aria-label="Source 9: Dan Shapiro, Dark Factories: Rise of the Trycycle">[9]</a>. That is one company's account of its own system — useful as a pattern, not as evidence that L5 is proven at scale.</li>
+          <li><strong>Unattended autonomy has a domain.</strong> The Oversight Ladder<a href="#source-10" aria-label="Source 10: dominik_ddd, The Oversight Ladder: The Five Levels of AI Coding Autonomy">[10]</a> is explicit: Level 5 is for "exploration and throwaway work, not production a business depends on", and "treating Level 5 as the goal is how expensive mistakes reach production".</li>
+          <li><strong>No proven general playbook.</strong> There is no public, independently verified playbook for climbing from L4 to L5. The Yegge analysis<a href="#source-11" aria-label="Source 11: Augment Code, Steve Yegge's 8 Levels of AI Development">[11]</a> describes the coordination problems at the top of the ladder; it does not hand over a recipe.</li>
+        </ul>
+        <p>Treat L5 as the direction the ladder points — useful for designing guardrails, routes and monitoring now — rather than a level to announce. The <a href="concept.html#software-factory">software factory</a> concept's light and dark routes are the same idea from the release side: dark routes are where L5 behaviour lives, and they stay dark until the evidence says otherwise.</p>
+      </section>
+      <section id="step-down">
+        <h2>Step back down</h2>
+        <p>Maturity is not a ratchet. The <a href="concept.html#software-factory">Concepts page already states the regression rule</a>: "If incidents or undone changes become more common, restore human review." Operationally, that means:</p>
+        <ul>
+          <li>Track the Osmani metrics per task type; a rising intervention rate or defect escape rate is the signal to lower the setting for that task.</li>
+          <li>Keep the run contract current — scope, stopping condition and escalation paths decay as the codebase changes.</li>
+          <li>Remember Fowler's caution about maturity models: the true outcome of an assessment "isn't what level you are but the list of things you need to work on to improve"<a href="#source-7" aria-label="Source 7: Martin Fowler, MaturityModel (bliki)">[7]</a>. A level is a diagnostic, not a badge.</li>
+        </ul>
+      </section>
+      <section id="sources">
+        <h2>Sources</h2>
+        <p class="source-check-date">References last checked: <time datetime="2026-11-20">20 November 2026</time></p>
+        <ol class="source-list">
+          <li id="source-1"><a href="https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/">Dan Shapiro, The Five Levels: from Spicy Autocomplete to the Dark Factory</a> — five-level delegation framing; the ladder names and exit tests are this page's synthesis. Used in <a href="#start-here">Where are we?</a> and <a href="#ladder">The ladder L0 to L5</a>.</li>
+          <li id="source-2"><a href="https://addyosmani.com/blog/agentic-autonomy-levels/">Addy Osmani, Agentic Autonomy Levels</a> — autonomy as a per-deployment setting, three questions, run-contract checklist, autonomy metrics. Used in <a href="#start-here">Where are we?</a>, <a href="#ladder">The ladder L0 to L5</a>, <a href="#verification-gate">Verification is the gate</a> and <a href="#per-task">Score per task, cap by risk</a>.</li>
+          <li id="source-3"><a href="https://codex.danielvaughan.com/2026/04/21/ai-codebase-maturity-model-codex-cli-five-levels-self-sustaining-systems/">Daniel Vaughan, The AI Codebase Maturity Model</a> — levels defined by feedback-loop topology; three-axis assessment (autonomy, controls, governance). Used in <a href="#start-here">Where are we?</a>.</li>
+          <li id="source-4"><a href="https://knightcolumbia.org/research/levels-of-autonomy-for-ai-agents">Knight First Amendment Institute, Levels of Autonomy for AI Agents</a> — operator, collaborator, consultant, approver, observer roles. Used in <a href="#start-here">Where are we?</a> and <a href="#ladder">The ladder L0 to L5</a>.</li>
+          <li id="source-5"><a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report">Google Cloud, Announcing the 2025 DORA Report</a> — AI amplifies teams; seven capabilities; stability findings. Used in <a href="#delivery-system">What the delivery system needs to support</a>.</li>
+          <li id="source-6"><a href="https://arxiv.org/abs/2507.09089">METR, Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity</a> — 16 developers, 246 tasks; self-reports vs observed time. Used in <a href="#per-task">Score per task, cap by risk</a>.</li>
+          <li id="source-7"><a href="https://martinfowler.com/bliki/MaturityModel.html">Martin Fowler, MaturityModel (bliki)</a> — maturity models as diagnostics, not badges. Used in <a href="#step-down">Step back down</a>.</li>
+          <li id="source-8"><a href="https://www.anthropic.com/research/measuring-agent-autonomy">Anthropic, Measuring Agent Autonomy</a> — human-in-loop share and run lengths over time. Used in <a href="#plateaus">The two plateaus</a>.</li>
+          <li id="source-9"><a href="https://www.danshapiro.com/blog/2026/03/dark-factories-rise-of-the-trycycle/">Dan Shapiro, Dark Factories: Rise of the Trycycle</a> — StrongDM's Attractor (CTO account) and Shapiro's Trycycle skill; vendor self-description. Used in <a href="#ladder">The ladder L0 to L5</a>, <a href="#plateaus">The two plateaus</a> and <a href="#l5-direction">L5: a direction, not a target</a>.</li>
+          <li id="source-10"><a href="https://dev.to/dominik_ddd/the-oversight-ladder-the-five-levels-of-ai-coding-autonomy-1d94">dominik_ddd, The Oversight Ladder: The Five Levels of AI Coding Autonomy</a> — dial not scoreboard; Level 5 domain limits. Used in <a href="#ladder">The ladder L0 to L5</a> and <a href="#l5-direction">L5: a direction, not a target</a>.</li>
+          <li id="source-11"><a href="https://www.augmentcode.com/guides/steve-yegge-8-levels-ai-assisted-development">Augment Code, Steve Yegge's 8 Levels of AI Development</a> — eight-level progression and coordination problems at the top. Used in <a href="#plateaus">The two plateaus</a> and <a href="#l5-direction">L5: a direction, not a target</a>.</li>
+          <li id="source-12"><a href="https://futurumgroup.com/insights/qodo-builds-the-governance-layer-agentic-sdlc-has-been-missing/">Futurum Group, Qodo Builds the Governance Layer Agentic SDLC Has Been Missing</a> — Qodo's L1–L4 earned autonomy framework; per-workflow levels. Used in <a href="#start-here">Where are we?</a> and <a href="#per-task">Score per task, cap by risk</a>.</li>
+          <li id="source-13"><a href="https://gametime.co/blog/how-gametime-engineering-hit-level-3-and-why-the-real-work-starts-now/">Gametime, How Gametime Engineering Hit Level 3</a> — published per-repo L2/L3 example. Used in <a href="#ladder">The ladder L0 to L5</a> and <a href="#plateaus">The two plateaus</a>.</li>
+        </ol>
+      </section>
+        <p class="source-ref">Last editorial review: <time datetime="2026-11-20">20 November 2026</time>.</p>
+        <footer class="article-footer"><span><a href="index.html#about-guidance">About this guidance</a></span><span>AI-Software Development Lifecycle</span><span>EDS</span></footer>
+      </article>
+    </main>
+    <aside class="page-contents">
+      <nav aria-label="On this page"><p>On this page</p><a href="#start-here">Where are we?</a>
+<a href="#ladder">The ladder L0 to L5</a>
+<a href="#verification-gate">Verification is the gate</a>
+<a href="#plateaus">The two plateaus</a>
+<a href="#per-task">Score per task, cap by risk</a>
+<a href="#delivery-system">What the delivery system needs to support</a>
+<a href="#l5-direction">L5: a direction, not a target</a>
+<a href="#step-down">Step back down</a>
+<a href="#sources">Sources</a></nav>
+    </aside>
+  </div>
+</body>
+</html>

@@ -5,7 +5,7 @@ from test_sources import Document, normalise
 
 DIST = Path(__file__).resolve().parents[1] / 'site/dist'
 CHILDREN = ['tech-scan-models.html', 'tech-scan-harness.html', 'tech-scan-gateway.html', 'tech-scan-sandbox.html', 'tech-scan-agents.html', 'tech-scan-workflows-factories.html']
-EXISTING = ['tech-scan.html', 'tech-scan-models.html', 'tech-scan-harness.html', 'tech-scan-gateway.html', 'tech-scan-sandbox.html']
+EXISTING = ['tech-scan.html', 'tech-scan-models.html', 'tech-scan-harness.html', 'tech-scan-gateway.html', 'tech-scan-sandbox.html', 'concept-maturity.html']
 
 class NavigationTests(unittest.TestCase):
     def test_hub_includes_research_signals_and_not_just_publication_plan(self):

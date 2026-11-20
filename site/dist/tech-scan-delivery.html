@@ -29,6 +29,9 @@
           <a href="index.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5v-15Z M11.5 2.5V6H15 M7.5 9h5 M7.5 12h5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Introduction</a>
           <a href="transformation.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5.5v5.5H3V3Zm8.5 0H17v5.5h-5.5V3ZM3 11.5h5.5V17H3v-5.5Zm8.5 0H17V17h-5.5v-5.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>Organisation transformation</a>
           <a href="concept.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2 7 4-7 4-7-4 7-4Zm-7 8 7 4 7-4M3 14l7 4 7-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Concepts</a>
+          <div class="nav-children">
+            <a href="concept-maturity.html">Maturity</a>
+          </div>
           <a href="tech-scan.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M3 10h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tech Scan (draft)</a>
           <div class="nav-children">
             <a href="tech-radar.html">Tech Radar</a>
@@ -147,7 +150,7 @@
         <p>Whether any AWS-native service replaces Incident Manager's response plans and escalation for new accounts is unresolved: OpsCenter tracks OpsItems, and the rota and response-plan parts still need a partner product or a composed runbook.</p>
         <p>Whether CodePipeline V1 will be frozen, or the console default changed, is an open question: no AWS statement to that effect was found. Do not plan a V1 exit on an assumed date.</p>
         <p>The AppConfig managed-experimentation general-availability date was not re-verified here; confirm it against the AWS What's New post before asserting it. CodeCatalyst is assessed in <a href="tech-scan-workflows-factories.html#do-not-use">Workflows &amp; factories</a>, not duplicated here.</p></section>
-        <section id="sources"><h2>Sources</h2><p class="source-check-date">References last checked: <time datetime="2026-11-18">18 November 2026</time>.</p><ol class="source-list">
+        <section id="sources"><h2>Sources</h2><p class="source-check-date">References last checked: <time datetime="2026-11-20">20 November 2026</time>.</p><ol class="source-list">
         <li id="source-1"><a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions.html">AWS, Use action types, custom actions, and approval actions</a>. Action categories used in <a href="#candidate">Choose a delivery path</a>.</li>
         <li id="source-2"><a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/approvals-action-add.html">AWS, Add a manual approval action to a pipeline</a>. Manual approval placement and permissions in <a href="#candidate">Choose a delivery path</a>.</li>
         <li id="source-3"><a href="https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments">GitHub, Managing environments for deployment</a>. Review controls, self-review and plan limitations in <a href="#candidate">Choose a delivery path</a>.</li>

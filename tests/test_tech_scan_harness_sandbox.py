@@ -178,7 +178,8 @@ class HarnessSandboxTests(unittest.TestCase):
                     entry = node_by_id(doc, f"source-{ordinal}")
                     self.assertEqual(next(entry.elements('a')).attrs['href'], url)
                 nav = next(n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'Guide')
-                expected = before['nav'][:4] + [('tech-radar.html', 'Tech Radar')] + before['nav'][8:]
+                expected = (before['nav'][:3] + [('concept-maturity.html', 'Maturity')]
+                            + before['nav'][3:4] + [('tech-radar.html', 'Tech Radar')] + before['nav'][8:])
                 self.assertEqual([(a.attrs.get('href'), text(a)) for a in nav.elements('a')], expected)
                 self.assertEqual([(n.attrs.get('datetime'), text(n)) for n in doc.root.elements('time')], before['dates'])
 
@@ -262,7 +263,7 @@ BASELINE = {'harness': {'ids': ['aws-first-default',
                      ('https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/',
                       'Training'),
                      ('about.html', 'About')],
-             'dates': [('2026-11-18', '18 November 2026'), ('2026-11-12', '12 November 2026')]},
+             'dates': [('2026-11-20', '20 November 2026'), ('2026-11-12', '12 November 2026')]},
  'sandbox': {'ids': ['aws-first-default',
                      'conditional-alternatives',
                      'do-not-use',
@@ -324,7 +325,7 @@ BASELINE = {'harness': {'ids': ['aws-first-default',
                      ('https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/',
                       'Training'),
                      ('about.html', 'About')],
-             'dates': [('2026-11-18', '18 November 2026'), ('2026-11-12', '12 November 2026')]}}
+             'dates': [('2026-11-20', '20 November 2026'), ('2026-11-12', '12 November 2026')]}}
 
 
 if __name__ == "__main__":

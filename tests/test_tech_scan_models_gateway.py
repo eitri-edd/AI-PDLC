@@ -47,12 +47,12 @@ LEGACY_URLS = {
     ],
 }
 # "References last checked" / "Last editorial review" per page.
-# Check dates moved to 18 November 2026 with the daily reference check;
+# Check dates moved to 20 November 2026 with the daily reference check;
 # gateway was 13 November 2026 after the issue #81 source replacement.
 # Editorial review dates stay where the last edit left them.
 CHECK_DATES = {
-    "models": ("18 November 2026", "2026-11-18"),
-    "gateway": ("18 November 2026", "2026-11-18"),
+    "models": ("20 November 2026", "2026-11-20"),
+    "gateway": ("20 November 2026", "2026-11-20"),
 }
 EDITORIAL_DATES = {
     "models": "2026-11-12",
@@ -227,7 +227,8 @@ class ModelsGatewayTests(unittest.TestCase):
         self.assertIsNotNone(guide)
         assert guide is not None
         nav = next(n for n in doc.root.elements("nav") if n.attrs.get("aria-label") == "Guide")
-        expected = BASELINE["harness"]["nav"][:4] + [("tech-radar.html", "Tech Radar")] + BASELINE["harness"]["nav"][8:]
+        expected = (BASELINE["harness"]["nav"][:3] + [("concept-maturity.html", "Maturity")]
+                    + BASELINE["harness"]["nav"][3:4] + [("tech-radar.html", "Tech Radar")] + BASELINE["harness"]["nav"][8:])
         self.assertEqual([(a.attrs.get("href"), normalise(a.text())) for a in nav.elements("a")], expected)
         check_text, check_datetime = CHECK_DATES[page]
         dates = [node for node in doc.root.elements("p") if node.has_class("source-check-date")]
