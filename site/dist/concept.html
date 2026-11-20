@@ -132,6 +132,7 @@
             <tr><th scope="row"><a href="#models">Model selection</a></th><td>The developer compares models on representative asset-management tasks using the same tools and checks. Correctness, correction effort, time, cost and data handling inform the choice.</td></tr>
           </tbody></table></div>
           <p>A failed check can expose an unresolved decision. If the team has not agreed whether members may submit an annual declaration after its due date, another code retry will not settle that question. The product owner resolves the expected behaviour; the developer records the decision and updates the criteria and task context before the agent continues.</p>
+          <p>How far to delegate each task is a separate decision from which practices to apply. The <a href="tech-scan-maturity.html">Tech Scan maturity reference</a> describes the L0–L5 levels of delegation, what a person still reads at each level, and the verification each climb requires; this page teaches the practices that make each climb safe.</p>
           </aside>
         </section>
         <section id="intent-driven-development">
@@ -580,7 +581,7 @@
           <p>In this guide, a software factory brings requirements, agent work, testing, review and release controls into a repeatable delivery workflow. The aim is to turn agreed work into changes that the team can check, release and support.</p>
           <p>Use the idea when individual coding tasks are fast but work still waits for clarification, review or release. Improving one task does not remove the constraints elsewhere in delivery.</p>
           <h3>Choose how people review and approve changes</h3>
-          <p>Addy Osmani uses “light” and “dark” factory to distinguish review arrangements. In a light factory, a person reads changes before release. In a dark factory, permitted changes can be released without that reading step. These are operating choices, not levels of maturity.</p>
+          <p>Addy Osmani uses “light” and “dark” factory to distinguish review arrangements. In a light factory, a person reads changes before release. In a dark factory, permitted changes can be released without that reading step. These are operating choices, not levels of maturity. The <a href="tech-scan-maturity.html">maturity reference</a> measures how much a person still reads and verifies per task; light or dark stays a release-route choice for each change type, not a rung on the ladder.</p>
           <figure class="concept-figure" id="fig-factory">
   <figcaption id="fig-factory-title-caption">Figure 7. Agreed checks and release authority govern what reaches production.</figcaption>
   <details class="figure-reading"><summary>Read as text: Flow and decisions</summary><ol><li>Start with a queue of agreed work. Agents implement changes within their permissions and run the relevant checks.</li><li>If checks fail, correct the work or stop. A failure does not permit deployment.</li><li>For the light route, a person reviews the change. For an authorised dark route, automation makes the release decision within its agreed scope.</li><li>Release only when the applicable decision permits it. Feed monitoring results and user feedback into the next work items.</li></ol></details>

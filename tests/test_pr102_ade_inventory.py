@@ -76,7 +76,7 @@ class ADEInventoryTests(unittest.TestCase):
                     'https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/'}
         # Later pages add their own pass, source and shared-link reviews; exclude
         # only those additions so inherited records stay pinned.
-        later_pages = {'tech-scan-ai-workflows.html', 'tech-radar.html'}
+        later_pages = {'tech-scan-ai-workflows.html', 'tech-radar.html', 'tech-scan-maturity.html'}
         # URLs that exist only for the AI workflows page are part of that page's
         # source pass, not the inherited inventory this digest pins.
         new_urls |= {r['url'] for r in self.inventory['references'] if set(r['files']) <= later_pages}

@@ -6,8 +6,8 @@ from test_sources import Document, normalise
 DIST = Path(__file__).resolve().parents[1] / 'site/dist'
 GROUPS = ['models-access', 'agent-environment', 'agents-workflows', 'verification-delivery']
 SPOKES = ['tech-scan-agents.html', 'tech-scan-context.html', 'tech-scan-delivery.html',
-          'tech-scan-gateway.html', 'tech-scan-harness.html', 'tech-scan-models.html',
-          'tech-scan-sandbox.html', 'tech-scan-stack-views.html',
+          'tech-scan-gateway.html', 'tech-scan-harness.html', 'tech-scan-maturity.html',
+          'tech-scan-models.html', 'tech-scan-sandbox.html', 'tech-scan-stack-views.html',
           'tech-scan-verification.html', 'tech-scan-workflows-factories.html']
 REFERENCES = {
     'models-access': {'tech-scan-models.html', 'tech-scan-gateway.html'},
