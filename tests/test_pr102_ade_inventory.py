@@ -148,7 +148,7 @@ class ADEInventoryTests(unittest.TestCase):
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
         baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        # Digests advanced by the daily reference check on 18 November 2026,
+        # Digests advanced by the daily reference check on 20 November 2026,
         # which legitimately advances page_passes dates and per-entry
         # checked_on/http_status/final_url/method. The reviews digest moved
         # again the same day when the Lambda MicroVMs x86 date and the
@@ -160,7 +160,7 @@ class ADEInventoryTests(unittest.TestCase):
         # Issue 137 fix: the KEV LiteLLM count moves from three to four
         # (CVE-2026-40217 added 18 November 2026), so the two KEV
         # claim_reviews scope strings advance the reviews digest.
-        self.assertEqual(digest, '2a1da8a5dcf3d8ae026350a011447723b13f305feb5c561b60e91b23ce34c42f')
+        self.assertEqual(digest, '523e9508262f296e5a324a4de3015ab2745f8b2ca18a55ab6242c183a30138fa')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -179,7 +179,7 @@ class ADEInventoryTests(unittest.TestCase):
         metadata['https://devin.ai/blog/introducing-devin-bots']['source_entries'].remove(
             {'file': 'concept.html', 'id': 'source-48'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        self.assertEqual(actual, '4e66c8c395e0373fa8ce23542e985fb98df7fea571a065f810a853b9b439c9d2')
+        self.assertEqual(actual, '8f21b7460ebb74b1d8eda473331636a4b2b37be4d6f694bf560331d054dfc9d9')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:
