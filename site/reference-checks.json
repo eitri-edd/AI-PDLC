@@ -237,7 +237,7 @@
     },
     "tech-scan-maturity.html": {
       "checked_on": "2026-11-20",
-      "scope": "New page for issue 140: whole-page source pass on 20 November 2026. All thirteen cited sources fetched live and compared with the claims that cite them; four cited as limited (vendor self-description, single field guide, company self-report, unverified third axis). Shared operational links retain their prior disposition.",
+      "scope": "New page for issue 140: whole-page source pass on 20 November 2026. All thirteen cited sources fetched live and compared with the claims that cite them; four cited as limited (vendor self-description, single field guide, company self-report, unverified third axis). After review, seven source URLs were corrected to the canonical locations actually fetched (the earlier strings 404'd or pointed at different articles), and three attributions (Osmani level names, Qodo vs Microsoft/Atlassian, StrongDM Attractor vs Trycycle) were fixed to match the fetched texts. Shared operational links retain their prior disposition.",
       "status": "completed with explicit limitations",
       "source_entries": 13,
       "unique_fetch_destinations": 13
@@ -21191,25 +21191,25 @@
       ]
     },
     {
-      "url": "https://danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-dark-factory/",
+      "url": "https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/",
       "files": [
         "tech-scan-maturity.html"
       ],
       "hrefs": [
-        "https://danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-dark-factory/"
+        "https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/"
       ],
       "checked_on": "2026-11-20",
       "result": "retrieved",
       "http_status": 200,
-      "final_url": "https://danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-dark-factory/",
+      "final_url": "https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-scan-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
-          "scope": "Five-levels framing L0-L5, the 'delegate three recurring chores' exit test for leaving the baseline, and the pointer to StrongDM.",
-          "evidence_summary": "The essay defines the five levels and the L0-L5 naming used across the page; cited for ladder structure only.",
+          "scope": "Five-levels delegation framing from spicy autocomplete to the dark factory; cited for the ladder framing only.",
+          "evidence_summary": "The essay defines the five levels with car-autonomy metaphors; the page's L0-L5 names, role names and exit tests are its own synthesis and say so.",
           "limitation": "Practitioner essay, not a benchmark; level names are Shapiro's framing."
         }
       ],
@@ -21251,26 +21251,25 @@
       ]
     },
     {
-      "url": "https://danielvaughan.com/2025/10/12/agentic-coding-maturity-model/",
+      "url": "https://codex.danielvaughan.com/2026/04/21/ai-codebase-maturity-model-codex-cli-five-levels-self-sustaining-systems/",
       "files": [
         "tech-scan-maturity.html"
       ],
       "hrefs": [
-        "https://danielvaughan.com/2025/10/12/agentic-coding-maturity-model/"
+        "https://codex.danielvaughan.com/2026/04/21/ai-codebase-maturity-model-codex-cli-five-levels-self-sustaining-systems/"
       ],
       "checked_on": "2026-11-20",
       "result": "retrieved",
       "http_status": 200,
-      "final_url": "https://danielvaughan.com/2025/10/12/agentic-coding-maturity-model/",
+      "final_url": "https://codex.danielvaughan.com/2026/04/21/ai-codebase-maturity-model-codex-cli-five-levels-self-sustaining-systems/",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-scan-maturity.html",
           "checked_on": "2026-11-20",
-          "outcome": "limited",
-          "scope": "ACMM's feedback-loop topology framing: maturity comes from tightening loops rather than chasing a level.",
-          "evidence_summary": "The essay frames progress through feedback-loop topology; cited once as a complementary framing.",
-          "limitation": "The model's claimed third maturity axis is unverified; the page cites only the feedback-loop point and lists the source with that caveat."
+          "outcome": "supported",
+          "scope": "ACMM's feedback-loop topology framing: each level is defined by the mechanisms that must exist before the next level becomes possible; plus a three-axis assessment (autonomy, controls, governance).",
+          "evidence_summary": "The essay states levels are defined by feedback-loop topology and cannot be skipped; cited once as a complementary framing."
         }
       ],
       "source_entries": [
@@ -21430,25 +21429,25 @@
       ]
     },
     {
-      "url": "https://danshapiro.com/blog/2026/03/dark-factories-the-rise-of-the-trycycle/",
+      "url": "https://www.danshapiro.com/blog/2026/03/dark-factories-rise-of-the-trycycle/",
       "files": [
         "tech-scan-maturity.html"
       ],
       "hrefs": [
-        "https://danshapiro.com/blog/2026/03/dark-factories-the-rise-of-the-trycycle/"
+        "https://www.danshapiro.com/blog/2026/03/dark-factories-rise-of-the-trycycle/"
       ],
       "checked_on": "2026-11-20",
       "result": "retrieved",
       "http_status": 200,
-      "final_url": "https://danshapiro.com/blog/2026/03/dark-factories-the-rise-of-the-trycycle/",
+      "final_url": "https://www.danshapiro.com/blog/2026/03/dark-factories-rise-of-the-trycycle/",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-scan-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "limited",
-          "scope": "Shapiro's March 2026 account of StrongDM's Trycycle dark-factory system, including StrongDM's CTO.",
-          "evidence_summary": "The post describes Trycycle and quotes the CTO; cited as the best-known L5 example with an explicit vendor self-description caveat.",
+          "scope": "Shapiro's March 2026 dark factories post: StrongDM's Attractor factory explained by its CTO Justin Massa, and Trycycle as Shapiro's own minimal plan-check skill.",
+          "evidence_summary": "The post distinguishes the StrongDM Attractor (Justin Massa's factory) from Trycycle (Shapiro's skill); cited for the L5 example with an explicit vendor self-description caveat.",
           "limitation": "Vendor self-description reported second-hand; not independently verified and not evidence that L5 is proven at scale."
         }
       ],
@@ -21460,25 +21459,25 @@
       ]
     },
     {
-      "url": "https://dev.to/alexshapow/alex-s-autonomy-ladder-from-ai-assistant-to-full-autonomy-a-field-guide-for-engineers-3p5k",
+      "url": "https://dev.to/dominik_ddd/the-oversight-ladder-the-five-levels-of-ai-coding-autonomy-1d94",
       "files": [
         "tech-scan-maturity.html"
       ],
       "hrefs": [
-        "https://dev.to/alexshapow/alex-s-autonomy-ladder-from-ai-assistant-to-full-autonomy-a-field-guide-for-engineers-3p5k"
+        "https://dev.to/dominik_ddd/the-oversight-ladder-the-five-levels-of-ai-coding-autonomy-1d94"
       ],
       "checked_on": "2026-11-20",
       "result": "retrieved",
       "http_status": 200,
-      "final_url": "https://dev.to/alexshapow/alex-s-autonomy-ladder-from-ai-assistant-to-full-autonomy-a-field-guide-for-engineers-3p5k",
+      "final_url": "https://dev.to/dominik_ddd/the-oversight-ladder-the-five-levels-of-ai-coding-autonomy-1d94",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-scan-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "limited",
-          "scope": "The Oversight Ladder field guide's caution that fully autonomous operation is legitimate for exploration and throwaway work, not as a production default.",
-          "evidence_summary": "The guide states that domain limit for its top autonomy level; cited for the L5 caution.",
+          "scope": "The Oversight Ladder's five levels of AI coding autonomy and its caution that Level 5 suits exploration and throwaway work, not production a business depends on.",
+          "evidence_summary": "The article states Level 5 is for 'exploration and throwaway work' and warns that 'treating Level 5 as the goal is how expensive mistakes reach production'; cited for the L5 domain limit.",
           "limitation": "Single practitioner field guide, not empirical research; treated as a caution, not a rule."
         }
       ],
@@ -21490,25 +21489,25 @@
       ]
     },
     {
-      "url": "https://www.augmentcode.com/guides/steve-yegge-agentic-coding-levels",
+      "url": "https://www.augmentcode.com/guides/steve-yegge-8-levels-ai-assisted-development",
       "files": [
         "tech-scan-maturity.html"
       ],
       "hrefs": [
-        "https://www.augmentcode.com/guides/steve-yegge-agentic-coding-levels"
+        "https://www.augmentcode.com/guides/steve-yegge-8-levels-ai-assisted-development"
       ],
       "checked_on": "2026-11-20",
       "result": "retrieved",
       "http_status": 200,
-      "final_url": "https://www.augmentcode.com/guides/steve-yegge-agentic-coding-levels",
+      "final_url": "https://www.augmentcode.com/guides/steve-yegge-8-levels-ai-assisted-development",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-scan-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
-          "scope": "Augment Code's analysis of Steve Yegge's eight agentic coding levels, including the coordination cliff.",
-          "evidence_summary": "The guide summarises Yegge's levels and the coordination problems at the top; cited for the L3-L4 plateau.",
+          "scope": "Augment Code's analysis of Steve Yegge's eight agentic coding levels, including coordination failures at the top of the ladder.",
+          "evidence_summary": "The guide maps Yegge's eight levels and the coordination problems that appear when agents outnumber supervising humans; cited for the L3-L4 plateau.",
           "limitation": "Second-hand analysis of a practitioner's account; not Yegge's own text."
         }
       ],
@@ -21520,26 +21519,26 @@
       ]
     },
     {
-      "url": "https://futurumgroup.com/insights/microsofts-agentic-ai-maturity-model-a-four-level-framework-for-enterprise-adoption/",
+      "url": "https://futurumgroup.com/insights/qodo-builds-the-governance-layer-agentic-sdlc-has-been-missing/",
       "files": [
         "tech-scan-maturity.html"
       ],
       "hrefs": [
-        "https://futurumgroup.com/insights/microsofts-agentic-ai-maturity-model-a-four-level-framework-for-enterprise-adoption/"
+        "https://futurumgroup.com/insights/qodo-builds-the-governance-layer-agentic-sdlc-has-been-missing/"
       ],
       "checked_on": "2026-11-20",
       "result": "retrieved",
       "http_status": 200,
-      "final_url": "https://futurumgroup.com/insights/microsofts-agentic-ai-maturity-model-a-four-level-framework-for-enterprise-adoption/",
+      "final_url": "https://futurumgroup.com/insights/qodo-builds-the-governance-layer-agentic-sdlc-has-been-missing/",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-scan-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
-          "scope": "Futurum/Qodo analysis of Microsoft's agentic AI maturity model, including per-workflow levels.",
-          "evidence_summary": "The article states a team can operate at L4 for some workflows while keeping others at L3; cited for per-task scoring.",
-          "limitation": "Analyst article about Microsoft's framework, not Microsoft's own documentation."
+          "scope": "Futurum's analysis of Qodo's L1-L4 earned autonomy maturity model, including per-workflow scoping.",
+          "evidence_summary": "The article states 'a team can operate at L4 for some workflows while keeping others at L3' in Qodo's own L1-L4 numbering; cited for per-task scoring.",
+          "limitation": "Analyst article about Qodo's framework; Qodo's L1-L4 numbering is not comparable with this page's L0-L5 ladder."
         }
       ],
       "source_entries": [
@@ -21550,25 +21549,25 @@
       ]
     },
     {
-      "url": "https://gametime.co/blog/insights/our-agentic-coding-maturity-model",
+      "url": "https://gametime.co/blog/how-gametime-engineering-hit-level-3-and-why-the-real-work-starts-now/",
       "files": [
         "tech-scan-maturity.html"
       ],
       "hrefs": [
-        "https://gametime.co/blog/insights/our-agentic-coding-maturity-model"
+        "https://gametime.co/blog/how-gametime-engineering-hit-level-3-and-why-the-real-work-starts-now/"
       ],
       "checked_on": "2026-11-20",
       "result": "retrieved",
       "http_status": 200,
-      "final_url": "https://gametime.co/blog/insights/our-agentic-coding-maturity-model",
+      "final_url": "https://gametime.co/blog/how-gametime-engineering-hit-level-3-and-why-the-real-work-starts-now/",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-scan-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "limited",
-          "scope": "Gametime's published per-repository maturity scoring: web and mobile at L3, backend high L2 on Shapiro's framework.",
-          "evidence_summary": "The post reports those per-repo levels; cited as a worked example of per-task scoring.",
+          "scope": "Gametime's published per-repository maturity scoring on Shapiro's framework: web and mobile at Level 3, backend in the high Level 2s.",
+          "evidence_summary": "The post reports web and mobile repos at Level 3 and backend in the high L2s on Shapiro's five-level framework; cited as a worked example of per-task scoring.",
           "limitation": "Company self-report of its own practice; illustrative pattern, not independent validation."
         }
       ],
