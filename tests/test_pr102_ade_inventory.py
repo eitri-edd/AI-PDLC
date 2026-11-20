@@ -178,6 +178,10 @@ class ADEInventoryTests(unittest.TestCase):
             {'file': 'tech-scan-agents.html', 'id': 'source-37'})
         metadata['https://devin.ai/blog/introducing-devin-bots']['source_entries'].remove(
             {'file': 'concept.html', 'id': 'source-48'})
+        # The maturity follow-up adds one mapping to an inherited DORA source;
+        # remove only that mapping when projecting the historical metadata.
+        metadata['https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model']['source_entries'].remove(
+            {'file': 'concept-maturity.html', 'id': 'source-5'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
         self.assertEqual(actual, '8f21b7460ebb74b1d8eda473331636a4b2b37be4d6f694bf560331d054dfc9d9')
 
