@@ -33,7 +33,7 @@ class TechScanHubTests(unittest.TestCase):
         self.assertEqual(normalise(next(section.elements("h2")).text()), "Choose a component")
         headings = [normalise(node.text()) for node in next(section.elements("thead")).elements("th")]
         self.assertEqual(headings, ["Your question", "Open this reference"])
-        self.assertEqual(len(list(next(section.elements("tbody")).elements("tr"))), 5)
+        self.assertEqual(len(list(next(section.elements("tbody")).elements("tr"))), 4)
         self.assertNotIn("TBD", normalise(section.text()))
 
     def test_publication_plan_is_optional_and_old_figure_links_still_resolve(self):

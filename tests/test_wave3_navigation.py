@@ -6,7 +6,7 @@ from test_sources import Document, normalise
 DIST = Path(__file__).resolve().parents[1] / 'site/dist'
 GROUPS = ['models-access', 'agent-environment', 'agents-workflows', 'verification-delivery']
 SPOKES = ['tech-scan-agents.html', 'tech-scan-context.html', 'tech-scan-delivery.html',
-          'tech-scan-gateway.html', 'tech-scan-harness.html', 'tech-scan-maturity.html',
+          'tech-scan-gateway.html', 'tech-scan-harness.html',
           'tech-scan-models.html', 'tech-scan-sandbox.html', 'tech-scan-stack-views.html',
           'tech-scan-verification.html', 'tech-scan-workflows-factories.html']
 REFERENCES = {
@@ -34,6 +34,26 @@ class Wave3NavigationTests(unittest.TestCase):
                 self.assertLessEqual(len(current), 1, name)
                 if current:
                     self.assertEqual(current, [name], name)
+
+    def test_guide_navigation_has_concepts_subnav(self):
+        # Maturity is the single child under the Concepts guide entry.
+        for name in sorted(p.name for p in DIST.glob('*.html')):
+            with self.subTest(page=name):
+                doc = Document((DIST / name).read_text())
+                nav = next(n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'Guide')
+                hrefs = [a.attrs.get('href') for a in nav.elements('a')]
+                self.assertEqual(hrefs.count('concept.html'), 1, name)
+                concept_index = hrefs.index('concept.html')
+                self.assertEqual(hrefs[concept_index + 1], 'concept-maturity.html', name)
+                self.assertEqual(hrefs[concept_index + 2], 'tech-scan.html', name)
+
+    def test_concepts_child_page_keeps_parent_active(self):
+        doc = Document((DIST / 'concept-maturity.html').read_text())
+        nav = next(n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'Guide')
+        parent = next(a for a in nav.elements('a') if a.attrs.get('href') == 'concept.html')
+        self.assertIn('nav-parent-active', parent.attrs.get('class', '').split())
+        current = [a.attrs.get('href') for a in nav.elements('a') if a.attrs.get('aria-current') == 'page']
+        self.assertEqual(current, ['concept-maturity.html'])
 
     def test_spoke_pages_keep_parent_active_without_subnav(self):
         for name in SPOKES:

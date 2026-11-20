@@ -178,7 +178,8 @@ class HarnessSandboxTests(unittest.TestCase):
                     entry = node_by_id(doc, f"source-{ordinal}")
                     self.assertEqual(next(entry.elements('a')).attrs['href'], url)
                 nav = next(n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'Guide')
-                expected = before['nav'][:4] + [('tech-radar.html', 'Tech Radar')] + before['nav'][8:]
+                expected = (before['nav'][:3] + [('concept-maturity.html', 'Maturity')]
+                            + before['nav'][3:4] + [('tech-radar.html', 'Tech Radar')] + before['nav'][8:])
                 self.assertEqual([(a.attrs.get('href'), text(a)) for a in nav.elements('a')], expected)
                 self.assertEqual([(n.attrs.get('datetime'), text(n)) for n in doc.root.elements('time')], before['dates'])
 

@@ -236,7 +236,7 @@
       "source_entries": 22,
       "unique_fetch_destinations": 35
     },
-    "tech-scan-maturity.html": {
+    "concept-maturity.html": {
       "checked_on": "2026-11-20",
       "scope": "New page for issue 140: whole-page source pass on 20 November 2026. All thirteen cited sources fetched live and compared with the claims that cite them; four cited as limited (vendor self-description, single field guide, company self-report, unverified third axis). After review, seven source URLs were corrected to the canonical locations actually fetched (the earlier strings 404'd or pointed at different articles), and three attributions (Osmani level names, Qodo vs Microsoft/Atlassian, StrongDM Attractor vs Trycycle) were fixed to match the fetched texts. Shared operational links retain their prior disposition.",
       "status": "completed with explicit limitations",
@@ -4882,7 +4882,7 @@
         "tech-scan.html",
         "training.html",
         "transformation.html",
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://fonts.googleapis.com"
@@ -5081,7 +5081,7 @@
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
         },
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "operational",
           "scope": "Shared preconnect URL; not a cited capability claim.",
@@ -5127,7 +5127,7 @@
         "tech-scan.html",
         "training.html",
         "transformation.html",
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap"
@@ -5326,7 +5326,7 @@
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
         },
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "operational",
           "scope": "Shared stylesheet URL; not a cited capability claim.",
@@ -5372,7 +5372,7 @@
         "tech-scan.html",
         "training.html",
         "transformation.html",
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://fonts.gstatic.com"
@@ -5571,7 +5571,7 @@
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
         },
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "operational",
           "scope": "Shared preconnect URL; not a cited capability claim.",
@@ -9549,7 +9549,7 @@
         "tech-scan.html",
         "training.html",
         "transformation.html",
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"
@@ -9755,7 +9755,7 @@
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
         },
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "operational",
           "scope": "Shared navigation URL; not a cited capability claim.",
@@ -21194,7 +21194,7 @@
     {
       "url": "https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/"
@@ -21206,7 +21206,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
           "scope": "Five-levels delegation framing from spicy autocomplete to the dark factory; cited for the ladder framing only.",
@@ -21216,7 +21216,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-1"
         }
       ]
@@ -21224,7 +21224,7 @@
     {
       "url": "https://addyosmani.com/blog/agentic-autonomy-levels/",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://addyosmani.com/blog/agentic-autonomy-levels/"
@@ -21236,7 +21236,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
           "scope": "Autonomy as a per-deployment setting; the three questions before raising autonomy; the run-contract checklist; the four autonomy metrics; L0-L5 practitioner labels.",
@@ -21246,7 +21246,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-2"
         }
       ]
@@ -21254,7 +21254,7 @@
     {
       "url": "https://codex.danielvaughan.com/2026/04/21/ai-codebase-maturity-model-codex-cli-five-levels-self-sustaining-systems/",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://codex.danielvaughan.com/2026/04/21/ai-codebase-maturity-model-codex-cli-five-levels-self-sustaining-systems/"
@@ -21266,7 +21266,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
           "scope": "ACMM's feedback-loop topology framing: each level is defined by the mechanisms that must exist before the next level becomes possible; plus a three-axis assessment (autonomy, controls, governance).",
@@ -21275,7 +21275,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-3"
         }
       ]
@@ -21283,7 +21283,7 @@
     {
       "url": "https://knightcolumbia.org/research/levels-of-autonomy-for-ai-agents",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://knightcolumbia.org/research/levels-of-autonomy-for-ai-agents"
@@ -21295,7 +21295,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
           "scope": "The five human roles operator, collaborator, consultant, approver and observer mapped to autonomy levels.",
@@ -21304,7 +21304,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-4"
         }
       ]
@@ -21312,7 +21312,7 @@
     {
       "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report"
@@ -21324,7 +21324,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
           "scope": "2025 DORA report summary: roughly 5,000 professionals; AI adoption associated with worse delivery stability without strong surrounding capabilities; the amplifier quote; the seven capabilities.",
@@ -21334,7 +21334,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-5"
         }
       ]
@@ -21342,7 +21342,7 @@
     {
       "url": "https://arxiv.org/abs/2507.09089",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://arxiv.org/abs/2507.09089"
@@ -21354,7 +21354,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
           "scope": "METR study of 16 experienced open-source developers on 246 tasks: self-estimates of AI speed-up far more optimistic than observed completion times.",
@@ -21364,7 +21364,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-6"
         }
       ]
@@ -21372,7 +21372,7 @@
     {
       "url": "https://martinfowler.com/bliki/MaturityModel.html",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://martinfowler.com/bliki/MaturityModel.html"
@@ -21384,7 +21384,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
           "scope": "Fowler's caution that the true outcome of a maturity model assessment is the list of things to work on, not the level achieved.",
@@ -21394,7 +21394,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-7"
         }
       ]
@@ -21402,7 +21402,7 @@
     {
       "url": "https://www.anthropic.com/research/measuring-agent-autonomy",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://www.anthropic.com/research/measuring-agent-autonomy"
@@ -21414,7 +21414,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
           "scope": "Anthropic's measurement of agent autonomy: human-in-the-loop share of tool calls fell to roughly 73% and uninterrupted runs grew through late 2025.",
@@ -21424,7 +21424,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-8"
         }
       ]
@@ -21432,7 +21432,7 @@
     {
       "url": "https://www.danshapiro.com/blog/2026/03/dark-factories-rise-of-the-trycycle/",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://www.danshapiro.com/blog/2026/03/dark-factories-rise-of-the-trycycle/"
@@ -21444,7 +21444,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "limited",
           "scope": "Shapiro's March 2026 dark factories post: StrongDM's Attractor factory explained by its CTO Justin Massa, and Trycycle as Shapiro's own minimal plan-check skill.",
@@ -21454,7 +21454,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-9"
         }
       ]
@@ -21462,7 +21462,7 @@
     {
       "url": "https://dev.to/dominik_ddd/the-oversight-ladder-the-five-levels-of-ai-coding-autonomy-1d94",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://dev.to/dominik_ddd/the-oversight-ladder-the-five-levels-of-ai-coding-autonomy-1d94"
@@ -21474,7 +21474,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "limited",
           "scope": "The Oversight Ladder's five levels of AI coding autonomy and its caution that Level 5 suits exploration and throwaway work, not production a business depends on.",
@@ -21484,7 +21484,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-10"
         }
       ]
@@ -21492,7 +21492,7 @@
     {
       "url": "https://www.augmentcode.com/guides/steve-yegge-8-levels-ai-assisted-development",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://www.augmentcode.com/guides/steve-yegge-8-levels-ai-assisted-development"
@@ -21504,7 +21504,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
           "scope": "Augment Code's analysis of Steve Yegge's eight agentic coding levels, including coordination failures at the top of the ladder.",
@@ -21514,7 +21514,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-11"
         }
       ]
@@ -21522,7 +21522,7 @@
     {
       "url": "https://futurumgroup.com/insights/qodo-builds-the-governance-layer-agentic-sdlc-has-been-missing/",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://futurumgroup.com/insights/qodo-builds-the-governance-layer-agentic-sdlc-has-been-missing/"
@@ -21534,7 +21534,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "supported",
           "scope": "Futurum's analysis of Qodo's L1-L4 earned autonomy maturity model, including per-workflow scoping.",
@@ -21544,7 +21544,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-12"
         }
       ]
@@ -21552,7 +21552,7 @@
     {
       "url": "https://gametime.co/blog/how-gametime-engineering-hit-level-3-and-why-the-real-work-starts-now/",
       "files": [
-        "tech-scan-maturity.html"
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://gametime.co/blog/how-gametime-engineering-hit-level-3-and-why-the-real-work-starts-now/"
@@ -21564,7 +21564,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "checked_on": "2026-11-20",
           "outcome": "limited",
           "scope": "Gametime's published per-repository maturity scoring on Shapiro's framework: web and mobile at Level 3, backend in the high Level 2s.",
@@ -21574,7 +21574,7 @@
       ],
       "source_entries": [
         {
-          "file": "tech-scan-maturity.html",
+          "file": "concept-maturity.html",
           "id": "source-13"
         }
       ]
