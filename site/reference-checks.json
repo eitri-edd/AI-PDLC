@@ -238,10 +238,10 @@
     },
     "concept-maturity.html": {
       "checked_on": "2026-11-20",
-      "scope": "New page for issue 140: whole-page source pass on 20 November 2026. All thirteen cited sources fetched live and compared with the claims that cite them; four cited as limited (vendor self-description, single field guide, company self-report, unverified third axis). After review, seven source URLs were corrected to the canonical locations actually fetched (the earlier strings 404'd or pointed at different articles), and three attributions (Osmani level names, Qodo vs Microsoft/Atlassian, StrongDM Attractor vs Trycycle) were fixed to match the fetched texts. Shared operational links retain their prior disposition.",
+      "scope": "New page for issue 140: whole-page source pass on 20 November 2026. All thirteen cited sources fetched live and compared with the claims that cite them; four cited as limited (vendor self-description, single field guide, company self-report, unverified third axis). After review, seven source URLs were corrected to the canonical locations actually fetched (the earlier strings 404'd or pointed at different articles), and three attributions (Osmani level names, Qodo vs Microsoft/Atlassian, StrongDM Attractor vs Trycycle) were fixed to match the fetched texts. Shared operational links retain their prior disposition. A subsequent targeted DORA capabilities follow-up added the companion model article; the 13 source entries now cover 14 destinations. This targeted follow-up was not a new whole-page review.",
       "status": "completed with explicit limitations",
       "source_entries": 13,
-      "unique_fetch_destinations": 13
+      "unique_fetch_destinations": 14
     }
   },
   "references": [
@@ -1388,7 +1388,8 @@
     {
       "url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model",
       "files": [
-        "transformation.html"
+        "transformation.html",
+        "concept-maturity.html"
       ],
       "hrefs": [
         "https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model"
@@ -1405,6 +1406,14 @@
           "scope": "Clear AI stance, internal platforms and accessible internal data are associated with stronger AI benefits.",
           "evidence_summary": "The September 2025 capability model uses interviews and an annual survey of almost 5,000 respondents to identify seven moderating capabilities, including a clear communicated AI stance, internal context and quality platforms.",
           "limitation": "Preserve association wording; observational survey modelling does not establish local causal improvement. Clear stance measures communication, not which AI policy is correct."
+        },
+        {
+          "file": "concept-maturity.html",
+          "checked_on": "2026-11-20",
+          "outcome": "supported",
+          "scope": "The seven named DORA AI capabilities in the delivery-system section.",
+          "evidence_summary": "The model names clear and communicated AI stance, healthy data ecosystems, AI-accessible internal data, strong version control practices, working in small batches, user-centric focus and quality internal platforms.",
+          "limitation": "DORA describes associations from survey modelling; the findings do not establish causal improvements or a universal autonomy ceiling."
         }
       ],
       "evidence_digests": [
@@ -1418,6 +1427,10 @@
         {
           "file": "transformation.html",
           "id": "source-8"
+        },
+        {
+          "file": "concept-maturity.html",
+          "id": "source-5"
         }
       ]
     },
@@ -21330,6 +21343,15 @@
           "scope": "2025 DORA report summary: roughly 5,000 professionals; AI adoption associated with worse delivery stability without strong surrounding capabilities; the amplifier quote; the seven capabilities.",
           "evidence_summary": "The announcement summarises the report's AI findings, the approximately 5,000-professional sample and the seven capabilities the page lists.",
           "limitation": "Vendor-published summary of the DORA report, not the report PDF itself."
+        },
+        {
+          "file": "concept-maturity.html",
+          "checked_on": "2026-11-20",
+          "followup": "maturity-dora-capabilities",
+          "outcome": "changed",
+          "scope": "Correct the page’s previously incorrect list of seven DORA capabilities and retain its announcement attribution.",
+          "evidence_summary": "The announcement supports the report summary and stability finding, and its announcement visual names all seven capabilities; the page previously listed the seven incorrectly. The detailed companion model article corroborates the corrected list: https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model.",
+          "limitation": "This is a targeted citation correction, not a new whole-page review."
         }
       ],
       "source_entries": [
