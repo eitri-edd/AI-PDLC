@@ -47,12 +47,12 @@ LEGACY_URLS = {
     ],
 }
 # "References last checked" / "Last editorial review" per page.
-# Check dates moved to 20 November 2026 with the daily reference check;
+# Check dates moved to 22 November 2026 with the daily reference check;
 # gateway was 13 November 2026 after the issue #81 source replacement.
 # Editorial review dates stay where the last edit left them.
 CHECK_DATES = {
-    "models": ("20 November 2026", "2026-11-20"),
-    "gateway": ("20 November 2026", "2026-11-20"),
+    "models": ("22 November 2026", "2026-11-22"),
+    "gateway": ("22 November 2026", "2026-11-22"),
 }
 EDITORIAL_DATES = {
     "models": "2026-11-12",
