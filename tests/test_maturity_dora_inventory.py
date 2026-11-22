@@ -33,7 +33,8 @@ class MaturityDoraInventoryTests(unittest.TestCase):
     def test_visible_capability_list_rejects_platform_engineering_substitution(self):
         raw = (ROOT / 'site/dist' / PAGE).read_text()
         self.assert_visible_capabilities(raw)
-        mutated = raw.replace('user-centric focus', 'platform engineering', 1)
+        prose_marker = "DORA names seven capabilities that magnify AI's benefits: a clear and communicated AI stance, healthy data ecosystems, AI-accessible internal data, user-centric focus"
+        mutated = raw.replace(prose_marker, prose_marker.replace('user-centric focus', 'platform engineering'), 1)
         self.assertNotEqual(mutated, raw)
         with self.assertRaises(AssertionError):
             self.assert_visible_capabilities(mutated)
