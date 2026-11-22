@@ -1241,6 +1241,10 @@ article .page-map-steps > li::before {
   overflow: visible;
 }
 
+.concept-figure svg.fig-ladder-svg {
+  min-width: 96rem;
+}
+
 .diagram-key {
   margin: 0;
   padding: 0.65rem 1.25rem;
@@ -2237,7 +2241,7 @@ summary {
   section { margin-top: 1.5rem; }
   h2, h3 { break-after: avoid; }
   .concept-figure, .callout, .example, .page-map, table { break-inside: avoid; box-shadow: none; }
-  .concept-figure svg, .key-pointers .concept-figure svg { min-width: 0; }
+  .concept-figure svg, .key-pointers .concept-figure svg, .concept-figure svg.fig-ladder-svg { min-width: 0; }
   .d-flow-pulse { display: none !important; }
   .page-map a { color: inherit; }
   a[href^="http"]::after { content: " (" attr(href) ")"; }
