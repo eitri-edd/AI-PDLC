@@ -48,6 +48,8 @@
   --ai-rule: #147d82;
   --ai-surface: #f0f9f9;
   --ai-border: #b8d9da;
+  --decision-ink: #7c4a03;
+  --check-ink: #4c2d85;
   --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.03), 0 1px 1px rgba(15, 23, 42, 0.02);
   --shadow-sm: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 1px 3px -1px rgba(15, 23, 42, 0.04);
   --shadow-md: 0 12px 28px -6px rgba(15, 23, 42, 0.09), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
@@ -1333,6 +1335,72 @@ article .page-map-steps > li::before {
   stroke-width: 5px;
 }
 .d-excluded { font-style: italic; }
+
+/* AI role layer: legend and per-block roles. Colour always pairs with a text
+   label; these colours distinguish roles, never status or approval. */
+.d-role-swatch {
+  fill: var(--ai-rule);
+  stroke: var(--ai-rule);
+}
+.d-role-swatch--human {
+  fill: var(--decision-ink);
+  stroke: var(--decision-ink);
+}
+.d-role-swatch--check {
+  fill: var(--check-ink);
+  stroke: var(--check-ink);
+}
+.d-legend {
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--text-secondary);
+  pointer-events: none;
+}
+.d-legend--note {
+  font-size: 11.5px;
+  font-weight: 500;
+}
+.d-role-rule {
+  stroke: var(--border-subtle);
+  stroke-width: 1;
+}
+.d-role-heading {
+  font-size: 13px;
+  font-weight: 700;
+  fill: var(--text-primary);
+  letter-spacing: -0.01em;
+  pointer-events: none;
+}
+.d-role-sub {
+  font-size: 11.5px;
+  font-weight: 500;
+  fill: var(--text-muted);
+  pointer-events: none;
+}
+.d-role-name {
+  font-size: 12.5px;
+  font-weight: 700;
+  fill: var(--text-primary);
+  pointer-events: none;
+}
+.d-role-ai {
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--ai-ink);
+  pointer-events: none;
+}
+.d-role-human {
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--decision-ink);
+  pointer-events: none;
+}
+.d-role-check {
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--check-ink);
+  pointer-events: none;
+}
 
 /* Base connectors */
 .d-line {
