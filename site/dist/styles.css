@@ -48,6 +48,8 @@
   --ai-rule: #147d82;
   --ai-surface: #f0f9f9;
   --ai-border: #b8d9da;
+  --decision-ink: #7c4a03;
+  --check-ink: #4c2d85;
   --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.03), 0 1px 1px rgba(15, 23, 42, 0.02);
   --shadow-sm: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 1px 3px -1px rgba(15, 23, 42, 0.04);
   --shadow-md: 0 12px 28px -6px rgba(15, 23, 42, 0.09), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
@@ -1333,6 +1335,27 @@ article .page-map-steps > li::before {
   stroke-width: 5px;
 }
 .d-excluded { font-style: italic; }
+
+/* AI role lines inside Figure 1 blocks. Colour always pairs with a text
+   label; these colours distinguish roles, never status or approval. */
+.d-role-ai {
+  font-size: 10.5px;
+  font-weight: 600;
+  fill: var(--ai-ink);
+  pointer-events: none;
+}
+.d-role-human {
+  font-size: 10.5px;
+  font-weight: 600;
+  fill: var(--decision-ink);
+  pointer-events: none;
+}
+.d-role-check {
+  font-size: 10.5px;
+  font-weight: 600;
+  fill: var(--check-ink);
+  pointer-events: none;
+}
 
 /* Base connectors */
 .d-line {
