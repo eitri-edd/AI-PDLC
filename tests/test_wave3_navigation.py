@@ -5,10 +5,6 @@ from test_sources import Document, normalise
 
 DIST = Path(__file__).resolve().parents[1] / 'site/dist'
 GROUPS = ['models-access', 'agent-environment', 'agents-workflows', 'verification-delivery']
-SPOKES = ['tech-scan-agents.html', 'tech-scan-context.html', 'tech-scan-delivery.html',
-          'tech-scan-gateway.html', 'tech-scan-harness.html',
-          'tech-scan-models.html', 'tech-scan-sandbox.html', 'tech-scan-stack-views.html',
-          'tech-scan-verification.html', 'tech-scan-workflows-factories.html']
 REFERENCES = {
     'models-access': {'tech-scan-models.html', 'tech-scan-gateway.html'},
     'agent-environment': {'tech-scan-harness.html', 'tech-scan-sandbox.html', 'tech-scan-context.html'},
@@ -17,18 +13,20 @@ REFERENCES = {
 }
 
 class Wave3NavigationTests(unittest.TestCase):
-    def test_guide_navigation_has_tech_scan_subnav(self):
-        # Tech Radar is the single child under the Tech Scan guide entry.
+    def test_guide_navigation_promotes_tech_radar_and_hides_tech_scan(self):
+        # Tech Radar is a first-level guide entry; the Tech Scan hub is hidden from the guide navigation.
         for name in sorted(p.name for p in DIST.glob('*.html')):
             with self.subTest(page=name):
                 doc = Document((DIST / name).read_text())
                 nav = next(n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'Guide')
                 hrefs = [a.attrs.get('href') for a in nav.elements('a')]
-                self.assertEqual(hrefs.count('tech-scan.html'), 1, name)
-                self.assertFalse([h for h in hrefs if h.startswith('tech-scan.html#')], name)
-                scan_index = hrefs.index('tech-scan.html')
-                self.assertEqual(hrefs[scan_index + 1], 'tech-radar.html', name)
-                self.assertEqual(hrefs[scan_index + 2], 'ai-pdlc.html', name)
+                self.assertFalse([h for h in hrefs if h and h.startswith('tech-scan.html')], name)
+                self.assertEqual(hrefs.count('tech-radar.html'), 1, name)
+                radar_index = hrefs.index('tech-radar.html')
+                self.assertEqual(hrefs[radar_index - 1], 'concept-maturity.html', name)
+                self.assertEqual(hrefs[radar_index + 1], 'ai-pdlc.html', name)
+                radar = next(a for a in nav.elements('a') if a.attrs.get('href') == 'tech-radar.html')
+                self.assertEqual(normalise(radar.text()), 'Tech Radar (experimental)', name)
                 self.assertFalse(any(a.attrs.get('aria-current') == 'location' for a in nav.elements('a')), name)
                 current = [a.attrs.get('href') for a in nav.elements('a') if a.attrs.get('aria-current') == 'page']
                 self.assertLessEqual(len(current), 1, name)
@@ -45,7 +43,7 @@ class Wave3NavigationTests(unittest.TestCase):
                 self.assertEqual(hrefs.count('concept.html'), 1, name)
                 concept_index = hrefs.index('concept.html')
                 self.assertEqual(hrefs[concept_index + 1], 'concept-maturity.html', name)
-                self.assertEqual(hrefs[concept_index + 2], 'tech-scan.html', name)
+                self.assertEqual(hrefs[concept_index + 2], 'tech-radar.html', name)
 
     def test_concepts_child_page_keeps_parent_active(self):
         doc = Document((DIST / 'concept-maturity.html').read_text())
@@ -55,15 +53,14 @@ class Wave3NavigationTests(unittest.TestCase):
         current = [a.attrs.get('href') for a in nav.elements('a') if a.attrs.get('aria-current') == 'page']
         self.assertEqual(current, ['concept-maturity.html'])
 
-    def test_spoke_pages_keep_parent_active_without_subnav(self):
-        for name in SPOKES:
+    def test_tech_scan_pages_have_no_guide_nav_entry(self):
+        # The Tech Scan hub and spokes are hidden from the guide navigation.
+        for name in sorted(p.name for p in DIST.glob('tech-scan*.html')):
             with self.subTest(page=name):
                 doc = Document((DIST / name).read_text())
                 nav = next(n for n in doc.root.elements('nav') if n.attrs.get('aria-label') == 'Guide')
-                hub = next(a for a in nav.elements('a') if a.attrs.get('href') == 'tech-scan.html')
-                self.assertIn('nav-parent-active', hub.attrs.get('class', '').split())
-                self.assertFalse(any(a.attrs.get('aria-current') == 'location' for a in nav.elements('a')))
-                self.assertFalse(any(a.attrs.get('aria-current') == 'page' for a in nav.elements('a')))
+                self.assertFalse(any(a.attrs.get('href') == 'tech-scan.html' for a in nav.elements('a')), name)
+                self.assertFalse(any(a.attrs.get('aria-current') == 'page' for a in nav.elements('a')), name)
 
     def test_hub_groups_offer_direct_reference_choices(self):
         doc = Document((DIST / 'tech-scan.html').read_text())
