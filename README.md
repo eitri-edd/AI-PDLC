@@ -12,7 +12,7 @@ Use this README as the operational reference whenever refining existing pages, u
 
 ## 1. Repository & Page Inventory
 
-All published pages live in `site/dist/` and are organised into two main navigation groups plus three cross-referenced deep-dive pages.
+All published pages live in `site/dist/` and are organised into two main navigation groups plus a cross-referenced companion page. Archived pages live in `site/archive/` and are not published (see §1.4).
 
 ### 1.1 Primary Navigation: AI-SDLC Core (`site/dist/`)
 
@@ -29,20 +29,27 @@ All published pages live in `site/dist/` and are organised into two main navigat
 
 | File | Nav Title | Archetype | Primary Purpose & Scope |
 | :--- | :--- | :--- | :--- |
-| [`eds-ai-workflow.html`](./site/dist/eds-ai-workflow.html) | **EDS AI Workflow (Eitri)** | Implementation Overview | Maps the AI-SDLC operating model onto the Eitri toolchain across 4 areas: *PO/BA harness*, *Developer harness*, *Path to production*, and *Team context*, with delivery status badges (`Implemented`, `Planned`, `Under evaluation`, `Draft`). |
+| [`eds-ai-workflow.html`](./site/dist/eds-ai-workflow.html) | **EDS AI Workflow (Eitri)** | Implementation Overview | Maps the AI-SDLC operating model onto the Eitri toolchain: the route from PRD handoff to release, status labels, artefact ownership, working principles, harness diagnosis and workflow-health measures. |
 | [`eds-po-ba-harness.html`](./site/dist/eds-po-ba-harness.html) | **PO/BA harness** | Procedure / Harness Guide | Explains the 3 paths to produce a structured PRD before engineering begins: *Path 1 (SpecKit)*, *Path 2 (Socratic workflow)*, and *Path 3 (CLARA research)*. |
 | [`eds-developer-harness.html`](./site/dist/eds-developer-harness.html) | **Developer harness** | Procedure / Step Reference | Walks through the 19 Eitri developer workflow steps across 4 phases: **Plan** (Steps 1–6), **Check** (Steps 7–10, including HITL Gate 1 & Gate 2), **Build** (Steps 11–12), and **Close out** (Steps 13–19). |
-| [`eds-path-to-production.html`](./site/dist/eds-path-to-production.html) | **Path to production** | Gate & Pipeline Guide | Defines the 4 automated and human release stages: *4.1 Pre-commit (local)*, *4.2 Merge to Dev*, *4.3 Merge to QA*, and *4.4 Pre-production readiness*. |
 
-### 1.3 Cross-Referenced Companion Pages (`site/dist/`)
+### 1.3 Companion Page (`site/dist/`)
 
-These pages are linked from within the workflow pages and top breadcrumbs and share the exact same shell and navigation:
+This page shares the same shell and navigation but is no longer linked from the site:
 
 | File | Title | Archetype | Primary Purpose & Scope |
 | :--- | :--- | :--- | :--- |
-| [`eds-team-context.html`](./site/dist/eds-team-context.html) | **Team context** | Setup & Reference | Explains the 5-stage progressive context model, domain knowledge documents (`domain.md`), AppStandards registration, and the project context checklist. |
-| [`eds-skills-catalogue.html`](./site/dist/eds-skills-catalogue.html) | **Skills catalogue** | Filterable Reference | Interactive, searchable catalogue of all Eitri, Matt Pocock, Impeccable, review, compliance, architecture, and MCP skills (`data-filter-input` + `data-filter-button`). |
 | [`training.html`](./site/dist/training.html) | **Training companion guide** | Training / Curriculum | Practical onboarding guide covering Prerequisites and Lessons 0–2 (foundations, memory stores, RAG/OKF/MCP, and 5-phase context injection). |
+
+### 1.4 Archived Pages (`site/archive/`)
+
+These pages were moved out of the published site on 24 November 2026, ahead of the EDS AI Workflow refactor. They are kept for reference only: they are not published, linked or covered by tests, and their shared stylesheet and script links no longer resolve. Their reference-inventory records are kept under `archived_pages` in [`site/reference-checks.json`](./site/reference-checks.json).
+
+| File | Former nav title |
+| :--- | :--- |
+| [`eds-path-to-production.html`](./site/archive/eds-path-to-production.html) | Path to production |
+| [`eds-team-context.html`](./site/archive/eds-team-context.html) | Team context |
+| [`eds-skills-catalogue.html`](./site/archive/eds-skills-catalogue.html) | Skills catalogue |
 
 ---
 

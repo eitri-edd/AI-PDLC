@@ -13,7 +13,7 @@ class DeliveryPageTest(unittest.TestCase):
         text = PAGE.read_text(encoding='utf-8').lower()
         for phrase in ('verification', 'merge', 'deploy', 'human', 'rollback', 'digest'):
             self.assertIn(phrase, text)
-        for link in ('tech-scan-verification.html', 'tech-scan-workflows-factories.html', 'eds-path-to-production.html'):
+        for link in ('tech-scan-verification.html', 'tech-scan-workflows-factories.html'):
             self.assertIn('href="' + link + '"', text)
 
     def test_navigation_and_source_backlinks_are_consistent(self):

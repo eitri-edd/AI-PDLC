@@ -9,8 +9,7 @@ from test_sources import Document, normalise
 DIST = Path(__file__).resolve().parents[1] / "site/dist"
 EDS_PAGES = (
     "eds-ai-workflow.html", "eds-developer-harness.html",
-    "eds-path-to-production.html", "eds-po-ba-harness.html",
-    "eds-skills-catalogue.html", "eds-team-context.html",
+    "eds-po-ba-harness.html",
 )
 
 
@@ -47,12 +46,6 @@ class TrainingReferenceRefreshTests(unittest.TestCase):
                 self.assertIn("local 19-step", content)
                 self.assertIn("optional", content)
 
-    def test_standards_registration_retains_the_public_local_revision_conflict(self):
-        content = text("eds-team-context.html", "standards")
-        self.assertIn("does not tag stories", content)
-        self.assertIn("skills/project-horizon/configs/standards.md", content)
-        self.assertIn("installed revision", content)
-
     def test_training_companion_labels_its_retained_view_as_earlier(self):
         content = text("training.html", "source-2")
         self.assertIn("earlier five-phase view", content)
@@ -63,7 +56,6 @@ class TrainingReferenceRefreshTests(unittest.TestCase):
         for page, section in (
             ("eds-developer-harness.html", "plan"),
             ("eds-po-ba-harness.html", "handoff"),
-            ("eds-skills-catalogue.html", "planning"),
             ("training.html", "po-workflow"),
         ):
             with self.subTest(page=page):

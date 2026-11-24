@@ -161,7 +161,11 @@ class ADEInventoryTests(unittest.TestCase):
         # Issue 137 fix: the KEV LiteLLM count moves from three to four
         # (CVE-2026-40217 added 18 November 2026), so the two KEV
         # claim_reviews scope strings advance the reviews digest.
-        self.assertEqual(digest, 'f7b44b55045843402ef2914dccecca0d362c8a10f8c4685b4b00ee2825e4741d')
+        # Archive of 24 November 2026: eds-path-to-production, eds-team-context
+        # and eds-skills-catalogue moved to site/archive/. Their page passes and
+        # per-page reviews leave the inventory (recorded under archived_pages),
+        # which advances both digests without changing any other record.
+        self.assertEqual(digest, '05b08c0888141ccd06ca023e8fd5df5fd304007434c7c03770f79dbfcddb09d3')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -184,7 +188,8 @@ class ADEInventoryTests(unittest.TestCase):
         metadata['https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model']['source_entries'].remove(
             {'file': 'concept-maturity.html', 'id': 'source-5'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        self.assertEqual(actual, '008bbb926a57e952d6c8ea667f5eace2e294c4dab1a09fdcf9290a132c46171a')
+        # Advanced by the 24 November 2026 archive; see the note above.
+        self.assertEqual(actual, '4500e620796b122df44fca7c63651f828ea5067da4b3a1f056d1e74a05e636cb')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:

@@ -42,9 +42,6 @@
           <div class="nav-children">
             <a href="eds-po-ba-harness.html">PO/BA harness</a>
             <a href="eds-developer-harness.html">Developer harness</a>
-            <a href="eds-path-to-production.html">Path to production</a>
-            <a href="eds-team-context.html">Team context</a>
-            <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
           <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
           <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
@@ -129,9 +126,6 @@
           <div class="table-scroll" tabindex="0" role="region" aria-label="Pages in the EDS AI Workflow section; scroll horizontally if needed"><table class="wide-table"><caption>Pages in the EDS AI Workflow section</caption><thead><tr><th scope="col">Page</th><th scope="col">Roles involved</th><th scope="col">What it explains</th></tr></thead><tbody>
             <tr><th scope="row"><a href="eds-po-ba-harness.html">PO/BA harness</a></th><td>Product owner (PO), business analyst (BA)</td><td>How a business need becomes a product requirements document (PRD), through one of three paths.</td></tr>
             <tr><th scope="row"><a href="eds-developer-harness.html">Developer harness</a></th><td>Architect, Tech Lead, developer</td><td>How Eitri turns one user story into a checked design, small issues, working code and evidence.</td></tr>
-            <tr><th scope="row"><a href="eds-path-to-production.html">Path to production</a></th><td>Tech Lead, reviewer, platform team</td><td>Which checks run at commit, merge and pre-production, and what blocks a release.</td></tr>
-            <tr><th scope="row"><a href="eds-team-context.html">Team context</a></th><td>Tech Lead, standards owner</td><td>How a team adds its own domain knowledge, standards, policies and review rules.</td></tr>
-            <tr><th scope="row"><a href="eds-skills-catalogue.html">Skills catalogue</a></th><td>Anyone looking up a skill</td><td>What each skill does, who maintains it and whether it is available.</td></tr>
           </tbody></table></div>
           <p>The second half of this page holds working principles: guidance on operating the harness well that does not depend on a specific skill.</p>
         </section>
@@ -173,7 +167,7 @@
           </figure>
           <p>The PO or BA hands over the PRD. Developers plan one user story into a technical design, the TRD, and a person signs it off at the first human gate; unresolved findings send it back for revision. The approved design is sliced into small issues, each delivering a working piece of the story, and a person confirms at the second human gate that they are ready to build.</p>
           <p>An AI agent then builds one issue at a time in a loop that builds, checks and corrects its own work. Closeout adds independent review and evidence that the story behaves as specified, and returns failures to the loop. Finally, four pipeline stages widen the checks from the single change to the whole codebase, ending with one report for the Tech Lead’s sign-off.</p>
-          <p>The <a href="eds-developer-harness.html">Developer harness page</a> breaks the middle of this route into its individual steps. The <a href="eds-path-to-production.html">Path to production page</a> covers the pipeline stages.</p>
+          <p>The <a href="eds-developer-harness.html">Developer harness page</a> breaks the middle of this route into its individual steps.</p>
           <p>The workflow covers Plan, Slice, Implement and Verify in the six-stage implementation loop, and reaches release readiness through the pipeline gates. Progressive rollout, observation and learning from production evidence sit outside the harness. Use the <a href="product-implementation.html#six-stages">Product implementation guidance</a> for those stages.</p>
 
           <aside class="ai-help" id="ai-help-workflow" aria-labelledby="ai-help-workflow-title">
@@ -200,7 +194,7 @@
             <li>Check which skills are available and which checks are enforced, advisory or planned in that installation.</li>
             <li>Confirm where a failed check blocks progress, which independent reviews apply and who can authorise release or an exception.</li>
           </ul>
-          <p>Use the <a href="eds-team-context.html#policies">policy-pack guidance</a> and <a href="eds-path-to-production.html#stages">pipeline checks</a> for the specific controls. This guide does not identify the revision installed in your environment. For guided practice, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">open the Eitri training</a>.</p>
+          <p>Check the policy pack and pipeline configuration for the specific controls. This guide does not identify the revision installed in your environment. For guided practice, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">open the Eitri training</a>.</p>
         </section>
 
         <section id="ownership">
@@ -238,7 +232,7 @@
 
         <section id="context-practice">
           <h2>Give agents the right context</h2>
-          <p>AI output depends on the context it receives. Keep context explicit, versioned, selective and traceable to the decision it influenced. The <a href="eds-team-context.html">Team context page</a> lists what a team supplies at each stage; this section explains how to organise it.</p>
+          <p>AI output depends on the context it receives. Keep context explicit, versioned, selective and traceable to the decision it influenced. This section explains how to organise it.</p>
           <p>Layer instructions so an agent reads a short entry point first and loads further detail only when a task calls for it:</p>
           <ul>
             <li><strong>A short entry map:</strong> the project’s purpose, how to run and verify it, its global constraints and where to find more.</li>
@@ -284,7 +278,7 @@
           <p>Start from the symptom and ask which of the five layers let it through. In the figure, verification feedback is the weak layer, so the team improves its checks rather than retrying the same prompt. Recording the failure helps the next session avoid it. The table pairs each layer with its typical symptom and a response.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Harness layers, typical symptoms and responses; scroll horizontally if needed"><table class="wide-table"><caption>Harness layers, typical symptoms and responses</caption><thead><tr><th scope="col">Layer</th><th scope="col">Typical symptom</th><th scope="col">Response</th></tr></thead><tbody>
             <tr><th scope="row">Task specification</th><td>Plausible implementation, wrong behaviour</td><td>Tighten the PRD or TRD, acceptance criteria, exclusions and issue scope, then verify the issues again.</td></tr>
-            <tr><th scope="row">Context provision</th><td>Breaks a domain, security, architecture or interface rule the agent could not see</td><td>Put the rule in the repository and route it through the right <a href="eds-team-context.html">context source</a>.</td></tr>
+            <tr><th scope="row">Context provision</th><td>Breaks a domain, security, architecture or interface rule the agent could not see</td><td>Put the rule in the repository and route it through the right context source.</td></tr>
             <tr><th scope="row">Execution environment</th><td>Time lost on dependencies, connectivity or setup</td><td>Standardise initialisation and keep a reproducible sandbox.</td></tr>
             <tr><th scope="row">Verification feedback</th><td>The agent reports “done”, but the behaviour is still broken</td><td>Add or tighten a validation gate in the build loop, and make failure messages actionable.</td></tr>
             <tr><th scope="row">State management</th><td>A new session repeats work or reverses an earlier decision</td><td>Record decisions, evidence, blockers and the next action in the repository and on the issue.</td></tr>
@@ -307,7 +301,7 @@
             <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Follow a change through the delivery workflow</span><span class="learning-benefit">See how a failed control leads to rework before a change can progress.</span></span></div>
             <p>The service desk squad’s access-request PRD reaches the Tech Lead, who drafts the TRD for the first user story. The compliance audit fails one control because the design logs full request text, so the TRD is revised to log request identifiers before the first human gate. The first issue covers one journey: a staff member submits an access request and receives a drafted response. In the build loop, the mutation testing gate shows that no test checks the unauthorised-request case; the developer adds one. A live browser test then provides the screenshot evidence the reviewer needs to approve the MR.</p>
           </aside>
-          <p class="next-step"><strong>Next step:</strong> to see how requirements are prepared, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>. To see how a story is built and checked, <a href="eds-developer-harness.html">read the Developer harness</a>, then <a href="eds-path-to-production.html">Path to production</a>. For guided practice, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">open the Eitri self-paced training</a>.</p>
+          <p class="next-step"><strong>Next step:</strong> to see how requirements are prepared, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>. To see how a story is built and checked, <a href="eds-developer-harness.html">read the Developer harness</a>. For guided practice, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">open the Eitri self-paced training</a>.</p>
         </section>
 
         <details id="method-under-consideration"><summary>Method under consideration: SPDD</summary>

@@ -25,7 +25,7 @@ class VerificationTests(unittest.TestCase):
             if href.startswith('#'):
                 self.assertIn(href[1:], ids)
         hrefs = {a.attrs.get('href') for a in doc.root.elements('a')}
-        for href in ('tech-scan-context.html', 'tech-scan-delivery.html', 'tech-scan-workflows-factories.html', 'eds-path-to-production.html'):
+        for href in ('tech-scan-context.html', 'tech-scan-delivery.html', 'tech-scan-workflows-factories.html'):
             self.assertIn(href, hrefs)
         sources = next(n for n in doc.root.elements('section') if n.attrs.get('id') == 'sources')
         self.assertEqual(len(list(sources.elements('ol'))), 1)
