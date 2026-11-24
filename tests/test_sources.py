@@ -14,7 +14,7 @@ DIST = ROOT / "site/dist"
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 # Orientation-only pages are an explicit exception, not an implicit bypass for
 # newly added pages. Every other published page must satisfy the source contract.
-ORIENTATION_ONLY_PAGES = {"index.html"}
+ORIENTATION_ONLY_PAGES = {"index.html", "training-maintenance.html"}
 MONTHS = ("January", "February", "March", "April", "May", "June", "July",
           "August", "September", "October", "November", "December")
 

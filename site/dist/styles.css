@@ -1034,6 +1034,62 @@ article .page-map-steps > li::before {
   color: var(--success-text);
 }
 
+/* Full-width maintenance notice for a page whose content is temporarily withdrawn. */
+.maintenance-notice {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin: 1.5rem 0 2.5rem;
+  padding: 2.5rem 2.75rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--warning-bg) 100%);
+  border: 1px solid var(--warning-border);
+  border-left: 6px solid var(--warning-text);
+  border-radius: 0.875rem;
+  box-shadow: var(--shadow-sm);
+}
+.maintenance-notice-icon {
+  width: 4rem;
+  height: 4rem;
+  color: var(--warning-text);
+}
+.maintenance-notice-label {
+  display: inline-flex;
+  margin: 0 0 0.875rem;
+  padding: 0.2rem 0.75rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: var(--warning-text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.concept-article .maintenance-notice h2 {
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+  color: var(--text-primary);
+  font-size: clamp(1.75rem, 1.35rem + 1.4vw, 2.375rem);
+  line-height: 1.2;
+}
+.maintenance-notice h2::after { display: none; }
+.maintenance-notice p:not(.maintenance-notice-label) {
+  color: var(--text-body);
+  font-size: 1.1875rem;
+  line-height: 1.65;
+}
+.maintenance-notice-body > :last-child { margin-bottom: 0; }
+@media (max-width: 600px) {
+  .maintenance-notice {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 1.25rem;
+  }
+  .maintenance-notice-icon { width: 3rem; height: 3rem; }
+}
+
 .concept-question {
   padding: 0.75rem 1rem;
   background:

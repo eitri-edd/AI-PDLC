@@ -218,6 +218,14 @@
       "status": "completed with explicit limitations",
       "source_entries": 13,
       "unique_fetch_destinations": 14
+    },
+    "training-maintenance.html": {
+      "checked_on": "2026-11-24",
+      "scope": "orientation-only operational links",
+      "status": "operational links only; no cited sources",
+      "source_entries": 0,
+      "unique_fetch_destinations": 3,
+      "maintenance_record": "reference-review-2026-11-12.md"
     }
   },
   "references": [
@@ -4844,7 +4852,8 @@
         "tech-scan.html",
         "training.html",
         "transformation.html",
-        "concept-maturity.html"
+        "concept-maturity.html",
+        "training-maintenance.html"
       ],
       "hrefs": [
         "https://fonts.googleapis.com"
@@ -5027,6 +5036,13 @@
           "outcome": "operational",
           "scope": "Shared preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
+        },
+        {
+          "file": "training-maintenance.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
         }
       ],
       "evidence_digests": [
@@ -5065,7 +5081,8 @@
         "tech-scan.html",
         "training.html",
         "transformation.html",
-        "concept-maturity.html"
+        "concept-maturity.html",
+        "training-maintenance.html"
       ],
       "hrefs": [
         "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap"
@@ -5248,6 +5265,13 @@
           "outcome": "operational",
           "scope": "Shared stylesheet URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
+        },
+        {
+          "file": "training-maintenance.html",
+          "outcome": "supported",
+          "scope": "Operational stylesheet requests Inter, JetBrains Mono and Space Grotesk with display=swap.",
+          "evidence_summary": "The current stylesheet returns 200 and declares the requested font families with Google-hosted font URLs.",
+          "limitation": "CSS retrieval does not establish all binary font fetches, privacy approval or rendered font availability."
         }
       ],
       "evidence_digests": [
@@ -5286,7 +5310,8 @@
         "tech-scan.html",
         "training.html",
         "transformation.html",
-        "concept-maturity.html"
+        "concept-maturity.html",
+        "training-maintenance.html"
       ],
       "hrefs": [
         "https://fonts.gstatic.com"
@@ -5469,6 +5494,13 @@
           "outcome": "operational",
           "scope": "Shared preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
+        },
+        {
+          "file": "training-maintenance.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
         }
       ],
       "evidence_digests": [
@@ -9031,31 +9063,9 @@
     {
       "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/",
       "files": [
-        "about.html",
-        "ai-pdlc.html",
-        "concept.html",
         "eds-ai-workflow.html",
         "eds-developer-harness.html",
-        "eds-po-ba-harness.html",
-        "index.html",
-        "product-discovery.html",
-        "product-implementation.html",
-        "tech-radar.html",
-        "tech-scan-agents.html",
-        "tech-scan-ai-workflows.html",
-        "tech-scan-context.html",
-        "tech-scan-delivery.html",
-        "tech-scan-gateway.html",
-        "tech-scan-harness.html",
-        "tech-scan-models.html",
-        "tech-scan-sandbox.html",
-        "tech-scan-stack-views.html",
-        "tech-scan-verification.html",
-        "tech-scan-workflows-factories.html",
-        "tech-scan.html",
-        "training.html",
-        "transformation.html",
-        "concept-maturity.html"
+        "eds-po-ba-harness.html"
       ],
       "hrefs": [
         "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"
@@ -9066,27 +9076,6 @@
       "final_url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/",
       "method": "direct HTTP GET",
       "claim_reviews": [
-        {
-          "file": "about.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "ai-pdlc.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "concept.html",
-          "outcome": "supported",
-          "scope": "Sidebar Training link reaches the intended self-paced Eitri training entry point.",
-          "evidence_summary": "The destination is a readable Foundations of Agentic Engineering prerequisite page with PO, Eitri skills and team-context routes.",
-          "limitation": "Operational training link only. Its organisational/SPDD claims and linked videos are not automatically adopted or verified by this page; no internal Eitri configuration tested."
-        },
         {
           "file": "eds-ai-workflow.html",
           "outcome": "changed",
@@ -9110,138 +9099,6 @@
           "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
           "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
           "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "index.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "product-discovery.html",
-          "outcome": "supported",
-          "scope": "Operational training entry point in site navigation.",
-          "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
-          "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
-        },
-        {
-          "file": "product-implementation.html",
-          "outcome": "supported",
-          "scope": "Operational training entry point in site navigation.",
-          "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
-          "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
-        },
-        {
-          "file": "tech-scan-gateway.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "tech-scan-harness.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "tech-scan-models.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "tech-scan-sandbox.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "tech-scan.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "training.html",
-          "outcome": "changed",
-          "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
-          "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "transformation.html",
-          "outcome": "supported",
-          "scope": "Operational training entry point in site navigation.",
-          "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
-          "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
-        },
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "unverified",
-          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
-          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
-        },
-        {
-          "file": "tech-scan-ai-workflows.html",
-          "checked_on": "2026-11-17",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
-        },
-        {
-          "file": "tech-scan-workflows-factories.html",
-          "outcome": "unverified",
-          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
-          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
-        },
-        {
-          "file": "tech-scan-context.html",
-          "checked_on": "2026-11-14",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
-        },
-        {
-          "file": "tech-scan-delivery.html",
-          "checked_on": "2026-11-14",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
-        },
-        {
-          "file": "tech-scan-stack-views.html",
-          "checked_on": "2026-11-14",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
-        },
-        {
-          "file": "tech-scan-verification.html",
-          "checked_on": "2026-11-14",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
-        },
-        {
-          "file": "tech-radar.html",
-          "checked_on": "2026-11-17",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
-        },
-        {
-          "file": "concept-maturity.html",
-          "checked_on": "2026-11-20",
-          "outcome": "operational",
-          "scope": "Shared navigation URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
         }
       ],
       "evidence_digests": [
@@ -31357,6 +31214,166 @@
             "id": "source-threat-dragon"
           }
         ]
+      }
+    ]
+  },
+  "training_nav_repoint": {
+    "changed_on": "2026-11-24",
+    "reason": "The guide navigation Training entry now links to training-maintenance.html while the training material is refined. The self-paced course URL remains cited from the EDS AI Workflow pages.",
+    "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/",
+    "claim_reviews_removed": [
+      {
+        "file": "about.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "ai-pdlc.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "concept.html",
+        "outcome": "supported",
+        "scope": "Sidebar Training link reaches the intended self-paced Eitri training entry point.",
+        "evidence_summary": "The destination is a readable Foundations of Agentic Engineering prerequisite page with PO, Eitri skills and team-context routes.",
+        "limitation": "Operational training link only. Its organisational/SPDD claims and linked videos are not automatically adopted or verified by this page; no internal Eitri configuration tested."
+      },
+      {
+        "file": "index.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "product-discovery.html",
+        "outcome": "supported",
+        "scope": "Operational training entry point in site navigation.",
+        "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
+        "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
+      },
+      {
+        "file": "product-implementation.html",
+        "outcome": "supported",
+        "scope": "Operational training entry point in site navigation.",
+        "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
+        "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
+      },
+      {
+        "file": "tech-scan-gateway.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "tech-scan-harness.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "tech-scan-models.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "tech-scan-sandbox.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "tech-scan.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "training.html",
+        "outcome": "changed",
+        "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
+        "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
+        "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
+        "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
+      },
+      {
+        "file": "transformation.html",
+        "outcome": "supported",
+        "scope": "Operational training entry point in site navigation.",
+        "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
+        "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
+      },
+      {
+        "file": "tech-scan-agents.html",
+        "outcome": "unverified",
+        "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+        "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
+      },
+      {
+        "file": "tech-scan-ai-workflows.html",
+        "checked_on": "2026-11-17",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
+      },
+      {
+        "file": "tech-scan-workflows-factories.html",
+        "outcome": "unverified",
+        "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+        "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
+      },
+      {
+        "file": "tech-scan-context.html",
+        "checked_on": "2026-11-14",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+      },
+      {
+        "file": "tech-scan-delivery.html",
+        "checked_on": "2026-11-14",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+      },
+      {
+        "file": "tech-scan-stack-views.html",
+        "checked_on": "2026-11-14",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+      },
+      {
+        "file": "tech-scan-verification.html",
+        "checked_on": "2026-11-14",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+      },
+      {
+        "file": "tech-radar.html",
+        "checked_on": "2026-11-17",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
+      },
+      {
+        "file": "concept-maturity.html",
+        "checked_on": "2026-11-20",
+        "outcome": "operational",
+        "scope": "Shared navigation URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
       }
     ]
   }

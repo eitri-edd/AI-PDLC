@@ -9,7 +9,7 @@ from pathlib import Path
 import unittest
 from urllib.parse import urldefrag, urlsplit
 
-from test_sources import Document
+from test_sources import Document, ORIENTATION_ONLY_PAGES
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -50,7 +50,7 @@ class ReferenceMaintenanceTests(unittest.TestCase):
                 self.assertGreaterEqual(page_date, checked_on)
                 paragraphs = [node for node in document.root.elements("p")
                               if node.has_class("source-check-date")]
-                if page == "index.html":
+                if page in ORIENTATION_ONLY_PAGES:
                     self.assertEqual(paragraphs, [])
                     self.assertEqual(passes[page]["scope"], "orientation-only operational links")
                 else:

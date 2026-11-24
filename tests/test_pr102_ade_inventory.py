@@ -76,7 +76,8 @@ class ADEInventoryTests(unittest.TestCase):
                     'https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/'}
         # Later pages add their own pass, source and shared-link reviews; exclude
         # only those additions so inherited records stay pinned.
-        later_pages = {'tech-scan-ai-workflows.html', 'tech-radar.html', 'concept-maturity.html'}
+        later_pages = {'tech-scan-ai-workflows.html', 'tech-radar.html', 'concept-maturity.html',
+                       'training-maintenance.html'}
         # URLs that exist only for the AI workflows page are part of that page's
         # source pass, not the inherited inventory this digest pins.
         new_urls |= {r['url'] for r in self.inventory['references'] if set(r['files']) <= later_pages}
@@ -165,7 +166,11 @@ class ADEInventoryTests(unittest.TestCase):
         # and eds-skills-catalogue moved to site/archive/. Their page passes and
         # per-page reviews leave the inventory (recorded under archived_pages),
         # which advances both digests without changing any other record.
-        self.assertEqual(digest, '05b08c0888141ccd06ca023e8fd5df5fd304007434c7c03770f79dbfcddb09d3')
+        # Also on 24 November 2026: the guide navigation Training entry moved
+        # to training-maintenance.html, so the self-paced course URL keeps
+        # only its three EDS page reviews (removed reviews are recorded under
+        # training_nav_repoint).
+        self.assertEqual(digest, 'e36454aaf8fed25b3d882d347db7f7c38f202ac3726bdba1252b2c3aa8e1526a')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.

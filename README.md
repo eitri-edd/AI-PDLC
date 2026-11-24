@@ -41,6 +41,8 @@ This page shares the same shell and navigation but is no longer linked from the 
 | :--- | :--- | :--- | :--- |
 | [`training.html`](./site/dist/training.html) | **Training companion guide** | Training / Curriculum | Practical onboarding guide covering Prerequisites and Lessons 0–2 (foundations, memory stores, RAG/OKF/MCP, and 5-phase context injection). |
 
+The sidebar **Training** entry on every page links to [`training-maintenance.html`](./site/dist/training-maintenance.html), a notice that the training material is under refinement. It has no Sources section, so it is treated as an orientation-only page alongside `index.html`.
+
 ### 1.4 Archived Pages (`site/archive/`)
 
 These pages were moved out of the published site on 24 November 2026, ahead of the EDS AI Workflow refactor. They are kept for reference only: they are not published, linked or covered by tests, and their shared stylesheet and script links no longer resolve. Their reference-inventory records are kept under `archived_pages` in [`site/reference-checks.json`](./site/reference-checks.json).
