@@ -148,10 +148,10 @@ class ADEInventoryTests(unittest.TestCase):
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
         baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        # Digests advanced by the daily reference check on 23 November 2026,
+        # Digests advanced by the daily reference check on 24 November 2026,
         # which legitimately advances page_passes dates and per-entry
         # checked_on/http_status/final_url/method. (Previously advanced
-        # on 22 November 2026 for the same reason.) The reviews digest also
+        # on 23 November 2026 for the same reason.) The reviews digest also
         # moved on 22 November 2026 when the Lambda MicroVMs x86 date and the
         # CodeGuru Reviewer wording were corrected on the cited pages.
         # Issue 133 review: targeted market-research additions advance the
@@ -161,7 +161,7 @@ class ADEInventoryTests(unittest.TestCase):
         # Issue 137 fix: the KEV LiteLLM count moves from three to four
         # (CVE-2026-40217 added 18 November 2026), so the two KEV
         # claim_reviews scope strings advance the reviews digest.
-        self.assertEqual(digest, 'f7b44b55045843402ef2914dccecca0d362c8a10f8c4685b4b00ee2825e4741d')
+        self.assertEqual(digest, '42e94998d1e4104946b86a3a114d40e2fa5d305668d1c36a897a11873a6b3bba')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -184,7 +184,7 @@ class ADEInventoryTests(unittest.TestCase):
         metadata['https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model']['source_entries'].remove(
             {'file': 'concept-maturity.html', 'id': 'source-5'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        self.assertEqual(actual, '008bbb926a57e952d6c8ea667f5eace2e294c4dab1a09fdcf9290a132c46171a')
+        self.assertEqual(actual, 'aef06ae1bb663ccf9785cc9b63d4932e163d1674b3c0d29b51d50c6264de7fd9')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:
