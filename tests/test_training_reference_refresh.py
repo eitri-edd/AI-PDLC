@@ -31,9 +31,15 @@ class TrainingReferenceRefreshTests(unittest.TestCase):
                 self.assertIn("S1 setup, S2 planning with /project-horizon, S3 architecture guardrails", entry)
                 self.assertIn("developer Steps 1–5", entry)
                 self.assertIn("five-phase video and interactive diagram as earlier material", entry)
-                self.assertIn("This guide retains the local 19-step view.", entry)
-                self.assertIn("Confirm the applicable harness revision and release controls with the workflow owner", entry)
                 self.assertNotIn("Its five-phase view and /dependency-orchestrator differ", entry)
+                if page == "eds-ai-workflow.html":
+                    # The overview follows the Eitri v1.0 six-stage cycle.
+                    self.assertIn("predates Eitri version 1.0", entry)
+                    self.assertIn("six-stage cycle", entry)
+                    self.assertNotIn("19-step", entry)
+                else:
+                    self.assertIn("This guide retains the local 19-step view.", entry)
+                    self.assertIn("Confirm the applicable harness revision and release controls with the workflow owner", entry)
 
     def test_current_course_e2e_requirement_is_not_silently_equated_with_local_optional_gate(self):
         for page, identifier in (("training.html", "workflow-skills"),):
