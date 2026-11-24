@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-23 found 565 distinct external hrefs and no broken destination; 3 Muse (muse.ai) sources could not be re-fetched from this environment (egress proxy blocks the domain; reader unavailable) and are marked verification_challenge, last verified 2026-11-19.",
   "reviewed_base": "ba35a4890652d2f61052abdae7df94db6ad5551e",
   "original_unique_urls": 100,
-  "current_unique_urls": 560,
-  "current_unique_hrefs": 566,
+  "current_unique_urls": 551,
+  "current_unique_hrefs": 557,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 540,
+    "retrieved": 531,
     "retrieved_pdf_text": 3,
     "verification_challenge": 3
   },
@@ -51,8 +51,8 @@
       "checked_on": "2026-11-23",
       "scope": "Daily maintenance verification on 2026-11-23: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
-      "source_entries": 16,
-      "unique_fetch_destinations": 20,
+      "source_entries": 5,
+      "unique_fetch_destinations": 7,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "eds-po-ba-harness.html": {
@@ -298,42 +298,6 @@
         {
           "file": "concept.html",
           "id": "source-10"
-        }
-      ]
-    },
-    {
-      "url": "https://agent-browser.dev",
-      "files": [
-        "eds-developer-harness.html"
-      ],
-      "hrefs": [
-        "https://agent-browser.dev"
-      ],
-      "checked_on": "2026-11-23",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://agent-browser.dev",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "agent-browser automates live-browser acceptance checks and screenshots.",
-          "evidence_summary": "The agent-browser documentation describes a CLI for agents, accessibility snapshots, forms/navigation, screenshot commands, and recording/debugging features.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "36b6517e1b42cf6770377ece9cf477cb29038739713142ff3e12d6684bbdc32c",
-          "format": "readable primary-source text",
-          "source_url": "https://agent-browser.dev"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-browser"
         }
       ]
     },
@@ -1669,42 +1633,6 @@
         {
           "file": "training.html",
           "id": "source-5"
-        }
-      ]
-    },
-    {
-      "url": "https://context7.com",
-      "files": [
-        "eds-developer-harness.html"
-      ],
-      "hrefs": [
-        "https://context7.com"
-      ],
-      "checked_on": "2026-11-23",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://context7.com",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "limited",
-          "scope": "Context7 provides up-to-date, version-specific library documentation for a planned EDS integration.",
-          "evidence_summary": "The homepage identifies Context7 as an Upstash project delivering up-to-date library docs into coding agents. It displays source libraries and update information.",
-          "limitation": "This short homepage does not substantiate exact version-selection semantics or prove installation in Eitri."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "d67887856e5c18c36ecd2a3f93572d69fcb8622c1b7545048a8a0d998a2c64f1",
-          "format": "readable primary-source text",
-          "source_url": "https://context7.com"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-context7"
         }
       ]
     },
@@ -6546,10 +6474,10 @@
         },
         {
           "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "Pocock base skills support investigation, specs, tracer-bullet tickets, TDD implementation, two-axis review and bug diagnosis.",
-          "evidence_summary": "The README documents setup, wayfinder, grill-with-docs, to-spec, to-tickets, implement and code-review. It distinguishes user-invoked and model-invoked skills and now names GLOSSARY.md for domain terms.",
-          "limitation": "Do not claim EDS installed base revision is unchanged/current without its source.; Live upstream uses GLOSSARY.md where older public course examples use CONTEXT.md.; Review-at-closeout is documented; fixed internal review pass counts are not implementation proof."
+          "outcome": "unverified",
+          "scope": "Pocock skills provide the Eitri v1.0 planning, implementation and retro stages: /setup-matt-pocock-skills, /wayfinder, /grill-with-docs, /to-spec, /to-tickets, /implement-spec and /retro.",
+          "evidence_summary": "Skill names and stage roles are taken from the Eitri v1.0 README, which links each skill under skills/engineering/ in this repository.",
+          "limitation": "Redesign of 24 November 2026: the upstream repository was not re-fetched for this change, so the presence and behaviour of /implement-spec and /retro upstream are unverified. Confirm at the next reference check."
         },
         {
           "file": "eds-po-ba-harness.html",
@@ -6732,78 +6660,6 @@
       ]
     },
     {
-      "url": "https://github.com/sverweij/dependency-cruiser/tree/main",
-      "files": [
-        "eds-developer-harness.html"
-      ],
-      "hrefs": [
-        "https://github.com/sverweij/dependency-cruiser/tree/main"
-      ],
-      "checked_on": "2026-11-23",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://github.com/sverweij/dependency-cruiser/tree/main",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "dependency-cruiser validates JavaScript/TypeScript dependencies against configured architecture rules.",
-          "evidence_summary": "The README describes project-specific dependency rules, error reporting, config generation and example forbidden imports, plus support for JavaScript and TypeScript.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Build-blocking depends on configured severity, invocation and CI wiring."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "c1b61530fcc6df3f762e07581276872e61350197fbf89c79d1329283e4b0112d",
-          "format": "readable primary-source text",
-          "source_url": "https://github.com/sverweij/dependency-cruiser/tree/main"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-dependency-cruiser"
-        }
-      ]
-    },
-    {
-      "url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/",
-      "files": [
-        "eds-developer-harness.html"
-      ],
-      "hrefs": [
-        "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/"
-      ],
-      "checked_on": "2026-11-23",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "limited",
-          "scope": "ARC is GovTech technical governance for agentic AI; Eitri package has 88 checks.",
-          "evidence_summary": "The ARC homepage describes capability-based safety/security risk assessment and a major update with 46 risks and 86 controls. Eitri public lesson bodies instead describe an 88-check package.",
-          "limitation": "Upstream control count is not the same artefact as packaged Eitri checklist count.; No installed policy-pack revision or crosswalk supplied."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "48b12909c0b771647624a91fa1e8123f87ba4a939a1ec89abb5e1d2273fb1bd2",
-          "format": "readable primary-source text",
-          "source_url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-arc"
-        }
-      ]
-    },
-    {
       "url": "https://gvisor.dev/docs/architecture_guide/intro/",
       "checked_on": "2026-11-23",
       "files": [
@@ -6893,7 +6749,7 @@
         {
           "file": "eds-developer-harness.html",
           "outcome": "limited",
-          "scope": "IM8 is the policy basis for 36 packaged application-security checks and pipeline audits.",
+          "scope": "IM8 is the policy basis for the 36 application technical controls that /im8-review checks.",
           "evidence_summary": "The current government portal identifies itself as ICT&SS Policy Reform and exposes risk-tailored System Security Plans and a control catalog. The homepage does not contain the 36-check application package.",
           "limitation": "Use the Eitri lessons only as package-description evidence, not as the authoritative scope or current applicable policy.; Applicable policy, pack version and mapping require policy-owner confirmation."
         }
@@ -8415,42 +8271,6 @@
       ]
     },
     {
-      "url": "https://pitest.org",
-      "files": [
-        "eds-developer-harness.html"
-      ],
-      "hrefs": [
-        "https://pitest.org"
-      ],
-      "checked_on": "2026-11-23",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://pitest.org",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "PIT is mutation testing for Java/JVM; faults are seeded and tests evaluated.",
-          "evidence_summary": "PIT explains that failing tests kill deliberate mutations, while surviving mutations can reveal weak tests. It recommends frequent checks of changed code.",
-          "limitation": "PIT does not prescribe EDS 70% default, optional status or installed build scope."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "b676597df8c622d376010a7d63a45225a8971308a91b505f0d7ac9906e200680",
-          "format": "readable primary-source text",
-          "source_url": "https://pitest.org"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-pit"
-        }
-      ]
-    },
-    {
       "url": "https://platform.claude.com/docs/en/about-claude/glossary",
       "files": [
         "transformation.html"
@@ -9025,46 +8845,9 @@
       ]
     },
     {
-      "url": "https://semgrep.dev/",
-      "files": [
-        "eds-developer-harness.html"
-      ],
-      "hrefs": [
-        "https://semgrep.dev/"
-      ],
-      "checked_on": "2026-11-23",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://semgrep.dev/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "Semgrep is static security analysis and supports secrets scanning.",
-          "evidence_summary": "Semgrep’s product page distinguishes Code SAST, Secrets, Supply Chain scanning and CI/PR integrations.",
-          "limitation": "This homepage does not establish configured EDS rules, severity mapping, product/plan entitlement or merge/release blocking."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "b700935beb928a8611690939d18812cd891608a2466af19b8c7c249ceec59611",
-          "format": "readable primary-source text",
-          "source_url": "https://semgrep.dev/"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-semgrep"
-        }
-      ]
-    },
-    {
       "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/",
       "files": [
         "eds-ai-workflow.html",
-        "eds-developer-harness.html",
         "eds-po-ba-harness.html"
       ],
       "hrefs": [
@@ -9078,14 +8861,6 @@
       "claim_reviews": [
         {
           "file": "eds-ai-workflow.html",
-          "outcome": "changed",
-          "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
-          "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-developer-harness.html",
           "outcome": "changed",
           "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
           "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
@@ -9114,10 +8889,6 @@
           "id": "source-training"
         },
         {
-          "file": "eds-developer-harness.html",
-          "id": "source-training"
-        },
-        {
           "file": "eds-po-ba-harness.html",
           "id": "source-training"
         }
@@ -9126,7 +8897,6 @@
     {
       "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/00-pm-ba-workflow.html",
       "files": [
-        "eds-developer-harness.html",
         "eds-po-ba-harness.html",
         "training.html"
       ],
@@ -9139,15 +8909,6 @@
       "final_url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/00-pm-ba-workflow.html",
       "method": "direct HTTP GET",
       "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "changed",
-          "scope": "PO planning commands, issue creation, forecasts, reconciliation and acceptance teaching in training.html. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Current Lesson 0 uses /project-horizon with YAML story input, warns to request the auto-generated label and dry-run issue additions to avoid duplicates, and documents two open reconciliation forecast defects. Story-last-MR E2E evidence precedes manual acceptance.",
-          "limitation": "Supplementary primary page discovered from the cited course, not originally linked directly by these seven pages.; Course warning is not independent execution of the actual deployed skill.",
-          "review_basis": "Parent associated reviewed supplementary primary evidence with this newly published source link.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
         {
           "file": "eds-po-ba-harness.html",
           "outcome": "changed",
@@ -9181,10 +8942,6 @@
       ],
       "source_entries": [
         {
-          "file": "eds-developer-harness.html",
-          "id": "source-training"
-        },
-        {
           "file": "eds-po-ba-harness.html",
           "id": "source-training"
         },
@@ -9198,7 +8955,6 @@
       "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html",
       "files": [
         "eds-ai-workflow.html",
-        "eds-developer-harness.html",
         "eds-po-ba-harness.html",
         "training.html"
       ],
@@ -9218,14 +8974,6 @@
           "evidence_summary": "Current Lesson 1 distinguishes older five-phase video/diagram from S1 setup, continuous S2/S3 and Steps 1–5. It documents /project-horizon, 80% coverage, optional 70% mutation, 36/88 packaged controls and E2E on the last story issue before MR merge.",
           "limitation": "These are public training descriptions, not deployed configuration verification.; Build is included in the parallel /code-reviewer dispatcher; local guide separately depicts Gates 1 and 2.; Current lesson’s E2E requirement differs from the local optional/nonblocking description.",
           "review_basis": "Parent associated reviewed supplementary primary evidence with this newly published source link.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "changed",
-          "scope": "Public Eitri lesson documents workflow, coverage/mutation defaults, policy package counts, human gates, code review and E2E controls. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Current Lesson 1 distinguishes older five-phase video/diagram from S1 setup, continuous S2/S3 and Steps 1–5. It documents /project-horizon, 80% coverage, optional 70% mutation, 36/88 packaged controls and E2E on the last story issue before MR merge.",
-          "limitation": "These are public training descriptions, not deployed configuration verification.; Build is included in the parallel /code-reviewer dispatcher; local guide separately depicts Gates 1 and 2.; Current lesson’s E2E requirement differs from the local optional/nonblocking description.",
           "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
         },
         {
@@ -9257,10 +9005,6 @@
       "source_entries": [
         {
           "file": "eds-ai-workflow.html",
-          "id": "source-training"
-        },
-        {
-          "file": "eds-developer-harness.html",
           "id": "source-training"
         },
         {
@@ -9363,7 +9107,6 @@
     {
       "url": "https://stitch.withgoogle.com",
       "files": [
-        "eds-developer-harness.html",
         "eds-po-ba-harness.html"
       ],
       "hrefs": [
@@ -9375,13 +9118,6 @@
       "final_url": "https://stitch.google.com/",
       "method": "direct HTTP GET",
       "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "inaccessible",
-          "scope": "Stitch is a design/prototyping reference; local EDS conversion support is available/planned.",
-          "evidence_summary": "The cached response contains only a Stitch title, without readable product documentation or EDS conversion evidence.",
-          "limitation": "Parent owns application-shell recovery.; Do not change installed Stitch or standalone HTML conversion labels based on this shell."
-        },
         {
           "file": "eds-po-ba-harness.html",
           "outcome": "inaccessible",
@@ -9398,10 +9134,6 @@
         }
       ],
       "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-stitch"
-        },
         {
           "file": "eds-po-ba-harness.html",
           "id": "source-stitch"
@@ -9483,42 +9215,6 @@
         {
           "file": "tech-scan-gateway.html",
           "id": "source-16"
-        }
-      ]
-    },
-    {
-      "url": "https://stryker-mutator.io",
-      "files": [
-        "eds-developer-harness.html"
-      ],
-      "hrefs": [
-        "https://stryker-mutator.io"
-      ],
-      "checked_on": "2026-11-23",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://stryker-mutator.io",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "StrykerJS supports mutation testing for JavaScript and TypeScript.",
-          "evidence_summary": "The Stryker site identifies StrykerJS for JS/TS, supported mutations, runner integration and reports of surviving mutants.",
-          "limitation": "EDS threshold, changed-file selection, optional status and wrapper installation require configuration evidence."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "d353670a5d286100a07c646f291d105d6779b040994fbac13bcd100425450fdc",
-          "format": "readable primary-source text",
-          "source_url": "https://stryker-mutator.io"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-stryker"
         }
       ]
     },
@@ -10021,42 +9717,6 @@
         {
           "file": "concept.html",
           "id": "source-20"
-        }
-      ]
-    },
-    {
-      "url": "https://www.archunit.org",
-      "files": [
-        "eds-developer-harness.html"
-      ],
-      "hrefs": [
-        "https://www.archunit.org"
-      ],
-      "checked_on": "2026-11-23",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://www.archunit.org",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "ArchUnit checks Java architectural dependencies through tests.",
-          "evidence_summary": "The project describes Java bytecode analysis to test package/class dependencies, layers, slices and cycles with an ordinary unit-test framework.",
-          "limitation": "JVM-wide language support is broader than the homepage’s Java claim; exact language/build compatibility should be checked against installed version.; Generated EDS boundary tests and build enforcement are not verified."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "ae7b4928b129e199de42ccd287f7686bb0b778a0255311e27fbd13e48ac5eb1a",
-          "format": "readable primary-source text",
-          "source_url": "https://www.archunit.org"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-archunit"
         }
       ]
     },
@@ -11054,42 +10714,6 @@
         {
           "file": "tech-scan-sandbox.html",
           "id": "source-4"
-        }
-      ]
-    },
-    {
-      "url": "https://www.sonarsource.com",
-      "files": [
-        "eds-developer-harness.html"
-      ],
-      "hrefs": [
-        "https://www.sonarsource.com"
-      ],
-      "checked_on": "2026-11-23",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://www.sonarsource.com",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "limited",
-          "scope": "Sonar supplies code-quality review and context augmentation for planned EDS integration.",
-          "evidence_summary": "The current homepage presents SonarQube verification, Sonar MCP and Vortex context/constraints plus real-time agent verification. It does not validate the older named EDS Context Augmentation integration.",
-          "limitation": "Product naming/capabilities have evolved; do not silently relabel the internal planned integration as installed or equate it to Vortex.; Exact product, version, entitlement and EDS configuration require owner confirmation."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "146a796d19fd3d762f99feafff88a759631658ed5c1a8cab3ca54916e3525ffd",
-          "format": "readable primary-source text",
-          "source_url": "https://www.sonarsource.com"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-sonar"
         }
       ]
     },
@@ -31376,5 +31000,409 @@
         "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
       }
     ]
+  },
+  "developer_harness_v1_redesign": {
+    "changed_on": "2026-11-24",
+    "reason": "eds-developer-harness.html was rewritten from the 19-step workflow to the Eitri v1.0 six-stage cycle. Tools and frameworks the v1.0 workflow no longer uses left the page, and with them these citations.",
+    "references_removed": [
+      {
+        "url": "https://agent-browser.dev",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://agent-browser.dev"
+        ],
+        "checked_on": "2026-11-23",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://agent-browser.dev",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "agent-browser automates live-browser acceptance checks and screenshots.",
+            "evidence_summary": "The agent-browser documentation describes a CLI for agents, accessibility snapshots, forms/navigation, screenshot commands, and recording/debugging features.",
+            "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "36b6517e1b42cf6770377ece9cf477cb29038739713142ff3e12d6684bbdc32c",
+            "format": "readable primary-source text",
+            "source_url": "https://agent-browser.dev"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-browser"
+          }
+        ]
+      },
+      {
+        "url": "https://context7.com",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://context7.com"
+        ],
+        "checked_on": "2026-11-23",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://context7.com",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "limited",
+            "scope": "Context7 provides up-to-date, version-specific library documentation for a planned EDS integration.",
+            "evidence_summary": "The homepage identifies Context7 as an Upstash project delivering up-to-date library docs into coding agents. It displays source libraries and update information.",
+            "limitation": "This short homepage does not substantiate exact version-selection semantics or prove installation in Eitri."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "d67887856e5c18c36ecd2a3f93572d69fcb8622c1b7545048a8a0d998a2c64f1",
+            "format": "readable primary-source text",
+            "source_url": "https://context7.com"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-context7"
+          }
+        ]
+      },
+      {
+        "url": "https://github.com/sverweij/dependency-cruiser/tree/main",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://github.com/sverweij/dependency-cruiser/tree/main"
+        ],
+        "checked_on": "2026-11-23",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://github.com/sverweij/dependency-cruiser/tree/main",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "dependency-cruiser validates JavaScript/TypeScript dependencies against configured architecture rules.",
+            "evidence_summary": "The README describes project-specific dependency rules, error reporting, config generation and example forbidden imports, plus support for JavaScript and TypeScript.",
+            "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Build-blocking depends on configured severity, invocation and CI wiring."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "c1b61530fcc6df3f762e07581276872e61350197fbf89c79d1329283e4b0112d",
+            "format": "readable primary-source text",
+            "source_url": "https://github.com/sverweij/dependency-cruiser/tree/main"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-dependency-cruiser"
+          }
+        ]
+      },
+      {
+        "url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/"
+        ],
+        "checked_on": "2026-11-23",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "limited",
+            "scope": "ARC is GovTech technical governance for agentic AI; Eitri package has 88 checks.",
+            "evidence_summary": "The ARC homepage describes capability-based safety/security risk assessment and a major update with 46 risks and 86 controls. Eitri public lesson bodies instead describe an 88-check package.",
+            "limitation": "Upstream control count is not the same artefact as packaged Eitri checklist count.; No installed policy-pack revision or crosswalk supplied."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "48b12909c0b771647624a91fa1e8123f87ba4a939a1ec89abb5e1d2273fb1bd2",
+            "format": "readable primary-source text",
+            "source_url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-arc"
+          }
+        ]
+      },
+      {
+        "url": "https://pitest.org",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://pitest.org"
+        ],
+        "checked_on": "2026-11-23",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://pitest.org",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "PIT is mutation testing for Java/JVM; faults are seeded and tests evaluated.",
+            "evidence_summary": "PIT explains that failing tests kill deliberate mutations, while surviving mutations can reveal weak tests. It recommends frequent checks of changed code.",
+            "limitation": "PIT does not prescribe EDS 70% default, optional status or installed build scope."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "b676597df8c622d376010a7d63a45225a8971308a91b505f0d7ac9906e200680",
+            "format": "readable primary-source text",
+            "source_url": "https://pitest.org"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-pit"
+          }
+        ]
+      },
+      {
+        "url": "https://semgrep.dev/",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://semgrep.dev/"
+        ],
+        "checked_on": "2026-11-23",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://semgrep.dev/",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "Semgrep is static security analysis and supports secrets scanning.",
+            "evidence_summary": "Semgrep’s product page distinguishes Code SAST, Secrets, Supply Chain scanning and CI/PR integrations.",
+            "limitation": "This homepage does not establish configured EDS rules, severity mapping, product/plan entitlement or merge/release blocking."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "b700935beb928a8611690939d18812cd891608a2466af19b8c7c249ceec59611",
+            "format": "readable primary-source text",
+            "source_url": "https://semgrep.dev/"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-semgrep"
+          }
+        ]
+      },
+      {
+        "url": "https://stryker-mutator.io",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://stryker-mutator.io"
+        ],
+        "checked_on": "2026-11-23",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://stryker-mutator.io",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "StrykerJS supports mutation testing for JavaScript and TypeScript.",
+            "evidence_summary": "The Stryker site identifies StrykerJS for JS/TS, supported mutations, runner integration and reports of surviving mutants.",
+            "limitation": "EDS threshold, changed-file selection, optional status and wrapper installation require configuration evidence."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "d353670a5d286100a07c646f291d105d6779b040994fbac13bcd100425450fdc",
+            "format": "readable primary-source text",
+            "source_url": "https://stryker-mutator.io"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-stryker"
+          }
+        ]
+      },
+      {
+        "url": "https://www.archunit.org",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://www.archunit.org"
+        ],
+        "checked_on": "2026-11-23",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://www.archunit.org",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "ArchUnit checks Java architectural dependencies through tests.",
+            "evidence_summary": "The project describes Java bytecode analysis to test package/class dependencies, layers, slices and cycles with an ordinary unit-test framework.",
+            "limitation": "JVM-wide language support is broader than the homepage’s Java claim; exact language/build compatibility should be checked against installed version.; Generated EDS boundary tests and build enforcement are not verified."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "ae7b4928b129e199de42ccd287f7686bb0b778a0255311e27fbd13e48ac5eb1a",
+            "format": "readable primary-source text",
+            "source_url": "https://www.archunit.org"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-archunit"
+          }
+        ]
+      },
+      {
+        "url": "https://www.sonarsource.com",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://www.sonarsource.com"
+        ],
+        "checked_on": "2026-11-23",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://www.sonarsource.com",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "limited",
+            "scope": "Sonar supplies code-quality review and context augmentation for planned EDS integration.",
+            "evidence_summary": "The current homepage presents SonarQube verification, Sonar MCP and Vortex context/constraints plus real-time agent verification. It does not validate the older named EDS Context Augmentation integration.",
+            "limitation": "Product naming/capabilities have evolved; do not silently relabel the internal planned integration as installed or equate it to Vortex.; Exact product, version, entitlement and EDS configuration require owner confirmation."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "146a796d19fd3d762f99feafff88a759631658ed5c1a8cab3ca54916e3525ffd",
+            "format": "readable primary-source text",
+            "source_url": "https://www.sonarsource.com"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-sonar"
+          }
+        ]
+      }
+    ],
+    "entries_removed_from_shared_references": {
+      "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/": {
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "changed",
+            "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
+            "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
+            "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
+            "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-training"
+          }
+        ]
+      },
+      "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/00-pm-ba-workflow.html": {
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "changed",
+            "scope": "PO planning commands, issue creation, forecasts, reconciliation and acceptance teaching in training.html. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
+            "evidence_summary": "Current Lesson 0 uses /project-horizon with YAML story input, warns to request the auto-generated label and dry-run issue additions to avoid duplicates, and documents two open reconciliation forecast defects. Story-last-MR E2E evidence precedes manual acceptance.",
+            "limitation": "Supplementary primary page discovered from the cited course, not originally linked directly by these seven pages.; Course warning is not independent execution of the actual deployed skill.",
+            "review_basis": "Parent associated reviewed supplementary primary evidence with this newly published source link.",
+            "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-training"
+          }
+        ]
+      },
+      "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html": {
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "changed",
+            "scope": "Public Eitri lesson documents workflow, coverage/mutation defaults, policy package counts, human gates, code review and E2E controls. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
+            "evidence_summary": "Current Lesson 1 distinguishes older five-phase video/diagram from S1 setup, continuous S2/S3 and Steps 1–5. It documents /project-horizon, 80% coverage, optional 70% mutation, 36/88 packaged controls and E2E on the last story issue before MR merge.",
+            "limitation": "These are public training descriptions, not deployed configuration verification.; Build is included in the parallel /code-reviewer dispatcher; local guide separately depicts Gates 1 and 2.; Current lesson’s E2E requirement differs from the local optional/nonblocking description.",
+            "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-training"
+          }
+        ]
+      },
+      "https://stitch.withgoogle.com": {
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "inaccessible",
+            "scope": "Stitch is a design/prototyping reference; local EDS conversion support is available/planned.",
+            "evidence_summary": "The cached response contains only a Stitch title, without readable product documentation or EDS conversion evidence.",
+            "limitation": "Parent owns application-shell recovery.; Do not change installed Stitch or standalone HTML conversion labels based on this shell."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-stitch"
+          }
+        ]
+      }
+    }
   }
 }

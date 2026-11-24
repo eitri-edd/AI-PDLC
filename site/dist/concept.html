@@ -347,7 +347,7 @@
           <p>Keep a record of what the agent tried and what each check found. Another agent may offer useful checks, but can share the same mistaken assumptions.</p>
 
           <aside class="ai-help ai-help--inline" id="ai-help-loop" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Give an agent the failing handover check, the expected behaviour and an attempt or cost limit. It can propose a correction and rerun the check. The developer compares the diff and test changes with the original criteria; keep the attempt results and escalate when the stop condition is reached.</p></aside>
-<p class="next-step"><strong>Next step:</strong> Choose one failing check and define the expected result, run limit and action when the limit is reached. For recurring findings, use <a href="#compare-skill-versions">the skill-version comparison method</a>. See <a href="eds-developer-harness.html#do-work">how the developer workflow builds, tests and corrects a change</a>.</p>
+<p class="next-step"><strong>Next step:</strong> Choose one failing check and define the expected result, run limit and action when the limit is reached. For recurring findings, use <a href="#compare-skill-versions">the skill-version comparison method</a>. See <a href="eds-developer-harness.html#implement">how the developer workflow builds, reviews and fixes a change</a>.</p>
           
         </section>
         <section id="verification-engineering">
@@ -492,7 +492,7 @@
           <p>That parallelism stays inside one task: the specialist agents check the same commit. Separate development tasks are a different kind of parallelism. They run on separate branches or workspaces, each with its own agent, harness and evidence, and they can finish, block or change independently. <a href="#supervise-agent-work">Supervising several tasks</a> explains how a developer keeps track of them without confusing the two.</p>
 
           <aside class="ai-help ai-help--inline" id="ai-help-graph" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Agents can carry out specialist checks using the graph’s dependencies. The developer compares each report’s commit identifier with the candidate and reproduces reported defects before advancing. Keep findings and routing decisions; rerun the build and all required branches after a code change.</p></aside>
-<p class="next-step"><strong>Next step:</strong> Map one development workflow. Mark which agent checks can run in parallel on the same commit, what condition triggers a rework loop and when the graph should pause for a person. Use <a href="eds-developer-harness.html#plan">the story-planning guidance</a> and <a href="eds-developer-harness.html#check">the task review and approval steps</a>.</p>
+<p class="next-step"><strong>Next step:</strong> Map one development workflow. Mark which agent checks can run in parallel on the same commit, what condition triggers a rework loop and when the graph should pause for a person. Use <a href="eds-developer-harness.html#clarify">the story-planning guidance</a> and <a href="eds-developer-harness.html#slice">the ticket review and sign-off steps</a>.</p>
           
         </section>
         <section id="supervise-agent-work">

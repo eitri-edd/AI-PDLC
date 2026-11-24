@@ -170,7 +170,11 @@ class ADEInventoryTests(unittest.TestCase):
         # to training-maintenance.html, so the self-paced course URL keeps
         # only its three EDS page reviews (removed reviews are recorded under
         # training_nav_repoint).
-        self.assertEqual(digest, 'e36454aaf8fed25b3d882d347db7f7c38f202ac3726bdba1252b2c3aa8e1526a')
+        # Also on 24 November 2026: eds-developer-harness.html moved to the Eitri
+        # v1.0 six-stage cycle. Its page pass and per-page reviews changed and
+        # citations for retired tools left the page (recorded under
+        # developer_harness_v1_redesign); no other page's records changed.
+        self.assertEqual(digest, 'c2dee8f52728ddcbaf5d716828c05e4a1efe89440c4b526039595ac5f1a1ac05')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -193,8 +197,9 @@ class ADEInventoryTests(unittest.TestCase):
         metadata['https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model']['source_entries'].remove(
             {'file': 'concept-maturity.html', 'id': 'source-5'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        # Advanced by the 24 November 2026 archive; see the note above.
-        self.assertEqual(actual, '4500e620796b122df44fca7c63651f828ea5067da4b3a1f056d1e74a05e636cb')
+        # Advanced by the 24 November 2026 archive and developer harness
+        # redesign; see the notes above.
+        self.assertEqual(actual, 'a60e38d36085d1829fcade48d8fd36a721b2937f68b17ee9c7ed5bcb288aad36')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:

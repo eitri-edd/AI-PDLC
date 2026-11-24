@@ -31,7 +31,7 @@ All published pages live in `site/dist/` and are organised into two main navigat
 | :--- | :--- | :--- | :--- |
 | [`eds-ai-workflow.html`](./site/dist/eds-ai-workflow.html) | **EDS AI Workflow (Eitri)** | Implementation Overview | Maps the AI-SDLC operating model onto the Eitri toolchain: the route from PRD handoff to release, status labels, artefact ownership, working principles, harness diagnosis and workflow-health measures. |
 | [`eds-po-ba-harness.html`](./site/dist/eds-po-ba-harness.html) | **PO/BA harness** | Procedure / Harness Guide | Explains the 3 paths to produce a structured PRD before engineering begins: *Path 1 (SpecKit)*, *Path 2 (Socratic workflow)*, and *Path 3 (CLARA research)*. |
-| [`eds-developer-harness.html`](./site/dist/eds-developer-harness.html) | **Developer harness** | Procedure / Step Reference | Walks through the 19 Eitri developer workflow steps across 4 phases: **Plan** (Steps 1–6), **Check** (Steps 7–10, including HITL Gate 1 & Gate 2), **Build** (Steps 11–12), and **Close out** (Steps 13–19). |
+| [`eds-developer-harness.html`](./site/dist/eds-developer-harness.html) | **Developer harness** | Procedure / Stage Reference | Walks through the Eitri v1.0 six-stage cycle: **Clarify**, **Specify**, **Slice**, **Implement**, **Verify** and **Retrospect**, with human sign-offs after Specify and after Slice. Legacy anchors (`#plan`, `#check`, `#do-work`, `#closeout`) still resolve to the matching stages. |
 
 ### 1.3 Companion Page (`site/dist/`)
 
@@ -45,13 +45,14 @@ The sidebar **Training** entry on every page links to [`training-maintenance.htm
 
 ### 1.4 Archived Pages (`site/archive/`)
 
-These pages were moved out of the published site on 24 November 2026, ahead of the EDS AI Workflow refactor. They are kept for reference only: they are not published, linked or covered by tests, and their shared stylesheet and script links no longer resolve. Their reference-inventory records are kept under `archived_pages` in [`site/reference-checks.json`](./site/reference-checks.json).
+These pages were moved out of the published site on 24 November 2026, ahead of the EDS AI Workflow refactor. The 19-step developer harness was archived the same day, when the live page moved to the Eitri v1.0 six-stage cycle. They are kept for reference only: they are not published, linked or covered by tests, and their shared stylesheet and script links no longer resolve. Their reference-inventory records are kept under `archived_pages` in [`site/reference-checks.json`](./site/reference-checks.json).
 
 | File | Former nav title |
 | :--- | :--- |
 | [`eds-path-to-production.html`](./site/archive/eds-path-to-production.html) | Path to production |
 | [`eds-team-context.html`](./site/archive/eds-team-context.html) | Team context |
 | [`eds-skills-catalogue.html`](./site/archive/eds-skills-catalogue.html) | Skills catalogue |
+| [`eds-developer-harness-pre-v1.html`](./site/archive/eds-developer-harness-pre-v1.html) | Developer harness (19-step version, kept for reference after the Eitri v1.0 redesign) |
 
 ---
 

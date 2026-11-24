@@ -8,8 +8,7 @@ from test_sources import Document, normalise
 
 DIST = Path(__file__).resolve().parents[1] / "site/dist"
 EDS_PAGES = (
-    "eds-ai-workflow.html", "eds-developer-harness.html",
-    "eds-po-ba-harness.html",
+    "eds-ai-workflow.html", "eds-po-ba-harness.html",
 )
 
 
@@ -37,8 +36,7 @@ class TrainingReferenceRefreshTests(unittest.TestCase):
                 self.assertNotIn("Its five-phase view and /dependency-orchestrator differ", entry)
 
     def test_current_course_e2e_requirement_is_not_silently_equated_with_local_optional_gate(self):
-        for page, identifier in (("eds-developer-harness.html", "closeout"),
-                                 ("training.html", "workflow-skills")):
+        for page, identifier in (("training.html", "workflow-skills"),):
             with self.subTest(page=page):
                 content = text(page, identifier)
                 self.assertIn("requires /e2e", content)
@@ -54,7 +52,6 @@ class TrainingReferenceRefreshTests(unittest.TestCase):
 
     def test_reconciliation_warnings_bound_forecasts_at_each_call_site(self):
         for page, section in (
-            ("eds-developer-harness.html", "plan"),
             ("eds-po-ba-harness.html", "handoff"),
             ("training.html", "po-workflow"),
         ):
