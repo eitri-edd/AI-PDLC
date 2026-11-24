@@ -149,10 +149,10 @@ class ADEInventoryTests(unittest.TestCase):
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
         baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        # Digests advanced by the daily reference check on 23 November 2026,
+        # Digests advanced by the daily reference check on 24 November 2026,
         # which legitimately advances page_passes dates and per-entry
         # checked_on/http_status/final_url/method. (Previously advanced
-        # on 22 November 2026 for the same reason.) The reviews digest also
+        # on 23 November 2026 for the same reason.) The reviews digest also
         # moved on 22 November 2026 when the Lambda MicroVMs x86 date and the
         # CodeGuru Reviewer wording were corrected on the cited pages.
         # Issue 133 review: targeted market-research additions advance the
@@ -162,7 +162,8 @@ class ADEInventoryTests(unittest.TestCase):
         # Issue 137 fix: the KEV LiteLLM count moves from three to four
         # (CVE-2026-40217 added 18 November 2026), so the two KEV
         # claim_reviews scope strings advance the reviews digest.
-        # Archive of 24 November 2026: eds-path-to-production, eds-team-context
+        # Then advanced again on 24 November 2026, after the daily reference
+        # check above, by the EDS workflow refactor. Archive: eds-path-to-production, eds-team-context
         # and eds-skills-catalogue moved to site/archive/. Their page passes and
         # per-page reviews leave the inventory (recorded under archived_pages),
         # which advances both digests without changing any other record.
@@ -174,7 +175,7 @@ class ADEInventoryTests(unittest.TestCase):
         # v1.0 six-stage cycle. Its page pass and per-page reviews changed and
         # citations for retired tools left the page (recorded under
         # developer_harness_v1_redesign); no other page's records changed.
-        self.assertEqual(digest, 'c2dee8f52728ddcbaf5d716828c05e4a1efe89440c4b526039595ac5f1a1ac05')
+        self.assertEqual(digest, 'b01d9aaa794b63e639b745ec5e66cb63af106fb3bf71768f2bd8e7161992fb7f')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -199,7 +200,7 @@ class ADEInventoryTests(unittest.TestCase):
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
         # Advanced by the 24 November 2026 archive and developer harness
         # redesign; see the notes above.
-        self.assertEqual(actual, 'a60e38d36085d1829fcade48d8fd36a721b2937f68b17ee9c7ed5bcb288aad36')
+        self.assertEqual(actual, 'fd5d19a846e0bf36ab3d803c26c09e044caf98566e44617c93eab4225a036779')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:
