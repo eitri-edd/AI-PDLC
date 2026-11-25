@@ -145,6 +145,19 @@ class PagesWorkflowTests(unittest.TestCase):
             workflow,
         )
 
+    def test_deploy_waits_for_the_artifact_inside_the_lock(self):
+        workflow = (SCRIPT.parents[1] / "workflows/pages.yml").read_text()
+        # deploy-pages can query the artifact list before the upload is
+        # visible. The wait sits between upload and deploy in the same job, so
+        # the deployment lock still covers reading the branch tips.
+        upload = workflow.index("actions/upload-pages-artifact@")
+        wait = workflow.index("name: Wait for the Pages artifact to be listed")
+        deploy = workflow.index("actions/deploy-pages@")
+        self.assertLess(upload, wait)
+        self.assertLess(wait, deploy)
+        self.assertEqual(workflow.count("\n  deploy:\n"), 1, "Keep upload and deploy in one job")
+        self.assertIn("\n      actions: read\n", workflow)
+
 
 if __name__ == "__main__":
     unittest.main()
