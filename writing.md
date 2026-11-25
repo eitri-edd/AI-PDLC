@@ -23,7 +23,7 @@ Start with a familiar problem and explain the mechanism before introducing speci
 Keep general principles, operating guidance and the current Forge implementation distinguishable. Explain whether a statement describes a concept, an agreed organisational practice or a tool-specific implementation. Give readers a clear route from understanding the concept to trying or applying it.
 
 
-Use **Forge** for the current EDS implementation harness. At first mention in reader-facing material, write **Forge (formerly Eitri)** during the transition; afterwards use **Forge**. Use **FORGE** only when expanding the acronym: Framework for Orchestrated, Reliable and Governed Engineering. Keep archived historical documents in their original wording and label them as historical when citing them.
+Use **Forge** for the current EDS implementation harness. At first mention in reader-facing material, write **Forge (Formerly EITRI)** during the transition; afterwards use **Forge**. Use **FORGE** only when expanding the acronym: Framework for Orchestrated, Reliable and Governed Engineering. Keep archived historical documents in their original wording and label them as historical when citing them.
 
 ## Voice and tone
 

@@ -52,8 +52,8 @@
       <article class="concept-article label-first-column">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="ai-pdlc.html">AI-SDLC</a><span aria-hidden="true">/</span><a href="product-implementation.html">Product implementation</a><span aria-hidden="true">/</span><span aria-current="page">EDS AI Workflow</span></nav>
         <header class="article-header">
-          <p class="eyebrow">EDS AI Workflow (Forge)</p>
-          <h1>EDS AI Workflow (Forge)</h1>
+          <p class="eyebrow">EDS AI Workflow</p>
+          <h1>Forge (Formerly EITRI)</h1>
 <p class="lead">The EDS AI Workflow is how EDS teams carry out product implementation with AI agents. It runs from the product owner’s requirements, through the six stages of Forge, the developer harness, to a verified change. Use this overview to see the whole route and who owns each handoff, then open the page for the part you want to understand.</p>
           <p>The CoreX EDS team maintains <a href="#source-harness">this workflow</a>. The workflow is made of skills: packaged instructions that an AI agent runs for one task, such as writing a specification or reviewing a change. It builds on <a href="#source-matt">Matt Pocock’s engineering skills</a> and adds EDS skills for coding, review and verification. For the strategy behind it, including the implementation loop, assurance model, autonomy and measures, <a href="product-implementation.html">read Product implementation</a>.</p>
           <iframe
@@ -73,12 +73,12 @@
             </div>
             <div>
               <p class="eitri-forge-label">The story behind Forge</p>
-              <h2 id="eitri-inspiration-title">Forge (formerly Eitri)</h2>
+              <h2 id="eitri-inspiration-title">Forge</h2>
             </div>
           </div>
           <p>Forge is the new name for the harness previously called Eitri. The original name already pointed to a forge: a place where raw material is shaped into a trusted artefact. The new name keeps that idea in plainer language and makes the harness easier to explain to new teams.</p>
           <p><strong>FORGE</strong> stands for <strong>Framework for Orchestrated, Reliable and Governed Engineering</strong>. Its five motions are <strong>Frame</strong> (spec-driven development), <strong>Orchestrate</strong> (agent skills and workflows), <strong>Realise</strong> (agentic software implementation), <strong>Govern</strong> (embedded standards and assurance) and <strong>Evolve</strong> (continuous evaluation and loop engineering).</p>
-          <p>Forge is an organisational agentic development harness that empowers teams to transform product intent into reliable software through reusable skills, governed workflows, embedded assurance and continuous improvement. Forge v1.0 continues Eitri v1.0 rather than resetting the workflow; use “Forge (formerly Eitri)” at first mention during the transition.</p>
+          <p>Forge is an organisational agentic development harness that empowers teams to transform product intent into reliable software through reusable skills, governed workflows, embedded assurance and continuous improvement. Forge v1.0 continues Eitri v1.0 rather than resetting the workflow; use the full transitional name once, then use “Forge”.</p>
           <p class="eitri-forge-tagline"><strong>Tagline:</strong> <em>Forging trusted software with governed AI engineering.</em></p>
         </section>
         <figure class="page-map page-map--route" aria-label="Page summary">
@@ -189,7 +189,7 @@
             <li>Check that every skill the stages use is installed in the repository.</li>
             <li>Confirm who signs off the specification and the tickets, and who approves the merge.</li>
           </ul>
-          <p>This guide does not identify the version installed in your environment. For guided practice, <a href="training-maintenance.html">open the Forge (formerly Eitri) training</a>.</p>
+          <p>This guide does not identify the version installed in your environment. For guided practice, <a href="training-maintenance.html">open the Forge training</a>.</p>
         </section>
 
         <section id="ownership">
@@ -295,11 +295,11 @@
             <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Follow a change through the delivery workflow</span><span class="learning-benefit">See how review findings lead to rework, and how the retrospective stops them recurring.</span></span></div>
             <p>The service desk squad’s access-request PRD reaches the Tech Lead, who clarifies the first user story and drafts its TRD. At the first sign-off, the reviewer asks for the unauthorised-request case to be stated as an acceptance criterion. The first ticket covers one journey: a staff member submits an access request and receives a drafted response. In Verify, the IM8 review flags that the code logs full request text, so the developer changes it to log request identifiers. The end-to-end tests then provide the video evidence the reviewer needs to approve the MR. At the retrospective, the squad adds a coding standard against logging request content.</p>
           </aside>
-          <p class="next-step"><strong>Next step:</strong> to see how requirements are prepared, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>. To see how a story is built and checked, <a href="eds-developer-harness.html">read the Developer harness</a>. For guided practice, <a href="training-maintenance.html">open the Forge (formerly Eitri) self-paced training</a>.</p>
+          <p class="next-step"><strong>Next step:</strong> to see how requirements are prepared, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>. To see how a story is built and checked, <a href="eds-developer-harness.html">read the Developer harness</a>. For guided practice, <a href="training-maintenance.html">open the Forge self-paced training</a>.</p>
         </section>
 
         <details id="method-under-consideration"><summary>Method under consideration: SPDD</summary>
-          <p>The <a href="#source-training">Forge (formerly Eitri) training</a> describes a direction towards <a href="#source-spdd">Structured-Prompt-Driven Development (SPDD)</a>, developed within Thoughtworks. Confirm adoption status and ownership with the workflow owner. Before using it with Forge, test specification artefacts, skill behaviour and review gates against the target workflow.</p>
+          <p>The <a href="#source-training">Forge training</a> describes a direction towards <a href="#source-spdd">Structured-Prompt-Driven Development (SPDD)</a>, developed within Thoughtworks. Confirm adoption status and ownership with the workflow owner. Before using it with Forge, test specification artefacts, skill behaviour and review gates against the target workflow.</p>
         </details>
         <p class="source-ref"><a href="#version-status">Forge version: confirm the installed skills and sign-offs</a>.</p>
         <section id="sources">

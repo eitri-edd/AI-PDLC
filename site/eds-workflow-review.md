@@ -4,7 +4,7 @@ Reviewed 6 October 2026 against `../writing.md` and `../design.md`. The single `
 
 Revised 12 October 2026 for a higher-management audience, following `../scratch/considerations.md`. The six pages were rewritten as high-level descriptions and third-party tools were linked. See [Revision of 12 October 2026](#revision-of-12-october-2026); decisions and tables below are updated where that revision superseded them.
 
-> Terminology note, 25 November 2026: this is a historical review record. The product is now presented as **Forge (formerly Eitri)**; occurrences of Eitri below record the terminology used at the time of review.
+> Terminology note, 25 November 2026: this is a historical review record. The product is now presented as **Forge (Formerly EITRI)**; occurrences of Eitri below record the terminology used at the time of review.
 
 ## Decisions
 
