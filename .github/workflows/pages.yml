@@ -103,6 +103,7 @@ jobs:
                     'content-type': 'application/json',
                   },
                   body,
+                  signal: AbortSignal.timeout(10000),
                 })
                 detail = `HTTP ${response.status}`
                 if (response.ok) {
@@ -122,6 +123,6 @@ jobs:
                 await new Promise((resolve) => setTimeout(resolve, 5000))
               }
             }
-            throw new Error(`${artifactName} was not visible to the deployment artifact API after 60 seconds`)
+            throw new Error(`${artifactName} was not visible to the deployment artifact API after 12 attempts (up to 175 seconds of request timeouts and backoff)`)
       - id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
