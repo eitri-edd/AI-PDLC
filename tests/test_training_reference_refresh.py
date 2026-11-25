@@ -8,9 +8,7 @@ from test_sources import Document, normalise
 
 DIST = Path(__file__).resolve().parents[1] / "site/dist"
 EDS_PAGES = (
-    "eds-ai-workflow.html", "eds-developer-harness.html",
-    "eds-path-to-production.html", "eds-po-ba-harness.html",
-    "eds-skills-catalogue.html", "eds-team-context.html",
+    "eds-ai-workflow.html", "eds-po-ba-harness.html",
 )
 
 
@@ -33,25 +31,24 @@ class TrainingReferenceRefreshTests(unittest.TestCase):
                 self.assertIn("S1 setup, S2 planning with /project-horizon, S3 architecture guardrails", entry)
                 self.assertIn("developer Steps 1–5", entry)
                 self.assertIn("five-phase video and interactive diagram as earlier material", entry)
-                self.assertIn("This guide retains the local 19-step view.", entry)
-                self.assertIn("Confirm the applicable harness revision and release controls with the workflow owner", entry)
                 self.assertNotIn("Its five-phase view and /dependency-orchestrator differ", entry)
+                if page == "eds-ai-workflow.html":
+                    # The overview follows the Eitri v1.0 six-stage cycle.
+                    self.assertIn("predates Eitri version 1.0", entry)
+                    self.assertIn("six-stage cycle", entry)
+                    self.assertNotIn("19-step", entry)
+                else:
+                    self.assertIn("This guide retains the local 19-step view.", entry)
+                    self.assertIn("Confirm the applicable harness revision and release controls with the workflow owner", entry)
 
     def test_current_course_e2e_requirement_is_not_silently_equated_with_local_optional_gate(self):
-        for page, identifier in (("eds-developer-harness.html", "closeout"),
-                                 ("training.html", "workflow-skills")):
+        for page, identifier in (("training.html", "workflow-skills"),):
             with self.subTest(page=page):
                 content = text(page, identifier)
                 self.assertIn("requires /e2e", content)
                 self.assertIn("final story MR cannot merge", content)
                 self.assertIn("local 19-step", content)
                 self.assertIn("optional", content)
-
-    def test_standards_registration_retains_the_public_local_revision_conflict(self):
-        content = text("eds-team-context.html", "standards")
-        self.assertIn("does not tag stories", content)
-        self.assertIn("skills/project-horizon/configs/standards.md", content)
-        self.assertIn("installed revision", content)
 
     def test_training_companion_labels_its_retained_view_as_earlier(self):
         content = text("training.html", "source-2")
@@ -61,9 +58,7 @@ class TrainingReferenceRefreshTests(unittest.TestCase):
 
     def test_reconciliation_warnings_bound_forecasts_at_each_call_site(self):
         for page, section in (
-            ("eds-developer-harness.html", "plan"),
             ("eds-po-ba-harness.html", "handoff"),
-            ("eds-skills-catalogue.html", "planning"),
             ("training.html", "po-workflow"),
         ):
             with self.subTest(page=page):

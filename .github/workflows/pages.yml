@@ -38,6 +38,8 @@ jobs:
       contents: read
       pages: write
       id-token: write
+      # Lets the wait step list this run's artifacts.
+      actions: read
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -62,5 +64,24 @@ jobs:
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: public
+      # The run's artifact list can lag the upload by a moment, and
+      # deploy-pages fails with "Found 0 artifact(s)" if it asks too early.
+      # Wait here, inside the deployment lock, rather than splitting the job.
+      - name: Wait for the Pages artifact to be listed
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          for attempt in $(seq 1 12); do
+            count=$(gh api "repos/$REPOSITORY/actions/runs/$RUN_ID/artifacts" \
+              --jq '[.artifacts[] | select(.name == "github-pages")] | length')
+            if [ "$count" -ge 1 ]; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::github-pages artifact was not listed after 60 seconds"
+          exit 1
       - id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

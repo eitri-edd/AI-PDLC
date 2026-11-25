@@ -76,7 +76,8 @@ class ADEInventoryTests(unittest.TestCase):
                     'https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/'}
         # Later pages add their own pass, source and shared-link reviews; exclude
         # only those additions so inherited records stay pinned.
-        later_pages = {'tech-scan-ai-workflows.html', 'tech-radar.html', 'concept-maturity.html'}
+        later_pages = {'tech-scan-ai-workflows.html', 'tech-radar.html', 'concept-maturity.html',
+                       'training-maintenance.html'}
         # URLs that exist only for the AI workflows page are part of that page's
         # source pass, not the inherited inventory this digest pins.
         new_urls |= {r['url'] for r in self.inventory['references'] if set(r['files']) <= later_pages}
@@ -172,7 +173,20 @@ class ADEInventoryTests(unittest.TestCase):
         # Issue 137 fix: the KEV LiteLLM count moves from three to four
         # (CVE-2026-40217 added 18 November 2026), so the two KEV
         # claim_reviews scope strings advance the reviews digest.
-        self.assertEqual(digest, '42e94998d1e4104946b86a3a114d40e2fa5d305668d1c36a897a11873a6b3bba')
+        # Then advanced again on 24 November 2026, after the daily reference
+        # check above, by the EDS workflow refactor. Archive: eds-path-to-production, eds-team-context
+        # and eds-skills-catalogue moved to site/archive/. Their page passes and
+        # per-page reviews leave the inventory (recorded under archived_pages),
+        # which advances both digests without changing any other record.
+        # Also on 24 November 2026: the guide navigation Training entry moved
+        # to training-maintenance.html, so the self-paced course URL keeps
+        # only its three EDS page reviews (removed reviews are recorded under
+        # training_nav_repoint).
+        # Also on 24 November 2026: eds-developer-harness.html moved to the Eitri
+        # v1.0 six-stage cycle. Its page pass and per-page reviews changed and
+        # citations for retired tools left the page (recorded under
+        # developer_harness_v1_redesign); no other page's records changed.
+        self.assertEqual(digest, 'b01d9aaa794b63e639b745ec5e66cb63af106fb3bf71768f2bd8e7161992fb7f')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -195,7 +209,9 @@ class ADEInventoryTests(unittest.TestCase):
         metadata['https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model']['source_entries'].remove(
             {'file': 'concept-maturity.html', 'id': 'source-5'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        self.assertEqual(actual, 'aef06ae1bb663ccf9785cc9b63d4932e163d1674b3c0d29b51d50c6264de7fd9')
+        # Advanced by the 24 November 2026 archive and developer harness
+        # redesign; see the notes above.
+        self.assertEqual(actual, 'fd5d19a846e0bf36ab3d803c26c09e044caf98566e44617c93eab4225a036779')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:
