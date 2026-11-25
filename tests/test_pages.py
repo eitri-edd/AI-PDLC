@@ -153,7 +153,7 @@ class PagesWorkflowTests(unittest.TestCase):
         # content before the lock and make failed-job retries reuse it.
         upload = workflow.index("actions/upload-pages-artifact@")
         wait = workflow.index("name: Wait for the Pages artifact in the deployment API")
-        deploy = workflow.index("actions/deploy-pages@")
+        deploy = workflow.index("uses: ./deploy-pages-action")
         self.assertLess(upload, wait)
         self.assertLess(wait, deploy)
         self.assertEqual(workflow.count("\n  deploy:\n"), 1, "Keep upload and deploy in one job")
