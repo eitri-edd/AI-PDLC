@@ -47,7 +47,7 @@ Judge a page by the reader it serves, and say which lens was used.
 | Concepts, AI-SDLC overview | Everyone: product, design, engineering, delivery and leadership readers, with no AI experience assumed | Can any reader understand the idea and know where to go next? Explain terms at first use, avoid unexplained role-specific jargon and route role-specific depth to the page that owns it. |
 | Project Discovery, Product Implementation | Aspiring product manager who formerly specialised in IT project delivery | Can the reader read a section once and know what to do next? Is it human-centred, or too robotic, too technical, or too abstract? |
 | Tech Scan hub and spokes | Experienced development leads and engineers | Factual, industry-standard guidance. Prefer verified developments and their technical implications; do not soften a finding for a general reader. |
-| EDS AI Workflow pages | EDS delivery roles using the Eitri workflow | Same lens as Project Discovery and Product Implementation, plus the workflow's own sources and limits. |
+| EDS AI Workflow pages | EDS delivery roles using the Forge workflow | Same lens as Project Discovery and Product Implementation, plus the workflow's own sources and limits. |
 
 Reader assignments for Organisation Transformation, Concepts, the AI-SDLC overview and Tech Scan were set on 14 November 2026 on Christopher's instruction (issue #99).
 
@@ -329,7 +329,7 @@ criticality score measure different things and are not interchangeable.
 - **Threshold:** flag every term below 3. Propose a rename, a
   definition on first use, or attribution — usually a one-line fix,
   not a rewrite. Watch in particular for collisions with unrelated
-  products or meanings (for example `Eitri`, `inner loop`,
+  products or meanings (for example `Forge`, `inner loop`,
   `guardrails`).
 - **Counting care:** re-check counts case-sensitively; a
   case-insensitive search overstated CLARA (matching

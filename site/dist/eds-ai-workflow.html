@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Overview of the EDS AI Workflow (Eitri Agentic Dev Workflow): how a PRD becomes verified code through the six Eitri stages, who owns each artefact, and working principles.">
+  <meta name="description" content="Overview of the EDS AI Workflow (Forge): how a PRD becomes verified code through the six Forge stages, who owns each artefact, and working principles.">
   <title>EDS AI Workflow · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
             <a href="product-discovery.html">Project Discovery</a>
             <a href="product-implementation.html">Product implementation</a>
           </div>
-          <a href="eds-ai-workflow.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <a href="eds-ai-workflow.html" aria-current="page"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Forge)</a>
           <div class="nav-children">
             <a href="eds-po-ba-harness.html">PO/BA harness</a>
             <a href="eds-developer-harness.html">Developer harness</a>
@@ -52,33 +52,34 @@
       <article class="concept-article label-first-column">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="ai-pdlc.html">AI-SDLC</a><span aria-hidden="true">/</span><a href="product-implementation.html">Product implementation</a><span aria-hidden="true">/</span><span aria-current="page">EDS AI Workflow</span></nav>
         <header class="article-header">
-          <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
-          <h1>EDS AI Workflow (Eitri Agentic Dev Workflow)</h1>
-<p class="lead">The EDS AI Workflow is how EDS teams carry out product implementation with AI agents. It runs from the product owner’s requirements, through the six stages of Eitri, the developer harness, to a verified change. Use this overview to see the whole route and who owns each handoff, then open the page for the part you want to understand.</p>
+          <p class="eyebrow">EDS AI Workflow (Forge)</p>
+          <h1>EDS AI Workflow (Forge)</h1>
+<p class="lead">The EDS AI Workflow is how EDS teams carry out product implementation with AI agents. It runs from the product owner’s requirements, through the six stages of Forge, the developer harness, to a verified change. Use this overview to see the whole route and who owns each handoff, then open the page for the part you want to understand.</p>
           <p>The CoreX EDS team maintains <a href="#source-harness">this workflow</a>. The workflow is made of skills: packaged instructions that an AI agent runs for one task, such as writing a specification or reviewing a change. It builds on <a href="#source-matt">Matt Pocock’s engineering skills</a> and adds EDS skills for coding, review and verification. For the strategy behind it, including the implementation loop, assurance model, autonomy and measures, <a href="product-implementation.html">read Product implementation</a>.</p>
           <iframe
             class="overview-video"
             src="https://drive.google.com/file/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/preview"
-            title="Eitri organisational harness overview video"
+            title="Harness overview video recorded under the former Eitri name"
             loading="lazy"
             allow="autoplay; fullscreen"
             allowfullscreen>
           </iframe>
-          <p class="source-ref"><a href="https://docs.google.com/videos/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/play" target="_blank" rel="noopener">Open the Eitri video in Google Vids</a>.</p>
+          <p class="source-ref"><a href="https://docs.google.com/videos/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/play" target="_blank" rel="noopener">Open the harness overview video in Google Vids</a>.</p>
         </header>
         <section id="eitri-inspiration" class="eitri-forge" aria-labelledby="eitri-inspiration-title">
           <div class="eitri-forge-header">
             <div class="eitri-logo">
-              <img src="assets/eitri-logo-white.png" width="1672" height="941" alt="Eitri — Organizational Harness &amp; Application Standards">
+              <img src="assets/eitri-logo-white.png" width="1672" height="941" alt="Forge — organisational agentic development harness">
             </div>
             <div>
-              <p class="eitri-forge-label">The inspiration behind EITRI</p>
-              <h2 id="eitri-inspiration-title">A digital forge for trusted software</h2>
+              <p class="eitri-forge-label">The story behind Forge</p>
+              <h2 id="eitri-inspiration-title">Forge (formerly Eitri)</h2>
             </div>
           </div>
-          <p>EITRI takes its name from Eitri, Marvel’s Dwarf King and master blacksmith, who helps Thor forge Stormbreaker. The name symbolises a digital forge where AI agents use organisational knowledge and engineering standards to turn ideas into software.</p>
-          <p>The harness brings together engineering guidance, reusable agent skills and automated checks to support secure, reliable software delivery. The forging metaphor describes that aim; the team still needs evidence that the software meets applicable requirements.</p>
-          <p class="eitri-forge-tagline"><strong>Tagline:</strong> <em>From Forging Legendary Weapons to Forging Trusted Software.</em></p>
+          <p>Forge is the new name for the harness previously called Eitri. The original name already pointed to a forge: a place where raw material is shaped into a trusted artefact. The new name keeps that idea in plainer language and makes the harness easier to explain to new teams.</p>
+          <p><strong>FORGE</strong> stands for <strong>Framework for Orchestrated, Reliable and Governed Engineering</strong>. Its five motions are <strong>Frame</strong> (spec-driven development), <strong>Orchestrate</strong> (agent skills and workflows), <strong>Realise</strong> (agentic software implementation), <strong>Govern</strong> (embedded standards and assurance) and <strong>Evolve</strong> (continuous evaluation and loop engineering).</p>
+          <p>Forge is an organisational agentic development harness that empowers teams to transform product intent into reliable software through reusable skills, governed workflows, embedded assurance and continuous improvement. Forge v1.0 continues Eitri v1.0 rather than resetting the workflow; use “Forge (formerly Eitri)” at first mention during the transition.</p>
+          <p class="eitri-forge-tagline"><strong>Tagline:</strong> <em>Forging trusted software with governed AI engineering.</em></p>
         </section>
         <figure class="page-map page-map--route" aria-label="Page summary">
           <p class="page-map-title">On this page · 4 steps to use this section</p>
@@ -95,7 +96,7 @@
         </aside>
 
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
-            <a href="#eitri-inspiration">The EITRI inspiration</a>
+            <a href="#eitri-inspiration">The Forge story</a>
             <a href="#pages">Pages in this section</a>
             <a href="#workflow">The six stages</a>
             <a href="#status">Installed version</a>
@@ -124,19 +125,19 @@
           <h2>Find the page you need</h2>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Pages in the EDS AI Workflow section; scroll horizontally if needed"><table class="wide-table"><caption>Pages in the EDS AI Workflow section</caption><thead><tr><th scope="col">Page</th><th scope="col">Roles involved</th><th scope="col">What it explains</th></tr></thead><tbody>
             <tr><th scope="row"><a href="eds-po-ba-harness.html">PO/BA harness</a></th><td>Product owner (PO), business analyst (BA)</td><td>How a business need becomes a product requirements document (PRD), through one of three paths.</td></tr>
-            <tr><th scope="row"><a href="eds-developer-harness.html">Developer harness</a></th><td>Architect, Tech Lead, developer</td><td>How Eitri takes one user story through six stages, from clarifying questions to verified code and a retrospective.</td></tr>
+            <tr><th scope="row"><a href="eds-developer-harness.html">Developer harness</a></th><td>Architect, Tech Lead, developer</td><td>How Forge takes one user story through six stages, from clarifying questions to verified code and a retrospective.</td></tr>
           </tbody></table></div>
           <p>The second half of this page holds working principles: guidance on operating the harness well that does not depend on a specific skill.</p>
         </section>
 
         <section id="workflow">
           <h2>Follow a story through six stages</h2>
-          <p>A product requirements document (PRD) records what to build and why. Eitri takes one of its user stories at a time through six stages: Clarify, Specify, Slice, Implement, Verify and Retrospect. A person signs off the specification after Specify, and the tickets after Slice.</p>
+          <p>A product requirements document (PRD) records what to build and why. Forge takes one of its user stories at a time through six stages: Clarify, Specify, Slice, Implement, Verify and Retrospect. A person signs off the specification after Specify, and the tickets after Slice.</p>
           <figure class="concept-figure">
-            <figcaption>Figure 1. The six stages of Eitri. Highlighted shapes are human sign-offs; dashed arrows show rework and the start of the next cycle.</figcaption>
+            <figcaption>Figure 1. The six stages of Forge. Highlighted shapes are human sign-offs; dashed arrows show rework and the start of the next cycle.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 290" role="img" aria-labelledby="fig-route-title">
-                <title id="fig-route-title">The six stages of Eitri as a cycle. Clarify resolves open questions. Specify writes the specification. Human sign-off 1 approves the specification; requested changes send it back to Specify. Slice breaks it into tickets. Human sign-off 2 approves the tickets; requested changes send them back to Slice. Implement builds the tickets test-first. Verify reviews the code and gathers end-to-end evidence. Retrospect improves the setup, and the next cycle starts again at Clarify.</title>
+                <title id="fig-route-title">The six stages of Forge as a cycle. Clarify resolves open questions. Specify writes the specification. Human sign-off 1 approves the specification; requested changes send it back to Specify. Slice breaks it into tickets. Human sign-off 2 approves the tickets; requested changes send them back to Slice. Implement builds the tickets test-first. Verify reviews the code and gathers end-to-end evidence. Retrospect improves the setup, and the next cycle starts again at Clarify.</title>
                 <path class="d-line d-dash" d="M428 44V22H252V40" marker-end="url(#arrow)"/>
                 <text class="d-label" x="340" y="16" text-anchor="middle">changes requested: revise</text>
                 <rect class="d-node" x="4" y="44" width="148" height="64" rx="8"/><text class="d-title" x="78" y="70" text-anchor="middle">1 Clarify</text><text class="d-sub" x="78" y="94" text-anchor="middle">Resolve questions</text>
@@ -165,7 +166,7 @@
           <p>The PO or BA hands over the PRD. Clarify resolves the story’s open questions, and Specify writes them up as the technical requirements document (TRD), which a person signs off. Slice breaks the approved specification into small tickets, each delivering a working piece of the story, and a person signs those off before any code is written.</p>
           <p>Implement builds every ticket test-first and ends with a code review and fixes. Verify runs independent maintainability and IM8 reviews, then tests the user stories end to end. Retrospect turns what went wrong into better rules, checks and skills for the next story.</p>
           <p>The <a href="eds-developer-harness.html">Developer harness page</a> describes each stage and its skills.</p>
-          <p>Eitri covers Plan, Slice, Implement and Verify in the <a href="product-implementation.html#six-stages">six-stage implementation loop</a>; its Retrospect stage improves the harness itself. Release, progressive rollout, observation and learning from production evidence sit outside the harness. Use the Product implementation guidance for those stages.</p>
+          <p>Forge covers Plan, Slice, Implement and Verify in the <a href="product-implementation.html#six-stages">six-stage implementation loop</a>; its Retrospect stage improves the harness itself. Release, progressive rollout, observation and learning from production evidence sit outside the harness. Use the Product implementation guidance for those stages.</p>
 
           <aside class="ai-help" id="ai-help-workflow" aria-labelledby="ai-help-workflow-title">
             <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
@@ -182,13 +183,13 @@
 
         <section id="status">
           <h2 id="version-status">Check the installed version</h2>
-          <p>This guide describes Eitri version 1.0. Before relying on a skill or a sign-off, confirm the installed setup with the workflow owner and keep its version with the evidence:</p>
+          <p>This guide describes Forge version 1.0. Before relying on a skill or a sign-off, confirm the installed setup with the workflow owner and keep its version with the evidence:</p>
           <ul>
-            <li>Record the installed Eitri and Matt Pocock skill versions. The IM8 review skill is installed separately, so record its version too.</li>
+            <li>Record the installed Forge and Matt Pocock skill versions. The IM8 review skill is installed separately, so record its version too.</li>
             <li>Check that every skill the stages use is installed in the repository.</li>
             <li>Confirm who signs off the specification and the tickets, and who approves the merge.</li>
           </ul>
-          <p>This guide does not identify the version installed in your environment. For guided practice, <a href="training-maintenance.html">open the Eitri training</a>.</p>
+          <p>This guide does not identify the version installed in your environment. For guided practice, <a href="training-maintenance.html">open the Forge (formerly Eitri) training</a>.</p>
         </section>
 
         <section id="ownership">
@@ -220,7 +221,7 @@
             <li><strong>Build review and correction into implementation.</strong> Build test-first, review the result and fix the findings before verification.</li>
             <li><strong>Keep people accountable for intent and risk.</strong> Automation can do the work; people sign off the specification and the tickets, and approve the merge.</li>
           </ol>
-          <p>An agent that reports “done” has not shown that the work is done. Let an automated check, an independent reviewer or a separate evaluator decide whether the work meets its stop condition; the agent that wrote the code is never the only judge. In Eitri, the code review, the Verify reviews and the end-to-end tests play this role.</p>
+          <p>An agent that reports “done” has not shown that the work is done. Let an automated check, an independent reviewer or a separate evaluator decide whether the work meets its stop condition; the agent that wrote the code is never the only judge. In Forge, the code review, the Verify reviews and the end-to-end tests play this role.</p>
         </section>
 
         <section id="context-practice">
@@ -245,7 +246,7 @@
 
         <section id="harness">
           <h2>Diagnose the harness when work fails</h2>
-          <p>The harness is everything around the model: instructions, tools, environment, state and feedback. A capable model can still fail because one of these is weak. Strengthen the weak layer rather than assuming the model is the only problem. Fix the cause of a class of failure, not only the current increment. In Eitri, this is the job of the <a href="eds-developer-harness.html#retrospect">Retrospect stage</a>.</p>
+          <p>The harness is everything around the model: instructions, tools, environment, state and feedback. A capable model can still fail because one of these is weak. Strengthen the weak layer rather than assuming the model is the only problem. Fix the cause of a class of failure, not only the current increment. In Forge, this is the job of the <a href="eds-developer-harness.html#retrospect">Retrospect stage</a>.</p>
           <figure class="concept-figure">
             <figcaption>Figure 2. Trace a failure to one harness layer, strengthen that layer and record the failure. The highlighted layer is an example.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
@@ -294,13 +295,13 @@
             <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Follow a change through the delivery workflow</span><span class="learning-benefit">See how review findings lead to rework, and how the retrospective stops them recurring.</span></span></div>
             <p>The service desk squad’s access-request PRD reaches the Tech Lead, who clarifies the first user story and drafts its TRD. At the first sign-off, the reviewer asks for the unauthorised-request case to be stated as an acceptance criterion. The first ticket covers one journey: a staff member submits an access request and receives a drafted response. In Verify, the IM8 review flags that the code logs full request text, so the developer changes it to log request identifiers. The end-to-end tests then provide the video evidence the reviewer needs to approve the MR. At the retrospective, the squad adds a coding standard against logging request content.</p>
           </aside>
-          <p class="next-step"><strong>Next step:</strong> to see how requirements are prepared, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>. To see how a story is built and checked, <a href="eds-developer-harness.html">read the Developer harness</a>. For guided practice, <a href="training-maintenance.html">open the Eitri self-paced training</a>.</p>
+          <p class="next-step"><strong>Next step:</strong> to see how requirements are prepared, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>. To see how a story is built and checked, <a href="eds-developer-harness.html">read the Developer harness</a>. For guided practice, <a href="training-maintenance.html">open the Forge (formerly Eitri) self-paced training</a>.</p>
         </section>
 
         <details id="method-under-consideration"><summary>Method under consideration: SPDD</summary>
-          <p>The <a href="#source-training">Eitri training</a> describes a direction towards <a href="#source-spdd">Structured-Prompt-Driven Development (SPDD)</a>, developed within Thoughtworks. Confirm adoption status and ownership with the workflow owner. Before using it with Eitri, test specification artefacts, skill behaviour and review gates against the target workflow.</p>
+          <p>The <a href="#source-training">Forge (formerly Eitri) training</a> describes a direction towards <a href="#source-spdd">Structured-Prompt-Driven Development (SPDD)</a>, developed within Thoughtworks. Confirm adoption status and ownership with the workflow owner. Before using it with Forge, test specification artefacts, skill behaviour and review gates against the target workflow.</p>
         </details>
-        <p class="source-ref"><a href="#version-status">Eitri version: confirm the installed skills and sign-offs</a>.</p>
+        <p class="source-ref"><a href="#version-status">Forge version: confirm the installed skills and sign-offs</a>.</p>
         <section id="sources">
           <h2>Sources</h2>
           <p class="source-check-date">References last checked: <time datetime="2026-11-25">25 November 2026</time>.</p>
@@ -308,8 +309,8 @@
             <li id="source-harness">CoreX EDS team. <cite>Eitri — README and CHANGELOG</cite>, version 1.0.0; internal repository. Primary workflow source for the six stages, the two review points before slicing and implementation, and the skills used; it takes priority over the older operating handbook. The internal repository is unavailable from the public site; confirm the installed version with the workflow owner. Used in <a href="#workflow">the six stages</a>, <a href="#status">installed version</a>, <a href="#ownership">roles and artefacts</a>.</li>
             <li id="source-handbook">EDS. <cite>EDS operating handbook</cite>, internal edition not supplied. Retained only where it does not conflict with the higher-priority Eitri README: the seven working principles, three of which were adjusted to the version 1.0 stages, instruction layers, harness diagnosis, workflow-health measures and fictional example. The document is unavailable in this checkout and current owner endorsement of this retained guidance is not verified; the example is illustrative, not deployment evidence. Used in <a href="#principles">Working principles</a>, <a href="#context-practice">Context for agents</a>, <a href="#harness">Diagnose failures</a>, <a href="#workflow-health">Workflow health</a>.</li>
             <li id="source-matt">Matt Pocock. <a href="https://github.com/mattpocock/skills">Engineering skills — upstream skill set</a>, live repository; installed revision not identified. Underlying investigation, specification, slicing, implementation and review skills; the descriptions on this page explain their use or adaptation in the documented EDS workflow, not a guarantee of current upstream names or behaviour. Used in <a href="#workflow">the workflow foundations</a>.</li>
-            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. The public course contains mixed revisions. Lesson 1 now uses S1 setup, S2 planning with <code>/project-horizon</code>, S3 architecture guardrails and developer Steps 1–5; it marks its five-phase video and interactive diagram as earlier material. The public course predates Eitri version 1.0; this guide follows the version 1.0 six-stage cycle. Confirm the applicable harness version with the workflow owner before transferring commands. Used in <a href="#status">installed version guidance</a>, <a href="#method-under-consideration">the organisational SPDD direction</a>. See <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html">current skills lesson</a>.</li>
-            <li id="source-spdd">Wei Zhang and Jessie Jie Xia, Thoughtworks. <a href="https://martinfowler.com/articles/structured-prompt-driven/">Structured-Prompt-Driven Development (SPDD)</a>. Primary author account of maintained prompt artefacts, alignment and iterative review. It does not establish EDS adoption decisions or Eitri compatibility; confirm ownership and test against the target workflow. Used in <a href="#method-under-consideration">Method under consideration: SPDD</a>.</li>
+            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. The public course contains mixed revisions. Lesson 1 now uses S1 setup, S2 planning with <code>/project-horizon</code>, S3 architecture guardrails and developer Steps 1–5; it marks its five-phase video and interactive diagram as earlier material. The public course predates the Forge rebrand and still uses Eitri material; this guide treats Forge v1.0 as the continuation of Eitri v1.0 and follows the version 1.0 six-stage cycle. Confirm the applicable harness version with the workflow owner before transferring commands. Used in <a href="#status">installed version guidance</a>, <a href="#method-under-consideration">the organisational SPDD direction</a>. See <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html">current skills lesson</a>.</li>
+            <li id="source-spdd">Wei Zhang and Jessie Jie Xia, Thoughtworks. <a href="https://martinfowler.com/articles/structured-prompt-driven/">Structured-Prompt-Driven Development (SPDD)</a>. Primary author account of maintained prompt artefacts, alignment and iterative review. It does not establish EDS adoption decisions or Forge compatibility; confirm ownership and test against the target workflow. Used in <a href="#method-under-consideration">Method under consideration: SPDD</a>.</li>
             <li id="source-video">EDS. <cite>Eitri organisational harness overview video</cite>, publication date and revision not supplied. <a href="https://docs.google.com/videos/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/play">Open in Google Vids</a>; <a href="https://drive.google.com/file/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/preview">embedded preview</a>. Supplementary orientation retained with its original access links; access and internal implementation are not independently certified. Used in the page introduction.</li>
           </ol>
         </section>
@@ -317,7 +318,7 @@
       </article>
     </main>
     <aside class="page-contents"><nav aria-label="On this page"><p>On this page</p>
-            <a href="#eitri-inspiration">The EITRI inspiration</a>
+            <a href="#eitri-inspiration">The Forge story</a>
             <a href="#pages">Pages in this section</a>
             <a href="#workflow">The six stages</a>
             <a href="#status">Installed version</a>
