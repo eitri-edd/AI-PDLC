@@ -145,26 +145,29 @@ class PagesWorkflowTests(unittest.TestCase):
             workflow,
         )
 
-    def test_deploy_starts_after_the_upload_job_finishes(self):
+    def test_deploy_waits_on_the_same_artifact_api_inside_the_lock(self):
         workflow = (SCRIPT.parents[1] / "workflows/pages.yml").read_text()
-        # deploy-pages can query the artifact list before an upload from the
-        # same job is visible. Keep the upload in a completed build job instead
-        # (actions/deploy-pages#451), while both jobs share the Pages lock so
-        # branch tips are still read only after earlier deployments finish.
-        build = workflow.index("\n  build:\n")
+        # deploy-pages can query the internal artifact API before the upload is
+        # visible. Probe that same API between upload and deploy in the single
+        # locked job; splitting build from deploy would freeze branch-tip
+        # content before the lock and make failed-job retries reuse it.
         upload = workflow.index("actions/upload-pages-artifact@")
-        deploy_job = workflow.index("\n  deploy:\n")
-        deploy_action = workflow.index("actions/deploy-pages@")
-        self.assertLess(build, upload)
-        self.assertLess(upload, deploy_job)
-        self.assertLess(deploy_job, deploy_action)
-        self.assertIn("\n    needs: build\n", workflow)
-        self.assertNotIn("Wait for the Pages artifact to be listed", workflow)
-        self.assertEqual(
-            workflow.count("\n    concurrency:\n      group: pages\n      cancel-in-progress: false\n"),
-            2,
-            "Both build and deploy must hold the Pages lock",
-        )
+        wait = workflow.index("name: Wait for the Pages artifact in the deployment API")
+        deploy = workflow.index("actions/deploy-pages@")
+        self.assertLess(upload, wait)
+        self.assertLess(wait, deploy)
+        self.assertEqual(workflow.count("\n  deploy:\n"), 1, "Keep upload and deploy in one job")
+        self.assertNotIn("\n  build:\n", workflow)
+        self.assertIn("wait_for_pages_artifact.py", workflow)
+
+    def test_artifact_probe_uses_deploy_pages_internal_api(self):
+        probe = (SCRIPT.parent / "wait_for_pages_artifact.py").read_text()
+        self.assertIn("ACTIONS_RUNTIME_TOKEN", probe)
+        self.assertIn("ACTIONS_RESULTS_URL", probe)
+        self.assertIn("github.actions.results.api.v1.ArtifactService/ListArtifacts", probe)
+        self.assertIn("workflowRunBackendId", probe)
+        self.assertIn("workflowJobRunBackendId", probe)
+        self.assertIn('ARTIFACT_NAME = "github-pages"', probe)
 
 
 if __name__ == "__main__":

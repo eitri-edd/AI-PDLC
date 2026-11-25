@@ -8,6 +8,7 @@ on:
       - .github/workflows/pages.yml
       - .github/workflows/pages-checks.yml
       - .github/scripts/assemble_pages.py
+      - .github/scripts/wait_for_pages_artifact.py
   # This event runs the workflow from the default branch, not from dev.
   workflow_run:
     workflows: [Validate Pages]
@@ -19,7 +20,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  deploy:
     # Keep the existing main-only github-pages environment protection. A PR
     # validation or a manual run on dev must never deploy.
     if: >-
@@ -29,15 +30,20 @@ jobs:
         github.event.workflow_run.event == 'push' &&
         github.event.workflow_run.head_branch == 'dev' &&
         github.event.workflow_run.head_repository.full_name == github.repository))
-    # Reading the branch tips and deploying both hold the same job-level lock.
-    # Rejected events do not acquire it, while each eligible build assembles
-    # the latest content only after earlier deployments have finished.
+    # Rejected events must not acquire the deployment lock. Reading the branch
+    # tips inside this single locked job also means a queued run assembles the
+    # current tips rather than stale content frozen before the lock.
     concurrency:
       group: pages
       cancel-in-progress: false
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       # Always read both branch tips after acquiring the deployment lock.
       - name: Check out production and trusted deployment code
@@ -59,30 +65,11 @@ jobs:
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: public
-
-  deploy:
-    needs: build
-    if: >-
-      github.ref == 'refs/heads/main' &&
-      (github.event_name != 'workflow_run' ||
-       (github.event.workflow_run.conclusion == 'success' &&
-        github.event.workflow_run.event == 'push' &&
-        github.event.workflow_run.head_branch == 'dev' &&
-        github.event.workflow_run.head_repository.full_name == github.repository))
-    concurrency:
-      group: pages
-      cancel-in-progress: false
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      # Starting deployment after the build job has finished avoids the race
-      # where deploy-pages cannot yet see an artifact uploaded moments earlier
-      # in the same job (actions/deploy-pages#451).
+      # deploy-pages looks up the artifact through the internal Actions results
+      # API. That API can lag the public artifact list, so poll the same API
+      # before deploying instead of splitting the branch-tip checkout into an
+      # unlocked build job (actions/deploy-pages#451).
+      - name: Wait for the Pages artifact in the deployment API
+        run: python3 production/.github/scripts/wait_for_pages_artifact.py
       - id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
