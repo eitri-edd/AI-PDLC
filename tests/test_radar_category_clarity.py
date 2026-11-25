@@ -11,7 +11,7 @@ CATEGORIES = {
     'gateways': ('AI gateways and routing', 6),
     'context-memory': ('Context and memory', 5),
     'harness-frameworks': ('Harness and agent frameworks', 9),
-    'agentic-development-environments': ('Agentic development environments', 1),
+    'agentic-development-environments': ('Agentic development environments', 9),
     'persistent-agents': ('Persistent agents', 8),
     'verification': ('Verification', 3),
     'sandbox': ('Sandbox and execution', 4),
@@ -29,7 +29,9 @@ TABLE_DIGESTS = {
     'context-memory': 'eb84382835a2273eafb1eeabf9705d19a391b73a4f8af9b2e007fcfefc9863b6',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
     'harness-frameworks': '49c7d22d7ce9f219cffd68e3588bdfa800298fbfff33944a766ea56e99d2c517',
-    'agentic-development-environments': '9a8ce940d2c260962a04629483b04f51e4156447f11a5819d268f93bbc302092',
+    # Moved when eight ADE products were added (Orca, T3 Code, Paradev, Paseo,
+    # Orchestrator, Traycer, OpenChamber, Kepler) on 25 November 2026.
+    'agentic-development-environments': '32fcf0f93cd122d7329ec5f057eca45d2faa04b270972ce0f66a1770906849a7',
     'verification': '2ca114ac9fc6e2d17417b911c5474ea46d42bc506ead8c199c5b4ad21abad2b0',
     'sandbox': 'eddffc1e5e7445b1aa421a27038a0b572097a71c836c18e36c3df82b037c1670',
     'software-factories': 'cf3d512bb9dcc0b3d7b61a3420d502ab156aeef836e7a10b97c12f80735b34ed',

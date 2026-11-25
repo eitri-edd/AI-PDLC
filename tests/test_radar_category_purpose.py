@@ -18,6 +18,7 @@ PRODUCT_NAMES = (
     'Devin', 'Kiro', 'dots', 'Grok', 'Cursor', 'Muse', 'Cue', 'OpenClaw', 'Meta', 'Manus', 'Hermes', 'Nous',
     'Gemini', 'GPT', 'GLM', 'DeepSeek', 'Qwen', 'Kimi', 'MiniMax', 'OpenCode', 'Droid',
     'Vertex', 'Fireworks',
+    'Orca', 'T3 Code', 'Paradev', 'Paseo', 'Orchestrator', 'Traycer', 'OpenChamber', 'Kepler',
 )
 # Citations originally attached to product notes, not just bibliography entries.
 SECTION_SOURCES = {
@@ -25,6 +26,7 @@ SECTION_SOURCES = {
     'gateways': (64, 65, 66, 67, 61, 27, 75, 29, 62, 63, 30),
     'context-memory': (56, 17, 21),
     'harness-frameworks': (18, 34, 70, 73),
+    'agentic-development-environments': tuple(range(154, 162)),
     'verification': (14, 15, 16),
     'sandbox': (12, 22, 57, 59, 58, 23, 68),
     'software-factories': (53, 42, 43, 60, 44, 45, 71, 140, 153),

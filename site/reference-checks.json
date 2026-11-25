@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-24 found 572 distinct external URLs and no broken destination; 3 Muse (muse.ai) sources could not be re-fetched from this environment (egress proxy blocks the domain; reader unavailable) and are marked verification_challenge, last verified 2026-11-19.",
   "reviewed_base": "51f682272b5022ff841ffe03d26c346fe0ae083f",
   "original_unique_urls": 100,
-  "current_unique_urls": 572,
-  "current_unique_hrefs": 578,
+  "current_unique_urls": 580,
+  "current_unique_hrefs": 586,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 552,
+    "retrieved": 560,
     "retrieved_pdf_text": 3,
     "verification_challenge": 3
   },
@@ -129,10 +129,10 @@
     },
     "tech-radar.html": {
       "checked_on": "2026-11-24",
-      "scope": "Targeted 20 November 2026 supplement: 21 new vendor sources checked live and 2 corrected source entries (Codex CLI version, OpenHands version) re-checked; all other radar sources retain their 18 November 2026 pass.",
+      "scope": "Targeted 20 November 2026 supplement: 21 new vendor sources checked live and 2 corrected source entries (Codex CLI version, OpenHands version) re-checked; all other radar sources retain their 18 November 2026 pass. Targeted 25 November 2026 ADE supplement: 8 new vendor sources (Orca, T3 Code, Paradev, Paseo, Orchestrator, Traycer, OpenChamber, Kepler) fetched live; Orca, Paradev, Orchestrator, Traycer and OpenChamber release versions are from secondary trackers, and Paseo carries a licence discrepancy — both flagged in the issue.",
       "status": "completed with explicit limitations",
-      "source_entries": 23,
-      "unique_fetch_destinations": 23
+      "source_entries": 31,
+      "unique_fetch_destinations": 31
     },
     "tech-scan.html": {
       "checked_on": "2026-11-24",
@@ -21796,6 +21796,300 @@
         {
           "file": "concept.html",
           "id": "source-60"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/stablyai/orca",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/stablyai/orca"
+      ],
+      "checked_on": "2026-11-25",
+      "targeted_checked_on": "2026-11-25",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/stablyai/orca",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "The Orca repository: MIT-licensed ADE that runs any CLI coding agent in parallel git worktrees, with mobile apps, bots and scheduled automations; latest release v1.4.272, 23 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - stablyai/orca: Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex)'.",
+          "limitation": "The v1.4.272 release date comes from a secondary release tracker; the vendor releases page was not re-fetched in this pass."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "2a9776c268857913adfeddc9f3ed8b1cbd8a09f27dbeb83d4ed9ecf47362c145",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/stablyai/orca"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-154"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pingdotgg/t3code",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/pingdotgg/t3code"
+      ],
+      "checked_on": "2026-11-25",
+      "targeted_checked_on": "2026-11-25",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/pingdotgg/t3code",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "The T3 Code repository: MIT-licensed control plane for Claude Code, Codex, Cursor and other coding agents, with per-thread worktrees and desktop, web and mobile clients; latest release v0.1.12.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - pingdotgg/t3code: The best way to control Claude Code, Codex and more from any computer or phone'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "f20e68bb719b6f2691187efc68d19120203654fc6b0beae98eb40a6184e240e5",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/pingdotgg/t3code"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-155"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ParadevAI/Paradev",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/ParadevAI/Paradev"
+      ],
+      "checked_on": "2026-11-25",
+      "targeted_checked_on": "2026-11-25",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/ParadevAI/Paradev",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "The Paradev repository: MIT-licensed desktop workspace running any CLI coding agent in parallel git worktrees; latest release desktop-v2.0.11, 20 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - ParadevAI/Paradev: Paradev is an open-source Codex App and Conductor alternative'.",
+          "limitation": "The desktop-v2.0.11 release date is from secondary trackers; the repository page itself does not state the release version."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "400485aa068ba1bb475acf1d78965a3baf5207035398acae9a827dc900e85a0c",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/ParadevAI/Paradev"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-156"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/getpaseo/paseo",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/getpaseo/paseo"
+      ],
+      "checked_on": "2026-11-25",
+      "targeted_checked_on": "2026-11-25",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/getpaseo/paseo",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "The Paseo repository: open-source ADE with built-in multi-agent orchestration in git worktrees, on desktop, web, CLI and full mobile apps; latest release v0.17.4, 23 November 2026. The README states Apache-2.0; the repository metadata records no licence assertion.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - getpaseo/paseo: Orchestrate multiple coding agents from desktop and mobile'.",
+          "limitation": "Licence discrepancy: the README states Apache-2.0 but the repository metadata records no licence assertion; the radar entry carries a Conditions apply flag."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "46b21ac4801fc14c410d3431e2d6b73bbe2db2c933ab93f98c2fa88f12844739",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/getpaseo/paseo"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-157"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/OrchestratorInc/agent-orchestrator"
+      ],
+      "checked_on": "2026-11-25",
+      "targeted_checked_on": "2026-11-25",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/OrchestratorInc/agent-orchestrator",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "The Orchestrator repository: Apache-2.0 fleet supervisor with one worker per worktree, Kanban to a merged pull request and a reviewer agent on every pull request; latest stable release v0.15.5, 23 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - OrchestratorInc/agent-orchestrator: Plan, run and supervise fleets of agents from task to merged PR'.",
+          "limitation": "The v0.15.5 release date is from secondary trackers; the repository page itself does not state the release version."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "b0fed494ac32760233d07f22dae72e44e9c75229f432a8ef56e132dd60d75e0a",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/OrchestratorInc/agent-orchestrator"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-158"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/traycerai/traycer",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/traycerai/traycer"
+      ],
+      "checked_on": "2026-11-25",
+      "targeted_checked_on": "2026-11-25",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/traycerai/traycer",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "The Traycer repository: MIT-licensed task-based orchestration app with agent-to-agent messaging and cloud sandboxes as a paid add-on; latest release desktop-v1.5.4, 13 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - traycerai/traycer: Traycer: Nerve Center for Agentic Coding'.",
+          "limitation": "The desktop-v1.5.4 release date is from secondary trackers; the repository page itself does not state the release version."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "f6dc55807281dd56ed2f07cdc1f6cd5dbe1487b8d3f716825eb9ac6ccc852a1c",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/traycerai/traycer"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-159"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/openchamber/openchamber",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/openchamber/openchamber"
+      ],
+      "checked_on": "2026-11-25",
+      "targeted_checked_on": "2026-11-25",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://github.com/openchamber/openchamber",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "The OpenChamber repository: MIT-licensed workspace for running and reviewing OpenCode work across desktop, web, VS Code and mobile; latest release v2.8.0, 22 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - openchamber/openchamber: Agentic Development Environment based on OpenCode AI agent'.",
+          "limitation": "The v2.8.0 release date is from secondary trackers; the repository page itself does not state the release version."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "cd37745bb1f25e85e780f2cab98be0e34d4d09ab542688a9d89fce9508c5f237",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/openchamber/openchamber"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-160"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gitkraken.com/blog/kepler-is-in-public-preview-one-task-every-repo-every-agent",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.gitkraken.com/blog/kepler-is-in-public-preview-one-task-every-repo-every-agent"
+      ],
+      "checked_on": "2026-11-25",
+      "targeted_checked_on": "2026-11-25",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.gitkraken.com/blog/kepler-is-in-public-preview-one-task-every-repo-every-agent",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "GitKraken announces Kepler in public preview on 31 July 2026: an ADE for multi-repo agent tasks via Agent Client Protocol agents, with Kanban and Agent Graph.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Kepler Is in Public Preview: One Task, Every Repo, Every Agent'."
+        }
+      ],
+      "evidence_digests": [
+        {
+          "sha256": "a24fd2c30091c7ec7242a54323eb8223ac11d147709b76b224d184f68acdd06e",
+          "format": "direct HTTP response",
+          "source_url": "https://www.gitkraken.com/blog/kepler-is-in-public-preview-one-task-every-repo-every-agent"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-161"
         }
       ]
     }
