@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-24",
-  "scope": "Daily maintenance verification on 2026-11-24 found 565 distinct external hrefs and no broken destination; 3 Muse (muse.ai) sources could not be re-fetched from this environment (egress proxy blocks the domain; reader unavailable) and are marked verification_challenge, last verified 2026-11-19.",
+  "scope": "Daily maintenance verification on 2026-11-24 found 572 distinct external URLs and no broken destination; 3 Muse (muse.ai) sources could not be re-fetched from this environment (egress proxy blocks the domain; reader unavailable) and are marked verification_challenge, last verified 2026-11-19.",
   "reviewed_base": "51f682272b5022ff841ffe03d26c346fe0ae083f",
   "original_unique_urls": 100,
-  "current_unique_urls": 551,
-  "current_unique_hrefs": 557,
+  "current_unique_urls": 558,
+  "current_unique_hrefs": 564,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 531,
+    "retrieved": 538,
     "retrieved_pdf_text": 3,
     "verification_challenge": 3
   },
@@ -20433,6 +20433,204 @@
         {
           "file": "concept-maturity.html",
           "id": "source-13"
+        }
+      ]
+    },
+    {
+      "url": "https://www.langchain.com/blog/knowledge-factory",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://www.langchain.com/blog/knowledge-factory"
+      ],
+      "checked_on": "2026-11-24",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://www.langchain.com/blog/knowledge-factory",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Harrison Chase, LangChain, How to build a knowledge factory for AI agents. Agents flag missing or wrong company knowledge; a curator agent reviews the flags against sources and traces and proposes changes; shared knowledge is stored in three kinds. Cited for the mechanism, not for results.",
+          "evidence_summary": "Targeted issue-161 check on 2026-11-24 returned HTTP 200; the page states each claim. Vendor announcement; no independent results are cited."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-54"
+        }
+      ]
+    },
+    {
+      "url": "https://hex.tech/blog/knowledge-engine/",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://hex.tech/blog/knowledge-engine/"
+      ],
+      "checked_on": "2026-11-24",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://hex.tech/blog/knowledge-engine/",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Katherine Harrison, Hex, Introducing the Knowledge Engine. Nightly curation of workspace knowledge, contested knowledge where sources disagree, and review of verified knowledge. The reported token and resolution figures are vendor-reported and are not cited.",
+          "evidence_summary": "Targeted issue-161 check on 2026-11-24 returned HTTP 200; the page states each claim. Vendor announcement; its figures are not used as evidence."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-55"
+        }
+      ]
+    },
+    {
+      "url": "https://deliverd.dev/blog/who-confirmed-what-your-agent-knows",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://deliverd.dev/blog/who-confirmed-what-your-agent-knows"
+      ],
+      "checked_on": "2026-11-24",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://deliverd.dev/blog/who-confirmed-what-your-agent-knows",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Deliverd Engineering Team, Who confirmed what your agent knows? Agents flag gaps, a curator proposes changes and a person confirms them; confirmed text stays fixed and later revisions supersede it. Used in Keep shared knowledge current.",
+          "evidence_summary": "Targeted issue-161 check on 2026-11-24 returned HTTP 200; the page states each claim. Vendor engineering blog."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-56"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2510.04618",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://arxiv.org/abs/2510.04618"
+      ],
+      "checked_on": "2026-11-24",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://arxiv.org/abs/2510.04618",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Qizheng Zhang et al., Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models. Separates generator, reflector and curator roles that evolve context, and warns that unreliable feedback can pollute the context later runs inherit. Benchmark gains are the authors' own and are not cited.",
+          "evidence_summary": "Targeted issue-161 check on 2026-11-24 returned HTTP 200; the abstract and paper describe each claim. Research preprint; its benchmark figures are not used as evidence."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-57"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.hex.tech/docs/hex-4-0/knowledge-engine",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://learn.hex.tech/docs/hex-4-0/knowledge-engine"
+      ],
+      "checked_on": "2026-11-24",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://learn.hex.tech/docs/hex-4-0/knowledge-engine",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "supported",
+          "scope": "Hex, Knowledge Engine documentation. Beta feature; knowledge carries verified, supported, learning, contested or debunked states and the agent is told how far to rely on each; curation settings are admin-controlled. Used in Keep shared knowledge current.",
+          "evidence_summary": "Targeted issue-161 check on 2026-11-24 returned HTTP 200; the documentation states each claim."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-58"
+        }
+      ]
+    },
+    {
+      "url": "https://romielwillautomate.dev/blog/langchain-knowledge-factory-curator-agent-2026-11-22",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://romielwillautomate.dev/blog/langchain-knowledge-factory-curator-agent-2026-11-22"
+      ],
+      "checked_on": "2026-11-24",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://romielwillautomate.dev/blog/langchain-knowledge-factory-curator-agent-2026-11-22",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Romiel Inolino, LangChain's knowledge factory: curator agent. One practitioner's account: agents flag gaps and a curator proposes fixes; on a small team a flag tool with a weekly human review replaces a full agent; pricing, policy and customer data stay human-approved.",
+          "evidence_summary": "Targeted issue-161 check on 2026-11-24 returned HTTP 200; the page states each claim.",
+          "limitation": "Single practitioner's account of one team's setup; not an independent evaluation."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-59"
+        }
+      ]
+    },
+    {
+      "url": "https://dev.to/affineofficial/your-llm-wiki-should-collect-the-questions-it-cant-answer-i-wrote-a-gap-queue-for-that-5i0",
+      "files": [
+        "concept.html"
+      ],
+      "hrefs": [
+        "https://dev.to/affineofficial/your-llm-wiki-should-collect-the-questions-it-cant-answer-i-wrote-a-gap-queue-for-that-5i0"
+      ],
+      "checked_on": "2026-11-24",
+      "result": "retrieved",
+      "http_status": 200,
+      "final_url": "https://dev.to/affineofficial/your-llm-wiki-should-collect-the-questions-it-cant-answer-i-wrote-a-gap-queue-for-that-5i0",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "concept.html",
+          "outcome": "limited",
+          "scope": "Vincent, Your LLM Wiki Should Collect the Questions It Can't Answer: I Wrote a Gap Queue for That. A gap queue turns missing, stale and conflicting knowledge into deterministic tickets; a person owns the merge.",
+          "evidence_summary": "Targeted issue-161 check on 2026-11-24 returned HTTP 200; the article states each claim.",
+          "limitation": "Vendor-affiliated practitioner article describing one tool's design; not an independent evaluation."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "concept.html",
+          "id": "source-60"
         }
       ]
     }

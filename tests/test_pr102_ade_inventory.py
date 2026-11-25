@@ -142,6 +142,17 @@ class ADEInventoryTests(unittest.TestCase):
             'https://hermes-agent.nousresearch.com/docs/user-guide/security',
             'https://hermes-agent.nousresearch.com/open-source-ai-agent',
         }
+        # Issue 161: the Concepts shared-knowledge sources are a targeted
+        # addition; inherited records remain pinned.
+        new_urls |= {
+            'https://www.langchain.com/blog/knowledge-factory',
+            'https://hex.tech/blog/knowledge-engine/',
+            'https://deliverd.dev/blog/who-confirmed-what-your-agent-knows',
+            'https://arxiv.org/abs/2510.04618',
+            'https://learn.hex.tech/docs/hex-4-0/knowledge-engine',
+            'https://romielwillautomate.dev/blog/langchain-knowledge-factory-curator-agent-2026-11-22',
+            'https://dev.to/affineofficial/your-llm-wiki-should-collect-the-questions-it-cant-answer-i-wrote-a-gap-queue-for-that-5i0',
+        }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews']
