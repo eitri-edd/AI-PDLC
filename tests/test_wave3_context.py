@@ -82,5 +82,5 @@ class ContextReferenceTests(unittest.TestCase):
             self.assertEqual([a.attrs.get('href') for a in nav.elements('a')],
                              ['#choices', '#memory', '#construction', '#pilot', '#sources'])
         links = {a.attrs.get('href') for a in doc.root.elements('a')}
-        for link in ('tech-scan-verification.html', 'tech-scan-harness.html', 'tech-scan-gateway.html', 'eds-team-context.html'):
+        for link in ('tech-scan-verification.html', 'tech-scan-harness.html', 'tech-scan-gateway.html'):
             self.assertIn(link, links)

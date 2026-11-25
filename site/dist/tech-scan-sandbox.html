@@ -42,11 +42,8 @@
           <div class="nav-children">
             <a href="eds-po-ba-harness.html">PO/BA harness</a>
             <a href="eds-developer-harness.html">Developer harness</a>
-            <a href="eds-path-to-production.html">Path to production</a>
-            <a href="eds-team-context.html">Team context</a>
-            <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
-          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="training-maintenance.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
           <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
         </nav>
       </details>
@@ -58,7 +55,7 @@
           <p class="eyebrow">Development guide</p>
           <h1>Tech Scan: Sandbox</h1>
           <p class="lead">Where should agent-written code run, and which resources could it reach? Choose an execution route for the task, then check its network, credential and approval boundaries.</p>
-          <p id="tech-scan-note">Draft research reference from web sources reviewed 11–12 November 2026; not locally deployed or benchmarked. For the underlying explanation, read <a href="concept.html#harness-engineering">Concepts: harness engineering</a> and <a href="eds-path-to-production.html">Path to production</a>.</p>
+          <p id="tech-scan-note">Draft research reference from web sources reviewed 11–12 November 2026; not locally deployed or benchmarked. For the underlying explanation, read <a href="concept.html#harness-engineering">Concepts: harness engineering</a>.</p>
         </header>
         <!-- PAGE MAP START -->
         <figure class="page-map page-map--route" aria-labelledby="page-map-caption" aria-describedby="page-map-note">
@@ -185,7 +182,7 @@
                 <tr><td>Egress</td><td>Configure and test allowed destinations for the selected execution route</td><td>Gateway policy is not a shell-network control; VPC attachment is not an allowlist. Network mode and routing need explicit verification.<a href="#source-8" aria-label="Source 8: AWS, Bedrock AgentCore VPC documentation">[8]</a><a href="#source-22" aria-label="Source 22: AWS, Harness security">[22]</a></td></tr>
                 <tr><td>Identity</td><td>Use a minimal execution role and short-lived, task-scoped credentials</td><td>Code allowed to use a credential may misuse it; isolation does not make an overpowered role safe.<a href="#source-22" aria-label="Source 22: AWS, Harness security">[22]</a></td></tr>
                 <tr><td>Secrets</td><td>CSI mounts without sync avoid creating a Kubernetes Secret for that mount. ESO creates Kubernetes Secret objects; CSI also offers optional sync to those objects.<a href="#source-16" aria-label="Source 16: External Secrets Operator, Overview">[16]</a><a href="#source-17" aria-label="Source 17: Secrets Store CSI Driver, Sync as Kubernetes Secret">[17]</a></td><td>Kubernetes Secrets are stored in etcd. If using ESO or CSI sync, apply encryption at rest, restrict RBAC and control which workloads can mount the Secret. Mounted credentials remain accessible to authorised workload code; avoiding etcd is not zero-risk credential protection.<a href="#source-18" aria-label="Source 18: Kubernetes, Secrets">[18]</a></td></tr>
-                <tr><td>Admission and approval</td><td>For Kubernetes, map applicable machine-verifiable <a href="eds-developer-harness.html#source-im8">IM8</a> and <a href="eds-developer-harness.html#source-arc">ARC</a> controls to admission constraints</td><td>Retain reviewed evidence and manual approval for the remainder. An admitted workload and a sandboxed code output still need the separate delivery decision.</td></tr>
+                <tr><td>Admission and approval</td><td>For Kubernetes, map applicable machine-verifiable <a href="eds-developer-harness.html#source-im8">IM8</a> and ARC controls to admission constraints</td><td>Retain reviewed evidence and manual approval for the remainder. An admitted workload and a sandboxed code output still need the separate delivery decision.</td></tr>
               </tbody>
             </table>
           </div>
@@ -337,7 +334,7 @@
           <p><strong>Shared-host residual risk and maintenance:</strong> In controlled frontier-model research, OpenAI reports agents exchanging synthetic secrets across isolated tasks using a shared CPU cache; researchers supplied protocols or direction in most channel tests.<a href="#source-23" aria-label="Source 23: OpenAI, Securing our frontier model training environment">[23]</a> Guillermo Rauch describes an independent <code>cpu-chat</code> reproduction in his X post; the available partial extract limits verification of its details.<a href="#source-24" aria-label="Source 24: Guillermo Rauch, cpu-chat post on X">[24]</a> This is a threat model for cooperating, co-resident workloads communicating across an intended boundary, not evidence of ordinary tenant compromise or a universal sandbox bypass. Ask the platform owner how host kernels, hypervisors and sandbox components are patched, how vulnerabilities are disclosed and remediated, and which residual co-residency controls and isolation guarantees apply to the selected deployment.</p>
           <p>The 9 November 2026 Nitro launch sources describe availability and mechanisms, not this account's results.<a href="#source-1" aria-label="Source 1: AWS, AWS Nitro Sandboxes">[1]</a><a href="#source-2" aria-label="Source 2: AWS Containers Blog, AWS Nitro Sandboxes">[2]</a> The initial research did not establish independent startup benchmarks, an SLA or a supported GPU path; recheck those requirements rather than assuming their absence or availability.</p>
           <p>Lambda MicroVMs Singapore availability remains unresolved in the retained research: the 22 June 2026 launch covered five regions, while the 7 November 2026 builder article reports 14 without naming them. Confirm current regional availability before selecting it for a Singapore workload.<a href="#source-14" aria-label="Source 14: AWS News Blog, Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs">[14]</a><a href="#source-15" aria-label="Source 15: AWS Builder Center, Lambda Now Comes in Three Shapes">[15]</a></p>
-          <p class="next-step">Next, read <a href="eds-path-to-production.html">Path to production</a> for the gates a sandboxed change must still pass — the sandbox bounds what agent code can do, it does not approve the change.</p>
+          <p class="next-step">Next, check the path-to-production gates a sandboxed change must still pass — the sandbox bounds what agent code can do, it does not approve the change.</p>
         <p><strong>Residual-risk record:</strong> include sandbox enablement and unavailable-backend behaviour, guest or host patch owner, direct-IP egress handling, independent identity restrictions, and whether an agent can modify the policy files that would otherwise constrain it. Unresolved cases are deployment blockers for that path, not merely documentation gaps.</p>
 </section>
         <section id="sources">

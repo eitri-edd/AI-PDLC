@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Overview of the EDS AI Workflow (Eitri Agentic Dev Workflow): the route from PO/BA requirements through the Eitri developer harness to the pipeline gates, who owns each artefact, and working principles.">
+  <meta name="description" content="Overview of the EDS AI Workflow (Eitri Agentic Dev Workflow): how a PRD becomes verified code through the six Eitri stages, who owns each artefact, and working principles.">
   <title>EDS AI Workflow · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,11 +42,8 @@
           <div class="nav-children">
             <a href="eds-po-ba-harness.html">PO/BA harness</a>
             <a href="eds-developer-harness.html">Developer harness</a>
-            <a href="eds-path-to-production.html">Path to production</a>
-            <a href="eds-team-context.html">Team context</a>
-            <a href="eds-skills-catalogue.html">Skills catalogue</a>
           </div>
-          <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
+          <a href="training-maintenance.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3.5 1.5 7.5 10 11.5l8.5-4-8.5-4ZM5 9.2v4.3c1.4 1.3 3.1 2 5 2s3.6-.7 5-2V9.2M18.5 7.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Training</a>
           <a href="about.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>About</a>
         </nav>
       </details>
@@ -57,9 +54,8 @@
         <header class="article-header">
           <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
           <h1>EDS AI Workflow (Eitri Agentic Dev Workflow)</h1>
-<p class="lead">The EDS AI Workflow is how EDS teams carry out product implementation with AI agents. It runs from the product owner’s requirements, through Eitri, the agentic developer harness, to the pipeline gates before production. Use this overview to see the whole route and who owns each handoff, then open the page for the part you want to understand.</p>
-          <p>The CoreX EDS team maintains <a href="#source-harness">this workflow</a>. The workflow is made of skills: packaged instructions that an AI agent runs for one task, such as writing a specification or reviewing a change. It builds on <a href="#source-matt">Matt Pocock’s engineering skills</a> and adds EDS skills for scheduling, standards, compliance, validation and release readiness. For the strategy behind it, including the six-stage loop, assurance model, autonomy and measures, <a href="product-implementation.html">read Product implementation</a>.</p>
-          <p>Some capabilities are still planned, and the thresholds shown are defaults that a team can change; both are labelled where they appear.</p>
+<p class="lead">The EDS AI Workflow is how EDS teams carry out product implementation with AI agents. It runs from the product owner’s requirements, through the six stages of Eitri, the developer harness, to a verified change. Use this overview to see the whole route and who owns each handoff, then open the page for the part you want to understand.</p>
+          <p>The CoreX EDS team maintains <a href="#source-harness">this workflow</a>. The workflow is made of skills: packaged instructions that an AI agent runs for one task, such as writing a specification or reviewing a change. It builds on <a href="#source-matt">Matt Pocock’s engineering skills</a> and adds EDS skills for coding, review and verification. For the strategy behind it, including the implementation loop, assurance model, autonomy and measures, <a href="product-implementation.html">read Product implementation</a>.</p>
           <iframe
             class="overview-video"
             src="https://drive.google.com/file/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/preview"
@@ -87,9 +83,9 @@
         <figure class="page-map page-map--route" aria-label="Page summary">
           <p class="page-map-title">On this page · 4 steps to use this section</p>
           <ol class="page-map-steps">
-            <li><a href="#workflow">See the route</a><span>Follow the end-to-end flow from PRD handoff to pre-production sign-off.</span></li>
-            <li><a href="#ownership">Check ownership</a><span>Confirm who owns the PRD, the user-story TRD, issues and release sign-off.</span></li>
-            <li><a href="#principles">Apply the principles</a><span>Use layered context, vertical slices and independent validation gates.</span></li>
+            <li><a href="#workflow">See the six stages</a><span>Follow a user story from the PRD handoff to a verified change and a retrospective.</span></li>
+            <li><a href="#ownership">Check ownership</a><span>Confirm who owns the PRD, the specification, the tickets and each sign-off.</span></li>
+            <li><a href="#principles">Apply the principles</a><span>Use layered context, vertical slices and independent reviews.</span></li>
             <li><a href="#harness">Diagnose &amp; measure</a><span>Trace any failure to one of five harness layers and track workflow health.</span></li>
           </ol>
         </figure>
@@ -101,8 +97,8 @@
         <details class="mobile-contents"><summary>On this page</summary><nav aria-label="On this page">
             <a href="#eitri-inspiration">The EITRI inspiration</a>
             <a href="#pages">Pages in this section</a>
-            <a href="#workflow">The route to production</a>
-            <a href="#status">Status labels</a>
+            <a href="#workflow">The six stages</a>
+            <a href="#status">Installed version</a>
             <a href="#ownership">Roles and artefacts</a>
             <a href="#principles">Working principles</a>
             <a href="#context-practice">Context for agents</a>
@@ -128,79 +124,71 @@
           <h2>Find the page you need</h2>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Pages in the EDS AI Workflow section; scroll horizontally if needed"><table class="wide-table"><caption>Pages in the EDS AI Workflow section</caption><thead><tr><th scope="col">Page</th><th scope="col">Roles involved</th><th scope="col">What it explains</th></tr></thead><tbody>
             <tr><th scope="row"><a href="eds-po-ba-harness.html">PO/BA harness</a></th><td>Product owner (PO), business analyst (BA)</td><td>How a business need becomes a product requirements document (PRD), through one of three paths.</td></tr>
-            <tr><th scope="row"><a href="eds-developer-harness.html">Developer harness</a></th><td>Architect, Tech Lead, developer</td><td>How Eitri turns one user story into a checked design, small issues, working code and evidence.</td></tr>
-            <tr><th scope="row"><a href="eds-path-to-production.html">Path to production</a></th><td>Tech Lead, reviewer, platform team</td><td>Which checks run at commit, merge and pre-production, and what blocks a release.</td></tr>
-            <tr><th scope="row"><a href="eds-team-context.html">Team context</a></th><td>Tech Lead, standards owner</td><td>How a team adds its own domain knowledge, standards, policies and review rules.</td></tr>
-            <tr><th scope="row"><a href="eds-skills-catalogue.html">Skills catalogue</a></th><td>Anyone looking up a skill</td><td>What each skill does, who maintains it and whether it is available.</td></tr>
+            <tr><th scope="row"><a href="eds-developer-harness.html">Developer harness</a></th><td>Architect, Tech Lead, developer</td><td>How Eitri takes one user story through six stages, from clarifying questions to verified code and a retrospective.</td></tr>
           </tbody></table></div>
           <p>The second half of this page holds working principles: guidance on operating the harness well that does not depend on a specific skill.</p>
         </section>
 
         <section id="workflow">
-          <h2>Follow the route from requirements to production</h2>
-          <p>A product requirements document (PRD) records what to build and why. Developers put its user stories in a build order, then turn one story at a time into a technical requirements document (TRD), check it against standards and policy, and slice it into small issues. Each issue is built and validated in a loop, closed out with independent evidence, and then passes pipeline gates on its way to production.</p>
+          <h2>Follow a story through six stages</h2>
+          <p>A product requirements document (PRD) records what to build and why. Eitri takes one of its user stories at a time through six stages: Clarify, Specify, Slice, Implement, Verify and Retrospect. A person signs off the specification after Specify, and the tickets after Slice.</p>
           <figure class="concept-figure">
-            <figcaption>Figure 1. The EDS AI Workflow from the PRD handoff to the release decision. Human decisions are highlighted; dashed arrows show rework.</figcaption>
+            <figcaption>Figure 1. The six stages of Eitri. Highlighted shapes are human sign-offs; dashed arrows show rework and the start of the next cycle.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 290" role="img" aria-labelledby="fig-route-title">
-                <title id="fig-route-title">The EDS AI Workflow. The PO or BA hands over a PRD. Developers plan one user story into a technical design. Human gate 1 signs off the design; findings send it back for revision. The design is sliced into small issues. Human gate 2 approves them as ready; questions send them back. The build loop builds, checks and fixes one issue at a time. Closeout adds review and evidence; a failed check returns to the build loop. Release gates run the pipeline checks, and the Tech Lead approves release.</title>
+                <title id="fig-route-title">The six stages of Eitri as a cycle. Clarify resolves open questions. Specify writes the specification. Human sign-off 1 approves the specification; requested changes send it back to Specify. Slice breaks it into tickets. Human sign-off 2 approves the tickets; requested changes send them back to Slice. Implement builds the tickets test-first. Verify reviews the code and gathers end-to-end evidence. Retrospect improves the setup, and the next cycle starts again at Clarify.</title>
                 <path class="d-line d-dash" d="M428 44V22H252V40" marker-end="url(#arrow)"/>
-                <text class="d-label" x="340" y="16" text-anchor="middle">findings: revise the design</text>
-                <rect class="d-node" x="4" y="44" width="148" height="64" rx="8"/><text class="d-title" x="78" y="70" text-anchor="middle">PRD handoff</text><text class="d-sub" x="78" y="94" text-anchor="middle">From the PO or BA</text>
+                <text class="d-label" x="340" y="16" text-anchor="middle">changes requested: revise</text>
+                <rect class="d-node" x="4" y="44" width="148" height="64" rx="8"/><text class="d-title" x="78" y="70" text-anchor="middle">1 Clarify</text><text class="d-sub" x="78" y="94" text-anchor="middle">Resolve questions</text>
                 <path class="d-line" d="M152 76H173" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="177" y="44" width="148" height="64" rx="8"/><text class="d-title" x="251" y="70" text-anchor="middle">Plan the story</text><text class="d-sub" x="251" y="94" text-anchor="middle">Technical design</text>
+                <rect class="d-node" x="177" y="44" width="148" height="64" rx="8"/><text class="d-title" x="251" y="70" text-anchor="middle">2 Specify</text><text class="d-sub" x="251" y="94" text-anchor="middle">Write the spec</text>
                 <path class="d-line" d="M325 76H349" marker-end="url(#arrow)"/>
-                <polygon class="d-node d-node-accent d-decision" points="361,44 495,44 503,52 503,100 495,108 361,108 353,100 353,52"/><text class="d-title" x="428" y="70" text-anchor="middle">Human gate 1</text><text class="d-sub" x="428" y="94" text-anchor="middle">Design sign-off</text>
+                <polygon class="d-node d-node-accent d-decision" points="361,44 495,44 503,52 503,100 495,108 361,108 353,100 353,52"/><text class="d-title" x="428" y="70" text-anchor="middle">Sign-off 1</text><text class="d-sub" x="428" y="94" text-anchor="middle">Specification</text>
                 <path class="d-line" d="M503 76H525" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="529" y="44" width="147" height="64" rx="8"/><text class="d-title" x="602" y="70" text-anchor="middle">Slice the work</text><text class="d-sub" x="602" y="94" text-anchor="middle">Small issues</text>
+                <rect class="d-node" x="529" y="44" width="147" height="64" rx="8"/><text class="d-title" x="602" y="70" text-anchor="middle">3 Slice</text><text class="d-sub" x="602" y="94" text-anchor="middle">Small tickets</text>
                 <path class="d-line" d="M564 108V160" marker-end="url(#arrow)"/>
                 <path class="d-line d-dash" d="M644 164V112" marker-end="url(#arrow)"/>
-                <text class="d-label" x="604" y="141" text-anchor="middle">rework</text>
-                <polygon class="d-node d-node-accent d-decision" points="537,164 668,164 676,172 676,220 668,228 537,228 529,220 529,172"/><text class="d-title" x="602" y="190" text-anchor="middle">Human gate 2</text><text class="d-sub" x="602" y="214" text-anchor="middle">Issues ready</text>
+                <text class="d-label" x="604" y="141" text-anchor="middle">revise</text>
+                <polygon class="d-node d-node-accent d-decision" points="537,164 668,164 676,172 676,220 668,228 537,228 529,220 529,172"/><text class="d-title" x="602" y="190" text-anchor="middle">Sign-off 2</text><text class="d-sub" x="602" y="214" text-anchor="middle">Tickets</text>
                 <path class="d-line" d="M529 196H507" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="353" y="164" width="150" height="64" rx="8"/><text class="d-title" x="428" y="190" text-anchor="middle">Build loop</text><text class="d-sub" x="428" y="214" text-anchor="middle">Build, check, fix</text>
+                <rect class="d-node" x="353" y="164" width="150" height="64" rx="8"/><text class="d-title" x="428" y="190" text-anchor="middle">4 Implement</text><text class="d-sub" x="428" y="214" text-anchor="middle">Build test-first</text>
                 <path class="d-line" d="M353 196H331" marker-end="url(#arrow)"/>
-                <rect class="d-node" x="177" y="164" width="148" height="64" rx="8"/><text class="d-title" x="251" y="190" text-anchor="middle">Close out</text><text class="d-sub" x="251" y="214" text-anchor="middle">Review, evidence</text>
+                <rect class="d-node" x="177" y="164" width="148" height="64" rx="8"/><text class="d-title" x="251" y="190" text-anchor="middle">5 Verify</text><text class="d-sub" x="251" y="214" text-anchor="middle">Review, E2E tests</text>
                 <path class="d-line" d="M177 196H156" marker-end="url(#arrow)"/>
-                <polygon class="d-node d-node-accent d-decision" points="12,164 144,164 152,172 152,220 144,228 12,228 4,220 4,172"/><text class="d-title" x="78" y="190" text-anchor="middle">Release gates</text><text class="d-sub" x="78" y="214" text-anchor="middle">Pipeline checks</text>
-                <path class="d-line d-dash" d="M251 228V252H428V232" marker-end="url(#arrow)"/>
-                <text class="d-label" x="340" y="272" text-anchor="middle">a check fails: correct</text>
-                <path class="d-line d-line-accent" d="M78 228V254" marker-end="url(#arrow-accent)"/>
-                <text class="d-label d-label-accent" x="78" y="274" text-anchor="middle">Tech Lead approves</text>
+                <rect class="d-node" x="4" y="164" width="148" height="64" rx="8"/><text class="d-title" x="78" y="190" text-anchor="middle">6 Retrospect</text><text class="d-sub" x="78" y="214" text-anchor="middle">Improve the setup</text>
+                <path class="d-line d-dash" d="M78 164V112" marker-end="url(#arrow)"/>
+                <text class="d-label" x="84" y="141">next cycle</text>
               </svg>
             </div>
-            <p class="diagram-key">Solid arrows show forward flow; labelled dashed arrows show rework when a check or review finds an issue. Cut-corner blue shapes mark human sign-off and release gates.</p>
+            <p class="diagram-key">Solid arrows show forward flow. Cut-corner blue shapes mark the two human sign-offs. Dashed arrows show revisions requested at a sign-off and the return to Clarify for the next story.</p>
           </figure>
-          <p>The PO or BA hands over the PRD. Developers plan one user story into a technical design, the TRD, and a person signs it off at the first human gate; unresolved findings send it back for revision. The approved design is sliced into small issues, each delivering a working piece of the story, and a person confirms at the second human gate that they are ready to build.</p>
-          <p>An AI agent then builds one issue at a time in a loop that builds, checks and corrects its own work. Closeout adds independent review and evidence that the story behaves as specified, and returns failures to the loop. Finally, four pipeline stages widen the checks from the single change to the whole codebase, ending with one report for the Tech Lead’s sign-off.</p>
-          <p>The <a href="eds-developer-harness.html">Developer harness page</a> breaks the middle of this route into its individual steps. The <a href="eds-path-to-production.html">Path to production page</a> covers the pipeline stages.</p>
-          <p>The workflow covers Plan, Slice, Implement and Verify in the six-stage implementation loop, and reaches release readiness through the pipeline gates. Progressive rollout, observation and learning from production evidence sit outside the harness. Use the <a href="product-implementation.html#six-stages">Product implementation guidance</a> for those stages.</p>
+          <p>The PO or BA hands over the PRD. Clarify resolves the story’s open questions, and Specify writes them up as the technical requirements document (TRD), which a person signs off. Slice breaks the approved specification into small tickets, each delivering a working piece of the story, and a person signs those off before any code is written.</p>
+          <p>Implement builds every ticket test-first and ends with a code review and fixes. Verify runs independent maintainability and IM8 reviews, then tests the user stories end to end. Retrospect turns what went wrong into better rules, checks and skills for the next story.</p>
+          <p>The <a href="eds-developer-harness.html">Developer harness page</a> describes each stage and its skills.</p>
+          <p>Eitri covers Plan, Slice, Implement and Verify in the <a href="product-implementation.html#six-stages">six-stage implementation loop</a>; its Retrospect stage improves the harness itself. Release, progressive rollout, observation and learning from production evidence sit outside the harness. Use the Product implementation guidance for those stages.</p>
 
           <aside class="ai-help" id="ai-help-workflow" aria-labelledby="ai-help-workflow-title">
             <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
             <h3 id="ai-help-workflow-title">Connect each agent task to the next artefact</h3>
-            <p>The workflow lets agents help develop a PRD into technical plans, bounded issues and implementation evidence. Review the artefact at each handoff before relying on it.</p>
+            <p>The workflow lets agents help develop a PRD into a specification, small tickets and implementation evidence. Review the artefact at each handoff before relying on it.</p>
             <dl class="ai-help-facts">
-              <div><dt>Give AI</dt><dd>The agreed PRD, repository context, applicable standards and the current step’s required artefacts.</dd></div>
-              <div><dt>AI helps by</dt><dd>Drafting plans and issues, carrying out bounded implementation tasks and collecting check results through the documented skills.</dd></div>
-              <div><dt>People check</dt><dd>The assigned reviewers compare artefacts with the original intent and reproduce relevant checks. People sign off at the documented human gates.</dd></div>
-              <div><dt>Keep as evidence</dt><dd>The reviewed plans, issues, check reports and gate decisions, linked to the story and installed workflow version.</dd></div>
+              <div><dt>Give AI</dt><dd>The agreed PRD, repository context, applicable standards and the current stage’s required artefacts.</dd></div>
+              <div><dt>AI helps by</dt><dd>Drafting the specification and tickets, building the tickets and collecting review and test results through the documented skills.</dd></div>
+              <div><dt>People check</dt><dd>The assigned reviewers compare artefacts with the original intent and reproduce relevant checks. People sign off the specification and the tickets.</dd></div>
+              <div><dt>Keep as evidence</dt><dd>The signed-off specification and tickets, review reports and end-to-end evidence, linked to the story and installed workflow version.</dd></div>
             </dl>
           </aside>
 </section>
 
         <section id="status">
-          <h2>Understand the status labels</h2>
-          <p>Not every step in the workflow carries the same weight. Labels show which steps every story goes through, which a team can leave out, which are not yet available and where a person decides.</p>
-          <aside class="status-key" aria-label="Labels used on this page"><p>Labels on this page</p><dl><div><dt><span class="status status-core">Core</span></dt><dd>Part of the normal route for every story.</dd></div><div><dt><span class="status status-recommended">Optional · Recommended</span></dt><dd>Can be left out, but including it improves confidence or quality.</dd></div><div><dt><span class="status status-optional">Optional</span></dt><dd>Can be left out when it does not apply.</dd></div><div><dt><span class="status status-setup">One-time setup</span></dt><dd>Done once for each repository, before delivery work starts.</dd></div><div><dt><span class="status status-planned">Planned</span></dt><dd>In development and not yet available. Do not count on it as a control.</dd></div><div><dt><span class="status status-hitl">HITL</span></dt><dd>Human in the loop: a person signs off before the work moves on.</dd></div></dl></aside>
-          <h3 id="version-status">Verify Eitri status and version</h3>
-          <p>Workflow details and availability labels describe the documented Eitri setup. Before relying on a control, confirm the applicable configuration with the workflow owner and retain its version with the evidence:</p>
+          <h2 id="version-status">Check the installed version</h2>
+          <p>This guide describes Eitri version 1.0. Before relying on a skill or a sign-off, confirm the installed setup with the workflow owner and keep its version with the evidence:</p>
           <ul>
-            <li>Record the installed harness and upstream skill revisions, policy-pack versions and pipeline configuration revision.</li>
-            <li>Check which skills are available and which checks are enforced, advisory or planned in that installation.</li>
-            <li>Confirm where a failed check blocks progress, which independent reviews apply and who can authorise release or an exception.</li>
+            <li>Record the installed Eitri and Matt Pocock skill versions. The IM8 review skill is installed separately, so record its version too.</li>
+            <li>Check that every skill the stages use is installed in the repository.</li>
+            <li>Confirm who signs off the specification and the tickets, and who approves the merge.</li>
           </ul>
-          <p>Use the <a href="eds-team-context.html#policies">policy-pack guidance</a> and <a href="eds-path-to-production.html#stages">pipeline checks</a> for the specific controls. This guide does not identify the revision installed in your environment. For guided practice, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">open the Eitri training</a>.</p>
+          <p>This guide does not identify the version installed in your environment. For guided practice, <a href="training-maintenance.html">open the Eitri training</a>.</p>
         </section>
 
         <section id="ownership">
@@ -208,17 +196,16 @@
           <p>The PRD and the TRD are different agreements with different owners. The PRD states what the product needs to do and why, for the whole feature. The TRD is written for one user story at a time and adds how that story fits the architecture, the codebase and the applicable policies.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="PRD and user story level TRD compared; scroll horizontally if needed"><table class="wide-table"><caption>PRD and user story level TRD compared</caption><thead><tr><th scope="col">Artefact</th><th scope="col">Accountable role</th><th scope="col">Produced in</th><th scope="col">Contains</th></tr></thead><tbody>
             <tr><th scope="row">PRD</th><td>PO / BA</td><td>One of the three <a href="eds-po-ba-harness.html">PO/BA paths</a></td><td>Business-level user stories, acceptance criteria, feature scope and, where applicable, an HTML prototype</td></tr>
-            <tr><th scope="row">User story level TRD</th><td>Architect / Tech Lead</td><td>The <a href="eds-developer-harness.html#plan">planning steps</a> of the developer harness</td><td>Technical constraints, architecture decisions, alignment with the domain model, codebase context, testing decisions and exclusions</td></tr>
+            <tr><th scope="row">User story level TRD</th><td>Architect / Tech Lead</td><td>The <a href="eds-developer-harness.html#clarify">Clarify and Specify stages</a> of the developer harness</td><td>Technical constraints, architecture decisions, alignment with the domain model, codebase context, testing decisions and exclusions</td></tr>
           </tbody></table></div>
           <p>A technical PO or BA can also hand over an early-draft TRD. In that case the developer harness refines the draft instead of starting again.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Role boundaries and handoffs in the EDS AI Workflow; scroll horizontally if needed"><table class="wide-table"><caption>Role boundaries and handoffs in the EDS AI Workflow</caption><thead><tr><th scope="col">Role</th><th scope="col">Starts with</th><th scope="col">Owns</th><th scope="col">Hands off</th></tr></thead><tbody>
             <tr><th scope="row">PO / BA</th><td>A business problem or opportunity</td><td>Requirements path, user stories, acceptance criteria, optional prototype</td><td>PRD and specification files</td></tr>
-            <tr><th scope="row">Project manager (PM) / BA</th><td>The handed-off PRD</td><td>The story dependency graph, release split and planning report</td><td>A dependency graph that developers can plan against</td></tr>
-            <tr><th scope="row">Architect / Tech Lead</th><td>The dependency graph</td><td>The delivery plan for the team size, user story TRDs and architecture tests</td><td>Stories in delivery order with standards attached</td></tr>
-            <tr><th scope="row">Developer</th><td>The next story or ready issue</td><td>Investigation, issues, the build loop and closeout evidence</td><td>A merge request (MR) with acceptance evidence</td></tr>
-            <tr><th scope="row">Tech Lead / reviewers</th><td>The MR and release candidate</td><td>Standards and specification review, and the pre-production sign-off</td><td>An approved merge or release decision</td></tr>
+            <tr><th scope="row">Architect / Tech Lead</th><td>The handed-off PRD</td><td>Clarifying each user story and its TRD, including architecture and library decisions</td><td>A specification ready for sign-off</td></tr>
+            <tr><th scope="row">Developer</th><td>The signed-off specification</td><td>Tickets, implementation, the Verify reviews and end-to-end evidence</td><td>A merge request (MR) with acceptance evidence</td></tr>
+            <tr><th scope="row">Tech Lead / reviewers</th><td>The specification, the tickets and the MR</td><td>Reviews at each sign-off and of the MR</td><td>A signed-off specification and tickets, and an approved merge</td></tr>
           </tbody></table></div>
-          <p>Assign who drafts each TRD, who reviews the technical design and who signs off at each human gate before starting the story.</p>
+          <p>Before starting the story, assign who drafts each TRD, who reviews it and who gives each of the two sign-offs.</p>
         </section>
 
         <section id="principles">
@@ -228,17 +215,17 @@
             <li><strong>Provide context before important decisions.</strong> Make business goals, architecture, policy and coding constraints available early.</li>
             <li><strong>Load only what is relevant.</strong> Reveal standards progressively instead of placing the whole knowledge base in every prompt.</li>
             <li><strong>Use AI as the first reviewer.</strong> Challenge generated plans, specifications and tickets before accepting them.</li>
-            <li><strong>Secure the design before coding.</strong> Treat architecture and compliance as early checks, not late clean-up.</li>
+            <li><strong>Settle the design before coding.</strong> Resolve open decisions, architecture and library choices before slicing, not as late clean-up.</li>
             <li><strong>Slice work vertically.</strong> Each issue delivers a demonstrable outcome across the layers it needs, rather than a separate batch of schema, API or interface work.</li>
-            <li><strong>Build self-correction into implementation.</strong> Implement, review, validate and correct repeatedly until the work converges.</li>
-            <li><strong>Keep people accountable for intent and risk.</strong> Automation can do the work; people approve compliance, execution readiness and release.</li>
+            <li><strong>Build review and correction into implementation.</strong> Build test-first, review the result and fix the findings before verification.</li>
+            <li><strong>Keep people accountable for intent and risk.</strong> Automation can do the work; people sign off the specification and the tickets, and approve the merge.</li>
           </ol>
-          <p>An agent that reports “done” has not shown that the work is done. Let an automated check, an independent reviewer or a separate evaluator decide whether the work meets its stop condition; the agent that wrote the code is never the only judge. In the harness, the validation gates, the independent review and the browser and end-to-end evidence play this role.</p>
+          <p>An agent that reports “done” has not shown that the work is done. Let an automated check, an independent reviewer or a separate evaluator decide whether the work meets its stop condition; the agent that wrote the code is never the only judge. In Eitri, the code review, the Verify reviews and the end-to-end tests play this role.</p>
         </section>
 
         <section id="context-practice">
           <h2>Give agents the right context</h2>
-          <p>AI output depends on the context it receives. Keep context explicit, versioned, selective and traceable to the decision it influenced. The <a href="eds-team-context.html">Team context page</a> lists what a team supplies at each stage; this section explains how to organise it.</p>
+          <p>AI output depends on the context it receives. Keep context explicit, versioned, selective and traceable to the decision it influenced. This section explains how to organise it.</p>
           <p>Layer instructions so an agent reads a short entry point first and loads further detail only when a task calls for it:</p>
           <ul>
             <li><strong>A short entry map:</strong> the project’s purpose, how to run and verify it, its global constraints and where to find more.</li>
@@ -258,7 +245,7 @@
 
         <section id="harness">
           <h2>Diagnose the harness when work fails</h2>
-          <p>The harness is everything around the model: instructions, tools, environment, state and feedback. A capable model can still fail because one of these is weak. Strengthen the weak layer rather than assuming the model is the only problem. Improve the factory by fixing the cause of a class of failure, not only the current increment.</p>
+          <p>The harness is everything around the model: instructions, tools, environment, state and feedback. A capable model can still fail because one of these is weak. Strengthen the weak layer rather than assuming the model is the only problem. Fix the cause of a class of failure, not only the current increment. In Eitri, this is the job of the <a href="eds-developer-harness.html#retrospect">Retrospect stage</a>.</p>
           <figure class="concept-figure">
             <figcaption>Figure 2. Trace a failure to one harness layer, strengthen that layer and record the failure. The highlighted layer is an example.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 2, scrolls sideways on narrow screens">
@@ -283,11 +270,11 @@
           </figure>
           <p>Start from the symptom and ask which of the five layers let it through. In the figure, verification feedback is the weak layer, so the team improves its checks rather than retrying the same prompt. Recording the failure helps the next session avoid it. The table pairs each layer with its typical symptom and a response.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Harness layers, typical symptoms and responses; scroll horizontally if needed"><table class="wide-table"><caption>Harness layers, typical symptoms and responses</caption><thead><tr><th scope="col">Layer</th><th scope="col">Typical symptom</th><th scope="col">Response</th></tr></thead><tbody>
-            <tr><th scope="row">Task specification</th><td>Plausible implementation, wrong behaviour</td><td>Tighten the PRD or TRD, acceptance criteria, exclusions and issue scope, then verify the issues again.</td></tr>
-            <tr><th scope="row">Context provision</th><td>Breaks a domain, security, architecture or interface rule the agent could not see</td><td>Put the rule in the repository and route it through the right <a href="eds-team-context.html">context source</a>.</td></tr>
+            <tr><th scope="row">Task specification</th><td>Plausible implementation, wrong behaviour</td><td>Tighten the PRD or TRD, acceptance criteria, exclusions and ticket scope, then review the tickets again.</td></tr>
+            <tr><th scope="row">Context provision</th><td>Breaks a domain, security, architecture or interface rule the agent could not see</td><td>Put the rule in the repository and route it through the right context source.</td></tr>
             <tr><th scope="row">Execution environment</th><td>Time lost on dependencies, connectivity or setup</td><td>Standardise initialisation and keep a reproducible sandbox.</td></tr>
-            <tr><th scope="row">Verification feedback</th><td>The agent reports “done”, but the behaviour is still broken</td><td>Add or tighten a validation gate in the build loop, and make failure messages actionable.</td></tr>
-            <tr><th scope="row">State management</th><td>A new session repeats work or reverses an earlier decision</td><td>Record decisions, evidence, blockers and the next action in the repository and on the issue.</td></tr>
+            <tr><th scope="row">Verification feedback</th><td>The agent reports “done”, but the behaviour is still broken</td><td>Add or tighten a review, test or linter rule, and make failure messages actionable.</td></tr>
+            <tr><th scope="row">State management</th><td>A new session repeats work or reverses an earlier decision</td><td>Record decisions, evidence, blockers and the next action in the repository and on the ticket.</td></tr>
           </tbody></table></div>
 
           <aside class="ai-help ai-help--inline" id="ai-help-diagnose" aria-label="How AI can help"><p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p><p>Supply the failed task, tool results and relevant progress records. AI can suggest which instruction, tool, environment or feedback gap to investigate. Engineers reproduce the failure, test a targeted correction and record whether it prevents the same failure on a comparable task.</p></aside>
@@ -295,33 +282,33 @@
 
         <section id="workflow-health">
           <h2>Measure workflow health</h2>
-          <p>Use the following measures to assess workflow health. They complement the <a href="product-implementation.html#measure-loop">delivery, product and governance measures</a> in the implementation guidance. The harness can record token usage and cost locally to support them.</p>
+          <p>Use the following measures to assess workflow health. They complement the <a href="product-implementation.html#measure-loop">delivery, product and governance measures</a> in the implementation guidance.</p>
           <ul>
-            <li><strong>Verified completion rate:</strong> how many started issues reach a passing state with independent evidence.</li>
+            <li><strong>Verified completion rate:</strong> how many started tickets reach a passing state with independent evidence.</li>
             <li><strong>Verification gap:</strong> how often an agent’s claim of completion fails independent validation.</li>
             <li><strong>Rebuild cost:</strong> the time or tokens a fresh session needs to regain a working, informed state.</li>
-            <li><strong>Tokens per verified issue:</strong> the cost of each independently passing issue, split by planning, implementation, verification and recovery.</li>
+            <li><strong>Tokens per verified ticket:</strong> the cost of each independently passing ticket, split by planning, implementation, verification and recovery.</li>
             <li><strong>Harness debt:</strong> stale, duplicated, contradictory or unenforced instructions and controls.</li>
           </ul>
           <aside class="example learning-example" aria-label="Fictional example of the EDS AI Workflow">
-            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Follow a change through the delivery workflow</span><span class="learning-benefit">See how a failed control leads to rework before a change can progress.</span></span></div>
-            <p>The service desk squad’s access-request PRD reaches the Tech Lead, who drafts the TRD for the first user story. The compliance audit fails one control because the design logs full request text, so the TRD is revised to log request identifiers before the first human gate. The first issue covers one journey: a staff member submits an access request and receives a drafted response. In the build loop, the mutation testing gate shows that no test checks the unauthorised-request case; the developer adds one. A live browser test then provides the screenshot evidence the reviewer needs to approve the MR.</p>
+            <div class="learning-example-header"><svg class="learning-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="learning-header-copy"><span class="learning-header-meta"><span class="learning-kind">Worked example</span><span class="learning-step">Fictional scenario</span></span><span class="learning-title">Follow a change through the delivery workflow</span><span class="learning-benefit">See how review findings lead to rework, and how the retrospective stops them recurring.</span></span></div>
+            <p>The service desk squad’s access-request PRD reaches the Tech Lead, who clarifies the first user story and drafts its TRD. At the first sign-off, the reviewer asks for the unauthorised-request case to be stated as an acceptance criterion. The first ticket covers one journey: a staff member submits an access request and receives a drafted response. In Verify, the IM8 review flags that the code logs full request text, so the developer changes it to log request identifiers. The end-to-end tests then provide the video evidence the reviewer needs to approve the MR. At the retrospective, the squad adds a coding standard against logging request content.</p>
           </aside>
-          <p class="next-step"><strong>Next step:</strong> to see how requirements are prepared, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>. To see how a story is built and checked, <a href="eds-developer-harness.html">read the Developer harness</a>, then <a href="eds-path-to-production.html">Path to production</a>. For guided practice, <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">open the Eitri self-paced training</a>.</p>
+          <p class="next-step"><strong>Next step:</strong> to see how requirements are prepared, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>. To see how a story is built and checked, <a href="eds-developer-harness.html">read the Developer harness</a>. For guided practice, <a href="training-maintenance.html">open the Eitri self-paced training</a>.</p>
         </section>
 
         <details id="method-under-consideration"><summary>Method under consideration: SPDD</summary>
           <p>The <a href="#source-training">Eitri training</a> describes a direction towards <a href="#source-spdd">Structured-Prompt-Driven Development (SPDD)</a>, developed within Thoughtworks. Confirm adoption status and ownership with the workflow owner. Before using it with Eitri, test specification artefacts, skill behaviour and review gates against the target workflow.</p>
         </details>
-        <p class="source-ref"><a href="#version-status">Eitri status and version: verify installed revisions and enforced controls</a>.</p>
+        <p class="source-ref"><a href="#version-status">Eitri version: confirm the installed skills and sign-offs</a>.</p>
         <section id="sources">
           <h2>Sources</h2>
           <p class="source-check-date">References last checked: <time datetime="2026-11-24">24 November 2026</time>.</p>
           <ol class="source-list">
-            <li id="source-harness">CoreX EDS team. <cite>Eitri harness workflow — README</cite>, overview and sections 1–4; internal revision not supplied. Primary workflow source; the editorial review gives this README priority over the older operating handbook. The internal document and revision are unavailable here; the workflow owner must confirm the installed controls, availability and enforcement. The reference-check date does not verify that implementation. Used in <a href="#workflow">the route to production</a>, <a href="#status">status labels</a>, <a href="#ownership">roles and artefacts</a>.</li>
-            <li id="source-handbook">EDS. <cite>EDS operating handbook</cite>, internal edition not supplied. Retained only where it does not conflict with the higher-priority README: the seven working principles, instruction layers, harness diagnosis, workflow-health measures and fictional example. The document is unavailable in this checkout and current owner endorsement of this retained guidance is not verified; the example is illustrative, not deployment evidence. Used in <a href="#principles">Working principles</a>, <a href="#context-practice">Context for agents</a>, <a href="#harness">Diagnose failures</a>, <a href="#workflow-health">Workflow health</a>.</li>
+            <li id="source-harness">CoreX EDS team. <cite>Eitri — README and CHANGELOG</cite>, version 1.0.0; internal repository. Primary workflow source for the six stages, the two review points before slicing and implementation, and the skills used; it takes priority over the older operating handbook. The internal repository is unavailable from the public site; confirm the installed version with the workflow owner. Used in <a href="#workflow">the six stages</a>, <a href="#status">installed version</a>, <a href="#ownership">roles and artefacts</a>.</li>
+            <li id="source-handbook">EDS. <cite>EDS operating handbook</cite>, internal edition not supplied. Retained only where it does not conflict with the higher-priority Eitri README: the seven working principles, three of which were adjusted to the version 1.0 stages, instruction layers, harness diagnosis, workflow-health measures and fictional example. The document is unavailable in this checkout and current owner endorsement of this retained guidance is not verified; the example is illustrative, not deployment evidence. Used in <a href="#principles">Working principles</a>, <a href="#context-practice">Context for agents</a>, <a href="#harness">Diagnose failures</a>, <a href="#workflow-health">Workflow health</a>.</li>
             <li id="source-matt">Matt Pocock. <a href="https://github.com/mattpocock/skills">Engineering skills — upstream skill set</a>, live repository; installed revision not identified. Underlying investigation, specification, slicing, implementation and review skills; the descriptions on this page explain their use or adaptation in the documented EDS workflow, not a guarantee of current upstream names or behaviour. Used in <a href="#workflow">the workflow foundations</a>.</li>
-            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. The public course contains mixed revisions. Lesson 1 now uses S1 setup, S2 planning with <code>/project-horizon</code>, S3 architecture guardrails and developer Steps 1–5; it marks its five-phase video and interactive diagram as earlier material. This guide retains the local 19-step view. Confirm the applicable harness revision and release controls with the workflow owner before transferring commands or relying on a gate. Used in <a href="#status">version and status guidance</a>, <a href="#method-under-consideration">the organisational SPDD direction</a>. See <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html">current skills lesson</a>.</li>
+            <li id="source-training">SG Tech Stack. <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/">Eitri AI coding workflow — self-paced training</a>. Live, version-dependent public training, not certification of an installed harness. The public course contains mixed revisions. Lesson 1 now uses S1 setup, S2 planning with <code>/project-horizon</code>, S3 architecture guardrails and developer Steps 1–5; it marks its five-phase video and interactive diagram as earlier material. The public course predates Eitri version 1.0; this guide follows the version 1.0 six-stage cycle. Confirm the applicable harness version with the workflow owner before transferring commands. Used in <a href="#status">installed version guidance</a>, <a href="#method-under-consideration">the organisational SPDD direction</a>. See <a href="https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html">current skills lesson</a>.</li>
             <li id="source-spdd">Wei Zhang and Jessie Jie Xia, Thoughtworks. <a href="https://martinfowler.com/articles/structured-prompt-driven/">Structured-Prompt-Driven Development (SPDD)</a>. Primary author account of maintained prompt artefacts, alignment and iterative review. It does not establish EDS adoption decisions or Eitri compatibility; confirm ownership and test against the target workflow. Used in <a href="#method-under-consideration">Method under consideration: SPDD</a>.</li>
             <li id="source-video">EDS. <cite>Eitri organisational harness overview video</cite>, publication date and revision not supplied. <a href="https://docs.google.com/videos/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/play">Open in Google Vids</a>; <a href="https://drive.google.com/file/d/1al4LrAZTMnYMsTz_MSwGBRT01cqaSttic1LahZbmMgA/preview">embedded preview</a>. Supplementary orientation retained with its original access links; access and internal implementation are not independently certified. Used in the page introduction.</li>
           </ol>
@@ -332,8 +319,8 @@
     <aside class="page-contents"><nav aria-label="On this page"><p>On this page</p>
             <a href="#eitri-inspiration">The EITRI inspiration</a>
             <a href="#pages">Pages in this section</a>
-            <a href="#workflow">The route to production</a>
-            <a href="#status">Status labels</a>
+            <a href="#workflow">The six stages</a>
+            <a href="#status">Installed version</a>
             <a href="#ownership">Roles and artefacts</a>
             <a href="#principles">Working principles</a>
             <a href="#context-practice">Context for agents</a>

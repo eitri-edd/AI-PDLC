@@ -3,14 +3,14 @@
   "scope": "Daily maintenance verification on 2026-11-24 found 572 distinct external URLs and no broken destination; 3 Muse (muse.ai) sources could not be re-fetched from this environment (egress proxy blocks the domain; reader unavailable) and are marked verification_challenge, last verified 2026-11-19.",
   "reviewed_base": "51f682272b5022ff841ffe03d26c346fe0ae083f",
   "original_unique_urls": 100,
-  "current_unique_urls": 572,
-  "current_unique_hrefs": 578,
+  "current_unique_urls": 558,
+  "current_unique_hrefs": 564,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 552,
+    "retrieved": 538,
     "retrieved_pdf_text": 3,
     "verification_challenge": 3
   },
@@ -51,16 +51,8 @@
       "checked_on": "2026-11-24",
       "scope": "Daily maintenance verification on 2026-11-24: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
       "status": "completed with explicit limitations",
-      "source_entries": 16,
-      "unique_fetch_destinations": 20,
-      "maintenance_record": "reference-review-2026-11-12.md"
-    },
-    "eds-path-to-production.html": {
-      "checked_on": "2026-11-24",
-      "scope": "Daily maintenance verification on 2026-11-24: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
-      "status": "completed with explicit limitations",
-      "source_entries": 9,
-      "unique_fetch_destinations": 12,
+      "source_entries": 5,
+      "unique_fetch_destinations": 7,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "eds-po-ba-harness.html": {
@@ -69,22 +61,6 @@
       "status": "completed with explicit limitations",
       "source_entries": 8,
       "unique_fetch_destinations": 12,
-      "maintenance_record": "reference-review-2026-11-12.md"
-    },
-    "eds-skills-catalogue.html": {
-      "checked_on": "2026-11-24",
-      "scope": "Daily maintenance verification on 2026-11-24: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
-      "status": "completed with explicit limitations",
-      "source_entries": 18,
-      "unique_fetch_destinations": 21,
-      "maintenance_record": "reference-review-2026-11-12.md"
-    },
-    "eds-team-context.html": {
-      "checked_on": "2026-11-24",
-      "scope": "Daily maintenance verification on 2026-11-24: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
-      "status": "completed with explicit limitations",
-      "source_entries": 7,
-      "unique_fetch_destinations": 11,
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "index.html": {
@@ -242,6 +218,14 @@
       "status": "completed with explicit limitations",
       "source_entries": 13,
       "unique_fetch_destinations": 14
+    },
+    "training-maintenance.html": {
+      "checked_on": "2026-11-24",
+      "scope": "orientation-only operational links",
+      "status": "operational links only; no cited sources",
+      "source_entries": 0,
+      "unique_fetch_destinations": 3,
+      "maintenance_record": "reference-review-2026-11-12.md"
     }
   },
   "references": [
@@ -314,54 +298,6 @@
         {
           "file": "concept.html",
           "id": "source-10"
-        }
-      ]
-    },
-    {
-      "url": "https://agent-browser.dev",
-      "files": [
-        "eds-developer-harness.html",
-        "eds-skills-catalogue.html"
-      ],
-      "hrefs": [
-        "https://agent-browser.dev"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://agent-browser.dev",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "agent-browser automates live-browser acceptance checks and screenshots.",
-          "evidence_summary": "The agent-browser documentation describes a CLI for agents, accessibility snapshots, forms/navigation, screenshot commands, and recording/debugging features.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "supported",
-          "scope": "agent-browser automates live-browser acceptance checks and screenshots.",
-          "evidence_summary": "The agent-browser documentation describes a CLI for agents, accessibility snapshots, forms/navigation, screenshot commands, and recording/debugging features.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "36b6517e1b42cf6770377ece9cf477cb29038739713142ff3e12d6684bbdc32c",
-          "format": "readable primary-source text",
-          "source_url": "https://agent-browser.dev"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-browser"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-browser"
         }
       ]
     },
@@ -1697,54 +1633,6 @@
         {
           "file": "training.html",
           "id": "source-5"
-        }
-      ]
-    },
-    {
-      "url": "https://context7.com",
-      "files": [
-        "eds-developer-harness.html",
-        "eds-skills-catalogue.html"
-      ],
-      "hrefs": [
-        "https://context7.com"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://context7.com",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "limited",
-          "scope": "Context7 provides up-to-date, version-specific library documentation for a planned EDS integration.",
-          "evidence_summary": "The homepage identifies Context7 as an Upstash project delivering up-to-date library docs into coding agents. It displays source libraries and update information.",
-          "limitation": "This short homepage does not substantiate exact version-selection semantics or prove installation in Eitri."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "limited",
-          "scope": "Context7 provides up-to-date, version-specific library documentation for a planned EDS integration.",
-          "evidence_summary": "The homepage identifies Context7 as an Upstash project delivering up-to-date library docs into coding agents. It displays source libraries and update information.",
-          "limitation": "This short homepage does not substantiate exact version-selection semantics or prove installation in Eitri."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "d67887856e5c18c36ecd2a3f93572d69fcb8622c1b7545048a8a0d998a2c64f1",
-          "format": "readable primary-source text",
-          "source_url": "https://context7.com"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-context7"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-context7"
         }
       ]
     },
@@ -4873,10 +4761,7 @@
         "concept.html",
         "eds-ai-workflow.html",
         "eds-developer-harness.html",
-        "eds-path-to-production.html",
         "eds-po-ba-harness.html",
-        "eds-skills-catalogue.html",
-        "eds-team-context.html",
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
@@ -4895,7 +4780,8 @@
         "tech-scan.html",
         "training.html",
         "transformation.html",
-        "concept-maturity.html"
+        "concept-maturity.html",
+        "training-maintenance.html"
       ],
       "hrefs": [
         "https://fonts.googleapis.com"
@@ -4942,28 +4828,7 @@
           "limitation": "This is a preconnect hint, not a navigational source; origin-root HTTP status does not determine font availability."
         },
         {
-          "file": "eds-path-to-production.html",
-          "outcome": "operational",
-          "scope": "Operational preconnect origin for Google Fonts.",
-          "evidence_summary": "A GET to the bare fonts.googleapis.com origin returns a 404 body. The actual linked CSS request independently succeeds.",
-          "limitation": "This is a preconnect hint, not a navigational source; origin-root HTTP status does not determine font availability."
-        },
-        {
           "file": "eds-po-ba-harness.html",
-          "outcome": "operational",
-          "scope": "Operational preconnect origin for Google Fonts.",
-          "evidence_summary": "A GET to the bare fonts.googleapis.com origin returns a 404 body. The actual linked CSS request independently succeeds.",
-          "limitation": "This is a preconnect hint, not a navigational source; origin-root HTTP status does not determine font availability."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "operational",
-          "scope": "Operational preconnect origin for Google Fonts.",
-          "evidence_summary": "A GET to the bare fonts.googleapis.com origin returns a 404 body. The actual linked CSS request independently succeeds.",
-          "limitation": "This is a preconnect hint, not a navigational source; origin-root HTTP status does not determine font availability."
-        },
-        {
-          "file": "eds-team-context.html",
           "outcome": "operational",
           "scope": "Operational preconnect origin for Google Fonts.",
           "evidence_summary": "A GET to the bare fonts.googleapis.com origin returns a 404 body. The actual linked CSS request independently succeeds.",
@@ -5099,6 +4964,13 @@
           "outcome": "operational",
           "scope": "Shared preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
+        },
+        {
+          "file": "training-maintenance.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
         }
       ],
       "evidence_digests": [
@@ -5118,10 +4990,7 @@
         "concept.html",
         "eds-ai-workflow.html",
         "eds-developer-harness.html",
-        "eds-path-to-production.html",
         "eds-po-ba-harness.html",
-        "eds-skills-catalogue.html",
-        "eds-team-context.html",
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
@@ -5140,7 +5009,8 @@
         "tech-scan.html",
         "training.html",
         "transformation.html",
-        "concept-maturity.html"
+        "concept-maturity.html",
+        "training-maintenance.html"
       ],
       "hrefs": [
         "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@300..700&display=swap"
@@ -5187,28 +5057,7 @@
           "limitation": "Font binaries, browser rendering and end-user connectivity were not tested."
         },
         {
-          "file": "eds-path-to-production.html",
-          "outcome": "supported",
-          "scope": "Operational stylesheet supplies Inter, JetBrains Mono and Space Grotesk.",
-          "evidence_summary": "The returned CSS contains font-face declarations for all three requested families and gstatic font file URLs.",
-          "limitation": "Font binaries, browser rendering and end-user connectivity were not tested."
-        },
-        {
           "file": "eds-po-ba-harness.html",
-          "outcome": "supported",
-          "scope": "Operational stylesheet supplies Inter, JetBrains Mono and Space Grotesk.",
-          "evidence_summary": "The returned CSS contains font-face declarations for all three requested families and gstatic font file URLs.",
-          "limitation": "Font binaries, browser rendering and end-user connectivity were not tested."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "supported",
-          "scope": "Operational stylesheet supplies Inter, JetBrains Mono and Space Grotesk.",
-          "evidence_summary": "The returned CSS contains font-face declarations for all three requested families and gstatic font file URLs.",
-          "limitation": "Font binaries, browser rendering and end-user connectivity were not tested."
-        },
-        {
-          "file": "eds-team-context.html",
           "outcome": "supported",
           "scope": "Operational stylesheet supplies Inter, JetBrains Mono and Space Grotesk.",
           "evidence_summary": "The returned CSS contains font-face declarations for all three requested families and gstatic font file URLs.",
@@ -5344,6 +5193,13 @@
           "outcome": "operational",
           "scope": "Shared stylesheet URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
+        },
+        {
+          "file": "training-maintenance.html",
+          "outcome": "supported",
+          "scope": "Operational stylesheet requests Inter, JetBrains Mono and Space Grotesk with display=swap.",
+          "evidence_summary": "The current stylesheet returns 200 and declares the requested font families with Google-hosted font URLs.",
+          "limitation": "CSS retrieval does not establish all binary font fetches, privacy approval or rendered font availability."
         }
       ],
       "evidence_digests": [
@@ -5363,10 +5219,7 @@
         "concept.html",
         "eds-ai-workflow.html",
         "eds-developer-harness.html",
-        "eds-path-to-production.html",
         "eds-po-ba-harness.html",
-        "eds-skills-catalogue.html",
-        "eds-team-context.html",
         "index.html",
         "product-discovery.html",
         "product-implementation.html",
@@ -5385,7 +5238,8 @@
         "tech-scan.html",
         "training.html",
         "transformation.html",
-        "concept-maturity.html"
+        "concept-maturity.html",
+        "training-maintenance.html"
       ],
       "hrefs": [
         "https://fonts.gstatic.com"
@@ -5432,28 +5286,7 @@
           "limitation": "Preconnect origin is not a readable reference. Specific font files were not fetched."
         },
         {
-          "file": "eds-path-to-production.html",
-          "outcome": "operational",
-          "scope": "Operational preconnect origin for Google font binaries.",
-          "evidence_summary": "The bare gstatic root GET returns 404; the requested Google Fonts CSS refers to specific paths under this origin.",
-          "limitation": "Preconnect origin is not a readable reference. Specific font files were not fetched."
-        },
-        {
           "file": "eds-po-ba-harness.html",
-          "outcome": "operational",
-          "scope": "Operational preconnect origin for Google font binaries.",
-          "evidence_summary": "The bare gstatic root GET returns 404; the requested Google Fonts CSS refers to specific paths under this origin.",
-          "limitation": "Preconnect origin is not a readable reference. Specific font files were not fetched."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "operational",
-          "scope": "Operational preconnect origin for Google font binaries.",
-          "evidence_summary": "The bare gstatic root GET returns 404; the requested Google Fonts CSS refers to specific paths under this origin.",
-          "limitation": "Preconnect origin is not a readable reference. Specific font files were not fetched."
-        },
-        {
-          "file": "eds-team-context.html",
           "outcome": "operational",
           "scope": "Operational preconnect origin for Google font binaries.",
           "evidence_summary": "The bare gstatic root GET returns 404; the requested Google Fonts CSS refers to specific paths under this origin.",
@@ -5589,6 +5422,13 @@
           "outcome": "operational",
           "scope": "Shared preconnect URL; not a cited capability claim.",
           "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
+        },
+        {
+          "file": "training-maintenance.html",
+          "outcome": "operational",
+          "scope": "Operational preconnect origin, not a bibliography citation or a standalone resource.",
+          "evidence_summary": "A GET of the origin root returns 404; the actual Google Fonts CSS endpoint returns a font stylesheet.",
+          "limitation": "A preconnect origin need not serve a document. Root 404 is not a broken article citation or evidence that font loading failed. No font binary/rendering audit."
         }
       ],
       "evidence_digests": [
@@ -5860,9 +5700,7 @@
     {
       "url": "https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md",
       "files": [
-        "eds-developer-harness.html",
-        "eds-path-to-production.html",
-        "eds-skills-catalogue.html"
+        "eds-developer-harness.html"
       ],
       "hrefs": [
         "https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md"
@@ -5875,20 +5713,6 @@
       "claim_reviews": [
         {
           "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "Cursor thermo-nuclear skill is a strict maintainability review.",
-          "evidence_summary": "The SKILL.md body prioritises structural simplification, abstraction boundaries, overly large files and ad-hoc branching; it separates maintainability approval from apparent behavioural correctness.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Main-branch source is mutable; record the installed revision."
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "outcome": "supported",
-          "scope": "Cursor thermo-nuclear skill is a strict maintainability review.",
-          "evidence_summary": "The SKILL.md body prioritises structural simplification, abstraction boundaries, overly large files and ad-hoc branching; it separates maintainability approval from apparent behavioural correctness.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Main-branch source is mutable; record the installed revision."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
           "outcome": "supported",
           "scope": "Cursor thermo-nuclear skill is a strict maintainability review.",
           "evidence_summary": "The SKILL.md body prioritises structural simplification, abstraction boundaries, overly large files and ad-hoc branching; it separates maintainability approval from apparent behavioural correctness.",
@@ -5906,22 +5730,13 @@
         {
           "file": "eds-developer-harness.html",
           "id": "source-thermo"
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "id": "source-thermo"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-thermo"
         }
       ]
     },
     {
       "url": "https://github.com/dsta-productops/clara",
       "files": [
-        "eds-po-ba-harness.html",
-        "eds-team-context.html"
+        "eds-po-ba-harness.html"
       ],
       "hrefs": [
         "https://github.com/dsta-productops/clara"
@@ -5938,13 +5753,6 @@
           "scope": "CLARA core supports both Confluence and Plane distributions and shared product artefact drafting.",
           "evidence_summary": "The README describes a platform-neutral core consumed by Confluence and Plane repositories, with shared persona, artefact briefs and knowledge-base conventions, built into skill and prompt bundles.",
           "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Public core does not independently validate Prizm Design or an EDS Confluence deployment."
-        },
-        {
-          "file": "eds-team-context.html",
-          "outcome": "supported",
-          "scope": "CLARA core supports both Confluence and Plane distributions and shared product artefact drafting.",
-          "evidence_summary": "The README describes a platform-neutral core consumed by Confluence and Plane repositories, with shared persona, artefact briefs and knowledge-base conventions, built into skill and prompt bundles.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Public core does not independently validate Prizm Design or an EDS Confluence deployment."
         }
       ],
       "evidence_digests": [
@@ -5957,10 +5765,6 @@
       "source_entries": [
         {
           "file": "eds-po-ba-harness.html",
-          "id": "source-clara"
-        },
-        {
-          "file": "eds-team-context.html",
           "id": "source-clara"
         }
       ]
@@ -6472,8 +6276,7 @@
     {
       "url": "https://github.com/github/spec-kit",
       "files": [
-        "eds-po-ba-harness.html",
-        "eds-team-context.html"
+        "eds-po-ba-harness.html"
       ],
       "hrefs": [
         "https://github.com/github/spec-kit"
@@ -6490,13 +6293,6 @@
           "scope": "Spec Kit is GitHub’s open-source toolkit supporting spec-driven development.",
           "evidence_summary": "The README describes structured processes/templates, SDD as a core process and additional optional workflows. Its example defines a constitution, specification, plan and tasks before implementation.",
           "limitation": "Exact command syntax depends on integration and revision; upstream toolkit does not define EDS three-path handoff."
-        },
-        {
-          "file": "eds-team-context.html",
-          "outcome": "supported",
-          "scope": "Spec Kit is GitHub’s open-source toolkit supporting spec-driven development.",
-          "evidence_summary": "The README describes structured processes/templates, SDD as a core process and additional optional workflows. Its example defines a constitution, specification, plan and tasks before implementation.",
-          "limitation": "Exact command syntax depends on integration and revision; upstream toolkit does not define EDS three-path handoff."
         }
       ],
       "evidence_digests": [
@@ -6509,10 +6305,6 @@
       "source_entries": [
         {
           "file": "eds-po-ba-harness.html",
-          "id": "source-speckit"
-        },
-        {
-          "file": "eds-team-context.html",
           "id": "source-speckit"
         }
       ]
@@ -6661,7 +6453,6 @@
         "eds-ai-workflow.html",
         "eds-developer-harness.html",
         "eds-po-ba-harness.html",
-        "eds-skills-catalogue.html",
         "training.html",
         "tech-radar.html"
       ],
@@ -6683,20 +6474,13 @@
         },
         {
           "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "Pocock base skills support investigation, specs, tracer-bullet tickets, TDD implementation, two-axis review and bug diagnosis.",
-          "evidence_summary": "The README documents setup, wayfinder, grill-with-docs, to-spec, to-tickets, implement and code-review. It distinguishes user-invoked and model-invoked skills and now names GLOSSARY.md for domain terms.",
-          "limitation": "Do not claim EDS installed base revision is unchanged/current without its source.; Live upstream uses GLOSSARY.md where older public course examples use CONTEXT.md.; Review-at-closeout is documented; fixed internal review pass counts are not implementation proof."
+          "outcome": "unverified",
+          "scope": "Pocock skills provide the Eitri v1.0 planning, implementation and retro stages: /setup-matt-pocock-skills, /wayfinder, /grill-with-docs, /to-spec, /to-tickets, /implement-spec and /retro.",
+          "evidence_summary": "Skill names and stage roles are taken from the Eitri v1.0 README, which links each skill under skills/engineering/ in this repository.",
+          "limitation": "Redesign of 24 November 2026: the upstream repository was not re-fetched for this change, so the presence and behaviour of /implement-spec and /retro upstream are unverified. Confirm at the next reference check."
         },
         {
           "file": "eds-po-ba-harness.html",
-          "outcome": "supported",
-          "scope": "Pocock base skills support investigation, specs, tracer-bullet tickets, TDD implementation, two-axis review and bug diagnosis.",
-          "evidence_summary": "The README documents setup, wayfinder, grill-with-docs, to-spec, to-tickets, implement and code-review. It distinguishes user-invoked and model-invoked skills and now names GLOSSARY.md for domain terms.",
-          "limitation": "Do not claim EDS installed base revision is unchanged/current without its source.; Live upstream uses GLOSSARY.md where older public course examples use CONTEXT.md.; Review-at-closeout is documented; fixed internal review pass counts are not implementation proof."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
           "outcome": "supported",
           "scope": "Pocock base skills support investigation, specs, tracer-bullet tickets, TDD implementation, two-axis review and bug diagnosis.",
           "evidence_summary": "The README documents setup, wayfinder, grill-with-docs, to-spec, to-tickets, implement and code-review. It distinguishes user-invoked and model-invoked skills and now names GLOSSARY.md for domain terms.",
@@ -6734,10 +6518,6 @@
         },
         {
           "file": "eds-po-ba-harness.html",
-          "id": "source-matt"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
           "id": "source-matt"
         },
         {
@@ -6880,126 +6660,6 @@
       ]
     },
     {
-      "url": "https://github.com/sverweij/dependency-cruiser/tree/main",
-      "files": [
-        "eds-developer-harness.html",
-        "eds-skills-catalogue.html"
-      ],
-      "hrefs": [
-        "https://github.com/sverweij/dependency-cruiser/tree/main"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://github.com/sverweij/dependency-cruiser/tree/main",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "dependency-cruiser validates JavaScript/TypeScript dependencies against configured architecture rules.",
-          "evidence_summary": "The README describes project-specific dependency rules, error reporting, config generation and example forbidden imports, plus support for JavaScript and TypeScript.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Build-blocking depends on configured severity, invocation and CI wiring."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "supported",
-          "scope": "dependency-cruiser validates JavaScript/TypeScript dependencies against configured architecture rules.",
-          "evidence_summary": "The README describes project-specific dependency rules, error reporting, config generation and example forbidden imports, plus support for JavaScript and TypeScript.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Build-blocking depends on configured severity, invocation and CI wiring."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "c1b61530fcc6df3f762e07581276872e61350197fbf89c79d1329283e4b0112d",
-          "format": "readable primary-source text",
-          "source_url": "https://github.com/sverweij/dependency-cruiser/tree/main"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-dependency-cruiser"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-dependency-cruiser"
-        }
-      ]
-    },
-    {
-      "url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/",
-      "files": [
-        "eds-developer-harness.html",
-        "eds-path-to-production.html",
-        "eds-skills-catalogue.html",
-        "eds-team-context.html"
-      ],
-      "hrefs": [
-        "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "limited",
-          "scope": "ARC is GovTech technical governance for agentic AI; Eitri package has 88 checks.",
-          "evidence_summary": "The ARC homepage describes capability-based safety/security risk assessment and a major update with 46 risks and 86 controls. Eitri public lesson bodies instead describe an 88-check package.",
-          "limitation": "Upstream control count is not the same artefact as packaged Eitri checklist count.; No installed policy-pack revision or crosswalk supplied."
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "outcome": "limited",
-          "scope": "ARC is GovTech technical governance for agentic AI; Eitri package has 88 checks.",
-          "evidence_summary": "The ARC homepage describes capability-based safety/security risk assessment and a major update with 46 risks and 86 controls. Eitri public lesson bodies instead describe an 88-check package.",
-          "limitation": "Upstream control count is not the same artefact as packaged Eitri checklist count.; No installed policy-pack revision or crosswalk supplied."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "limited",
-          "scope": "ARC is GovTech technical governance for agentic AI; Eitri package has 88 checks.",
-          "evidence_summary": "The ARC homepage describes capability-based safety/security risk assessment and a major update with 46 risks and 86 controls. Eitri public lesson bodies instead describe an 88-check package.",
-          "limitation": "Upstream control count is not the same artefact as packaged Eitri checklist count.; No installed policy-pack revision or crosswalk supplied."
-        },
-        {
-          "file": "eds-team-context.html",
-          "outcome": "limited",
-          "scope": "ARC is GovTech technical governance for agentic AI; Eitri package has 88 checks.",
-          "evidence_summary": "The ARC homepage describes capability-based safety/security risk assessment and a major update with 46 risks and 86 controls. Eitri public lesson bodies instead describe an 88-check package.",
-          "limitation": "Upstream control count is not the same artefact as packaged Eitri checklist count.; No installed policy-pack revision or crosswalk supplied."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "48b12909c0b771647624a91fa1e8123f87ba4a939a1ec89abb5e1d2273fb1bd2",
-          "format": "readable primary-source text",
-          "source_url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-arc"
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "id": "source-arc"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-arc"
-        },
-        {
-          "file": "eds-team-context.html",
-          "id": "source-arc"
-        }
-      ]
-    },
-    {
       "url": "https://gvisor.dev/docs/architecture_guide/intro/",
       "checked_on": "2026-11-24",
       "files": [
@@ -7033,42 +6693,6 @@
           "sha256": "838fd5968697ba54504cb4395502deeace05c8f3994ce4a98656df2bdf34e709",
           "format": "primary-source response capture",
           "source_url": "https://gvisor.dev/docs/architecture_guide/intro/"
-        }
-      ]
-    },
-    {
-      "url": "https://impeccable.style",
-      "files": [
-        "eds-skills-catalogue.html"
-      ],
-      "hrefs": [
-        "https://impeccable.style"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://impeccable.style",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "supported",
-          "scope": "Impeccable supplies frontend audit, harden and polish commands.",
-          "evidence_summary": "The site presents audit, harden and polish among its design commands, with /impeccable polish examples, project design context and install instructions.",
-          "limitation": "Homepage command identity is supported; full detailed checklist coverage requires the installed command documentation.; Do not infer EDS host integration or quality guarantees from promotional examples."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "438b10870f6910f170616db8bfceb67d7e2a523dfef00807e90f257a4d889860",
-          "format": "readable primary-source text",
-          "source_url": "https://impeccable.style"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-impeccable"
         }
       ]
     },
@@ -7111,10 +6735,7 @@
     {
       "url": "https://info.standards.tech.gov.sg",
       "files": [
-        "eds-developer-harness.html",
-        "eds-path-to-production.html",
-        "eds-skills-catalogue.html",
-        "eds-team-context.html"
+        "eds-developer-harness.html"
       ],
       "hrefs": [
         "https://info.standards.tech.gov.sg"
@@ -7128,28 +6749,7 @@
         {
           "file": "eds-developer-harness.html",
           "outcome": "limited",
-          "scope": "IM8 is the policy basis for 36 packaged application-security checks and pipeline audits.",
-          "evidence_summary": "The current government portal identifies itself as ICT&SS Policy Reform and exposes risk-tailored System Security Plans and a control catalog. The homepage does not contain the 36-check application package.",
-          "limitation": "Use the Eitri lessons only as package-description evidence, not as the authoritative scope or current applicable policy.; Applicable policy, pack version and mapping require policy-owner confirmation."
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "outcome": "limited",
-          "scope": "IM8 is the policy basis for 36 packaged application-security checks and pipeline audits.",
-          "evidence_summary": "The current government portal identifies itself as ICT&SS Policy Reform and exposes risk-tailored System Security Plans and a control catalog. The homepage does not contain the 36-check application package.",
-          "limitation": "Use the Eitri lessons only as package-description evidence, not as the authoritative scope or current applicable policy.; Applicable policy, pack version and mapping require policy-owner confirmation."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "limited",
-          "scope": "IM8 is the policy basis for 36 packaged application-security checks and pipeline audits.",
-          "evidence_summary": "The current government portal identifies itself as ICT&SS Policy Reform and exposes risk-tailored System Security Plans and a control catalog. The homepage does not contain the 36-check application package.",
-          "limitation": "Use the Eitri lessons only as package-description evidence, not as the authoritative scope or current applicable policy.; Applicable policy, pack version and mapping require policy-owner confirmation."
-        },
-        {
-          "file": "eds-team-context.html",
-          "outcome": "limited",
-          "scope": "IM8 is the policy basis for 36 packaged application-security checks and pipeline audits.",
+          "scope": "IM8 is the policy basis for the 36 application technical controls that /im8-review checks.",
           "evidence_summary": "The current government portal identifies itself as ICT&SS Policy Reform and exposes risk-tailored System Security Plans and a control catalog. The homepage does not contain the 36-check application package.",
           "limitation": "Use the Eitri lessons only as package-description evidence, not as the authoritative scope or current applicable policy.; Applicable policy, pack version and mapping require policy-owner confirmation."
         }
@@ -7164,18 +6764,6 @@
       "source_entries": [
         {
           "file": "eds-developer-harness.html",
-          "id": "source-im8"
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "id": "source-im8"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-im8"
-        },
-        {
-          "file": "eds-team-context.html",
           "id": "source-im8"
         }
       ]
@@ -8040,78 +7628,6 @@
       ]
     },
     {
-      "url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats",
-      "files": [
-        "eds-path-to-production.html"
-      ],
-      "hrefs": [
-        "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-path-to-production.html",
-          "outcome": "supported",
-          "scope": "STRIDE groups security threats into six categories.",
-          "evidence_summary": "Microsoft’s threat-model reference lists spoofing, tampering, repudiation, information disclosure, denial of service and elevation of privilege.",
-          "limitation": "Taxonomy does not prove the completeness of a generated EDS threat model or enforcement of a release gate."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "7da15a9398255b96653285685ef011dfd5de3e5c2fd972c446e051f040909a80",
-          "format": "readable primary-source text",
-          "source_url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-path-to-production.html",
-          "id": "source-stride"
-        }
-      ]
-    },
-    {
-      "url": "https://linddun.org",
-      "files": [
-        "eds-path-to-production.html"
-      ],
-      "hrefs": [
-        "https://linddun.org"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://linddun.org",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-path-to-production.html",
-          "outcome": "supported",
-          "scope": "LINDDUN is a privacy threat modelling framework complementary to STRIDE.",
-          "evidence_summary": "The project describes privacy threat categories and lean/systematic methods. It says privacy and security analyses can share a system model and run in parallel.",
-          "limitation": "Framework reference does not verify EDS applicability decisions, model completeness, mitigations or gate status."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "50da22ffa2d23e7d90ec0467f936fce8707c9bb3e5ef5d8998122cfce915a2d0",
-          "format": "readable primary-source text",
-          "source_url": "https://linddun.org"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-path-to-production.html",
-          "id": "source-linddun"
-        }
-      ]
-    },
-    {
       "url": "https://martinfowler.com/articles/are-harnesses-worth-the-cost.html",
       "files": [
         "concept.html"
@@ -8609,42 +8125,6 @@
       ]
     },
     {
-      "url": "https://okf.md",
-      "files": [
-        "eds-team-context.html"
-      ],
-      "hrefs": [
-        "https://okf.md"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://okf.md",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-team-context.html",
-          "outcome": "supported",
-          "scope": "OKF stores typed Markdown concepts in indexed version-controlled knowledge bundles.",
-          "evidence_summary": "The format’s homepage describes index.md entry points, typed frontmatter, Git-native history and modular Markdown concepts.",
-          "limitation": "EDS AppStandards registration and runtime retrieval are local conventions, not enforced by the format."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "10c5b130f768e8edbd6cc29d36c37c8792bdd82eae114a4242b6ff2a82954cad",
-          "format": "readable primary-source text",
-          "source_url": "https://okf.md"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-team-context.html",
-          "id": "source-okf"
-        }
-      ]
-    },
-    {
       "url": "https://openai.com/index/harness-engineering/",
       "files": [
         "concept.html"
@@ -8787,102 +8267,6 @@
           "sha256": "2805fc56622820f7f9ac0a55a4bff7c5dfe300028dc4954f8df3a9665be536de",
           "format": "primary-source response capture",
           "source_url": "https://opentelemetry.io/docs/what-is-opentelemetry/"
-        }
-      ]
-    },
-    {
-      "url": "https://owasp.org/projects/threat-dragon",
-      "files": [
-        "eds-path-to-production.html",
-        "eds-skills-catalogue.html"
-      ],
-      "hrefs": [
-        "https://owasp.org/projects/threat-dragon"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://owasp.org/projects/threat-dragon",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-path-to-production.html",
-          "outcome": "supported",
-          "scope": "OWASP Threat Dragon creates threat-model diagrams and tracks threats/mitigations.",
-          "evidence_summary": "The OWASP project page describes an open-source desktop or self-hosted web tool, diagram elements, threat records, mitigation decisions and support for STRIDE and LINDDUN.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Generated models need review; a tool reference is not evidence of an EDS readiness gate."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "supported",
-          "scope": "OWASP Threat Dragon creates threat-model diagrams and tracks threats/mitigations.",
-          "evidence_summary": "The OWASP project page describes an open-source desktop or self-hosted web tool, diagram elements, threat records, mitigation decisions and support for STRIDE and LINDDUN.",
-          "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Generated models need review; a tool reference is not evidence of an EDS readiness gate."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "f681b6f88f2288509d38eb455733da3890c8d328641a0fc6e9f0ed951b2273d9",
-          "format": "readable primary-source text",
-          "source_url": "https://owasp.org/projects/threat-dragon"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-path-to-production.html",
-          "id": "source-threat-dragon"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-threat-dragon"
-        }
-      ]
-    },
-    {
-      "url": "https://pitest.org",
-      "files": [
-        "eds-developer-harness.html",
-        "eds-skills-catalogue.html"
-      ],
-      "hrefs": [
-        "https://pitest.org"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://pitest.org",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "PIT is mutation testing for Java/JVM; faults are seeded and tests evaluated.",
-          "evidence_summary": "PIT explains that failing tests kill deliberate mutations, while surviving mutations can reveal weak tests. It recommends frequent checks of changed code.",
-          "limitation": "PIT does not prescribe EDS 70% default, optional status or installed build scope."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "supported",
-          "scope": "PIT is mutation testing for Java/JVM; faults are seeded and tests evaluated.",
-          "evidence_summary": "PIT explains that failing tests kill deliberate mutations, while surviving mutations can reveal weak tests. It recommends frequent checks of changed code.",
-          "limitation": "PIT does not prescribe EDS 70% default, optional status or installed build scope."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "b676597df8c622d376010a7d63a45225a8971308a91b505f0d7ac9906e200680",
-          "format": "readable primary-source text",
-          "source_url": "https://pitest.org"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-pit"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-pit"
         }
       ]
     },
@@ -9061,8 +8445,7 @@
     {
       "url": "https://playwright.dev",
       "files": [
-        "eds-developer-harness.html",
-        "eds-skills-catalogue.html"
+        "eds-developer-harness.html"
       ],
       "hrefs": [
         "https://playwright.dev"
@@ -9079,13 +8462,6 @@
           "scope": "Playwright supports repeatable browser end-to-end tests and trace evidence.",
           "evidence_summary": "The homepage documents test runner assertions, isolated contexts, parallel execution, Chromium/Firefox/WebKit automation and traces containing snapshots, network activity and screenshots.",
           "limitation": "EDS campaign verifier, three-run stability rule, MR blocking and Allure reports are wrapper/workflow conventions, not promises from this homepage."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "supported",
-          "scope": "Playwright supports repeatable browser end-to-end tests and trace evidence.",
-          "evidence_summary": "The homepage documents test runner assertions, isolated contexts, parallel execution, Chromium/Firefox/WebKit automation and traces containing snapshots, network activity and screenshots.",
-          "limitation": "EDS campaign verifier, three-run stability rule, MR blocking and Allure reports are wrapper/workflow conventions, not promises from this homepage."
         }
       ],
       "evidence_digests": [
@@ -9098,10 +8474,6 @@
       "source_entries": [
         {
           "file": "eds-developer-harness.html",
-          "id": "source-playwright"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
           "id": "source-playwright"
         }
       ]
@@ -9473,96 +8845,10 @@
       ]
     },
     {
-      "url": "https://semgrep.dev/",
-      "files": [
-        "eds-developer-harness.html",
-        "eds-path-to-production.html",
-        "eds-skills-catalogue.html"
-      ],
-      "hrefs": [
-        "https://semgrep.dev/"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://semgrep.dev/",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "Semgrep is static security analysis and supports secrets scanning.",
-          "evidence_summary": "Semgrep’s product page distinguishes Code SAST, Secrets, Supply Chain scanning and CI/PR integrations.",
-          "limitation": "This homepage does not establish configured EDS rules, severity mapping, product/plan entitlement or merge/release blocking."
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "outcome": "supported",
-          "scope": "Semgrep is static security analysis and supports secrets scanning.",
-          "evidence_summary": "Semgrep’s product page distinguishes Code SAST, Secrets, Supply Chain scanning and CI/PR integrations.",
-          "limitation": "This homepage does not establish configured EDS rules, severity mapping, product/plan entitlement or merge/release blocking."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "supported",
-          "scope": "Semgrep is static security analysis and supports secrets scanning.",
-          "evidence_summary": "Semgrep’s product page distinguishes Code SAST, Secrets, Supply Chain scanning and CI/PR integrations.",
-          "limitation": "This homepage does not establish configured EDS rules, severity mapping, product/plan entitlement or merge/release blocking."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "b700935beb928a8611690939d18812cd891608a2466af19b8c7c249ceec59611",
-          "format": "readable primary-source text",
-          "source_url": "https://semgrep.dev/"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-semgrep"
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "id": "source-semgrep"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-semgrep"
-        }
-      ]
-    },
-    {
       "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/",
       "files": [
-        "about.html",
-        "ai-pdlc.html",
-        "concept.html",
         "eds-ai-workflow.html",
-        "eds-developer-harness.html",
-        "eds-path-to-production.html",
-        "eds-po-ba-harness.html",
-        "eds-skills-catalogue.html",
-        "eds-team-context.html",
-        "index.html",
-        "product-discovery.html",
-        "product-implementation.html",
-        "tech-radar.html",
-        "tech-scan-agents.html",
-        "tech-scan-ai-workflows.html",
-        "tech-scan-context.html",
-        "tech-scan-delivery.html",
-        "tech-scan-gateway.html",
-        "tech-scan-harness.html",
-        "tech-scan-models.html",
-        "tech-scan-sandbox.html",
-        "tech-scan-stack-views.html",
-        "tech-scan-verification.html",
-        "tech-scan-workflows-factories.html",
-        "tech-scan.html",
-        "training.html",
-        "transformation.html",
-        "concept-maturity.html"
+        "eds-po-ba-harness.html"
       ],
       "hrefs": [
         "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/"
@@ -9574,44 +8860,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "about.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "ai-pdlc.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "concept.html",
-          "outcome": "supported",
-          "scope": "Sidebar Training link reaches the intended self-paced Eitri training entry point.",
-          "evidence_summary": "The destination is a readable Foundations of Agentic Engineering prerequisite page with PO, Eitri skills and team-context routes.",
-          "limitation": "Operational training link only. Its organisational/SPDD claims and linked videos are not automatically adopted or verified by this page; no internal Eitri configuration tested."
-        },
-        {
           "file": "eds-ai-workflow.html",
-          "outcome": "changed",
-          "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
-          "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "changed",
-          "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
-          "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-path-to-production.html",
           "outcome": "changed",
           "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
           "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
@@ -9625,154 +8874,6 @@
           "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
           "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
           "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "changed",
-          "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
-          "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-team-context.html",
-          "outcome": "changed",
-          "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
-          "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "index.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "product-discovery.html",
-          "outcome": "supported",
-          "scope": "Operational training entry point in site navigation.",
-          "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
-          "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
-        },
-        {
-          "file": "product-implementation.html",
-          "outcome": "supported",
-          "scope": "Operational training entry point in site navigation.",
-          "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
-          "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
-        },
-        {
-          "file": "tech-scan-gateway.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "tech-scan-harness.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "tech-scan-models.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "tech-scan-sandbox.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "tech-scan.html",
-          "outcome": "supported",
-          "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
-          "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
-          "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
-        },
-        {
-          "file": "training.html",
-          "outcome": "changed",
-          "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
-          "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "transformation.html",
-          "outcome": "supported",
-          "scope": "Operational training entry point in site navigation.",
-          "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
-          "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
-        },
-        {
-          "file": "tech-scan-agents.html",
-          "outcome": "unverified",
-          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
-          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
-        },
-        {
-          "file": "tech-scan-ai-workflows.html",
-          "checked_on": "2026-11-17",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
-        },
-        {
-          "file": "tech-scan-workflows-factories.html",
-          "outcome": "unverified",
-          "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
-          "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
-        },
-        {
-          "file": "tech-scan-context.html",
-          "checked_on": "2026-11-14",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
-        },
-        {
-          "file": "tech-scan-delivery.html",
-          "checked_on": "2026-11-14",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
-        },
-        {
-          "file": "tech-scan-stack-views.html",
-          "checked_on": "2026-11-14",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
-        },
-        {
-          "file": "tech-scan-verification.html",
-          "checked_on": "2026-11-14",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
-        },
-        {
-          "file": "tech-radar.html",
-          "checked_on": "2026-11-17",
-          "outcome": "operational",
-          "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
-        },
-        {
-          "file": "concept-maturity.html",
-          "checked_on": "2026-11-20",
-          "outcome": "operational",
-          "scope": "Shared navigation URL; not a cited capability claim.",
-          "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
         }
       ],
       "evidence_digests": [
@@ -9788,23 +8889,7 @@
           "id": "source-training"
         },
         {
-          "file": "eds-developer-harness.html",
-          "id": "source-training"
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "id": "source-training"
-        },
-        {
           "file": "eds-po-ba-harness.html",
-          "id": "source-training"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-training"
-        },
-        {
-          "file": "eds-team-context.html",
           "id": "source-training"
         }
       ]
@@ -9812,9 +8897,7 @@
     {
       "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/00-pm-ba-workflow.html",
       "files": [
-        "eds-developer-harness.html",
         "eds-po-ba-harness.html",
-        "eds-skills-catalogue.html",
         "training.html"
       ],
       "hrefs": [
@@ -9827,25 +8910,7 @@
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
-          "file": "eds-developer-harness.html",
-          "outcome": "changed",
-          "scope": "PO planning commands, issue creation, forecasts, reconciliation and acceptance teaching in training.html. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Current Lesson 0 uses /project-horizon with YAML story input, warns to request the auto-generated label and dry-run issue additions to avoid duplicates, and documents two open reconciliation forecast defects. Story-last-MR E2E evidence precedes manual acceptance.",
-          "limitation": "Supplementary primary page discovered from the cited course, not originally linked directly by these seven pages.; Course warning is not independent execution of the actual deployed skill.",
-          "review_basis": "Parent associated reviewed supplementary primary evidence with this newly published source link.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
           "file": "eds-po-ba-harness.html",
-          "outcome": "changed",
-          "scope": "PO planning commands, issue creation, forecasts, reconciliation and acceptance teaching in training.html. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Current Lesson 0 uses /project-horizon with YAML story input, warns to request the auto-generated label and dry-run issue additions to avoid duplicates, and documents two open reconciliation forecast defects. Story-last-MR E2E evidence precedes manual acceptance.",
-          "limitation": "Supplementary primary page discovered from the cited course, not originally linked directly by these seven pages.; Course warning is not independent execution of the actual deployed skill.",
-          "review_basis": "Parent associated reviewed supplementary primary evidence with this newly published source link.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
           "outcome": "changed",
           "scope": "PO planning commands, issue creation, forecasts, reconciliation and acceptance teaching in training.html. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
           "evidence_summary": "Current Lesson 0 uses /project-horizon with YAML story input, warns to request the auto-generated label and dry-run issue additions to avoid duplicates, and documents two open reconciliation forecast defects. Story-last-MR E2E evidence precedes manual acceptance.",
@@ -9877,15 +8942,7 @@
       ],
       "source_entries": [
         {
-          "file": "eds-developer-harness.html",
-          "id": "source-training"
-        },
-        {
           "file": "eds-po-ba-harness.html",
-          "id": "source-training"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
           "id": "source-training"
         },
         {
@@ -9898,11 +8955,7 @@
       "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html",
       "files": [
         "eds-ai-workflow.html",
-        "eds-developer-harness.html",
-        "eds-path-to-production.html",
         "eds-po-ba-harness.html",
-        "eds-skills-catalogue.html",
-        "eds-team-context.html",
         "training.html"
       ],
       "hrefs": [
@@ -9924,45 +8977,12 @@
           "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
         },
         {
-          "file": "eds-developer-harness.html",
-          "outcome": "changed",
-          "scope": "Public Eitri lesson documents workflow, coverage/mutation defaults, policy package counts, human gates, code review and E2E controls. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Current Lesson 1 distinguishes older five-phase video/diagram from S1 setup, continuous S2/S3 and Steps 1–5. It documents /project-horizon, 80% coverage, optional 70% mutation, 36/88 packaged controls and E2E on the last story issue before MR merge.",
-          "limitation": "These are public training descriptions, not deployed configuration verification.; Build is included in the parallel /code-reviewer dispatcher; local guide separately depicts Gates 1 and 2.; Current lesson’s E2E requirement differs from the local optional/nonblocking description.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "outcome": "changed",
-          "scope": "Public Eitri lesson documents workflow, coverage/mutation defaults, policy package counts, human gates, code review and E2E controls. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Current Lesson 1 distinguishes older five-phase video/diagram from S1 setup, continuous S2/S3 and Steps 1–5. It documents /project-horizon, 80% coverage, optional 70% mutation, 36/88 packaged controls and E2E on the last story issue before MR merge.",
-          "limitation": "These are public training descriptions, not deployed configuration verification.; Build is included in the parallel /code-reviewer dispatcher; local guide separately depicts Gates 1 and 2.; Current lesson’s E2E requirement differs from the local optional/nonblocking description.",
-          "review_basis": "Parent associated reviewed supplementary primary evidence with this newly published source link.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
           "file": "eds-po-ba-harness.html",
           "outcome": "changed",
           "scope": "Public Eitri lesson documents workflow, coverage/mutation defaults, policy package counts, human gates, code review and E2E controls. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
           "evidence_summary": "Current Lesson 1 distinguishes older five-phase video/diagram from S1 setup, continuous S2/S3 and Steps 1–5. It documents /project-horizon, 80% coverage, optional 70% mutation, 36/88 packaged controls and E2E on the last story issue before MR merge.",
           "limitation": "These are public training descriptions, not deployed configuration verification.; Build is included in the parallel /code-reviewer dispatcher; local guide separately depicts Gates 1 and 2.; Current lesson’s E2E requirement differs from the local optional/nonblocking description.",
           "review_basis": "Parent associated reviewed supplementary primary evidence with this newly published source link.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "changed",
-          "scope": "Public Eitri lesson documents workflow, coverage/mutation defaults, policy package counts, human gates, code review and E2E controls. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Current Lesson 1 distinguishes older five-phase video/diagram from S1 setup, continuous S2/S3 and Steps 1–5. It documents /project-horizon, 80% coverage, optional 70% mutation, 36/88 packaged controls and E2E on the last story issue before MR merge.",
-          "limitation": "These are public training descriptions, not deployed configuration verification.; Build is included in the parallel /code-reviewer dispatcher; local guide separately depicts Gates 1 and 2.; Current lesson’s E2E requirement differs from the local optional/nonblocking description.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-team-context.html",
-          "outcome": "changed",
-          "scope": "Public Eitri lesson documents workflow, coverage/mutation defaults, policy package counts, human gates, code review and E2E controls. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Current Lesson 1 distinguishes older five-phase video/diagram from S1 setup, continuous S2/S3 and Steps 1–5. It documents /project-horizon, 80% coverage, optional 70% mutation, 36/88 packaged controls and E2E on the last story issue before MR merge.",
-          "limitation": "These are public training descriptions, not deployed configuration verification.; Build is included in the parallel /code-reviewer dispatcher; local guide separately depicts Gates 1 and 2.; Current lesson’s E2E requirement differs from the local optional/nonblocking description.",
           "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
         },
         {
@@ -9988,23 +9008,7 @@
           "id": "source-training"
         },
         {
-          "file": "eds-developer-harness.html",
-          "id": "source-training"
-        },
-        {
-          "file": "eds-path-to-production.html",
-          "id": "source-training"
-        },
-        {
           "file": "eds-po-ba-harness.html",
-          "id": "source-training"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-training"
-        },
-        {
-          "file": "eds-team-context.html",
           "id": "source-training"
         },
         {
@@ -10017,7 +9021,6 @@
       "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/02-team-context-ingestion.html",
       "files": [
         "eds-po-ba-harness.html",
-        "eds-team-context.html",
         "training.html"
       ],
       "hrefs": [
@@ -10031,14 +9034,6 @@
       "claim_reviews": [
         {
           "file": "eds-po-ba-harness.html",
-          "outcome": "changed",
-          "scope": "Public context lesson supports Confluence route and 36/88 packaged checks; local team standards procedure uses story tags. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
-          "evidence_summary": "Lesson 2 documents Confluence-fed CLARA, built-in 36/88 package references, Bedrock KB routing and root coding conventions. Its standards section explicitly replaces story tagging with catalog, dependency and task-node concept mapping.",
-          "limitation": "CONTEXT.md in course examples differs from current upstream Pocock GLOSSARY.md.; Some course statements overclaim that supplied context always guarantees correct output.; Installed registration, KB access, pack versions and enforcement remain unverified.",
-          "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
-        },
-        {
-          "file": "eds-team-context.html",
           "outcome": "changed",
           "scope": "Public context lesson supports Confluence route and 36/88 packaged checks; local team standards procedure uses story tags. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
           "evidence_summary": "Lesson 2 documents Confluence-fed CLARA, built-in 36/88 package references, Bedrock KB routing and root coding conventions. Its standards section explicitly replaces story tagging with catalog, dependency and task-node concept mapping.",
@@ -10065,10 +9060,6 @@
       "source_entries": [
         {
           "file": "eds-po-ba-harness.html",
-          "id": "source-training"
-        },
-        {
-          "file": "eds-team-context.html",
           "id": "source-training"
         },
         {
@@ -10116,7 +9107,6 @@
     {
       "url": "https://stitch.withgoogle.com",
       "files": [
-        "eds-developer-harness.html",
         "eds-po-ba-harness.html"
       ],
       "hrefs": [
@@ -10128,13 +9118,6 @@
       "final_url": "https://stitch.google.com/",
       "method": "direct HTTP GET",
       "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "inaccessible",
-          "scope": "Stitch is a design/prototyping reference; local EDS conversion support is available/planned.",
-          "evidence_summary": "The cached response contains only a Stitch title, without readable product documentation or EDS conversion evidence.",
-          "limitation": "Parent owns application-shell recovery.; Do not change installed Stitch or standalone HTML conversion labels based on this shell."
-        },
         {
           "file": "eds-po-ba-harness.html",
           "outcome": "inaccessible",
@@ -10151,10 +9134,6 @@
         }
       ],
       "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-stitch"
-        },
         {
           "file": "eds-po-ba-harness.html",
           "id": "source-stitch"
@@ -10236,54 +9215,6 @@
         {
           "file": "tech-scan-gateway.html",
           "id": "source-16"
-        }
-      ]
-    },
-    {
-      "url": "https://stryker-mutator.io",
-      "files": [
-        "eds-developer-harness.html",
-        "eds-skills-catalogue.html"
-      ],
-      "hrefs": [
-        "https://stryker-mutator.io"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://stryker-mutator.io",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "StrykerJS supports mutation testing for JavaScript and TypeScript.",
-          "evidence_summary": "The Stryker site identifies StrykerJS for JS/TS, supported mutations, runner integration and reports of surviving mutants.",
-          "limitation": "EDS threshold, changed-file selection, optional status and wrapper installation require configuration evidence."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "supported",
-          "scope": "StrykerJS supports mutation testing for JavaScript and TypeScript.",
-          "evidence_summary": "The Stryker site identifies StrykerJS for JS/TS, supported mutations, runner integration and reports of surviving mutants.",
-          "limitation": "EDS threshold, changed-file selection, optional status and wrapper installation require configuration evidence."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "d353670a5d286100a07c646f291d105d6779b040994fbac13bcd100425450fdc",
-          "format": "readable primary-source text",
-          "source_url": "https://stryker-mutator.io"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-stryker"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-stryker"
         }
       ]
     },
@@ -10786,54 +9717,6 @@
         {
           "file": "concept.html",
           "id": "source-20"
-        }
-      ]
-    },
-    {
-      "url": "https://www.archunit.org",
-      "files": [
-        "eds-developer-harness.html",
-        "eds-skills-catalogue.html"
-      ],
-      "hrefs": [
-        "https://www.archunit.org"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://www.archunit.org",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "supported",
-          "scope": "ArchUnit checks Java architectural dependencies through tests.",
-          "evidence_summary": "The project describes Java bytecode analysis to test package/class dependencies, layers, slices and cycles with an ordinary unit-test framework.",
-          "limitation": "JVM-wide language support is broader than the homepage’s Java claim; exact language/build compatibility should be checked against installed version.; Generated EDS boundary tests and build enforcement are not verified."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "supported",
-          "scope": "ArchUnit checks Java architectural dependencies through tests.",
-          "evidence_summary": "The project describes Java bytecode analysis to test package/class dependencies, layers, slices and cycles with an ordinary unit-test framework.",
-          "limitation": "JVM-wide language support is broader than the homepage’s Java claim; exact language/build compatibility should be checked against installed version.; Generated EDS boundary tests and build enforcement are not verified."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "ae7b4928b129e199de42ccd287f7686bb0b778a0255311e27fbd13e48ac5eb1a",
-          "format": "readable primary-source text",
-          "source_url": "https://www.archunit.org"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-archunit"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-archunit"
         }
       ]
     },
@@ -11831,54 +10714,6 @@
         {
           "file": "tech-scan-sandbox.html",
           "id": "source-4"
-        }
-      ]
-    },
-    {
-      "url": "https://www.sonarsource.com",
-      "files": [
-        "eds-developer-harness.html",
-        "eds-skills-catalogue.html"
-      ],
-      "hrefs": [
-        "https://www.sonarsource.com"
-      ],
-      "checked_on": "2026-11-24",
-      "result": "retrieved",
-      "http_status": 200,
-      "final_url": "https://www.sonarsource.com",
-      "method": "direct HTTP GET",
-      "claim_reviews": [
-        {
-          "file": "eds-developer-harness.html",
-          "outcome": "limited",
-          "scope": "Sonar supplies code-quality review and context augmentation for planned EDS integration.",
-          "evidence_summary": "The current homepage presents SonarQube verification, Sonar MCP and Vortex context/constraints plus real-time agent verification. It does not validate the older named EDS Context Augmentation integration.",
-          "limitation": "Product naming/capabilities have evolved; do not silently relabel the internal planned integration as installed or equate it to Vortex.; Exact product, version, entitlement and EDS configuration require owner confirmation."
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "outcome": "limited",
-          "scope": "Sonar supplies code-quality review and context augmentation for planned EDS integration.",
-          "evidence_summary": "The current homepage presents SonarQube verification, Sonar MCP and Vortex context/constraints plus real-time agent verification. It does not validate the older named EDS Context Augmentation integration.",
-          "limitation": "Product naming/capabilities have evolved; do not silently relabel the internal planned integration as installed or equate it to Vortex.; Exact product, version, entitlement and EDS configuration require owner confirmation."
-        }
-      ],
-      "evidence_digests": [
-        {
-          "sha256": "146a796d19fd3d762f99feafff88a759631658ed5c1a8cab3ca54916e3525ffd",
-          "format": "readable primary-source text",
-          "source_url": "https://www.sonarsource.com"
-        }
-      ],
-      "source_entries": [
-        {
-          "file": "eds-developer-harness.html",
-          "id": "source-sonar"
-        },
-        {
-          "file": "eds-skills-catalogue.html",
-          "id": "source-sonar"
         }
       ]
     },
@@ -31973,5 +30808,799 @@
       "evidence_policy": "Portable source URLs, page-specific scope, limitations, supporting paraphrases and evidence hashes are retained here. Copyrighted full-source captures remain outside the published repository. Historical records are preserved without relabelling their dates.",
       "maintenance_record": "reference-review-2026-11-12.md"
     }
-  ]
+  ],
+  "archived_pages": {
+    "archived_on": "2026-11-24",
+    "location": "site/archive/",
+    "reason": "Moved out of the published site ahead of the EDS AI Workflow refactor; no longer published or linked.",
+    "pages": [
+      "eds-path-to-production.html",
+      "eds-skills-catalogue.html",
+      "eds-team-context.html"
+    ],
+    "page_passes": {
+      "eds-path-to-production.html": {
+        "checked_on": "2026-11-24",
+        "scope": "Daily maintenance verification on 2026-11-24: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+        "status": "completed with explicit limitations",
+        "source_entries": 9,
+        "unique_fetch_destinations": 12,
+        "maintenance_record": "reference-review-2026-11-12.md"
+      },
+      "eds-skills-catalogue.html": {
+        "checked_on": "2026-11-24",
+        "scope": "Daily maintenance verification on 2026-11-24: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+        "status": "completed with explicit limitations",
+        "source_entries": 18,
+        "unique_fetch_destinations": 21,
+        "maintenance_record": "reference-review-2026-11-12.md"
+      },
+      "eds-team-context.html": {
+        "checked_on": "2026-11-24",
+        "scope": "Daily maintenance verification on 2026-11-24: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 12 November 2026 (see maintenance record).",
+        "status": "completed with explicit limitations",
+        "source_entries": 7,
+        "unique_fetch_destinations": 11,
+        "maintenance_record": "reference-review-2026-11-12.md"
+      }
+    },
+    "references_removed": [
+      {
+        "url": "https://impeccable.style",
+        "files": [
+          "eds-skills-catalogue.html"
+        ],
+        "hrefs": [
+          "https://impeccable.style"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://impeccable.style",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-skills-catalogue.html",
+            "outcome": "supported",
+            "scope": "Impeccable supplies frontend audit, harden and polish commands.",
+            "evidence_summary": "The site presents audit, harden and polish among its design commands, with /impeccable polish examples, project design context and install instructions.",
+            "limitation": "Homepage command identity is supported; full detailed checklist coverage requires the installed command documentation.; Do not infer EDS host integration or quality guarantees from promotional examples."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "438b10870f6910f170616db8bfceb67d7e2a523dfef00807e90f257a4d889860",
+            "format": "readable primary-source text",
+            "source_url": "https://impeccable.style"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-skills-catalogue.html",
+            "id": "source-impeccable"
+          }
+        ]
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats",
+        "files": [
+          "eds-path-to-production.html"
+        ],
+        "hrefs": [
+          "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-path-to-production.html",
+            "outcome": "supported",
+            "scope": "STRIDE groups security threats into six categories.",
+            "evidence_summary": "Microsoft’s threat-model reference lists spoofing, tampering, repudiation, information disclosure, denial of service and elevation of privilege.",
+            "limitation": "Taxonomy does not prove the completeness of a generated EDS threat model or enforcement of a release gate."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "7da15a9398255b96653285685ef011dfd5de3e5c2fd972c446e051f040909a80",
+            "format": "readable primary-source text",
+            "source_url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-path-to-production.html",
+            "id": "source-stride"
+          }
+        ]
+      },
+      {
+        "url": "https://linddun.org",
+        "files": [
+          "eds-path-to-production.html"
+        ],
+        "hrefs": [
+          "https://linddun.org"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://linddun.org",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-path-to-production.html",
+            "outcome": "supported",
+            "scope": "LINDDUN is a privacy threat modelling framework complementary to STRIDE.",
+            "evidence_summary": "The project describes privacy threat categories and lean/systematic methods. It says privacy and security analyses can share a system model and run in parallel.",
+            "limitation": "Framework reference does not verify EDS applicability decisions, model completeness, mitigations or gate status."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "50da22ffa2d23e7d90ec0467f936fce8707c9bb3e5ef5d8998122cfce915a2d0",
+            "format": "readable primary-source text",
+            "source_url": "https://linddun.org"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-path-to-production.html",
+            "id": "source-linddun"
+          }
+        ]
+      },
+      {
+        "url": "https://okf.md",
+        "files": [
+          "eds-team-context.html"
+        ],
+        "hrefs": [
+          "https://okf.md"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://okf.md",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-team-context.html",
+            "outcome": "supported",
+            "scope": "OKF stores typed Markdown concepts in indexed version-controlled knowledge bundles.",
+            "evidence_summary": "The format’s homepage describes index.md entry points, typed frontmatter, Git-native history and modular Markdown concepts.",
+            "limitation": "EDS AppStandards registration and runtime retrieval are local conventions, not enforced by the format."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "10c5b130f768e8edbd6cc29d36c37c8792bdd82eae114a4242b6ff2a82954cad",
+            "format": "readable primary-source text",
+            "source_url": "https://okf.md"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-team-context.html",
+            "id": "source-okf"
+          }
+        ]
+      },
+      {
+        "url": "https://owasp.org/projects/threat-dragon",
+        "files": [
+          "eds-path-to-production.html",
+          "eds-skills-catalogue.html"
+        ],
+        "hrefs": [
+          "https://owasp.org/projects/threat-dragon"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://owasp.org/projects/threat-dragon",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-path-to-production.html",
+            "outcome": "supported",
+            "scope": "OWASP Threat Dragon creates threat-model diagrams and tracks threats/mitigations.",
+            "evidence_summary": "The OWASP project page describes an open-source desktop or self-hosted web tool, diagram elements, threat records, mitigation decisions and support for STRIDE and LINDDUN.",
+            "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Generated models need review; a tool reference is not evidence of an EDS readiness gate."
+          },
+          {
+            "file": "eds-skills-catalogue.html",
+            "outcome": "supported",
+            "scope": "OWASP Threat Dragon creates threat-model diagrams and tracks threats/mitigations.",
+            "evidence_summary": "The OWASP project page describes an open-source desktop or self-hosted web tool, diagram elements, threat records, mitigation decisions and support for STRIDE and LINDDUN.",
+            "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Generated models need review; a tool reference is not evidence of an EDS readiness gate."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "f681b6f88f2288509d38eb455733da3890c8d328641a0fc6e9f0ed951b2273d9",
+            "format": "readable primary-source text",
+            "source_url": "https://owasp.org/projects/threat-dragon"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-path-to-production.html",
+            "id": "source-threat-dragon"
+          },
+          {
+            "file": "eds-skills-catalogue.html",
+            "id": "source-threat-dragon"
+          }
+        ]
+      }
+    ]
+  },
+  "training_nav_repoint": {
+    "changed_on": "2026-11-24",
+    "reason": "The guide navigation Training entry now links to training-maintenance.html while the training material is refined. The self-paced course URL remains cited from the EDS AI Workflow pages.",
+    "url": "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/",
+    "claim_reviews_removed": [
+      {
+        "file": "about.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "ai-pdlc.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "concept.html",
+        "outcome": "supported",
+        "scope": "Sidebar Training link reaches the intended self-paced Eitri training entry point.",
+        "evidence_summary": "The destination is a readable Foundations of Agentic Engineering prerequisite page with PO, Eitri skills and team-context routes.",
+        "limitation": "Operational training link only. Its organisational/SPDD claims and linked videos are not automatically adopted or verified by this page; no internal Eitri configuration tested."
+      },
+      {
+        "file": "index.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "product-discovery.html",
+        "outcome": "supported",
+        "scope": "Operational training entry point in site navigation.",
+        "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
+        "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
+      },
+      {
+        "file": "product-implementation.html",
+        "outcome": "supported",
+        "scope": "Operational training entry point in site navigation.",
+        "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
+        "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
+      },
+      {
+        "file": "tech-scan-gateway.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "tech-scan-harness.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "tech-scan-models.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "tech-scan-sandbox.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "tech-scan.html",
+        "outcome": "supported",
+        "scope": "Header training entry point reaches the public self-paced training, not proof of installed tools or policy.",
+        "evidence_summary": "The destination returns the public prerequisite and training page for Foundations of Agentic Engineering.",
+        "limitation": "Operational navigation only on these pages. Version-specific implementation claims are outside this link role."
+      },
+      {
+        "file": "training.html",
+        "outcome": "changed",
+        "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
+        "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
+        "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
+        "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
+      },
+      {
+        "file": "transformation.html",
+        "outcome": "supported",
+        "scope": "Operational training entry point in site navigation.",
+        "evidence_summary": "The live self-paced training body contains Eitri prerequisites and numbered lessons, plus links to Matt Pocock materials and practice guidance.",
+        "limitation": "A reachable training entry point does not independently validate deployed EDS/Eitri controls, availability or organisational authority. Keep workflow-version warnings in the local guidance."
+      },
+      {
+        "file": "tech-scan-agents.html",
+        "outcome": "unverified",
+        "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+        "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
+      },
+      {
+        "file": "tech-scan-ai-workflows.html",
+        "checked_on": "2026-11-17",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the 16 November 2026 AI workflows page pass."
+      },
+      {
+        "file": "tech-scan-workflows-factories.html",
+        "outcome": "unverified",
+        "scope": "New page link and cited source role recorded in the published page; underlying page-specific claims not independently verified in this maintenance integration.",
+        "limitation": "No retrieval or claim-review evidence for this page was available to this integration; the published source-check date alone does not establish verification."
+      },
+      {
+        "file": "tech-scan-context.html",
+        "checked_on": "2026-11-14",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+      },
+      {
+        "file": "tech-scan-delivery.html",
+        "checked_on": "2026-11-14",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+      },
+      {
+        "file": "tech-scan-stack-views.html",
+        "checked_on": "2026-11-14",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+      },
+      {
+        "file": "tech-scan-verification.html",
+        "checked_on": "2026-11-14",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched in the Wave 3 source pass."
+      },
+      {
+        "file": "tech-radar.html",
+        "checked_on": "2026-11-17",
+        "outcome": "operational",
+        "scope": "Shared navigation, stylesheet or preconnect URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the table-only Tech Radar page."
+      },
+      {
+        "file": "concept-maturity.html",
+        "checked_on": "2026-11-20",
+        "outcome": "operational",
+        "scope": "Shared navigation URL; not a cited capability claim.",
+        "limitation": "Existing retrieval disposition retained; this operational link was not re-fetched for the new page."
+      }
+    ]
+  },
+  "developer_harness_v1_redesign": {
+    "changed_on": "2026-11-24",
+    "reason": "eds-developer-harness.html was rewritten from the 19-step workflow to the Eitri v1.0 six-stage cycle. Tools and frameworks the v1.0 workflow no longer uses left the page, and with them these citations.",
+    "references_removed": [
+      {
+        "url": "https://agent-browser.dev",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://agent-browser.dev"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://agent-browser.dev",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "agent-browser automates live-browser acceptance checks and screenshots.",
+            "evidence_summary": "The agent-browser documentation describes a CLI for agents, accessibility snapshots, forms/navigation, screenshot commands, and recording/debugging features.",
+            "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "36b6517e1b42cf6770377ece9cf477cb29038739713142ff3e12d6684bbdc32c",
+            "format": "readable primary-source text",
+            "source_url": "https://agent-browser.dev"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-browser"
+          }
+        ]
+      },
+      {
+        "url": "https://context7.com",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://context7.com"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://context7.com",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "limited",
+            "scope": "Context7 provides up-to-date, version-specific library documentation for a planned EDS integration.",
+            "evidence_summary": "The homepage identifies Context7 as an Upstash project delivering up-to-date library docs into coding agents. It displays source libraries and update information.",
+            "limitation": "This short homepage does not substantiate exact version-selection semantics or prove installation in Eitri."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "d67887856e5c18c36ecd2a3f93572d69fcb8622c1b7545048a8a0d998a2c64f1",
+            "format": "readable primary-source text",
+            "source_url": "https://context7.com"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-context7"
+          }
+        ]
+      },
+      {
+        "url": "https://github.com/sverweij/dependency-cruiser/tree/main",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://github.com/sverweij/dependency-cruiser/tree/main"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://github.com/sverweij/dependency-cruiser/tree/main",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "dependency-cruiser validates JavaScript/TypeScript dependencies against configured architecture rules.",
+            "evidence_summary": "The README describes project-specific dependency rules, error reporting, config generation and example forbidden imports, plus support for JavaScript and TypeScript.",
+            "limitation": "Public source supports the underlying tool or method only; installed EDS wrapper, configuration, availability and enforcement require owner-confirmed revisions.; Build-blocking depends on configured severity, invocation and CI wiring."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "c1b61530fcc6df3f762e07581276872e61350197fbf89c79d1329283e4b0112d",
+            "format": "readable primary-source text",
+            "source_url": "https://github.com/sverweij/dependency-cruiser/tree/main"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-dependency-cruiser"
+          }
+        ]
+      },
+      {
+        "url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "limited",
+            "scope": "ARC is GovTech technical governance for agentic AI; Eitri package has 88 checks.",
+            "evidence_summary": "The ARC homepage describes capability-based safety/security risk assessment and a major update with 46 risks and 86 controls. Eitri public lesson bodies instead describe an 88-check package.",
+            "limitation": "Upstream control count is not the same artefact as packaged Eitri checklist count.; No installed policy-pack revision or crosswalk supplied."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "48b12909c0b771647624a91fa1e8123f87ba4a939a1ec89abb5e1d2273fb1bd2",
+            "format": "readable primary-source text",
+            "source_url": "https://govtech-responsibleai.github.io/agentic-risk-capability-framework/"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-arc"
+          }
+        ]
+      },
+      {
+        "url": "https://pitest.org",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://pitest.org"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://pitest.org",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "PIT is mutation testing for Java/JVM; faults are seeded and tests evaluated.",
+            "evidence_summary": "PIT explains that failing tests kill deliberate mutations, while surviving mutations can reveal weak tests. It recommends frequent checks of changed code.",
+            "limitation": "PIT does not prescribe EDS 70% default, optional status or installed build scope."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "b676597df8c622d376010a7d63a45225a8971308a91b505f0d7ac9906e200680",
+            "format": "readable primary-source text",
+            "source_url": "https://pitest.org"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-pit"
+          }
+        ]
+      },
+      {
+        "url": "https://semgrep.dev/",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://semgrep.dev/"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://semgrep.dev/",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "Semgrep is static security analysis and supports secrets scanning.",
+            "evidence_summary": "Semgrep’s product page distinguishes Code SAST, Secrets, Supply Chain scanning and CI/PR integrations.",
+            "limitation": "This homepage does not establish configured EDS rules, severity mapping, product/plan entitlement or merge/release blocking."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "b700935beb928a8611690939d18812cd891608a2466af19b8c7c249ceec59611",
+            "format": "readable primary-source text",
+            "source_url": "https://semgrep.dev/"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-semgrep"
+          }
+        ]
+      },
+      {
+        "url": "https://stryker-mutator.io",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://stryker-mutator.io"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://stryker-mutator.io",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "StrykerJS supports mutation testing for JavaScript and TypeScript.",
+            "evidence_summary": "The Stryker site identifies StrykerJS for JS/TS, supported mutations, runner integration and reports of surviving mutants.",
+            "limitation": "EDS threshold, changed-file selection, optional status and wrapper installation require configuration evidence."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "d353670a5d286100a07c646f291d105d6779b040994fbac13bcd100425450fdc",
+            "format": "readable primary-source text",
+            "source_url": "https://stryker-mutator.io"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-stryker"
+          }
+        ]
+      },
+      {
+        "url": "https://www.archunit.org",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://www.archunit.org"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://www.archunit.org",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "supported",
+            "scope": "ArchUnit checks Java architectural dependencies through tests.",
+            "evidence_summary": "The project describes Java bytecode analysis to test package/class dependencies, layers, slices and cycles with an ordinary unit-test framework.",
+            "limitation": "JVM-wide language support is broader than the homepage’s Java claim; exact language/build compatibility should be checked against installed version.; Generated EDS boundary tests and build enforcement are not verified."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "ae7b4928b129e199de42ccd287f7686bb0b778a0255311e27fbd13e48ac5eb1a",
+            "format": "readable primary-source text",
+            "source_url": "https://www.archunit.org"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-archunit"
+          }
+        ]
+      },
+      {
+        "url": "https://www.sonarsource.com",
+        "files": [
+          "eds-developer-harness.html"
+        ],
+        "hrefs": [
+          "https://www.sonarsource.com"
+        ],
+        "checked_on": "2026-11-24",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://www.sonarsource.com",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "limited",
+            "scope": "Sonar supplies code-quality review and context augmentation for planned EDS integration.",
+            "evidence_summary": "The current homepage presents SonarQube verification, Sonar MCP and Vortex context/constraints plus real-time agent verification. It does not validate the older named EDS Context Augmentation integration.",
+            "limitation": "Product naming/capabilities have evolved; do not silently relabel the internal planned integration as installed or equate it to Vortex.; Exact product, version, entitlement and EDS configuration require owner confirmation."
+          }
+        ],
+        "evidence_digests": [
+          {
+            "sha256": "146a796d19fd3d762f99feafff88a759631658ed5c1a8cab3ca54916e3525ffd",
+            "format": "readable primary-source text",
+            "source_url": "https://www.sonarsource.com"
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-sonar"
+          }
+        ]
+      }
+    ],
+    "entries_removed_from_shared_references": {
+      "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/": {
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "changed",
+            "scope": "Course prerequisites describe Pocock workflow, four foundations and organisational SPDD direction; course is a five-phase alternative to local 19-step workflow. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
+            "evidence_summary": "Prerequisites cover baseline skills, model behaviour, context/loop techniques, development principles and multi-agent patterns, and assert an organisational SPDD direction. Current Lesson 1 explicitly supersedes its earlier five-phase layout.",
+            "limitation": "Prerequisites still contain overbroad 40% context, immutable weights, chain-of-thought and orchestrator-never-reads-files advice; retain existing local corrections.; SPDD direction is the course’s statement, not owner confirmation of adoption or drop-in compatibility.; Do not attribute current Lesson 1 command names/layout to this prerequisite page alone.",
+            "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-training"
+          }
+        ]
+      },
+      "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/00-pm-ba-workflow.html": {
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "changed",
+            "scope": "PO planning commands, issue creation, forecasts, reconciliation and acceptance teaching in training.html. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
+            "evidence_summary": "Current Lesson 0 uses /project-horizon with YAML story input, warns to request the auto-generated label and dry-run issue additions to avoid duplicates, and documents two open reconciliation forecast defects. Story-last-MR E2E evidence precedes manual acceptance.",
+            "limitation": "Supplementary primary page discovered from the cited course, not originally linked directly by these seven pages.; Course warning is not independent execution of the actual deployed skill.",
+            "review_basis": "Parent associated reviewed supplementary primary evidence with this newly published source link.",
+            "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-training"
+          }
+        ]
+      },
+      "https://sgtechstack.github.io/ai-coding-workflow-d2-self-paced-training/01-eitri-skills.html": {
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "changed",
+            "scope": "Public Eitri lesson documents workflow, coverage/mutation defaults, policy package counts, human gates, code review and E2E controls. The reviewed current-course corrections and local-revision caveats are retained in the candidate.",
+            "evidence_summary": "Current Lesson 1 distinguishes older five-phase video/diagram from S1 setup, continuous S2/S3 and Steps 1–5. It documents /project-horizon, 80% coverage, optional 70% mutation, 36/88 packaged controls and E2E on the last story issue before MR merge.",
+            "limitation": "These are public training descriptions, not deployed configuration verification.; Build is included in the parallel /code-reviewer dispatcher; local guide separately depicts Gates 1 and 2.; Current lesson’s E2E requirement differs from the local optional/nonblocking description.",
+            "disposition": "Confirmed drift corrected or qualified in the candidate; see the maintenance record."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-training"
+          }
+        ]
+      },
+      "https://stitch.withgoogle.com": {
+        "claim_reviews": [
+          {
+            "file": "eds-developer-harness.html",
+            "outcome": "inaccessible",
+            "scope": "Stitch is a design/prototyping reference; local EDS conversion support is available/planned.",
+            "evidence_summary": "The cached response contains only a Stitch title, without readable product documentation or EDS conversion evidence.",
+            "limitation": "Parent owns application-shell recovery.; Do not change installed Stitch or standalone HTML conversion labels based on this shell."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "eds-developer-harness.html",
+            "id": "source-stitch"
+          }
+        ]
+      }
+    }
+  }
 }
