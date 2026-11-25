@@ -70,7 +70,7 @@ class MaturityDoraInventoryTests(unittest.TestCase):
         self.assertIn({'file': 'transformation.html', 'id': 'source-8'}, model['source_entries'])
         self.assertTrue(any(r['file'] == 'transformation.html' for r in model['claim_reviews']))
         page_pass = inventory['page_passes'][PAGE]
-        self.assertEqual((page_pass['checked_on'], page_pass['source_entries'], page_pass['unique_fetch_destinations']), ('2026-11-24', 13, 14))
+        self.assertEqual((page_pass['checked_on'], page_pass['source_entries'], page_pass['unique_fetch_destinations']), ('2026-11-25', 13, 14))
         doc = Document((ROOT / 'site/dist' / PAGE).read_text())
         source = next(n for n in doc.root.elements('li') if n.attrs.get('id') == 'source-5')
         links = {a.attrs.get('href') for a in source.elements('a')}

@@ -160,10 +160,10 @@ class ADEInventoryTests(unittest.TestCase):
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
         baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        # Digests advanced by the daily reference check on 24 November 2026,
+        # Digests advanced by the daily reference check on 25 November 2026,
         # which legitimately advances page_passes dates and per-entry
         # checked_on/http_status/final_url/method. (Previously advanced
-        # on 23 November 2026 for the same reason.) The reviews digest also
+        # on 24 November 2026 for the same reason.) The reviews digest also
         # moved on 22 November 2026 when the Lambda MicroVMs x86 date and the
         # CodeGuru Reviewer wording were corrected on the cited pages.
         # Issue 133 review: targeted market-research additions advance the
@@ -186,7 +186,7 @@ class ADEInventoryTests(unittest.TestCase):
         # v1.0 six-stage cycle. Its page pass and per-page reviews changed and
         # citations for retired tools left the page (recorded under
         # developer_harness_v1_redesign); no other page's records changed.
-        self.assertEqual(digest, 'b01d9aaa794b63e639b745ec5e66cb63af106fb3bf71768f2bd8e7161992fb7f')
+        self.assertEqual(digest, '689140af9534bae7916c01b18cccde0ade08c284234e5385240da48abeb0f6af')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -210,8 +210,10 @@ class ADEInventoryTests(unittest.TestCase):
             {'file': 'concept-maturity.html', 'id': 'source-5'})
         actual = hashlib.sha256(json.dumps(metadata, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
         # Advanced by the 24 November 2026 archive and developer harness
-        # redesign; see the notes above.
-        self.assertEqual(actual, 'fd5d19a846e0bf36ab3d803c26c09e044caf98566e44617c93eab4225a036779')
+        # redesign; see the notes above. Advanced again by the daily
+        # reference check on 25 November 2026 (page_passes dates and
+        # per-entry checked_on/method).
+        self.assertEqual(actual, '16f920f880c0fb79dcdf4479b7b6080fe50c4f35afda9fea1cc67626e92289ec')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:

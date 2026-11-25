@@ -259,7 +259,7 @@ BASELINE = {'harness': {'ids': ['aws-first-default',
                      ('eds-developer-harness.html', 'Developer harness'),
                      ('training-maintenance.html', 'Training'),
                      ('about.html', 'About')],
-             'dates': [('2026-11-24', '24 November 2026'), ('2026-11-12', '12 November 2026')]},
+             'dates': [('2026-11-25', '25 November 2026'), ('2026-11-12', '12 November 2026')]},
  'sandbox': {'ids': ['aws-first-default',
                      'conditional-alternatives',
                      'do-not-use',
@@ -317,7 +317,7 @@ BASELINE = {'harness': {'ids': ['aws-first-default',
                      ('eds-developer-harness.html', 'Developer harness'),
                      ('training-maintenance.html', 'Training'),
                      ('about.html', 'About')],
-             'dates': [('2026-11-24', '24 November 2026'), ('2026-11-12', '12 November 2026')]}}
+             'dates': [('2026-11-25', '25 November 2026'), ('2026-11-12', '12 November 2026')]}}
 
 
 if __name__ == "__main__":
