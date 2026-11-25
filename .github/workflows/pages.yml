@@ -19,7 +19,7 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
+  build:
     # Keep the existing main-only github-pages environment protection. A PR
     # validation or a manual run on dev must never deploy.
     if: >-
@@ -29,20 +29,15 @@ jobs:
         github.event.workflow_run.event == 'push' &&
         github.event.workflow_run.head_branch == 'dev' &&
         github.event.workflow_run.head_repository.full_name == github.repository))
-    # Rejected events must not acquire the deployment lock.
+    # Reading the branch tips and deploying both hold the same job-level lock.
+    # Rejected events do not acquire it, while each eligible build assembles
+    # the latest content only after earlier deployments have finished.
     concurrency:
       group: pages
       cancel-in-progress: false
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pages: write
-      id-token: write
-      # Lets the wait step list this run's artifacts.
-      actions: read
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       # Always read both branch tips after acquiring the deployment lock.
       - name: Check out production and trusted deployment code
@@ -64,24 +59,30 @@ jobs:
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: public
-      # The run's artifact list can lag the upload by a moment, and
-      # deploy-pages fails with "Found 0 artifact(s)" if it asks too early.
-      # Wait here, inside the deployment lock, rather than splitting the job.
-      - name: Wait for the Pages artifact to be listed
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REPOSITORY: ${{ github.repository }}
-          RUN_ID: ${{ github.run_id }}
-        run: |
-          for attempt in $(seq 1 12); do
-            count=$(gh api "repos/$REPOSITORY/actions/runs/$RUN_ID/artifacts" \
-              --jq '[.artifacts[] | select(.name == "github-pages")] | length')
-            if [ "$count" -ge 1 ]; then
-              exit 0
-            fi
-            sleep 5
-          done
-          echo "::error::github-pages artifact was not listed after 60 seconds"
-          exit 1
+
+  deploy:
+    needs: build
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name != 'workflow_run' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.event == 'push' &&
+        github.event.workflow_run.head_branch == 'dev' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Starting deployment after the build job has finished avoids the race
+      # where deploy-pages cannot yet see an artifact uploaded moments earlier
+      # in the same job (actions/deploy-pages#451).
       - id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

@@ -145,18 +145,26 @@ class PagesWorkflowTests(unittest.TestCase):
             workflow,
         )
 
-    def test_deploy_waits_for_the_artifact_inside_the_lock(self):
+    def test_deploy_starts_after_the_upload_job_finishes(self):
         workflow = (SCRIPT.parents[1] / "workflows/pages.yml").read_text()
-        # deploy-pages can query the artifact list before the upload is
-        # visible. The wait sits between upload and deploy in the same job, so
-        # the deployment lock still covers reading the branch tips.
+        # deploy-pages can query the artifact list before an upload from the
+        # same job is visible. Keep the upload in a completed build job instead
+        # (actions/deploy-pages#451), while both jobs share the Pages lock so
+        # branch tips are still read only after earlier deployments finish.
+        build = workflow.index("\n  build:\n")
         upload = workflow.index("actions/upload-pages-artifact@")
-        wait = workflow.index("name: Wait for the Pages artifact to be listed")
-        deploy = workflow.index("actions/deploy-pages@")
-        self.assertLess(upload, wait)
-        self.assertLess(wait, deploy)
-        self.assertEqual(workflow.count("\n  deploy:\n"), 1, "Keep upload and deploy in one job")
-        self.assertIn("\n      actions: read\n", workflow)
+        deploy_job = workflow.index("\n  deploy:\n")
+        deploy_action = workflow.index("actions/deploy-pages@")
+        self.assertLess(build, upload)
+        self.assertLess(upload, deploy_job)
+        self.assertLess(deploy_job, deploy_action)
+        self.assertIn("\n    needs: build\n", workflow)
+        self.assertNotIn("Wait for the Pages artifact to be listed", workflow)
+        self.assertEqual(
+            workflow.count("\n    concurrency:\n      group: pages\n      cancel-in-progress: false\n"),
+            2,
+            "Both build and deploy must hold the Pages lock",
+        )
 
 
 if __name__ == "__main__":
