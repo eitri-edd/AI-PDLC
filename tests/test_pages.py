@@ -145,18 +145,30 @@ class PagesWorkflowTests(unittest.TestCase):
             workflow,
         )
 
-    def test_deploy_waits_for_the_artifact_inside_the_lock(self):
+    def test_deploy_waits_on_the_same_artifact_api_inside_the_lock(self):
         workflow = (SCRIPT.parents[1] / "workflows/pages.yml").read_text()
-        # deploy-pages can query the artifact list before the upload is
-        # visible. The wait sits between upload and deploy in the same job, so
-        # the deployment lock still covers reading the branch tips.
+        # deploy-pages can query the internal artifact API before the upload is
+        # visible. Probe that same API between upload and deploy in the single
+        # locked job; splitting build from deploy would freeze branch-tip
+        # content before the lock and make failed-job retries reuse it.
         upload = workflow.index("actions/upload-pages-artifact@")
-        wait = workflow.index("name: Wait for the Pages artifact to be listed")
+        wait = workflow.index("name: Wait for the Pages artifact in the deployment API")
         deploy = workflow.index("actions/deploy-pages@")
         self.assertLess(upload, wait)
         self.assertLess(wait, deploy)
         self.assertEqual(workflow.count("\n  deploy:\n"), 1, "Keep upload and deploy in one job")
-        self.assertIn("\n      actions: read\n", workflow)
+        self.assertNotIn("\n  build:\n", workflow)
+        self.assertIn("actions/github-script@", workflow)
+
+    def test_artifact_probe_uses_deploy_pages_internal_api(self):
+        workflow = (SCRIPT.parents[1] / "workflows/pages.yml").read_text()
+        self.assertIn("ACTIONS_RUNTIME_TOKEN", workflow)
+        self.assertIn("ACTIONS_RESULTS_URL", workflow)
+        self.assertIn("github.actions.results.api.v1.ArtifactService/ListArtifacts", workflow)
+        self.assertIn("workflowRunBackendId", workflow)
+        self.assertIn("workflowJobRunBackendId", workflow)
+        self.assertIn("const artifactName = 'github-pages'", workflow)
+        self.assertIn("JavaScript action", workflow)
 
 
 if __name__ == "__main__":
