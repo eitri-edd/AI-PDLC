@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A playbook for EDS product and engineering teams: AI-assisted development principles, decisions, evidence and Eitri implementation guidance.">
+  <meta name="description" content="A playbook for EDS product and engineering teams: AI-assisted development principles, decisions, evidence and Forge implementation guidance.">
   <title>Introduction · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
             <a href="product-discovery.html">Project Discovery</a>
             <a href="product-implementation.html">Product implementation</a>
           </div>
-          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Forge)</a>
           <div class="nav-children">
             <a href="eds-po-ba-harness.html">PO/BA harness</a>
             <a href="eds-developer-harness.html">Developer harness</a>
@@ -53,7 +53,7 @@
         <header class="article-header">
           <p class="eyebrow">Development guide</p>
           <h1>Introduction</h1>
-          <p class="lead">This playbook explains how product and engineering teams use AI to move from uncertain needs to verified software and operational learning. It describes the decisions, evidence and accountability to agree, then shows how Eitri supports the workflow.</p>
+          <p class="lead">This playbook explains how product and engineering teams use AI to move from uncertain needs to verified software and operational learning. It describes the decisions, evidence and accountability to agree, then shows how Forge (Formerly EITRI) supports the workflow.</p>
           <p>The AI-Software Development Lifecycle (AI-SDLC) covers Project Discovery, implementation, release and learning from use. AI-assisted development means work supported by AI tools, whether or not the resulting product contains AI.</p>
 			<div class="video-container">
   <iframe
@@ -72,7 +72,7 @@
 
           <ol class="page-map-nodes" role="list">
             <li class="page-map-node"><strong>Start with your task</strong><div class="page-map-links"><a href="#choose-task">Idea, feature, defect or high-risk change</a></div></li>
-            <li class="page-map-node"><strong>Audience and guidance</strong><div class="page-map-links"><a href="#target-audience">Who this guide is for</a><a href="#guide-layers">Principles, requirements and Eitri</a></div></li>
+            <li class="page-map-node"><strong>Audience and guidance</strong><div class="page-map-links"><a href="#target-audience">Who this guide is for</a><a href="#guide-layers">Principles, requirements and Forge</a></div></li>
             <li class="page-map-node"><strong>Learn and decide sooner</strong><div class="page-map-links"><a href="#why-ai-pdlc">Test ideas and review evidence</a></div></li>
             <li class="page-map-node"><strong>Use it in daily work</strong><div class="page-map-links"><a href="#evergreen-guide">Agree the next decision and keep guidance current</a></div></li>
           </ol>
@@ -101,20 +101,20 @@
 <li><a href="product-implementation.html#implementable-definition">Deliver a feature</a><span>Agree scope and acceptance criteria → plan bounded changes → build and verify them → obtain the applicable review and release approvals → monitor the outcome. Keep requirements, test results, unresolved risks and the decision with the change.</span></li>
 <li><a href="product-implementation.html#six-stages">Fix a defect</a><span>Record the observed and expected behaviour → reproduce the failure → assess impact → make a bounded correction and add a regression test → review and release through the applicable controls → verify recovery. If the failure is an active incident, follow the existing incident process first.</span></li>
 <li><a href="product-implementation.html#gates-and-assurance">Make a high-risk change</a><span>Identify affected systems, data and people → involve the relevant security, architecture, data or operational specialists before execution → agree independent checks, recovery and stop conditions → submit evidence and residual risks to the authorised decision-maker. Release only within the agreed authority and monitor the result.</span></li></ul>
-          <p>Once the requirements and controls are clear, use the <a href="eds-ai-workflow.html">Eitri workflow</a> for tool instructions and release support.</p>
+          <p>Once the requirements and controls are clear, use the <a href="eds-ai-workflow.html">Forge workflow</a> for tool instructions and release support.</p>
         </section>
 <section id="target-audience">
           <h2>Who this guide is for</h2>
           <p>This guide is for <strong>EDS product and engineering teams</strong>: product owners and managers, business analysts, designers, developers, technical leads, quality office (QO) and cyber managers, and operational team. Organisational leaders can use it to plan ownership, capability and support.</p>
-          <p>The guide connects organisational practices with EDS implementation guidance for Eitri, the AI-assisted development workflow. The playbook explains the approach and key decisions; the implementation pages show how the tools support the work.</p>
+          <p>The guide connects organisational practices with EDS implementation guidance for Forge, the AI-assisted development harness. The playbook explains the approach and key decisions; the implementation pages show how the tools support the work.</p>
           <h3 id="guide-layers">Read the guide in three layers</h3>
           <p id="about-guidance">This guide combines research, engineering practices and EDS workflow documentation. Its models, examples and suggested thresholds are guidance for local adaptation. Requirements are identified with their authority and scope; applicable organisational policies and authorised decisions take precedence.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Separate the reason, the obligation and the tool support; scroll horizontally if needed"><table><caption>Separate the reason, the obligation and the tool support</caption><thead><tr><th scope="col">Layer</th><th scope="col">What it explains</th><th scope="col">Where to start</th></tr></thead><tbody>
 <tr><th scope="row">Principles</th><td>Why the organisation works this way: test assumptions, verify results and retain human accountability. These explain the recommended approach.</td><td><a href="ai-pdlc.html">Lifecycle overview</a> and <a href="transformation.html">organisation transformation</a></td></tr>
 <tr><th scope="row">Operating requirements</th><td>Identify the applicable policies, decision owners, required evidence and approvals for the workflow.</td><td><a href="product-implementation.html#gates-and-assurance">Decisions and independent assurance</a>, alongside the authoritative policies for your work</td></tr>
-<tr><th scope="row">Eitri implementation</th><td>How Eitri’s harnesses, skills and pipeline support delivery, verification and review.</td><td><a href="eds-ai-workflow.html">EDS AI Workflow (Eitri)</a></td></tr>
+<tr><th scope="row">Forge implementation</th><td>How Forge’s harnesses, skills and pipeline support delivery, verification and review.</td><td><a href="eds-ai-workflow.html">EDS AI Workflow (Forge)</a></td></tr>
           </tbody></table></div>
-          <p>If Eitri cannot run a required check or record an approval, agree another way with the person responsible for that control. Complete the required steps and keep the evidence before proceeding. A successful automated check provides evidence for an approval decision. It counts as approval only when the applicable process explicitly allows automated approval.</p>
+          <p>If Forge cannot run a required check or record an approval, agree another way with the person responsible for that control. Complete the required steps and keep the evidence before proceeding. A successful automated check provides evidence for an approval decision. It counts as approval only when the applicable process explicitly allows automated approval.</p>
         </section>
         <section id="why-ai-pdlc">
           <h2>Why AI-SDLC?</h2>
@@ -251,7 +251,7 @@
         <section id="evergreen-guide">
           <h2>Use and maintain the guide</h2>
           <p>Return to the guide as your team’s work moves from Project Discovery to delivery and operational learning. Revisit decisions when user behaviour, system behaviour, policy or tool capabilities change.</p>
-          <p>When you find a gap, record the affected guidance, supporting evidence and the person responsible for resolving it. Confirm changes to operating requirements with the relevant policy or control owner, and keep Eitri instructions aligned with those decisions.</p>
+          <p>When you find a gap, record the affected guidance, supporting evidence and the person responsible for resolving it. Confirm changes to operating requirements with the relevant policy or control owner, and keep Forge instructions aligned with those decisions.</p>
           <div class="next-step">
             <p><strong>Next step:</strong> <a href="#choose-task">choose your task route</a>. With the accountable owner, agree the scope, applicable controls, evidence and next decision before using AI to carry out the work.</p>
             <p><a href="ai-pdlc.html">Explore AI-SDLC</a> for the two loops, handoff and feedback from use.</p>

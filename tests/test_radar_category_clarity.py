@@ -7,16 +7,17 @@ import unittest
 
 PAGE = Path(__file__).resolve().parents[1] / 'site/dist/tech-radar.html'
 CATEGORIES = {
-    'models-access': ('Models and model access', 40),
-    'gateways': ('AI gateways and routing', 6),
-    'context-memory': ('Context and memory', 5),
-    'harness-frameworks': ('Harness and agent frameworks', 9),
+    'models-access': ('Models and model access', 46),
+    'gateways': ('AI gateways and routing', 10),
+    'context-memory': ('Context and memory', 9),
+    'harness-frameworks': ('Harness and agent frameworks', 14),
     'agentic-development-environments': ('Agentic development environments', 9),
     'persistent-agents': ('Persistent agents', 8),
-    'verification': ('Verification', 3),
-    'sandbox': ('Sandbox and execution', 4),
-    'software-factories': ('Software factories', 10),
-    'skill-packs': ('AI workflow skill packs', 7),
+    'verification': ('Verification', 9),
+    'sandbox': ('Sandbox and execution', 9),
+    'software-factories': ('Software factories', 13),
+    'delivery': ('Delivery', 6),
+    'skill-packs': ('AI workflow skill packs', 10),
 }
 
 # Snapshot parsed tables separately from the changing introductory prose.
@@ -24,18 +25,19 @@ TABLE_DIGESTS = {
     'persistent-agents': '5ff202f07c47cda3ba1c43bb584b4cefd003a24c0b8836df7b90087ed0c55249',
     # Moved when Models and model access split into LLM model, coding tool,
     # provider and decision-model tables (20 November 2026).
-    'models-access': '14c40b0f5005f8a133917bacbe68e0772140b887bdbf2bc288ce7304c4746f2a',
-    'gateways': '315854cd811aa033aeb40700bbbdd52c86deb0d8438c807a54b846934c870ecf',
-    'context-memory': 'eb84382835a2273eafb1eeabf9705d19a391b73a4f8af9b2e007fcfefc9863b6',
+    'models-access': 'eaa1c6e80eb400ae773ceb758655dad3ee37032c87fb365bb1882e681db90ede',
+    'gateways': '4cab1e6ba49bc9f8ab993fd3cf21a7ba9c91fa8c539054bdee16326c83e87403',
+    'context-memory': '37581ac17023158961bba8684536180a9194b66486f8fecc6b2e58119200789a',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
-    'harness-frameworks': '49c7d22d7ce9f219cffd68e3588bdfa800298fbfff33944a766ea56e99d2c517',
+    'harness-frameworks': '75ccd55e730297e4d1a50d81e4b4e1f528d258eb2e3093f88e8edea44b5d3645',
     # Moved when eight ADE products were added (Orca, T3 Code, Paradev, Paseo,
     # Orchestrator, Traycer, OpenChamber, Kepler) on 25 November 2026.
     'agentic-development-environments': '32fcf0f93cd122d7329ec5f057eca45d2faa04b270972ce0f66a1770906849a7',
-    'verification': '2ca114ac9fc6e2d17417b911c5474ea46d42bc506ead8c199c5b4ad21abad2b0',
-    'sandbox': 'eddffc1e5e7445b1aa421a27038a0b572097a71c836c18e36c3df82b037c1670',
-    'software-factories': 'cf3d512bb9dcc0b3d7b61a3420d502ab156aeef836e7a10b97c12f80735b34ed',
-    'skill-packs': 'bbe4295f29bae8bd10e3dac8cad1f35a12f65f332dd8a9c80d6cdab74edc0238',
+    'verification': '6cb25aa7ca587c01b34e38789258c0fad604facff98ebfa0d3b6f29c77fb0d22',
+    'sandbox': '0b22af6bbd2cb7d9a897309c803d35ebfd3b5fd6376d175d6f612f29468f7f0a',
+    'software-factories': 'd4e747969cd4d3142ab0f5d210e6555a3ccbb045dfa1b5db9bd014bde3cd7943',
+    'delivery': '73afae9379cad3c853f314b41a8bf7198f4f52eef2aac1ba3194292a5fff7dad',
+    'skill-packs': 'cf7284f53008e188846508ee4703908b7213fcad749efb7c955e70acbec78375',
 }
 
 
@@ -191,6 +193,10 @@ class RadarCategoryClarityTests(unittest.TestCase):
                              r'\b(review|pull request|workflow)\b')
         text = prose(self.doc.sections['software-factories'])
         self.assertRegex(text, r'\b(local|terminal|cli|orchestrat\w*|platform)\b[^.]*\b(agent|tool|client|work|task|platform|run\w*)\b|\b(agent|tool|client|work|task|platform|run\w*)\b[^.]*\b(local|terminal|cli|orchestrat\w*|platform)\b')
+
+    def test_delivery_covers_release_operations_and_agent_evidence(self):
+        self.assert_concepts('delivery', r'\b(release|rollout)\b', r'\b(incident|monitor)\b',
+                             r'\bmetric\w*\b', r'\bagent-produced\b')
 
     def test_skill_packs_are_reusable_agent_workflows(self):
         self.assert_concepts('skill-packs', r'\b(reusable|repeatable|reuse)\b',

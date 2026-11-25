@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The strategy for turning agreed product intent into tested software: readiness, six stages, independent assurance, autonomy and measures, run with the EDS AI Workflow (Eitri).">
+  <meta name="description" content="The strategy for turning agreed product intent into tested software: readiness, six stages, independent assurance, autonomy and measures, run with the EDS AI Workflow (Forge).">
   <title>Product implementation · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
             <a href="product-discovery.html">Project Discovery</a>
             <a href="product-implementation.html" aria-current="page">Product implementation</a>
           </div>
-          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <a href="eds-ai-workflow.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Forge)</a>
           <div class="nav-children">
             <a href="eds-po-ba-harness.html">PO/BA harness</a>
             <a href="eds-developer-harness.html">Developer harness</a>
@@ -57,7 +57,7 @@
           <p class="eyebrow">Development guide</p>
           <h1>Product implementation</h1>
           <p class="lead">Turn an agreed change into working software with evidence that it meets the intended behaviour. Use this page to plan the work, check the results and prepare for release and learning from use.</p>
-          <p>Product owners, designers, architects, engineers and reviewers can use this playbook with agreed scope, relevant constraints and supporting evidence. A bounded maintenance change may begin from its issue and existing requirements. If you manage product work, start with the six activities to see what you contribute and what evidence to ask for. Engineering and tech leads start with <a href="#agent-task-envelope">the agent task envelope</a> in executable work and the engineering and assurance column of the six activities; the <a href="#implementation-toolkit">reference toolkit</a> adds evaluation, platform and autonomy detail when needed.</p><p>Read the <a href="#implementation-loop">implementation playbook</a>, follow <a href="#implementation-case-study">the worked example</a> or consult the <a href="#implementation-toolkit">optional reference toolkit</a>. Use the <a href="eds-ai-workflow.html">EDS AI Workflow</a> for the Eitri delivery procedure.</p>
+          <p>Product owners, designers, architects, engineers and reviewers can use this playbook with agreed scope, relevant constraints and supporting evidence. A bounded maintenance change may begin from its issue and existing requirements. If you manage product work, start with the six activities to see what you contribute and what evidence to ask for. Engineering and tech leads start with <a href="#agent-task-envelope">the agent task envelope</a> in executable work and the engineering and assurance column of the six activities; the <a href="#implementation-toolkit">reference toolkit</a> adds evaluation, platform and autonomy detail when needed.</p><p>Read the <a href="#implementation-loop">implementation playbook</a>, follow <a href="#implementation-case-study">the worked example</a> or consult the <a href="#implementation-toolkit">optional reference toolkit</a>. Use the <a href="eds-ai-workflow.html">EDS AI Workflow</a> for the Forge (Formerly EITRI) delivery harness procedure.</p>
 
         
         </header>
@@ -95,7 +95,7 @@
             <a href="#implementation-engineering-detail">Engineering example detail</a><a href="#ai-evaluation">AI evaluation reference</a><a href="#factory-platform">Factory platform</a>
             <a href="#autonomy">Autonomy</a>
             <a href="#measure-loop">Measure the loop</a>
-            <a href="#eds-workflow">EDS AI Workflow (Eitri)</a>
+            <a href="#eds-workflow">EDS AI Workflow (Forge)</a>
             <a href="#sources">Sources</a>
           </nav>
         </details>
@@ -291,7 +291,7 @@
             <li>For concurrency or distributed behaviour, record seeds or schedules and rerun deterministic simulation or differential checks where a trusted reference exists; keep the cases exercised beside the result.</li>
             <li>Treat flaky tests as defects with an owner, and make test data, dependencies, models, prompts and environments reproducible.</li>
           </ul>
-<aside class="callout" id="eds-gate-summary" aria-label="Documented Eitri defaults"><h3>What the documented Eitri checks require</h3><p>These are configurable harness defaults; confirm the applicable revision and repository configuration before relying on them.</p><ol><li><strong>Readiness:</strong> human gates sign off the TRD and approve verified issues before execution.</li><li><strong>Build and tests:</strong> formatting, type checks or compilation, tests and the production build pass; coverage is at least 80%.</li><li><strong>Quality and compliance:</strong> any Critical or High finding blocks progress.</li><li><strong>Mutation testing:</strong> optional and recommended; when used, the default minimum score is 70% on changed files.</li><li><strong>Closeout and release readiness:</strong> collect the applicable review, architecture, browser and end-to-end evidence; pre-production reruns readiness gates for the Tech Lead’s release sign-off. Closeout alone does not permit rollout.</li></ol><p>Check the maintained <a href="eds-developer-harness.html#slice">sign-off points</a>, <a href="eds-developer-harness.html#verify">review and end-to-end checks</a> and pipeline and release-readiness requirements.</p></aside>
+<aside class="callout" id="eds-gate-summary" aria-label="Documented Forge defaults"><h3>What the documented Forge checks require</h3><p>These are configurable harness defaults; confirm the applicable revision and repository configuration before relying on them.</p><ol><li><strong>Readiness:</strong> human gates sign off the TRD and approve verified issues before execution.</li><li><strong>Build and tests:</strong> formatting, type checks or compilation, tests and the production build pass; coverage is at least 80%.</li><li><strong>Quality and compliance:</strong> any Critical or High finding blocks progress.</li><li><strong>Mutation testing:</strong> optional and recommended; when used, the default minimum score is 70% on changed files.</li><li><strong>Closeout and release readiness:</strong> collect the applicable review, architecture, browser and end-to-end evidence; pre-production reruns readiness gates for the Tech Lead’s release sign-off. Closeout alone does not permit rollout.</li></ol><p>Check the maintained <a href="eds-developer-harness.html#slice">sign-off points</a>, <a href="eds-developer-harness.html#verify">review and end-to-end checks</a> and pipeline and release-readiness requirements.</p></aside>
 <h3>Check AI-assisted work against the same requirements</h3>
 <p>When an agent develops software, check its actual changes and tool actions against the task and permissions. A convincing explanation is not evidence that the saved records or user journey are correct. Independent review still checks the result.</p>
 <p>When the product itself contains AI, or an agent operates it for users, test its variable responses and failure behaviour against the product rules as well. Run representative cases repeatedly — outputs vary, so a single pass proves little — and check the final state and side effects, not only the response. Calibrate any model-based grader against human judgement before relying on it, and keep regression cases for fixed failures. <a href="#ai-evaluation">The evaluation reference</a> explains repeated trials and how to combine automated checks with human assessment.</p>
@@ -432,7 +432,7 @@
             <tr><th scope="row">Dark factory</th><td>People set goals, policy and escalation limits; routine work proceeds without them</td><td>Proven autonomy, formal risk classification, independent automated assurance, strict tool control, containment, auditability</td><td>Highly standardised, unambiguous work with stable architecture, strong tests, small blast radius and proven recovery</td></tr>
           </tbody></table></div>
           <p>Choose autonomy that serves the task and fits the available evidence and controls. More autonomy is not itself an improvement. Weigh safety and regulatory impact, data sensitivity, reversibility, blast radius, product ambiguity, architecture stability, test strength, monitoring, recovery time, model reliability and risk tolerance.</p>
-          <p>These modes describe possible operating arrangements, not Eitri availability or permission to bypass its human gates. Use the <a href="eds-ai-workflow.html">EDS AI Workflow</a> for its current route and controls.</p>
+          <p>These modes describe possible operating arrangements, not Forge availability or permission to bypass its human gates. Use the <a href="eds-ai-workflow.html">EDS AI Workflow</a> for its current route and controls.</p>
           <p>Grant autonomy per kind of action. An agent might update a low-risk dependency within a tested range, while a material schema, schedule or access-rule change still needs explicit approval. Record the delegated actions, criteria, permission limits and escalation owner before enabling automation. Agree how control failures or worsening quality suspend that delegation, and test the handback route.</p>
           <h3>Test sustained operability before expanding autonomous authority</h3>
           <p>Sustained operability means being able to keep the service running, change it and recover it over time. Before expanding autonomous release authority, run a bounded pilot that tests more than successful code generation. The team should be able to diagnose a realistic fault, make a follow-up change, restore service within agreed limits and explain the change using retained evidence. This is a recommended evidence check, not a new approval gate.</p>
@@ -487,7 +487,7 @@
 
         <section id="eds-workflow">
           <h2>Continue with the EDS AI Workflow</h2>
-          <p>For the steps, roles, skills and checks used by EDS teams, <a href="eds-ai-workflow.html">read the EDS AI Workflow (Eitri) guide</a>.</p>
+          <p>For the steps, roles, skills and checks used by EDS teams, <a href="eds-ai-workflow.html">read the EDS AI Workflow (Forge) guide</a>.</p>
         
 </section>
 
@@ -530,7 +530,7 @@
         <a href="#implementation-engineering-detail">Engineering example detail</a><a href="#ai-evaluation">AI evaluation reference</a><a href="#factory-platform">Factory platform</a>
         <a href="#autonomy">Autonomy</a>
         <a href="#measure-loop">Measure the loop</a>
-        <a href="#eds-workflow">EDS AI Workflow (Eitri)</a>
+        <a href="#eds-workflow">EDS AI Workflow (Forge)</a>
         <a href="#sources">Sources</a>
       </nav>
     </aside>

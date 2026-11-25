@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How Eitri, the EDS developer harness, takes a user story through six stages: Clarify, Specify, Slice, Implement, Verify and Retrospect, with two human sign-offs.">
+  <meta name="description" content="How Forge, the EDS developer harness, takes a user story through six stages: Clarify, Specify, Slice, Implement, Verify and Retrospect, with two human sign-offs.">
   <title>Developer harness · AI-SDLC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
             <a href="product-discovery.html">Project Discovery</a>
             <a href="product-implementation.html">Product implementation</a>
           </div>
-          <a href="eds-ai-workflow.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Eitri)</a>
+          <a href="eds-ai-workflow.html" class="nav-parent-active"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4h5v4H3V4Zm9 8h5v4h-5v-4ZM8 6h6v6M6 8v6h6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>EDS AI Workflow (Forge)</a>
           <div class="nav-children">
             <a href="eds-po-ba-harness.html">PO/BA harness</a>
             <a href="eds-developer-harness.html" aria-current="page">Developer harness</a>
@@ -52,10 +52,10 @@
       <article class="concept-article label-first-column">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Introduction</a><span aria-hidden="true">/</span><a href="ai-pdlc.html">AI-SDLC</a><span aria-hidden="true">/</span><a href="product-implementation.html">Product implementation</a><span aria-hidden="true">/</span><a href="eds-ai-workflow.html">EDS AI Workflow</a><span aria-hidden="true">/</span><span aria-current="page">Developer harness</span></nav>
         <header class="article-header">
-          <p class="eyebrow">EDS AI Workflow (Eitri Agentic Dev Workflow)</p>
-          <h1>Developer harness (Eitri)</h1>
-          <p class="lead">Eitri is the EDS developer harness for building features with AI coding agents. It takes a user story from the handed-off product requirements document (PRD) through <a href="#source-harness">six stages</a>: Clarify, Specify, Slice, Implement, Verify and Retrospect. A person signs off the specification and the tickets before any code is written.</p>
-          <p>Eitri builds on <a href="#source-matt">Matt Pocock’s engineering skills</a> for planning and implementation, and adds its own skills for coding, review and verification. The six stages are a recommended starting point, not a fixed process; teams can adapt them to their project.</p>
+          <p class="eyebrow">EDS AI Workflow — Forge (Formerly EITRI)</p>
+          <h1>Developer harness</h1>
+          <p class="lead">Forge is the EDS developer harness for building features with AI coding agents. It takes a user story from the handed-off product requirements document (PRD) through <a href="#source-harness">six stages</a>: Clarify, Specify, Slice, Implement, Verify and Retrospect. A person signs off the specification and the tickets before any code is written.</p>
+          <p>Forge builds on <a href="#source-matt">Matt Pocock’s engineering skills</a> for planning and implementation, and adds its own skills for coding, review and verification. The six stages are a recommended starting point, not a fixed process; teams can adapt them to their project.</p>
         </header>
         <figure class="page-map page-map--route" aria-label="Page summary">
           <p class="page-map-title">On this page · 6 stages in one cycle</p>
@@ -99,22 +99,22 @@
         </svg>
 <section id="install">
           <h2>Set up the harness once</h2>
-          <p>Each repository is set up once, before delivery work starts. The developer installs Matt Pocock’s engineering skills and the Eitri skills, including the IM8 review skill, which ships separately.</p>
+          <p>Each repository is set up once, before delivery work starts. The developer installs Matt Pocock’s engineering skills and the Forge skills, including the IM8 review skill, which ships separately.</p>
           <ul>
             <li><strong>Configure the repository.</strong> Matt Pocock’s <code>/setup-matt-pocock-skills</code> records where issues live, the triage labels and where domain documents go. The Clarify, Specify and Implement skills depend on this configuration.</li>
             <li><strong>Optionally, seed the coding standards file.</strong> A <code>CODING_STANDARDS.md</code> file that points to the <code>/code-minimum</code> rules lets the code review check those rules from the first feature. Later, <code>/retro</code> adds rules to the file.</li>
             <li><strong>Keep shared standards to hand.</strong> The AppStandards library of application best-practice documents, on topics such as logging and access control, remains available as guidance. It is not part of the definition of done.</li>
           </ul>
-          <p>The developer runs Eitri locally and works with the agent interactively, reviewing and directing its work as it goes.</p>
+          <p>The developer runs Forge locally and works with the agent interactively, reviewing and directing its work as it goes.</p>
         </section>
 
         <section id="stages">
           <h2 id="steps">See the six stages</h2>
           <figure class="concept-figure">
-            <figcaption>Figure 1. The six stages of Eitri. Highlighted shapes are human sign-offs; dashed arrows show rework and the start of the next cycle.</figcaption>
+            <figcaption>Figure 1. The six stages of Forge. Highlighted shapes are human sign-offs; dashed arrows show rework and the start of the next cycle.</figcaption>
             <div class="figure-scroll" tabindex="0" role="region" aria-label="Figure 1, scrolls sideways on narrow screens">
               <svg viewBox="0 0 680 290" role="img" aria-labelledby="fig-stages-title">
-                <title id="fig-stages-title">The six stages of Eitri as a cycle. Clarify resolves open questions. Specify writes the specification. Human sign-off 1 approves the specification; requested changes send it back to Specify. Slice breaks it into tickets. Human sign-off 2 approves the tickets; requested changes send them back to Slice. Implement builds the tickets test-first. Verify reviews the code and gathers end-to-end evidence. Retrospect improves the setup, and the next cycle starts again at Clarify.</title>
+                <title id="fig-stages-title">The six stages of Forge as a cycle. Clarify resolves open questions. Specify writes the specification. Human sign-off 1 approves the specification; requested changes send it back to Specify. Slice breaks it into tickets. Human sign-off 2 approves the tickets; requested changes send them back to Slice. Implement builds the tickets test-first. Verify reviews the code and gathers end-to-end evidence. Retrospect improves the setup, and the next cycle starts again at Clarify.</title>
                 <path class="d-line d-dash" d="M428 44V22H252V40" marker-end="url(#arrow)"/>
                 <text class="d-label" x="340" y="16" text-anchor="middle">changes requested: revise</text>
                 <rect class="d-node" x="4" y="44" width="148" height="64" rx="8"/><text class="d-title" x="78" y="70" text-anchor="middle">1 Clarify</text><text class="d-sub" x="78" y="94" text-anchor="middle">Resolve questions</text>
@@ -180,8 +180,8 @@
         <section id="implement">
           <h2 id="do-work">4. Implement the tickets</h2>
           <p><code>/implement-spec</code> builds the whole specification on one integration branch. Each ticket gets a fresh implementer agent that builds it test-first. The run ends with a code review against the repository’s coding standards and the specification, and a final pass fixes what the review finds.</p>
-          <p>While they write code, implementers follow the Eitri <code>/code-minimum</code> rules. These favour the least new code: avoid unneeded work, then reuse what the codebase already has, then framework features, then installed libraries, and write custom code only as a last resort.</p>
-          <p><code>/implement-spec</code> runs once for the specification; it is not a repeating loop. It replaces the earlier Eitri <code>/do-work</code> loop, which has been retired.</p>
+          <p>While they write code, implementers follow the Forge <code>/code-minimum</code> rules. These favour the least new code: avoid unneeded work, then reuse what the codebase already has, then framework features, then installed libraries, and write custom code only as a last resort.</p>
+          <p><code>/implement-spec</code> runs once for the specification; it is not a repeating loop. It replaces the earlier Forge <code>/do-work</code> loop, which has been retired.</p>
 
           <aside class="ai-help" id="ai-help-dev-build" aria-labelledby="ai-help-dev-build-title">
             <p class="ai-help-label"><span class="ai-help-mark" aria-hidden="true">AI</span>How AI can help</p>
@@ -235,7 +235,7 @@
           <p class="next-step"><strong>Next step:</strong> to see the whole route, <a href="eds-ai-workflow.html">return to the EDS AI Workflow overview</a>. To see where the PRD comes from, <a href="eds-po-ba-harness.html">read the PO/BA harness</a>.</p>
         </section>
 
-        <p class="source-ref"><a href="eds-ai-workflow.html#version-status">Eitri status and version: verify installed revisions and enforced controls</a>.</p>
+        <p class="source-ref"><a href="eds-ai-workflow.html#version-status">Forge status and version: verify installed revisions and enforced controls</a>.</p>
         <section id="sources">
           <h2>Sources</h2>
           <p class="source-check-date">References last checked: <time datetime="2026-11-25">25 November 2026</time>.</p>

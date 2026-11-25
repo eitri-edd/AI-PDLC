@@ -33,8 +33,8 @@ class TrainingReferenceRefreshTests(unittest.TestCase):
                 self.assertIn("five-phase video and interactive diagram as earlier material", entry)
                 self.assertNotIn("Its five-phase view and /dependency-orchestrator differ", entry)
                 if page == "eds-ai-workflow.html":
-                    # The overview follows the Eitri v1.0 six-stage cycle.
-                    self.assertIn("predates Eitri version 1.0", entry)
+                    # The overview treats Forge v1.0 as the continuation of Eitri v1.0.
+                    self.assertIn("predates the Forge rebrand", entry)
                     self.assertIn("six-stage cycle", entry)
                     self.assertNotIn("19-step", entry)
                 else:

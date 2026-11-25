@@ -20,7 +20,10 @@ Before drafting, identify the intended reader, what they already know and what t
 
 Start with a familiar problem and explain the mechanism before introducing specialist labels. Build from the reader’s existing knowledge, with a short example where an unfamiliar relationship needs explanation. Link to optional detail without making the reader leave the page to understand its main point.
 
-Keep general principles, operating guidance and the current Eitri implementation distinguishable. Explain whether a statement describes a concept, an agreed organisational practice or a tool-specific implementation. Give readers a clear route from understanding the concept to trying or applying it.
+Keep general principles, operating guidance and the current Forge implementation distinguishable. Explain whether a statement describes a concept, an agreed organisational practice or a tool-specific implementation. Give readers a clear route from understanding the concept to trying or applying it.
+
+
+Use **Forge** for the current EDS implementation harness. At first mention in reader-facing material, write **Forge (Formerly EITRI)** during the transition; afterwards use **Forge**. Use **FORGE** only when expanding the acronym: Framework for Orchestrated, Reliable and Governed Engineering. Keep archived historical documents in their original wording and label them as historical when citing them.
 
 ## Voice and tone
 
@@ -61,7 +64,7 @@ Keep a qualification when it changes what readers can infer, decide or do. Remov
 - Attribute sources positively: identify the practice being used and any material adaptation. Replace repeated statements about what a source does not prescribe with a concise description of what this guide adds or changes.
 - Keep research limitations beside the claims they qualify. Preserve operational boundaries, approval authority, availability labels, source credits and licence notices where readers need them.
 - Label a worked example as fictional and explain its illustrative data once. Keep a short fictional label on independently linked examples and diagrams that could be read or shared without that introduction; avoid repeating the full explanation.
-- Put publication metadata and adaptation history in source notes. Maintain shared Eitri version-check guidance in one reference, with compact links from other pages. Keep specific Available/Planned states and consequential control limits beside the affected steps.
+- Put publication metadata and adaptation history in source notes. Maintain shared Forge version-check guidance in one reference, with compact links from other pages. Keep specific Available/Planned states and consequential control limits beside the affected steps.
 
 Judge repetition by the reader’s likely entry point. A shared explanation can replace generic boilerplate, but it cannot replace a warning needed to interpret a result or perform the current action.
 
@@ -275,7 +278,7 @@ Place exactly one paragraph immediately after the Sources heading, before the li
 
 Keep precise citations next to material claims. **Do not separate a consequential caveat from its claim:** research population, sample size, limitations, applicability and uncertainty affecting the reader's decision stay beside the relevant statement. Licensed-image or required quotation credits stay with the asset when the licence requires it, with fuller details in the canonical entry.
 
-An operational link is not automatically attribution. Keep video access, training entry points, installation links, Eitri version warnings, approval requirements and actionable security cautions where readers need them. A page containing only orientation and navigation does not need an empty Sources section. Do not manufacture references to fill a template.
+An operational link is not automatically attribution. Keep video access, training entry points, installation links, Forge version warnings, approval requirements and actionable security cautions where readers need them. A page containing only orientation and navigation does not need an empty Sources section. Do not manufacture references to fill a template.
 
 Preserve source names, original URLs, stable HTML IDs, factual claims, licence obligations and material qualifications when consolidating entries. Keep mobile and desktop contents labels as `Sources`. Do not let an old source anchor disappear or lead into a collapsed, unrelated reference panel.
 

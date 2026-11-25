@@ -18,7 +18,7 @@ All published pages live in `site/dist/` and are organised into two main navigat
 
 | File | Nav Title | Archetype | Primary Purpose & Scope |
 | :--- | :--- | :--- | :--- |
-| [`index.html`](./site/dist/index.html) | **Introduction** | Overview / Orientation | Explains why AI changes software delivery, the shifting bottleneck (from typing code to intent, verification, and context), the three handbook layers (*Principles*, *Operating requirements*, *Eitri implementation*), and the 6 key pointers. |
+| [`index.html`](./site/dist/index.html) | **Introduction** | Overview / Orientation | Explains why AI changes software delivery, the shifting bottleneck (from typing code to intent, verification, and context), the three handbook layers (*Principles*, *Operating requirements*, *Forge implementation*), and the 6 key pointers. |
 | [`transformation.html`](./site/dist/transformation.html) | **Organisation transformation** | Concept + Operating Guide | Guides enterprise IT leaders through specialist teams, shared lifecycle learning, workforce preparation, assurance, accountability and governed agents. A fictional Enterprise Systems Department delivering enterprise systems for medical and logistics divisions measures full service costs, IT delivery responsiveness to business divisions and verified staff reassignment. Worked examples connect T-shaped context ownership, delegated routine agent reviews, informed adoption of fallible agents and enforced human gates. Specialist detail sits in an optional reference. |
 | [`concept.html`](./site/dist/concept.html) | **Concepts** | Concept Reference | Defines 8 foundational concepts with animated diagrams: *Intent-driven development*, *Spec-driven development*, *Context engineering*, *Harness engineering*, *Loop engineering*, *Graph engineering* (multi-agent execution with automated decision gates), *Software factories*, and *AI models*. |
 | [`ai-pdlc.html`](./site/dist/ai-pdlc.html) | **AI-SDLC overview** | Lifecycle Overview | Introduces the two connected loops—**Project Discovery** and **Product implementation**—joined across the middle by the *Handoff* (PRD, UI artefacts, validation and technical evidence) and shared *Context input*, with inner rework loops and production feedback. |
@@ -29,9 +29,9 @@ All published pages live in `site/dist/` and are organised into two main navigat
 
 | File | Nav Title | Archetype | Primary Purpose & Scope |
 | :--- | :--- | :--- | :--- |
-| [`eds-ai-workflow.html`](./site/dist/eds-ai-workflow.html) | **EDS AI Workflow (Eitri)** | Implementation Overview | Maps the AI-SDLC operating model onto Eitri v1.0: the six-stage cycle from PRD handoff to a verified change, the installed-version check, artefact ownership, working principles, harness diagnosis and workflow-health measures. |
+| [`eds-ai-workflow.html`](./site/dist/eds-ai-workflow.html) | **EDS AI Workflow (Forge)** | Implementation Overview | Maps the AI-SDLC operating model onto Forge v1.0 (formerly Eitri v1.0): the six-stage cycle from PRD handoff to a verified change, the installed-version check, artefact ownership, working principles, harness diagnosis and workflow-health measures. |
 | [`eds-po-ba-harness.html`](./site/dist/eds-po-ba-harness.html) | **PO/BA harness** | Procedure / Harness Guide | Explains the 3 paths to produce a structured PRD before engineering begins: *Path 1 (SpecKit)*, *Path 2 (Socratic workflow)*, and *Path 3 (CLARA research)*. |
-| [`eds-developer-harness.html`](./site/dist/eds-developer-harness.html) | **Developer harness** | Procedure / Stage Reference | Walks through the Eitri v1.0 six-stage cycle: **Clarify**, **Specify**, **Slice**, **Implement**, **Verify** and **Retrospect**, with human sign-offs after Specify and after Slice. Legacy anchors (`#plan`, `#check`, `#do-work`, `#closeout`) still resolve to the matching stages. |
+| [`eds-developer-harness.html`](./site/dist/eds-developer-harness.html) | **Developer harness** | Procedure / Stage Reference | Walks through the Forge v1.0 six-stage cycle: **Clarify**, **Specify**, **Slice**, **Implement**, **Verify** and **Retrospect**, with human sign-offs after Specify and after Slice. Legacy anchors (`#plan`, `#check`, `#do-work`, `#closeout`) still resolve to the matching stages. |
 
 ### 1.3 Companion Page (`site/dist/`)
 
@@ -45,7 +45,7 @@ The sidebar **Training** entry on every page links to [`training-maintenance.htm
 
 ### 1.4 Archived Pages (`site/archive/`)
 
-These pages were moved out of the published site on 24 November 2026, ahead of the EDS AI Workflow refactor. The 19-step developer harness and overview were archived the same day, when the live pages moved to the Eitri v1.0 six-stage cycle. They are kept for reference only: they are not published, linked or covered by tests, and their shared stylesheet and script links no longer resolve. Their reference-inventory records are kept under `archived_pages` in [`site/reference-checks.json`](./site/reference-checks.json).
+These pages were moved out of the published site on 24 November 2026, ahead of the EDS AI Workflow refactor. The 19-step developer harness and overview were archived the same day, when the live pages moved to the Forge v1.0 six-stage cycle. They are kept for reference only: they are not published, linked or covered by tests, and their shared stylesheet and script links no longer resolve. Their reference-inventory records are kept under `archived_pages` in [`site/reference-checks.json`](./site/reference-checks.json).
 
 | File | Former nav title |
 | :--- | :--- |
@@ -65,7 +65,7 @@ Every content update must follow the rules in [`writing.md`](./writing.md).
 Write for mixed delivery squads (Product Owners, Business Analysts, Engineers, QA, Security, Risk, and Engineering Managers). Keep the three content layers distinct:
 1. **Principles and concepts** — Why the practice matters and what problem it solves (`index.html`, `transformation.html`, `concept.html`).
 2. **Operating requirements** — What artefacts, checks, roles, and handoffs must exist (`ai-pdlc.html`, `product-discovery.html`, `product-implementation.html`).
-3. **Eitri implementation** — How EDS implements those requirements today with specific skills, commands, and pipeline gates (`eds-*.html`, `training.html`).
+3. **Forge implementation** — How EDS implements those requirements today with specific skills, commands, and pipeline gates (`eds-*.html`, `training.html`).
 
 ### 2.2 Voice, Tone, and Language Rules
 - **British English**: Use British spelling throughout (*organisation*, *artefact*, *standardise*, *behaviour*, *prioritise*, *catalogue*, *analyse*).
@@ -203,7 +203,7 @@ Classify the content first. The blue blueprint treatment explains general topics
 ## 4. Step-by-Step Workflow for Updating or Adding Content
 
 ### Step 1: Plan the Change Against the Three Layers
-1. Identify whether the change belongs to **Principles & concepts** (`index.html`, `transformation.html`, `concept.html`), **Operating requirements** (`ai-pdlc.html`, `product-discovery.html`, `product-implementation.html`), or **Eitri implementation** (`eds-*.html`, `training.html`).
+1. Identify whether the change belongs to **Principles & concepts** (`index.html`, `transformation.html`, `concept.html`), **Operating requirements** (`ai-pdlc.html`, `product-discovery.html`, `product-implementation.html`), or **Forge implementation** (`eds-*.html`, `training.html`).
 2. Check whether the update introduces a **Requirement** (`must`—requires a confirmed EDS source), a **Recommendation** (`should`), or an **Example** (must be explicitly labelled and use fictional product scenarios).
 
 ### Step 2: Author or Update the HTML Structure
