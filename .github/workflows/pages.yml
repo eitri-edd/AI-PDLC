@@ -8,7 +8,6 @@ on:
       - .github/workflows/pages.yml
       - .github/workflows/pages-checks.yml
       - .github/scripts/assemble_pages.py
-      - .github/scripts/wait_for_pages_artifact.py
   # This event runs the workflow from the default branch, not from dev.
   workflow_run:
     workflows: [Validate Pages]
@@ -68,8 +67,61 @@ jobs:
       # deploy-pages looks up the artifact through the internal Actions results
       # API. That API can lag the public artifact list, so poll the same API
       # before deploying instead of splitting the branch-tip checkout into an
-      # unlocked build job (actions/deploy-pages#451).
+      # unlocked build job (actions/deploy-pages#451). Use a JavaScript action
+      # because the runner exposes ACTIONS_RUNTIME_TOKEN only to action steps,
+      # not directly to shell steps.
       - name: Wait for the Pages artifact in the deployment API
-        run: python3 production/.github/scripts/wait_for_pages_artifact.py
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const artifactName = 'github-pages'
+            const token = process.env.ACTIONS_RUNTIME_TOKEN
+            const resultsUrl = process.env.ACTIONS_RESULTS_URL
+            if (!token || !resultsUrl) {
+              throw new Error('Actions artifact API credentials are unavailable')
+            }
+            const payload = token.split('.')[1]
+            const claims = JSON.parse(Buffer.from(payload, 'base64url').toString('utf8'))
+            const resultScope = (claims.scp || '').split(' ').find((scope) => scope.startsWith('Actions.Results:'))
+            const scopeParts = resultScope ? resultScope.split(':') : []
+            if (scopeParts.length !== 3) {
+              throw new Error('Actions runtime token has no Actions.Results scope')
+            }
+            const endpoint = new URL('/twirp/github.actions.results.api.v1.ArtifactService/ListArtifacts', new URL(resultsUrl).origin).href
+            const body = JSON.stringify({
+              workflowRunBackendId: scopeParts[1],
+              workflowJobRunBackendId: scopeParts[2],
+            })
+            for (let attempt = 1; attempt <= 12; attempt++) {
+              let detail = 'request failed'
+              let count = 0
+              try {
+                const response = await fetch(endpoint, {
+                  method: 'POST',
+                  headers: {
+                    authorization: `Bearer ${token}`,
+                    'content-type': 'application/json',
+                  },
+                  body,
+                })
+                detail = `HTTP ${response.status}`
+                if (response.ok) {
+                  const result = await response.json()
+                  count = (result.artifacts || []).filter((artifact) => artifact.name === artifactName).length
+                  detail = `${count} matching artifact(s)`
+                  if (count === 1) {
+                    console.log(`${artifactName} is visible to the deployment artifact API.`)
+                    return
+                  }
+                }
+              } catch (error) {
+                detail = error.name
+              }
+              console.log(`Artifact API attempt ${attempt}: ${detail}; retrying.`)
+              if (attempt < 12) {
+                await new Promise((resolve) => setTimeout(resolve, 5000))
+              }
+            }
+            throw new Error(`${artifactName} was not visible to the deployment artifact API after 60 seconds`)
       - id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

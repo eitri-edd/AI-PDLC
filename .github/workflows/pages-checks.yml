@@ -8,7 +8,6 @@ on:
       - .github/workflows/pages.yml
       - .github/workflows/pages-checks.yml
       - .github/scripts/assemble_pages.py
-      - .github/scripts/wait_for_pages_artifact.py
       - tests/**
   pull_request:
     branches: [main]
@@ -17,7 +16,6 @@ on:
       - .github/workflows/pages.yml
       - .github/workflows/pages-checks.yml
       - .github/scripts/assemble_pages.py
-      - .github/scripts/wait_for_pages_artifact.py
       - tests/**
 
 permissions:

@@ -158,16 +158,17 @@ class PagesWorkflowTests(unittest.TestCase):
         self.assertLess(wait, deploy)
         self.assertEqual(workflow.count("\n  deploy:\n"), 1, "Keep upload and deploy in one job")
         self.assertNotIn("\n  build:\n", workflow)
-        self.assertIn("wait_for_pages_artifact.py", workflow)
+        self.assertIn("actions/github-script@", workflow)
 
     def test_artifact_probe_uses_deploy_pages_internal_api(self):
-        probe = (SCRIPT.parent / "wait_for_pages_artifact.py").read_text()
-        self.assertIn("ACTIONS_RUNTIME_TOKEN", probe)
-        self.assertIn("ACTIONS_RESULTS_URL", probe)
-        self.assertIn("github.actions.results.api.v1.ArtifactService/ListArtifacts", probe)
-        self.assertIn("workflowRunBackendId", probe)
-        self.assertIn("workflowJobRunBackendId", probe)
-        self.assertIn('ARTIFACT_NAME = "github-pages"', probe)
+        workflow = (SCRIPT.parents[1] / "workflows/pages.yml").read_text()
+        self.assertIn("ACTIONS_RUNTIME_TOKEN", workflow)
+        self.assertIn("ACTIONS_RESULTS_URL", workflow)
+        self.assertIn("github.actions.results.api.v1.ArtifactService/ListArtifacts", workflow)
+        self.assertIn("workflowRunBackendId", workflow)
+        self.assertIn("workflowJobRunBackendId", workflow)
+        self.assertIn("const artifactName = 'github-pages'", workflow)
+        self.assertIn("JavaScript action", workflow)
 
 
 if __name__ == "__main__":
