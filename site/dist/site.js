@@ -21,8 +21,10 @@ function syncNavigationState() {
 }
 
 if (navigation) {
-  // Ensure open by default on initial load
-  navigation.open = true;
+  // Keep the desktop rail open, but start the single-column layout with the
+  // disclosure closed so article content is visible first on smaller screens.
+  const singleColumnNavigation = window.matchMedia('(max-width: 1099px)');
+  navigation.open = !singleColumnNavigation.matches;
   syncNavigationState();
   navigation.addEventListener('toggle', syncNavigationState);
   navigation.addEventListener('keydown', (event) => {

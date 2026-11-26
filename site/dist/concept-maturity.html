@@ -16,8 +16,8 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>AI Software Development Lifecycle (AI-SDLC)</span></a>
-      <span class="organisation">Enterprise Digital Services (EDS)</span>
+      <a class="identity" href="index.html" aria-label="AI Software Development Lifecycle (AI-SDLC) introduction"><svg class="identity-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4.5h6a3 3 0 0 1 3 3V21a4 4 0 0 0-4-3H4V4.5Zm16 0h-4a3 3 0 0 0-3 3V21a4 4 0 0 1 4-3h3V4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="identity-full">AI Software Development Lifecycle (AI-SDLC)</span><span class="identity-short">AI-SDLC</span></a>
+      <span class="organisation"><span class="organisation-full">Enterprise Digital Services (EDS)</span><span class="organisation-short">EDS</span></span>
     </div>
   </header>
   <div class="page-layout">
@@ -108,6 +108,7 @@
         <p><strong>Self-test.</strong> Pick the last three changes your team shipped. For each one, answer: what did a person read, and when? Every line? Every diff? Evidence of checks? Nothing until after release? The answers describe oversight for each task, not the team as a whole. Also examine the permissions, evidence and applicable approval policy before deciding what level of delegation is appropriate.</p>
         <p><strong>Fictional example.</strong> Maya’s small-business asset-management app needs a handover-form wording change. For this L2 illustration, a developer permits the agent to edit only the form and its tests, not deploy or change permissions. The developer compares the wording with the agreed text, runs relevant checks, reads the diff and retains the results. For a reporting change, the team instead first agrees what totals must be correct, restricts the agent to a test environment and independently checks representative totals. The authorised decision maker decides whether to merge and release each change; neither outcome is assumed.</p>
         <figure class="concept-figure" data-diagram="static" id="fig-ladder-overview">
+          <figcaption id="fig-ladder-title-caption">Figure 1. Maturity block overview: each column shows the blocks present at that level, from L0 author to L5 observer, while the delivery system and repository gates cap every level.</figcaption>
           <details class="figure-reading">
             <summary><span class="figure-reading-label">Text alternative</span> — Read the diagram as text</summary>
             <ol>
@@ -128,14 +129,13 @@
             </div>
             <p class="diagram-key"><strong>Key:</strong> Each column draws only the blocks present at that level; absent capabilities are not pre-drawn. Dashed boundaries are sandboxes, harnesses, factory guardrails or optional envelopes, not extra maturity rungs. Blue decision shapes are gates; accent marks the human oversight role and the L5 dark-route release. The floor changes shape at L3 (graph) and L4 (persistent factory), and the bottom strips name the delivery-system cap and repository CI/delivery gates, not extra maturity rungs.</p>
           </details>
-          <figcaption id="fig-ladder-title-caption">Figure 1. Maturity block overview: each column shows the blocks present at that level, from L0 author to L5 observer, while the delivery system and repository gates cap every level.</figcaption>
         </figure>
       </section>
       <section id="ladder">
         <h2>The ladder L0 to L5</h2>
         <p>The levels follow Dan Shapiro's five levels framing<a href="#source-1" aria-label="Source 1: Dan Shapiro, The Five Levels: from Spicy Autocomplete to the Dark Factory">[1]</a>, which already includes L0, and the role names adapt the Knight First Amendment Institute<a href="#source-4" aria-label="Source 4: Knight First Amendment Institute, Levels of Autonomy for AI Agents">[4]</a>. Addy Osmani's levels<a href="#source-2" aria-label="Source 2: Addy Osmani, Agentic Autonomy Levels">[2]</a> describe a different six-level model — Assist, Supervised action, Scoped task delegation, Goal-driven autonomy, Parallel delegation, and Managed-by-exception orchestration — and argue that a single ladder cannot capture both how far one agent goes and how well many agents are coordinated. The level descriptions and role labels are this page’s synthesis, not one-to-one claims about either source. Numbers are not comparable across frameworks. The reading patterns are illustrations, not approval, merge or release policy; apply the authority for the actual change.</p>
-        <div class="table-scroll">
-          <table>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Maturity levels summary; scroll horizontally if needed">
+          <table class="compact-table">
             <caption>Summary of the six levels: agent scope, what the person still reads, and a consideration for further delegation.</caption>
             <thead>
               <tr><th scope="col">Level</th><th scope="col">Name (role)</th><th scope="col">Agent scope</th><th scope="col">Person still reads</th><th scope="col">Further delegation</th></tr>
@@ -154,6 +154,7 @@
         <h3>L0 — Baseline: you write every line</h3>
         <p>L0 is the no-agent baseline, included so the ladder has a floor. You write the code; an autocomplete suggestion is the most delegation. For example, try delegating a bounded chore to an agent on request, if appropriate. Concepts that apply here: <a href="concept.html#context-engineering">context engineering</a> (what you paste into the prompt) and <a href="concept.html#verification-engineering">verification engineering</a> (how you check your own work).</p>
         <figure class="concept-figure" data-diagram="static" id="fig-level-0">
+          <figcaption id="fig-level-0-title-caption">Figure 2. L0 baseline — the person writes and owns every line; the agent is absent or autocomplete-only.</figcaption>
           <details class="figure-reading">
             <summary><span class="figure-reading-label">Text alternative</span> — Read the L0 diagram as text</summary>
             <ol>
@@ -165,7 +166,7 @@
           </details>
           <details class="diagram-detail" open>
             <summary>Diagram detail</summary>
-            <div class="figure-scroll">
+            <div class="figure-scroll" tabindex="0" role="region" aria-label="L0 baseline diagram; scroll horizontally if needed">
               <svg viewBox="0 0 880 300" role="img" aria-labelledby="fig-level-0-title fig-level-0-desc">
                 <defs><marker id="fig-level-0-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
                 <title id="fig-level-0-title">L0 baseline: the person writes every line</title>
@@ -198,12 +199,12 @@
             </div>
             <p class="diagram-key"><strong>Key:</strong> The accent node is what the person still does; the right column pairs that with the check behind the work; the bottom strip suggests a consideration for the next level.</p>
           </details>
-          <figcaption id="fig-level-0-title-caption">Figure 2. L0 baseline — the person writes and owns every line; the agent is absent or autocomplete-only.</figcaption>
         </figure>
         <aside aria-label="L0 possible supporting components"><p><strong>Possible supporting components</strong> — An optional <a href="tech-radar.html#models-coding-tools">coding client</a> can offer suggestions; use <a href="tech-radar.html#verification">verification</a> to check the authored change.</p></aside>
         <h3>L1 — Operator: the agent helps when asked</h3>
         <p>This page calls the L1 role <em>operator</em>: the person prompts, reviews, and remains accountable for every line. Shapiro’s L1 describes delegating discrete tasks; his L0 already includes autocomplete. The Concepts that make this level useful rather than busywork: <a href="concept.html#context-engineering">context engineering</a> and <a href="concept.html#harness-engineering">harness engineering</a> — Osmani sets the ceiling for the level by risk and reversibility<a href="#source-2" aria-label="Source 2: Addy Osmani, Agentic Autonomy Levels">[2]</a>.</p>
         <figure class="concept-figure concept-figure--example" data-diagram="static" id="fig-level-1">
+          <figcaption id="fig-level-1-title-caption"><span class="example-label">Learning example · Maya asset app</span> Figure 3. L1 operator — one agent in one harness; the person supplies context and reads every line.</figcaption>
           <details class="figure-reading">
             <summary><span class="figure-reading-label">Text alternative</span> — Read the L1 diagram as text</summary>
             <ol>
@@ -217,12 +218,12 @@
             </div>
             <p class="diagram-key"><strong>Key:</strong> Accent marks the person. The harness box bounds tools, permissions, context, run records and skill-pack version; the context feed is gated by select-and-check, and the model stays a label rather than a separate box. No sandbox is drawn because the agent is not running unsupervised work. The bottom strip is a consideration, not a required next step.</p>
           </details>
-          <figcaption id="fig-level-1-title-caption"><span class="example-label">Learning example · Maya asset app</span> Figure 3. L1 operator — one agent in one harness; the person supplies context and reads every line.</figcaption>
         </figure>
         <aside aria-label="L1 possible supporting components"><p><strong>Possible supporting components (selected)</strong> — A <a href="tech-radar.html#models-llm">model</a> and <a href="tech-radar.html#models-coding-tools">coding client</a> generate and present suggestions; a <a href="tech-radar.html#harness-frameworks">harness</a> bounds tools and carries the context gate, skill-pack version and run records. The person checks the result.</p></aside>
         <h3>L2 — Collaborator: the agent does the typing, you read the diffs</h3>
         <p>At L2 the agent edits files, runs tests and reworks within agreed limits, and the person reviews every diff before it ships. This page calls the role <em>collaborator</em>. This is where <a href="concept.html#loop-engineering">loop engineering</a> and <a href="concept.html#verification-engineering">verification engineering</a> start to carry weight: the agent's rework loop is only as good as the checks it runs. The <a href="tech-scan-agents.html">coding agents</a> page covers which tools sit here; <a href="tech-scan-harness.html">the harness</a> page covers what keeps the loop bounded.</p>
         <figure class="concept-figure concept-figure--example" data-diagram="static" id="fig-level-2">
+          <figcaption id="fig-level-2-title-caption"><span class="example-label">Learning example · Maya asset app</span> Figure 4. L2 collaborator — the loop appears inside a sandbox; the person still reads every diff.</figcaption>
           <details class="figure-reading">
             <summary><span class="figure-reading-label">Text alternative</span> — Read the L2 diagram as text</summary>
             <ol>
@@ -236,12 +237,12 @@
             </div>
             <p class="diagram-key"><strong>Key:</strong> Accent marks the person. The outer dashed boundary is the sandbox; the inner solid boundary is the harness with a select-and-check context gate and skill-pack version. The small circular path inside the harness is the loop, distinct from any outer graph. A worktree is only a separate working copy.</p>
           </details>
-          <figcaption id="fig-level-2-title-caption"><span class="example-label">Learning example · Maya asset app</span> Figure 4. L2 collaborator — the loop appears inside a sandbox; the person still reads every diff.</figcaption>
         </figure>
         <aside aria-label="L2 possible supporting components"><p><strong>Possible supporting components (selected)</strong> — A <a href="tech-radar.html#harness-frameworks">harness</a> constrains the agent and carries the context gate plus skill-pack version; a <a href="tech-radar.html#sandbox">sandbox</a> limits execution exposure; <a href="tech-radar.html#verification">verification</a> checks the change. The person reads every diff.</p></aside>
         <h3>L3 — Consultant: supervise delegated work and review evidence</h3>
         <p>At L3 this page illustrates a person supervising one or more agents and reviewing evidence; inspecting a diff may still be necessary. Parallel agents and worktrees are optional, not a level criterion. Shapiro’s L3 specifically describes reviewing many diffs<a href="#source-1" aria-label="Source 1: Dan Shapiro, The Five Levels: from Spicy Autocomplete to the Dark Factory">[1]</a>; this page uses a different boundary. Gametime describes its own repository-level assessment<a href="#source-13" aria-label="Source 13: Gametime, How Gametime Engineering Hit Level 3">[13]</a>, not a per-task classification.</p>
         <figure class="concept-figure concept-figure--example" data-diagram="static" id="fig-level-3">
+          <figcaption id="fig-level-3-title-caption"><span class="example-label">Learning example · Maya asset app</span> Figure 5. L3 consultant — the graph appears: build gate, three independent verification bots on one commit, join and route; the ADE supervises.</figcaption>
           <details class="figure-reading">
             <summary><span class="figure-reading-label">Text alternative</span> — Read the L3 diagram as text</summary>
             <ol>
@@ -255,12 +256,12 @@
             </div>
             <p class="diagram-key"><strong>Key:</strong> Accent marks decisions and the person. Dashed boundaries are sandboxes; solid inner boundaries are harnesses. The ADE strip names three supervised tasks; the gateway is optional traffic control, not a boundary by itself. The outer path is graph engineering across bots; the small edit-test-rework path inside the dev bot is loop engineering. Worktrees separate working copies only. Repository CI/delivery gates stay below supervision.</p>
           </details>
-          <figcaption id="fig-level-3-title-caption"><span class="example-label">Learning example · Maya asset app</span> Figure 5. L3 consultant — the graph appears: build gate, three independent verification bots on one commit, join and route; the ADE supervises.</figcaption>
         </figure>
         <aside aria-label="L3 possible supporting components"><p><strong>Possible supporting components (selected)</strong> — An <a href="tech-radar.html#agentic-development-environments">agentic development environment</a> coordinates supervised tasks; each bot has a <a href="tech-radar.html#sandbox">sandbox</a> and <a href="tech-radar.html#harness-frameworks">harness</a>; an optional model/tool <a href="tech-radar.html#gateways">gateway</a> routes approved traffic only and is not a security boundary by itself; <a href="tech-radar.html#verification">verification</a> supplies independent evidence. Worktrees separate working copies; they are not a security boundary.</p></aside>
         <h3>L4 — Approver: delegate a broader goal</h3>
         <p>At L4 the agent can plan and carry out a broader goal within agreed limits. A persistent agent or event trigger is optional, not a defining feature. People set goals and authorised roles make applicable approval, merge and release decisions. The <a href="tech-scan-workflows-factories.html">workflows and factories</a> and <a href="tech-scan-verification.html">verification</a> pages discuss orchestration and evidence.</p>
         <figure class="concept-figure concept-figure--example" data-diagram="static" id="fig-level-4">
+          <figcaption id="fig-level-4-title-caption"><span class="example-label">Learning example · Maya asset app</span> Figure 6. L4 approver — persistent triage bot, dev session and verification bots inside a light-route factory; authorised people decide.</figcaption>
           <details class="figure-reading">
             <summary><span class="figure-reading-label">Text alternative</span> — Read the L4 diagram as text</summary>
             <ol>
@@ -274,12 +275,12 @@
             </div>
             <p class="diagram-key"><strong>Key:</strong> Accent marks the person and decisions. Dashed outer boundaries are sandboxes; solid inner boundaries are harnesses. The triage bot is a coordinator, not a coder; its memory write gate quarantines or denies untrusted notes and logs the decision. Verification bots supply evidence, human approval remains separate, and the guardrails strip names protected models, tools, data and merge/deploy that the authoring bot cannot edit. An optional gateway controls approved model/tool traffic only and is not a security boundary by itself. Context enters per bot as a selected, checked slice.</p>
           </details>
-          <figcaption id="fig-level-4-title-caption"><span class="example-label">Learning example · Maya asset app</span> Figure 6. L4 approver — persistent triage bot, dev session and verification bots inside a light-route factory; authorised people decide.</figcaption>
         </figure>
         <aside aria-label="L4 possible supporting components"><p><strong>Possible supporting components (selected)</strong> — A <a href="tech-radar.html#software-factories">software factory</a> runs the light route; an <a href="tech-radar.html#agentic-development-environments">ADE</a> shows status; <a href="tech-radar.html#persistent-agents">persistent agents</a> supply role bots with guarded memory writes; <a href="tech-radar.html#context-memory">context and memory</a> enter as selected, checked slices; an optional <a href="tech-radar.html#gateways">gateway</a> routes approved model/tool traffic only; guardrails protect approved models, tools, data and merge/deploy; <a href="tech-radar.html#verification">verification</a> supplies evidence. Authorised people retain applicable approval decisions.</p></aside>
         <h3>L5 — Observer: outcomes by exception</h3>
         <p>At L5 an authorised automation route can carry a change to release without a person reading it first; the person watches outcomes and intervenes by exception. This page calls the role <em>observer</em>. Shapiro's March 2026 dark factories post describes StrongDM's Attractor — a feedback-loop factory explained by StrongDM's CTO Justin Massa — alongside Trycycle, Shapiro's own minimal skill<a href="#source-9" aria-label="Source 9: Dan Shapiro, Dark Factories: Rise of the Trycycle">[9]</a>; the StrongDM account is a vendor self-description, not an independently verified benchmark. The Oversight Ladder<a href="#source-10" aria-label="Source 10: dominik_ddd, The Oversight Ladder: The Five Levels of AI Coding Autonomy">[10]</a> is explicit that this level suits "exploration and throwaway work, not production a business depends on". Concepts behind it: <a href="concept.html#software-factory">the software factory</a> with light and dark routes, guardrails, and model selection.</p>
         <figure class="concept-figure concept-figure--example" data-diagram="static" id="fig-level-5">
+          <figcaption id="fig-level-5-title-caption"><span class="example-label">Learning example · Maya asset app</span> Figure 7. L5 observer — the same factory floor takes an authorised dark route for a low-risk change; monitoring, stop and rollback surround it.</figcaption>
           <details class="figure-reading">
             <summary><span class="figure-reading-label">Text alternative</span> — Read the L5 diagram as text</summary>
             <ol>
@@ -293,15 +294,14 @@
             </div>
             <p class="diagram-key"><strong>Key:</strong> Accent marks people and decisions. The factory floor reuses the L4 roles; no extra bots are added. Guardrails name protected models, tools, data and merge/deploy that the authoring bot cannot edit. The dark route applies only to an authorised change type; monitoring returns routing feedback to queue/triage, the run contract carries a budget/cost meter, and an optional gateway controls approved model/tool traffic only, recovery states limits plus step-down, and L5 is a direction, not a target.</p>
           </details>
-          <figcaption id="fig-level-5-title-caption"><span class="example-label">Learning example · Maya asset app</span> Figure 7. L5 observer — the same factory floor takes an authorised dark route for a low-risk change; monitoring, stop and rollback surround it.</figcaption>
         </figure>
         <aside aria-label="L5 possible supporting components"><p><strong>Possible supporting components (selected)</strong> — The same <a href="tech-radar.html#software-factories">software factory</a> floor takes an authorised dark route for one change type; guardrails, an optional <a href="tech-radar.html#gateways">gateway</a>, monitoring, stop and tested recovery surround it; <a href="tech-radar.html#verification">verification</a> supplies independent evidence; feedback returns routing signals to queue/triage and the run contract carries a budget/cost meter.</p></aside>
       </section>
       <section id="verification-gate">
         <h2>Verification is the gate</h2>
         <p>This page recommends stronger evidence as delegation increases; it does not prescribe a universal gate or attribute fixed thresholds to the <a href="concept.html#verification-engineering">verification concept</a>. A credible independent oracle is an expected result or assessment grounded outside the agent’s own output. Protect the checks, inputs and retained evidence from the authoring agent; protecting a weak check alone does not make it credible. Choose tests, independent review and recovery for the task’s risks. The <a href="tech-scan-verification.html">verification scan</a> discusses methods. These checks have limits and do not guarantee safety.</p>
-        <div class="table-scroll">
-          <table>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Illustrative verification checks by maturity level; scroll horizontally if needed">
+          <table class="compact-table">
             <caption>Illustrative checks to consider at each level, adjusted to the task’s risk.</caption>
             <thead>
               <tr><th scope="col">Climb to</th><th scope="col">Possible checks</th><th scope="col">Why</th></tr>
