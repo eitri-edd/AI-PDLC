@@ -1,12 +1,12 @@
 {
   "checked_on": "2026-11-25",
-  "scope": "Daily maintenance verification on 2026-11-25 plus the targeted issue #166 Tech Radar expansion found 618 distinct external URLs; 607 were retrieved or partially recovered and 3 require follow-up or reader recovery.",
+  "scope": "Daily maintenance verification on 2026-11-25 plus the targeted issue #166 and #175 Tech Radar expansions found 636 distinct external URLs; 625 were retrieved or partially recovered and 3 require follow-up or reader recovery.",
   "reviewed_base": "da653fb700c43d72e6b0692cfaa4c733ac07b794",
   "original_unique_urls": 100,
-  "current_unique_urls": 618,
-  "current_unique_hrefs": 624,
+  "current_unique_urls": 636,
+  "current_unique_hrefs": 642,
   "counts": {
-    "retrieved": 598,
+    "retrieved": 616,
     "retrieved_pdf_text": 3,
     "dynamic_page_no_text": 5,
     "expected_preconnect_root_response": 2,
@@ -104,11 +104,11 @@
       "maintenance_record": "reference-review-2026-11-12.md"
     },
     "tech-radar.html": {
-      "checked_on": "2026-11-25",
-      "scope": "Targeted issue #166 supplement: 52 new vendor, project and advisory sources checked live for the Tech Radar expansion; all other radar sources retain their existing 25 November 2026 pass.",
+      "checked_on": "2026-11-26",
+      "scope": "Targeted issue #175 supplement: 18 new vendor, project, advisory and vulnerability sources checked live for the Tech Radar update; all other radar sources retain their existing 25 November 2026 pass.",
       "status": "completed with explicit limitations",
-      "source_entries": 52,
-      "unique_fetch_destinations": 52
+      "source_entries": 18,
+      "unique_fetch_destinations": 18
     },
     "tech-scan.html": {
       "checked_on": "2026-11-25",
@@ -22849,6 +22849,672 @@
           "sha256": "4866826a6ee3d00205b10882a48c6ac9c015a9edb6a66c82e786465b1ee64de3",
           "format": "direct HTTP response",
           "source_url": "https://kiro.dev/blog/agentic-engineering-in-the-cloud/"
+        }
+      ]
+    },
+    {
+      "url": "https://z.ai/blog/glm-5.4",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://z.ai/blog/glm-5.4"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET plus supporting machine-readable or bundled content",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "GLM-5.4 availability, API state and unreleased weights.",
+          "evidence_summary": "Z.ai GLM-5.4 page returned 200; its metadata names the Loop Transformer article, and the linked JavaScript bundle states that the API is coming soon and weights are planned only after safety hardening. HTTP status 200; page title: 'Toward Generalized Coding with Our First Loop Transformer'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-215"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://z.ai/blog/glm-5.4",
+      "evidence_digests": [
+        {
+          "sha256": "98510b658aded206e024630a7b64bf01c1358d64e6bf422ecc509e46a696369c",
+          "format": "direct HTTP response from linked JavaScript bundle",
+          "source_url": "https://z.ai/blog/assets/glm-5.4-BMkt6-kI.js"
+        }
+      ]
+    },
+    {
+      "url": "https://cognition.com/blog/swe-2-1",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://cognition.com/blog/swe-2-1"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "SWE-2.1 release, Kimi K3 lineage and Devin Security Cyber variant.",
+          "evidence_summary": "Cognition's SWE-2.1 announcement returned 200 and describes the model, its Kimi K3 reinforcement-learning lineage and the Cyber and Ultrafast variants. HTTP status 200; page title: 'Introducing SWE-2.1 | Cognition'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-216"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://cognition.com/blog/swe-2-1",
+      "evidence_digests": [
+        {
+          "sha256": "17accc3c30358703e51402472908daa1615bc0094be12d8045dd057b76a436ec",
+          "format": "direct HTTP response",
+          "source_url": "https://cognition.com/blog/swe-2-1"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks/"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "AgentCore managed harness Strands defaults, lifecycle hooks and configuration drift condition.",
+          "evidence_summary": "AWS Machine Learning Blog article returned 200 and describes Strands harness defaults, lifecycle hooks, built-in tools and which omitted settings receive managed upgrades. HTTP status 200; page title: 'Amazon Bedrock AgentCore harness adds Strands harness defaults, built-in tools, and lifecycle hooks | Artificial Intelligence'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-217"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks/",
+      "evidence_digests": [
+        {
+          "sha256": "0b618bf88c63992b664b486282b4454431ae057a3f4c92ee1211c4a23e7bfbfb",
+          "format": "direct HTTP response",
+          "source_url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks/"
+        }
+      ]
+    },
+    {
+      "url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://claude.com/resources/articles/introducing-claude-ship"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Claude Ship launch and its Code Review, PR Steward and Claude Approvals agents.",
+          "evidence_summary": "Anthropic Claude Ship announcement returned 200 and describes the three GitHub pull-request agents and their launch states. HTTP status 200; page title: 'Introducing Claude Ship | Claude by Anthropic'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-218"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "evidence_digests": [
+        {
+          "sha256": "714cba3d18fc2791bc91f8188f3b6874c4988a62516b5d1e3f76830ab41cfabc",
+          "format": "direct HTTP response",
+          "source_url": "https://claude.com/resources/articles/introducing-claude-ship"
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/claude-ship",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://code.claude.com/docs/en/claude-ship"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Claude Ship observe mode, approval policy, plan restrictions and auto-merge risk.",
+          "evidence_summary": "Claude Ship documentation returned 200 and documents approval policies, observe mode, billing, platform restrictions and the warning that agent approval can combine with auto-merge. HTTP status 200; page title: 'Claude Ship - Claude Code Docs'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-219"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://code.claude.com/docs/en/claude-ship",
+      "evidence_digests": [
+        {
+          "sha256": "9deedfe4ae5c0e903272a60a8fcbbdec00d31ef4a29ae82f3e426740edcfdeb8",
+          "format": "direct HTTP response",
+          "source_url": "https://code.claude.com/docs/en/claude-ship"
+        }
+      ]
+    },
+    {
+      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Skills over MCP public beta and server-updated skill behaviour.",
+          "evidence_summary": "Anthropic skills-over-MCP announcement returned 200 and states that MCP servers can ship skills which update with the server. HTTP status 200; page title: 'MCP servers can now ship skills, run tasks, and more with Claude | Claude by Anthropic'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-220"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+      "evidence_digests": [
+        {
+          "sha256": "ce37282b787c374286daa2738d530271aa0f12626a5cc4dc6de4e0412b74b6ab",
+          "format": "direct HTTP response",
+          "source_url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/NVIDIA/SkillSpector"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "SkillSpector purpose, licence, scan outputs and GitHub installation route.",
+          "evidence_summary": "NVIDIA SkillSpector repository returned 200; the repository identifies an Apache-2.0 security scanner for agent skills with static and model-based checks and GitHub installation instructions. HTTP status 200; page title: 'GitHub - NVIDIA/SkillSpector: Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them. \u00b7 GitHub'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-221"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/NVIDIA/SkillSpector",
+      "evidence_digests": [
+        {
+          "sha256": "67db915801c411a1c83b7eea3b7e98044a3724fde600667ca0fe4ebbad3d3dfb",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/NVIDIA/SkillSpector"
+        }
+      ]
+    },
+    {
+      "url": "https://osv.dev/vulnerability/MAL-2026-6561",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://osv.dev/vulnerability/MAL-2026-6561"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET plus supporting machine-readable or bundled content",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Malicious skillspector PyPI clone.",
+          "evidence_summary": "OSV vulnerability API for MAL-2026-6561 returned 200 and records the unofficial skillspector PyPI package as malicious. HTTP status 200; page title: 'OSV - Open Source Vulnerabilities'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-222"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://osv.dev/vulnerability/MAL-2026-6561",
+      "evidence_digests": [
+        {
+          "sha256": "28563edcf0a885e25a3a7efcabef2b06a3969449a24e5e6322b1eb57309eafa1",
+          "format": "direct HTTP JSON response",
+          "source_url": "https://api.osv.dev/v1/vulns/MAL-2026-6561"
+        }
+      ]
+    },
+    {
+      "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-1031/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.zerodayinitiative.com/advisories/ZDI-26-1031/"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "LiteLLM MCP stdio command-injection disclosure and mitigation.",
+          "evidence_summary": "ZDI-26-1031 returned 200 and describes LiteLLM MCP stdio command injection, the disclosure history and the vendor mitigation of leaving stdio servers disabled. HTTP status 200; page title: 'ZDI-26-1031 - TrendAI\u2122 Zero Day Initiative\u2122 (ZDI)'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-223"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.zerodayinitiative.com/advisories/ZDI-26-1031/",
+      "evidence_digests": [
+        {
+          "sha256": "f9899f0ab31b0bd2ae9e5e7cb182e4c46d054eb56dbd4979f0722011510c4648",
+          "format": "direct HTTP response",
+          "source_url": "https://www.zerodayinitiative.com/advisories/ZDI-26-1031/"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-136535",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-136535"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET plus supporting machine-readable or bundled content",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "CVE-2026-136535 identifier and affected-version record.",
+          "evidence_summary": "CVE API record CVE-2026-136535 returned 200 and records the LiteLLM MCP stdio command-injection vulnerability. HTTP status 200.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-224"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.cve.org/CVERecord?id=CVE-2026-136535",
+      "evidence_digests": [
+        {
+          "sha256": "4465e77457194506072e102181e8a1b07dcc12c7a9bd50e1c76aa04ef1052683",
+          "format": "direct HTTP JSON response",
+          "source_url": "https://cveawg.mitre.org/api/cve/CVE-2026-136535"
+        }
+      ]
+    },
+    {
+      "url": "https://cursor.com/blog/security-incident-update",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://cursor.com/blog/security-incident-update"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Cursor security incident root cause, exposed traces and remediation.",
+          "evidence_summary": "Cursor security incident update returned 200 and describes the Fireworks-held key, exposed traces, remediation and customer impact estimates. HTTP status 200; page title: 'An update on our recent security incident \u00b7 Cursor'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-225"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://cursor.com/blog/security-incident-update",
+      "evidence_digests": [
+        {
+          "sha256": "6c30b5297a144f1da7fae90f7ce217b4bb4f0f3df3dea8b71838287d8f36f117",
+          "format": "direct HTTP response",
+          "source_url": "https://cursor.com/blog/security-incident-update"
+        }
+      ]
+    },
+    {
+      "url": "https://cursor.com/blog/claude-code-extension-security-notice",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://cursor.com/blog/claude-code-extension-security-notice"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Malicious Claude Code extension versions served through Cursor marketplace cache.",
+          "evidence_summary": "Cursor extension security notice returned 200 and identifies malicious Anthropic.claude-code versions 2.1.312 and 2.1.313, the serving window and recommended checks. HTTP status 200; page title: 'Security notice \u2014 malicious version of Anthropic.claude-code (2.1.312 and 2.1.313) identified in the Cursor VS Code Extension Marketplace \u00b7 Cursor'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-226"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://cursor.com/blog/claude-code-extension-security-notice",
+      "evidence_digests": [
+        {
+          "sha256": "380df8c7d2738609250719d6d1e79123bf2e22534b4320bef974229e00149c31",
+          "format": "direct HTTP response",
+          "source_url": "https://cursor.com/blog/claude-code-extension-security-notice"
+        }
+      ]
+    },
+    {
+      "url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "OpenCode Console breach and exposed provider keys.",
+          "evidence_summary": "BleepingComputer article returned 200 and reports the OpenCode Console breach, exposed provider keys and the stated 1.4% user impact. HTTP status 200; page title: 'OpenCode hack exposes API keys amid AI distillation attacks'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-227"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/",
+      "evidence_digests": [
+        {
+          "sha256": "77c734e91bbfdd745cff5c09cada62ca6d2f3c8a9dd4a320362cb5b0d374e991",
+          "format": "direct HTTP response",
+          "source_url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/security/security-bulletins/2026-202-aws/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/security/security-bulletins/2026-202-aws/"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Kiro Web CVE-2026-136267 scope and service-side fix.",
+          "evidence_summary": "AWS security bulletin 2026-202-AWS returned 200 and describes CVE-2026-136267, the affected models and date window, and the service-side fix completed on 30 October 2026. HTTP status 200; page title: 'CVE-2026-136267 - Improper neutralization of special elements used in an OS command in Kiro Web'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-228"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/security/security-bulletins/2026-202-aws/",
+      "evidence_digests": [
+        {
+          "sha256": "7acdc445623b79fb673c1dfc84745d31902d89045dd97d48fc81476e69951671",
+          "format": "direct HTTP response",
+          "source_url": "https://aws.amazon.com/security/security-bulletins/2026-202-aws/"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pingdotgg/t3code/pull/42299",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/pingdotgg/t3code/pull/42299"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "T3 Code telemetry account-ID collection and merged fix.",
+          "evidence_summary": "T3 Code PR 42299 returned 200 and records removal of analytics code that read Claude and Codex account IDs and sent unsalted hashes. HTTP status 200; page title: 'fix(server): analytics no longer reads or sends Codex and Claude account IDs by gabrielelpidio \u00b7 Pull Request #42299 \u00b7 pingdotgg/t3code \u00b7 GitHub'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-229"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/pingdotgg/t3code/pull/42299",
+      "evidence_digests": [
+        {
+          "sha256": "8cd05efaad9d23a7d6989758a65deaf3c0fc34bc9c5008f9642c5a9cb95b53cb",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/pingdotgg/t3code/pull/42299"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pingdotgg/t3code/blob/main/docs/user/telemetry.md",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/pingdotgg/t3code/blob/main/docs/user/telemetry.md"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "T3 Code default telemetry and disabling environment variables.",
+          "evidence_summary": "T3 Code telemetry documentation returned 200 and states that telemetry is enabled by default and can be disabled with T3CODE_TELEMETRY_ENABLED=false or DO_NOT_TRACK=1. HTTP status 200; page title: 't3code/docs/user/telemetry.md at main \u00b7 pingdotgg/t3code \u00b7 GitHub'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-230"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/pingdotgg/t3code/blob/main/docs/user/telemetry.md",
+      "evidence_digests": [
+        {
+          "sha256": "cef097573afd6079fdd625b44f469305a85a94b526082042ecbbef1b34664987",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/pingdotgg/t3code/blob/main/docs/user/telemetry.md"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "T3 Code v0.1.12 release notes and unconfirmed telemetry-fix inclusion.",
+          "evidence_summary": "T3 Code v0.1.12 release page returned 200; its visible release notes do not list PR 42299. HTTP status 200; page title: 'Release T3 Code v0.1.12 \u00b7 pingdotgg/t3code \u00b7 GitHub'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-231"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12",
+      "evidence_digests": [
+        {
+          "sha256": "2bad1e93bb1a04a8995cf0c1c51c66a9a9aa8f34212808fcfbc190f0d2d06a19",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/anomalyco/opencode/blob/dev/SECURITY.md",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/anomalyco/opencode/blob/dev/SECURITY.md"
+      ],
+      "checked_on": "2026-11-26",
+      "targeted_checked_on": "2026-11-26",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "OpenCode security boundary, server authentication and lack of sandboxing.",
+          "evidence_summary": "OpenCode SECURITY.md returned 200 and states that permissions are a user-experience feature rather than security isolation and that server mode requires OPENCODE_SERVER_PASSWORD for authentication. HTTP status 200; page title: 'opencode/SECURITY.md at dev \u00b7 anomalyco/opencode \u00b7 GitHub'.",
+          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-232"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/anomalyco/opencode/blob/dev/SECURITY.md",
+      "evidence_digests": [
+        {
+          "sha256": "69ebbcc3bbd417e85c8be8726a6156875fc54da70e1ca2e562edeb14e589edb2",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/anomalyco/opencode/blob/dev/SECURITY.md"
         }
       ]
     }
