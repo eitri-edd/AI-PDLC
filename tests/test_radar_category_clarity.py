@@ -15,9 +15,9 @@ CATEGORIES = {
     'persistent-agents': ('Persistent agents', 8),
     'verification': ('Verification', 9),
     'sandbox': ('Sandbox and execution', 9),
-    'software-factories': ('Software factories', 13),
+    'software-factories': ('Software factories', 14),
     'delivery': ('Delivery', 6),
-    'skill-packs': ('AI workflow skill packs', 10),
+    'skill-packs': ('AI workflow skill packs', 12),
 }
 
 # Snapshot parsed tables separately from the changing introductory prose.
@@ -25,19 +25,19 @@ TABLE_DIGESTS = {
     'persistent-agents': '5ff202f07c47cda3ba1c43bb584b4cefd003a24c0b8836df7b90087ed0c55249',
     # Moved when Models and model access split into LLM model, coding tool,
     # provider and decision-model tables (20 November 2026).
-    'models-access': 'eaa1c6e80eb400ae773ceb758655dad3ee37032c87fb365bb1882e681db90ede',
-    'gateways': '4cab1e6ba49bc9f8ab993fd3cf21a7ba9c91fa8c539054bdee16326c83e87403',
+    'models-access': '0701af24d3be085e7a1d3f597e567b8da631645d66fbe68dd96228bc850554dd',
+    'gateways': '16c412f9875104982ec9c6f448ca23fd29208cc013da4dac2ea6e52d55ffd181',
     'context-memory': '37581ac17023158961bba8684536180a9194b66486f8fecc6b2e58119200789a',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
-    'harness-frameworks': '75ccd55e730297e4d1a50d81e4b4e1f528d258eb2e3093f88e8edea44b5d3645',
+    'harness-frameworks': 'b156afbfd4f79235017e005f06a09d5a3e0c9f0ba37df40d471875763879aa13',
     # Moved when eight ADE products were added (Orca, T3 Code, Paradev, Paseo,
     # Orchestrator, Traycer, OpenChamber, Kepler) on 25 November 2026.
-    'agentic-development-environments': '32fcf0f93cd122d7329ec5f057eca45d2faa04b270972ce0f66a1770906849a7',
+    'agentic-development-environments': 'fb9fca2fe965359c26681ce5c47019688b92bfb8942808483efbfbb5b0920105',
     'verification': '6cb25aa7ca587c01b34e38789258c0fad604facff98ebfa0d3b6f29c77fb0d22',
     'sandbox': '0b22af6bbd2cb7d9a897309c803d35ebfd3b5fd6376d175d6f612f29468f7f0a',
-    'software-factories': 'd4e747969cd4d3142ab0f5d210e6555a3ccbb045dfa1b5db9bd014bde3cd7943',
+    'software-factories': '92fd951428fd72168c7c361e39ba67d1ce693613ca6be75160a61b7c393c7968',
     'delivery': '73afae9379cad3c853f314b41a8bf7198f4f52eef2aac1ba3194292a5fff7dad',
-    'skill-packs': 'cf7284f53008e188846508ee4703908b7213fcad749efb7c955e70acbec78375',
+    'skill-packs': '88435c646e94911e7699e23e4806ee20f6d96b0b20cbfc4032269c27dafef503',
 }
 
 

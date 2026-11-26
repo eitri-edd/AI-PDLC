@@ -255,7 +255,7 @@ class SourceListingTests(unittest.TestCase):
         self.assertIn(".source-list [id] { scroll-margin-top: 5rem; }", styles)
         self.assertRegex(
             styles,
-            r"@media \(max-width: 1099px\)\s*\{[^}]*\}[^}]*\.source-list \[id\] \{ scroll-margin-top: 9rem; \}",
+            r"@media \(max-width: 1099px\)\s*\{[^}]*\}[^}]*\.source-list \[id\] \{ scroll-margin-top: 5rem; \}",
         )
 
     def test_all_page_ids_and_local_fragments_remain_unambiguous(self):

@@ -213,7 +213,13 @@ a:hover {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
   box-shadow: 0 0 0 2.5px var(--accent-2-soft);
 }
-.organisation span { color: var(--border-control); }
+.identity-short,
+.organisation-short { display: none; }
+.identity span,
+.organisation span {
+  color: inherit;
+  white-space: nowrap;
+}
 
 /* Three-column layout */
 .page-layout {
@@ -1618,6 +1624,20 @@ table:has(tbody tr:first-child td:nth-child(5):last-child) {
   white-space: nowrap;
 }
 
+/* Compact label-first tables should use the available reading width before
+   asking readers to scroll sideways. */
+.compact-table {
+  min-width: 0 !important;
+}
+.compact-table thead th {
+  white-space: normal;
+}
+.compact-table th:first-child,
+.compact-table td:first-child {
+  min-width: 4.5rem !important;
+  width: 5rem !important;
+}
+
 /* Skills catalogue tables with command slugs */
 .skills-table th:first-child,
 .skills-table td:first-child,
@@ -2167,9 +2187,32 @@ summary {
   .figure-scroll { padding: 1rem; }
   .lead { font-size: 1.125rem; line-height: 1.65; }
   section { margin-top: 2.25rem; }
-  article :is(section, h3, h4)[id] { scroll-margin-top: 9rem; }
+  article :is(section, h3, h4)[id] { scroll-margin-top: 5rem; }
   .key-pointers > li { grid-template-columns: 2rem minmax(0, 1fr); gap: 0.75rem; }
   .key-pointers > li::before { width: 1.875rem; height: 1.875rem; font-size: 0.75rem; }
+}
+
+@media (max-width: 700px) {
+  .header-inner {
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+  }
+  .identity {
+    flex: 0 0 auto;
+    font-size: 1rem;
+  }
+  .identity-full { display: none; }
+  .identity-short { display: inline; }
+}
+
+@media (max-width: 420px) {
+  .organisation {
+    flex: 0 0 auto;
+    padding-right: 0.65rem;
+    padding-left: 0.65rem;
+  }
+  .organisation-full { display: none; }
+  .organisation-short { display: inline; }
 }
 
 /* Keep diagram controls comfortable to tap, including on touch laptops. */
@@ -2505,10 +2548,10 @@ details[open] > .learning-summary { border-bottom: 1px solid var(--example-borde
 .concept-figure--example :is(.d-label, .d-label-accent) { fill: var(--example-ink); stroke: var(--example-canvas); }
 .concept-figure--example :is(.d-line, .d-line-accent) { stroke: var(--example-line); animation: none; }
 .concept-figure--example .d-flow-pulse { display: none; }
-/* The header wraps on phones; keep every in-article anchor below it. */
+/* Keep in-article anchors below the compact sticky header on phones. */
 @media (max-width: 1099px) {
-  article [id] { scroll-margin-top: 9rem; }
-  .source-list [id] { scroll-margin-top: 9rem; }
+  article [id] { scroll-margin-top: 5rem; }
+  .source-list [id] { scroll-margin-top: 5rem; }
 }
 @media (max-width: 40rem) {
   .learning-example:not(.worked-example) { padding: 1rem; }

@@ -8,6 +8,7 @@ on:
       - .github/workflows/pages.yml
       - .github/workflows/pages-checks.yml
       - .github/scripts/assemble_pages.py
+      - .github/scripts/patch_deploy_pages.py
   # This event runs the workflow from the default branch, not from dev.
   workflow_run:
     workflows: [Validate Pages]
@@ -64,6 +65,17 @@ jobs:
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: public
+      # Use the official pinned action; patch its lookup only after verifying
+      # both action metadata and the complete bundled executable.
+      - name: Check out pinned Pages deployment action
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: actions/deploy-pages
+          ref: 368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+          path: deploy-pages-action
+          persist-credentials: false
+      - name: Verify and patch artifact lookup
+        run: python3 production/.github/scripts/patch_deploy_pages.py deploy-pages-action
       # deploy-pages looks up the artifact through the internal Actions results
       # API. That API can lag the public artifact list, so poll the same API
       # before deploying instead of splitting the branch-tip checkout into an
@@ -103,6 +115,7 @@ jobs:
                     'content-type': 'application/json',
                   },
                   body,
+                  signal: AbortSignal.timeout(10000),
                 })
                 detail = `HTTP ${response.status}`
                 if (response.ok) {
@@ -122,6 +135,6 @@ jobs:
                 await new Promise((resolve) => setTimeout(resolve, 5000))
               }
             }
-            throw new Error(`${artifactName} was not visible to the deployment artifact API after 60 seconds`)
+            throw new Error(`${artifactName} was not visible to the deployment artifact API after 12 attempts (up to 175 seconds of request timeouts and backoff)`)
       - id: deployment
-        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+        uses: ./deploy-pages-action
