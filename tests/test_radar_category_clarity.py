@@ -22,10 +22,15 @@ CATEGORIES = {
 
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
-    'persistent-agents': '17ff726548dd94df6f39dc2ca8d240b72f13e66a13cb86e3e177f2f1f17a91bc',
+    # Moved when the Hermes Agent release date was corrected 23 Nov to
+    # 24 Nov 2026 (issue #179, 27 November 2026).
+    'persistent-agents': '49ac5b7d08a419da80451f05136a93582daba3ec32212b6db8c76f4a10dd3a6d',
     # Moved when Models and model access split into LLM model, coding tool,
     # provider and decision-model tables (20 November 2026).
-    'models-access': '059f02c249769171f8da9b4b16c9f2a0b2c62245f18b4b307c4d15882f3be706',
+    # Moved again when the Antigravity Carbon tier was corrected from
+    # Ultra-only to paid Pro, Ultra and Enterprise (issue #179,
+    # 27 November 2026).
+    'models-access': '4fe945f94a492892c162528f9b0b05410bca2b82d26f6b7551eb5dad08b200f0',
     'gateways': 'ae023c9871d10226b02a8b6d5b3307e9dc2d2166d0c76edfa43996699d836621',
     'context-memory': '549d8b33fd2b8553cb6436cc914908c9c0b9fa221b180f8e186c962958deb4b0',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
