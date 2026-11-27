@@ -21824,9 +21824,9 @@
       "final_url": "https://github.com/gvisor/gvisor/releases/tag/release-20261123.1",
       "evidence_digests": [
         {
-          "sha256": "ec00bd77d390be54257039e9504e2541ae75a1d7c7a814e6b79892c647f16929",
+          "sha256": "0a38ee43c96143ec55e2d9f220013c73f5c65ead43411a447f0389bbdec121fe",
           "format": "direct HTTP response",
-          "source_url": "https://github.com/gvisor/gvisor/releases/tag/release-20261116.0"
+          "source_url": "https://github.com/gvisor/gvisor/releases/tag/release-20261123.1"
         }
       ]
     },
@@ -21934,9 +21934,9 @@
       "final_url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.1",
       "evidence_digests": [
         {
-          "sha256": "8371bcb3a8d35a57d2b6263bda04223a929a0d978384b48260d173d31ec80b9f",
+          "sha256": "f4610f876a1e882d81618ee842d831ba8807c755bf40e0ffe891b27d3722f871",
           "format": "direct HTTP response",
-          "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.0"
+          "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.1"
         }
       ]
     },
@@ -21970,9 +21970,9 @@
       "final_url": "https://github.com/github/spec-kit/releases/tag/v1.4.5",
       "evidence_digests": [
         {
-          "sha256": "d09972b32e422eafe83d08b5feb38c2dd624cbc1b9b956f7cf4dc8f11a62d37f",
+          "sha256": "20893a520f91223d534089d311b0c32fb525fdda1b4c87b19c49a2cec1b4d9d9",
           "format": "direct HTTP response",
-          "source_url": "https://github.com/github/spec-kit/releases/tag/v1.4.4"
+          "source_url": "https://github.com/github/spec-kit/releases/tag/v1.4.5"
         }
       ]
     },
@@ -23486,9 +23486,9 @@
       "final_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.13",
       "evidence_digests": [
         {
-          "sha256": "2bad1e93bb1a04a8995cf0c1c51c66a9a9aa8f34212808fcfbc190f0d2d06a19",
+          "sha256": "a61180a546a284af4b87ee0ad9864ac1c106a19cb57d55f1252c0e05ddd4ab72",
           "format": "direct HTTP response",
-          "source_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12"
+          "source_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.13"
         }
       ]
     },
