@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-26",
-  "scope": "Daily maintenance verification on 2026-11-26 plus the targeted issue #166, #175 and #177 Tech Radar expansions found 655 distinct external URLs; 644 were retrieved or partially recovered and 3 require follow-up or reader recovery.",
+  "scope": "Daily maintenance verification on 2026-11-26 plus the targeted issue #166, #175 and #177 Tech Radar expansions found 670 distinct external URLs; 659 were retrieved or partially recovered and 3 require follow-up or reader recovery.",
   "reviewed_base": "d0313fefcc05de847d26738c14b38f59808783f3",
   "original_unique_urls": 100,
-  "current_unique_urls": 655,
-  "current_unique_hrefs": 661,
+  "current_unique_urls": 670,
+  "current_unique_hrefs": 676,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 635,
+    "retrieved": 650,
     "retrieved_pdf_text": 3,
     "verification_challenge": 3
   },
@@ -105,10 +105,10 @@
     },
     "tech-radar.html": {
       "checked_on": "2026-11-26",
-      "scope": "Targeted issue #175 supplement plus issue #177 supplement: 38 new or newly mapped vendor, project, advisory, incident and vulnerability sources checked for the Tech Radar updates; all other radar sources retain their existing 25 November 2026 pass. The whole-page source-check date remains 26 November 2026 rather than being advanced by the targeted issue #177 addition.",
+      "scope": "Targeted issue #175 supplement plus issue #177 supplement: 53 new or newly mapped vendor, project, advisory, incident and vulnerability sources checked for the Tech Radar updates; all other radar sources retain their existing 25 November 2026 pass. The whole-page source-check date remains 26 November 2026 rather than being advanced by the targeted issue #177 addition.",
       "status": "completed with explicit limitations",
-      "source_entries": 38,
-      "unique_fetch_destinations": 38
+      "source_entries": 53,
+      "unique_fetch_destinations": 53
     },
     "tech-scan.html": {
       "checked_on": "2026-11-26",
@@ -24232,6 +24232,561 @@
           "sha256": "4cd69c2156c1a42c4f88b43ef5100f56786061bd54fa653d3d061722a36e803f",
           "format": "direct HTTP response",
           "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/anthropic-efs-enterprise-data-controls.html"
+        }
+      ]
+    },
+    {
+      "url": "https://openai.com/index/introducing-shirudo",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://openai.com/index/introducing-shirudo"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "OpenAI and Cisco Shirudo announcement and agentic security-runtime purpose.",
+          "evidence_summary": "OpenAI returned 200 and introduces Shirudo as a joint OpenAI and Cisco project for safeguarding agentic AI systems. Page title: 'OpenAI and Cisco introduce Shirudo | OpenAI'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-253"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://openai.com/index/introducing-shirudo/",
+      "evidence_digests": [
+        {
+          "sha256": "c94a5feeb4e352ce240e47ca16f092aff7425e44b6205c99ba8571fd5a702033",
+          "format": "direct HTTP response",
+          "source_url": "https://openai.com/index/introducing-shirudo"
+        }
+      ]
+    },
+    {
+      "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Shirudo signed eBPF shields, operator approval and launch date.",
+          "evidence_summary": "Cisco returned 200 and describes Shirudo as a project in which agents investigate vulnerabilities, write small signed eBPF shields and require operator approval before enforcement. Page title: 'Cisco and OpenAI Launch Shirudo, A New Project to Safeguard Agentic AI'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-254"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html",
+      "evidence_digests": [
+        {
+          "sha256": "5219a6fc8dff78fba7e884af2f80e6a1198ea9a72c5a7aea362fe64e1aaac1fd",
+          "format": "direct HTTP response",
+          "source_url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.shirudo.dev/start/what-is-shirudo.html",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.shirudo.dev/start/what-is-shirudo.html"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Shirudo enforcement model and limits.",
+          "evidence_summary": "Shirudo documentation returned 200; it describes policy enforcement for containers, Kubernetes Pods and LLM agents and warns that Shirudo does not judge what a upatch does or replace kernel updates. Page title: 'What is shirudo \u00b7 shirudo docs'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-255"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.shirudo.dev/start/what-is-shirudo.html",
+      "evidence_digests": [
+        {
+          "sha256": "15b24d92e34bfea69f8aff07dcde4ed2d40bb7c877ba811d123f29282053068e",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.shirudo.dev/start/what-is-shirudo.html"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/shirudo-dev/shirudo",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/shirudo-dev/shirudo"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Shirudo licence, pre-release maturity and kernel/TPM requirements.",
+          "evidence_summary": "The Shirudo repository returned 200; its README states BSD-2-Clause licensing with BPF programs dual-licensed BSD/GPL, identifies the project as pre-release, and requires patched kernels with the signed-loader ABI plus TPM 2.0 for production targets. Page title: 'GitHub - shirudo-dev/shirudo: eBPF-based security platform \u00b7 GitHub'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-256"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/shirudo-dev/shirudo",
+      "evidence_digests": [
+        {
+          "sha256": "8105bb3ae3ae8b49e73ff1b3eb5394f71e01762c099ca39cbc94276a97089009",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/shirudo-dev/shirudo"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/opensource/introducing-strands-box-ai-agent-sandboxes-powered-by-dogwood/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/opensource/introducing-strands-box-ai-agent-sandboxes-powered-by-dogwood/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Strands Box developer-preview purpose, Dogwood policies and enforcement points.",
+          "evidence_summary": "AWS Open Source Blog returned 200 and introduces Strands Box as a developer-preview sandbox combining OS isolation with Dogwood policies across network egress, shell, Python and an MCP broker. Page title: 'Introducing Strands Box: AI agent sandboxes powered by Dogwood | AWS Open Source Blog'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-257"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/opensource/introducing-strands-box-ai-agent-sandboxes-powered-by-dogwood/",
+      "evidence_digests": [
+        {
+          "sha256": "7959821b9d105bb4f04ffa2381515754e48d9be2c44a28f8ce2df305ccc33d06",
+          "format": "direct HTTP response",
+          "source_url": "https://aws.amazon.com/blogs/opensource/introducing-strands-box-ai-agent-sandboxes-powered-by-dogwood/"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/strands-agents/box",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/strands-agents/box"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Strands Box licence, version, preview status and supported platforms.",
+          "evidence_summary": "The Strands Box repository returned 200; GitHub metadata records Apache-2.0, release v0.3.2 was published 25 November 2026, and the README says the preview works on Apple silicon Macs with macOS 15 or later and Linux ARM64/x86-64. Page title: 'GitHub - strands-agents/box: Run AI agents in a sandbox that restricts what they can execute, read, write, and reach on the network. Box combines OS isolation with default-deny Dogwood policies and credential injection that keeps secrets outside the agent. Written in Rust. Supports macOS on Apple silicon and Linux. \u00b7 GitHub'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-258"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/strands-agents/box",
+      "evidence_digests": [
+        {
+          "sha256": "1ad9f65078a1183f3af9336a1725a67ff0e6f7769715d18705ef26fab666158c",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/strands-agents/box"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/agentcore-elevated-privileges/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/agentcore-elevated-privileges/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "AgentCore runtime privileged-mode capability and session constraint.",
+          "evidence_summary": "AWS returned 200 and states that AgentCore runtime instances can run privileged mode for system-level software and nested containers; a session that runs a privileged agent runs only that agent. Page title: 'AgentCore runtime instances now support privileged mode - AWS'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-259"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/agentcore-elevated-privileges/",
+      "evidence_digests": [
+        {
+          "sha256": "8ff4180f50f734b5a3e5949050fa7872c30bf0d5553bd0a22dc89c5473d6cdeb",
+          "format": "direct HTTP response",
+          "source_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/agentcore-elevated-privileges/"
+        }
+      ]
+    },
+    {
+      "url": "https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Microsoft Agent 365 connected-platform preview support.",
+          "evidence_summary": "Microsoft returned 200 and says connected agents from platforms including Amazon AgentCore, Anthropic Claude Managed Agents and OpenAI can receive Microsoft Entra Agent ID, with rollout completing in December. Page title: 'What&#x27;s new in Microsoft Agent 365: Ignite 2026 | Microsoft Community Hub'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-260"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753",
+      "evidence_digests": [
+        {
+          "sha256": "61b44d1f201c2ec9c64ba5ba224510408fd35f66fe1554d4b9aab08036813f91",
+          "format": "direct HTTP response",
+          "source_url": "https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753"
+        }
+      ]
+    },
+    {
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay-ahead-/4556456",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay-ahead-/4556456"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Microsoft Entra Agent ID discovery and lifecycle governance announcements.",
+          "evidence_summary": "Microsoft returned 200 and describes Entra Agent ID previews for discovered local agent types plus lifecycle policies for agent identities. Page title: 'Microsoft Entra news announcements from Microsoft Ignite November 2026'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-261"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay-ahead-/4556456",
+      "evidence_digests": [
+        {
+          "sha256": "543ff8cb2e6e398204b4a1ecc836b63d10baed6eb590741e529053cfd26cf0cc",
+          "format": "direct HTTP response",
+          "source_url": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay-ahead-/4556456"
+        }
+      ]
+    },
+    {
+      "url": "https://www.paloaltonetworks.com/blog/ai-security/introducing-prisma-airs-ai-supply-chain-security/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.paloaltonetworks.com/blog/ai-security/introducing-prisma-airs-ai-supply-chain-security/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Prisma AIRS AI Supply Chain Security general availability and scanning capabilities.",
+          "evidence_summary": "Palo Alto Networks returned 200 and announces generally available scanning for model files and agent skills using static rules, dynamic sandbox analysis and CI/CD integration. Page title: 'Introducing Prisma AIRS AI Supply Chain Security - Palo Alto Networks Blog'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-262"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.paloaltonetworks.com/blog/ai-security/introducing-prisma-airs-ai-supply-chain-security/",
+      "evidence_digests": [
+        {
+          "sha256": "aced8bd0daf47b8fca31d516373067ae5a38deb4eefca61a5255b9db7ded2564",
+          "format": "direct HTTP response",
+          "source_url": "https://www.paloaltonetworks.com/blog/ai-security/introducing-prisma-airs-ai-supply-chain-security/"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.paloaltonetworks.com/prisma-airs/ai-supply-chain-security/ai-supply-chain-security/get-started-with-ai-model-security/create-a-deployment-profile-for-prisma-airs-ai-model-security",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.paloaltonetworks.com/prisma-airs/ai-supply-chain-security/ai-supply-chain-security/get-started-with-ai-model-security/create-a-deployment-profile-for-prisma-airs-ai-model-security"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Prisma AIRS regional availability for model and skill scanning.",
+          "evidence_summary": "Palo Alto Networks documentation returned 200 and states that model scanning is available in eight regions including Singapore, while skill scanning is only available in the US region. Page title: 'Create a Deployment Profile for Prisma AIRS AI Supply Chain Security'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-263"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.paloaltonetworks.com/prisma-airs/ai-supply-chain-security/ai-supply-chain-security/get-started-with-ai-model-security/create-a-deployment-profile-for-prisma-airs-ai-model-security",
+      "evidence_digests": [
+        {
+          "sha256": "7c976b1eec55544a74646c2b844a8c3586c0bdfce401e50f312467cd4217daab",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.paloaltonetworks.com/prisma-airs/ai-supply-chain-security/ai-supply-chain-security/get-started-with-ai-model-security/create-a-deployment-profile-for-prisma-airs-ai-model-security"
+        }
+      ]
+    },
+    {
+      "url": "https://vercel.com/blog/introducing-vercel-board",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://vercel.com/blog/introducing-vercel-board"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Vercel Board experimental launch, coordination model and integrations.",
+          "evidence_summary": "Vercel returned 200 and introduces Board as an experimental harness-agnostic message board with channels, threads, claimable tasks, watchers and two-way sync to Slack, GitHub and Linear. Page title: 'Introducing Vercel Board'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-264"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://vercel.com/blog/introducing-vercel-board",
+      "evidence_digests": [
+        {
+          "sha256": "8fc0cbe6136e2a16018838396e06fb88b7a27c8df5c688dea88b4a712dc97ff2",
+          "format": "direct HTTP response",
+          "source_url": "https://vercel.com/blog/introducing-vercel-board"
+        }
+      ]
+    },
+    {
+      "url": "https://registry.npmjs.org/@vercel%2Fboard",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://registry.npmjs.org/@vercel%2Fboard"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "@vercel/board licence, latest version and release date.",
+          "evidence_summary": "The npm registry JSON returned 200 and records @vercel/board latest version 0.56.1, Apache-2.0, published 23 November 2026.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-265"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://registry.npmjs.org/@vercel%2Fboard",
+      "evidence_digests": [
+        {
+          "sha256": "32c9a33e16ab7ce8e66f4b25d46b9429c1b675c8f32b2a6c8885cfb933132e1f",
+          "format": "direct HTTP response",
+          "source_url": "https://registry.npmjs.org/@vercel%2Fboard"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/google-gemini/gemini-cli/pull/30338",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/google-gemini/gemini-cli/pull/30338"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Gemini CLI shell-expansion approval-bypass fix.",
+          "evidence_summary": "GitHub returned 200 for Gemini CLI PR 30338, which keeps ASK_USER confirmation for shell commands with unresolved expansion because bash executes a different argument list from the classified text. Page title: 'fix(core): keep ASK_USER for shell commands with unresolved expansion by luisfelipe-alt \u00b7 Pull Request #30338 \u00b7 google-gemini/gemini-cli \u00b7 GitHub'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-266"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/google-gemini/gemini-cli/pull/30338",
+      "evidence_digests": [
+        {
+          "sha256": "31c136477513284f244c96eb31ac1080c73f335fe164c8a089f3e540fd853775",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/google-gemini/gemini-cli/pull/30338"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Gemini CLI v0.70.0 release date and inclusion of the expansion fix.",
+          "evidence_summary": "GitHub returned 200 for Gemini CLI release v0.70.0, published 19 November 2026. Page title: 'Release Release v0.70.0 \u00b7 google-gemini/gemini-cli \u00b7 GitHub'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-267"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0",
+      "evidence_digests": [
+        {
+          "sha256": "a7f9fdf0865aa17320da9a8ad533dc1c811f626fe675e41376a0094ef05a51e0",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0"
         }
       ]
     }

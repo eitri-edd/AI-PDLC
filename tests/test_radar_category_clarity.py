@@ -12,9 +12,9 @@ CATEGORIES = {
     'context-memory': ('Context and memory', 9),
     'harness-frameworks': ('Harness and agent frameworks', 15),
     'agentic-development-environments': ('Agentic development environments', 9),
-    'persistent-agents': ('Persistent agents', 8),
-    'verification': ('Verification', 10),
-    'sandbox': ('Sandbox and execution', 9),
+    'persistent-agents': ('Persistent agents', 10),
+    'verification': ('Verification', 11),
+    'sandbox': ('Sandbox and execution', 11),
     'software-factories': ('Software factories', 15),
     'delivery': ('Delivery', 6),
     'skill-packs': ('AI workflow skill packs', 12),
@@ -22,10 +22,10 @@ CATEGORIES = {
 
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
-    'persistent-agents': '5ff202f07c47cda3ba1c43bb584b4cefd003a24c0b8836df7b90087ed0c55249',
+    'persistent-agents': 'd538c5e8ce5309008f69e142c9757597e96edb3f6e4d3602dd86af41e3f1c46d',
     # Moved when Models and model access split into LLM model, coding tool,
     # provider and decision-model tables (20 November 2026).
-    'models-access': '12f63dd710d0a7a45e8ecead8c4ebb50956d1b28386ff0316c1e12eaabc38d35',
+    'models-access': '8cb20df711eec7e487a9fca5f1fd8ec8905f29ace82c124cb312341847fc5c1b',
     'gateways': '0822ac5d86672f1963395cefdfbadc87ea81a5810bbecbd2c4e928c61738d86a',
     'context-memory': '37581ac17023158961bba8684536180a9194b66486f8fecc6b2e58119200789a',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
@@ -33,8 +33,8 @@ TABLE_DIGESTS = {
     # Moved when eight ADE products were added (Orca, T3 Code, Paradev, Paseo,
     # Orchestrator, Traycer, OpenChamber, Kepler) on 25 November 2026.
     'agentic-development-environments': 'fb9fca2fe965359c26681ce5c47019688b92bfb8942808483efbfbb5b0920105',
-    'verification': '7b4cd83ee936140197984bf1990688a6a59e77dc2b5111052e0cda52cf42a631',
-    'sandbox': '0b22af6bbd2cb7d9a897309c803d35ebfd3b5fd6376d175d6f612f29468f7f0a',
+    'verification': 'beff37902fcbe0fd736e00a8126d86f56c68baa2bb6e12f71dd897e9cbd4fd08',
+    'sandbox': '9ddf97ed81c73cdcd8ebdc5eb9d64ee2b23ba42cc8a3c531a771b658f16bd37d',
     'software-factories': '8bbd7fa338c436a995cae082fb59085cd212209a8815e0fc2c92115ff0481013',
     'delivery': '73afae9379cad3c853f314b41a8bf7198f4f52eef2aac1ba3194292a5fff7dad',
     'skill-packs': '88435c646e94911e7699e23e4806ee20f6d96b0b20cbfc4032269c27dafef503',
