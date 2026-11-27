@@ -8,36 +8,36 @@ import unittest
 PAGE = Path(__file__).resolve().parents[1] / 'site/dist/tech-radar.html'
 CATEGORIES = {
     'models-access': ('Models and model access', 46),
-    'gateways': ('AI gateways and routing', 10),
+    'gateways': ('AI gateways and routing', 12),
     'context-memory': ('Context and memory', 9),
-    'harness-frameworks': ('Harness and agent frameworks', 14),
+    'harness-frameworks': ('Harness and agent frameworks', 15),
     'agentic-development-environments': ('Agentic development environments', 9),
-    'persistent-agents': ('Persistent agents', 8),
-    'verification': ('Verification', 9),
-    'sandbox': ('Sandbox and execution', 9),
-    'software-factories': ('Software factories', 14),
+    'persistent-agents': ('Persistent agents', 10),
+    'verification': ('Verification', 11),
+    'sandbox': ('Sandbox and execution', 11),
+    'software-factories': ('Software factories', 15),
     'delivery': ('Delivery', 6),
     'skill-packs': ('AI workflow skill packs', 12),
 }
 
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
-    'persistent-agents': '5ff202f07c47cda3ba1c43bb584b4cefd003a24c0b8836df7b90087ed0c55249',
+    'persistent-agents': '17ff726548dd94df6f39dc2ca8d240b72f13e66a13cb86e3e177f2f1f17a91bc',
     # Moved when Models and model access split into LLM model, coding tool,
     # provider and decision-model tables (20 November 2026).
-    'models-access': '0701af24d3be085e7a1d3f597e567b8da631645d66fbe68dd96228bc850554dd',
-    'gateways': '16c412f9875104982ec9c6f448ca23fd29208cc013da4dac2ea6e52d55ffd181',
-    'context-memory': '37581ac17023158961bba8684536180a9194b66486f8fecc6b2e58119200789a',
+    'models-access': '059f02c249769171f8da9b4b16c9f2a0b2c62245f18b4b307c4d15882f3be706',
+    'gateways': 'ae023c9871d10226b02a8b6d5b3307e9dc2d2166d0c76edfa43996699d836621',
+    'context-memory': '549d8b33fd2b8553cb6436cc914908c9c0b9fa221b180f8e186c962958deb4b0',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
-    'harness-frameworks': 'b156afbfd4f79235017e005f06a09d5a3e0c9f0ba37df40d471875763879aa13',
+    'harness-frameworks': '6e2b92014e6ff20e383e9e0a6a620506097ed933347267e7fe3c01de8e58f578',
     # Moved when eight ADE products were added (Orca, T3 Code, Paradev, Paseo,
     # Orchestrator, Traycer, OpenChamber, Kepler) on 25 November 2026.
-    'agentic-development-environments': 'fb9fca2fe965359c26681ce5c47019688b92bfb8942808483efbfbb5b0920105',
-    'verification': '6cb25aa7ca587c01b34e38789258c0fad604facff98ebfa0d3b6f29c77fb0d22',
-    'sandbox': '0b22af6bbd2cb7d9a897309c803d35ebfd3b5fd6376d175d6f612f29468f7f0a',
-    'software-factories': '92fd951428fd72168c7c361e39ba67d1ce693613ca6be75160a61b7c393c7968',
+    'agentic-development-environments': '079037811d1d445cf16168c5a85e2b37c555948e5152b6d1f1c514d831fa29d4',
+    'verification': 'bbb5a3775c7e29c1a3d6f8a3c8fd4e5a7967d6ebfb9d2b401a782b756cdf7fa7',
+    'sandbox': '13f6de24c96f576a698b8ab4e7f67b242ef63d69a205d6b1531552eac45d915b',
+    'software-factories': '551c87eb1a65bd5cbe1533fd33f89c73449d604e98c021a389f7bffeb3968bc7',
     'delivery': '73afae9379cad3c853f314b41a8bf7198f4f52eef2aac1ba3194292a5fff7dad',
-    'skill-packs': '88435c646e94911e7699e23e4806ee20f6d96b0b20cbfc4032269c27dafef503',
+    'skill-packs': 'b5883de49331083c50512aa33e9ddd2993033ac15c6b22f00b1cd3781da9f37c',
 }
 
 
