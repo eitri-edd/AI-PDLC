@@ -8,14 +8,14 @@ import unittest
 PAGE = Path(__file__).resolve().parents[1] / 'site/dist/tech-radar.html'
 CATEGORIES = {
     'models-access': ('Models and model access', 46),
-    'gateways': ('AI gateways and routing', 10),
+    'gateways': ('AI gateways and routing', 12),
     'context-memory': ('Context and memory', 9),
-    'harness-frameworks': ('Harness and agent frameworks', 14),
+    'harness-frameworks': ('Harness and agent frameworks', 15),
     'agentic-development-environments': ('Agentic development environments', 9),
     'persistent-agents': ('Persistent agents', 8),
-    'verification': ('Verification', 9),
+    'verification': ('Verification', 10),
     'sandbox': ('Sandbox and execution', 9),
-    'software-factories': ('Software factories', 14),
+    'software-factories': ('Software factories', 15),
     'delivery': ('Delivery', 6),
     'skill-packs': ('AI workflow skill packs', 12),
 }
@@ -25,17 +25,17 @@ TABLE_DIGESTS = {
     'persistent-agents': '5ff202f07c47cda3ba1c43bb584b4cefd003a24c0b8836df7b90087ed0c55249',
     # Moved when Models and model access split into LLM model, coding tool,
     # provider and decision-model tables (20 November 2026).
-    'models-access': '0701af24d3be085e7a1d3f597e567b8da631645d66fbe68dd96228bc850554dd',
-    'gateways': '16c412f9875104982ec9c6f448ca23fd29208cc013da4dac2ea6e52d55ffd181',
+    'models-access': '12f63dd710d0a7a45e8ecead8c4ebb50956d1b28386ff0316c1e12eaabc38d35',
+    'gateways': '0822ac5d86672f1963395cefdfbadc87ea81a5810bbecbd2c4e928c61738d86a',
     'context-memory': '37581ac17023158961bba8684536180a9194b66486f8fecc6b2e58119200789a',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
-    'harness-frameworks': 'b156afbfd4f79235017e005f06a09d5a3e0c9f0ba37df40d471875763879aa13',
+    'harness-frameworks': 'b1eb77ba5c6eb49df8e6d5ab870ccbaea6e08b9e719e95afd7ed2195365ee702',
     # Moved when eight ADE products were added (Orca, T3 Code, Paradev, Paseo,
     # Orchestrator, Traycer, OpenChamber, Kepler) on 25 November 2026.
     'agentic-development-environments': 'fb9fca2fe965359c26681ce5c47019688b92bfb8942808483efbfbb5b0920105',
-    'verification': '6cb25aa7ca587c01b34e38789258c0fad604facff98ebfa0d3b6f29c77fb0d22',
+    'verification': '7b4cd83ee936140197984bf1990688a6a59e77dc2b5111052e0cda52cf42a631',
     'sandbox': '0b22af6bbd2cb7d9a897309c803d35ebfd3b5fd6376d175d6f612f29468f7f0a',
-    'software-factories': '92fd951428fd72168c7c361e39ba67d1ce693613ca6be75160a61b7c393c7968',
+    'software-factories': '8bbd7fa338c436a995cae082fb59085cd212209a8815e0fc2c92115ff0481013',
     'delivery': '73afae9379cad3c853f314b41a8bf7198f4f52eef2aac1ba3194292a5fff7dad',
     'skill-packs': '88435c646e94911e7699e23e4806ee20f6d96b0b20cbfc4032269c27dafef503',
 }

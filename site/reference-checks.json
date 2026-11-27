@@ -1,17 +1,17 @@
 {
   "checked_on": "2026-11-26",
-  "scope": "Daily maintenance verification on 2026-11-26 plus the targeted issue #166 and #175 Tech Radar expansions found 636 distinct external URLs; 625 were retrieved or partially recovered and 3 require follow-up or reader recovery.",
+  "scope": "Daily maintenance verification on 2026-11-26 plus the targeted issue #166, #175 and #177 Tech Radar expansions found 655 distinct external URLs; 644 were retrieved or partially recovered and 3 require follow-up or reader recovery.",
   "reviewed_base": "d0313fefcc05de847d26738c14b38f59808783f3",
   "original_unique_urls": 100,
-  "current_unique_urls": 636,
-  "current_unique_hrefs": 642,
+  "current_unique_urls": 655,
+  "current_unique_hrefs": 661,
   "counts": {
-    "retrieved": 616,
-    "retrieved_pdf_text": 3,
     "dynamic_page_no_text": 5,
+    "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "expected_login_redirect": 1,
+    "retrieved": 635,
+    "retrieved_pdf_text": 3,
     "verification_challenge": 3
   },
   "page_passes": {
@@ -105,10 +105,10 @@
     },
     "tech-radar.html": {
       "checked_on": "2026-11-26",
-      "scope": "Targeted issue #175 supplement: 18 new vendor, project, advisory and vulnerability sources checked live for the Tech Radar update; all other radar sources retain their existing 25 November 2026 pass.",
+      "scope": "Targeted issue #175 supplement plus issue #177 supplement: 38 new or newly mapped vendor, project, advisory, incident and vulnerability sources checked for the Tech Radar updates; all other radar sources retain their existing 25 November 2026 pass. The whole-page source-check date remains 26 November 2026 rather than being advanced by the targeted issue #177 addition.",
       "status": "completed with explicit limitations",
-      "source_entries": 18,
-      "unique_fetch_destinations": 18
+      "source_entries": 38,
+      "unique_fetch_destinations": 38
     },
     "tech-scan.html": {
       "checked_on": "2026-11-26",
@@ -11478,7 +11478,8 @@
     {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html",
       "files": [
-        "tech-scan-stack-views.html"
+        "tech-scan-stack-views.html",
+        "tech-radar.html"
       ],
       "hrefs": [
         "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html"
@@ -11494,6 +11495,14 @@
           "outcome": "supported",
           "scope": "AgentCore harness row is Yes for Asia Pacific (Singapore); supported Regions table.",
           "evidence_summary": "14 November 2026: direct HTTP GET returned 200; decisive passages inspected; claim passages and limits recorded in site/tech-scan-gaps-review-2026-11-14.md."
+        },
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "AWS Agent Registry regional availability, including Singapore absence.",
+          "evidence_summary": "Direct HTTP GET on 27 November 2026 returned 200; the feature table marks AWS Agent Registry as unavailable in Asia Pacific (Singapore) and available in the other Regions cited by the radar entry.",
+          "limitation": "Targeted issue #177 pass checked the live regional feature table only; it did not confirm service availability inside any AWS account.",
+          "followup": "issue177"
         }
       ],
       "evidence_digests": [],
@@ -11501,8 +11510,13 @@
         {
           "file": "tech-scan-stack-views.html",
           "id": "source-11"
+        },
+        {
+          "file": "tech-radar.html",
+          "id": "source-235"
         }
-      ]
+      ],
+      "targeted_checked_on": "2026-11-27"
     },
     {
       "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-security-best-practices.html",
@@ -23515,6 +23529,709 @@
           "sha256": "69ebbcc3bbd417e85c8be8726a6156875fc54da70e1ca2e562edeb14e589edb2",
           "format": "direct HTTP response",
           "source_url": "https://github.com/anomalyco/opencode/blob/dev/SECURITY.md"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-agent-registry-generally-available/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-agent-registry-generally-available/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "AWS Agent Registry general-availability date and managed catalogue purpose.",
+          "evidence_summary": "AWS announcement returned 200 and states that AWS Agent Registry is generally available as a central catalogue for agent discovery and governance. Page title: 'AWS Agent Registry for centralized agent discovery and governance is now generally available - AWS'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-233"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-agent-registry-generally-available/",
+      "evidence_digests": [
+        {
+          "sha256": "eb5f5a06f14ba157c738a85741f3d6a639ad67d5d1b6557e19960f7a0c721da4",
+          "format": "direct HTTP response",
+          "source_url": "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-agent-registry-generally-available/"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/machine-learning/manage-agents-tools-and-skills-at-scale-with-aws-agent-registry/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/machine-learning/manage-agents-tools-and-skills-at-scale-with-aws-agent-registry/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "AWS Agent Registry catalogue, approval workflow, CLI/SDK access and audit integration.",
+          "evidence_summary": "AWS governance overview returned 200 and describes registry records for agents, tools, skills, MCP servers and custom records, with approval workflows and audit integration. Page title: 'Manage agents, tools and skills at scale with AWS Agent Registry | Artificial Intelligence'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-234"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/machine-learning/manage-agents-tools-and-skills-at-scale-with-aws-agent-registry/",
+      "evidence_digests": [
+        {
+          "sha256": "66f69ba8b85de05a40f899bce7a60ad1f6c77d2c67a889e8a03266b7bde2a8e7",
+          "format": "direct HTTP response",
+          "source_url": "https://aws.amazon.com/blogs/machine-learning/manage-agents-tools-and-skills-at-scale-with-aws-agent-registry/"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/09/bedrock-managed-agents-preview/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/bedrock-managed-agents-preview/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Bedrock Managed Agents powered by OpenAI public-preview date and purpose.",
+          "evidence_summary": "AWS announcement returned 200 and states that Amazon Bedrock Managed Agents, powered by OpenAI, is available in preview. Page title: 'Amazon Bedrock Managed Agents, powered by OpenAI, is now available in preview - AWS'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-236"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/09/bedrock-managed-agents-preview/",
+      "evidence_digests": [
+        {
+          "sha256": "8c8b6f3ef21276e21b0ba9c3bece2080d9ecd830d9c08ffa4aeb7905130a29f9",
+          "format": "direct HTTP response",
+          "source_url": "https://aws.amazon.com/about-aws/whats-new/2026/09/bedrock-managed-agents-preview/"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-managed-agents-openai.html",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-managed-agents-openai.html"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Bedrock Managed Agents session architecture and execution identity separation.",
+          "evidence_summary": "AWS documentation returned 200 and describes managed stateful agent sessions with commands and local tools executing on customer-provided compute or AgentCore Runtime. Page title: 'Amazon Bedrock Managed Agents, powered by OpenAI (preview) - Amazon Bedrock'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-237"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-managed-agents-openai.html",
+      "evidence_digests": [
+        {
+          "sha256": "93aee97961aa8d9e273417546282d9554962041ad8391005db7493191b401a66",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-managed-agents-openai.html"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-managed-agents-openai-quotas-limitations.html",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-managed-agents-openai-quotas-limitations.html"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Bedrock Managed Agents preview Regions, unsupported features and KMS limitation.",
+          "evidence_summary": "AWS limitations documentation returned 200; it lists N. Virginia, Oregon and Ohio preview endpoints, no cross-Region inference profiles, no subagents, no built-in long-term memory integration, and no customer-managed key setting for service-managed session data. Page title: 'Preview availability and limitations - Amazon Bedrock'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-238"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-managed-agents-openai-quotas-limitations.html",
+      "evidence_digests": [
+        {
+          "sha256": "a6150c9fa24bfa837cf29257e7c6d1f8e04c6995ecd89e5e312aa56af39d7a59",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-managed-agents-openai-quotas-limitations.html"
+        }
+      ]
+    },
+    {
+      "url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "GitHub Agentic Workflows general-availability date and supported use.",
+          "evidence_summary": "GitHub changelog returned 200 and announces Agentic Workflows as generally available on 28 October 2026. Page title: 'GitHub Agentic Workflows generally available - GitHub Changelog'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-239"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/",
+      "evidence_digests": [
+        {
+          "sha256": "46f6d3c37fe52dc167dee57fe4bffda108580258d87e6f156ff78ab8f4668f84",
+          "format": "direct HTTP response",
+          "source_url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/"
+        }
+      ]
+    },
+    {
+      "url": "https://github.github.com/gh-aw/introduction/ai-transparency/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.github.com/gh-aw/introduction/ai-transparency/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Agentic Workflows permission boundaries, safe-output writes and review requirements.",
+          "evidence_summary": "GitHub Agentic Workflows transparency documentation returned 200; it describes read-only agent permissions, sandbox/network controls, threat detection and warns that configured safe-output jobs can write. Page title: 'AI Transparency | GitHub Agentic Workflows'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-240"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.github.com/gh-aw/introduction/ai-transparency/",
+      "evidence_digests": [
+        {
+          "sha256": "cbc8bd939235b3fe19badc5fd2935a49b2961dd8013555601851f71f01d2e868",
+          "format": "direct HTTP response",
+          "source_url": "https://github.github.com/gh-aw/introduction/ai-transparency/"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cisco-ai-defense/mcp-scanner/4.8.7/README.md",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://raw.githubusercontent.com/cisco-ai-defense/mcp-scanner/4.8.7/README.md"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Cisco MCP Scanner 4.8.7 analysis modes, offline scanning and licence.",
+          "evidence_summary": "The pinned README returned 200 and documents MCP server and tool inspection, behavioural source scanning, selectable analysers, optional remote/LLM analysis and offline scanning of pre-generated descriptions; the project badge and licence text identify Apache-2.0. Page title: '# MCP Scanner [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://open'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-241"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/cisco-ai-defense/mcp-scanner/4.8.7/README.md",
+      "evidence_digests": [
+        {
+          "sha256": "c83a5b6b7a9ea538874c7d56a39de64d28de5ef09a7441462e3a70b455e387e8",
+          "format": "direct HTTP response",
+          "source_url": "https://raw.githubusercontent.com/cisco-ai-defense/mcp-scanner/4.8.7/README.md"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/cisco-ai-defense/mcp-scanner/releases/tag/4.8.7",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/cisco-ai-defense/mcp-scanner/releases/tag/4.8.7"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Cisco MCP Scanner 4.8.7 release date.",
+          "evidence_summary": "GitHub release page returned 200 for MCP Scanner release 4.8.7, published 20 October 2026. Page title: 'Release 4.8.7 \u00b7 cisco-ai-defense/mcp-scanner \u00b7 GitHub'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-242"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/cisco-ai-defense/mcp-scanner/releases/tag/4.8.7",
+      "evidence_digests": [
+        {
+          "sha256": "fd168ddb804d3beb19b2771aec2175fcd439c97e38d72f4ffd38417781351093",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/releases/tag/4.8.7"
+        }
+      ]
+    },
+    {
+      "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Dragos controlled canary findings for AI routing and inference providers.",
+          "evidence_summary": "Dragos research returned 200 and describes roughly two million canary prompts, copied requests at hosting providers, reseller logging or reuse and failures to honour ZDR or no-collection flags. Page title: 'AI Supply Chain Security: What Canary Tokens Found | Dragos - Dragos'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-243"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
+      "evidence_digests": [
+        {
+          "sha256": "8b78175625ed360bfeb47e03f910c0011be9d15b5870e4d774724559279ee4e6",
+          "format": "direct HTTP response",
+          "source_url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens"
+        }
+      ]
+    },
+    {
+      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "OpenRouter response to inference-provider data processing incidents.",
+          "evidence_summary": "OpenRouter returned 200 and states that it off-boarded three providers, removed 125 endpoints from ZDR eligibility and notified potentially affected customers on 22 November 2026. Page title: 'Data Processing Incidents on Inference Providers'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-244"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "evidence_digests": [
+        {
+          "sha256": "43bc9afeaa65cfb44430ce43a724b762df86d7e41d63aa81be88a45a3ff4a1f1",
+          "format": "direct HTTP response",
+          "source_url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/"
+        }
+      ]
+    },
+    {
+      "url": "https://www.minimax.io/blog/update-on-url-access-in-forwarded-api-requests-20261124",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.minimax.io/blog/update-on-url-access-in-forwarded-api-requests-20261124"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "MiniMax forwarded-URL access and ZDR incident statement.",
+          "evidence_summary": "MiniMax returned 200 and states that a default security system extracted URLs from forwarded requests, including ZDR requests, and that internal security programs and agents probed some logged URLs before the process was disabled. Page title: 'Update on URL Access in Forwarded API Requests - MiniMax Research | MiniMax'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-245"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.minimax.io/blog/update-on-url-access-in-forwarded-api-requests-20261124",
+      "evidence_digests": [
+        {
+          "sha256": "3a04201de8e4b2e3776ad49c612102730faa1fa678f879536120e602feb60b63",
+          "format": "direct HTTP response",
+          "source_url": "https://www.minimax.io/blog/update-on-url-access-in-forwarded-api-requests-20261124"
+        }
+      ]
+    },
+    {
+      "url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Together AI coding-agent credential incident and affected prompt samples.",
+          "evidence_summary": "Together AI returned 200 and discloses that an AI coding agent committed a credential that exposed prompt samples from June and July 2026 requests to MiniMax M3, GLM-5.2 and Kimi K2.6. Page title: 'Security event: Prompt leakage for requests in June and July of 2026'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-246"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
+      "evidence_digests": [
+        {
+          "sha256": "13dac02e318b2f6eb0db0f13b3138fdd415f440ce2cb61d38df9d571f1c7907b",
+          "format": "direct HTTP response",
+          "source_url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.332"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Claude Code v2.1.332 release date.",
+          "evidence_summary": "GitHub release page returned 200 for Claude Code v2.1.332, published 25 November 2026. Page title: 'Release v2.1.332 \u00b7 anthropics/claude-code \u00b7 GitHub'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-247"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "evidence_digests": [
+        {
+          "sha256": "57a20aae5e956f746f78082039d5b6c614c4ef52ce86e39e7af30927ac5709dc",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/waf-ai-endpoint-discovery-protection/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/waf-ai-endpoint-discovery-protection/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "AWS WAF AI Security and API Portal AI discovery GA and regional availability.",
+          "evidence_summary": "AWS announcement returned 200 and states that API Portal discovery and the WAF AI Security managed rule group are generally available; the rule-group Region list excludes Singapore. Page title: 'AWS WAF announces automated discovery and protection for LLM, MCP, and A2A endpoints using Amazon Bedrock Guardrails - AWS'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-248"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/waf-ai-endpoint-discovery-protection/",
+      "evidence_digests": [
+        {
+          "sha256": "77a694f4e1b6d6e4d1306b8bacf48d5be0d863a6a329b195b732b839db7891ea",
+          "format": "direct HTTP response",
+          "source_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/waf-ai-endpoint-discovery-protection/"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/security/introducing-api-and-ai-security-on-aws-from-discovery-to-protection/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/security/introducing-api-and-ai-security-on-aws-from-discovery-to-protection/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "AWS API Portal organisation discovery, shadow APIs and AI endpoint protection.",
+          "evidence_summary": "AWS Security Blog returned 200 and describes organisation-wide API discovery, shadow API identification and protection for LLM, MCP and A2A endpoints. Page title: 'Introducing API and AI security on AWS, from discovery to protection | AWS Security Blog'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-249"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/security/introducing-api-and-ai-security-on-aws-from-discovery-to-protection/",
+      "evidence_digests": [
+        {
+          "sha256": "db96a85f9b36bf6b47018c0601207430bcba78d0bef85fe9274d569c10cc769d",
+          "format": "direct HTTP response",
+          "source_url": "https://aws.amazon.com/blogs/security/introducing-api-and-ai-security-on-aws-from-discovery-to-protection/"
+        }
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Bedrock Trusted Access API, aws_review retention, EFS/EDC preview and access-loss behaviour.",
+          "evidence_summary": "AWS returned 200 and states that the Trusted Access API is generally available, EFS and EDC are in public preview, aws_review retains inputs and outputs up to 30 days, the interim ZDR exception runs through at least 30 June 2027, and covered models stop 24 hours after access to the key or bucket is lost. Page title: 'Introducing the Amazon Bedrock Trusted Access API, with Enterprise Frontier Safeguards and Enterprise Data Controls for Claude models | Artificial Intelligence'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-250"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/",
+      "evidence_digests": [
+        {
+          "sha256": "3c49505756672c8c78a4f70c4daec9d7a9862e9f76b3c93d3b04c6123f821af0",
+          "format": "direct HTTP response",
+          "source_url": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/"
+        }
+      ]
+    },
+    {
+      "url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "Anthropic EFS customer-controlled storage and Safety Case review.",
+          "evidence_summary": "Anthropic returned 200 and describes EFS zero-data-retention handling with customer-controlled storage and Safety Case review. Page title: 'Zero data retention with Enterprise Frontier Safeguards is now in beta | Claude by Anthropic'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-251"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+      "evidence_digests": [
+        {
+          "sha256": "1f7d799730a7dc2a60596f06c3ffdfddff7ba16a6fb0682063aa6192fab0caa6",
+          "format": "direct HTTP response",
+          "source_url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/anthropic-efs-enterprise-data-controls.html",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/anthropic-efs-enterprise-data-controls.html"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "limited",
+          "scope": "AWS EFS/EDC preview guide and regional storage configuration.",
+          "evidence_summary": "AWS documentation returned 200 for the public-preview EFS and EDC guide, including customer S3/KMS configuration, regional storage configuration and warnings that preview endpoints, IAM actions and APIs may change. Page title: 'Enterprise Frontier Safeguards and Enterprise Data Controls on Amazon Bedrock (public preview) - Amazon Bedrock'.",
+          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-252"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/anthropic-efs-enterprise-data-controls.html",
+      "evidence_digests": [
+        {
+          "sha256": "4cd69c2156c1a42c4f88b43ef5100f56786061bd54fa653d3d061722a36e803f",
+          "format": "direct HTTP response",
+          "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/anthropic-efs-enterprise-data-controls.html"
         }
       ]
     }
