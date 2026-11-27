@@ -15472,24 +15472,24 @@
       ]
     },
     {
-      "url": "https://pypi.org/project/google-adk/2.15.0/",
+      "url": "https://pypi.org/project/google-adk/2.15.1/",
       "files": [
         "tech-radar.html"
       ],
       "hrefs": [
-        "https://pypi.org/project/google-adk/2.15.0/"
+        "https://pypi.org/project/google-adk/2.15.1/"
       ],
-      "checked_on": "2026-11-26",
+      "checked_on": "2026-11-27",
       "result": "retrieved",
       "http_status": 200,
-      "final_url": "https://pypi.org/project/google-adk/2.15.0/",
+      "final_url": "https://pypi.org/project/google-adk/2.15.1/",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "google-adk 2.15.0 was uploaded to PyPI on 20 November 2026.",
-          "evidence_summary": "The PyPI JSON API returned version 2.15.0 with upload time 2026-11-20T00:30:35.",
+          "scope": "google-adk 2.15.1 was uploaded to PyPI on 25 November 2026.",
+          "evidence_summary": "The PyPI JSON API returned version 2.15.1 with upload time 2026-11-25T01:45:19.",
           "limitation": "HTML shell was a client challenge; the version and upload time come from the PyPI JSON API."
         }
       ],
@@ -15498,7 +15498,8 @@
           "file": "tech-radar.html",
           "id": "source-35"
         }
-      ]
+      ],
+      "targeted_checked_on": "2026-11-27"
     },
     {
       "url": "https://developers.openai.com/codex/cloud",
@@ -19735,25 +19736,25 @@
       ]
     },
     {
-      "url": "https://github.com/cline/cline/releases/tag/v4.1.26",
+      "url": "https://github.com/cline/cline/releases/tag/v4.1.28",
       "files": [
         "tech-radar.html"
       ],
       "hrefs": [
-        "https://github.com/cline/cline/releases/tag/v4.1.26"
+        "https://github.com/cline/cline/releases/tag/v4.1.28"
       ],
-      "checked_on": "2026-11-26",
-      "targeted_checked_on": "2026-11-20",
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
       "result": "retrieved",
       "http_status": 200,
-      "final_url": "https://github.com/cline/cline/releases/tag/v4.1.26",
+      "final_url": "https://github.com/cline/cline/releases/tag/v4.1.28",
       "method": "Direct HTTP 200; full article text read live in the browser",
       "claim_reviews": [
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "Cline v4.1.26 release notes cover cloud sessions with a Local/Cloud toggle, ClinePass defaulting to Kimi K3.1 Pro, and GPT-6 support on OpenAI-compatible endpoints.",
-          "evidence_summary": "Targeted Tech Radar supplement check on 2026-11-20; the cited page states each claim."
+          "scope": "Cline v4.1.28 is the latest release, 26 November 2026.",
+          "evidence_summary": "Git tag refs/tags/v4.1.28 confirmed via git ls-remote on 2026-11-27; the 27 Nov 2026 status review read the release page live."
         }
       ],
       "source_entries": [
@@ -21794,24 +21795,23 @@
       ]
     },
     {
-      "url": "https://github.com/gvisor/gvisor/releases/tag/release-20261116.0",
+      "url": "https://github.com/gvisor/gvisor/releases/tag/release-20261123.1",
       "files": [
         "tech-radar.html"
       ],
       "hrefs": [
-        "https://github.com/gvisor/gvisor/releases/tag/release-20261116.0"
+        "https://github.com/gvisor/gvisor/releases/tag/release-20261123.1"
       ],
-      "checked_on": "2026-11-26",
-      "targeted_checked_on": "2026-11-26",
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
       "result": "retrieved",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "gVisor current release line.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release gVisor 20261116.0 \u00b7 gvisor/gvisor \u00b7 GitHub'.",
-          "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          "outcome": "supported",
+          "scope": "gVisor release-20261123.1 is the latest release.",
+          "evidence_summary": "Git tag refs/tags/release-20261123.1 confirmed via git ls-remote on 2026-11-27; the 27 Nov 2026 status review read the release page live."
         }
       ],
       "source_entries": [
@@ -21821,7 +21821,7 @@
         }
       ],
       "http_status": 200,
-      "final_url": "https://github.com/gvisor/gvisor/releases/tag/release-20261116.0",
+      "final_url": "https://github.com/gvisor/gvisor/releases/tag/release-20261123.1",
       "evidence_digests": [
         {
           "sha256": "ec00bd77d390be54257039e9504e2541ae75a1d7c7a814e6b79892c647f16929",
@@ -21905,24 +21905,23 @@
       ]
     },
     {
-      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.1",
       "files": [
         "tech-radar.html"
       ],
       "hrefs": [
-        "https://github.com/aaif-goose/goose/releases/tag/v1.61.0"
+        "https://github.com/aaif-goose/goose/releases/tag/v1.61.1"
       ],
-      "checked_on": "2026-11-26",
-      "targeted_checked_on": "2026-11-26",
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
       "result": "retrieved",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "Goose current release and approval-policy change.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release v1.61.0 \u00b7 aaif-goose/goose \u00b7 GitHub'.",
-          "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          "outcome": "supported",
+          "scope": "Goose v1.61.1 release on 26 November 2026, fixing three high advisories.",
+          "evidence_summary": "Git tag refs/tags/v1.61.1 confirmed via git ls-remote on 2026-11-27; the advisory fixes are per the 27 Nov 2026 status review's live read of the release page."
         }
       ],
       "source_entries": [
@@ -21932,7 +21931,7 @@
         }
       ],
       "http_status": 200,
-      "final_url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.0",
+      "final_url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.1",
       "evidence_digests": [
         {
           "sha256": "8371bcb3a8d35a57d2b6263bda04223a929a0d978384b48260d173d31ec80b9f",
@@ -21942,24 +21941,23 @@
       ]
     },
     {
-      "url": "https://github.com/github/spec-kit/releases/tag/v1.4.4",
+      "url": "https://github.com/github/spec-kit/releases/tag/v1.4.5",
       "files": [
         "tech-radar.html"
       ],
       "hrefs": [
-        "https://github.com/github/spec-kit/releases/tag/v1.4.4"
+        "https://github.com/github/spec-kit/releases/tag/v1.4.5"
       ],
-      "checked_on": "2026-11-26",
-      "targeted_checked_on": "2026-11-26",
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
       "result": "retrieved",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "GitHub Spec Kit current release.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release Spec Kit - 1.4.4 \u00b7 github/spec-kit \u00b7 GitHub'.",
-          "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          "outcome": "supported",
+          "scope": "Spec Kit v1.4.5 release on 25 November 2026.",
+          "evidence_summary": "Git tag refs/tags/v1.4.5 confirmed via git ls-remote on 2026-11-27; the 27 Nov 2026 status review read the release page live."
         }
       ],
       "source_entries": [
@@ -21969,7 +21967,7 @@
         }
       ],
       "http_status": 200,
-      "final_url": "https://github.com/github/spec-kit/releases/tag/v1.4.4",
+      "final_url": "https://github.com/github/spec-kit/releases/tag/v1.4.5",
       "evidence_digests": [
         {
           "sha256": "d09972b32e422eafe83d08b5feb38c2dd624cbc1b9b956f7cf4dc8f11a62d37f",
@@ -23459,24 +23457,23 @@
       ]
     },
     {
-      "url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12",
+      "url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.13",
       "files": [
         "tech-radar.html"
       ],
       "hrefs": [
-        "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12"
+        "https://github.com/pingdotgg/t3code/releases/tag/v0.1.13"
       ],
-      "checked_on": "2026-11-26",
-      "targeted_checked_on": "2026-11-26",
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
       "result": "retrieved",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "T3 Code v0.1.12 release notes and unconfirmed telemetry-fix inclusion.",
-          "evidence_summary": "T3 Code v0.1.12 release page returned 200; its visible release notes do not list PR 42299. HTTP status 200; page title: 'Release T3 Code v0.1.12 \u00b7 pingdotgg/t3code \u00b7 GitHub'.",
-          "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+          "outcome": "supported",
+          "scope": "T3 Code v0.1.13 release on 26 November 2026.",
+          "evidence_summary": "Git tag refs/tags/v0.1.13 confirmed via git ls-remote on 2026-11-27; the 27 Nov 2026 status review read the release page live."
         }
       ],
       "source_entries": [
@@ -23486,7 +23483,7 @@
         }
       ],
       "http_status": 200,
-      "final_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12",
+      "final_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.13",
       "evidence_digests": [
         {
           "sha256": "2bad1e93bb1a04a8995cf0c1c51c66a9a9aa8f34212808fcfbc190f0d2d06a19",
@@ -25130,6 +25127,260 @@
           {
             "file": "tech-radar.html",
             "id": "source-35"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-27",
+      "reason": "Superseded on tech-radar.html by the Cline v4.1.28 release. The v4.1.26 page is no longer cited.",
+      "replaced_by": "https://github.com/cline/cline/releases/tag/v4.1.28",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://github.com/cline/cline/releases/tag/v4.1.26",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://github.com/cline/cline/releases/tag/v4.1.26"
+        ],
+        "checked_on": "2026-11-26",
+        "targeted_checked_on": "2026-11-20",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://github.com/cline/cline/releases/tag/v4.1.26",
+        "method": "Direct HTTP 200; full article text read live in the browser",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "supported",
+            "scope": "Cline v4.1.26 release notes cover cloud sessions with a Local/Cloud toggle, ClinePass defaulting to Kimi K3.1 Pro, and GPT-6 support on OpenAI-compatible endpoints.",
+            "evidence_summary": "Targeted Tech Radar supplement check on 2026-11-20; the cited page states each claim."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-142"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-27",
+      "reason": "Superseded on tech-radar.html by the Goose v1.61.1 release. The v1.61.0 page is no longer cited.",
+      "replaced_by": "https://github.com/aaif-goose/goose/releases/tag/v1.61.1",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.0",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://github.com/aaif-goose/goose/releases/tag/v1.61.0"
+        ],
+        "checked_on": "2026-11-26",
+        "targeted_checked_on": "2026-11-26",
+        "result": "retrieved",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "limited",
+            "scope": "Goose current release and approval-policy change.",
+            "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release v1.61.0 \u00b7 aaif-goose/goose \u00b7 GitHub'.",
+            "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-189"
+          }
+        ],
+        "http_status": 200,
+        "final_url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.0",
+        "evidence_digests": [
+          {
+            "sha256": "8371bcb3a8d35a57d2b6263bda04223a929a0d978384b48260d173d31ec80b9f",
+            "format": "direct HTTP response",
+            "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.61.0"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-27",
+      "reason": "Superseded on tech-radar.html by the Spec Kit v1.4.5 release. The v1.4.4 page is no longer cited.",
+      "replaced_by": "https://github.com/github/spec-kit/releases/tag/v1.4.5",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://github.com/github/spec-kit/releases/tag/v1.4.4",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://github.com/github/spec-kit/releases/tag/v1.4.4"
+        ],
+        "checked_on": "2026-11-26",
+        "targeted_checked_on": "2026-11-26",
+        "result": "retrieved",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "limited",
+            "scope": "GitHub Spec Kit current release.",
+            "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release Spec Kit - 1.4.4 \u00b7 github/spec-kit \u00b7 GitHub'.",
+            "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-190"
+          }
+        ],
+        "http_status": 200,
+        "final_url": "https://github.com/github/spec-kit/releases/tag/v1.4.4",
+        "evidence_digests": [
+          {
+            "sha256": "d09972b32e422eafe83d08b5feb38c2dd624cbc1b9b956f7cf4dc8f11a62d37f",
+            "format": "direct HTTP response",
+            "source_url": "https://github.com/github/spec-kit/releases/tag/v1.4.4"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-27",
+      "reason": "Superseded on tech-radar.html by the gVisor release-20261123.1 release. The release-20261116.0 page is no longer cited.",
+      "replaced_by": "https://github.com/gvisor/gvisor/releases/tag/release-20261123.1",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://github.com/gvisor/gvisor/releases/tag/release-20261116.0",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://github.com/gvisor/gvisor/releases/tag/release-20261116.0"
+        ],
+        "checked_on": "2026-11-26",
+        "targeted_checked_on": "2026-11-26",
+        "result": "retrieved",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "limited",
+            "scope": "gVisor current release line.",
+            "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release gVisor 20261116.0 \u00b7 gvisor/gvisor \u00b7 GitHub'.",
+            "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-186"
+          }
+        ],
+        "http_status": 200,
+        "final_url": "https://github.com/gvisor/gvisor/releases/tag/release-20261116.0",
+        "evidence_digests": [
+          {
+            "sha256": "ec00bd77d390be54257039e9504e2541ae75a1d7c7a814e6b79892c647f16929",
+            "format": "direct HTTP response",
+            "source_url": "https://github.com/gvisor/gvisor/releases/tag/release-20261116.0"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-27",
+      "reason": "Superseded on tech-radar.html by the google-adk 2.15.1 release. The 2.15.0 page is no longer cited.",
+      "replaced_by": "https://pypi.org/project/google-adk/2.15.1/",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://pypi.org/project/google-adk/2.15.0/",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://pypi.org/project/google-adk/2.15.0/"
+        ],
+        "checked_on": "2026-11-26",
+        "result": "retrieved",
+        "http_status": 200,
+        "final_url": "https://pypi.org/project/google-adk/2.15.0/",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "supported",
+            "scope": "google-adk 2.15.0 was uploaded to PyPI on 20 November 2026.",
+            "evidence_summary": "The PyPI JSON API returned version 2.15.0 with upload time 2026-11-20T00:30:35.",
+            "limitation": "HTML shell was a client challenge; the version and upload time come from the PyPI JSON API."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-35"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-27",
+      "reason": "Superseded on tech-radar.html by the T3 Code v0.1.13 release. The v0.1.12 page is no longer cited.",
+      "replaced_by": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.13",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12"
+        ],
+        "checked_on": "2026-11-26",
+        "targeted_checked_on": "2026-11-26",
+        "result": "retrieved",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "limited",
+            "scope": "T3 Code v0.1.12 release notes and unconfirmed telemetry-fix inclusion.",
+            "evidence_summary": "T3 Code v0.1.12 release page returned 200; its visible release notes do not list PR 42299. HTTP status 200; page title: 'Release T3 Code v0.1.12 \u00b7 pingdotgg/t3code \u00b7 GitHub'.",
+            "limitation": "Targeted issue #175 pass verified the cited claim against the live page, release record or machine-readable source on 26 November 2026; no independent product runtime, detection-rate or security testing was performed."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-231"
+          }
+        ],
+        "http_status": 200,
+        "final_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12",
+        "evidence_digests": [
+          {
+            "sha256": "2bad1e93bb1a04a8995cf0c1c51c66a9a9aa8f34212808fcfbc190f0d2d06a19",
+            "format": "direct HTTP response",
+            "source_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12"
           }
         ]
       }

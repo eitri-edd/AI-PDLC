@@ -22,22 +22,22 @@ CATEGORIES = {
 
 # Snapshot parsed tables separately from the changing introductory prose.
 TABLE_DIGESTS = {
-    'persistent-agents': 'd538c5e8ce5309008f69e142c9757597e96edb3f6e4d3602dd86af41e3f1c46d',
+    'persistent-agents': '17ff726548dd94df6f39dc2ca8d240b72f13e66a13cb86e3e177f2f1f17a91bc',
     # Moved when Models and model access split into LLM model, coding tool,
     # provider and decision-model tables (20 November 2026).
-    'models-access': '8cb20df711eec7e487a9fca5f1fd8ec8905f29ace82c124cb312341847fc5c1b',
-    'gateways': '0822ac5d86672f1963395cefdfbadc87ea81a5810bbecbd2c4e928c61738d86a',
-    'context-memory': '37581ac17023158961bba8684536180a9194b66486f8fecc6b2e58119200789a',
+    'models-access': '059f02c249769171f8da9b4b16c9f2a0b2c62245f18b4b307c4d15882f3be706',
+    'gateways': 'ae023c9871d10226b02a8b6d5b3307e9dc2d2166d0c76edfa43996699d836621',
+    'context-memory': '549d8b33fd2b8553cb6436cc914908c9c0b9fa221b180f8e186c962958deb4b0',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
-    'harness-frameworks': 'b1eb77ba5c6eb49df8e6d5ab870ccbaea6e08b9e719e95afd7ed2195365ee702',
+    'harness-frameworks': '6e2b92014e6ff20e383e9e0a6a620506097ed933347267e7fe3c01de8e58f578',
     # Moved when eight ADE products were added (Orca, T3 Code, Paradev, Paseo,
     # Orchestrator, Traycer, OpenChamber, Kepler) on 25 November 2026.
-    'agentic-development-environments': 'fb9fca2fe965359c26681ce5c47019688b92bfb8942808483efbfbb5b0920105',
-    'verification': 'beff37902fcbe0fd736e00a8126d86f56c68baa2bb6e12f71dd897e9cbd4fd08',
-    'sandbox': '9ddf97ed81c73cdcd8ebdc5eb9d64ee2b23ba42cc8a3c531a771b658f16bd37d',
-    'software-factories': '8bbd7fa338c436a995cae082fb59085cd212209a8815e0fc2c92115ff0481013',
+    'agentic-development-environments': 'fb2903a65ad59ca40c1a74119e97e379ddfa5cc005c537379128ae9b55fd343c',
+    'verification': 'bbb5a3775c7e29c1a3d6f8a3c8fd4e5a7967d6ebfb9d2b401a782b756cdf7fa7',
+    'sandbox': '13f6de24c96f576a698b8ab4e7f67b242ef63d69a205d6b1531552eac45d915b',
+    'software-factories': '551c87eb1a65bd5cbe1533fd33f89c73449d604e98c021a389f7bffeb3968bc7',
     'delivery': '73afae9379cad3c853f314b41a8bf7198f4f52eef2aac1ba3194292a5fff7dad',
-    'skill-packs': '88435c646e94911e7699e23e4806ee20f6d96b0b20cbfc4032269c27dafef503',
+    'skill-packs': 'b5883de49331083c50512aa33e9ddd2993033ac15c6b22f00b1cd3781da9f37c',
 }
 
 
