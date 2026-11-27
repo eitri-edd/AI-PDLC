@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-26",
-  "scope": "Daily maintenance verification on 2026-11-26 plus the targeted issue #166, #175 and #177 Tech Radar expansions found 670 distinct external URLs; 659 were retrieved or partially recovered and 3 require follow-up or reader recovery.",
+  "scope": "Daily maintenance verification on 2026-11-26 plus the targeted issue #166, #175 and #177 Tech Radar expansions and 27 November release-citation corrections found 671 distinct external URLs; 660 were retrieved or partially recovered and 3 require follow-up or reader recovery.",
   "reviewed_base": "d0313fefcc05de847d26738c14b38f59808783f3",
   "original_unique_urls": 100,
-  "current_unique_urls": 670,
-  "current_unique_hrefs": 676,
+  "current_unique_urls": 671,
+  "current_unique_hrefs": 677,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 650,
+    "retrieved": 651,
     "retrieved_pdf_text": 3,
     "verification_challenge": 3
   },
@@ -105,10 +105,10 @@
     },
     "tech-radar.html": {
       "checked_on": "2026-11-26",
-      "scope": "Targeted issue #175 supplement plus issue #177 supplement: 53 new or newly mapped vendor, project, advisory, incident and vulnerability sources checked for the Tech Radar updates; all other radar sources retain their existing 25 November 2026 pass. The whole-page source-check date remains 26 November 2026 rather than being advanced by the targeted issue #177 addition.",
+      "scope": "Targeted issue #175 supplement plus issue #177 supplement: 53 new or newly mapped vendor, project, advisory, incident and vulnerability sources, plus one release-citation correction, checked for the Tech Radar updates; all other radar sources retain their existing 25 November 2026 pass. The whole-page source-check date remains 26 November 2026 rather than being advanced by the targeted issue #177 addition.",
       "status": "completed with explicit limitations",
-      "source_entries": 53,
-      "unique_fetch_destinations": 53
+      "source_entries": 54,
+      "unique_fetch_destinations": 54
     },
     "tech-scan.html": {
       "checked_on": "2026-11-26",
@@ -20704,7 +20704,7 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "The T3 Code repository: MIT-licensed control plane for Claude Code, Codex, Cursor and other coding agents, with per-thread worktrees and desktop, web and mobile clients; latest release v0.1.12.",
+          "scope": "The T3 Code repository: MIT-licensed control plane for Claude Code, Codex, Cursor and other coding agents, with per-thread worktrees and desktop, web and mobile clients.",
           "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - pingdotgg/t3code: The best way to control Claude Code, Codex and more from any computer or phone'."
         }
       ],
@@ -24784,6 +24784,42 @@
           "sha256": "a7f9fdf0865aa17320da9a8ad533dc1c811f626fe675e41376a0094ef05a51e0",
           "format": "direct HTTP response",
           "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12",
+      "files": [
+        "tech-radar.html"
+      ],
+      "hrefs": [
+        "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12"
+      ],
+      "checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-27",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "tech-radar.html",
+          "outcome": "supported",
+          "scope": "T3 Code v0.1.12 release on 25 November 2026.",
+          "evidence_summary": "The release page was retrieved live on 2026-11-27; the page identifies the v0.1.12 release published on 25 November 2026."
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "tech-radar.html",
+          "id": "source-268"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12",
+      "evidence_digests": [
+        {
+          "sha256": "807f8d1acd766d1a6e5eb2465515643f70cf2d8c0ab47afa5170c1d8f347c7c9",
+          "format": "direct HTTP response",
+          "source_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12"
         }
       ]
     }

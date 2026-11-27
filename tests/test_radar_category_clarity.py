@@ -32,7 +32,7 @@ TABLE_DIGESTS = {
     'harness-frameworks': '6e2b92014e6ff20e383e9e0a6a620506097ed933347267e7fe3c01de8e58f578',
     # Moved when eight ADE products were added (Orca, T3 Code, Paradev, Paseo,
     # Orchestrator, Traycer, OpenChamber, Kepler) on 25 November 2026.
-    'agentic-development-environments': 'fb2903a65ad59ca40c1a74119e97e379ddfa5cc005c537379128ae9b55fd343c',
+    'agentic-development-environments': '079037811d1d445cf16168c5a85e2b37c555948e5152b6d1f1c514d831fa29d4',
     'verification': 'bbb5a3775c7e29c1a3d6f8a3c8fd4e5a7967d6ebfb9d2b401a782b756cdf7fa7',
     'sandbox': '13f6de24c96f576a698b8ab4e7f67b242ef63d69a205d6b1531552eac45d915b',
     'software-factories': '551c87eb1a65bd5cbe1533fd33f89c73449d604e98c021a389f7bffeb3968bc7',
