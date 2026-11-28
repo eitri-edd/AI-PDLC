@@ -165,10 +165,10 @@ class ADEInventoryTests(unittest.TestCase):
                                 for r in self.inventory['references'] if r['url'] not in new_urls}}
         baseline['reviews']['https://orca.dev/docs/model/worktrees'] = [v for v in baseline['reviews']['https://orca.dev/docs/model/worktrees'] if v.get('followup') != 'ade-tech-scan']
         digest = hashlib.sha256(json.dumps(baseline, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
-        # Digests advanced by the daily reference check on 26 November 2026,
+        # Digests advanced by the daily reference check on 28 November 2026,
         # which legitimately advances page_passes dates and per-entry
         # checked_on/http_status/final_url/method. (Previously advanced
-        # on 25 November 2026 for the same reason.) The reviews digest also
+        # on 26 November 2026 for the same reason.) The reviews digest also
         # moved on 22 November 2026 when the Lambda MicroVMs x86 date and the
         # CodeGuru Reviewer wording were corrected on the cited pages.
         # Issue 133 review: targeted market-research additions advance the
@@ -191,7 +191,7 @@ class ADEInventoryTests(unittest.TestCase):
         # v1.0 six-stage cycle. Its page pass and per-page reviews changed and
         # citations for retired tools left the page (recorded under
         # developer_harness_v1_redesign); no other page's records changed.
-        self.assertEqual(digest, '930b9dcdd1b4260f4a47424e8d7c6ddf45c1405e901acb0bb03865e49ea1d933')
+        self.assertEqual(digest, '97859761d289914e384a2cb25de445f68e1c357f441446055932788c23b83e98')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.
@@ -218,8 +218,8 @@ class ADEInventoryTests(unittest.TestCase):
         # redesign; see the notes above. Advanced again by the daily
         # reference check on 25 November 2026 (page_passes dates and
         # per-entry checked_on/method), and again on 26 November 2026
-        # for the same reason.
-        self.assertEqual(actual, '7f672ee4738903f5be0dd6e07aa317744eeba7af3714bf2dee8b163c6650eabb')
+        # for the same reason, and again on 28 November 2026.
+        self.assertEqual(actual, '97b5e8a2d3ea690aadb83f93bacdc966203419c9dbf7e17680b356c4e586b9c3')
 
     def test_misidentified_issue101_review_scopes_match_source_entries(self):
         for url, source_id in [('https://x.com/aparnadhinak/status/2109040646627721384', 'source-41'), ('https://claude.com/resources/articles/auto-mode-default-in-claude-code', 'source-42')]:
