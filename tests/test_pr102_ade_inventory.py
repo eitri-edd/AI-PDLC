@@ -153,6 +153,11 @@ class ADEInventoryTests(unittest.TestCase):
             'https://romielwillautomate.dev/blog/langchain-knowledge-factory-curator-agent-2026-11-22',
             'https://dev.to/affineofficial/your-llm-wiki-should-collect-the-questions-it-cant-answer-i-wrote-a-gap-queue-for-that-5i0',
         }
+        # Issue 181: the PRECEPT pre-print on the AI-SDLC page is a targeted
+        # addition; inherited records remain pinned.
+        new_urls |= {
+            'https://arxiv.org/abs/2611.33519',
+        }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews']

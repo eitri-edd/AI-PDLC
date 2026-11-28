@@ -1,16 +1,16 @@
 {
   "checked_on": "2026-11-26",
-  "scope": "Daily maintenance verification on 2026-11-26 plus the targeted issue #166, #175 and #177 Tech Radar expansions and 27 November release-citation corrections found 671 distinct external URLs; 660 were retrieved or partially recovered and 3 require follow-up or reader recovery.",
+  "scope": "Daily maintenance verification on 2026-11-26 plus the targeted issue #166, #175 and #177 Tech Radar expansions, 27 November release-citation corrections and the targeted issue #181 PRECEPT source addition found 672 distinct external URLs; 661 were retrieved or partially recovered and 3 require follow-up or reader recovery.",
   "reviewed_base": "d0313fefcc05de847d26738c14b38f59808783f3",
   "original_unique_urls": 100,
-  "current_unique_urls": 671,
-  "current_unique_hrefs": 677,
+  "current_unique_urls": 672,
+  "current_unique_hrefs": 678,
   "counts": {
     "dynamic_page_no_text": 5,
     "expected_login_redirect": 1,
     "expected_preconnect_root_response": 2,
     "partial_reader_recovery": 6,
-    "retrieved": 651,
+    "retrieved": 652,
     "retrieved_pdf_text": 3,
     "verification_challenge": 3
   },
@@ -24822,6 +24822,44 @@
           "source_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12"
         }
       ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33519",
+      "files": [
+        "ai-pdlc.html"
+      ],
+      "hrefs": [
+        "https://arxiv.org/abs/2611.33519"
+      ],
+      "checked_on": "2026-11-28",
+      "targeted_checked_on": "2026-11-28",
+      "result": "retrieved",
+      "method": "direct HTTP GET",
+      "claim_reviews": [
+        {
+          "file": "ai-pdlc.html",
+          "outcome": "supported",
+          "scope": "Coding agents that fix a vulnerability shown by a failing security test reintroduce the same class of vulnerability in a new session about as often as agents that never saw the failure; the page adapts the durable-principle and regression-case practice, not the PRECEPT prototype.",
+          "evidence_summary": "Abstract page and HTML full text retrieved 28 November 2026 (HTTP 200): across 14 task sequences, Codex, Claude Code and Qwen Code fixed the flagged vulnerability 85.7% of the time, then reintroduced the same vulnerability class in 26.7% of new-session executions versus 27.5% for agents never shown the failure; persistent-context notes and published secure-coding principles did not close the gap, and the authors' evolving-principles method cut recurrence to 11.5%.",
+          "limitation": "Pre-print, not peer-reviewed; the motivating study is small (14 task chains over 12 CWEs, Python tasks from SeCodePLT, all three agents on the same underlying model, Qwen3.6), and the outcome figures are the authors' own benchmark evaluation rather than production-code evidence.",
+          "followup": "issue181"
+        }
+      ],
+      "source_entries": [
+        {
+          "file": "ai-pdlc.html",
+          "id": "source-8"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://arxiv.org/abs/2611.33519",
+      "evidence_digests": [
+        {
+          "sha256": "9affb644df9c980a1edc1e42b83eb25dc42adf966f7aed52f2566ddd389af23a",
+          "format": "direct HTTP response",
+          "source_url": "https://arxiv.org/abs/2611.33519"
+        }
+      ]
     }
   ],
   "evidence_policy": "Portable source URLs, page-specific scope, limitations, supporting paraphrases and evidence hashes are retained here. Copyrighted full-source captures remain outside the published repository. Historical records are preserved without relabelling their dates.",
@@ -24982,6 +25020,15 @@
         "capture_url": "https://code.claude.com/docs/en/sandboxing.md"
       }
     ]
+  },
+  "issue181_targeted_followup": {
+    "checked_on": "2026-11-28",
+    "pages": [
+      "ai-pdlc.html"
+    ],
+    "scope": "Approved issue #181 addition: the PRECEPT pre-print is cited for the new security-lesson retention paragraphs in 'Use AI across the lifecycle'. Page-wide pass date remains 26 November 2026.",
+    "new_external_sources": 1,
+    "limits": "Pre-print read through the arXiv abstract page and HTML full text; not peer-reviewed. Recurrence and improvement figures are the authors' own small benchmark study (14 task chains over 12 CWEs, Python SeCodePLT tasks, all three agents on Qwen3.6), not production-code evidence. No representative-reader session."
   },
   "uncited_replacements": [
     {
