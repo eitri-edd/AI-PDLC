@@ -158,6 +158,11 @@ class ADEInventoryTests(unittest.TestCase):
         new_urls |= {
             'https://arxiv.org/abs/2611.33519',
         }
+        # Issue 185: the Entire CLI release-tag citation moved to v0.13.5;
+        # the v0.13.4 record moved to uncited_replacements.
+        new_urls |= {
+            'https://github.com/entireio/cli/releases/tag/v0.13.5',
+        }
         baseline = {'page_passes': {k: v for k, v in self.inventory['page_passes'].items() if k not in later_pages},
                     'history': self.inventory['history'],
                     'reviews': {r['url']: [v for v in r['claim_reviews']
@@ -191,7 +196,10 @@ class ADEInventoryTests(unittest.TestCase):
         # v1.0 six-stage cycle. Its page pass and per-page reviews changed and
         # citations for retired tools left the page (recorded under
         # developer_harness_v1_redesign); no other page's records changed.
-        self.assertEqual(digest, '97859761d289914e384a2cb25de445f68e1c357f441446055932788c23b83e98')
+        # Issue 183/185 pass on 28 November 2026: the Continue repository review
+        # (pushed date) and the workflows-factories page pass scope advance the
+        # reviews digest; all other refreshed records are radar-only URLs.
+        self.assertEqual(digest, 'e299139ceb7c4b95a3572c9224aaac324685c1db5d454107be0b2f3b72c83ac1')
         # Compare inherited retrieval metadata and source mappings to a digest
         # of the PR's original inventory. New page mappings are excluded only
         # from the one inherited URL to which this follow-up adds entries.

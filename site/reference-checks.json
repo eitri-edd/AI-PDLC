@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-11-28",
   "scope": "Daily maintenance verification on 2026-11-28 found 672 distinct external hrefs and no broken destination",
-  "reviewed_base": "5b7e46b1f4bc56ba431ea88629db6b630c9495f8",
+  "reviewed_base": "d3e9d3d9d48bfd97ab3788cd1adf544d8579fde5",
   "original_unique_urls": 100,
   "current_unique_urls": 672,
   "current_unique_hrefs": 678,
@@ -105,7 +105,7 @@
     },
     "tech-radar.html": {
       "checked_on": "2026-11-28",
-      "scope": "Targeted issue #175 supplement plus issue #177 supplement: 53 new or newly mapped vendor, project, advisory, incident and vulnerability sources, plus one release-citation correction, checked for the Tech Radar updates; all other radar sources retain their existing 25 November 2026 pass. The whole-page source-check date remains 26 November 2026 rather than being advanced by the targeted issue #177 addition.",
+      "scope": "Targeted issue #175 supplement plus issue #177 supplement: 53 new or newly mapped vendor, project, advisory, incident and vulnerability sources, plus one release-citation correction, checked for the Tech Radar updates; all other radar sources retain their existing 25 November 2026 pass. The whole-page source-check date remains 26 November 2026 rather than being advanced by the targeted issue #177 addition. A targeted issue #183/#185 pass on 28 November 2026 refreshed 20 stale version cells and one release-tag citation; the whole-page claim review is unchanged.",
       "status": "completed with explicit limitations",
       "source_entries": 54,
       "unique_fetch_destinations": 54
@@ -166,7 +166,7 @@
     },
     "tech-scan-workflows-factories.html": {
       "checked_on": "2026-11-28",
-      "scope": "Daily maintenance verification on 2026-11-28: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 13 November 2026 (see maintenance record).",
+      "scope": "Daily maintenance verification on 2026-11-28: every cited link re-fetched live and new/changed claims checked; whole-page claim review retained from 13 November 2026 (see maintenance record). A targeted issue #183 follow-up on 28 November 2026 corrected the Continue repository pushed date to 27 November 2026.",
       "status": "completed with explicit limitations",
       "source_entries": 14,
       "unique_fetch_destinations": 20,
@@ -14953,7 +14953,7 @@
           "file": "tech-radar.html",
           "outcome": "supported",
           "scope": "Unkey is a hosted API management platform with an actively maintained changelog.",
-          "evidence_summary": "The changelog lists hosted product changes to 13 November 2026.",
+          "evidence_summary": "The changelog lists hosted product changes to 27 November 2026.",
           "limitation": "The licence detail comes from the repository licence file, not the changelog; check it before relying on the label."
         }
       ],
@@ -14962,7 +14962,8 @@
           "file": "tech-radar.html",
           "id": "source-30"
         }
-      ]
+      ],
+      "targeted_checked_on": "2026-11-28"
     },
     {
       "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
@@ -15041,9 +15042,9 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "Kiro CLI 3.5.0 was released on 17 November 2026.",
-          "evidence_summary": "Targeted models sub-group check on 2026-11-20; the cited page states each claim.",
-          "followup": "issue136"
+          "scope": "The Kiro CLI changelog lists 3.6.0 released 23 November 2026, with patch entries 3.6.1 and 3.6.2 both dated 25 November 2026.",
+          "evidence_summary": "The Kiro CLI changelog fetched on 28 November 2026 lists patch entries 3.6.1 and 3.6.2 dated 25 November 2026 under the 3.6.0 release line.",
+          "followup": "issue183"
         }
       ],
       "source_entries": [
@@ -15052,7 +15053,7 @@
           "id": "source-33"
         }
       ],
-      "targeted_checked_on": "2026-11-20"
+      "targeted_checked_on": "2026-11-28"
     },
     {
       "url": "https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/",
@@ -15364,9 +15365,9 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "gstack v1.99.5.0 was published on 16 November 2026.",
-          "evidence_summary": "GitHub releases list v1.99.5.0 published on 16 November 2026.",
-          "limitation": "No version was verified for gstack, so the table says so rather than quoting one."
+          "scope": "gstack v1.104.2.0 was published on 28 November 2026.",
+          "evidence_summary": "The GitHub releases API returned tag v1.104.2.0 published 2026-11-28T08:12Z on 28 November 2026.",
+          "limitation": "Targeted issue #183 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "source_entries": [
@@ -15374,7 +15375,8 @@
           "file": "tech-radar.html",
           "id": "source-50"
         }
-      ]
+      ],
+      "targeted_checked_on": "2026-11-28"
     },
     {
       "url": "https://github.com/t3dotgg/tstack",
@@ -16302,8 +16304,8 @@
         {
           "file": "tech-scan-workflows-factories.html",
           "outcome": "supported",
-          "scope": "The Continue repository is not archived. Its default branch was updated on 21 July 2026 and the repository was pushed on 16 November 2026.",
-          "evidence_summary": "GitHub reports archived false, default-branch commit 21 July 2026, and pushed_at 16 November 2026."
+          "scope": "The Continue repository is not archived. Its default branch was updated on 21 July 2026 and the repository was pushed on 27 November 2026.",
+          "evidence_summary": "GitHub reports archived false, default-branch commit 21 July 2026, and pushed_at 2026-11-27T03:39Z (27 November 2026)."
         },
         {
           "file": "tech-radar.html",
@@ -16322,7 +16324,7 @@
           "id": "source-147"
         }
       ],
-      "targeted_checked_on": "2026-11-20"
+      "targeted_checked_on": "2026-11-28"
     },
     {
       "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/",
@@ -18585,7 +18587,7 @@
         "https://github.com/nousresearch/hermes-agent"
       ],
       "checked_on": "2026-11-28",
-      "targeted_checked_on": "2026-11-19",
+      "targeted_checked_on": "2026-11-28",
       "result": "retrieved",
       "http_status": 200,
       "final_url": "https://github.com/nousresearch/hermes-agent",
@@ -18601,14 +18603,15 @@
         {
           "file": "tech-radar.html",
           "outcome": "supported",
-          "scope": "Hermes Agent is MIT-licensed and documents agent-curated memory, autonomous skill creation, a built-in cron scheduler with delivery to any platform, isolated subagents and a single gateway process for messaging platforms.",
-          "evidence_summary": "Targeted persistent-agent types check on 2026-11-19; the cited page states each claim.",
-          "followup": "issue136"
+          "scope": "Hermes Agent is MIT-licensed and documents agent-curated memory, autonomous skill creation, a built-in cron scheduler, isolated subagents and one gateway for chat apps and the CLI; latest release v0.23.5, 28 November 2026.",
+          "evidence_summary": "The GitHub releases API returned tag v0.23.5 published 2026-11-28T03:20Z on 28 November 2026; the repository page returned HTTP 200.",
+          "followup": "issue136",
+          "limitation": "Targeted issue #185 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "evidence_digests": [
         {
-          "sha256": "253721ee6a481fa24941ffa77e5ea7eaf091fff79ce318ac02ac2b8754a95d25",
+          "sha256": "cef64e4c6f9663bb05f4bbdb91a54d8026b2f0a0e6a3caf2a7b2ff2d5f54bc35",
           "format": "direct HTTP response",
           "source_url": "https://github.com/nousresearch/hermes-agent"
         }
@@ -20666,15 +20669,15 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "The Orca repository: MIT-licensed ADE that runs any CLI coding agent in parallel git worktrees, with mobile apps, bots and scheduled automations; latest release v1.4.272, 23 November 2026.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - stablyai/orca: Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex)'.",
-          "limitation": "The v1.4.272 release date comes from a secondary release tracker; the vendor releases page was not re-fetched in this pass."
+          "outcome": "supported",
+          "scope": "The Orca repository: MIT-licensed ADE that runs any CLI coding agent in parallel git worktrees, with mobile apps, bots and scheduled automations; latest release v1.4.281, 28 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 28 November 2026; the GitHub releases API returned tag v1.4.281 published 2026-11-28T08:15Z.",
+          "limitation": "Targeted issue #183 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "evidence_digests": [
         {
-          "sha256": "2a9776c268857913adfeddc9f3ed8b1cbd8a09f27dbeb83d4ed9ecf47362c145",
+          "sha256": "c44a70b688451fe3b84f4cb5a7fcdc1f51d3c9764d178ee502d0318a89282787",
           "format": "direct HTTP response",
           "source_url": "https://github.com/stablyai/orca"
         }
@@ -20739,15 +20742,15 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "The Paradev repository: MIT-licensed desktop workspace running any CLI coding agent in parallel git worktrees; latest release desktop-v2.0.11, 20 November 2026.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - ParadevAI/Paradev: Paradev is an open-source Codex App and Conductor alternative'.",
-          "limitation": "The desktop-v2.0.11 release date is from secondary trackers; the repository page itself does not state the release version."
+          "outcome": "supported",
+          "scope": "The Paradev repository: MIT-licensed desktop workspace running any CLI coding agent in parallel git worktrees; latest release desktop-v2.0.12, 25 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 28 November 2026; the GitHub releases API returned tag desktop-v2.0.12 published 2026-11-25T20:01Z.",
+          "limitation": "Targeted issue #183 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "evidence_digests": [
         {
-          "sha256": "400485aa068ba1bb475acf1d78965a3baf5207035398acae9a827dc900e85a0c",
+          "sha256": "82cf469e81fd2c0010e1058018101d146564095a9fe9243220e0a99b1eb55b89",
           "format": "direct HTTP response",
           "source_url": "https://github.com/ParadevAI/Paradev"
         }
@@ -20776,15 +20779,15 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "The Paseo repository: open-source ADE with built-in multi-agent orchestration in git worktrees, on desktop, web, CLI and full mobile apps; latest release v0.17.4, 23 November 2026. The README states Apache-2.0; the repository metadata records no licence assertion.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub - getpaseo/paseo: Orchestrate multiple coding agents from desktop and mobile'.",
-          "limitation": "Licence discrepancy: the README states Apache-2.0 but the repository metadata records no licence assertion; the radar entry carries a Conditions apply flag."
+          "outcome": "supported",
+          "scope": "The Paseo repository: open-source ADE with built-in multi-agent orchestration in git worktrees, on desktop, web, CLI and full mobile apps; latest release v0.18.1, 27 November 2026. The README states Apache-2.0; the repository metadata records no licence assertion.",
+          "evidence_summary": "Direct GET returned 200 on 28 November 2026; the GitHub releases API returned tag v0.18.1 published 2026-11-27T18:06Z.",
+          "limitation": "Licence discrepancy: the README states Apache-2.0 but the repository metadata records no licence assertion; the radar entry carries a Conditions apply flag. Targeted issue #183 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "evidence_digests": [
         {
-          "sha256": "46b21ac4801fc14c410d3431e2d6b73bbe2db2c933ab93f98c2fa88f12844739",
+          "sha256": "d6e5ecb5390212c85f6354cc56afb25c11e634c2434ff737980942e6e5139f4b",
           "format": "direct HTTP response",
           "source_url": "https://github.com/getpaseo/paseo"
         }
@@ -21291,10 +21294,10 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "ContextForge v1.1.1 release and security-fix boundary.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release v1.1.1 - Release 2026-11-10 - Token Exchange Delegation, CEL Tool Validation, A2A v1 Routes, and Security Hardening \u00b7 IBM/mcp-context-forge \u00b7 GitHub'.",
-          "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          "outcome": "supported",
+          "scope": "ContextForge v1.1.1 release and security-fix boundary; latest release v1.1.2, 25 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release v1.1.1 - Release 2026-11-10 - Token Exchange Delegation, CEL Tool Validation, A2A v1.0'. The GitHub releases API returned tag v1.1.2 published 2026-11-25T09:38Z on 28 November 2026.",
+          "limitation": "The cited v1.1.1 release itself remains accurate; only the row\u2019s version snapshot moved. Targeted issue #183 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "source_entries": [
@@ -21439,10 +21442,10 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "Context7 hosted-service data handling.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Security - Context7 MCP'.",
-          "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          "outcome": "supported",
+          "scope": "Context7 hosted-service data handling; current @upstash/context7-mcp release 4.9.1, 27 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Security - Context7 MCP'. The npm registry records @upstash/context7-mcp latest version 4.9.1 published 2026-11-27T08:38Z, checked 28 November 2026.",
+          "limitation": "Targeted issue #185 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "source_entries": [
@@ -21550,10 +21553,10 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "Pydantic AI v2 stability and capability model.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release v2.0.0 (2026-06-23) \u00b7 pydantic/pydantic-ai \u00b7 GitHub'.",
-          "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          "outcome": "supported",
+          "scope": "Pydantic AI v2 stability and capability model; current release v2.77.0, 27 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release v2.0.0 (2026-06-23) \u00b7 pydantic/pydantic-ai \u00b7 GitHub'. The GitHub releases API returned tag v2.77.0 published 2026-11-27T23:32Z on 28 November 2026; PyPI uploaded pydantic-ai 2.77.0 at 2026-11-28T00:01Z.",
+          "limitation": "Targeted issue #185 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "source_entries": [
@@ -21661,10 +21664,10 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "Arize Phoenix security-fixed version boundary.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Phoenix: Format String Injection in applyChatTemplate \u00b7 CVE-2026-53998 \u00b7 GitHub Advisory Database \u00b7 GitHub'.",
-          "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          "outcome": "supported",
+          "scope": "Arize Phoenix security-fixed version boundary; current release 22.1.0, 26 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Phoenix: Format String Injection in applyChatTemplate \u00b7 CVE-2026-53998 \u00b7 GitHub Advisory Database \u00b7 GitHub'. The GitHub releases API returned arize-phoenix-v22.1.0 published 2026-11-26T07:57Z; PyPI uploaded arize-phoenix 22.1.0 at 2026-11-26T08:01Z, checked 28 November 2026.",
+          "limitation": "Targeted issue #185 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "source_entries": [
@@ -22643,12 +22646,12 @@
       ]
     },
     {
-      "url": "https://github.com/entireio/cli/releases/tag/v0.13.4",
+      "url": "https://github.com/entireio/cli/releases/tag/v0.13.5",
       "files": [
         "tech-radar.html"
       ],
       "hrefs": [
-        "https://github.com/entireio/cli/releases/tag/v0.13.4"
+        "https://github.com/entireio/cli/releases/tag/v0.13.5"
       ],
       "checked_on": "2026-11-28",
       "targeted_checked_on": "2026-11-28",
@@ -22657,10 +22660,10 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "Entire CLI current release and provenance scope.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release v0.13.4 \u00b7 entireio/cli \u00b7 GitHub'.",
-          "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          "outcome": "supported",
+          "scope": "Entire CLI v0.13.5 is the latest release, published 27 November 2026.",
+          "evidence_summary": "The GitHub releases API returned tag v0.13.5 published 2026-11-27T18:49Z on 28 November 2026; the cited release page returned HTTP 200.",
+          "limitation": "Targeted issue #185 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "source_entries": [
@@ -22670,12 +22673,12 @@
         }
       ],
       "http_status": 200,
-      "final_url": "https://github.com/entireio/cli/releases/tag/v0.13.4",
+      "final_url": "https://github.com/entireio/cli/releases/tag/v0.13.5",
       "evidence_digests": [
         {
-          "sha256": "eafeaf8124d0efdcc08d0ac49f9c0b0a78d2442c0b25bae13b102e8e5265816b",
+          "sha256": "5585a9e52b3a5690cd5518c7fdb134b9bbe5f8e0ea571f301960c0b92c66cc21",
           "format": "direct HTTP response",
-          "source_url": "https://github.com/entireio/cli/releases/tag/v0.13.4"
+          "source_url": "https://github.com/entireio/cli/releases/tag/v0.13.5"
         }
       ]
     },
@@ -22768,10 +22771,10 @@
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
-          "scope": "Copilot CLI general availability.",
-          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub Copilot CLI is now generally available - GitHub Changelog'.",
-          "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          "outcome": "supported",
+          "scope": "Copilot CLI general availability; current CLI release v1.0.117, 27 November 2026.",
+          "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'GitHub Copilot CLI is now generally available - GitHub Changelog'. The GitHub releases API returned copilot-cli tag v1.0.117 published 2026-11-27T13:04Z on 28 November 2026.",
+          "limitation": "Targeted issue #185 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "source_entries": [
@@ -24426,16 +24429,16 @@
         "https://github.com/strands-agents/box"
       ],
       "checked_on": "2026-11-28",
-      "targeted_checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-28",
       "result": "retrieved",
       "method": "direct HTTP GET",
       "claim_reviews": [
         {
           "file": "tech-radar.html",
-          "outcome": "limited",
+          "outcome": "supported",
           "scope": "Strands Box licence, version, preview status and supported platforms.",
-          "evidence_summary": "The Strands Box repository returned 200; GitHub metadata records Apache-2.0, release v0.3.2 was published 25 November 2026, and the README says the preview works on Apple silicon Macs with macOS 15 or later and Linux ARM64/x86-64. Page title: 'GitHub - strands-agents/box: Run AI agents in a sandbox that restricts what they can execute, read, write, and reach on the network. Box combines OS isolation with default-deny Dogwood policies and credential injection that keeps secrets outside the agent. Written in Rust. Supports macOS on Apple silicon and Linux. \u00b7 GitHub'.",
-          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+          "evidence_summary": "The Strands Box repository returned 200 on 28 November 2026; GitHub metadata records Apache-2.0, and the releases API returned tag v0.3.3 published 2026-11-27T19:49Z. The README says the project is a preview for Apple silicon Macs and Linux ARM64/x86-64.",
+          "limitation": "Targeted issue #185 pass verified the cited claim against the live page, release record or machine-readable source on 28 November 2026; fast-moving version details should be reconfirmed before adoption."
         }
       ],
       "source_entries": [
@@ -24448,7 +24451,7 @@
       "final_url": "https://github.com/strands-agents/box",
       "evidence_digests": [
         {
-          "sha256": "1ad9f65078a1183f3af9336a1725a67ff0e6f7769715d18705ef26fab666158c",
+          "sha256": "297c82633c0dc4069665d86f77f04bbaf669327200766b5a49ee64115c3f54e0",
           "format": "direct HTTP response",
           "source_url": "https://github.com/strands-agents/box"
         }
@@ -24685,7 +24688,7 @@
         "https://registry.npmjs.org/@vercel%2Fboard"
       ],
       "checked_on": "2026-11-28",
-      "targeted_checked_on": "2026-11-27",
+      "targeted_checked_on": "2026-11-28",
       "result": "retrieved",
       "method": "direct HTTP GET",
       "claim_reviews": [
@@ -24693,8 +24696,8 @@
           "file": "tech-radar.html",
           "outcome": "limited",
           "scope": "@vercel/board licence, latest version and release date.",
-          "evidence_summary": "The npm registry JSON returned 200 and records @vercel/board latest version 0.56.1, Apache-2.0, published 23 November 2026.",
-          "limitation": "Targeted issue #177 pass verified the cited claim against the live page, release record or machine-readable source on 27 November 2026; no independent product runtime, detection-rate or security testing was performed."
+          "evidence_summary": "The npm registry JSON returned 200 and records @vercel/board latest version 0.57.0, Apache-2.0, published 28 November 2026 (2026-11-28T01:32Z).",
+          "limitation": "Targeted issue #185 pass verified the cited claim against the machine-readable registry source on 28 November 2026; no independent product runtime, detection-rate or security testing was performed."
         }
       ],
       "source_entries": [
@@ -24707,7 +24710,7 @@
       "final_url": "https://registry.npmjs.org/@vercel%2Fboard",
       "evidence_digests": [
         {
-          "sha256": "32c9a33e16ab7ce8e66f4b25d46b9429c1b675c8f32b2a6c8885cfb933132e1f",
+          "sha256": "e910a30ad7d6b1343360d4bdc7a4724c1c4007c5d95c758aa9b2b41a6f873032",
           "format": "direct HTTP response",
           "source_url": "https://registry.npmjs.org/@vercel%2Fboard"
         }
@@ -25029,6 +25032,18 @@
     "scope": "Approved issue #181 addition: the PRECEPT pre-print is cited for the new security-lesson retention paragraphs in 'Use AI across the lifecycle'. Page-wide pass date remains 26 November 2026.",
     "new_external_sources": 1,
     "limits": "Pre-print read through the arXiv abstract page and HTML full text; not peer-reviewed. Recurrence and improvement figures are the authors' own small benchmark study (14 task chains over 12 CWEs, Python SeCodePLT tasks, all three agents on Qwen3.6), not production-code evidence. No representative-reader session."
+  },
+  "issue185_targeted_followup": {
+    "checked_on": "2026-11-28",
+    "pages": [
+      "tech-radar.html",
+      "tech-scan-workflows-factories.html"
+    ],
+    "scope": "Approved issue #185 follow-up: 11 stale Tech Radar version cells refreshed (Copilot CLI 1.0.117, Context7 MCP 4.9.1, ai 7.0.184, strands-agents 1.68.0, pydantic-ai 2.77.0, arize-phoenix 22.1.0, Hermes Agent v0.23.5, Strands Box v0.3.3, Entire CLI v0.13.5, @vercel/board 0.57.0, Kiro Crew 0.13.1), plus the 9 issue #183 claims verified in the same pass (Ollama v0.40.19, Kiro CLI 3.6.2, gstack v1.104.2.0, Unkey changelog to 27 November, Orca v1.4.281, Paradev desktop-v2.0.12, Paseo v0.18.1, ContextForge v1.1.2, Continue repository pushed 27 November 2026). Every value was re-verified live on 28 November 2026 against GitHub releases, the npm registry, PyPI or the vendor changelog rather than copied from the issue filings.",
+    "new_external_sources": 0,
+    "uncited_replacements": 1,
+    "version_refreshes": 20,
+    "limits": "Version values come from release APIs, package registries and vendor changelogs checked on 28 November 2026; fast-moving cells will drift again and should be reconfirmed before adoption. The IBM ContextForge source-172 citation intentionally keeps the v1.1.1 release URL, which remains the cited security-fix boundary. No representative-reader session."
   },
   "uncited_replacements": [
     {
@@ -25464,6 +25479,51 @@
             "sha256": "2bad1e93bb1a04a8995cf0c1c51c66a9a9aa8f34212808fcfbc190f0d2d06a19",
             "format": "direct HTTP response",
             "source_url": "https://github.com/pingdotgg/t3code/releases/tag/v0.1.12"
+          }
+        ]
+      }
+    },
+    {
+      "removed_on": "2026-11-28",
+      "reason": "Superseded on tech-radar.html by the Entire CLI v0.13.5 release. The v0.13.4 page is no longer cited.",
+      "replaced_by": "https://github.com/entireio/cli/releases/tag/v0.13.5",
+      "no_longer_cited_from": [
+        "tech-radar.html"
+      ],
+      "record": {
+        "url": "https://github.com/entireio/cli/releases/tag/v0.13.4",
+        "files": [
+          "tech-radar.html"
+        ],
+        "hrefs": [
+          "https://github.com/entireio/cli/releases/tag/v0.13.4"
+        ],
+        "checked_on": "2026-11-28",
+        "targeted_checked_on": "2026-11-28",
+        "result": "retrieved",
+        "method": "direct HTTP GET",
+        "claim_reviews": [
+          {
+            "file": "tech-radar.html",
+            "outcome": "limited",
+            "scope": "Entire CLI current release and provenance scope.",
+            "evidence_summary": "Direct GET returned 200 on 25 November 2026; page title: 'Release v0.13.4 \u00b7 entireio/cli \u00b7 GitHub'.",
+            "limitation": "Targeted issue #166 pass verified the claim against the live page or release record on 25 November 2026; fast-moving version details should be reconfirmed before adoption."
+          }
+        ],
+        "source_entries": [
+          {
+            "file": "tech-radar.html",
+            "id": "source-209"
+          }
+        ],
+        "http_status": 200,
+        "final_url": "https://github.com/entireio/cli/releases/tag/v0.13.4",
+        "evidence_digests": [
+          {
+            "sha256": "eafeaf8124d0efdcc08d0ac49f9c0b0a78d2442c0b25bae13b102e8e5265816b",
+            "format": "direct HTTP response",
+            "source_url": "https://github.com/entireio/cli/releases/tag/v0.13.4"
           }
         ]
       }

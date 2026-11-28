@@ -21,28 +21,30 @@ CATEGORIES = {
 }
 
 # Snapshot parsed tables separately from the changing introductory prose.
+# All nine product tables below moved when the issue #183/#185 targeted pass
+# refreshed 20 stale version cells on 28 November 2026.
 TABLE_DIGESTS = {
     # Moved when the Hermes Agent release date was corrected 23 Nov to
     # 24 Nov 2026 (issue #179, 27 November 2026).
-    'persistent-agents': '49ac5b7d08a419da80451f05136a93582daba3ec32212b6db8c76f4a10dd3a6d',
+    'persistent-agents': 'd113d36f6220f78c975086243c9a44d0af38a075e93688602f431dd6a3f6c499',
     # Moved when Models and model access split into LLM model, coding tool,
     # provider and decision-model tables (20 November 2026).
     # Moved again when the Antigravity Carbon tier was corrected from
     # Ultra-only to paid Pro, Ultra and Enterprise (issue #179,
     # 27 November 2026).
-    'models-access': '4fe945f94a492892c162528f9b0b05410bca2b82d26f6b7551eb5dad08b200f0',
-    'gateways': 'ae023c9871d10226b02a8b6d5b3307e9dc2d2166d0c76edfa43996699d836621',
-    'context-memory': '549d8b33fd2b8553cb6436cc914908c9c0b9fa221b180f8e186c962958deb4b0',
+    'models-access': '64e6211c7aed997f7c5262c3fe76dd5a88f77feb0da32089288a7312994140a7',
+    'gateways': 'ada82e0e83caa993edfaf411e1aa04d3f6a2a63bdbd9a13ae2d0ac494412e6f5',
+    'context-memory': '72be025cfe577a6d4255a81010118a2baa623092de10d0e725de36587d2151b0',
     # Moved when the Microsoft Agent Framework row gained its pin condition (issue #133).
-    'harness-frameworks': '6e2b92014e6ff20e383e9e0a6a620506097ed933347267e7fe3c01de8e58f578',
+    'harness-frameworks': '01a7db52b97a90399dde98fcee0200cf84fa5ce7d04886eb3003aa3e9fd7b2ac',
     # Moved when eight ADE products were added (Orca, T3 Code, Paradev, Paseo,
     # Orchestrator, Traycer, OpenChamber, Kepler) on 25 November 2026.
-    'agentic-development-environments': '079037811d1d445cf16168c5a85e2b37c555948e5152b6d1f1c514d831fa29d4',
+    'agentic-development-environments': 'f4c7b41679027ce2189033c5aafc5f97901093b30e615b1ce326163573c2f60f',
     'verification': 'bbb5a3775c7e29c1a3d6f8a3c8fd4e5a7967d6ebfb9d2b401a782b756cdf7fa7',
-    'sandbox': '13f6de24c96f576a698b8ab4e7f67b242ef63d69a205d6b1531552eac45d915b',
+    'sandbox': 'effcb2d7d6212f3c3b77c111dd3f82488ac98db717cd84f162291608d1eb6d63',
     'software-factories': '551c87eb1a65bd5cbe1533fd33f89c73449d604e98c021a389f7bffeb3968bc7',
-    'delivery': '73afae9379cad3c853f314b41a8bf7198f4f52eef2aac1ba3194292a5fff7dad',
-    'skill-packs': 'b5883de49331083c50512aa33e9ddd2993033ac15c6b22f00b1cd3781da9f37c',
+    'delivery': 'a0585eccb9798bd8fe4103961bbcba447b6ac5034543ce2a678fc17205e74174',
+    'skill-packs': '73a33ab97c207b634e75c8fb4cae61c9958de29f3f4e6b3d0599ffd8d167efc1',
 }
 
 
